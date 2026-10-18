@@ -279,6 +279,7 @@ export interface AppState {
     | 'learn' 
     | 'vocabulary' 
     | 'phrases'
+    | 'hsk3-exam'
     | 'practice-hub' 
     | 'quiz' 
     | 'listening-practice' 

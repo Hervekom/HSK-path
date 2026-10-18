@@ -49,6 +49,7 @@ export const AppHeader: React.FC<AppHeaderProps> = ({
       case 'mock-test-exam':
       case 'test-results':
       case 'review-mistakes':
+      case 'hsk3-exam':
         return t('nav.mockTests');
       case 'progress':
         return t('nav.progress');

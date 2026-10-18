@@ -27,6 +27,7 @@ import { ProgressAnalyticsView } from './views/ProgressAnalyticsView';
 import { ProfileSettingsView } from './views/ProfileSettingsView';
 import { AdminView } from './views/AdminView';
 import { PhrasesView } from './views/PhrasesView';
+import { Hsk3ExamView } from './views/Hsk3ExamView';
 
 // Data & Types
 import { VOCABULARY_DATA } from './data/vocabulary';
@@ -42,7 +43,7 @@ import type { AppState, UserProfile, VocabularyWord, MockTest, TestResult, Skill
 const ALL_VIEWS: AppState['currentView'][] = [
   'landing', 'login', 'signup', 'dashboard', 'hsk-levels', 'hsk-detail', 'learn', 'vocabulary',
   'practice-hub', 'quiz', 'listening-practice', 'reading-practice', 'writing-practice', 'mock-tests',
-  'mock-test-intro', 'mock-test-exam', 'test-results', 'review-mistakes', 'progress', 'profile', 'admin', 'phrases',
+  'mock-test-intro', 'mock-test-exam', 'test-results', 'review-mistakes', 'progress', 'profile', 'admin', 'phrases', 'hsk3-exam',
 ];
 const PUBLIC_VIEWS: AppState['currentView'][] = ['landing', 'login', 'signup', 'hsk-levels', 'hsk-detail'];
 
@@ -88,6 +89,24 @@ function HskPathApp() {
   const [activeTest, setActiveTest] = useState<MockTest>(MOCK_TESTS_CATALOG[1]); // Default HSK 2 Mock Test A
   const [testHistory, setTestHistory] = useState<TestResult[]>(INITIAL_TEST_RESULTS);
   const [latestResult, setLatestResult] = useState<TestResult | null>(INITIAL_TEST_RESULTS[0]);
+
+  // Full-format HSK 3 exam (official papers + HSK Path originals)
+  const [hsk3ExamId, setHsk3ExamId] = useState<string>(() => {
+    try {
+      return sessionStorage.getItem('hsk3_exam') || 'h31001';
+    } catch {
+      return 'h31001';
+    }
+  });
+  const openHsk3Exam = (id: string) => {
+    setHsk3ExamId(id);
+    try {
+      sessionStorage.setItem('hsk3_exam', id);
+    } catch {
+      // ignore
+    }
+    setCurrentView('hsk3-exam');
+  };
 
   // Active Quiz State
   const [activeQuizTitle, setActiveQuizTitle] = useState('Daily Adaptive Drill');
@@ -690,9 +709,33 @@ function HskPathApp() {
               testHistory={testHistory}
               onNavigate={navigate}
               isProUser={user.isProUser}
+              onOpenHsk3={openHsk3Exam}
               onSelectTest={(test) => {
                 setActiveTest(test);
                 setCurrentView('mock-test-intro');
+              }}
+            />
+          </AppLayout>
+        );
+
+      case 'hsk3-exam':
+        return (
+          <AppLayout
+            onSignOut={handleSignOut}
+            isAdmin={isAdmin}
+            currentView={currentView}
+            onNavigate={navigate}
+            user={user}
+            streakDays={streakDays}
+          >
+            <Hsk3ExamView
+              key={hsk3ExamId}
+              examId={hsk3ExamId}
+              isProUser={Boolean(user.isProUser)}
+              onExit={() => setCurrentView('mock-tests')}
+              onFinish={(result) => {
+                setTestHistory((h) => [result, ...h]);
+                setLatestResult(result);
               }}
             />
           </AppLayout>

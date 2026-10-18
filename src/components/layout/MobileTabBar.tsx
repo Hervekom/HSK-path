@@ -28,7 +28,7 @@ const TABS: Array<{
     id: 'mock-tests',
     labelKey: 'navShort.exams',
     icon: FileCheck,
-    group: ['mock-tests', 'mock-test-intro', 'mock-test-exam', 'test-results', 'review-mistakes'],
+    group: ['mock-tests', 'mock-test-intro', 'mock-test-exam', 'test-results', 'review-mistakes', 'hsk3-exam'],
   },
 ];
 

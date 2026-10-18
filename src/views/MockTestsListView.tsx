@@ -4,6 +4,7 @@ import { Hsk30Notice } from '../components/ui/Hsk30Notice';
 import { Clock, Award, Lock, Sparkles, ChevronRight, ShieldCheck, CheckCircle2, ArrowUpRight } from '../components/icons';
 import { useI18n } from '../locales';
 import { MOCK_TESTS_CATALOG } from '../data/mockTests';
+import { HSK3_EXAMS } from '../data/hsk3';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
 import { Button } from '../components/ui/Button';
@@ -15,12 +16,14 @@ interface MockTestsListViewProps {
   onNavigate: (view: AppState['currentView']) => void;
   testHistory: TestResult[];
   isProUser?: boolean;
+  onOpenHsk3?: (id: string) => void;
 }
 
 export const MockTestsListView: React.FC<MockTestsListViewProps> = ({
   onSelectTest,
   testHistory,
   isProUser = false,
+  onOpenHsk3,
 }) => {
   const { t, getLocalized, language } = useI18n();
   const [selectedLevel, setSelectedLevel] = useState<'all' | 'hsk1' | 'hsk2' | 'hsk3'>('all');
@@ -85,6 +88,59 @@ export const MockTestsListView: React.FC<MockTestsListViewProps> = ({
           </Button>
         </div>
       </div>
+
+      {onOpenHsk3 && (selectedLevel === 'all' || selectedLevel === 'hsk3') && (
+        <section className="space-y-4">
+          <div>
+            <div className="text-xs font-bold uppercase tracking-wider text-[#C52828]">{tr('New')}</div>
+            <h2 className="text-xl sm:text-2xl font-extrabold text-stone-950 tracking-tight">{tr('HSK 3 · complete exams in the official format')}</h2>
+            <p className="text-sm text-stone-600 mt-1 max-w-2xl">
+              {tr('80 questions in 90 minutes, as on exam day: listening (40), reading (30), writing (10). Score out of 300, 180 to pass, with a full correction.')}
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {HSK3_EXAMS.map((e) => {
+              const best = testHistory.filter((r) => r.testId === e.id).reduce((m, r) => Math.max(m, r.score), -1);
+              const locked = e.isPro && !isProUser;
+              const official = e.source === 'official';
+              return (
+                <button
+                  key={e.id}
+                  onClick={() => (locked ? (setProModalFeature(e.title), setShowProModal(true)) : onOpenHsk3(e.id))}
+                  className={`text-left p-4 rounded-2xl border bg-white hover:border-stone-900 transition-colors cursor-pointer space-y-3 ${locked ? 'border-[#E8DFC8] bg-[#FAF7F2]' : 'border-[#E4DCCE]'}`}
+                >
+                  <div className="flex items-center justify-between gap-2">
+                    <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full border ${official ? 'bg-stone-900 text-white border-stone-900' : 'bg-amber-50 text-amber-800 border-amber-200'}`}>
+                      {official ? tr('Official paper') : tr('HSK Path original')}
+                    </span>
+                    {locked ? (
+                      <span className="inline-flex items-center gap-1 text-[10px] font-bold text-amber-800"><Lock className="w-3 h-3" /> Pro</span>
+                    ) : (
+                      <span className="text-[10px] font-bold text-emerald-700">{tr('Free')}</span>
+                    )}
+                  </div>
+                  <div>
+                    <div className="text-lg font-extrabold text-stone-950">{e.code}</div>
+                    <div className="text-xs text-stone-500 flex items-center gap-3 mt-0.5">
+                      <span className="inline-flex items-center gap-1"><Clock className="w-3.5 h-3.5" /> 90 min</span>
+                      <span>80 {tr('questions')}</span>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between text-xs">
+                    <span className={best >= 0 ? (best >= 180 ? 'font-bold text-emerald-700' : 'font-bold text-stone-700') : 'text-stone-400'}>
+                      {best >= 0 ? `${tr('Best score')}: ${best}/300` : tr('Not taken yet')}
+                    </span>
+                    <ChevronRight className="w-4 h-4 text-stone-400" />
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+          <p className="text-[11px] text-stone-500">
+            {tr('Official papers H31001–H31005: practice papers published by Hanban / Chinese Testing International. They follow the HSK 2.0 format; almost all of their vocabulary is part of the HSK 3.0 syllabus.')}
+          </p>
+        </section>
+      )}
 
       <Hsk30Notice variant="mock" />
 
