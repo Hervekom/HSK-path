@@ -23,7 +23,7 @@ const TABS: Array<{
     icon: Sparkles,
     group: ['practice-hub', 'quiz', 'listening-practice', 'reading-practice', 'writing-practice'],
   },
-  { id: 'vocabulary', labelKey: 'navShort.vocab', icon: BookOpen, group: ['vocabulary'] },
+  { id: 'vocabulary', labelKey: 'navShort.vocab', icon: BookOpen, group: ['vocabulary', 'phrases'] },
   {
     id: 'mock-tests',
     labelKey: 'navShort.exams',

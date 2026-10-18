@@ -26,6 +26,7 @@ import { ReviewMistakesView } from './views/ReviewMistakesView';
 import { ProgressAnalyticsView } from './views/ProgressAnalyticsView';
 import { ProfileSettingsView } from './views/ProfileSettingsView';
 import { AdminView } from './views/AdminView';
+import { PhrasesView } from './views/PhrasesView';
 
 // Data & Types
 import { VOCABULARY_DATA } from './data/vocabulary';
@@ -41,7 +42,7 @@ import type { AppState, UserProfile, VocabularyWord, MockTest, TestResult, Skill
 const ALL_VIEWS: AppState['currentView'][] = [
   'landing', 'login', 'signup', 'dashboard', 'hsk-levels', 'hsk-detail', 'learn', 'vocabulary',
   'practice-hub', 'quiz', 'listening-practice', 'reading-practice', 'writing-practice', 'mock-tests',
-  'mock-test-intro', 'mock-test-exam', 'test-results', 'review-mistakes', 'progress', 'profile', 'admin',
+  'mock-test-intro', 'mock-test-exam', 'test-results', 'review-mistakes', 'progress', 'profile', 'admin', 'phrases',
 ];
 const PUBLIC_VIEWS: AppState['currentView'][] = ['landing', 'login', 'signup', 'hsk-levels', 'hsk-detail'];
 
@@ -72,6 +73,16 @@ function HskPathApp() {
 
   // Vocabulary Data State (with in-memory learned / favorite toggle)
   const [vocabList, setVocabList] = useState<VocabularyWord[]>(VOCABULARY_DATA);
+  // Everyday phrases marked as known (stored in learnedIds with a "phrase:" prefix)
+  const [learnedPhraseIds, setLearnedPhraseIds] = useState<Set<string>>(new Set());
+  const handleTogglePhrase = (key: string) => {
+    setLearnedPhraseIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(key)) next.delete(key);
+      else next.add(key);
+      return next;
+    });
+  };
 
   // Mock Test State
   const [activeTest, setActiveTest] = useState<MockTest>(MOCK_TESTS_CATALOG[1]); // Default HSK 2 Mock Test A
@@ -122,6 +133,7 @@ function HskPathApp() {
     setStreakDays(7);
     setWeeklyMinutes(222);
     setVocabList(VOCABULARY_DATA);
+    setLearnedPhraseIds(new Set());
     setTestHistory(INITIAL_TEST_RESULTS);
     setLatestResult(INITIAL_TEST_RESULTS[0]);
   };
@@ -163,6 +175,7 @@ function HskPathApp() {
 
     setUser(profile);
     setVocabList(VOCABULARY_DATA.map((w) => ({ ...w, isLearned: learned.has(w.id), isFavorite: favs.has(w.id) })));
+    setLearnedPhraseIds(new Set([...learned].filter((id) => id.startsWith('phrase:'))));
     setTestHistory(stored?.testHistory || []);
     setLatestResult(stored?.testHistory?.[0] || null);
     setStreakDays(streak);
@@ -235,7 +248,7 @@ function HskPathApp() {
       }
       saveProgress(authUserId, {
         profile: user,
-        learnedIds: vocabList.filter((w) => w.isLearned).map((w) => w.id),
+        learnedIds: [...vocabList.filter((w) => w.isLearned).map((w) => w.id), ...learnedPhraseIds],
         favoriteIds: vocabList.filter((w) => w.isFavorite).map((w) => w.id),
         testHistory,
         streakDays,
@@ -245,7 +258,7 @@ function HskPathApp() {
       });
     }, 800);
     return () => window.clearTimeout(handle);
-  }, [authUserId, hydrated, user, vocabList, testHistory, streakDays, weeklyMinutes, srsTick]);
+  }, [authUserId, hydrated, user, vocabList, learnedPhraseIds, testHistory, streakDays, weeklyMinutes, srsTick]);
 
   // Handlers for Authentication
   const handleLoginSuccess = async () => {
@@ -564,7 +577,22 @@ function HskPathApp() {
               words={vocabList}
               onToggleLearned={handleToggleLearned}
               onToggleFavorite={handleToggleFavorite}
+              onNavigate={navigate}
             />
+          </AppLayout>
+        );
+
+      case 'phrases':
+        return (
+          <AppLayout
+            onSignOut={handleSignOut}
+            isAdmin={isAdmin}
+            currentView={currentView}
+            onNavigate={navigate}
+            user={user}
+            streakDays={streakDays}
+          >
+            <PhrasesView learnedPhraseIds={learnedPhraseIds} onToggleLearned={handleTogglePhrase} onNavigate={navigate} />
           </AppLayout>
         );
 

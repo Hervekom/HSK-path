@@ -6,6 +6,17 @@
 import React, { forwardRef } from 'react';
 import type { Icon as PhosphorIcon, IconProps } from '@phosphor-icons/react';
 import {
+  HandWaving as PhHandWaving,
+  HandsPraying as PhHandsPraying,
+  BowlFood as PhBowlFood,
+  ShoppingBag as PhShoppingBag,
+  Train as PhTrain,
+  DeviceMobile as PhDeviceMobile,
+  Pill as PhPill,
+  House as PhHouse,
+  ChatCircleText as PhChatCircleText,
+  Siren as PhSiren,
+  ChatsCircle as PhChatsCircle,
   ArrowClockwise as PhArrowClockwise,
   ArrowCounterClockwise as PhArrowCounterClockwise,
   ArrowLeft as PhArrowLeft,
@@ -162,3 +173,14 @@ export const SealCheck = make(PhSealCheck, 'SealCheck');
 export const PenNib = make(PhPenNib, 'PenNib');
 export const Newspaper = make(PhNewspaper, 'Newspaper');
 export const Repeat = make(PhRepeat, 'Repeat');
+export const HandWaving = make(PhHandWaving, 'HandWaving');
+export const HandsPraying = make(PhHandsPraying, 'HandsPraying');
+export const BowlFood = make(PhBowlFood, 'BowlFood');
+export const ShoppingBag = make(PhShoppingBag, 'ShoppingBag');
+export const Train = make(PhTrain, 'Train');
+export const DeviceMobile = make(PhDeviceMobile, 'DeviceMobile');
+export const Pill = make(PhPill, 'Pill');
+export const House = make(PhHouse, 'House');
+export const ChatCircleText = make(PhChatCircleText, 'ChatCircleText');
+export const Siren = make(PhSiren, 'Siren');
+export const ChatsCircle = make(PhChatsCircle, 'ChatsCircle');

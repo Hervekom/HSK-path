@@ -36,6 +36,8 @@ export const AppHeader: React.FC<AppHeaderProps> = ({
         return t('nav.learn');
       case 'vocabulary':
         return t('nav.vocabulary');
+      case 'phrases':
+        return t('nav.phrases');
       case 'practice-hub':
       case 'quiz':
       case 'listening-practice':

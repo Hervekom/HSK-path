@@ -15,6 +15,7 @@ import {
   Flame,
   Layers,
   Shield,
+  ChatsCircle,
 } from '../icons';
 import { useI18n } from '../../locales';
 import { LanguageSelector } from '../ui/LanguageSelector';
@@ -49,6 +50,7 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({
     { id: 'learn', labelKey: 'nav.learn', icon: GraduationCap },
     { id: 'practice-hub', labelKey: 'nav.practice', icon: Sparkles },
     { id: 'vocabulary', labelKey: 'nav.vocabulary', icon: BookOpen },
+    { id: 'phrases', labelKey: 'nav.phrases', icon: ChatsCircle },
     { id: 'mock-tests', labelKey: 'nav.mockTests', icon: FileCheck },
     { id: 'progress', labelKey: 'nav.progress', icon: TrendingUp },
     { id: 'profile', labelKey: 'nav.profile', icon: Settings },
