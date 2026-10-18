@@ -54,6 +54,12 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   setTrLanguage(language);
   useEffect(() => {
     document.documentElement.lang = language === 'zh' ? 'zh-CN' : language;
+    document.title =
+      language === 'fr'
+        ? 'HSK Path — Préparer le HSK 1, 2 et 3'
+        : language === 'zh'
+          ? 'HSK Path — HSK 1、2、3 级备考'
+          : 'HSK Path — Prepare for HSK 1, HSK 2 & HSK 3';
   }, [language]);
 
   const setLanguage = (lang: Language) => {
