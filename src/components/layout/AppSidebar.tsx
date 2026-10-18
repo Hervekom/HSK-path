@@ -1,23 +1,7 @@
 import React from 'react';
 import { tr } from '../../locales/tr';
-import {
-  LayoutDashboard,
-  GraduationCap,
-  Sparkles,
-  BookOpen,
-  FileCheck,
-  TrendingUp,
-  User,
-  Settings,
-  HelpCircle,
-  LogOut,
-  ChevronRight,
-  Flame,
-  Layers,
-  Shield,
-  ChatsCircle,
-  ChatCircleText,
-} from '../icons';
+import { ChevronRight, Flame, LogOut } from '../icons';
+import { NAV_SECTIONS } from './navigation';
 import { useI18n } from '../../locales';
 import { LanguageSelector } from '../ui/LanguageSelector';
 import type { AppState, UserProfile } from '../../types';
@@ -45,19 +29,10 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({
 }) => {
   const { t } = useI18n();
 
-  const navItems = [
-    { id: 'dashboard', labelKey: 'nav.dashboard', icon: LayoutDashboard },
-    { id: 'hsk-levels', labelKey: 'nav.hskLevels', icon: Layers },
-    { id: 'learn', labelKey: 'nav.learn', icon: GraduationCap },
-    { id: 'practice-hub', labelKey: 'nav.practice', icon: Sparkles },
-    { id: 'tutor', labelKey: 'nav.tutor', icon: ChatCircleText },
-    { id: 'vocabulary', labelKey: 'nav.vocabulary', icon: BookOpen },
-    { id: 'phrases', labelKey: 'nav.phrases', icon: ChatsCircle },
-    { id: 'mock-tests', labelKey: 'nav.mockTests', icon: FileCheck },
-    { id: 'progress', labelKey: 'nav.progress', icon: TrendingUp },
-    { id: 'profile', labelKey: 'nav.profile', icon: Settings },
-    ...(isAdmin ? [{ id: 'admin', labelKey: 'nav.admin', icon: Shield }] : []),
-  ] as const;
+  const sections = NAV_SECTIONS.map((section) => ({
+    ...section,
+    items: section.items.filter((item) => !item.adminOnly || isAdmin),
+  })).filter((section) => section.items.length > 0);
 
   const handleItemClick = (id: any) => {
     onNavigate(id);
@@ -108,51 +83,43 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({
           <ChevronRight className="w-4 h-4 text-stone-400" />
         </div>
 
-        {/* Navigation Items */}
-        <nav className="space-y-1">
-          {navItems.map((item) => {
-            const Icon = item.icon;
-            const isActive =
-              currentView === item.id ||
-              (item.id === 'hsk-levels' && currentView === 'hsk-detail') ||
-              (item.id === 'practice-hub' &&
-                (currentView === 'quiz' ||
-                  currentView === 'listening-practice' ||
-                  currentView === 'reading-practice' ||
-                  currentView === 'writing-practice')) ||
-              (item.id === 'mock-tests' &&
-                (currentView === 'mock-test-intro' ||
-                  currentView === 'mock-test-exam' ||
-                  currentView === 'test-results' ||
-                  currentView === 'review-mistakes'));
-
-            return (
-              <button
-                key={item.id}
-                onClick={() => handleItemClick(item.id)}
-                className={`w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold tracking-tight transition-all duration-200 cursor-pointer ${
-                  isActive
-                    ? 'bg-[#1C1917] text-[#FAF8F5] shadow-xs'
-                    : 'text-stone-600 hover:text-stone-950 hover:bg-[#EFE8DE]'
-                }`}
-              >
-                <div className="flex items-center gap-3">
-                  <Icon className={`w-4 h-4 shrink-0 ${isActive ? 'text-[#FAF8F5]' : 'text-stone-500'}`} />
-                  <span>{t(item.labelKey)}</span>
-                </div>
-                {item.id === 'practice-hub' && (
-                  <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-md ${isActive ? 'bg-white/20 text-white' : 'bg-rose-100 text-[#C52828]'}`}>
-                    6
-                  </span>
-                )}
-                {item.id === 'vocabulary' && (
-                  <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-md ${isActive ? 'bg-white/20 text-white' : 'bg-[#FAF5EB] text-[#8C6405] border border-[#E6D4B0]'}`}>
-                    {tr("SRS")}
-                  </span>
-                )}
-              </button>
-            );
-          })}
+        {/* Navigation, grouped by section */}
+        <nav className="space-y-4">
+          {sections.map((section) => (
+            <div key={section.id} className="space-y-1">
+              {(section.titleKey || section.title) && (
+                <p className="px-3.5 pb-0.5 text-[10px] font-bold uppercase tracking-widest text-stone-400">
+                  {section.titleKey ? t(section.titleKey) : tr(section.title!)}
+                </p>
+              )}
+              {section.items.map((item) => {
+                const Icon = item.icon;
+                const isActive = item.views.includes(currentView);
+                return (
+                  <button
+                    key={item.id}
+                    onClick={() => handleItemClick(item.id)}
+                    aria-current={isActive ? 'page' : undefined}
+                    className={`w-full flex items-center justify-between px-3.5 py-2 rounded-xl text-xs font-semibold tracking-tight transition-all duration-200 cursor-pointer ${
+                      isActive
+                        ? 'bg-[#1C1917] text-[#FAF8F5] shadow-xs'
+                        : 'text-stone-600 hover:text-stone-950 hover:bg-[#EFE8DE]'
+                    }`}
+                  >
+                    <div className="flex items-center gap-3">
+                      <Icon className={`w-4 h-4 shrink-0 ${isActive ? 'text-[#FAF8F5]' : 'text-stone-500'}`} />
+                      <span>{item.labelKey ? t(item.labelKey) : tr(item.label!)}</span>
+                    </div>
+                    {item.badge === 'srs' && (
+                      <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-md ${isActive ? 'bg-white/20 text-white' : 'bg-[#FAF5EB] text-[#8C6405] border border-[#E6D4B0]'}`}>
+                        {tr("SRS")}
+                      </span>
+                    )}
+                  </button>
+                );
+              })}
+            </div>
+          ))}
         </nav>
       </div>
 

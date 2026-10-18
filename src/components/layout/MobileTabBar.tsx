@@ -1,6 +1,6 @@
 import React from 'react';
 import { tr } from '../../locales/tr';
-import { LayoutDashboard, Layers, Sparkles, BookOpen, FileCheck } from '../icons';
+import { MOBILE_TABS } from './navigation';
 import { useI18n } from '../../locales';
 import type { AppState } from '../../types';
 
@@ -8,29 +8,6 @@ interface MobileTabBarProps {
   currentView: AppState['currentView'];
   onNavigate: (view: AppState['currentView']) => void;
 }
-
-const TABS: Array<{
-  id: AppState['currentView'];
-  labelKey: string;
-  icon: React.ComponentType<{ className?: string; weight?: 'regular' | 'fill' }>;
-  group: AppState['currentView'][];
-}> = [
-  { id: 'dashboard', labelKey: 'navShort.home', icon: LayoutDashboard, group: ['dashboard', 'progress', 'profile'] },
-  { id: 'hsk-levels', labelKey: 'navShort.levels', icon: Layers, group: ['hsk-levels', 'hsk-detail', 'learn'] },
-  {
-    id: 'practice-hub',
-    labelKey: 'navShort.practice',
-    icon: Sparkles,
-    group: ['practice-hub', 'tutor', 'quiz', 'listening-practice', 'reading-practice', 'writing-practice'],
-  },
-  { id: 'vocabulary', labelKey: 'navShort.vocab', icon: BookOpen, group: ['vocabulary', 'phrases'] },
-  {
-    id: 'mock-tests',
-    labelKey: 'navShort.exams',
-    icon: FileCheck,
-    group: ['mock-tests', 'mock-test-intro', 'mock-test-exam', 'test-results', 'review-mistakes', 'hsk3-exam'],
-  },
-];
 
 /** Bottom navigation for phones (hidden from lg breakpoint, where the sidebar is visible). */
 export const MobileTabBar: React.FC<MobileTabBarProps> = ({ currentView, onNavigate }) => {
@@ -43,8 +20,8 @@ export const MobileTabBar: React.FC<MobileTabBarProps> = ({ currentView, onNavig
       aria-label={tr("Main navigation")}
     >
       <div className="grid grid-cols-5 max-w-xl mx-auto">
-        {TABS.map((tab) => {
-          const active = tab.group.includes(currentView);
+        {MOBILE_TABS.map((tab) => {
+          const active = tab.views.includes(currentView);
           const Icon = tab.icon;
           return (
             <button
@@ -57,7 +34,7 @@ export const MobileTabBar: React.FC<MobileTabBarProps> = ({ currentView, onNavig
             >
               {active && <span className="absolute top-0 h-0.5 w-8 rounded-full bg-[#C52828]" />}
               <Icon className="w-[22px] h-[22px]" weight={active ? 'fill' : 'regular'} />
-              <span className="truncate max-w-full px-1">{t(tab.labelKey)}</span>
+              <span className="truncate max-w-full px-1">{tab.labelKey ? t(tab.labelKey) : tr(tab.label!)}</span>
             </button>
           );
         })}

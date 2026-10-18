@@ -211,9 +211,6 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
         </div>
       </div>
 
-      {/* Chinese Language Daily (Google Search Grounded) Widget */}
-      <DailyChineseWidget userLevel={user.currentHsk} />
-
       {/* Today's Practice Section */}
       <div className="space-y-4">
         <div className="flex items-center justify-between">
@@ -332,6 +329,9 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           </div>
         </div>
       </div>
+
+      {/* Chinese Language Daily: reading for pleasure, after the day's practice */}
+      <DailyChineseWidget userLevel={user.currentHsk} />
 
       {/* Performance & Weak Areas 2-Column Section */}
       {showSampleData && (

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { AppSidebar } from './AppSidebar';
 import { AppHeader } from './AppHeader';
 import { MobileTabBar } from './MobileTabBar';
+import { SectionTabs } from './SectionTabs';
 import type { AppState, UserProfile } from '../../types';
 
 interface AppLayoutProps {
@@ -50,6 +51,7 @@ export const AppLayout: React.FC<AppLayoutProps> = ({
           isAdmin={isAdmin}
         />
         <main className="flex-1 px-4 pt-4 pb-24 sm:px-6 sm:pt-6 lg:p-8 max-w-7xl w-full mx-auto text-[#231F20] min-w-0">
+          <SectionTabs currentView={currentView} onNavigate={onNavigate} />
           {children}
         </main>
       </div>

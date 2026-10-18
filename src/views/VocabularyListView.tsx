@@ -190,17 +190,6 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
 
   return (
     <div className="space-y-8 animate-in fade-in duration-200">
-      {onNavigate && (
-        <div className="inline-flex p-1 bg-[#EFE8DE] rounded-xl border border-[#E0D7CB] -mb-4">
-          <button className="px-4 py-1.5 text-xs font-bold rounded-lg bg-[#1C1917] text-white shadow-2xs">{tr('Words')}</button>
-          <button
-            onClick={() => onNavigate('phrases')}
-            className="px-4 py-1.5 text-xs font-bold rounded-lg text-stone-600 hover:text-stone-900 cursor-pointer"
-          >
-            {tr('Everyday phrases')}
-          </button>
-        </div>
-      )}
       {/* ================= HEADER & MODE BAR ================= */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-[#E8E2D8]">
         <div>

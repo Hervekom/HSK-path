@@ -30,34 +30,6 @@ export const PracticeHubView: React.FC<PracticeHubViewProps> = ({
         </p>
       </div>
 
-      {/* Laoshi: AI conversation tutor */}
-      <button
-        onClick={() => onNavigate('tutor')}
-        className="w-full text-left p-5 sm:p-6 rounded-3xl bg-white border border-[#E6DFD3] hover:border-[#C52828] transition-colors shadow-xs flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 cursor-pointer group"
-      >
-        <div className="w-14 h-14 shrink-0 rounded-2xl bg-[#1C1917] border border-stone-800 flex items-center justify-center relative overflow-hidden">
-          <span className="font-hanzi-serif font-bold text-2xl text-[#FAF8F5]">师</span>
-          <div className="absolute inset-x-0 bottom-0 h-1 bg-[#C52828]" />
-        </div>
-        <div className="flex-1 min-w-0 space-y-1.5">
-          <div className="flex items-center gap-2">
-            <span className="px-2.5 py-0.5 rounded-full bg-[#FDF3F1] text-[#C52828] border border-[#F2D3CC] text-xs font-bold uppercase tracking-wider">
-              {tr("AI tutor")}
-            </span>
-            <span className="px-2 py-0.5 rounded-full bg-[#0F766E] text-white text-[10px] font-bold uppercase tracking-wider">{tr("New")}</span>
-          </div>
-          <h2 className="text-xl sm:text-2xl font-extrabold tracking-tight text-stone-950">
-            {tr("Laoshi")} <span className="font-hanzi-serif text-[#C52828]">老师</span>
-          </h2>
-          <p className="text-sm text-stone-600 leading-relaxed">
-            {tr("Practise real conversations with Laoshi, your AI Chinese teacher. Write in Chinese: he corrects you and explains in your language.")}
-          </p>
-        </div>
-        <span className="inline-flex items-center gap-1.5 text-sm font-bold text-[#C52828] shrink-0">
-          {tr("Talk with Laoshi")} <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
-        </span>
-      </button>
-
       {/* Featured Quick Daily Drill Card */}
       <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-rose-950 via-slate-900 to-slate-900 text-white shadow-md flex flex-col md:flex-row md:items-center justify-between gap-6 border border-slate-800">
         <div className="space-y-3 max-w-xl">
@@ -89,8 +61,50 @@ export const PracticeHubView: React.FC<PracticeHubViewProps> = ({
         </div>
       </div>
 
+      <section className="space-y-4">
+      <div className="space-y-1">
+        <h2 className="text-lg font-extrabold text-stone-950 tracking-tight">{tr("Converse")}</h2>
+        <p className="text-sm text-stone-500">{tr("Write in Chinese with Laoshi: he answers, corrects you and explains.")}</p>
+      </div>
+
+      {/* Laoshi: AI conversation tutor */}
+      <button
+        onClick={() => onNavigate('tutor')}
+        className="w-full text-left p-5 sm:p-6 rounded-3xl bg-white border border-[#E6DFD3] hover:border-[#C52828] transition-colors shadow-xs flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 cursor-pointer group"
+      >
+        <div className="w-14 h-14 shrink-0 rounded-2xl bg-[#1C1917] border border-stone-800 flex items-center justify-center relative overflow-hidden">
+          <span className="font-hanzi-serif font-bold text-2xl text-[#FAF8F5]">师</span>
+          <div className="absolute inset-x-0 bottom-0 h-1 bg-[#C52828]" />
+        </div>
+        <div className="flex-1 min-w-0 space-y-1.5">
+          <div className="flex items-center gap-2">
+            <span className="px-2.5 py-0.5 rounded-full bg-[#FDF3F1] text-[#C52828] border border-[#F2D3CC] text-xs font-bold uppercase tracking-wider">
+              {tr("AI tutor")}
+            </span>
+            <span className="px-2 py-0.5 rounded-full bg-[#0F766E] text-white text-[10px] font-bold uppercase tracking-wider">{tr("New")}</span>
+          </div>
+          <h2 className="text-xl sm:text-2xl font-extrabold tracking-tight text-stone-950">
+            {tr("Laoshi")} <span className="font-hanzi-serif text-[#C52828]">老师</span>
+          </h2>
+          <p className="text-sm text-stone-600 leading-relaxed">
+            {tr("Practise real conversations with Laoshi, your AI Chinese teacher. Write in Chinese: he corrects you and explains in your language.")}
+          </p>
+        </div>
+        <span className="inline-flex items-center gap-1.5 text-sm font-bold text-[#C52828] shrink-0">
+          {tr("Talk with Laoshi")} <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+        </span>
+      </button>
+
+      </section>
+
+      <section className="space-y-4">
+      <div className="space-y-1">
+        <h2 className="text-lg font-extrabold text-stone-950 tracking-tight">{tr("By skill")}</h2>
+        <p className="text-sm text-stone-500">{tr("Short exercises to train one skill at a time.")}</p>
+      </div>
+
       {/* Categorized Practice Drills Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
         {/* 1. Listening Practice */}
         <Card
           variant="interactive"
@@ -226,33 +240,42 @@ export const PracticeHubView: React.FC<PracticeHubViewProps> = ({
           </div>
         </Card>
 
-        {/* 6. Full Mock Exams */}
-        <Card
-          variant="interactive"
-          onClick={() => onNavigate('mock-tests')}
-          className="p-6 space-y-4 flex flex-col justify-between hover:border-slate-300"
-        >
-          <div className="space-y-3">
-            <div className="w-11 h-11 rounded-xl bg-[#F4EFE8] text-stone-800 border border-[#E6DED2] flex items-center justify-center">
-              <Award className="w-6 h-6" />
-            </div>
-            <h3 className="text-lg font-bold text-slate-900">
-              {t('nav.mockTests')}
-            </h3>
+      </div>
+
+      </section>
+
+      <section className="space-y-4">
+      <div className="space-y-1">
+        <h2 className="text-lg font-extrabold text-stone-950 tracking-tight">{tr("Exam conditions")}</h2>
+        <p className="text-sm text-stone-500">{tr("Full timed exams, scored like the real HSK.")}</p>
+      </div>
+
+      <Card
+        variant="interactive"
+        onClick={() => onNavigate('mock-tests')}
+        className="p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:border-slate-300"
+      >
+        <div className="flex items-start gap-4 min-w-0">
+          <div className="w-11 h-11 shrink-0 rounded-xl bg-[#F4EFE8] text-stone-800 border border-[#E6DED2] flex items-center justify-center">
+            <Award className="w-6 h-6" />
+          </div>
+          <div className="space-y-1 min-w-0">
+            <h3 className="text-lg font-bold text-slate-900">{t('nav.mockTests')}</h3>
             <p className="text-xs text-slate-600 leading-relaxed">
               {tr("Timed simulation exams with official section timing, audio player, score cards, and mistake logs.")}
             </p>
           </div>
-          <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#C52828]">
-            <span className="flex items-center gap-1 text-slate-500 font-normal">
-              <Clock className="w-3 h-3" />{" "}{tr("35–90 min")}
-            </span>
-            <span className="flex items-center gap-1">
-              {tr("Take Exam")}{" "}<ArrowRight className="w-3.5 h-3.5" />
-            </span>
-          </div>
-        </Card>
-      </div>
+        </div>
+        <div className="pt-3 border-t border-slate-100 sm:pt-0 sm:border-0 flex items-center justify-between sm:justify-end gap-5 text-xs font-bold text-[#C52828] shrink-0">
+          <span className="flex items-center gap-1 text-slate-500 font-normal whitespace-nowrap">
+            <Clock className="w-3 h-3" />{" "}{tr("35–90 min")}
+          </span>
+          <span className="flex items-center gap-1 whitespace-nowrap">
+            {tr("Take Exam")}{" "}<ArrowRight className="w-3.5 h-3.5" />
+          </span>
+        </div>
+      </Card>
+      </section>
     </div>
   );
 };

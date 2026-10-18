@@ -31,7 +31,6 @@ export const HskLevelsView: React.FC<HskLevelsViewProps> = ({
 
   return (
     <div className="space-y-8 animate-in fade-in duration-150">
-      <Hsk30Notice />
 
       {/* Title Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
@@ -168,6 +167,8 @@ export const HskLevelsView: React.FC<HskLevelsViewProps> = ({
           );
         })}
       </div>
+
+      <Hsk30Notice />
 
       {/* Future Roadmap Section */}
       <div className="p-6 sm:p-7 rounded-3xl bg-stone-900 text-white space-y-4">

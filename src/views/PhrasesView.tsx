@@ -217,19 +217,6 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ learnedPhraseIds, onTo
 
   return (
     <div className="space-y-6 animate-in fade-in duration-150">
-      {/* Words | Phrases switch */}
-      <div className="inline-flex p-1 bg-[#EFE8DE] rounded-xl border border-[#E0D7CB]">
-        <button
-          onClick={() => onNavigate('vocabulary')}
-          className="px-4 py-1.5 text-xs font-bold rounded-lg text-stone-600 hover:text-stone-900 cursor-pointer"
-        >
-          {tr('Words')}
-        </button>
-        <button className="px-4 py-1.5 text-xs font-bold rounded-lg bg-[#1C1917] text-white shadow-2xs">
-          {tr('Everyday phrases')}
-        </button>
-      </div>
-
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>

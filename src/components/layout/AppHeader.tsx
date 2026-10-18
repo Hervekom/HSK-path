@@ -2,6 +2,7 @@ import React from 'react';
 import { tr } from '../../locales/tr';
 import { Menu, Flame, Search, Bell, Sparkles, BookOpen, ShieldCheck } from '../icons';
 import { useI18n } from '../../locales';
+import { navItemFor } from './navigation';
 import { LanguageSelector } from '../ui/LanguageSelector';
 import { Button } from '../ui/Button';
 import type { AppState, UserProfile } from '../../types';
@@ -26,42 +27,9 @@ export const AppHeader: React.FC<AppHeaderProps> = ({
   const { t } = useI18n();
 
   const getTitle = () => {
-    switch (currentView) {
-      case 'dashboard':
-        return t('nav.dashboard');
-      case 'hsk-levels':
-      case 'hsk-detail':
-        return t('nav.hskLevels');
-      case 'learn':
-        return t('nav.learn');
-      case 'vocabulary':
-        return t('nav.vocabulary');
-      case 'phrases':
-        return t('nav.phrases');
-      case 'tutor':
-        return t('nav.tutor');
-      case 'practice-hub':
-      case 'quiz':
-      case 'listening-practice':
-      case 'reading-practice':
-      case 'writing-practice':
-        return t('nav.practice');
-      case 'mock-tests':
-      case 'mock-test-intro':
-      case 'mock-test-exam':
-      case 'test-results':
-      case 'review-mistakes':
-      case 'hsk3-exam':
-        return t('nav.mockTests');
-      case 'progress':
-        return t('nav.progress');
-      case 'profile':
-        return t('nav.profile');
-      case 'admin':
-        return t('nav.admin');
-      default:
-        return 'HSK Path';
-    }
+    const item = navItemFor(currentView);
+    if (!item) return 'HSK Path';
+    return item.labelKey ? t(item.labelKey) : tr(item.label!);
   };
 
   return (

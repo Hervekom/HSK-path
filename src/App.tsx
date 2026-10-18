@@ -11,7 +11,6 @@ import { SignUpView } from './views/SignUpView';
 import { DashboardView } from './views/DashboardView';
 import { HskLevelsView } from './views/HskLevelsView';
 import { HskLevelDetailView } from './views/HskLevelDetailView';
-import { LearnHubView } from './views/LearnHubView';
 import { VocabularyListView } from './views/VocabularyListView';
 import { PracticeHubView } from './views/PracticeHubView';
 import { QuizView } from './views/QuizView';
@@ -58,7 +57,10 @@ function HskPathApp() {
   const { addToast } = useToast();
 
   // Navigation & User State
-  const [currentView, setCurrentView] = useState<AppState['currentView']>(() => viewFromHash() || 'landing');
+  const [currentView, setCurrentView] = useState<AppState['currentView']>(() => {
+    const v = viewFromHash();
+    return v === 'learn' ? 'hsk-levels' : v || 'landing';
+  });
   const [isDemo, setIsDemo] = useState<boolean>(() => {
     try {
       return sessionStorage.getItem('hsk_demo') === '1';
@@ -347,7 +349,10 @@ function HskPathApp() {
   }, [currentView]);
 
   useEffect(() => {
-    const onPop = () => setCurrentView(viewFromHash() || 'landing');
+    const onPop = () => {
+      const v = viewFromHash();
+      setCurrentView(v === 'learn' ? 'hsk-levels' : v || 'landing');
+    };
     window.addEventListener('popstate', onPop);
     return () => window.removeEventListener('popstate', onPop);
   }, []);
@@ -362,6 +367,8 @@ function HskPathApp() {
 
   // Navigation guard: signed-in users skip the auth screens
   const navigate = (view: AppState['currentView']) => {
+    // The old "Learn" hub only repeated the exercises page: courses are the learning entry point.
+    if (view === 'learn') view = 'hsk-levels';
     if (authUserId && (view === 'login' || view === 'signup')) {
       setCurrentView('dashboard');
       return;
@@ -562,23 +569,6 @@ function HskPathApp() {
                 setActiveTest(test);
                 setCurrentView('mock-test-intro');
               }}
-            />
-          </AppLayout>
-        );
-
-      case 'learn':
-        return (
-          <AppLayout
-            onSignOut={handleSignOut}
-            isAdmin={isAdmin}
-            currentView={currentView}
-            onNavigate={navigate}
-            user={user}
-            streakDays={streakDays}
-          >
-            <LearnHubView
-              onNavigate={navigate}
-              onStartPractice={handleStartPractice}
             />
           </AppLayout>
         );

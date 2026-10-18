@@ -50,6 +50,35 @@ export const MockTestsListView: React.FC<MockTestsListViewProps> = ({
 
   return (
     <div className="space-y-8 animate-in fade-in duration-150">
+      {/* Header & Filter Tabs */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">
+            {t('mockTests.title')}
+          </h1>
+          <p className="text-sm sm:text-base text-stone-600 font-medium mt-1">
+            {t('mockTests.subtitle')}
+          </p>
+        </div>
+
+        {/* Level Filter Tabs */}
+        <div className="inline-flex p-1 bg-[#ECE4D8] rounded-xl border border-[#DFD5C6] shrink-0">
+          {(['all', 'hsk1', 'hsk2', 'hsk3'] as const).map((lvl) => (
+            <button
+              key={lvl}
+              onClick={() => setSelectedLevel(lvl)}
+              className={`px-3 py-1.5 text-xs font-bold rounded-lg transition-all cursor-pointer ${
+                selectedLevel === lvl
+                  ? 'bg-white text-stone-900 shadow-xs'
+                  : 'text-stone-600 hover:text-stone-900'
+              }`}
+            >
+              {lvl === 'all' ? (language === 'fr' ? 'Tous les tests' : language === 'zh' ? '全部试卷' : 'All Tests') : lvl.toUpperCase()}
+            </button>
+          ))}
+        </div>
+      </div>
+
       {/* Top Banner explaining Free & Pro Rules */}
       <div className="p-4 sm:p-5 rounded-2xl bg-[#F6F1E8] border border-[#E5DACD] flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div className="flex items-start gap-3.5">
@@ -142,35 +171,9 @@ export const MockTestsListView: React.FC<MockTestsListViewProps> = ({
         </section>
       )}
 
-      <Hsk30Notice variant="mock" />
-
-      {/* Header & Filter Tabs */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-        <div>
-          <h1 className="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">
-            {t('mockTests.title')}
-          </h1>
-          <p className="text-sm sm:text-base text-stone-600 font-medium mt-1">
-            {t('mockTests.subtitle')}
-          </p>
-        </div>
-
-        {/* Level Filter Tabs */}
-        <div className="inline-flex p-1 bg-[#ECE4D8] rounded-xl border border-[#DFD5C6] shrink-0">
-          {(['all', 'hsk1', 'hsk2', 'hsk3'] as const).map((lvl) => (
-            <button
-              key={lvl}
-              onClick={() => setSelectedLevel(lvl)}
-              className={`px-3 py-1.5 text-xs font-bold rounded-lg transition-all cursor-pointer ${
-                selectedLevel === lvl
-                  ? 'bg-white text-stone-900 shadow-xs'
-                  : 'text-stone-600 hover:text-stone-900'
-              }`}
-            >
-              {lvl === 'all' ? (language === 'fr' ? 'Tous les tests' : language === 'zh' ? '全部试卷' : 'All Tests') : lvl.toUpperCase()}
-            </button>
-          ))}
-        </div>
+      <div>
+        <h2 className="text-xl sm:text-2xl font-extrabold text-stone-950 tracking-tight">{tr('Short mock exams by level')}</h2>
+        <p className="text-sm text-stone-600 mt-1 max-w-2xl">{tr('Shorter timed exams for HSK 1, 2 and 3, with a score and a review of your mistakes.')}</p>
       </div>
 
       {/* Tests Grid */}
@@ -282,6 +285,8 @@ export const MockTestsListView: React.FC<MockTestsListViewProps> = ({
           );
         })}
       </div>
+
+      <Hsk30Notice variant="mock" />
 
       {/* Pro Upgrade Modal */}
       <ProUpgradeModal
