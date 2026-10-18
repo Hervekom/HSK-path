@@ -1,5 +1,8 @@
 // Translations of hard-coded English UI and exam strings (see tr.ts). Key = exact English text.
+import { LAOSHI_STRINGS } from './laoshiStrings';
+
 export const UI_STRINGS: Record<string, { fr?: string; zh?: string }> = {
+  ...LAOSHI_STRINGS,
   "Student": { fr: "Élève", zh: "学员" },
   "Welcome back! Ready for today's study session.": { fr: "Bon retour ! Prêt pour la séance du jour ?", zh: "欢迎回来！准备好今天的学习了吗？" },
   "Demo mode — progress is not saved.": { fr: "Mode démo : la progression n'est pas enregistrée.", zh: "演示模式：学习进度不会保存。" },

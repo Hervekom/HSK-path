@@ -2,6 +2,7 @@ import express from 'express';
 import path from 'path';
 import { createServer as createViteServer } from 'vite';
 import { getDailyChinese } from './server/dailyChinese';
+import { handleTutor } from './server/tutorHandler';
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -22,6 +23,13 @@ app.all('/api/daily-chinese', async (req, res) => {
   const category = (req.query.category || req.body?.category || 'mixed') as string;
   const language = (req.query.language || req.body?.language || 'en') as string;
   res.json(await getDailyChinese({ level, category, language }));
+});
+
+// API endpoint: Laoshi, the AI tutor
+app.post('/api/tutor', async (req, res) => {
+  res.setHeader('Cache-Control', 'no-store');
+  const result = await handleTutor(req.body, req.headers);
+  res.status(result.status).json(result.body);
 });
 
 async function startServer() {

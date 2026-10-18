@@ -21,7 +21,7 @@ const TABS: Array<{
     id: 'practice-hub',
     labelKey: 'navShort.practice',
     icon: Sparkles,
-    group: ['practice-hub', 'quiz', 'listening-practice', 'reading-practice', 'writing-practice'],
+    group: ['practice-hub', 'tutor', 'quiz', 'listening-practice', 'reading-practice', 'writing-practice'],
   },
   { id: 'vocabulary', labelKey: 'navShort.vocab', icon: BookOpen, group: ['vocabulary', 'phrases'] },
   {

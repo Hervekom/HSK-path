@@ -28,6 +28,7 @@ import { ProfileSettingsView } from './views/ProfileSettingsView';
 import { AdminView } from './views/AdminView';
 import { PhrasesView } from './views/PhrasesView';
 import { Hsk3ExamView } from './views/Hsk3ExamView';
+import { TutorView } from './views/TutorView';
 
 // Data & Types
 import { VOCABULARY_DATA } from './data/vocabulary';
@@ -42,7 +43,7 @@ import type { AppState, UserProfile, VocabularyWord, MockTest, TestResult, Skill
 
 const ALL_VIEWS: AppState['currentView'][] = [
   'landing', 'login', 'signup', 'dashboard', 'hsk-levels', 'hsk-detail', 'learn', 'vocabulary',
-  'practice-hub', 'quiz', 'listening-practice', 'reading-practice', 'writing-practice', 'mock-tests',
+  'practice-hub', 'tutor', 'quiz', 'listening-practice', 'reading-practice', 'writing-practice', 'mock-tests',
   'mock-test-intro', 'mock-test-exam', 'test-results', 'review-mistakes', 'progress', 'profile', 'admin', 'phrases', 'hsk3-exam',
 ];
 const PUBLIC_VIEWS: AppState['currentView'][] = ['landing', 'login', 'signup', 'hsk-levels', 'hsk-detail'];
@@ -628,6 +629,25 @@ function HskPathApp() {
             <PracticeHubView
               onNavigate={navigate}
               onStartPractice={handleStartPractice}
+            />
+          </AppLayout>
+        );
+
+      case 'tutor':
+        return (
+          <AppLayout
+            onSignOut={handleSignOut}
+            isAdmin={isAdmin}
+            currentView={currentView}
+            onNavigate={navigate}
+            user={user}
+            streakDays={streakDays}
+          >
+            <TutorView
+              user={user}
+              isSignedIn={Boolean(authUserId)}
+              knownWords={vocabList.filter((w) => w.isLearned).map((w) => w.hanzi)}
+              onNavigate={navigate}
             />
           </AppLayout>
         );

@@ -6,6 +6,7 @@ E-learning SaaS to prepare HSK 1–3: vocabulary (SRS), listening, reading, writ
 - React 19 + Vite + Tailwind 4
 - Supabase (auth + `user_progress` table, see `supabase/schema.sql`)
 - Vercel (static site + serverless `/api/daily-chinese`, optional Gemini key)
+- Laoshi, AI tutor: `/api/tutor` (`server/tutor*.ts`, `server/ai/provider.ts`), free Groq key `GROQ_API_KEY`, daily quota in `supabase/tutor.sql`; students can add their own Groq/Gemini key
 
 ## Local dev
 ```bash
