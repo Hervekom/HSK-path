@@ -10,6 +10,9 @@ export const HSK3_EXAMS: H3ExamMeta[] = [
   { id: 'h31005', code: 'H31005', title: 'HSK 3 · H31005', source: 'official', isPro: false },
   { id: 'hp3-01', code: 'HP3-01', title: 'HSK 3 · HSK Path 01', source: 'original', isPro: true },
   { id: 'hp3-02', code: 'HP3-02', title: 'HSK 3 · HSK Path 02', source: 'original', isPro: true },
+  { id: 'hp3-03', code: 'HP3-03', title: 'HSK 3 · HSK Path 03', source: 'original', isPro: true },
+  { id: 'hp3-04', code: 'HP3-04', title: 'HSK 3 · HSK Path 04', source: 'original', isPro: true },
+  { id: 'hp3-05', code: 'HP3-05', title: 'HSK 3 · HSK Path 05', source: 'original', isPro: true },
 ];
 
 /** Exam content is loaded on demand so it does not weigh on the first page load. */
@@ -21,6 +24,7 @@ export async function loadHsk3Exam(id: string): Promise<H3Exam | null> {
     const list = (mod.default || mod) as unknown as H3Exam[];
     return list.find((e) => e.id === id) || null;
   }
-  const mod = await import('./originals');
-  return mod.ORIGINAL_EXAMS.find((e) => e.id === id) || null;
+  const [a, b] = await Promise.all([import('./originals'), import('./originals2')]);
+  const all: H3Exam[] = [...a.ORIGINAL_EXAMS, b.HP3_03, b.HP3_04, b.HP3_05];
+  return all.find((e) => e.id === id) || null;
 }

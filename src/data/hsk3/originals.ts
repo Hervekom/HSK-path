@@ -36,7 +36,13 @@ interface Spec {
   chars: CH[];
 }
 
-function build(s: Spec): H3Exam {
+function hash(str: string): number {
+  let h = 2166136261;
+  for (let i = 0; i < str.length; i++) h = Math.imul(h ^ str.charCodeAt(i), 16777619);
+  return Math.abs(h);
+}
+
+export function build(s: Spec): H3Exam {
   const groups: H3Group[] = [
     { id: 'g1', range: [1, 5], kind: 'icon', options: s.g1, example: { letter: 'D', text: s.g1Example } },
     { id: 'g2', range: [6, 10], kind: 'icon', options: s.g2 },
@@ -48,7 +54,7 @@ function build(s: Spec): H3Exam {
   const q: H3Question[] = [];
   let n = 1;
   s.l1.forEach(([t, a]) => { q.push({ n, type: 'l-img', group: n <= 5 ? 'g1' : 'g2', transcript: t, answer: a }); n++; });
-  s.tf.forEach(([t, st, a]) => { q.push({ n, type: 'l-tf', statement: st, transcript: `${t}\n★ ${st}`, answer: a }); n++; });
+  [...s.tf].sort((x, y) => hash(s.code + x[1]) - hash(s.code + y[1])).forEach(([t, st, a]) => { q.push({ n, type: 'l-tf', statement: st, transcript: `${t}\n★ ${st}`, answer: a }); n++; });
   s.mc.forEach(([t, o, a]) => { q.push({ n, type: 'l-mc', options: o, transcript: t, answer: a }); n++; });
   s.m1q.forEach(([t, a]) => { q.push({ n, type: 'r-match', group: 'm1', text: t, answer: a }); n++; });
   s.m2q.forEach(([t, a]) => { q.push({ n, type: 'r-match', group: 'm2', text: t, answer: a }); n++; });
@@ -58,6 +64,18 @@ function build(s: Spec): H3Exam {
   s.order.forEach(([w, a, alts]) => { q.push({ n, type: 'w-order', words: w, answer: a, ...(alts ? { alts } : {}) }); n++; });
   s.chars.forEach(([py, t, a]) => { q.push({ n, type: 'w-char', pinyin: py, text: t, answer: a }); n++; });
   if (q.length !== 80) throw new Error(`${s.code}: ${q.length} questions`);
+  // Spread the right answers evenly over A / B / C (deterministic per exam and question).
+  q.forEach((item) => {
+    if ((item.type === 'l-mc' || item.type === 'r-mc') && item.options) {
+      const correct = item.options['ABC'.indexOf(item.answer)];
+      const target = (hash(`${s.code}-${item.n}`) % 3);
+      const others = item.options.filter((o) => o !== correct);
+      const opts = [...others];
+      opts.splice(target, 0, correct);
+      item.options = opts;
+      item.answer = 'ABC'[target];
+    }
+  });
   return { id: s.id, code: s.code, title: s.title, source: 'original', isPro: true, groups, questions: q };
 }
 

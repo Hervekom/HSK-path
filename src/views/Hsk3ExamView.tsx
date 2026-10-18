@@ -3,6 +3,8 @@ import {
   Bicycle, Phone, AirplaneTilt, BookOpen as PhBookOpen, ForkKnife, Umbrella, Television, Basketball, Coffee,
   ShoppingCart, Bed, Bus, Pill, Gift, Camera, Dog, EnvelopeSimple, SoccerBall, MusicNotes, Cake, Car, CloudRain,
   Pause, Play as PhPlay, SpeakerHigh, Lock as PhLock,
+  Train, Cat, Laptop, Watch, Bathtub, Mountains, Newspaper, TShirt, Fish, Sneaker, Hospital, Taxi, Baby, Bread,
+  Briefcase, Flower, Sun, BowlFood, Elevator, Pencil, PersonSimpleSwim,
 } from '@phosphor-icons/react';
 import { ArrowLeft, ArrowRight, Check, X, Clock, Headphones, BookOpen, PenTool, RotateCcw, Info } from '../components/icons';
 import { tr } from '../locales/tr';
@@ -18,6 +20,8 @@ import type { TestResult } from '../types';
 const ICONS: Record<string, React.ComponentType<any>> = {
   Bicycle, Phone, AirplaneTilt, BookOpen: PhBookOpen, ForkKnife, Umbrella, Television, Basketball, Coffee,
   ShoppingCart, Bed, Bus, Pill, Gift, Camera, Dog, EnvelopeSimple, SoccerBall, MusicNotes, Cake, Car, CloudRain,
+  Train, Cat, Laptop, Watch, Bathtub, Mountains, Newspaper, TShirt, Fish, Sneaker, Hospital, Taxi, Baby, Bread,
+  Briefcase, Flower, Sun, BowlFood, Elevator, Pencil, PersonSimpleSwim,
 };
 
 type Phase = 'intro' | 'listening' | 'reading' | 'writing' | 'results' | 'review';
