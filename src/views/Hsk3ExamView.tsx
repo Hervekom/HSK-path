@@ -47,6 +47,9 @@ const SECTION_ICON: Record<SectionId, React.ComponentType<{ className?: string }
   writing: PenTool,
 };
 
+/** Time to check answers after the recording, as in the real exam. */
+const CHECK_SECONDS = 5 * 60;
+
 const fmt = (s: number) => {
   const m = Math.floor(Math.max(0, s) / 60);
   const r = Math.max(0, s) % 60;
@@ -92,15 +95,24 @@ export const Hsk3ExamView: React.FC<Props> = ({ examId, isProUser, onExit, onFin
   const locked = Boolean(meta?.isPro && !isProUser);
   const inSection = phase === 'listening' || phase === 'reading' || phase === 'writing';
 
+  // In the listening section of an official paper, the countdown follows the recording:
+  // it starts when the audio starts, shows the time left in the recording + 5 minutes to check answers,
+  // and only counts down on its own once the recording has ended.
+  const audioSynced = phase === 'listening' && Boolean(exam?.audioUrl) && mode === 'exam';
+  // Original exams (speech synthesis): the countdown starts with the first recording played.
+  const waitingForAudio =
+    phase === 'listening' && mode === 'exam' && (exam?.audioUrl ? audioState === 'idle' : Object.keys(plays).length === 0);
+
   // Timer
   useEffect(() => {
     if (!inSection) return;
     const id = window.setInterval(() => {
+      if (waitingForAudio) return;
       setElapsed((e) => e + 1);
-      if (mode === 'exam') setSecondsLeft((s) => s - 1);
+      if (mode === 'exam' && !(audioSynced && audioState !== 'ended')) setSecondsLeft((s) => s - 1);
     }, 1000);
     return () => window.clearInterval(id);
-  }, [inSection, mode]);
+  }, [inSection, mode, audioSynced, audioState, waitingForAudio]);
 
   useEffect(() => {
     if (mode === 'exam' && inSection && secondsLeft <= 0 && elapsed > 0) nextSection();
@@ -385,8 +397,9 @@ export const Hsk3ExamView: React.FC<Props> = ({ examId, isProUser, onExit, onFin
           <div className="text-sm font-bold text-stone-900 truncate">{tr(SECTION_LABEL[section])} · {exam.code}</div>
           <div className="text-[11px] text-stone-500 font-semibold">{answered}/{secQs.length} {tr('answered')}</div>
         </div>
-        <span className={`tabular-nums text-sm font-bold px-2.5 py-1 rounded-lg ${lowTime ? 'bg-rose-100 text-rose-800' : 'bg-white border border-[#E4DCCE] text-stone-800'}`}>
+        <span className={`inline-flex flex-col items-center tabular-nums text-sm font-bold px-2.5 py-1 rounded-lg ${lowTime ? 'bg-rose-100 text-rose-800' : 'bg-white border border-[#E4DCCE] text-stone-800'}`}>
           {mode === 'exam' ? fmt(secondsLeft) : fmt(elapsed)}
+          {waitingForAudio && <span className="block text-[9px] font-semibold text-stone-500 leading-none">{tr('starts with audio')}</span>}
         </span>
         <Button variant="primary" size="sm" onClick={nextSection} iconRight={<ArrowRight className="w-3.5 h-3.5" />}>
           <span className="hidden sm:inline">{section === 'writing' ? tr('Finish the exam') : tr('Next section')}</span>
@@ -403,9 +416,18 @@ export const Hsk3ExamView: React.FC<Props> = ({ examId, isProUser, onExit, onFin
             preload="metadata"
             onPlay={() => setAudioState('playing')}
             onPause={() => setAudioState((s) => (s === 'ended' ? s : 'paused'))}
-            onEnded={() => setAudioState('ended')}
-            onTimeUpdate={(e) => setAudioPos({ t: e.currentTarget.currentTime, d: e.currentTarget.duration || 0 })}
-            onLoadedMetadata={(e) => setAudioPos({ t: 0, d: e.currentTarget.duration || 0 })}
+            onEnded={() => { setAudioState('ended'); if (mode === 'exam') setSecondsLeft(CHECK_SECONDS); }}
+            onTimeUpdate={(e) => {
+              const t = e.currentTarget.currentTime;
+              const d = e.currentTarget.duration || 0;
+              setAudioPos({ t, d });
+              if (mode === 'exam' && d) setSecondsLeft(Math.ceil(d - t) + CHECK_SECONDS);
+            }}
+            onLoadedMetadata={(e) => {
+              const d = e.currentTarget.duration || 0;
+              setAudioPos({ t: 0, d });
+              if (mode === 'exam' && d) setSecondsLeft(Math.ceil(d) + CHECK_SECONDS);
+            }}
           />
           <div className="flex items-center gap-3">
             <button

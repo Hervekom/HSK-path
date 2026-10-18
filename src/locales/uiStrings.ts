@@ -862,4 +862,5 @@ export const UI_STRINGS: Record<string, { fr?: string; zh?: string }> = {
   "Written by HSK Path in the exact format of the official paper, using HSK 1–3 vocabulary. The listening is read by a synthetic voice.": { fr: "Rédigé par HSK Path au format exact du sujet officiel, avec le vocabulaire HSK 1 à 3. L'écoute est lue par une voix de synthèse.", zh: "由 HSK Path 按官方试卷题型原创编写，使用 HSK 1–3 级词汇。听力由语音合成朗读。" },
   "Your answer": { fr: "Votre réponse", zh: "你的答案" },
   "example": { fr: "exemple", zh: "例" },
+  "starts with audio": { fr: "démarre avec l'audio", zh: "随录音开始" },
 };
