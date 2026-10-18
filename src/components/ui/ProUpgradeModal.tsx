@@ -2,7 +2,7 @@ import React from 'react';
 import { Modal } from './Modal';
 import { Button } from './Button';
 import { Badge } from './Badge';
-import { CheckCircle2, Crown, Sparkles, Lock, ShieldCheck, Zap } from 'lucide-react';
+import { CheckCircle2, Crown, Sparkles, Lock, ShieldCheck, Zap, SealCheck } from '../icons';
 import { useI18n } from '../../locales';
 
 interface ProUpgradeModalProps {
@@ -107,7 +107,7 @@ export const ProUpgradeModal: React.FC<ProUpgradeModalProps> = ({
             <div className="absolute top-0 right-0 transform translate-x-3 -translate-y-3 w-24 h-24 bg-[#C52828]/20 rounded-full blur-xl pointer-events-none" />
             <div className="flex items-center justify-between">
               <span className="text-xs font-bold uppercase tracking-wider text-[#FFD180] flex items-center gap-1">
-                <Sparkles className="w-3.5 h-3.5" />
+                <SealCheck className="w-3.5 h-3.5" />
                 {language === 'fr' ? 'Pass Pro HSK' : language === 'zh' ? 'Pro 畅学通' : 'Pro All-Access'}
               </span>
               <Badge variant="danger" size="sm">

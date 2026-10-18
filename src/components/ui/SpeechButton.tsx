@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Volume2, VolumeX, Sparkles } from 'lucide-react';
+import { Volume2, VolumeX, Sparkles } from '../icons';
 import { audioEngine } from '../../utils/audio';
 
 interface SpeechButtonProps {

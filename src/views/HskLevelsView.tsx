@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layers, ChevronRight, CheckCircle2, BookOpen, Headphones, FileText, Sparkles, Award, ShieldCheck } from 'lucide-react';
+import { Layers, ChevronRight, CheckCircle2, BookOpen, Headphones, FileText, Sparkles, Award, ShieldCheck } from '../components/icons';
 import { useI18n } from '../locales';
 import { HSK_LEVELS, FUTURE_HSK_LEVELS } from '../data/hskLevels';
 import { Card } from '../components/ui/Card';

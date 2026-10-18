@@ -1,23 +1,5 @@
 import React from 'react';
-import {
-  Sparkles,
-  Flame,
-  Clock,
-  BookOpen,
-  Headphones,
-  FileText,
-  Layers,
-  ArrowRight,
-  TrendingUp,
-  AlertCircle,
-  Award,
-  ChevronRight,
-  CheckCircle2,
-  Calendar,
-  PenTool,
-  BrainCircuit,
-  Zap,
-} from 'lucide-react';
+import { Sparkles, Flame, Clock, BookOpen, Headphones, FileText, Layers, ArrowRight, TrendingUp, AlertCircle, Award, ChevronRight, CheckCircle2, Calendar, PenTool, BrainCircuit, Zap, Timer } from '../components/icons';
 import { useI18n } from '../locales';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
@@ -88,7 +70,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
             variant="luxury"
             size="sm"
             onClick={() => onStartPractice('mixed')}
-            icon={<Sparkles className="w-3.5 h-3.5 text-amber-400" />}
+            icon={<Timer className="w-3.5 h-3.5" />}
             className="text-xs shadow-xs"
           >
             Quick Daily Drill
@@ -121,7 +103,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
             <span className="text-[10px] font-bold text-stone-400 uppercase tracking-widest">
               {t('dashboard.vocabCount')}
             </span>
-            <div className="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center justify-center font-bold text-xs">
+            <div className="w-7 h-7 rounded-lg bg-[#F4EFE8] text-stone-800 border border-[#E6DED2] flex items-center justify-center font-bold text-xs">
               <BookOpen className="w-3.5 h-3.5" />
             </div>
           </div>

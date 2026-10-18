@@ -12,7 +12,7 @@ import {
   Trophy,
   ChevronRight,
   ShieldCheck,
-} from 'lucide-react';
+} from '../components/icons';
 import { useI18n } from '../locales';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';

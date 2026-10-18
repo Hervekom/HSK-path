@@ -7,7 +7,7 @@ import {
   Sparkles,
   Layers,
   X,
-} from 'lucide-react';
+} from '../components/icons';
 import { useI18n } from '../locales';
 import { Modal } from '../components/ui/Modal';
 import { Badge } from '../components/ui/Badge';

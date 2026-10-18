@@ -3,7 +3,7 @@ import { Modal } from './Modal';
 import { Button } from './Button';
 import { Badge } from './Badge';
 import { SpeechButton } from './SpeechButton';
-import { BookOpen, MessageSquare, Award, CheckCircle2, XCircle, ArrowRight, Lightbulb } from 'lucide-react';
+import { BookOpen, MessageSquare, Award, CheckCircle2, XCircle, ArrowRight, Lightbulb } from '../icons';
 import type { HskLesson } from '../../types';
 import { useI18n } from '../../locales';
 

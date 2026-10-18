@@ -9,7 +9,7 @@ import {
   HelpCircle,
   ArrowRight,
   Sparkles,
-} from 'lucide-react';
+} from '../components/icons';
 import { useI18n } from '../locales';
 import { READING_EXERCISES } from '../data/exercises';
 import { Card } from '../components/ui/Card';

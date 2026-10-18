@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ShieldCheck, ArrowRight, CheckCircle2, Globe, Sparkles } from 'lucide-react';
+import { ShieldCheck, ArrowRight, CheckCircle2, Globe, Sparkles } from '../icons';
 import { useI18n } from '../../locales';
 import { LanguageSelector } from '../ui/LanguageSelector';
 import { Button } from '../ui/Button';

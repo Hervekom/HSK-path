@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Lock, ArrowRight, Sparkles, CheckCircle2, Shield } from 'lucide-react';
+import { Mail, Lock, ArrowRight, Sparkles, CheckCircle2, Shield, PlayCircle } from '../components/icons';
 import { useI18n } from '../locales';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
@@ -88,7 +88,7 @@ export const LoginView: React.FC<LoginViewProps> = ({ onNavigate, onLoginSuccess
             onClick={() => onDemoLogin()}
             className="p-3.5 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900 text-xs flex items-center gap-2.5 cursor-pointer hover:bg-emerald-100/80 transition-colors"
           >
-            <Sparkles className="w-4 h-4 text-emerald-600 shrink-0" />
+            <PlayCircle className="w-4 h-4 text-emerald-600 shrink-0" />
             <div className="flex-1">
               <span className="font-bold">{t('auth.demoTitle')}</span> {t('auth.demoText')}
             </div>

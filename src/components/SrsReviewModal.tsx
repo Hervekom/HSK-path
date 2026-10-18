@@ -15,7 +15,7 @@ import {
   Award,
   Layers,
   X,
-} from 'lucide-react';
+} from './icons';
 import { useI18n } from '../locales';
 import { Modal } from './ui/Modal';
 import { Badge } from './ui/Badge';

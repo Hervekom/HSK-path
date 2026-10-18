@@ -11,7 +11,7 @@ import {
   Sparkles,
   ArrowRight,
   HelpCircle,
-} from 'lucide-react';
+} from '../components/icons';
 import { useI18n } from '../locales';
 import { LISTENING_EXERCISES } from '../data/exercises';
 import { Card } from '../components/ui/Card';

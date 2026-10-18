@@ -1,26 +1,5 @@
 import React, { useState } from 'react';
-import {
-  ArrowRight,
-  BookOpen,
-  Headphones,
-  FileText,
-  PenTool,
-  Award,
-  TrendingUp,
-  CheckCircle2,
-  Sparkles,
-  Layers,
-  Volume2,
-  Clock,
-  ChevronRight,
-  ShieldCheck,
-  Zap,
-  Star,
-  BrainCircuit,
-  RotateCw,
-  Target,
-  GraduationCap,
-} from 'lucide-react';
+import { ArrowRight, BookOpen, Headphones, FileText, PenTool, Award, TrendingUp, CheckCircle2, Sparkles, Layers, Volume2, Clock, ChevronRight, ShieldCheck, Zap, Star, BrainCircuit, RotateCw, Target, GraduationCap, PenNib } from '../components/icons';
 import { useI18n } from '../locales';
 import { HSK_LEVELS, FUTURE_HSK_LEVELS } from '../data/hskLevels';
 import { Button } from '../components/ui/Button';
@@ -531,7 +510,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
               { id: 'grammar', title: 'Grammar', icon: Layers, count: '60+ Patterns', desc: 'Sentence Structures' },
               { id: 'listening', title: 'Listening', icon: Headphones, count: 'Audio Drills', desc: 'Acoustic Training' },
               { id: 'reading', title: 'Reading', icon: FileText, count: 'Passages', desc: 'Pinyin Toggle' },
-              { id: 'characters', title: 'Characters', icon: Sparkles, count: 'Radicals', desc: 'Stroke Orders' },
+              { id: 'characters', title: 'Characters', icon: PenNib, count: 'Radicals', desc: 'Stroke Orders' },
               { id: 'writing', title: 'Writing', icon: PenTool, count: 'HSK 3+', desc: 'Sentence Ordering' },
             ].map((skill) => {
               const Icon = skill.icon;

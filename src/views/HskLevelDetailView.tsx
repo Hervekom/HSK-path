@@ -14,7 +14,7 @@ import {
   Lock,
   Sparkles,
   ShieldCheck,
-} from 'lucide-react';
+} from '../components/icons';
 import { useI18n } from '../locales';
 import { HSK_LEVELS } from '../data/hskLevels';
 import { HSK_LESSONS_DATA } from '../data/lessons';

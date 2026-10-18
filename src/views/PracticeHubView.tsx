@@ -1,16 +1,5 @@
 import React from 'react';
-import {
-  Sparkles,
-  Headphones,
-  FileText,
-  Layers,
-  PenTool,
-  BookOpen,
-  ArrowRight,
-  Clock,
-  Flame,
-  Award,
-} from 'lucide-react';
+import { Sparkles, Headphones, FileText, Layers, PenTool, BookOpen, ArrowRight, Clock, Flame, Award, Play } from '../components/icons';
 import { useI18n } from '../locales';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
@@ -64,7 +53,7 @@ export const PracticeHubView: React.FC<PracticeHubViewProps> = ({
             size="lg"
             onClick={() => onStartPractice('mixed')}
             className="w-full sm:w-auto shadow-md"
-            icon={<Sparkles className="w-4 h-4" />}
+            icon={<Play className="w-4 h-4" weight="fill" />}
           >
             Start Daily Drill
           </Button>
@@ -80,7 +69,7 @@ export const PracticeHubView: React.FC<PracticeHubViewProps> = ({
           className="p-6 space-y-4 flex flex-col justify-between hover:border-slate-300"
         >
           <div className="space-y-3">
-            <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center justify-center">
+            <div className="w-11 h-11 rounded-xl bg-[#F4EFE8] text-stone-800 border border-[#E6DED2] flex items-center justify-center">
               <Headphones className="w-6 h-6" />
             </div>
             <h3 className="text-lg font-bold text-slate-900">
@@ -90,7 +79,7 @@ export const PracticeHubView: React.FC<PracticeHubViewProps> = ({
               Listen to native Mandarin dialogues, adjust audio playback speed (0.8x / 1.0x), and answer comprehension questions.
             </p>
           </div>
-          <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-emerald-700">
+          <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#C52828]">
             <span className="flex items-center gap-1 text-slate-500 font-normal">
               <Clock className="w-3 h-3" /> ~10 min session
             </span>
@@ -107,7 +96,7 @@ export const PracticeHubView: React.FC<PracticeHubViewProps> = ({
           className="p-6 space-y-4 flex flex-col justify-between hover:border-slate-300"
         >
           <div className="space-y-3">
-            <div className="w-12 h-12 rounded-2xl bg-blue-50 text-blue-700 border border-blue-200 flex items-center justify-center">
+            <div className="w-11 h-11 rounded-xl bg-[#F4EFE8] text-stone-800 border border-[#E6DED2] flex items-center justify-center">
               <FileText className="w-6 h-6" />
             </div>
             <h3 className="text-lg font-bold text-slate-900">
@@ -117,7 +106,7 @@ export const PracticeHubView: React.FC<PracticeHubViewProps> = ({
               Read authentic Chinese short passages and dialogues with optional pinyin annotations and text questions.
             </p>
           </div>
-          <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-blue-700">
+          <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#C52828]">
             <span className="flex items-center gap-1 text-slate-500 font-normal">
               <Clock className="w-3 h-3" /> ~12 min session
             </span>
@@ -134,7 +123,7 @@ export const PracticeHubView: React.FC<PracticeHubViewProps> = ({
           className="p-6 space-y-4 flex flex-col justify-between hover:border-slate-300"
         >
           <div className="space-y-3">
-            <div className="w-12 h-12 rounded-2xl bg-rose-50 text-rose-700 border border-rose-200 flex items-center justify-center">
+            <div className="w-11 h-11 rounded-xl bg-[#F4EFE8] text-stone-800 border border-[#E6DED2] flex items-center justify-center">
               <PenTool className="w-6 h-6" />
             </div>
             <h3 className="text-lg font-bold text-slate-900">
@@ -144,7 +133,7 @@ export const PracticeHubView: React.FC<PracticeHubViewProps> = ({
               Interactive word ordering and sentence construction directly preparing you for the official HSK 3 writing section.
             </p>
           </div>
-          <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-rose-700">
+          <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#C52828]">
             <span className="flex items-center gap-1 text-slate-500 font-normal">
               <Clock className="w-3 h-3" /> ~8 min session
             </span>
@@ -161,7 +150,7 @@ export const PracticeHubView: React.FC<PracticeHubViewProps> = ({
           className="p-6 space-y-4 flex flex-col justify-between hover:border-slate-300"
         >
           <div className="space-y-3">
-            <div className="w-12 h-12 rounded-2xl bg-amber-50 text-amber-700 border border-amber-200 flex items-center justify-center">
+            <div className="w-11 h-11 rounded-xl bg-[#F4EFE8] text-stone-800 border border-[#E6DED2] flex items-center justify-center">
               <Layers className="w-6 h-6" />
             </div>
             <h3 className="text-lg font-bold text-slate-900">
@@ -171,7 +160,7 @@ export const PracticeHubView: React.FC<PracticeHubViewProps> = ({
               Master essential modal verbs (会, 能, 可以), comparison clauses (比), and aspect particles (了, 着, 过).
             </p>
           </div>
-          <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-amber-700">
+          <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#C52828]">
             <span className="flex items-center gap-1 text-slate-500 font-normal">
               <Clock className="w-3 h-3" /> ~8 min session
             </span>
@@ -188,7 +177,7 @@ export const PracticeHubView: React.FC<PracticeHubViewProps> = ({
           className="p-6 space-y-4 flex flex-col justify-between hover:border-slate-300"
         >
           <div className="space-y-3">
-            <div className="w-12 h-12 rounded-2xl bg-indigo-50 text-indigo-700 border border-indigo-200 flex items-center justify-center">
+            <div className="w-11 h-11 rounded-xl bg-[#F4EFE8] text-stone-800 border border-[#E6DED2] flex items-center justify-center">
               <BookOpen className="w-6 h-6" />
             </div>
             <h3 className="text-lg font-bold text-slate-900">
@@ -198,7 +187,7 @@ export const PracticeHubView: React.FC<PracticeHubViewProps> = ({
               Flip and memorize characters with audio pronunciation, example sentences, and bookmarking.
             </p>
           </div>
-          <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-indigo-700">
+          <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#C52828]">
             <span className="flex items-center gap-1 text-slate-500 font-normal">
               <Clock className="w-3 h-3" /> Self-paced
             </span>
@@ -215,7 +204,7 @@ export const PracticeHubView: React.FC<PracticeHubViewProps> = ({
           className="p-6 space-y-4 flex flex-col justify-between hover:border-slate-300"
         >
           <div className="space-y-3">
-            <div className="w-12 h-12 rounded-2xl bg-purple-50 text-purple-700 border border-purple-200 flex items-center justify-center">
+            <div className="w-11 h-11 rounded-xl bg-[#F4EFE8] text-stone-800 border border-[#E6DED2] flex items-center justify-center">
               <Award className="w-6 h-6" />
             </div>
             <h3 className="text-lg font-bold text-slate-900">
@@ -225,7 +214,7 @@ export const PracticeHubView: React.FC<PracticeHubViewProps> = ({
               Timed simulation exams with official section timing, audio player, score cards, and mistake logs.
             </p>
           </div>
-          <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-purple-700">
+          <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#C52828]">
             <span className="flex items-center gap-1 text-slate-500 font-normal">
               <Clock className="w-3 h-3" /> 35–90 min
             </span>

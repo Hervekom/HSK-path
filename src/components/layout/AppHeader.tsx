@@ -1,5 +1,5 @@
 import React from 'react';
-import { Menu, Flame, Search, Bell, Sparkles, BookOpen, ShieldCheck } from 'lucide-react';
+import { Menu, Flame, Search, Bell, Sparkles, BookOpen, ShieldCheck } from '../icons';
 import { useI18n } from '../../locales';
 import { LanguageSelector } from '../ui/LanguageSelector';
 import { Button } from '../ui/Button';

@@ -14,7 +14,7 @@ import {
   Flame,
   Layers,
   Shield,
-} from 'lucide-react';
+} from '../icons';
 import { useI18n } from '../../locales';
 import { LanguageSelector } from '../ui/LanguageSelector';
 import type { AppState, UserProfile } from '../../types';

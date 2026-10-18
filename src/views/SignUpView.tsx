@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { User, Mail, Lock, ArrowRight, Target, Clock, CheckCircle2 } from 'lucide-react';
+import { User, Mail, Lock, ArrowRight, Target, Clock, CheckCircle2 } from '../components/icons';
 import { useI18n } from '../locales';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';

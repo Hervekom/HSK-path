@@ -16,7 +16,7 @@ import {
   Layers,
   ChevronDown,
   ChevronUp,
-} from 'lucide-react';
+} from './icons';
 import { useI18n } from '../locales';
 import { Card } from './ui/Card';
 import { Badge } from './ui/Badge';
@@ -113,13 +113,13 @@ export const DailyChineseWidget: React.FC<DailyChineseWidgetProps> = ({
   return (
     <Card variant="elevated" className={`p-6 sm:p-7 space-y-6 relative overflow-hidden ${className}`}>
       {/* Decorative gradient highlight on top edge */}
-      <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-rose-500 via-amber-500 to-emerald-500" />
+      <div className="absolute top-0 left-0 right-0 h-1 bg-[#C52828]" />
 
       {/* Widget Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="space-y-1">
           <div className="flex items-center gap-2 flex-wrap">
-            <span className="p-1.5 rounded-lg bg-rose-50 text-rose-600 border border-rose-100 flex items-center justify-center">
+            <span className="p-1.5 rounded-lg bg-[#F4EFE8] text-stone-800 border border-[#E6DED2] flex items-center justify-center">
               <Compass className="w-4 h-4" />
             </span>
             <h2 className="text-lg sm:text-xl font-extrabold text-slate-950 tracking-tight flex items-center gap-2">

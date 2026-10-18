@@ -1,13 +1,5 @@
 import React, { useState } from 'react';
-import {
-  Clock,
-  Award,
-  Lock,
-  Sparkles,
-  ChevronRight,
-  ShieldCheck,
-  CheckCircle2,
-} from 'lucide-react';
+import { Clock, Award, Lock, Sparkles, ChevronRight, ShieldCheck, CheckCircle2, ArrowUpRight } from '../components/icons';
 import { useI18n } from '../locales';
 import { MOCK_TESTS_CATALOG } from '../data/mockTests';
 import { Card } from '../components/ui/Card';
@@ -85,7 +77,7 @@ export const MockTestsListView: React.FC<MockTestsListViewProps> = ({
               setShowProModal(true);
             }}
             className="text-xs text-[#C52828] border-[#C52828]/30 hover:bg-[#C52828]/10"
-            iconRight={<Sparkles className="w-3.5 h-3.5 text-[#C52828]" />}
+            iconRight={<ArrowUpRight className="w-3.5 h-3.5 text-[#C52828]" />}
           >
             {language === 'fr' ? 'Voir l\'offre Pro' : language === 'zh' ? '查看 Pro 特权' : 'View Pro Benefits'}
           </Button>

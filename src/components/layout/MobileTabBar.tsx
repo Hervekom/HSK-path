@@ -1,5 +1,5 @@
 import React from 'react';
-import { LayoutDashboard, Layers, Sparkles, BookOpen, FileCheck } from 'lucide-react';
+import { LayoutDashboard, Layers, Sparkles, BookOpen, FileCheck } from '../icons';
 import { useI18n } from '../../locales';
 import type { AppState } from '../../types';
 
@@ -11,7 +11,7 @@ interface MobileTabBarProps {
 const TABS: Array<{
   id: AppState['currentView'];
   labelKey: string;
-  icon: React.ComponentType<{ className?: string }>;
+  icon: React.ComponentType<{ className?: string; weight?: 'regular' | 'fill' }>;
   group: AppState['currentView'][];
 }> = [
   { id: 'dashboard', labelKey: 'navShort.home', icon: LayoutDashboard, group: ['dashboard', 'progress', 'profile'] },
@@ -55,7 +55,7 @@ export const MobileTabBar: React.FC<MobileTabBarProps> = ({ currentView, onNavig
               aria-current={active ? 'page' : undefined}
             >
               {active && <span className="absolute top-0 h-0.5 w-8 rounded-full bg-[#C52828]" />}
-              <Icon className={`w-5 h-5 ${active ? 'stroke-[2.4]' : ''}`} />
+              <Icon className="w-[22px] h-[22px]" weight={active ? 'fill' : 'regular'} />
               <span className="truncate max-w-full px-1">{t(tab.labelKey)}</span>
             </button>
           );

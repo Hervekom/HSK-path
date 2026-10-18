@@ -10,7 +10,7 @@ import {
   CheckCircle2,
   RotateCcw,
   Sparkles,
-} from 'lucide-react';
+} from '../components/icons';
 import { useI18n, SUPPORTED_LANGUAGES } from '../locales';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
