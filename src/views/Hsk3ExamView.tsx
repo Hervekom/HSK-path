@@ -505,21 +505,50 @@ export const Hsk3ExamView: React.FC<Props> = ({ examId, isProUser, onExit, onFin
 
 const GroupPanel: React.FC<{ group: H3Group }> = ({ group }) => {
   const letters = Object.keys(group.options);
+  const [zoom, setZoom] = useState<string | null>(null);
   if (group.kind === 'image' || group.kind === 'icon') {
     return (
-      <div className="grid grid-cols-3 sm:grid-cols-6 gap-2 p-3 rounded-2xl bg-white border border-[#E4DCCE]">
-        {letters.map((L) => {
-          const Icon = group.kind === 'icon' ? ICONS[group.options[L]] : null;
-          const isEx = group.example?.letter === L;
-          return (
-            <div key={L} className={`relative rounded-xl border ${isEx ? 'border-dashed border-stone-300 opacity-60' : 'border-[#EFE8DE]'} bg-[#FAF8F5] aspect-square flex items-center justify-center overflow-hidden`}>
-              <span className="absolute top-1 left-1.5 text-xs font-black text-stone-900">{L}</span>
-              {Icon ? <Icon className="w-1/2 h-1/2 text-stone-800" weight="duotone" /> : <img src={group.options[L]} alt={L} className="max-w-[85%] max-h-[85%] object-contain mix-blend-multiply" loading="lazy" />}
-              {isEx && <span className="absolute bottom-1 text-[9px] font-bold text-stone-500">{tr('example')}</span>}
+      <>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3 p-2 sm:p-3 rounded-2xl bg-white border border-[#E4DCCE]">
+          {letters.map((L) => {
+            const Icon = group.kind === 'icon' ? ICONS[group.options[L]] : null;
+            const isEx = group.example?.letter === L;
+            return (
+              <button
+                key={L}
+                type="button"
+                onClick={() => !Icon && setZoom(L)}
+                className={`flex flex-col rounded-xl border overflow-hidden text-left ${isEx ? 'border-dashed border-stone-300' : 'border-[#E4DCCE]'} ${Icon ? 'cursor-default' : 'cursor-zoom-in hover:border-stone-500'}`}
+              >
+                <span className={`flex items-center justify-between px-2 py-1 border-b ${isEx ? 'bg-stone-50 border-dashed border-stone-200' : 'bg-[#FAF8F5] border-[#EFE8DE]'}`}>
+                  <b className={`text-sm ${isEx ? 'text-stone-400' : 'text-stone-900'}`}>{L}</b>
+                  {isEx && <span className="text-[10px] font-bold text-stone-400">{tr('example')}</span>}
+                </span>
+                <span className={`flex items-center justify-center bg-white h-28 sm:h-36 p-1.5 ${isEx ? 'opacity-50' : ''}`}>
+                  {Icon ? (
+                    <Icon className="w-14 h-14 sm:w-16 sm:h-16 text-stone-800" weight="duotone" />
+                  ) : (
+                    <img src={group.options[L]} alt={L} className="max-w-full max-h-full w-auto h-auto object-contain" decoding="async" />
+                  )}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+        {zoom && group.kind === 'image' && (
+          <div className="fixed inset-0 z-50 bg-black/70 flex items-center justify-center p-4" onClick={() => setZoom(null)}>
+            <div className="bg-white rounded-2xl p-3 max-w-lg w-full space-y-2" onClick={(e) => e.stopPropagation()}>
+              <div className="flex items-center justify-between">
+                <b className="text-lg text-stone-900">{zoom}</b>
+                <button onClick={() => setZoom(null)} className="w-8 h-8 rounded-lg bg-stone-100 flex items-center justify-center cursor-pointer" aria-label="close">
+                  <X className="w-4 h-4" />
+                </button>
+              </div>
+              <img src={group.options[zoom]} alt={zoom} className="w-full max-h-[70vh] object-contain" />
             </div>
-          );
-        })}
-      </div>
+          </div>
+        )}
+      </>
     );
   }
   return (
@@ -698,7 +727,7 @@ const ReviewCard: React.FC<{ q: H3Question; group?: H3Group; given?: string }> =
         <span className={`w-7 h-7 rounded-lg text-xs font-black flex items-center justify-center ${ok ? 'bg-emerald-100 text-emerald-800' : 'bg-rose-100 text-rose-800'}`}>{q.n}</span>
         {ok ? <Check className="w-4 h-4 text-emerald-600" /> : <X className="w-4 h-4 text-rose-600" />}
         {q.type === 'l-img' && group && (group.kind === 'image'
-          ? <img src={group.options[q.answer]} alt={q.answer} className="h-12 rounded-md ml-auto" loading="lazy" />
+          ? <img src={group.options[q.answer]} alt={q.answer} className="h-20 max-w-[40%] object-contain rounded-md ml-auto bg-white" />
           : null)}
       </div>
       {prompt && <p className="font-hanzi-serif text-sm text-stone-900 whitespace-pre-line">{prompt}</p>}
