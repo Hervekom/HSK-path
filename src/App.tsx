@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
+import { tr } from './locales/tr';
 import { LanguageProvider, useI18n } from './locales';
 import { ToastProvider, useToast } from './components/ui/Toast';
 import { AppLayout } from './components/layout/AppLayout';
@@ -131,7 +132,7 @@ function HskPathApp() {
     const meta = (authUser.user_metadata || {}) as Record<string, any>;
     const baseProfile: UserProfile = {
       ...INITIAL_USER_PROFILE,
-      name: meta.name || authUser.email?.split('@')[0] || 'Student',
+      name: meta.name || authUser.email?.split('@')[0] || tr("Student"),
       email: authUser.email || '',
       currentHsk: meta.currentHsk || 'hsk1',
       dailyGoalMinutes: meta.dailyGoalMinutes || 20,
@@ -253,7 +254,7 @@ function HskPathApp() {
       if (data.user) await hydrateFromCloud(data.user);
     }
     setCurrentView('dashboard');
-    addToast('Welcome back! Ready for today\'s study session.', 'success');
+    addToast(tr("Welcome back! Ready for today's study session."), 'success');
   };
 
   const handleDemoLogin = () => {
@@ -267,7 +268,7 @@ function HskPathApp() {
     setHydrated(false);
     resetToDemoData();
     setCurrentView('dashboard');
-    addToast('Demo mode — progress is not saved.', 'info');
+    addToast(tr("Demo mode — progress is not saved."), 'info');
   };
 
   const handleSignUpSuccess = async (profileData: Partial<UserProfile>) => {
@@ -278,7 +279,7 @@ function HskPathApp() {
       setUser((prev) => ({ ...prev, ...profileData }));
     }
     setCurrentView('dashboard');
-    addToast('Account created successfully! Let\'s begin.', 'success');
+    addToast(tr("Account created successfully! Let's begin."), 'success');
   };
 
   const handleSignOut = async () => {
@@ -426,7 +427,7 @@ function HskPathApp() {
     setWeeklyMinutes((m) => m + Math.max(1, Math.round(timeSpentSeconds / 60)));
     setLatestResult(newResult);
     setCurrentView('test-results');
-    addToast(isPassed ? 'Congratulations! You passed the mock test!' : 'Exam completed! Review your mistakes to reinforce weak spots.', isPassed ? 'success' : 'warning');
+    addToast(isPassed ? tr("Congratulations! You passed the mock test!") : tr("Exam completed! Review your mistakes to reinforce weak spots."), isPassed ? 'success' : 'warning');
   };
 
   // Render View Routing Logic
@@ -725,12 +726,12 @@ function HskPathApp() {
               />
             ) : (
               <div className="text-center py-12">
-                <p>No recent test results found.</p>
+                <p>{tr("No recent test results found.")}</p>
                 <button
                   onClick={() => setCurrentView('mock-tests')}
                   className="mt-2 text-rose-700 font-bold"
                 >
-                  Go to Mock Tests
+                  {tr("Go to Mock Tests")}
                 </button>
               </div>
             )}
@@ -755,7 +756,7 @@ function HskPathApp() {
               />
             ) : (
               <div className="text-center py-12">
-                <p>No recent test found to review.</p>
+                <p>{tr("No recent test found to review.")}</p>
               </div>
             )}
           </AppLayout>
@@ -801,11 +802,11 @@ function HskPathApp() {
               user={user}
               onUpdateProfile={(updated) => {
                 setUser((prev) => ({ ...prev, ...updated }));
-                addToast('Profile updated!', 'success');
+                addToast(tr("Profile updated!"), 'success');
               }}
               onResetProgress={() => {
                 setStreakDays(1);
-                addToast('Progress reset to day 1', 'info');
+                addToast(tr("Progress reset to day 1"), 'info');
               }}
             />
           </AppLayout>

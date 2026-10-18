@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { tr } from '../../locales/tr';
 import { Globe, ChevronDown, Check } from '../icons';
 import { useI18n, SUPPORTED_LANGUAGES } from '../../locales';
 import type { Language } from '../../types';
@@ -73,7 +74,7 @@ export const LanguageSelector: React.FC<LanguageSelectorProps> = ({
       {isOpen && (
         <div className="absolute right-0 mt-2 w-48 rounded-2xl bg-white shadow-xl border border-[#E4DCCE] py-1.5 z-50 animate-in fade-in-50 zoom-in-95 duration-100">
           <div className="px-3 py-1.5 text-[10px] font-bold text-stone-400 uppercase tracking-wider border-b border-stone-100 mb-1">
-            Interface Language
+            {tr("Interface Language")}
           </div>
           {SUPPORTED_LANGUAGES.map((lang) => (
             <button
@@ -87,7 +88,7 @@ export const LanguageSelector: React.FC<LanguageSelectorProps> = ({
             >
               <div className="flex flex-col">
                 <span className="font-semibold">{lang.nativeName}</span>
-                <span className="text-[10px] text-stone-400">{lang.name}</span>
+                <span className="text-[10px] text-stone-400">{tr(lang.name)}</span>
               </div>
               {language === lang.code && (
                 <Check className="w-4 h-4 text-[#C52828]" />

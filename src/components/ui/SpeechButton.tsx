@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { tr } from '../../locales/tr';
 import { Volume2, VolumeX, Sparkles } from '../icons';
 import { audioEngine } from '../../utils/audio';
 
@@ -64,7 +65,7 @@ export const SpeechButton: React.FC<SpeechButtonProps> = ({
       <button
         type="button"
         onClick={handlePlay}
-        title={`Listen to pronunciation (${currentRate}x)`}
+        title={`${tr("Listen to pronunciation")} (${currentRate}x)`}
         aria-label={`Listen to ${text}`}
         className={`inline-flex items-center justify-center gap-1.5 font-medium transition-all cursor-pointer border ${
           isPlaying
@@ -75,7 +76,7 @@ export const SpeechButton: React.FC<SpeechButtonProps> = ({
         <Volume2 className={`${iconSizes[size]} ${isPlaying ? 'animate-pulse text-[#C52828]' : 'text-stone-500'}`} />
         {showLabel && (
           <span className="text-xs font-semibold">
-            {label || (isPlaying ? 'Playing...' : 'Audio')}
+            {label || (isPlaying ? tr("Playing...") : tr("Audio"))}
           </span>
         )}
       </button>
@@ -84,7 +85,7 @@ export const SpeechButton: React.FC<SpeechButtonProps> = ({
         <button
           type="button"
           onClick={toggleSpeed}
-          title="Toggle playback speed"
+          title={tr("Toggle playback speed")}
           className="text-[11px] font-semibold px-2 py-1 rounded-lg border border-[#E2D9CC] bg-white hover:bg-[#FAF8F5] text-stone-600 cursor-pointer shadow-2xs"
         >
           {currentRate === 1.0 ? '1.0x' : '0.8x'}

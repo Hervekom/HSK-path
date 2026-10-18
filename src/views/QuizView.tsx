@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { tr } from '../locales/tr';
 import {
   ArrowLeft,
   CheckCircle2,
@@ -44,17 +45,17 @@ export const QuizView: React.FC<QuizViewProps> = ({
   // Resolve question prompt text reliably from prompt (MultiLingualText), questionText, or question fallback
   const resolvedPromptText =
     (currentQ.prompt ? getLocalized(currentQ.prompt) : '') ||
-    currentQ.questionText ||
-    (currentQ as any).question ||
+    tr(currentQ.questionText) ||
+    tr((currentQ as any).question) ||
     (currentQ.skill === 'listening'
-      ? 'Listen to the audio and select the best answer:'
+      ? tr("Listen to the audio and select the best answer:")
       : currentQ.skill === 'reading'
-      ? 'Read the text and choose the correct answer:'
+      ? tr("Read the text and choose the correct answer:")
       : currentQ.skill === 'grammar'
-      ? 'Choose the correct grammatical completion:'
+      ? tr("Choose the correct grammatical completion:")
       : currentQ.skill === 'vocabulary'
-      ? 'Select the correct meaning or character:'
-      : 'Choose the correct answer:');
+      ? tr("Select the correct meaning or character:")
+      : tr("Choose the correct answer:"));
 
   const handleSelectOption = (optionId: string) => {
     if (isAnswerSubmitted) return;
@@ -108,22 +109,22 @@ export const QuizView: React.FC<QuizViewProps> = ({
 
           <div className="space-y-1">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950">
-              {isPassed ? 'Excellent Work!' : 'Keep Practicing!'}
+              {isPassed ? tr("Excellent Work!") : tr("Keep Practicing!")}
             </h2>
             <p className="text-sm text-slate-500 font-medium">
-              You completed the "{title}" practice drill.
+              {tr("You completed the \"")}{title}{tr("\" practice drill.")}
             </p>
           </div>
 
           <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100 space-y-2">
             <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider">
-              Final Accuracy
+              {tr("Final Accuracy")}
             </div>
             <div className="text-4xl font-extrabold text-slate-900">
               {percentage}%
             </div>
             <div className="text-sm font-bold text-slate-700">
-              {correctAnswersCount} / {questions.length} Correct Answers
+              {correctAnswersCount} / {questions.length}{" "}{tr("Correct Answers")}
             </div>
           </div>
 
@@ -135,7 +136,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
               icon={<RotateCcw className="w-4 h-4" />}
               className="w-full sm:w-auto"
             >
-              Retry Drill
+              {tr("Retry Drill")}
             </Button>
             <Button
               variant="primary"
@@ -143,7 +144,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
               onClick={onExit}
               className="w-full sm:w-auto"
             >
-              Back to Practice Hub
+              {tr("Back to Practice Hub")}
             </Button>
           </div>
         </Card>
@@ -160,11 +161,11 @@ export const QuizView: React.FC<QuizViewProps> = ({
           className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500 hover:text-slate-900 cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" />
-          <span>Exit Drill</span>
+          <span>{tr("Exit Drill")}</span>
         </button>
 
         <div className="text-xs font-bold text-slate-600">
-          Question {currentIndex + 1} of {questions.length}
+          {tr("Question")}{" "}{currentIndex + 1}{" "}{tr("of")}{" "}{questions.length}
         </div>
       </div>
 
@@ -189,20 +190,20 @@ export const QuizView: React.FC<QuizViewProps> = ({
             <div className="p-5 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-800 text-white space-y-3 shadow-xs">
               <div className="flex items-center justify-between text-xs">
                 <span className="font-bold text-emerald-400 flex items-center gap-1.5">
-                  <Volume2 className="w-4 h-4" /> Audio Clip
+                  <Volume2 className="w-4 h-4" />{" "}{tr("Audio Clip")}
                 </span>
-                <span className="text-slate-400 font-mono">0.8x / 1.0x Playback</span>
+                <span className="text-slate-400 font-mono">{tr("0.8x / 1.0x Playback")}</span>
               </div>
               <div className="flex items-center justify-between pt-1">
                 <SpeechButton
                   text={currentQ.audioText}
                   size="md"
                   showLabel
-                  label="Play Audio"
+                  label={tr("Play Audio")}
                   allowSpeedToggle
                   className="bg-white text-slate-900 font-bold text-xs"
                 />
-                <span className="text-xs text-slate-400 font-medium">Click to listen</span>
+                <span className="text-xs text-slate-400 font-medium">{tr("Click to listen")}</span>
               </div>
             </div>
           )}
@@ -212,7 +213,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
             <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200/90 space-y-2">
               <div className="flex items-center justify-between">
                 <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400">
-                  Reading Text
+                  {tr("Reading Text")}
                 </span>
                 <SpeechButton text={currentQ.passage} size="sm" />
               </div>
@@ -239,7 +240,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
                 </div>
               )}
               <div className="pt-1 flex justify-center">
-                <SpeechButton text={currentQ.hanzi} size="sm" showLabel label="Listen" />
+                <SpeechButton text={currentQ.hanzi} size="sm" showLabel label={tr("Listen")} />
               </div>
             </div>
           )}
@@ -291,7 +292,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
                         {opt.hanzi}
                       </span>
                     )}
-                    <span>{opt.text}</span>
+                    <span>{tr(opt.text)}</span>
                   </div>
                 </div>
 
@@ -311,7 +312,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
           <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/90 space-y-1.5 animate-in fade-in duration-150">
             <div className="text-xs font-bold text-slate-800 uppercase tracking-wider flex items-center gap-1.5">
               <HelpCircle className="w-4 h-4 text-blue-600" />
-              <span>Explanation & Note</span>
+              <span>{tr("Explanation & Note")}</span>
             </div>
             <p className="text-xs text-slate-600 leading-relaxed">
               {getLocalized(currentQ.explanation)}
@@ -329,7 +330,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
               disabled={!selectedOptionId}
               className="w-full justify-center"
             >
-              Check Answer
+              {tr("Check Answer")}
             </Button>
           ) : (
             <Button
@@ -339,7 +340,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
               className="w-full justify-center"
               iconRight={<ArrowRight className="w-4 h-4" />}
             >
-              {currentIndex + 1 < questions.length ? 'Next Question' : 'Complete Drill'}
+              {currentIndex + 1 < questions.length ? tr("Next Question") : tr("Complete Drill")}
             </Button>
           )}
         </div>

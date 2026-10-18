@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { tr } from '../locales/tr';
 import { Mail, Lock, ArrowRight, Sparkles, CheckCircle2, Shield, PlayCircle } from '../components/icons';
 import { useI18n } from '../locales';
 import { Button } from '../components/ui/Button';
@@ -66,7 +67,7 @@ export const LoginView: React.FC<LoginViewProps> = ({ onNavigate, onLoginSuccess
           <div className="w-9 h-9 rounded-xl bg-slate-900 flex items-center justify-center text-white shadow-xs">
             <span className="font-hanzi font-bold text-base text-rose-400">道</span>
           </div>
-          <span className="font-bold text-xl text-slate-900 tracking-tight">HSK Path</span>
+          <span className="font-bold text-xl text-slate-900 tracking-tight">{tr("HSK Path")}</span>
         </div>
         <LanguageSelector />
       </div>
@@ -107,7 +108,7 @@ export const LoginView: React.FC<LoginViewProps> = ({ onNavigate, onLoginSuccess
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  placeholder="name@university.edu"
+                  placeholder={tr("name@university.edu")}
                   className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 focus:border-slate-900 focus:ring-2 focus:ring-slate-900/10 text-sm font-medium bg-white outline-none transition-all"
                 />
               </div>
@@ -188,7 +189,7 @@ export const LoginView: React.FC<LoginViewProps> = ({ onNavigate, onLoginSuccess
 
       {/* Bottom info */}
       <div className="text-center text-xs text-slate-400">
-        © 2026 HSK Path
+        {tr("© 2026 HSK Path")}
       </div>
     </div>
   );

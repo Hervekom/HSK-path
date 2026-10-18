@@ -1,4 +1,5 @@
 import React from 'react';
+import { tr } from '../../locales/tr';
 import { Menu, Flame, Search, Bell, Sparkles, BookOpen, ShieldCheck } from '../icons';
 import { useI18n } from '../../locales';
 import { LanguageSelector } from '../ui/LanguageSelector';
@@ -65,7 +66,7 @@ export const AppHeader: React.FC<AppHeaderProps> = ({
         <button
           onClick={onOpenMobileMenu}
           className="lg:hidden p-2 rounded-xl text-stone-700 hover:text-[#C52828] hover:bg-[#F2ECE4] transition-colors cursor-pointer"
-          aria-label="Open Navigation"
+          aria-label={tr("Open Navigation")}
         >
           <Menu className="w-5 h-5" />
         </button>
@@ -75,7 +76,7 @@ export const AppHeader: React.FC<AppHeaderProps> = ({
             {getTitle()}
           </span>
           <span className="hidden sm:inline-flex items-center text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#1C1917] text-[#FAF8F5] tracking-wider uppercase">
-            {user.currentHsk.toUpperCase()} ACTIVE
+            {user.currentHsk.toUpperCase()}{" "}{tr("ACTIVE")}
           </span>
         </div>
       </div>
@@ -86,10 +87,10 @@ export const AppHeader: React.FC<AppHeaderProps> = ({
         <button
           onClick={() => onNavigate('vocabulary')}
           className="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-rose-50 border border-rose-200 text-[#C52828] text-xs font-bold hover:bg-rose-100 transition-colors cursor-pointer shadow-2xs"
-          title="Review due spaced repetition vocabulary"
+          title={tr("Review due spaced repetition vocabulary")}
         >
           <BookOpen className="w-3.5 h-3.5" />
-          <span>Review Due</span>
+          <span>{tr("Review Due")}</span>
         </button>
 
         {isAdmin && (
@@ -112,7 +113,7 @@ export const AppHeader: React.FC<AppHeaderProps> = ({
         <div
           onClick={() => onNavigate('progress')}
           className="flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-[#FAF5EB] border border-[#E6D4B0] text-[#8C6405] text-xs font-bold cursor-pointer hover:bg-[#F5EAD4] transition-colors shadow-2xs"
-          title="Daily Study Streak"
+          title={tr("Daily Study Streak")}
         >
           <Flame className="w-4 h-4 text-amber-600 fill-amber-500" />
           <span>{streakDays}d</span>
@@ -124,7 +125,7 @@ export const AppHeader: React.FC<AppHeaderProps> = ({
           className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-xl border border-[#E0D7CB] text-xs text-stone-600 bg-white hover:bg-[#FAF8F5] hover:border-stone-400 hover:text-stone-900 transition-colors cursor-pointer shadow-2xs"
         >
           <Search className="w-3.5 h-3.5 text-stone-400" />
-          <span>Search Hanzi...</span>
+          <span>{tr("Search Hanzi...")}</span>
         </button>
 
         {/* Language selector in top app header */}

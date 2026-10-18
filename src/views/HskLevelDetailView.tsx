@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { tr } from '../locales/tr';
 import {
   ArrowLeft,
   BookOpen,
@@ -85,7 +86,7 @@ export const HskLevelDetailView: React.FC<HskLevelDetailViewProps> = ({
 
   const handleMockClick = (test: MockTest) => {
     if (test.isPro && !isProUser) {
-      setProModalFeature(test.title);
+      setProModalFeature(tr(test.title));
       setShowProModal(true);
     } else if (onSelectTest) {
       onSelectTest(test);
@@ -145,7 +146,7 @@ export const HskLevelDetailView: React.FC<HskLevelDetailViewProps> = ({
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div className="flex items-center gap-4">
             <div className="w-14 h-14 rounded-2xl bg-[#C52828] text-white flex flex-col items-center justify-center leading-none shadow-xs shrink-0">
-              <span className="text-[10px] font-bold tracking-widest opacity-80">HSK</span>
+              <span className="text-[10px] font-bold tracking-widest opacity-80">{tr("HSK")}</span>
               <span className="text-2xl font-extrabold">{currentLevelMeta.name.replace(/\D/g, '')}</span>
             </div>
             <div className="min-w-0">
@@ -164,7 +165,7 @@ export const HskLevelDetailView: React.FC<HskLevelDetailViewProps> = ({
                 )}
               </div>
               <p className="text-[11px] sm:text-xs font-semibold text-stone-500 uppercase tracking-wider mt-1">
-                {currentLevelMeta.wordCount} {t('levels.coreWords')} &bull; Passing Score: {currentLevelMeta.passingScore} / {currentLevelMeta.totalScore}
+                {currentLevelMeta.wordCount} {t('levels.coreWords')}{" "}{tr("• Passing Score:")}{" "}{currentLevelMeta.passingScore} / {currentLevelMeta.totalScore}
               </p>
             </div>
           </div>
@@ -255,7 +256,7 @@ export const HskLevelDetailView: React.FC<HskLevelDetailViewProps> = ({
                 </div>
 
                 <div className="pt-3 border-t border-[#ECE3D8] flex items-center justify-between text-xs text-stone-500 font-medium">
-                  <span>{lesson.estimatedMinutes} min &bull; {lesson.vocabulary.length} {language === 'fr' ? 'mots' : language === 'zh' ? '词汇' : 'words'}</span>
+                  <span>{lesson.estimatedMinutes}{" "}{tr("min •")}{" "}{lesson.vocabulary.length} {language === 'fr' ? 'mots' : language === 'zh' ? '词汇' : 'words'}</span>
                   <span className={`font-bold flex items-center gap-1 ${isLocked ? 'text-amber-800' : 'text-[#C52828]'}`}>
                     {isLocked 
                       ? (language === 'fr' ? 'Débloquer Pro' : language === 'zh' ? '解锁课程' : 'Unlock Pro') 
@@ -280,8 +281,8 @@ export const HskLevelDetailView: React.FC<HskLevelDetailViewProps> = ({
             </h2>
             <p className="text-xs sm:text-sm text-stone-600">
               {selectedLevel === 'hsk1'
-                ? (language === 'fr' ? '2 examens complets gratuits.' : '2 full mock tests 100% free.')
-                : (language === 'fr' ? '2 examens complets gratuits (Tests A & B), examens Pro additionnels.' : '2 full mock tests free (Tests A & B), plus advanced Pro tests.')}
+                ? (language === 'fr' ? '2 examens complets gratuits.' : tr("2 full mock tests 100% free."))
+                : (language === 'fr' ? '2 examens complets gratuits (Tests A & B), examens Pro additionnels.' : tr("2 full mock tests free (Tests A & B), plus advanced Pro tests."))}
             </p>
           </div>
           <Button
@@ -313,11 +314,11 @@ export const HskLevelDetailView: React.FC<HskLevelDetailViewProps> = ({
                     ) : (
                       <Badge variant="danger" size="sm">
                         <Lock className="w-3 h-3 mr-1 inline" />
-                        Pro
+                        {tr("Pro")}
                       </Badge>
                     )}
                   </div>
-                  <h3 className="text-base font-bold text-stone-900">{test.title}</h3>
+                  <h3 className="text-base font-bold text-stone-900">{tr(test.title)}</h3>
                   <p className="text-xs text-stone-600 line-clamp-2">{getLocalized(test.description)}</p>
                 </div>
 
@@ -377,11 +378,11 @@ export const HskLevelDetailView: React.FC<HskLevelDetailViewProps> = ({
                   </div>
 
                   <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
-                    {mod.id === 'vocab' ? (language === 'fr' ? 'Mémorisation des caractères clés avec audio natif et phrases d\'exemple.' : 'Master core characters with native audio and pinyin.') :
-                     mod.id === 'listening' ? (language === 'fr' ? 'Entraînez votre oreille aux dialogues et vitesses d\'examen.' : 'Train your ear to natural Mandarin dialogues and speeds.') :
-                     mod.id === 'reading' ? (language === 'fr' ? 'Perfectionnez votre vitesse de lecture et repérage de mots.' : 'Enhance reading comprehension and character recognition.') :
-                     mod.id === 'writing' ? (language === 'fr' ? 'Structurez vos phrases et maîtrisez l\'ordre des traits.' : 'Structure grammar and sentences accurately.') :
-                     (language === 'fr' ? 'Pratique interactive et validation des compétences.' : 'Interactive drills to validate your skills.')}
+                    {mod.id === 'vocab' ? (language === 'fr' ? 'Mémorisation des caractères clés avec audio natif et phrases d\'exemple.' : tr("Master core characters with native audio and pinyin.")) :
+                     mod.id === 'listening' ? (language === 'fr' ? 'Entraînez votre oreille aux dialogues et vitesses d\'examen.' : tr("Train your ear to natural Mandarin dialogues and speeds.")) :
+                     mod.id === 'reading' ? (language === 'fr' ? 'Perfectionnez votre vitesse de lecture et repérage de mots.' : tr("Enhance reading comprehension and character recognition.")) :
+                     mod.id === 'writing' ? (language === 'fr' ? 'Structurez vos phrases et maîtrisez l\'ordre des traits.' : tr("Structure grammar and sentences accurately.")) :
+                     (language === 'fr' ? 'Pratique interactive et validation des compétences.' : tr("Interactive drills to validate your skills."))}
                   </p>
                 </div>
 

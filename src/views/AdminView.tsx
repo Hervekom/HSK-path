@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
+import { tr } from '../locales/tr';
 import {
   Users,
   Activity,
@@ -70,7 +71,7 @@ export const AdminView: React.FC = () => {
     try {
       setRows(await fetchAllStudents());
     } catch (e: any) {
-      setError(e?.message || 'Error');
+      setError(e?.message || tr("Error"));
     } finally {
       setLoading(false);
     }
@@ -136,7 +137,7 @@ export const AdminView: React.FC = () => {
       setSelected((s) => (s && s.user_id === r.user_id ? { ...s, is_pro: !r.is_pro } : s));
       addToast(!r.is_pro ? t('admin.proGranted') : t('admin.proRemoved'), 'success');
     } catch (e: any) {
-      addToast(e?.message || 'Error', 'warning');
+      addToast(e?.message || tr("Error"), 'warning');
     } finally {
       setBusyId(null);
     }
@@ -229,7 +230,7 @@ export const AdminView: React.FC = () => {
                   <span className={`w-2 h-2 rounded-full shrink-0 ${x.isPassed ? 'bg-emerald-500' : 'bg-amber-500'}`} />
                   <div className="min-w-0 flex-1">
                     <div className="text-sm font-semibold text-stone-900 truncate">{x.student.profile?.name || x.student.profile?.email}</div>
-                    <div className="text-xs text-stone-500 truncate">{x.testTitle}</div>
+                    <div className="text-xs text-stone-500 truncate">{tr(x.testTitle)}</div>
                   </div>
                   <span className="text-sm font-bold tabular-nums text-stone-900 shrink-0">
                     {x.score}/{x.totalScore}
@@ -303,7 +304,7 @@ export const AdminView: React.FC = () => {
                     <th className="text-right font-bold px-3 py-3">{t('admin.colTests')}</th>
                     <th className="text-right font-bold px-3 py-3">{t('admin.colBest')}</th>
                     <th className="text-left font-bold px-3 py-3 hidden lg:table-cell">{t('admin.colLastActive')}</th>
-                    <th className="text-center font-bold px-5 py-3">Pro</th>
+                    <th className="text-center font-bold px-5 py-3">{tr("Pro")}</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-stone-100">
@@ -394,7 +395,7 @@ export const AdminView: React.FC = () => {
                 <div className="font-bold text-stone-950 truncate">{selected.profile?.name || '—'}</div>
                 <div className="text-xs text-stone-500 truncate">{selected.profile?.email}</div>
               </div>
-              <button onClick={() => setSelected(null)} className="p-2 rounded-xl hover:bg-[#EFE8DE] cursor-pointer" aria-label="Close">
+              <button onClick={() => setSelected(null)} className="p-2 rounded-xl hover:bg-[#EFE8DE] cursor-pointer" aria-label={tr("Close")}>
                 <X className="w-5 h-5" />
               </button>
             </div>
@@ -439,9 +440,9 @@ export const AdminView: React.FC = () => {
                       <li key={x.id} className="p-3 rounded-xl bg-white border border-[#E8E2D8] flex items-center gap-3">
                         <span className={`w-2 h-2 rounded-full shrink-0 ${x.isPassed ? 'bg-emerald-500' : 'bg-amber-500'}`} />
                         <div className="min-w-0 flex-1">
-                          <div className="text-sm font-semibold text-stone-900 truncate">{x.testTitle}</div>
+                          <div className="text-sm font-semibold text-stone-900 truncate">{tr(x.testTitle)}</div>
                           <div className="text-xs text-stone-500">
-                            {x.date} · {Math.round(x.timeSpentSeconds / 60)} min
+                            {x.date} · {Math.round(x.timeSpentSeconds / 60)}{" "}{tr("min")}
                           </div>
                         </div>
                         <span className="text-sm font-bold tabular-nums">{x.score}/{x.totalScore}</span>

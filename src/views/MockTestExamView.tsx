@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { tr } from '../locales/tr';
 import {
   Clock,
   Volume2,
@@ -85,9 +86,9 @@ export const MockTestExamView: React.FC<MockTestExamViewProps> = ({
       <div className="sticky top-16 z-20 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-slate-200 shadow-sm flex flex-wrap items-center justify-between gap-4">
         <div>
           <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">
-            {test.level.toUpperCase()} Official Simulation
+            {test.level.toUpperCase()}{" "}{tr("Official Simulation")}
           </div>
-          <h2 className="text-lg font-extrabold text-slate-950">{test.title}</h2>
+          <h2 className="text-lg font-extrabold text-slate-950">{tr(test.title)}</h2>
         </div>
 
         <div className="flex items-center gap-4">
@@ -108,7 +109,7 @@ export const MockTestExamView: React.FC<MockTestExamViewProps> = ({
             className="shadow-xs text-xs"
             icon={<Send className="w-3.5 h-3.5" />}
           >
-            Submit Exam
+            {tr("Submit Exam")}
           </Button>
         </div>
       </div>
@@ -123,14 +124,14 @@ export const MockTestExamView: React.FC<MockTestExamViewProps> = ({
               <div className="flex items-center justify-between pb-3 border-b border-slate-100">
                 <div className="flex items-center gap-2">
                   <Badge variant={currentQ.section === 'listening' ? 'hsk2' : currentQ.section === 'reading' ? 'hsk1' : 'hsk3'}>
-                    Section: {currentQ.section.toUpperCase()}
+                    {tr("Section:")}{" "}{tr(currentQ.section).toUpperCase()}
                   </Badge>
                   <span className="text-xs text-slate-500 font-semibold">
-                    Question {currentQuestionIndex + 1} of {totalQuestions}
+                    {tr("Question")}{" "}{currentQuestionIndex + 1}{" "}{tr("of")}{" "}{totalQuestions}
                   </span>
                 </div>
                 <span className="text-xs font-bold text-slate-400">
-                  {currentQ.points} Points
+                  {currentQ.points}{" "}{tr("Points")}
                 </span>
               </div>
 
@@ -140,20 +141,20 @@ export const MockTestExamView: React.FC<MockTestExamViewProps> = ({
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2 text-xs font-bold text-emerald-400">
                       <Headphones className="w-4 h-4" />
-                      <span>Listening Audio Track</span>
+                      <span>{tr("Listening Audio Track")}</span>
                     </div>
-                    <span className="text-xs text-slate-400 font-mono">Question #{currentQuestionIndex + 1}</span>
+                    <span className="text-xs text-slate-400 font-mono">{tr("Question #")}{currentQuestionIndex + 1}</span>
                   </div>
                   <div className="flex items-center justify-between pt-1">
                     <SpeechButton
                       text={currentQ.audioText}
                       size="md"
                       showLabel
-                      label="Play Audio Clip"
+                      label={tr("Play Audio Clip")}
                       allowSpeedToggle
                       className="bg-white text-slate-900 font-bold text-xs"
                     />
-                    <span className="text-xs text-slate-400">Pacing: 1.0x / 0.8x</span>
+                    <span className="text-xs text-slate-400">{tr("Pacing: 1.0x / 0.8x")}</span>
                   </div>
                 </div>
               )}
@@ -163,7 +164,7 @@ export const MockTestExamView: React.FC<MockTestExamViewProps> = ({
                 <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
                   <div className="flex items-center justify-between">
                     <div className="text-xs font-bold uppercase tracking-wider text-slate-500">
-                      {currentQ.section === 'reading' ? 'Reading Passage' : 'Context Sentence'}
+                      {currentQ.section === 'reading' ? tr("Reading Passage") : tr("Context Sentence")}
                     </div>
                     <SpeechButton text={currentQ.passage} size="sm" />
                   </div>
@@ -181,12 +182,12 @@ export const MockTestExamView: React.FC<MockTestExamViewProps> = ({
               {/* Question Text / Prompt Statement */}
               <div className="space-y-1">
                 <h3 className="text-lg font-bold text-slate-950 leading-snug">
-                  {currentQ.questionText ||
+                  {tr(currentQ.questionText) ||
                     (currentQ.prompt ? getLocalized(currentQ.prompt) : '') ||
-                    (currentQ as any).question ||
+                    tr((currentQ as any).question) ||
                     (currentQ.section === 'listening'
-                      ? 'Listen to the recording and select the correct option:'
-                      : 'Choose the correct answer:')}
+                      ? tr("Listen to the recording and select the correct option:")
+                      : tr("Choose the correct answer:"))}
                 </h3>
               </div>
 
@@ -212,7 +213,7 @@ export const MockTestExamView: React.FC<MockTestExamViewProps> = ({
                         }`}>
                           {opt.id.toUpperCase()}
                         </span>
-                        <span>{opt.text}</span>
+                        <span>{tr(opt.text)}</span>
                       </div>
                       {isSelected && <CheckCircle2 className="w-5 h-5 text-rose-400 shrink-0" />}
                     </button>
@@ -230,7 +231,7 @@ export const MockTestExamView: React.FC<MockTestExamViewProps> = ({
                 disabled={currentQuestionIndex === 0}
                 icon={<ChevronLeft className="w-4 h-4" />}
               >
-                Previous
+                {tr("Previous")}
               </Button>
               <Button
                 variant="primary"
@@ -244,7 +245,7 @@ export const MockTestExamView: React.FC<MockTestExamViewProps> = ({
                 }}
                 iconRight={<ChevronRight className="w-4 h-4" />}
               >
-                {currentQuestionIndex + 1 < totalQuestions ? 'Next Question' : 'Finish & Review'}
+                {currentQuestionIndex + 1 < totalQuestions ? tr("Next Question") : tr("Finish & Review")}
               </Button>
             </div>
           </Card>
@@ -254,22 +255,22 @@ export const MockTestExamView: React.FC<MockTestExamViewProps> = ({
         <div className="space-y-6">
           <Card variant="default" className="p-6 space-y-5 sticky top-36">
             <div className="flex items-center justify-between">
-              <h4 className="text-sm font-bold text-slate-900">Question Navigator</h4>
+              <h4 className="text-sm font-bold text-slate-900">{tr("Question Navigator")}</h4>
               <span className="text-xs text-slate-500 font-semibold">
-                {answeredCount} / {totalQuestions} answered
+                {answeredCount} / {totalQuestions}{" "}{tr("answered")}
               </span>
             </div>
 
             {/* Palette legend */}
             <div className="flex items-center gap-4 text-[11px] font-semibold text-slate-600 pb-2 border-b border-slate-100">
               <span className="flex items-center gap-1.5">
-                <span className="w-2.5 h-2.5 rounded-full bg-slate-900" /> Current
+                <span className="w-2.5 h-2.5 rounded-full bg-slate-900" />{" "}{tr("Current")}
               </span>
               <span className="flex items-center gap-1.5">
-                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500" /> Answered
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500" />{" "}{tr("Answered")}
               </span>
               <span className="flex items-center gap-1.5">
-                <span className="w-2.5 h-2.5 rounded-full bg-slate-200" /> Empty
+                <span className="w-2.5 h-2.5 rounded-full bg-slate-200" />{" "}{tr("Empty")}
               </span>
             </div>
 
@@ -306,7 +307,7 @@ export const MockTestExamView: React.FC<MockTestExamViewProps> = ({
                 onClick={() => setShowSubmitModal(true)}
                 className="w-full justify-center text-xs"
               >
-                Ready to Finish?
+                {tr("Ready to Finish?")}
               </Button>
             </div>
           </Card>
@@ -321,19 +322,19 @@ export const MockTestExamView: React.FC<MockTestExamViewProps> = ({
           </div>
 
           <div className="space-y-1">
-            <h3 className="text-xl font-bold text-slate-950">Submit Your Exam?</h3>
+            <h3 className="text-xl font-bold text-slate-950">{tr("Submit Your Exam?")}</h3>
             <p className="text-xs text-slate-500">
-              You still have <strong className="text-slate-800 font-mono">{formatTimer(secondsRemaining)}</strong> remaining.
+              {tr("You still have")}{" "}<strong className="text-slate-800 font-mono">{formatTimer(secondsRemaining)}</strong>{" "}{tr("remaining.")}
             </p>
           </div>
 
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs space-y-1.5 text-left">
             <div className="flex justify-between">
-              <span className="text-slate-600">Answered Questions:</span>
+              <span className="text-slate-600">{tr("Answered Questions:")}</span>
               <span className="font-bold text-emerald-600">{answeredCount}</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-slate-600">Unanswered Questions:</span>
+              <span className="text-slate-600">{tr("Unanswered Questions:")}</span>
               <span className="font-bold text-amber-600">{unansweredCount}</span>
             </div>
           </div>
@@ -345,7 +346,7 @@ export const MockTestExamView: React.FC<MockTestExamViewProps> = ({
               onClick={() => setShowSubmitModal(false)}
               className="w-full justify-center"
             >
-              Continue Test
+              {tr("Continue Test")}
             </Button>
             <Button
               variant="primary"
@@ -353,7 +354,7 @@ export const MockTestExamView: React.FC<MockTestExamViewProps> = ({
               onClick={handleFinalSubmit}
               className="w-full justify-center"
             >
-              Confirm Submit
+              {tr("Confirm Submit")}
             </Button>
           </div>
         </div>

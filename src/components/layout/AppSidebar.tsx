@@ -1,4 +1,5 @@
 import React from 'react';
+import { tr } from '../../locales/tr';
 import {
   LayoutDashboard,
   GraduationCap,
@@ -75,9 +76,9 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({
             <div className="absolute inset-x-0 bottom-0 h-0.5 bg-[#C52828]" />
           </div>
           <div className="flex flex-col">
-            <span className="font-bold text-lg text-stone-900 tracking-tight leading-none">HSK Path</span>
+            <span className="font-bold text-lg text-stone-900 tracking-tight leading-none">{tr("HSK Path")}</span>
             <span className="text-[10px] text-stone-500 font-semibold uppercase tracking-wider mt-1">
-              HSK 1–3
+              {tr("HSK 1–3")}
             </span>
           </div>
         </div>
@@ -93,10 +94,10 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({
             </div>
             <div>
               <div className="text-[10px] font-bold text-stone-400 uppercase tracking-widest">
-                Target Syllabus
+                {tr("Target Syllabus")}
               </div>
               <div className="text-xs font-bold text-stone-900">
-                {user.currentHsk.toUpperCase()} Master Plan
+                {user.currentHsk.toUpperCase()}{" "}{tr("Master Plan")}
               </div>
             </div>
           </div>
@@ -142,7 +143,7 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({
                 )}
                 {item.id === 'vocabulary' && (
                   <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-md ${isActive ? 'bg-white/20 text-white' : 'bg-[#FAF5EB] text-[#8C6405] border border-[#E6D4B0]'}`}>
-                    SRS
+                    {tr("SRS")}
                   </span>
                 )}
               </button>
@@ -157,14 +158,14 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({
         <div className="flex items-center justify-between px-3 py-2 rounded-xl bg-[#FAF5EB] border border-[#E6D4B0] text-[#8C6405] text-xs font-semibold shadow-2xs">
           <div className="flex items-center gap-2">
             <Flame className="w-4 h-4 text-amber-600 fill-amber-500" />
-            <span>Study Streak</span>
+            <span>{tr("Study Streak")}</span>
           </div>
           <span className="font-bold">{streakDays} {t('dashboard.days')}</span>
         </div>
 
         {/* Interface Language Selector in Sidebar */}
         <div className="flex items-center justify-between px-1">
-          <span className="text-xs font-medium text-stone-500">Language</span>
+          <span className="text-xs font-medium text-stone-500">{tr("Language")}</span>
           <LanguageSelector variant="standard" />
         </div>
 

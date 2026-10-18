@@ -1,4 +1,5 @@
 import React from 'react';
+import { tr } from '../locales/tr';
 import { Sparkles, Headphones, FileText, Layers, PenTool, BookOpen, ArrowRight, Clock, Flame, Award, Play } from '../components/icons';
 import { useI18n } from '../locales';
 import { Card } from '../components/ui/Card';
@@ -36,14 +37,14 @@ export const PracticeHubView: React.FC<PracticeHubViewProps> = ({
             <span className="px-2.5 py-0.5 rounded-full bg-rose-500/20 text-rose-300 border border-rose-500/30 text-xs font-bold uppercase tracking-wider">
               {t('practice.quickQuiz')}
             </span>
-            <span className="text-xs text-slate-400 font-medium">10 Questions · ~5 min</span>
+            <span className="text-xs text-slate-400 font-medium">{tr("10 Questions · ~5 min")}</span>
           </div>
 
           <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
-            Daily Adaptive Drill (HSK 1–3 Mix)
+            {tr("Daily Adaptive Drill (HSK 1–3 Mix)")}
           </h2>
           <p className="text-sm text-slate-300 leading-relaxed">
-            A fast, high-yield drill covering vocabulary recall, listening dialogues, and grammar particles to keep your streak alive.
+            {tr("A fast, high-yield drill covering vocabulary recall, listening dialogues, and grammar particles to keep your streak alive.")}
           </p>
         </div>
 
@@ -55,7 +56,7 @@ export const PracticeHubView: React.FC<PracticeHubViewProps> = ({
             className="w-full sm:w-auto shadow-md"
             icon={<Play className="w-4 h-4" weight="fill" />}
           >
-            Start Daily Drill
+            {tr("Start Daily Drill")}
           </Button>
         </div>
       </div>
@@ -76,15 +77,15 @@ export const PracticeHubView: React.FC<PracticeHubViewProps> = ({
               {t('practice.listeningPractice')}
             </h3>
             <p className="text-xs text-slate-600 leading-relaxed">
-              Listen to native Mandarin dialogues, adjust audio playback speed (0.8x / 1.0x), and answer comprehension questions.
+              {tr("Listen to native Mandarin dialogues, adjust audio playback speed (0.8x / 1.0x), and answer comprehension questions.")}
             </p>
           </div>
           <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#C52828]">
             <span className="flex items-center gap-1 text-slate-500 font-normal">
-              <Clock className="w-3 h-3" /> ~10 min session
+              <Clock className="w-3 h-3" />{" "}{tr("~10 min session")}
             </span>
             <span className="flex items-center gap-1">
-              Start Audio Drill <ArrowRight className="w-3.5 h-3.5" />
+              {tr("Start Audio Drill")}{" "}<ArrowRight className="w-3.5 h-3.5" />
             </span>
           </div>
         </Card>
@@ -103,15 +104,15 @@ export const PracticeHubView: React.FC<PracticeHubViewProps> = ({
               {t('practice.readingPractice')}
             </h3>
             <p className="text-xs text-slate-600 leading-relaxed">
-              Read authentic Chinese short passages and dialogues with optional pinyin annotations and text questions.
+              {tr("Read authentic Chinese short passages and dialogues with optional pinyin annotations and text questions.")}
             </p>
           </div>
           <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#C52828]">
             <span className="flex items-center gap-1 text-slate-500 font-normal">
-              <Clock className="w-3 h-3" /> ~12 min session
+              <Clock className="w-3 h-3" />{" "}{tr("~12 min session")}
             </span>
             <span className="flex items-center gap-1">
-              Read Passages <ArrowRight className="w-3.5 h-3.5" />
+              {tr("Read Passages")}{" "}<ArrowRight className="w-3.5 h-3.5" />
             </span>
           </div>
         </Card>
@@ -130,15 +131,15 @@ export const PracticeHubView: React.FC<PracticeHubViewProps> = ({
               {t('practice.writingPractice')}
             </h3>
             <p className="text-xs text-slate-600 leading-relaxed">
-              Interactive word ordering and sentence construction directly preparing you for the official HSK 3 writing section.
+              {tr("Interactive word ordering and sentence construction directly preparing you for the official HSK 3 writing section.")}
             </p>
           </div>
           <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#C52828]">
             <span className="flex items-center gap-1 text-slate-500 font-normal">
-              <Clock className="w-3 h-3" /> ~8 min session
+              <Clock className="w-3 h-3" />{" "}{tr("~8 min session")}
             </span>
             <span className="flex items-center gap-1">
-              Arrange Words <ArrowRight className="w-3.5 h-3.5" />
+              {tr("Arrange Words")}{" "}<ArrowRight className="w-3.5 h-3.5" />
             </span>
           </div>
         </Card>
@@ -157,15 +158,15 @@ export const PracticeHubView: React.FC<PracticeHubViewProps> = ({
               {t('practice.grammarQuiz')}
             </h3>
             <p className="text-xs text-slate-600 leading-relaxed">
-              Master essential modal verbs (会, 能, 可以), comparison clauses (比), and aspect particles (了, 着, 过).
+              {tr("Master essential modal verbs (会, 能, 可以), comparison clauses (比), and aspect particles (了, 着, 过).")}
             </p>
           </div>
           <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#C52828]">
             <span className="flex items-center gap-1 text-slate-500 font-normal">
-              <Clock className="w-3 h-3" /> ~8 min session
+              <Clock className="w-3 h-3" />{" "}{tr("~8 min session")}
             </span>
             <span className="flex items-center gap-1">
-              Start Grammar <ArrowRight className="w-3.5 h-3.5" />
+              {tr("Start Grammar")}{" "}<ArrowRight className="w-3.5 h-3.5" />
             </span>
           </div>
         </Card>
@@ -181,18 +182,18 @@ export const PracticeHubView: React.FC<PracticeHubViewProps> = ({
               <BookOpen className="w-6 h-6" />
             </div>
             <h3 className="text-lg font-bold text-slate-900">
-              {t('nav.vocabulary')} Flashcards
+              {t('nav.vocabulary')}{" "}{tr("Flashcards")}
             </h3>
             <p className="text-xs text-slate-600 leading-relaxed">
-              Flip and memorize characters with audio pronunciation, example sentences, and bookmarking.
+              {tr("Flip and memorize characters with audio pronunciation, example sentences, and bookmarking.")}
             </p>
           </div>
           <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#C52828]">
             <span className="flex items-center gap-1 text-slate-500 font-normal">
-              <Clock className="w-3 h-3" /> Self-paced
+              <Clock className="w-3 h-3" />{" "}{tr("Self-paced")}
             </span>
             <span className="flex items-center gap-1">
-              Study Cards <ArrowRight className="w-3.5 h-3.5" />
+              {tr("Study Cards")}{" "}<ArrowRight className="w-3.5 h-3.5" />
             </span>
           </div>
         </Card>
@@ -211,15 +212,15 @@ export const PracticeHubView: React.FC<PracticeHubViewProps> = ({
               {t('nav.mockTests')}
             </h3>
             <p className="text-xs text-slate-600 leading-relaxed">
-              Timed simulation exams with official section timing, audio player, score cards, and mistake logs.
+              {tr("Timed simulation exams with official section timing, audio player, score cards, and mistake logs.")}
             </p>
           </div>
           <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#C52828]">
             <span className="flex items-center gap-1 text-slate-500 font-normal">
-              <Clock className="w-3 h-3" /> 35–90 min
+              <Clock className="w-3 h-3" />{" "}{tr("35–90 min")}
             </span>
             <span className="flex items-center gap-1">
-              Take Exam <ArrowRight className="w-3.5 h-3.5" />
+              {tr("Take Exam")}{" "}<ArrowRight className="w-3.5 h-3.5" />
             </span>
           </div>
         </Card>

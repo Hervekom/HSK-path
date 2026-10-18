@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { tr } from '../locales/tr';
 import { Clock, Award, Lock, Sparkles, ChevronRight, ShieldCheck, CheckCircle2, ArrowUpRight } from '../components/icons';
 import { useI18n } from '../locales';
 import { MOCK_TESTS_CATALOG } from '../data/mockTests';
@@ -36,7 +37,7 @@ export const MockTestsListView: React.FC<MockTestsListViewProps> = ({
 
   const handleTestClick = (test: MockTest) => {
     if (test.isPro && !isProUser) {
-      setProModalFeature(test.title);
+      setProModalFeature(tr(test.title));
       setShowProModal(true);
     } else {
       onSelectTest(test);
@@ -73,7 +74,7 @@ export const MockTestsListView: React.FC<MockTestsListViewProps> = ({
             variant="outline"
             size="sm"
             onClick={() => {
-              setProModalFeature(language === 'fr' ? 'Pass Pro HSK' : 'HSK Pro Pass');
+              setProModalFeature(language === 'fr' ? 'Pass Pro HSK' : tr("HSK Pro Pass"));
               setShowProModal(true);
             }}
             className="text-xs text-[#C52828] border-[#C52828]/30 hover:bg-[#C52828]/10"
@@ -150,17 +151,17 @@ export const MockTestsListView: React.FC<MockTestsListViewProps> = ({
 
                   {result ? (
                     <Badge variant={result.isPassed ? 'success' : 'danger'}>
-                      {result.isPassed ? 'Passed' : 'Needs Review'} ({result.score}/{result.totalScore})
+                      {result.isPassed ? tr("Passed") : tr("Needs Review")} ({result.score}/{result.totalScore})
                     </Badge>
                   ) : (
-                    <Badge variant="neutral">New Exam</Badge>
+                    <Badge variant="neutral">{tr("New Exam")}</Badge>
                   )}
                 </div>
 
                 {/* Title & Passing Score */}
                 <div>
                   <h3 className="text-xl font-bold text-stone-900 flex items-center justify-between">
-                    <span>{test.title}</span>
+                    <span>{tr(test.title)}</span>
                     {isLocked && <Lock className="w-4 h-4 text-amber-700 shrink-0" />}
                   </h3>
                   <p className="text-xs text-stone-500 font-semibold uppercase tracking-wider mt-0.5">
@@ -195,7 +196,7 @@ export const MockTestsListView: React.FC<MockTestsListViewProps> = ({
                         key={sec.id || sec.type}
                         className="px-2 py-0.5 rounded-md bg-[#ECE4D8] text-stone-700 font-medium text-[11px]"
                       >
-                        {sec.name || sec.title.split(':')[0] || sec.type} ({sec.questionsCount || sec.questions?.length || 5} Qs)
+                        {tr(sec.name || sec.title.split(':')[0] || sec.type)} ({sec.questionsCount || sec.questions?.length || 5}{" "}{tr("Qs)")}
                       </span>
                     ))}
                   </div>

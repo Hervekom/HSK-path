@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { tr } from '../locales/tr';
 import { User, Mail, Lock, ArrowRight, Target, Clock, CheckCircle2 } from '../components/icons';
 import { useI18n } from '../locales';
 import { Button } from '../components/ui/Button';
@@ -29,7 +30,7 @@ export const SignUpView: React.FC<SignUpViewProps> = ({ onNavigate, onSignUpSucc
     setError(null);
     setInfo(null);
     const profileData = {
-      name: name.trim() || email.split('@')[0] || 'Student',
+      name: name.trim() || email.split('@')[0] || tr("Student"),
       email: email.trim(),
       currentHsk,
       dailyGoalMinutes: dailyGoal,
@@ -75,7 +76,7 @@ export const SignUpView: React.FC<SignUpViewProps> = ({ onNavigate, onSignUpSucc
           <div className="w-9 h-9 rounded-xl bg-slate-900 flex items-center justify-center text-white shadow-xs">
             <span className="font-hanzi font-bold text-base text-rose-400">道</span>
           </div>
-          <span className="font-bold text-xl text-slate-900 tracking-tight">HSK Path</span>
+          <span className="font-bold text-xl text-slate-900 tracking-tight">{tr("HSK Path")}</span>
         </div>
         <LanguageSelector />
       </div>
@@ -105,7 +106,7 @@ export const SignUpView: React.FC<SignUpViewProps> = ({ onNavigate, onSignUpSucc
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   required
-                  placeholder="e.g. Marie Laurent / David Wang"
+                  placeholder={tr("e.g. Marie Laurent / David Wang")}
                   className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 focus:border-slate-900 focus:ring-2 focus:ring-slate-900/10 text-sm font-medium bg-white outline-none"
                 />
               </div>
@@ -123,7 +124,7 @@ export const SignUpView: React.FC<SignUpViewProps> = ({ onNavigate, onSignUpSucc
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  placeholder="name@university.edu"
+                  placeholder={tr("name@university.edu")}
                   className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 focus:border-slate-900 focus:ring-2 focus:ring-slate-900/10 text-sm font-medium bg-white outline-none"
                 />
               </div>
@@ -141,7 +142,7 @@ export const SignUpView: React.FC<SignUpViewProps> = ({ onNavigate, onSignUpSucc
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
-                  placeholder="Create a secure password"
+                  placeholder={tr("Create a secure password")}
                   className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 focus:border-slate-900 focus:ring-2 focus:ring-slate-900/10 text-sm font-medium bg-white outline-none"
                 />
               </div>
@@ -154,9 +155,9 @@ export const SignUpView: React.FC<SignUpViewProps> = ({ onNavigate, onSignUpSucc
               </label>
               <div className="grid grid-cols-3 gap-2">
                 {[
-                  { id: 'hsk1', label: 'HSK 1', sub: '150 words' },
-                  { id: 'hsk2', label: 'HSK 2', sub: '300 words' },
-                  { id: 'hsk3', label: 'HSK 3', sub: '600 words' },
+                  { id: 'hsk1', label: tr("HSK 1"), sub: tr("150 words") },
+                  { id: 'hsk2', label: tr("HSK 2"), sub: tr("300 words") },
+                  { id: 'hsk3', label: tr("HSK 3"), sub: tr("600 words") },
                 ].map((item) => (
                   <button
                     key={item.id}
@@ -197,9 +198,9 @@ export const SignUpView: React.FC<SignUpViewProps> = ({ onNavigate, onSignUpSucc
                 className="w-full accent-slate-900 cursor-pointer"
               />
               <div className="flex justify-between text-[11px] text-slate-400 font-medium px-0.5">
-                <span>10 min (Casual)</span>
-                <span>20 min (Standard)</span>
-                <span>45+ min (Intensive)</span>
+                <span>{tr("10 min (Casual)")}</span>
+                <span>{tr("20 min (Standard)")}</span>
+                <span>{tr("45+ min (Intensive)")}</span>
               </div>
             </div>
 
@@ -239,7 +240,7 @@ export const SignUpView: React.FC<SignUpViewProps> = ({ onNavigate, onSignUpSucc
       </div>
 
       <div className="text-center text-xs text-slate-400">
-        © 2026 HSK Path
+        {tr("© 2026 HSK Path")}
       </div>
     </div>
   );

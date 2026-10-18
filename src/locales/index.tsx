@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { setTrLanguage } from './tr';
 import type { Language, MultiLingualText } from '../types';
 import en from './en.json';
 import fr from './fr.json';
@@ -43,8 +44,17 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     } catch {
       // ignore
     }
+    const nav = (typeof navigator !== 'undefined' && navigator.language ? navigator.language : 'en').toLowerCase();
+    if (nav.startsWith('fr')) return 'fr';
+    if (nav.startsWith('zh')) return 'zh';
     return 'en';
   });
+
+  // Hard-coded UI strings (tr()) follow the same language; set before children render.
+  setTrLanguage(language);
+  useEffect(() => {
+    document.documentElement.lang = language === 'zh' ? 'zh-CN' : language;
+  }, [language]);
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);

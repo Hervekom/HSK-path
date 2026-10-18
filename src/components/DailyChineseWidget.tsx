@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { tr } from '../locales/tr';
 import {
   Sparkles,
   Search,
@@ -123,15 +124,15 @@ export const DailyChineseWidget: React.FC<DailyChineseWidgetProps> = ({
               <Compass className="w-4 h-4" />
             </span>
             <h2 className="text-lg sm:text-xl font-extrabold text-slate-950 tracking-tight flex items-center gap-2">
-              Chinese Language Daily
+              {tr("Chinese Language Daily")}
             </h2>
             <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-blue-50/90 text-blue-700 border border-blue-200/80 text-[11px] font-bold">
               <Search className="w-3 h-3 text-blue-500" />
-              <span>Updated daily</span>
+              <span>{tr("Updated daily")}</span>
             </div>
           </div>
           <p className="text-xs text-slate-500">
-            Fresh authentic cultural stories, daily news, and idioms tailored for your HSK reading practice
+            {tr("Fresh authentic cultural stories, daily news, and idioms tailored for your HSK reading practice")}
           </p>
         </div>
 
@@ -150,7 +151,7 @@ export const DailyChineseWidget: React.FC<DailyChineseWidgetProps> = ({
                     : 'text-slate-500 hover:text-slate-800'
                 }`}
               >
-                {lvl === 'all' ? 'All' : lvl.toUpperCase()}
+                {lvl === 'all' ? tr("All") : lvl.toUpperCase()}
               </button>
             ))}
           </div>
@@ -164,7 +165,7 @@ export const DailyChineseWidget: React.FC<DailyChineseWidgetProps> = ({
             className="text-xs shrink-0"
             icon={<RefreshCw className={`w-3.5 h-3.5 ${isLoading ? 'animate-spin text-rose-600' : ''}`} />}
           >
-            <span className="hidden sm:inline">New Fact</span>
+            <span className="hidden sm:inline">{tr("New Fact")}</span>
           </Button>
         </div>
       </div>
@@ -178,12 +179,12 @@ export const DailyChineseWidget: React.FC<DailyChineseWidgetProps> = ({
               <Badge variant={dailyData.level as any}>{dailyData.level.toUpperCase()}</Badge>
               <span className="text-xs font-bold uppercase tracking-wider text-slate-500 px-2 py-0.5 rounded-md bg-white border border-slate-200">
                 {dailyData.category === 'tradition'
-                  ? 'Tradition & Heritage'
+                  ? tr("Tradition & Heritage")
                   : dailyData.category === 'news'
-                  ? 'Daily News'
+                  ? tr("Daily News")
                   : dailyData.category === 'lifestyle'
-                  ? 'Modern Lifestyle'
-                  : 'Cultural Fact'}
+                  ? tr("Modern Lifestyle")
+                  : tr("Cultural Fact")}
               </span>
               <span className="text-[11px] text-slate-400 font-mono hidden md:inline">
                 {dailyData.date}
@@ -212,10 +213,10 @@ export const DailyChineseWidget: React.FC<DailyChineseWidgetProps> = ({
                   ? 'bg-white border-slate-200 text-slate-800'
                   : 'bg-slate-100 border-transparent text-slate-400'
               }`}
-              title={showPinyin ? 'Hide Pinyin' : 'Show Pinyin'}
+              title={showPinyin ? tr("Hide Pinyin") : tr("Show Pinyin")}
             >
               {showPinyin ? <Eye className="w-3.5 h-3.5 text-rose-600" /> : <EyeOff className="w-3.5 h-3.5" />}
-              <span className="text-[11px]">Pinyin</span>
+              <span className="text-[11px]">{tr("Pinyin")}</span>
             </button>
 
             <button
@@ -226,17 +227,17 @@ export const DailyChineseWidget: React.FC<DailyChineseWidgetProps> = ({
                   ? 'bg-white border-slate-200 text-slate-800'
                   : 'bg-slate-100 border-transparent text-slate-400'
               }`}
-              title={showTranslation ? 'Hide Translation' : 'Show Translation'}
+              title={showTranslation ? tr("Hide Translation") : tr("Show Translation")}
             >
               <BookOpen className="w-3.5 h-3.5 text-blue-600" />
-              <span className="text-[11px]">Meaning</span>
+              <span className="text-[11px]">{tr("Meaning")}</span>
             </button>
 
             <button
               type="button"
               onClick={handleCopyText}
               className="p-2 rounded-xl border border-slate-200 bg-white text-slate-700 hover:bg-slate-50 cursor-pointer transition-colors"
-              title="Copy Chinese text"
+              title={tr("Copy Chinese text")}
             >
               {isCopied ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
             </button>
@@ -257,7 +258,7 @@ export const DailyChineseWidget: React.FC<DailyChineseWidgetProps> = ({
 
           {showTranslation && dailyData.content.translation && (
             <div className="p-3 rounded-xl bg-blue-50/70 border border-blue-100/90 text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">
-              <span className="font-bold text-blue-900 block mb-0.5 text-xs">Translation:</span>
+              <span className="font-bold text-blue-900 block mb-0.5 text-xs">{tr("Translation:")}</span>
               {getLocalized(dailyData.content.translation)}
             </div>
           )}
@@ -268,12 +269,12 @@ export const DailyChineseWidget: React.FC<DailyChineseWidgetProps> = ({
               text={dailyData.content.hanzi}
               size="md"
               showLabel
-              label="Listen to Native Pronunciation"
+              label={tr("Listen to Native Pronunciation")}
               allowSpeedToggle
               className="bg-slate-900 text-white font-bold text-xs shadow-xs"
             />
             <span className="text-[11px] font-medium text-slate-400">
-              Pacing: 1.0x / 0.8x (Slow)
+              {tr("Pacing: 1.0x / 0.8x (Slow)")}
             </span>
           </div>
         </div>
@@ -283,7 +284,7 @@ export const DailyChineseWidget: React.FC<DailyChineseWidgetProps> = ({
           <div className="space-y-2 pt-3 border-t border-slate-200/70">
             <div className="flex items-center gap-1.5 text-xs font-bold text-slate-700 uppercase tracking-wider">
               <BookOpen className="w-3.5 h-3.5 text-indigo-600" />
-              <span>Key Vocabulary in this Snippet</span>
+              <span>{tr("Key Vocabulary in this Snippet")}</span>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5">
@@ -315,7 +316,7 @@ export const DailyChineseWidget: React.FC<DailyChineseWidgetProps> = ({
           <div className="p-4 rounded-xl bg-amber-50/80 border border-amber-200/80 space-y-1.5">
             <div className="flex items-center gap-1.5 text-xs font-bold text-amber-900 uppercase tracking-wider">
               <Lightbulb className="w-4 h-4 text-amber-600 shrink-0" />
-              <span>Cultural & Linguistic Insight</span>
+              <span>{tr("Cultural & Linguistic Insight")}</span>
             </div>
             <p className="text-xs text-amber-950 leading-relaxed font-medium">
               {getLocalized(dailyData.culturalInsight)}
@@ -328,12 +329,12 @@ export const DailyChineseWidget: React.FC<DailyChineseWidgetProps> = ({
           <div className="flex items-center gap-1.5">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
             <span>
-              {isGroundedLive ? 'Google Search Real-Time Query: ' : 'Verified Cultural Snippet: '}
-              <strong className="text-slate-700">{dailyData.sourceTitle || dailyData.sourceQuery || 'Authentic Chinese News & Culture'}</strong>
+              {isGroundedLive ? tr("Google Search Real-Time Query: ") : tr("Verified Cultural Snippet: ")}
+              <strong className="text-slate-700">{tr(dailyData.sourceTitle) || dailyData.sourceQuery || tr("Authentic Chinese News & Culture")}</strong>
             </span>
           </div>
           <span className="font-medium text-slate-400">
-            Updated Daily · HSK Language Lab
+            {tr("Updated Daily · HSK Language Lab")}
           </span>
         </div>
       </div>

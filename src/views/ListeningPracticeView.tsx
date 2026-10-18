@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { tr } from '../locales/tr';
 import {
   ArrowLeft,
   Headphones,
@@ -72,10 +73,10 @@ export const ListeningPracticeView: React.FC<ListeningPracticeViewProps> = ({ on
           className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500 hover:text-slate-900 cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" />
-          <span>Back to Practice</span>
+          <span>{tr("Back to Practice")}</span>
         </button>
         <div className="text-xs font-bold text-slate-600">
-          Audio Drill {currentIndex + 1} of {LISTENING_EXERCISES.length}
+          {tr("Audio Drill")}{" "}{currentIndex + 1}{" "}{tr("of")}{" "}{LISTENING_EXERCISES.length}
         </div>
       </div>
 
@@ -85,7 +86,7 @@ export const ListeningPracticeView: React.FC<ListeningPracticeViewProps> = ({ on
       <Card variant="elevated" className="p-6 sm:p-8 space-y-6">
         <div className="flex items-center justify-between">
           <Badge variant={currentEx.level as any}>{currentEx.level.toUpperCase()}</Badge>
-          <Badge variant="neutral">Listening Comprehension</Badge>
+          <Badge variant="neutral">{tr("Listening Comprehension")}</Badge>
         </div>
 
         {/* Audio Player Station */}
@@ -96,10 +97,10 @@ export const ListeningPracticeView: React.FC<ListeningPracticeViewProps> = ({ on
 
           <div className="space-y-1">
             <h3 className="text-lg font-bold text-white">
-              Listen to the Mandarin Dialogue
+              {tr("Listen to the Mandarin Dialogue")}
             </h3>
             <p className="text-xs text-slate-400">
-              Click the audio player below. Listen at normal (1.0x) or slow (0.8x) speed.
+              {tr("Click the audio player below. Listen at normal (1.0x) or slow (0.8x) speed.")}
             </p>
           </div>
 
@@ -109,7 +110,7 @@ export const ListeningPracticeView: React.FC<ListeningPracticeViewProps> = ({ on
               text={currentEx.audioText}
               size="lg"
               showLabel
-              label="Play Dialogue Audio"
+              label={tr("Play Dialogue Audio")}
               allowSpeedToggle
               className="bg-white text-slate-900 border-none font-bold text-sm"
             />
@@ -123,7 +124,7 @@ export const ListeningPracticeView: React.FC<ListeningPracticeViewProps> = ({ on
             className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-slate-800 cursor-pointer"
           >
             {showTranscript ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}
-            <span>{showTranscript ? 'Hide Chinese Transcript' : 'Show Chinese Transcript'}</span>
+            <span>{showTranscript ? tr("Hide Chinese Transcript") : tr("Show Chinese Transcript")}</span>
           </button>
         </div>
 
@@ -142,12 +143,12 @@ export const ListeningPracticeView: React.FC<ListeningPracticeViewProps> = ({ on
         {/* Question Prompt */}
         <div className="space-y-2 pt-2 border-t border-slate-100">
           <div className="text-xs font-bold uppercase tracking-wider text-slate-400">
-            Question Prompt
+            {tr("Question Prompt")}
           </div>
           <h4 className="text-base font-bold text-slate-900">
-            {currentEx.question ||
+            {tr(currentEx.question) ||
               ((currentEx as any).prompt ? getLocalized((currentEx as any).prompt) : '') ||
-              'Listen to the dialogue and select the correct answer:'}
+              tr("Listen to the dialogue and select the correct answer:")}
           </h4>
         </div>
 
@@ -191,7 +192,7 @@ export const ListeningPracticeView: React.FC<ListeningPracticeViewProps> = ({ on
                   }`}>
                     {/^[a-d]$/i.test(opt.id) ? opt.id.toUpperCase() : String.fromCharCode(65 + optIdx)}
                   </span>
-                  <span>{opt.text}</span>
+                  <span>{tr(opt.text)}</span>
                 </div>
 
                 {isAnswerSubmitted && isCorrect && <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />}
@@ -206,7 +207,7 @@ export const ListeningPracticeView: React.FC<ListeningPracticeViewProps> = ({ on
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-600 space-y-1">
             <div className="font-bold text-slate-800 flex items-center gap-1.5">
               <HelpCircle className="w-3.5 h-3.5 text-blue-600" />
-              <span>Explanation</span>
+              <span>{tr("Explanation")}</span>
             </div>
             <p>{getLocalized(currentEx.explanation)}</p>
           </div>
@@ -222,7 +223,7 @@ export const ListeningPracticeView: React.FC<ListeningPracticeViewProps> = ({ on
               disabled={!selectedOptionId}
               className="w-full justify-center"
             >
-              Check Answer
+              {tr("Check Answer")}
             </Button>
           ) : (
             <Button
@@ -232,7 +233,7 @@ export const ListeningPracticeView: React.FC<ListeningPracticeViewProps> = ({ on
               className="w-full justify-center"
               iconRight={<ArrowRight className="w-4 h-4" />}
             >
-              {currentIndex + 1 < LISTENING_EXERCISES.length ? 'Next Audio Drill' : 'Complete Practice'}
+              {currentIndex + 1 < LISTENING_EXERCISES.length ? tr("Next Audio Drill") : tr("Complete Practice")}
             </Button>
           )}
         </div>

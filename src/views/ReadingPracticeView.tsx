@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { tr } from '../locales/tr';
 import {
   ArrowLeft,
   FileText,
@@ -48,7 +49,7 @@ export const ReadingPracticeView: React.FC<ReadingPracticeViewProps> = ({ onExit
       setSelectedOptionId(null);
       setIsAnswerSubmitted(false);
     } else {
-      alert('Reading practice complete!');
+      alert(tr("Reading practice complete!"));
       onExit();
     }
   };
@@ -64,10 +65,10 @@ export const ReadingPracticeView: React.FC<ReadingPracticeViewProps> = ({ onExit
           className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500 hover:text-slate-900 cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" />
-          <span>Back to Practice</span>
+          <span>{tr("Back to Practice")}</span>
         </button>
         <div className="text-xs font-bold text-slate-600">
-          Passage {currentIndex + 1} of {READING_EXERCISES.length}
+          {tr("Passage")}{" "}{currentIndex + 1}{" "}{tr("of")}{" "}{READING_EXERCISES.length}
         </div>
       </div>
 
@@ -82,7 +83,7 @@ export const ReadingPracticeView: React.FC<ReadingPracticeViewProps> = ({ onExit
             className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-600 hover:text-slate-900 cursor-pointer"
           >
             {showPinyin ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}
-            <span>{showPinyin ? 'Hide Pinyin' : 'Show Pinyin'}</span>
+            <span>{showPinyin ? tr("Hide Pinyin") : tr("Show Pinyin")}</span>
           </button>
         </div>
 
@@ -90,9 +91,9 @@ export const ReadingPracticeView: React.FC<ReadingPracticeViewProps> = ({ onExit
         <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/90 space-y-4">
           <div className="flex items-center justify-between pb-2 border-b border-slate-200/60">
             <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
-              Chinese Reading Passage
+              {tr("Chinese Reading Passage")}
             </span>
-            <SpeechButton text={currentEx.passage} size="sm" showLabel label="Listen Passage" />
+            <SpeechButton text={currentEx.passage} size="sm" showLabel label={tr("Listen Passage")} />
           </div>
 
           <div className="space-y-3">
@@ -111,12 +112,12 @@ export const ReadingPracticeView: React.FC<ReadingPracticeViewProps> = ({ onExit
         {/* Comprehension Question */}
         <div className="space-y-2 pt-2">
           <div className="text-xs font-bold uppercase tracking-wider text-slate-400">
-            Comprehension Question
+            {tr("Comprehension Question")}
           </div>
           <h4 className="text-base font-bold text-slate-900">
-            {currentEx.question ||
+            {tr(currentEx.question) ||
               ((currentEx as any).prompt ? getLocalized((currentEx as any).prompt) : '') ||
-              'Based on the passage above, choose the correct answer:'}
+              tr("Based on the passage above, choose the correct answer:")}
           </h4>
         </div>
 
@@ -160,7 +161,7 @@ export const ReadingPracticeView: React.FC<ReadingPracticeViewProps> = ({ onExit
                   }`}>
                     {/^[a-d]$/i.test(opt.id) ? opt.id.toUpperCase() : String.fromCharCode(65 + optIdx)}
                   </span>
-                  <span>{opt.text}</span>
+                  <span>{tr(opt.text)}</span>
                 </div>
 
                 {isAnswerSubmitted && isCorrect && <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />}
@@ -175,7 +176,7 @@ export const ReadingPracticeView: React.FC<ReadingPracticeViewProps> = ({ onExit
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-600 space-y-1">
             <div className="font-bold text-slate-800 flex items-center gap-1.5">
               <HelpCircle className="w-3.5 h-3.5 text-blue-600" />
-              <span>Translation & Explanation</span>
+              <span>{tr("Translation & Explanation")}</span>
             </div>
             <p>{getLocalized(currentEx.explanation)}</p>
           </div>
@@ -191,7 +192,7 @@ export const ReadingPracticeView: React.FC<ReadingPracticeViewProps> = ({ onExit
               disabled={!selectedOptionId}
               className="w-full justify-center"
             >
-              Check Answer
+              {tr("Check Answer")}
             </Button>
           ) : (
             <Button
@@ -201,7 +202,7 @@ export const ReadingPracticeView: React.FC<ReadingPracticeViewProps> = ({ onExit
               className="w-full justify-center"
               iconRight={<ArrowRight className="w-4 h-4" />}
             >
-              {currentIndex + 1 < READING_EXERCISES.length ? 'Next Passage' : 'Complete Reading Practice'}
+              {currentIndex + 1 < READING_EXERCISES.length ? tr("Next Passage") : tr("Complete Reading Practice")}
             </Button>
           )}
         </div>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import { tr } from '../locales/tr';
 import {
   Brain,
   RotateCw,
@@ -225,7 +226,7 @@ export const SrsReviewModal: React.FC<SrsReviewModalProps> = ({
               <div className="flex items-center justify-between" onClick={(e) => e.stopPropagation()}>
                 <div className="flex items-center gap-2">
                   <Badge variant={currentWord.level as any}>{currentWord.level.toUpperCase()}</Badge>
-                  <Badge variant="neutral">{currentWord.partOfSpeech}</Badge>
+                  <Badge variant="neutral">{tr(currentWord.partOfSpeech)}</Badge>
                 </div>
 
                 <div className="flex items-center gap-2">
@@ -269,7 +270,7 @@ export const SrsReviewModal: React.FC<SrsReviewModalProps> = ({
                         className="inline-flex items-center gap-1 text-xs text-slate-400 hover:text-slate-700 bg-white/70 px-2.5 py-1 rounded-full border border-slate-200 cursor-pointer"
                       >
                         <Eye className="w-3.5 h-3.5" />
-                        <span>Peek Pinyin</span>
+                        <span>{tr("Peek Pinyin")}</span>
                       </button>
                     )}
                   </div>
@@ -312,8 +313,8 @@ export const SrsReviewModal: React.FC<SrsReviewModalProps> = ({
               {/* Flip Hint */}
               <div className="text-xs text-slate-400 font-medium pt-2">
                 {isFlipped
-                  ? 'Grade your recall below or press (1-4)'
-                  : 'Click card or press [Space] to reveal answer'}
+                  ? tr("Grade your recall below or press (1-4)")
+                  : tr("Click card or press [Space] to reveal answer")}
               </div>
             </div>
 
@@ -321,7 +322,7 @@ export const SrsReviewModal: React.FC<SrsReviewModalProps> = ({
             {isFlipped ? (
               <div className="space-y-2 animate-in slide-in-from-bottom-2 duration-150">
                 <div className="text-xs font-bold text-slate-500 uppercase tracking-wider text-center">
-                  How well did you remember this character?
+                  {tr("How well did you remember this character?")}
                 </div>
 
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
@@ -342,7 +343,7 @@ export const SrsReviewModal: React.FC<SrsReviewModalProps> = ({
                     <div className="mt-2 font-bold text-sm text-red-900">
                       {t('vocabulary.gradeAgain')}
                     </div>
-                    <div className="text-[11px] text-red-700/80">Forgot / Repeat</div>
+                    <div className="text-[11px] text-red-700/80">{tr("Forgot / Repeat")}</div>
                   </button>
 
                   {/* Grade 2: Hard */}
@@ -362,7 +363,7 @@ export const SrsReviewModal: React.FC<SrsReviewModalProps> = ({
                     <div className="mt-2 font-bold text-sm text-amber-900">
                       {t('vocabulary.gradeHard')}
                     </div>
-                    <div className="text-[11px] text-amber-700/80">Slow recall</div>
+                    <div className="text-[11px] text-amber-700/80">{tr("Slow recall")}</div>
                   </button>
 
                   {/* Grade 3: Good */}
@@ -382,7 +383,7 @@ export const SrsReviewModal: React.FC<SrsReviewModalProps> = ({
                     <div className="mt-2 font-bold text-sm text-blue-900">
                       {t('vocabulary.gradeGood')}
                     </div>
-                    <div className="text-[11px] text-blue-700/80">Optimal recall</div>
+                    <div className="text-[11px] text-blue-700/80">{tr("Optimal recall")}</div>
                   </button>
 
                   {/* Grade 4: Easy */}
@@ -402,7 +403,7 @@ export const SrsReviewModal: React.FC<SrsReviewModalProps> = ({
                     <div className="mt-2 font-bold text-sm text-emerald-900">
                       {t('vocabulary.gradeEasy')}
                     </div>
-                    <div className="text-[11px] text-emerald-700/80">Instant mastery</div>
+                    <div className="text-[11px] text-emerald-700/80">{tr("Instant mastery")}</div>
                   </button>
                 </div>
               </div>
@@ -416,7 +417,7 @@ export const SrsReviewModal: React.FC<SrsReviewModalProps> = ({
                   className="w-full sm:w-auto px-10 font-bold"
                   icon={<RotateCw className="w-4 h-4" />}
                 >
-                  Show Answer (Space)
+                  {tr("Show Answer (Space)")}
                 </Button>
               </div>
             )}

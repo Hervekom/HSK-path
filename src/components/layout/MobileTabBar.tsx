@@ -1,4 +1,5 @@
 import React from 'react';
+import { tr } from '../../locales/tr';
 import { LayoutDashboard, Layers, Sparkles, BookOpen, FileCheck } from '../icons';
 import { useI18n } from '../../locales';
 import type { AppState } from '../../types';
@@ -39,7 +40,7 @@ export const MobileTabBar: React.FC<MobileTabBarProps> = ({ currentView, onNavig
     <nav
       className="lg:hidden fixed bottom-0 inset-x-0 z-30 bg-white/95 backdrop-blur-md border-t border-[#E8E2D8] shadow-[0_-4px_16px_rgba(28,25,23,0.06)]"
       style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
-      aria-label="Main navigation"
+      aria-label={tr("Main navigation")}
     >
       <div className="grid grid-cols-5 max-w-xl mx-auto">
         {TABS.map((tab) => {

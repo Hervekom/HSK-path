@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { tr } from '../locales/tr';
 import {
   ArrowLeft,
   PenTool,
@@ -70,7 +71,7 @@ export const WritingPracticeView: React.FC<WritingPracticeViewProps> = ({ onExit
       setIsAnswerChecked(false);
       setIsCorrect(false);
     } else {
-      alert('Sentence ordering practice complete!');
+      alert(tr("Sentence ordering practice complete!"));
       onExit();
     }
   };
@@ -86,10 +87,10 @@ export const WritingPracticeView: React.FC<WritingPracticeViewProps> = ({ onExit
           className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500 hover:text-slate-900 cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" />
-          <span>Back to Practice</span>
+          <span>{tr("Back to Practice")}</span>
         </button>
         <div className="text-xs font-bold text-slate-600">
-          Sentence {currentIndex + 1} of {WRITING_SENTENCE_EXERCISES.length}
+          {tr("Sentence")}{" "}{currentIndex + 1}{" "}{tr("of")}{" "}{WRITING_SENTENCE_EXERCISES.length}
         </div>
       </div>
 
@@ -99,19 +100,19 @@ export const WritingPracticeView: React.FC<WritingPracticeViewProps> = ({ onExit
       <Card variant="elevated" className="p-6 sm:p-8 space-y-6">
         <div className="flex items-center justify-between">
           <Badge variant={currentEx.level as any}>{currentEx.level.toUpperCase()}</Badge>
-          <Badge variant="neutral">HSK 3 Writing Reordering</Badge>
+          <Badge variant="neutral">{tr("HSK 3 Writing Reordering")}</Badge>
         </div>
 
         {/* Translation Prompt */}
         <div className="space-y-1.5">
           <div className="text-xs font-bold uppercase tracking-wider text-slate-400">
-            Target Meaning
+            {tr("Target Meaning")}
           </div>
           <h3 className="text-xl font-extrabold text-slate-950">
             {getLocalized(currentEx.translation)}
           </h3>
           <p className="text-xs text-slate-500">
-            Click words below in the correct grammatical order to form the Chinese sentence.
+            {tr("Click words below in the correct grammatical order to form the Chinese sentence.")}
           </p>
         </div>
 
@@ -119,7 +120,7 @@ export const WritingPracticeView: React.FC<WritingPracticeViewProps> = ({ onExit
         <div className="min-h-[100px] p-5 rounded-2xl bg-slate-50 border-2 border-dashed border-slate-300 flex flex-wrap items-center gap-2.5">
           {assembledTokens.length === 0 ? (
             <span className="text-xs font-medium text-slate-400 select-none">
-              Click word tiles below to arrange them here...
+              {tr("Click word tiles below to arrange them here...")}
             </span>
           ) : (
             assembledTokens.map((token, idx) => (
@@ -140,7 +141,7 @@ export const WritingPracticeView: React.FC<WritingPracticeViewProps> = ({ onExit
         <div className="space-y-2">
           <div className="flex items-center justify-between">
             <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
-              Word Bank
+              {tr("Word Bank")}
             </span>
             <button
               onClick={handleReset}
@@ -148,7 +149,7 @@ export const WritingPracticeView: React.FC<WritingPracticeViewProps> = ({ onExit
               className="text-xs text-slate-500 hover:text-slate-900 inline-flex items-center gap-1 cursor-pointer"
             >
               <RotateCcw className="w-3.5 h-3.5" />
-              <span>Reset</span>
+              <span>{tr("Reset")}</span>
             </button>
           </div>
 
@@ -175,14 +176,14 @@ export const WritingPracticeView: React.FC<WritingPracticeViewProps> = ({ onExit
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2 font-bold text-sm">
                 {isCorrect ? <CheckCircle2 className="w-5 h-5 text-emerald-600" /> : <XCircle className="w-5 h-5 text-rose-600" />}
-                <span>{isCorrect ? 'Correct Grammatical Order!' : 'Incorrect Word Order'}</span>
+                <span>{isCorrect ? tr("Correct Grammatical Order!") : tr("Incorrect Word Order")}</span>
               </div>
               <SpeechButton text={currentEx.correctOrder.join('')} size="sm" />
             </div>
 
             <div className="text-xs space-y-1">
               <div>
-                <strong>Correct Sentence: </strong>
+                <strong>{tr("Correct Sentence:")}{" "}</strong>
                 <span className="font-hanzi font-bold text-sm">{currentEx.correctOrder.join('')}</span>
               </div>
               <p className="text-slate-600">{getLocalized(currentEx.explanation)}</p>
@@ -200,7 +201,7 @@ export const WritingPracticeView: React.FC<WritingPracticeViewProps> = ({ onExit
               disabled={availableTokens.length > 0}
               className="w-full justify-center"
             >
-              Check Sentence Order
+              {tr("Check Sentence Order")}
             </Button>
           ) : (
             <Button
@@ -210,7 +211,7 @@ export const WritingPracticeView: React.FC<WritingPracticeViewProps> = ({ onExit
               className="w-full justify-center"
               iconRight={<ArrowRight className="w-4 h-4" />}
             >
-              {currentIndex + 1 < WRITING_SENTENCE_EXERCISES.length ? 'Next Sentence' : 'Finish Writing Drill'}
+              {currentIndex + 1 < WRITING_SENTENCE_EXERCISES.length ? tr("Next Sentence") : tr("Finish Writing Drill")}
             </Button>
           )}
         </div>

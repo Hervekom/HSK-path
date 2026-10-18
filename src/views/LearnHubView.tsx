@@ -1,4 +1,5 @@
 import React from 'react';
+import { tr } from '../locales/tr';
 import { BookOpen, Layers, Headphones, FileText, Sparkles, PenTool, ArrowRight, Clock, CheckCircle2, PenNib } from '../components/icons';
 import { useI18n } from '../locales';
 import { Card } from '../components/ui/Card';
@@ -18,8 +19,8 @@ export const LearnHubView: React.FC<LearnHubViewProps> = ({ onNavigate, onStartP
   const tracks = [
     {
       id: 'vocabulary',
-      title: 'Vocabulary Acquisition',
-      desc: 'Learn characters, pinyin, and real-life context sentences with native voice audio.',
+      title: tr("Vocabulary Acquisition"),
+      desc: tr("Learn characters, pinyin, and real-life context sentences with native voice audio."),
       icon: BookOpen,
       color: 'bg-[#F4EFE8] text-stone-800 border-[#E6DED2]',
       lessonsCount: 30,
@@ -28,8 +29,8 @@ export const LearnHubView: React.FC<LearnHubViewProps> = ({ onNavigate, onStartP
     },
     {
       id: 'grammar',
-      title: 'Essential Grammar',
-      desc: 'Master the core HSK sentence patterns, particles (了, 着, 过), and comparisons (比).',
+      title: tr("Essential Grammar"),
+      desc: tr("Master the core HSK sentence patterns, particles (了, 着, 过), and comparisons (比)."),
       icon: Layers,
       color: 'bg-[#F4EFE8] text-stone-800 border-[#E6DED2]',
       lessonsCount: 24,
@@ -38,8 +39,8 @@ export const LearnHubView: React.FC<LearnHubViewProps> = ({ onNavigate, onStartP
     },
     {
       id: 'listening',
-      title: 'Listening Comprehension',
-      desc: 'Train your ear to natural Mandarin dialogues, numbers, questions, and daily scenarios.',
+      title: tr("Listening Comprehension"),
+      desc: tr("Train your ear to natural Mandarin dialogues, numbers, questions, and daily scenarios."),
       icon: Headphones,
       color: 'bg-[#F4EFE8] text-stone-800 border-[#E6DED2]',
       lessonsCount: 28,
@@ -48,8 +49,8 @@ export const LearnHubView: React.FC<LearnHubViewProps> = ({ onNavigate, onStartP
     },
     {
       id: 'reading',
-      title: 'Reading & Passages',
-      desc: 'Enhance Hanzi reading speed, contextual inferences, and passage comprehension.',
+      title: tr("Reading & Passages"),
+      desc: tr("Enhance Hanzi reading speed, contextual inferences, and passage comprehension."),
       icon: FileText,
       color: 'bg-[#F4EFE8] text-stone-800 border-[#E6DED2]',
       lessonsCount: 22,
@@ -58,8 +59,8 @@ export const LearnHubView: React.FC<LearnHubViewProps> = ({ onNavigate, onStartP
     },
     {
       id: 'characters',
-      title: 'Hanzi & Radicals',
-      desc: 'Understand character formation, stroke order rules, and high-frequency radicals.',
+      title: tr("Hanzi & Radicals"),
+      desc: tr("Understand character formation, stroke order rules, and high-frequency radicals."),
       icon: PenNib,
       color: 'bg-[#F4EFE8] text-stone-800 border-[#E6DED2]',
       lessonsCount: 16,
@@ -68,8 +69,8 @@ export const LearnHubView: React.FC<LearnHubViewProps> = ({ onNavigate, onStartP
     },
     {
       id: 'writing',
-      title: 'Writing & Sentence Structure',
-      desc: 'Formulate grammatically correct sentences and prepare for the HSK 3 writing section.',
+      title: tr("Writing & Sentence Structure"),
+      desc: tr("Formulate grammatically correct sentences and prepare for the HSK 3 writing section."),
       icon: PenTool,
       color: 'bg-[#F4EFE8] text-stone-800 border-[#E6DED2]',
       lessonsCount: 18,
@@ -117,7 +118,7 @@ export const LearnHubView: React.FC<LearnHubViewProps> = ({ onNavigate, onStartP
 
                 <div className="space-y-1.5 pt-2">
                   <div className="flex justify-between text-xs font-semibold text-slate-600">
-                    <span>Progress</span>
+                    <span>{tr("Progress")}</span>
                     <span className="text-slate-900">{track.progress}%</span>
                   </div>
                   <ProgressBar value={track.progress} color="primary" size="sm" />

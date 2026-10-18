@@ -1,4 +1,5 @@
 import React from 'react';
+import { tr } from '../locales/tr';
 import {
   Award,
   CheckCircle2,
@@ -55,10 +56,10 @@ export const TestResultsView: React.FC<TestResultsViewProps> = ({
               {isPassed ? t('testResults.passed') : t('testResults.failed')}
             </Badge>
             <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-950 tracking-tight mt-2">
-              {test.title}
+              {tr(test.title)}
             </h1>
             <p className="text-sm text-slate-500 font-medium">
-              Completed on {result.date}
+              {tr("Completed on")}{" "}{result.date}
             </p>
           </div>
         </div>
@@ -72,7 +73,7 @@ export const TestResultsView: React.FC<TestResultsViewProps> = ({
             {result.score} <span className="text-2xl font-bold text-slate-400">/ {result.totalScore}</span>
           </div>
           <div className="text-sm font-bold text-slate-700">
-            {percentage}% Accuracy · Passing Score: {result.passingScore}
+            {percentage}{tr("% Accuracy · Passing Score:")}{" "}{result.passingScore}
           </div>
         </div>
 
@@ -88,8 +89,8 @@ export const TestResultsView: React.FC<TestResultsViewProps> = ({
               return (
                 <div key={sec.section} className="p-4 rounded-xl bg-white border border-slate-200 space-y-2">
                   <div className="flex items-center justify-between gap-3 text-xs font-bold text-slate-900">
-                    <span className="capitalize">{sec.section}</span>
-                    <span className="whitespace-nowrap">{sec.score} / {sec.maxScore} pts ({secPercent}%)</span>
+                    <span className="capitalize">{tr(sec.section)}</span>
+                    <span className="whitespace-nowrap">{sec.score} / {sec.maxScore}{" "}{tr("pts (")}{secPercent}%)</span>
                   </div>
                   <ProgressBar
                     value={secPercent}

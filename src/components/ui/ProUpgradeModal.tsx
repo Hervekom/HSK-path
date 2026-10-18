@@ -1,4 +1,5 @@
 import React from 'react';
+import { tr } from '../../locales/tr';
 import { Modal } from './Modal';
 import { Button } from './Button';
 import { Badge } from './Badge';
@@ -41,7 +42,7 @@ export const ProUpgradeModal: React.FC<ProUpgradeModalProps> = ({
         <div className="text-center space-y-3">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#C52828]/10 border border-[#C52828]/20 text-[#C52828] text-xs font-bold tracking-wide">
             <Crown className="w-4 h-4" />
-            <span>HSK PATH PRO &bull; PASS SCHOLAR</span>
+            <span>{tr("HSK PATH PRO • PASS SCHOLAR")}</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">
             {title || (language === 'fr' ? 'Débloquez tout le programme HSK 2 & 3' : language === 'zh' ? '升级 Pro 解锁完整 HSK 2 & 3 题库与进阶课程' : 'Unlock Full HSK 2 & HSK 3 Curriculum')}
@@ -85,15 +86,15 @@ export const ProUpgradeModal: React.FC<ProUpgradeModalProps> = ({
             <ul className="space-y-2 text-xs text-stone-700">
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                <span><strong>HSK 1 :</strong> {language === 'fr' ? '100% complet (toutes les leçons & examens)' : language === 'zh' ? '全部课程与模拟测试全免费' : '100% full access (all lessons & mock tests)'}</span>
+                <span><strong>{tr("HSK 1 :")}</strong> {language === 'fr' ? '100% complet (toutes les leçons & examens)' : language === 'zh' ? '全部课程与模拟测试全免费' : '100% full access (all lessons & mock tests)'}</span>
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                <span><strong>HSK 2 & 3 :</strong> {language === 'fr' ? '2 examens blancs complets offerts par niveau' : language === 'zh' ? '每级别免费提供 2 套全真模拟试卷' : '2 full simulation mock tests free per level'}</span>
+                <span><strong>{tr("HSK 2 & 3 :")}</strong> {language === 'fr' ? '2 examens blancs complets offerts par niveau' : language === 'zh' ? '每级别免费提供 2 套全真模拟试卷' : '2 full simulation mock tests free per level'}</span>
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                <span><strong>HSK 2 & 3 :</strong> {language === 'fr' ? 'Les 2 premières leçons complètes offertes' : language === 'zh' ? '前 2 课完整精讲与对话练习免费' : 'First 2 lessons free for HSK 2 & HSK 3'}</span>
+                <span><strong>{tr("HSK 2 & 3 :")}</strong> {language === 'fr' ? 'Les 2 premières leçons complètes offertes' : language === 'zh' ? '前 2 课完整精讲与对话练习免费' : 'First 2 lessons free for HSK 2 & HSK 3'}</span>
               </li>
               <li className="flex items-start gap-2 text-stone-400">
                 <Lock className="w-4 h-4 shrink-0 mt-0.5" />

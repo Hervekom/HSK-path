@@ -1,4 +1,5 @@
 import React from 'react';
+import { tr } from '../locales/tr';
 import { Sparkles, Flame, Clock, BookOpen, Headphones, FileText, Layers, ArrowRight, TrendingUp, AlertCircle, Award, ChevronRight, CheckCircle2, Calendar, PenTool, BrainCircuit, Zap, Timer } from '../components/icons';
 import { useI18n } from '../locales';
 import { Card } from '../components/ui/Card';
@@ -60,7 +61,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
             onClick={() => onNavigate('hsk-levels')}
             className="text-xs bg-white border-[#E0D7CB]"
           >
-            Level: {user.currentHsk.toUpperCase()}
+            {tr("Level:")}{" "}{user.currentHsk.toUpperCase()}
           </Button>
           <Button
             variant="luxury"
@@ -69,7 +70,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
             icon={<Timer className="w-3.5 h-3.5" />}
             className="text-xs shadow-xs"
           >
-            Quick Daily Drill
+            {tr("Quick Daily Drill")}
           </Button>
         </div>
       </div>
@@ -167,20 +168,20 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
               {t('dashboard.continueLearning')}
             </span>
             <span className="text-xs text-stone-400 font-medium">
-              HSK 2 · {t('dashboard.lesson')} 8
+              {tr("HSK 2 ·")}{" "}{t('dashboard.lesson')} 8
             </span>
           </div>
 
           <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
-            HSK 2 Vocabulary & Directions Drill
+            {tr("HSK 2 Vocabulary & Directions Drill")}
           </h2>
           <p className="text-xs sm:text-sm text-stone-300 leading-relaxed">
-            Practice essential location prepositions (在, 往, 离) and travel vocabulary (宾馆, 飞机场, 车站) with SRS algorithm.
+            {tr("Practice essential location prepositions (在, 往, 离) and travel vocabulary (宾馆, 飞机场, 车站) with SRS algorithm.")}
           </p>
 
           <div className="space-y-1.5 pt-2 max-w-md">
             <div className="flex justify-between text-xs text-stone-300 font-medium">
-              <span>Track Retention Mastery</span>
+              <span>{tr("Track Retention Mastery")}</span>
               <span className="font-bold text-white">68% {t('dashboard.complete')}</span>
             </div>
             <div className="w-full h-2 bg-stone-800 rounded-full overflow-hidden border border-stone-700">
@@ -205,7 +206,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
             onClick={() => onNavigate('vocabulary')}
             className="w-full sm:w-auto bg-stone-800 text-stone-200 border-stone-700 hover:bg-stone-700"
           >
-            Review Due (SRS)
+            {tr("Review Due (SRS)")}
           </Button>
         </div>
       </div>
@@ -221,14 +222,14 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
               {t('dashboard.todayPractice')}
             </h3>
             <p className="text-xs text-stone-500">
-              Targeted short sessions designed to fit your daily {user.dailyGoalMinutes} min goal
+              {tr("Targeted short sessions designed to fit your daily")}{" "}{user.dailyGoalMinutes}{" "}{tr("min goal")}
             </p>
           </div>
           <button
             onClick={() => onNavigate('practice-hub')}
             className="text-xs font-bold text-stone-700 hover:text-stone-950 flex items-center gap-1 cursor-pointer"
           >
-            <span>View All Drills</span>
+            <span>{tr("View All Drills")}</span>
             <ChevronRight className="w-3.5 h-3.5" />
           </button>
         </div>
@@ -243,17 +244,17 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
               <div className="w-10 h-10 rounded-xl bg-[#FAF8F5] text-[#C52828] border border-[#E4DCCE] flex items-center justify-center group-hover:bg-[#1C1917] group-hover:text-white transition-all">
                 <BookOpen className="w-5 h-5" />
               </div>
-              <h4 className="font-bold text-sm text-stone-900">Vocabulary Flashcards</h4>
+              <h4 className="font-bold text-sm text-stone-900">{tr("Vocabulary Flashcards")}</h4>
               <p className="text-xs text-stone-500">
-                10 essential words with pinyin and native speech playback
+                {tr("10 essential words with pinyin and native speech playback")}
               </p>
             </div>
             <div className="flex items-center justify-between pt-3 border-t border-stone-100 text-xs font-semibold text-stone-600">
               <span className="flex items-center gap-1 text-stone-400">
-                <Clock className="w-3 h-3" /> 10 min
+                <Clock className="w-3 h-3" />{" "}{tr("10 min")}
               </span>
               <span className="text-[#C52828] group-hover:translate-x-0.5 transition-transform flex items-center gap-0.5 font-bold">
-                Start <ChevronRight className="w-3 h-3" />
+                {tr("Start")}{" "}<ChevronRight className="w-3 h-3" />
               </span>
             </div>
           </div>
@@ -267,17 +268,17 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
               <div className="w-10 h-10 rounded-xl bg-[#FAF8F5] text-amber-700 border border-[#E4DCCE] flex items-center justify-center group-hover:bg-[#1C1917] group-hover:text-white transition-all">
                 <Layers className="w-5 h-5" />
               </div>
-              <h4 className="font-bold text-sm text-stone-900">Grammar Patterns</h4>
+              <h4 className="font-bold text-sm text-stone-900">{tr("Grammar Patterns")}</h4>
               <p className="text-xs text-stone-500">
-                Master the "比" comparison and "过" experience structures
+                {tr("Master the \"比\" comparison and \"过\" experience structures")}
               </p>
             </div>
             <div className="flex items-center justify-between pt-3 border-t border-stone-100 text-xs font-semibold text-stone-600">
               <span className="flex items-center gap-1 text-stone-400">
-                <Clock className="w-3 h-3" /> 8 min
+                <Clock className="w-3 h-3" />{" "}{tr("8 min")}
               </span>
               <span className="text-amber-700 group-hover:translate-x-0.5 transition-transform flex items-center gap-0.5 font-bold">
-                Start <ChevronRight className="w-3 h-3" />
+                {tr("Start")}{" "}<ChevronRight className="w-3 h-3" />
               </span>
             </div>
           </div>
@@ -291,17 +292,17 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
               <div className="w-10 h-10 rounded-xl bg-[#FAF8F5] text-emerald-700 border border-[#E4DCCE] flex items-center justify-center group-hover:bg-[#1C1917] group-hover:text-white transition-all">
                 <Headphones className="w-5 h-5" />
               </div>
-              <h4 className="font-bold text-sm text-stone-900">Listening Comprehension</h4>
+              <h4 className="font-bold text-sm text-stone-900">{tr("Listening Comprehension")}</h4>
               <p className="text-xs text-stone-500">
-                Audio questions with realistic pace and dialogue inferences
+                {tr("Audio questions with realistic pace and dialogue inferences")}
               </p>
             </div>
             <div className="flex items-center justify-between pt-3 border-t border-stone-100 text-xs font-semibold text-stone-600">
               <span className="flex items-center gap-1 text-stone-400">
-                <Clock className="w-3 h-3" /> 12 min
+                <Clock className="w-3 h-3" />{" "}{tr("12 min")}
               </span>
               <span className="text-emerald-700 group-hover:translate-x-0.5 transition-transform flex items-center gap-0.5 font-bold">
-                Start <ChevronRight className="w-3 h-3" />
+                {tr("Start")}{" "}<ChevronRight className="w-3 h-3" />
               </span>
             </div>
           </div>
@@ -315,17 +316,17 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
               <div className="w-10 h-10 rounded-xl bg-[#FAF8F5] text-sky-700 border border-[#E4DCCE] flex items-center justify-center group-hover:bg-[#1C1917] group-hover:text-white transition-all">
                 <FileText className="w-5 h-5" />
               </div>
-              <h4 className="font-bold text-sm text-stone-900">Reading Passages</h4>
+              <h4 className="font-bold text-sm text-stone-900">{tr("Reading Passages")}</h4>
               <p className="text-xs text-stone-500">
-                Contextual paragraphs with toggleable pinyin assistance
+                {tr("Contextual paragraphs with toggleable pinyin assistance")}
               </p>
             </div>
             <div className="flex items-center justify-between pt-3 border-t border-stone-100 text-xs font-semibold text-stone-600">
               <span className="flex items-center gap-1 text-stone-400">
-                <Clock className="w-3 h-3" /> 10 min
+                <Clock className="w-3 h-3" />{" "}{tr("10 min")}
               </span>
               <span className="text-sky-700 group-hover:translate-x-0.5 transition-transform flex items-center gap-0.5 font-bold">
-                Start <ChevronRight className="w-3 h-3" />
+                {tr("Start")}{" "}<ChevronRight className="w-3 h-3" />
               </span>
             </div>
           </div>
@@ -349,9 +350,9 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
             <div className="flex items-center gap-3 text-xs font-semibold">
               <span className="flex items-center gap-1.5 text-stone-600">
                 <span className="w-2.5 h-2.5 rounded-full bg-[#1C1917]" />
-                Accuracy %
+                {tr("Accuracy %")}
               </span>
-              <span className="text-stone-400">Avg: 80%</span>
+              <span className="text-stone-400">{tr("Avg: 80%")}</span>
             </div>
           </div>
 
@@ -368,15 +369,15 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                   className="w-full max-w-[36px] rounded-t-xl bg-stone-900 group-hover:bg-[#C52828] transition-all duration-200"
                   style={{ height: `${item.accuracy}%` }}
                 />
-                <span className="text-xs font-bold text-stone-500 mt-1">{item.day}</span>
+                <span className="text-xs font-bold text-stone-500 mt-1">{tr(item.day)}</span>
               </div>
             ))}
           </div>
 
           <div className="flex flex-wrap items-center justify-between gap-4 text-xs text-stone-500">
             <div className="flex items-center gap-4">
-              <span>Total Sessions: <strong>7</strong></span>
-              <span>Total Questions: <strong>285</strong></span>
+              <span>{tr("Total Sessions:")}{" "}<strong>7</strong></span>
+              <span>{tr("Total Questions:")}{" "}<strong>285</strong></span>
             </div>
             <Button
               variant="outline"
@@ -384,7 +385,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
               onClick={() => onNavigate('progress')}
               className="text-xs"
             >
-              Open Full Analytics
+              {tr("Open Full Analytics")}
             </Button>
           </div>
         </div>
@@ -399,7 +400,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                   {t('dashboard.weakAreas')}
                 </h3>
               </div>
-              <Badge variant="warning">Prioritize</Badge>
+              <Badge variant="warning">{tr("Prioritize")}</Badge>
             </div>
             <p className="text-xs text-stone-500">
               {t('dashboard.weakAreasSubtitle')}
@@ -409,8 +410,8 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
               {/* Weak Area 1: Grammar */}
               <div className="p-3.5 rounded-xl bg-[#FAF8F5] border border-[#E4DCCE] space-y-2">
                 <div className="flex items-center justify-between text-xs font-bold text-stone-800">
-                  <span>Grammar (比 / 把 structures)</span>
-                  <span className="text-[#C52828]">64% Acc.</span>
+                  <span>{tr("Grammar (比 / 把 structures)")}</span>
+                  <span className="text-[#C52828]">{tr("64% Acc.")}</span>
                 </div>
                 <ProgressBar value={64} color="amber" size="sm" />
               </div>
@@ -418,8 +419,8 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
               {/* Weak Area 2: Listening */}
               <div className="p-3.5 rounded-xl bg-[#FAF8F5] border border-[#E4DCCE] space-y-2">
                 <div className="flex items-center justify-between text-xs font-bold text-stone-800">
-                  <span>Fast Dialogue Inferences</span>
-                  <span className="text-amber-700">72% Acc.</span>
+                  <span>{tr("Fast Dialogue Inferences")}</span>
+                  <span className="text-amber-700">{tr("72% Acc.")}</span>
                 </div>
                 <ProgressBar value={72} color="amber" size="sm" />
               </div>
@@ -427,8 +428,8 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
               {/* Weak Area 3: Characters */}
               <div className="p-3.5 rounded-xl bg-[#FAF8F5] border border-[#E4DCCE] space-y-2">
                 <div className="flex items-center justify-between text-xs font-bold text-stone-800">
-                  <span>Similar Radicals (讠 vs 氵)</span>
-                  <span className="text-amber-700">70% Acc.</span>
+                  <span>{tr("Similar Radicals (讠 vs 氵)")}</span>
+                  <span className="text-amber-700">{tr("70% Acc.")}</span>
                 </div>
                 <ProgressBar value={70} color="amber" size="sm" />
               </div>
@@ -441,47 +442,48 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
             onClick={() => onStartPractice('grammar')}
             className="w-full justify-center text-xs"
           >
-            Reinforce Weak Points
+            {tr("Reinforce Weak Points")}
           </Button>
         </div>
       </div>
       )}
 
       {/* Recent Activity Section */}
+      {showSampleData && (
       <div className="space-y-4">
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-bold text-stone-900 tracking-tight">
             {t('dashboard.recentActivity')}
           </h3>
-          <span className="text-xs text-stone-400 font-medium">Last 24 Hours</span>
+          <span className="text-xs text-stone-400 font-medium">{tr("Last 24 Hours")}</span>
         </div>
 
         <div className="rounded-3xl bg-white border border-[#E4DCCE] divide-y divide-stone-100 overflow-hidden shadow-2xs">
           {[
             {
               id: 'act-1',
-              title: 'HSK 2 Standard Simulation Test A',
-              type: 'Mock Exam',
-              date: 'Today, 14:20',
-              score: '160 / 200 (Passed)',
+              title: tr("HSK 2 Standard Simulation Test A"),
+              type: tr('Mock Exam'),
+              date: tr('Today, 14:20'),
+              score: tr('160 / 200 (Passed)'),
               icon: Award,
               color: 'text-emerald-700 bg-emerald-50',
             },
             {
               id: 'act-2',
-              title: 'HSK 2 Core Vocabulary Practice',
-              type: 'Flashcards',
-              date: 'Today, 11:05',
-              score: '18 / 20 Words',
+              title: tr("HSK 2 Core Vocabulary Practice"),
+              type: tr('Flashcards'),
+              date: tr('Today, 11:05'),
+              score: tr('18 / 20 Words'),
               icon: BookOpen,
               color: 'text-[#C52828] bg-rose-50',
             },
             {
               id: 'act-3',
-              title: 'Listening Dialogue Drill #4',
-              type: 'Listening',
-              date: 'Yesterday, 19:40',
-              score: '85% Accuracy',
+              title: tr("Listening Dialogue Drill #4"),
+              type: tr('Listening'),
+              date: tr('Yesterday, 19:40'),
+              score: tr('85% Accuracy'),
               icon: Headphones,
               color: 'text-sky-700 bg-sky-50',
             },
@@ -494,7 +496,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                     <Icon className="w-4 h-4" />
                   </div>
                   <div>
-                    <h4 className="text-sm font-bold text-stone-900">{act.title}</h4>
+                    <h4 className="text-sm font-bold text-stone-900">{tr(act.title)}</h4>
                     <p className="text-xs text-stone-500">{act.type} · {act.date}</p>
                   </div>
                 </div>
@@ -506,6 +508,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           })}
         </div>
       </div>
+      )}
     </div>
   );
 };

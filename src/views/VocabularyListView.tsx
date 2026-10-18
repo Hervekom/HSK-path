@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
+import { tr } from '../locales/tr';
 import {
   Search,
   BookOpen,
@@ -186,13 +187,13 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
         <div>
           <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-white border border-[#E0D7CB] text-[10px] font-bold text-stone-600 uppercase tracking-widest mb-1.5 shadow-2xs">
             <span className="w-1.5 h-1.5 rounded-full bg-[#C52828]" />
-            Spaced review
+            {tr("Spaced review")}
           </div>
           <h1 className="text-2xl sm:text-3xl font-black text-stone-950 tracking-tight">
             {t('vocabulary.title')}
           </h1>
           <p className="text-xs sm:text-sm text-stone-500 font-medium mt-0.5">
-            ({filteredWords.length} / {words.length} active words)
+            ({filteredWords.length} / {words.length}{" "}{tr("active words)")}
           </p>
         </div>
 
@@ -231,7 +232,7 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
             icon={<RotateCw className="w-3.5 h-3.5" />}
             className="shadow-2xs text-xs font-semibold"
           >
-            {activeTab === 'flashcards' ? 'Exit Flashcards' : 'Flashcard Mode'}
+            {activeTab === 'flashcards' ? tr("Exit Flashcards") : tr("Flashcard Mode")}
           </Button>
         </div>
       </div>
@@ -245,16 +246,16 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
           <div className="space-y-2 relative z-10 max-w-xl">
             <div className="flex items-center gap-2">
               <span className="px-2.5 py-0.5 rounded-full bg-[#C52828] text-white text-[10px] font-bold uppercase tracking-widest shadow-xs">
-                SRS Queue
+                {tr("SRS Queue")}
               </span>
               <span className="text-xs text-stone-400 font-medium">
-                Based on your past answers
+                {tr("Based on your past answers")}
               </span>
             </div>
             <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-white">
               {dueWords.length > 0 ? (
                 <>
-                  <span className="text-[#FAF8F5] font-black">{dueWords.length} Words</span> Due for Spaced Review Today
+                  <span className="text-[#FAF8F5] font-black">{dueWords.length}{" "}{tr("Words")}</span>{" "}{tr("Due for Spaced Review Today")}
                 </>
               ) : (
                 'All Scheduled Reviews Complete for Today'
@@ -262,8 +263,8 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
             </h2>
             <p className="text-xs text-stone-400 leading-relaxed">
               {dueWords.length > 0
-                ? 'Calculated based on your memory intervals and past retention accuracy. Reviewing now locks these into long-term recall.'
-                : 'Excellent work! Your memory stability scores are currently optimal. You can explore new vocabulary or test unlearned words.'}
+                ? tr("Calculated based on your memory intervals and past retention accuracy. Reviewing now locks these into long-term recall.")
+                : tr("Excellent work! Your memory stability scores are currently optimal. You can explore new vocabulary or test unlearned words.")}
             </p>
           </div>
 
@@ -282,7 +283,7 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
                   iconRight={<Zap className="w-4 h-4" />}
                   className="w-full sm:w-auto shadow-md"
                 >
-                  Start SRS Review ({dueWords.length})
+                  {tr("Start SRS Review (")}{dueWords.length})
                 </Button>
                 {activeTab === 'due' && (
                   <Button
@@ -291,7 +292,7 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
                     onClick={() => setActiveTab('all')}
                     className="w-full sm:w-auto bg-stone-800 text-stone-200 border-stone-700 hover:bg-stone-700"
                   >
-                    View All Words
+                    {tr("View All Words")}
                   </Button>
                 )}
               </>
@@ -305,7 +306,7 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
                 }}
                 className="w-full sm:w-auto bg-stone-800 text-stone-200 border-stone-700 hover:bg-stone-700 text-xs"
               >
-                Learn New Words
+                {tr("Learn New Words")}
               </Button>
             )}
           </div>
@@ -318,14 +319,14 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
           <div className="flex items-center justify-between text-xs font-bold text-stone-500">
             <span className="flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-[#C52828] animate-pulse" />
-              {activeTab === 'due' ? 'SRS Daily Review Session' : 'Vocabulary Flashcards'}: Card {sessionIndex + 1} of {currentCardList.length}
+              {activeTab === 'due' ? tr("SRS Daily Review Session") : tr("Vocabulary Flashcards")}{tr(": Card")}{" "}{sessionIndex + 1}{" "}{tr("of")}{" "}{currentCardList.length}
             </span>
             <button
               onClick={() => setShowPinyinOnFront(!showPinyinOnFront)}
               className="inline-flex items-center gap-1.5 text-stone-600 hover:text-stone-900 cursor-pointer"
             >
               {showPinyinOnFront ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}
-              <span>{showPinyinOnFront ? 'Hide Pinyin Front' : 'Show Pinyin Front'}</span>
+              <span>{showPinyinOnFront ? tr("Hide Pinyin Front") : tr("Show Pinyin Front")}</span>
             </button>
           </div>
 
@@ -340,9 +341,9 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
                   {activeFlashcard.level.toUpperCase()}
                 </Badge>
                 <span className="text-xs font-semibold text-stone-400">
-                  {isCardFlipped ? 'Back (Meaning & Recall)' : 'Click anywhere to Flip'}
+                  {isCardFlipped ? tr("Back (Meaning & Recall)") : tr("Click anywhere to Flip")}
                 </span>
-                <Badge variant="neutral">{activeFlashcard.partOfSpeech}</Badge>
+                <Badge variant="neutral">{tr(activeFlashcard.partOfSpeech)}</Badge>
               </div>
 
               {/* Card Center Body in Tianzige grid */}
@@ -419,14 +420,14 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
           {isCardFlipped ? (
             <div className="p-4 rounded-2xl bg-white border border-[#E4DCCE] shadow-sm space-y-3">
               <div className="text-[11px] font-bold text-stone-500 uppercase tracking-wider text-center">
-                Rate Your Recall (SuperMemo SM-2 Algorithm):
+                {tr("Rate Your Recall (SuperMemo SM-2 Algorithm):")}
               </div>
               <div className="grid grid-cols-4 gap-2">
                 <button
                   onClick={() => handleGradeWord(activeFlashcard.id, 'again')}
                   className="p-3 rounded-xl bg-rose-50 hover:bg-rose-100 border border-rose-200 text-center cursor-pointer transition-all"
                 >
-                  <div className="text-[10px] font-bold text-rose-600 uppercase">Again</div>
+                  <div className="text-[10px] font-bold text-rose-600 uppercase">{tr("Again")}</div>
                   <div className="text-xs font-black text-rose-950 mt-0.5">
                     {getNextIntervalText(srsMap[activeFlashcard.id], 'again')}
                   </div>
@@ -436,7 +437,7 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
                   onClick={() => handleGradeWord(activeFlashcard.id, 'hard')}
                   className="p-3 rounded-xl bg-amber-50 hover:bg-amber-100 border border-amber-200 text-center cursor-pointer transition-all"
                 >
-                  <div className="text-[10px] font-bold text-amber-700 uppercase">Hard</div>
+                  <div className="text-[10px] font-bold text-amber-700 uppercase">{tr("Hard")}</div>
                   <div className="text-xs font-black text-amber-950 mt-0.5">
                     {getNextIntervalText(srsMap[activeFlashcard.id], 'hard')}
                   </div>
@@ -446,7 +447,7 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
                   onClick={() => handleGradeWord(activeFlashcard.id, 'good')}
                   className="p-3 rounded-xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 text-center cursor-pointer transition-all"
                 >
-                  <div className="text-[10px] font-bold text-emerald-700 uppercase">Good</div>
+                  <div className="text-[10px] font-bold text-emerald-700 uppercase">{tr("Good")}</div>
                   <div className="text-xs font-black text-emerald-950 mt-0.5">
                     {getNextIntervalText(srsMap[activeFlashcard.id], 'good')}
                   </div>
@@ -456,7 +457,7 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
                   onClick={() => handleGradeWord(activeFlashcard.id, 'easy')}
                   className="p-3 rounded-xl bg-[#1C1917] hover:bg-stone-800 border border-stone-800 text-center cursor-pointer transition-all text-white"
                 >
-                  <div className="text-[10px] font-bold text-stone-300 uppercase">Easy</div>
+                  <div className="text-[10px] font-bold text-stone-300 uppercase">{tr("Easy")}</div>
                   <div className="text-xs font-black text-white mt-0.5">
                     {getNextIntervalText(srsMap[activeFlashcard.id], 'easy')}
                   </div>
@@ -471,14 +472,14 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
                 onClick={() => setSessionIndex((prev) => (prev - 1 + currentCardList.length) % currentCardList.length)}
                 icon={<ChevronLeft className="w-4 h-4" />}
               >
-                Previous
+                {tr("Previous")}
               </Button>
               <Button
                 variant="luxury"
                 size="md"
                 onClick={() => setIsCardFlipped(true)}
               >
-                Reveal Back to Grade
+                {tr("Reveal Back to Grade")}
               </Button>
               <Button
                 variant="outline"
@@ -486,7 +487,7 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
                 onClick={() => setSessionIndex((prev) => (prev + 1) % currentCardList.length)}
                 iconRight={<ChevronRight className="w-4 h-4" />}
               >
-                Skip
+                {tr("Skip")}
               </Button>
             </div>
           )}
@@ -504,7 +505,7 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
                   type="text"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="Search by Hanzi (学), Pinyin (xué), or English (study)..."
+                  placeholder={tr("Search by Hanzi (学), Pinyin (xué), or English (study)...")}
                   className="w-full pl-10 pr-4 py-2 rounded-xl border border-[#E0D7CB] text-xs sm:text-sm font-medium bg-[#FAF8F5]/60 focus:bg-white focus:border-[#1C1917] focus:ring-1 focus:ring-[#1C1917] outline-none"
                 />
               </div>
@@ -521,7 +522,7 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
                         : 'text-stone-600 hover:text-stone-900'
                     }`}
                   >
-                    {lvl === 'all' ? 'All Levels' : lvl.toUpperCase()}
+                    {lvl === 'all' ? tr("All Levels") : lvl.toUpperCase()}
                   </button>
                 ))}
               </div>
@@ -538,7 +539,7 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
                         : 'text-stone-600 hover:text-stone-900'
                     }`}
                   >
-                    {status === 'all' ? 'All Words' : status}
+                    {status === 'all' ? tr("All Words") : status === 'learned' ? tr("Learned") : status === 'unlearned' ? tr("Not learned") : tr("Favorite")}
                   </button>
                 ))}
               </div>
@@ -551,7 +552,7 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
                   <span className="p-1 rounded-md bg-[#F4E3BF] text-[#7A5500]">
                     <EyeOff className="w-3.5 h-3.5" />
                   </span>
-                  <span>{t('vocabulary.pinyinModeActive')} Tap individual words to reveal pinyin when self-testing.</span>
+                  <span>{t('vocabulary.pinyinModeActive')}{" "}{tr("Tap individual words to reveal pinyin when self-testing.")}</span>
                 </div>
                 <button
                   type="button"
@@ -585,12 +586,12 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
                           <Badge variant={word.level as any}>{word.level.toUpperCase()}</Badge>
                           {stage === 'due' && (
                             <span className="px-1.5 py-0.5 rounded bg-rose-100 text-rose-800 text-[9px] font-black uppercase">
-                              Due
+                              {tr("Due")}
                             </span>
                           )}
                           {stage === 'mastered' && (
                             <span className="px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-800 text-[9px] font-black uppercase">
-                              <span className="hidden sm:inline">Mastered</span>
+                              <span className="hidden sm:inline">{tr("Mastered")}</span>
                               <span className="sm:hidden">✓</span>
                             </span>
                           )}
@@ -602,7 +603,7 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
                             className={`p-1 rounded-lg text-stone-300 hover:text-amber-500 cursor-pointer transition-colors ${
                               word.isFavorite ? 'text-amber-500' : ''
                             }`}
-                            title="Favorite"
+                            title={tr("Favorite")}
                           >
                             <Star className={`w-4 h-4 ${word.isFavorite ? 'fill-amber-400' : ''}`} />
                           </button>
@@ -611,7 +612,7 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
                             className={`p-1 rounded-lg text-stone-300 hover:text-emerald-600 cursor-pointer transition-colors ${
                               word.isLearned ? 'text-emerald-600' : ''
                             }`}
-                            title="Learned"
+                            title={tr("Learned")}
                           >
                             <CheckCircle2 className={`w-4 h-4 ${word.isLearned ? 'fill-emerald-500 text-white' : ''}`} />
                           </button>
@@ -641,7 +642,7 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
                                 type="button"
                                 onClick={(e) => handleToggleSingleWordPinyin(word.id, e)}
                                 className="text-stone-400 hover:text-stone-600 p-0.5 rounded cursor-pointer"
-                                title="Re-hide Pinyin"
+                                title={tr("Re-hide Pinyin")}
                               >
                                 <EyeOff className="w-3 h-3" />
                               </button>
@@ -653,7 +654,7 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
                               type="button"
                               onClick={(e) => handleToggleSingleWordPinyin(word.id, e)}
                               className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#E8E0D4] hover:bg-stone-300 text-stone-700 text-[10px] font-bold transition-all cursor-pointer shadow-2xs"
-                              title="Click to test & reveal Pinyin"
+                              title={tr("Click to test & reveal Pinyin")}
                             >
                               <Eye className="w-3 h-3 text-stone-500" />
                               <span>{t('vocabulary.tapToRevealPinyin')}</span>
@@ -674,7 +675,7 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
                       onClick={(e) => e.stopPropagation()}
                     >
                       <span className="text-[10px] font-bold text-stone-400 uppercase tracking-wider">
-                        {word.partOfSpeech}
+                        {tr(word.partOfSpeech)}
                       </span>
                       <SpeechButton text={word.hanzi} size="sm" />
                     </div>
@@ -685,9 +686,9 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
           ) : (
             <div className="text-center py-16 bg-white rounded-3xl border border-[#E4DCCE] space-y-3">
               <BookOpen className="w-10 h-10 text-stone-300 mx-auto" />
-              <h3 className="font-bold text-base text-stone-900">No vocabulary found</h3>
+              <h3 className="font-bold text-base text-stone-900">{tr("No vocabulary found")}</h3>
               <p className="text-xs text-stone-500 max-w-sm mx-auto">
-                Try clearing your search query or switching level and status filters.
+                {tr("Try clearing your search query or switching level and status filters.")}
               </p>
               <Button
                 variant="outline"
@@ -699,7 +700,7 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
                   setActiveTab('all');
                 }}
               >
-                Reset Filters
+                {tr("Reset Filters")}
               </Button>
             </div>
           )}

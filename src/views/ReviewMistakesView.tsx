@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { tr } from '../locales/tr';
 import {
   ArrowLeft,
   CheckCircle2,
@@ -57,7 +58,7 @@ export const ReviewMistakesView: React.FC<ReviewMistakesViewProps> = ({
           className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-600 hover:text-slate-950 cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" />
-          <span>Back to Score Report</span>
+          <span>{tr("Back to Score Report")}</span>
         </button>
 
         {/* Filter Pills */}
@@ -70,7 +71,7 @@ export const ReviewMistakesView: React.FC<ReviewMistakesViewProps> = ({
                 : 'text-slate-600 hover:text-slate-900'
             }`}
           >
-            Mistakes Only ({mistakesCount})
+            {tr("Mistakes Only (")}{mistakesCount})
           </button>
           <button
             onClick={() => setFilterMode('all')}
@@ -80,7 +81,7 @@ export const ReviewMistakesView: React.FC<ReviewMistakesViewProps> = ({
                 : 'text-slate-600 hover:text-slate-900'
             }`}
           >
-            All Questions ({test.questions.length})
+            {tr("All Questions (")}{test.questions.length})
           </button>
           <button
             onClick={() => setFilterMode('correct')}
@@ -90,17 +91,17 @@ export const ReviewMistakesView: React.FC<ReviewMistakesViewProps> = ({
                 : 'text-slate-600 hover:text-slate-900'
             }`}
           >
-            Correct Only ({test.questions.length - mistakesCount})
+            {tr("Correct Only (")}{test.questions.length - mistakesCount})
           </button>
         </div>
       </div>
 
       <div className="space-y-1">
         <h1 className="text-2xl font-extrabold text-slate-950">
-          Answer Key & Mistake Analysis
+          {tr("Answer Key & Mistake Analysis")}
         </h1>
         <p className="text-xs text-slate-500 font-medium">
-          Detailed explanations for {test.title}
+          {tr("Detailed explanations for")}{" "}{tr(test.title)}
         </p>
       </div>
 
@@ -119,15 +120,15 @@ export const ReviewMistakesView: React.FC<ReviewMistakesViewProps> = ({
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <span className="font-bold text-sm text-slate-900">
-                    Question #{q.questionNumber}
+                    {tr("Question #")}{q.questionNumber}
                   </span>
                   <Badge variant={q.section === 'listening' ? 'hsk2' : 'hsk1'}>
-                    {q.section.toUpperCase()}
+                    {tr(q.section).toUpperCase()}
                   </Badge>
                 </div>
 
                 <Badge variant={q.isCorrect ? 'success' : 'danger'}>
-                  {q.isCorrect ? 'Correct (+ points)' : 'Incorrect'}
+                  {q.isCorrect ? tr("Correct (+ points)") : tr("Incorrect")}
                 </Badge>
               </div>
 
@@ -135,10 +136,10 @@ export const ReviewMistakesView: React.FC<ReviewMistakesViewProps> = ({
               {q.audioText && (
                 <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between gap-4">
                   <div className="space-y-0.5">
-                    <div className="text-[11px] font-bold uppercase text-slate-400">Audio Dialogue</div>
+                    <div className="text-[11px] font-bold uppercase text-slate-400">{tr("Audio Dialogue")}</div>
                     <div className="font-hanzi font-bold text-sm text-slate-900">{q.audioText}</div>
                   </div>
-                  <SpeechButton text={q.audioText} size="sm" showLabel label="Play Audio" />
+                  <SpeechButton text={q.audioText} size="sm" showLabel label={tr("Play Audio")} />
                 </div>
               )}
 
@@ -151,10 +152,10 @@ export const ReviewMistakesView: React.FC<ReviewMistakesViewProps> = ({
 
               {/* Question Text */}
               <h3 className="font-bold text-base text-slate-900">
-                {q.questionText ||
+                {tr(q.questionText) ||
                   (q.prompt ? getLocalized(q.prompt) : '') ||
-                  (q as any).question ||
-                  'Question statement'}
+                  tr((q as any).question) ||
+                  tr("Question statement")}
               </h3>
 
               {/* Options Breakdown */}
@@ -178,7 +179,7 @@ export const ReviewMistakesView: React.FC<ReviewMistakesViewProps> = ({
                     >
                       <div className="flex items-center gap-2">
                         <span className="font-bold">{opt.id.toUpperCase()}.</span>
-                        <span>{opt.text}</span>
+                        <span>{tr(opt.text)}</span>
                       </div>
                       {isTargetCorrect && <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />}
                       {isUserPick && !isTargetCorrect && <XCircle className="w-4 h-4 text-rose-600 shrink-0" />}
@@ -191,7 +192,7 @@ export const ReviewMistakesView: React.FC<ReviewMistakesViewProps> = ({
               <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-600 space-y-1">
                 <div className="font-bold text-slate-800 flex items-center gap-1.5">
                   <HelpCircle className="w-3.5 h-3.5 text-blue-600" />
-                  <span>Grammar Note & Solution</span>
+                  <span>{tr("Grammar Note & Solution")}</span>
                 </div>
                 <p className="leading-relaxed">{getLocalized(q.explanation)}</p>
               </div>
@@ -201,9 +202,9 @@ export const ReviewMistakesView: React.FC<ReviewMistakesViewProps> = ({
       ) : (
         <div className="text-center py-16 bg-white rounded-3xl border border-slate-200">
           <CheckCircle2 className="w-12 h-12 text-emerald-500 mx-auto" />
-          <h3 className="font-bold text-base text-slate-900 mt-2">Zero mistakes in this filter!</h3>
+          <h3 className="font-bold text-base text-slate-900 mt-2">{tr("Zero mistakes in this filter!")}</h3>
           <p className="text-xs text-slate-500 mt-1">
-            Switch the filter to "All Questions" to review the full exam key.
+            {tr("Switch the filter to \"All Questions\" to review the full exam key.")}
           </p>
         </div>
       )}

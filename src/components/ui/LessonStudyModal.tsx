@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { tr } from '../../locales/tr';
 import { Modal } from './Modal';
 import { Button } from './Button';
 import { Badge } from './Badge';
@@ -51,10 +52,10 @@ export const LessonStudyModal: React.FC<LessonStudyModalProps> = ({
           <div>
             <div className="flex items-center gap-2 mb-1">
               <Badge variant={lesson.isFree ? 'success' : 'primary'} size="sm">
-                {lesson.isFree ? (language === 'fr' ? 'Leçon Gratuite' : language === 'zh' ? '免费体验课' : 'Free Lesson') : 'Pro Lesson'}
+                {lesson.isFree ? (language === 'fr' ? 'Leçon Gratuite' : language === 'zh' ? '免费体验课' : 'Free Lesson') : tr("Pro Lesson")}
               </Badge>
               <span className="text-xs uppercase tracking-wider text-stone-500 font-semibold">
-                {lesson.level.toUpperCase()} &bull; {lesson.estimatedMinutes} min
+                {lesson.level.toUpperCase()} &bull; {lesson.estimatedMinutes}{" "}{tr("min")}
               </span>
             </div>
             <h2 className="text-xl sm:text-2xl font-extrabold text-stone-900">
@@ -262,7 +263,7 @@ export const LessonStudyModal: React.FC<LessonStudyModalProps> = ({
                             onClick={() => !isSelected && handleSelectAnswer(q.id, opt.id)}
                             className={`p-3 rounded-xl border text-left text-xs sm:text-sm transition-all cursor-pointer flex items-center justify-between ${btnStyle}`}
                           >
-                            <span>{opt.text}</span>
+                            <span>{tr(opt.text)}</span>
                             {isSelected && opt.id === q.correctAnswerId && (
                               <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                             )}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { tr } from '../locales/tr';
 import {
   TrendingUp,
   Award,
@@ -117,7 +118,7 @@ export const ProgressAnalyticsView: React.FC<ProgressAnalyticsViewProps> = ({
                   {stat.skill}
                 </span>
                 <span className="text-xs font-bold text-slate-900">
-                  {stat.accuracy}% Acc.
+                  {stat.accuracy}{tr("% Acc.")}
                 </span>
               </div>
               <ProgressBar
@@ -139,10 +140,10 @@ export const ProgressAnalyticsView: React.FC<ProgressAnalyticsViewProps> = ({
       <Card variant="default" className="p-6 space-y-6">
         <div className="flex items-center justify-between">
           <div>
-            <h3 className="text-base font-bold text-slate-900">7-Day Study & Accuracy Trend</h3>
-            <p className="text-xs text-slate-500">Daily practice sessions and drill accuracy</p>
+            <h3 className="text-base font-bold text-slate-900">{tr("7-Day Study & Accuracy Trend")}</h3>
+            <p className="text-xs text-slate-500">{tr("Daily practice sessions and drill accuracy")}</p>
           </div>
-          <Badge variant="neutral">Weekly View</Badge>
+          <Badge variant="neutral">{tr("Weekly View")}</Badge>
         </div>
 
         <div className="h-44 flex items-end justify-between gap-1.5 sm:gap-3 pt-8 pb-2 px-0 sm:px-2 border-b border-slate-100">
@@ -155,7 +156,7 @@ export const ProgressAnalyticsView: React.FC<ProgressAnalyticsViewProps> = ({
                 className="w-full max-w-[36px] rounded-t-xl bg-slate-800 group-hover:bg-rose-700 transition-all duration-200"
                 style={{ height: `${item.accuracy}%` }}
               />
-              <span className="text-xs font-bold text-slate-500 mt-1">{item.day}</span>
+              <span className="text-xs font-bold text-slate-500 mt-1">{tr(item.day)}</span>
             </div>
           ))}
         </div>
@@ -165,7 +166,7 @@ export const ProgressAnalyticsView: React.FC<ProgressAnalyticsViewProps> = ({
       {/* Mock Exam History Table */}
       <div className="space-y-4">
         <h2 className="text-xl font-bold text-slate-950 tracking-tight">
-          Simulation Exam History
+          {tr("Simulation Exam History")}
         </h2>
 
         <Card variant="default" className="divide-y divide-slate-100 !p-0 overflow-hidden">
@@ -182,16 +183,16 @@ export const ProgressAnalyticsView: React.FC<ProgressAnalyticsViewProps> = ({
               <div className="space-y-1">
                 <div className="flex items-center gap-2">
                   <Badge variant={res.isPassed ? 'success' : 'danger'}>
-                    {res.isPassed ? 'Passed' : 'Needs Review'}
+                    {res.isPassed ? tr("Passed") : tr("Needs Review")}
                   </Badge>
                   <span className="font-bold text-sm text-slate-900">
-                    {res.testTitle}
+                    {tr(res.testTitle)}
                   </span>
                 </div>
                 <div className="text-xs text-slate-500 flex items-center gap-3">
-                  <span>Date: {res.date}</span>
+                  <span>{tr("Date:")}{" "}{res.date}</span>
                   <span>·</span>
-                  <span>Time Spent: {Math.round(res.timeSpentSeconds / 60)} min</span>
+                  <span>{tr("Time Spent:")}{" "}{Math.round(res.timeSpentSeconds / 60)}{" "}{tr("min")}</span>
                 </div>
               </div>
 
@@ -201,7 +202,7 @@ export const ProgressAnalyticsView: React.FC<ProgressAnalyticsViewProps> = ({
                     {res.score} / {res.totalScore}
                   </div>
                   <div className="text-[11px] text-slate-500 font-semibold">
-                    Passing: {res.passingScore}
+                    {tr("Passing:")}{" "}{res.passingScore}
                   </div>
                 </div>
 
@@ -211,7 +212,7 @@ export const ProgressAnalyticsView: React.FC<ProgressAnalyticsViewProps> = ({
                   onClick={() => onReviewTest(res)}
                   className="text-xs"
                 >
-                  Review Mistakes
+                  {tr("Review Mistakes")}
                 </Button>
               </div>
             </div>

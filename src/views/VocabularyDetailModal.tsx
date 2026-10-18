@@ -1,4 +1,5 @@
 import React from 'react';
+import { tr } from '../locales/tr';
 import {
   Volume2,
   Star,
@@ -41,7 +42,7 @@ export const VocabularyDetailModal: React.FC<VocabularyDetailModalProps> = ({
         <div className="flex items-center justify-between pb-3 border-b border-slate-100">
           <div className="flex items-center gap-2">
             <Badge variant={word.level as any}>{word.level.toUpperCase()}</Badge>
-            <Badge variant="neutral">{word.partOfSpeech}</Badge>
+            <Badge variant="neutral">{tr(word.partOfSpeech)}</Badge>
           </div>
           <div className="flex items-center gap-2">
             <button
@@ -51,7 +52,7 @@ export const VocabularyDetailModal: React.FC<VocabularyDetailModalProps> = ({
                   ? 'bg-amber-50 border-amber-300 text-amber-500'
                   : 'bg-white border-slate-200 text-slate-400 hover:text-slate-600'
               }`}
-              title="Add to favorites"
+              title={tr("Add to favorites")}
             >
               <Star className={`w-4 h-4 ${word.isFavorite ? 'fill-amber-400' : ''}`} />
             </button>
@@ -62,7 +63,7 @@ export const VocabularyDetailModal: React.FC<VocabularyDetailModalProps> = ({
                   ? 'bg-emerald-50 border-emerald-300 text-emerald-600'
                   : 'bg-white border-slate-200 text-slate-400 hover:text-slate-600'
               }`}
-              title="Mark as learned"
+              title={tr("Mark as learned")}
             >
               <CheckCircle2 className={`w-4 h-4 ${word.isLearned ? 'fill-emerald-500 text-white' : ''}`} />
             </button>
@@ -85,7 +86,7 @@ export const VocabularyDetailModal: React.FC<VocabularyDetailModalProps> = ({
               text={word.hanzi}
               size="md"
               showLabel
-              label="Listen Pronunciation"
+              label={tr("Listen Pronunciation")}
               allowSpeedToggle
             />
           </div>

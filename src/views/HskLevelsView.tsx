@@ -1,4 +1,5 @@
 import React from 'react';
+import { tr } from '../locales/tr';
 import { Layers, ChevronRight, CheckCircle2, BookOpen, Headphones, FileText, Sparkles, Award, ShieldCheck } from '../components/icons';
 import { useI18n } from '../locales';
 import { HSK_LEVELS, FUTURE_HSK_LEVELS } from '../data/hskLevels';
@@ -70,7 +71,7 @@ export const HskLevelsView: React.FC<HskLevelsViewProps> = ({
               <div className="space-y-5">
                 <div className="flex items-center justify-between">
                   <div className="w-12 h-12 rounded-2xl bg-[#C52828] text-white flex flex-col items-center justify-center leading-none shadow-xs shrink-0">
-                    <span className="text-[9px] font-bold tracking-widest opacity-80">HSK</span>
+                    <span className="text-[9px] font-bold tracking-widest opacity-80">{tr("HSK")}</span>
                     <span className="text-xl font-extrabold">{lvl.name.replace(/\D/g, '')}</span>
                   </div>
                   <div className="flex items-center gap-1.5 flex-wrap justify-end">
@@ -92,7 +93,7 @@ export const HskLevelsView: React.FC<HskLevelsViewProps> = ({
                 <div>
                   <h3 className="text-2xl font-bold text-stone-900">{lvl.name}</h3>
                   <p className="text-xs font-semibold text-stone-500 uppercase tracking-wider mt-0.5">
-                    {lvl.wordCount} {t('levels.coreWords')} &bull; ~{lvl.estimatedHours}h {language === 'fr' ? 'd\'étude' : 'Study'}
+                    {lvl.wordCount} {t('levels.coreWords')} &bull; ~{lvl.estimatedHours}h {language === 'fr' ? 'd\'étude' : tr("Study")}
                   </p>
                 </div>
 
@@ -129,19 +130,19 @@ export const HskLevelsView: React.FC<HskLevelsViewProps> = ({
                 <div className="grid grid-cols-2 gap-2 text-[11px] font-semibold text-stone-700">
                   <div className="p-2 rounded-lg bg-[#FAF8F5] border border-[#ECE3D8] flex items-center gap-1.5">
                     <BookOpen className="w-3.5 h-3.5 text-stone-500" />
-                    <span>{lvl.wordCount} {language === 'fr' ? 'Mots' : 'Words'}</span>
+                    <span>{lvl.wordCount} {language === 'fr' ? 'Mots' : tr("Words")}</span>
                   </div>
                   <div className="p-2 rounded-lg bg-[#FAF8F5] border border-[#ECE3D8] flex items-center gap-1.5">
                     <Headphones className="w-3.5 h-3.5 text-stone-500" />
-                    <span>{language === 'fr' ? 'Écoute audio' : 'Listening'}</span>
+                    <span>{language === 'fr' ? 'Écoute audio' : tr("Listening")}</span>
                   </div>
                   <div className="p-2 rounded-lg bg-[#FAF8F5] border border-[#ECE3D8] flex items-center gap-1.5">
                     <FileText className="w-3.5 h-3.5 text-stone-500" />
-                    <span>{language === 'fr' ? 'Lecture textes' : 'Reading'}</span>
+                    <span>{language === 'fr' ? 'Lecture textes' : tr("Reading")}</span>
                   </div>
                   <div className="p-2 rounded-lg bg-[#FAF8F5] border border-[#ECE3D8] flex items-center gap-1.5">
                     <Award className="w-3.5 h-3.5 text-stone-500" />
-                    <span>{language === 'fr' ? 'Examens blancs' : 'Mock Exams'}</span>
+                    <span>{language === 'fr' ? 'Examens blancs' : tr("Mock Exams")}</span>
                   </div>
                 </div>
               </div>
@@ -173,7 +174,7 @@ export const HskLevelsView: React.FC<HskLevelsViewProps> = ({
               {language === 'fr' ? 'Évolution future de la plateforme' : language === 'zh' ? '高阶规划与演进路径' : 'Future Roadmap (HSK 3.0 Ready)'}
             </span>
             <h3 className="text-lg sm:text-xl font-extrabold text-white mt-1">
-              HSK 4, 5 & 6 Curriculum Expansion
+              {tr("HSK 4, 5 & 6 Curriculum Expansion")}
             </h3>
           </div>
           <Badge variant="neutral" size="sm">

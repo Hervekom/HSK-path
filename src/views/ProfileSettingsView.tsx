@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { tr } from '../locales/tr';
 import {
   User,
   Mail,
@@ -57,7 +58,7 @@ export const ProfileSettingsView: React.FC<ProfileSettingsViewProps> = ({
           {t('settings.title')}
         </h1>
         <p className="text-sm sm:text-base text-slate-500 font-medium mt-1">
-          Manage your personal study roadmap, target HSK exam, and interface preferences.
+          {tr("Manage your personal study roadmap, target HSK exam, and interface preferences.")}
         </p>
       </div>
 
@@ -66,13 +67,13 @@ export const ProfileSettingsView: React.FC<ProfileSettingsViewProps> = ({
         <Card variant="default" className="p-6 sm:p-8 space-y-5">
           <div className="flex items-center gap-2 pb-2 border-b border-slate-100 font-bold text-sm text-slate-900">
             <User className="w-4 h-4 text-slate-500" />
-            <span>Learner Profile</span>
+            <span>{tr("Learner Profile")}</span>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="space-y-1.5">
               <label className="text-xs font-bold text-slate-700 uppercase tracking-wider">
-                Full Name
+                {tr("Full Name")}
               </label>
               <input
                 type="text"
@@ -85,7 +86,7 @@ export const ProfileSettingsView: React.FC<ProfileSettingsViewProps> = ({
 
             <div className="space-y-1.5">
               <label className="text-xs font-bold text-slate-700 uppercase tracking-wider">
-                Email Address
+                {tr("Email Address")}
               </label>
               <input
                 type="email"
@@ -108,13 +109,13 @@ export const ProfileSettingsView: React.FC<ProfileSettingsViewProps> = ({
           {/* HSK Level Switcher */}
           <div className="space-y-2">
             <label className="text-xs font-bold text-slate-700 uppercase tracking-wider">
-              Select Primary Target Syllabus
+              {tr("Select Primary Target Syllabus")}
             </label>
             <div className="grid grid-cols-3 gap-3">
               {[
-                { id: 'hsk1', label: 'HSK 1', sub: 'Beginner (150 words)' },
-                { id: 'hsk2', label: 'HSK 2', sub: 'Elementary (300 words)' },
-                { id: 'hsk3', label: 'HSK 3', sub: 'Intermediate (600 words)' },
+                { id: 'hsk1', label: tr("HSK 1"), sub: tr("Beginner (150 words)") },
+                { id: 'hsk2', label: tr("HSK 2"), sub: tr("Elementary (300 words)") },
+                { id: 'hsk3', label: tr("HSK 3"), sub: tr("Intermediate (600 words)") },
               ].map((lvl) => (
                 <button
                   key={lvl.id}
@@ -142,7 +143,7 @@ export const ProfileSettingsView: React.FC<ProfileSettingsViewProps> = ({
                 {t('settings.dailyGoal')}
               </label>
               <span className="text-xs font-bold text-rose-800">
-                {dailyGoal} {t('common.minutes')} / day
+                {dailyGoal} {t('common.minutes')}{" "}{tr("/ day")}
               </span>
             </div>
             <input
@@ -155,9 +156,9 @@ export const ProfileSettingsView: React.FC<ProfileSettingsViewProps> = ({
               className="w-full accent-slate-900 cursor-pointer"
             />
             <div className="flex justify-between text-[11px] text-slate-400 font-medium">
-              <span>10 min (Casual)</span>
-              <span>20 min (Recommended)</span>
-              <span>60 min (Intensive)</span>
+              <span>{tr("10 min (Casual)")}</span>
+              <span>{tr("20 min (Recommended)")}</span>
+              <span>{tr("60 min (Intensive)")}</span>
             </div>
           </div>
         </Card>
@@ -166,7 +167,7 @@ export const ProfileSettingsView: React.FC<ProfileSettingsViewProps> = ({
         <Card variant="default" className="p-6 sm:p-8 space-y-6">
           <div className="flex items-center gap-2 pb-2 border-b border-slate-100 font-bold text-sm text-slate-900">
             <Globe className="w-4 h-4 text-slate-500" />
-            <span>Interface Language & Audio Preferences</span>
+            <span>{tr("Interface Language & Audio Preferences")}</span>
           </div>
 
           {/* Language Selection Radios */}
@@ -188,7 +189,7 @@ export const ProfileSettingsView: React.FC<ProfileSettingsViewProps> = ({
                 >
                   <div>
                     <div className="text-sm font-bold">{lang.nativeName}</div>
-                    <div className="text-xs text-slate-400 font-normal">{lang.name}</div>
+                    <div className="text-xs text-slate-400 font-normal">{tr(lang.name)}</div>
                   </div>
                   {language === lang.code && (
                     <CheckCircle2 className="w-4 h-4 text-slate-900" />
@@ -201,12 +202,12 @@ export const ProfileSettingsView: React.FC<ProfileSettingsViewProps> = ({
           {/* Audio Default Speed */}
           <div className="space-y-2 pt-2 border-t border-slate-100">
             <label className="text-xs font-bold text-slate-700 uppercase tracking-wider">
-              Default Speech Engine Pacing
+              {tr("Default Speech Engine Pacing")}
             </label>
             <div className="flex gap-3">
               {[
-                { val: 1.0, label: '1.0x Normal Native Pacing' },
-                { val: 0.8, label: '0.8x Slower Practice Pacing' },
+                { val: 1.0, label: tr("1.0x Normal Native Pacing") },
+                { val: 0.8, label: tr("0.8x Slower Practice Pacing") },
               ].map((sp) => (
                 <button
                   key={sp.val}
@@ -230,7 +231,7 @@ export const ProfileSettingsView: React.FC<ProfileSettingsViewProps> = ({
           {isSaved ? (
             <div className="text-xs font-bold text-emerald-600 flex items-center gap-1.5 animate-in fade-in">
               <CheckCircle2 className="w-4 h-4" />
-              <span>Settings saved successfully!</span>
+              <span>{tr("Settings saved successfully!")}</span>
             </div>
           ) : (
             <div />

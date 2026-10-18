@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { tr } from '../locales/tr';
 import { ArrowRight, BookOpen, Headphones, FileText, PenTool, Award, TrendingUp, CheckCircle2, Sparkles, Layers, Volume2, Clock, ChevronRight, ShieldCheck, Zap, Star, BrainCircuit, RotateCw, Target, GraduationCap, PenNib } from '../components/icons';
 import { useI18n } from '../locales';
 import { HSK_LEVELS, FUTURE_HSK_LEVELS } from '../data/hskLevels';
@@ -59,18 +60,18 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
               <div className="inline-flex items-center gap-2.5 px-3 py-1 rounded-full bg-white border border-[#E0D7CB] shadow-2xs">
                 <span className="w-2 h-2 rounded-full bg-[#C52828]" />
                 <span className="text-[11px] font-bold text-stone-800 uppercase tracking-widest">
-                  HSK 1 · 2 · 3 preparation
+                  {tr("HSK 1 · 2 · 3 preparation")}
                 </span>
               </div>
 
               {/* Main Headline */}
               <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight text-stone-950 leading-[1.08]">
-                Get ready for the <span className="text-[#C52828] font-serif italic">HSK exam</span>, step by step.
+                {tr("Get ready for the")}{" "}<span className="text-[#C52828] font-serif italic">{tr("HSK exam")}</span>{tr(", step by step.")}
               </h1>
 
               {/* Editorial Subtitle */}
               <p className="text-base sm:text-lg lg:text-xl text-stone-600 font-normal leading-relaxed max-w-2xl">
-                Learn the vocabulary with spaced review, practise listening, reading and writing, then check your level with timed mock exams. HSK 1 to 3, in English, French or Chinese.
+                {tr("Learn the vocabulary with spaced review, practise listening, reading and writing, then check your level with timed mock exams. HSK 1 to 3, in English, French or Chinese.")}
               </p>
 
               {/* CTAs */}
@@ -82,7 +83,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
                   iconRight={<ArrowRight className="w-4 h-4" />}
                   className="shadow-md cursor-pointer"
                 >
-                  Start for free
+                  {tr("Start for free")}
                 </Button>
                 <Button
                   variant="outline"
@@ -90,7 +91,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
                   onClick={() => scrollToSection('hsk-levels')}
                   className="bg-white/80 hover:bg-white text-stone-900 border-[#DED6C9] cursor-pointer"
                 >
-                  See the levels
+                  {tr("See the levels")}
                 </Button>
               </div>
 
@@ -99,19 +100,19 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
                 <div>
                   <div className="text-2xl font-black text-stone-950 tracking-tight">3</div>
                   <div className="text-[11px] font-semibold text-stone-500 uppercase tracking-wider mt-0.5">
-                    Levels, HSK 1 to 3
+                    {tr("Levels, HSK 1 to 3")}
                   </div>
                 </div>
                 <div>
-                  <div className="text-2xl font-black text-stone-950 tracking-tight">Free</div>
+                  <div className="text-2xl font-black text-stone-950 tracking-tight">{tr("Free")}</div>
                   <div className="text-[11px] font-semibold text-stone-500 uppercase tracking-wider mt-0.5">
-                    All of HSK 1
+                    {tr("All of HSK 1")}
                   </div>
                 </div>
                 <div>
                   <div className="text-2xl font-black text-stone-950 tracking-tight">3</div>
                   <div className="text-[11px] font-semibold text-stone-500 uppercase tracking-wider mt-0.5">
-                    Languages: EN · FR · 中文
+                    {tr("Languages: EN · FR · 中文")}
                   </div>
                 </div>
               </div>
@@ -126,23 +127,23 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
                 {/* Header bar of interactive mockup */}
                 <div className="flex items-center justify-between pb-3 border-b border-[#EDE6DC]">
                   <div className="flex items-center gap-2">
-                    <span className="text-xs font-bold text-stone-800">Today's review</span>
+                    <span className="text-xs font-bold text-stone-800">{tr("Today's review")}</span>
                   </div>
                   <span className="px-2 py-0.5 rounded-md bg-[#FAF5EB] border border-[#E6D4B0] text-[#8C6405] text-[10px] font-bold uppercase tracking-wider">
-                    6 words due
+                    {tr("6 words due")}
                   </span>
                 </div>
 
                 {/* Character Interactive Canvas Card */}
                 <div className="p-6 rounded-2xl bg-[#FAF8F5] border border-[#E5DDCF] text-center relative overflow-hidden">
                   <div className="absolute top-3 left-3 text-[10px] font-bold text-stone-400 uppercase tracking-widest">
-                    HSK 2 · Word 42
+                    {tr("HSK 2 · Word 42")}
                   </div>
                   <div className="absolute top-3 right-3">
                     <button
                       onClick={() => playSampleAudio('准备')}
                       className="p-1.5 rounded-lg bg-white border border-stone-200 text-stone-700 hover:text-[#C52828] hover:border-[#C52828] transition-colors cursor-pointer"
-                      title="Listen with native TTS"
+                      title={tr("Listen with native TTS")}
                     >
                       <Volume2 className={`w-4 h-4 ${audioPlaying ? 'animate-bounce text-[#C52828]' : ''}`} />
                     </button>
@@ -156,26 +157,26 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
                   </div>
 
                   <div className="space-y-1">
-                    <div className="text-base font-bold text-[#C52828] font-mono">zhǔnbèi</div>
-                    <div className="text-sm font-semibold text-stone-800">to prepare / get ready</div>
+                    <div className="text-base font-bold text-[#C52828] font-mono">{tr("zhǔnbèi")}</div>
+                    <div className="text-sm font-semibold text-stone-800">{tr("to prepare / get ready")}</div>
                     <p className="text-xs text-stone-500 italic max-w-xs mx-auto mt-2">
-                      “我正在准备明天的 HSK 考试。”
+                      {tr("“我正在准备明天的 HSK 考试。”")}
                     </p>
                   </div>
 
                   {/* SRS Interval Buttons */}
                   <div className="mt-5 grid grid-cols-3 gap-2 pt-4 border-t border-[#E8E0D4]">
                     <div className="p-2 rounded-xl bg-white border border-stone-200 text-center">
-                      <div className="text-[10px] text-stone-400 font-bold uppercase">Again</div>
-                      <div className="text-xs font-bold text-rose-600">10 min</div>
+                      <div className="text-[10px] text-stone-400 font-bold uppercase">{tr("Again")}</div>
+                      <div className="text-xs font-bold text-rose-600">{tr("10 min")}</div>
                     </div>
                     <div className="p-2 rounded-xl bg-white border border-stone-200 text-center">
-                      <div className="text-[10px] text-stone-400 font-bold uppercase">Good</div>
-                      <div className="text-xs font-bold text-emerald-600">1 day</div>
+                      <div className="text-[10px] text-stone-400 font-bold uppercase">{tr("Good")}</div>
+                      <div className="text-xs font-bold text-emerald-600">{tr("1 day")}</div>
                     </div>
                     <div className="p-2 rounded-xl bg-[#1C1917] text-white border border-stone-800 text-center">
-                      <div className="text-[10px] text-stone-400 font-bold uppercase">Easy</div>
-                      <div className="text-xs font-bold text-[#FAF8F5]">4 days</div>
+                      <div className="text-[10px] text-stone-400 font-bold uppercase">{tr("Easy")}</div>
+                      <div className="text-xs font-bold text-[#FAF8F5]">{tr("4 days")}</div>
                     </div>
                   </div>
                 </div>
@@ -183,7 +184,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
                 {/* Bottom interactive action */}
                 <div className="flex items-center justify-between pt-1">
                   <div className="flex items-center gap-2 text-xs font-semibold text-stone-600">
-                    <span>Next review in 4 days if you pick “Easy”</span>
+                    <span>{tr("Next review in 4 days if you pick “Easy”")}</span>
                   </div>
                   <Button
                     variant="primary"
@@ -191,7 +192,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
                     onClick={() => onNavigate('vocabulary')}
                     className="text-xs"
                   >
-                    Try it
+                    {tr("Try it")}
                   </Button>
                 </div>
               </div>
@@ -205,24 +206,24 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 divide-y sm:divide-y-0 sm:divide-x divide-stone-800">
             <div className="pt-4 sm:pt-0 sm:px-4 text-center sm:text-left space-y-1">
-              <div className="text-xs font-bold uppercase tracking-widest text-[#C52828]">Levels</div>
-              <div className="text-2xl lg:text-3xl font-black text-white">HSK 1, 2 & 3</div>
-              <div className="text-xs text-stone-400">Vocabulary, grammar, listening, reading</div>
+              <div className="text-xs font-bold uppercase tracking-widest text-[#C52828]">{tr("Levels")}</div>
+              <div className="text-2xl lg:text-3xl font-black text-white">{tr("HSK 1, 2 & 3")}</div>
+              <div className="text-xs text-stone-400">{tr("Vocabulary, grammar, listening, reading")}</div>
             </div>
             <div className="pt-4 sm:pt-0 sm:px-4 text-center sm:text-left space-y-1">
-              <div className="text-xs font-bold uppercase tracking-widest text-amber-500">Review</div>
-              <div className="text-2xl lg:text-3xl font-black text-white">Spaced</div>
-              <div className="text-xs text-stone-400">Words come back right before you forget them</div>
+              <div className="text-xs font-bold uppercase tracking-widest text-amber-500">{tr("Review")}</div>
+              <div className="text-2xl lg:text-3xl font-black text-white">{tr("Spaced")}</div>
+              <div className="text-xs text-stone-400">{tr("Words come back right before you forget them")}</div>
             </div>
             <div className="pt-4 sm:pt-0 sm:px-4 text-center sm:text-left space-y-1">
-              <div className="text-xs font-bold uppercase tracking-widest text-emerald-400">Mock exams</div>
-              <div className="text-2xl lg:text-3xl font-black text-white">Timed</div>
-              <div className="text-xs text-stone-400">With a review of every mistake</div>
+              <div className="text-xs font-bold uppercase tracking-widest text-emerald-400">{tr("Mock exams")}</div>
+              <div className="text-2xl lg:text-3xl font-black text-white">{tr("Timed")}</div>
+              <div className="text-xs text-stone-400">{tr("With a review of every mistake")}</div>
             </div>
             <div className="pt-4 sm:pt-0 sm:px-4 text-center sm:text-left space-y-1">
-              <div className="text-xs font-bold uppercase tracking-widest text-stone-400">Languages</div>
-              <div className="text-2xl lg:text-3xl font-black text-white">EN • FR • 中文</div>
-              <div className="text-xs text-stone-400">Switch at any time</div>
+              <div className="text-xs font-bold uppercase tracking-widest text-stone-400">{tr("Languages")}</div>
+              <div className="text-2xl lg:text-3xl font-black text-white">{tr("EN • FR • 中文")}</div>
+              <div className="text-xs text-stone-400">{tr("Switch at any time")}</div>
             </div>
           </div>
         </div>
@@ -234,13 +235,13 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
           {/* Section Header */}
           <div className="max-w-3xl mx-auto text-center space-y-3 mb-16">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[#E0D7CB] text-xs font-bold text-stone-800 uppercase tracking-widest shadow-2xs">
-              Curriculum Architecture
+              {tr("Curriculum Architecture")}
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-stone-950 tracking-tight">
               {t('landing.levelsTitle')}
             </h2>
             <p className="text-base sm:text-lg text-stone-600 max-w-2xl mx-auto leading-relaxed">
-              Every level is organized with precise vocabulary targets, grammar structures, listening dialogues, and complete exam simulations.
+              {tr("Every level is organized with precise vocabulary targets, grammar structures, listening dialogues, and complete exam simulations.")}
             </p>
           </div>
 
@@ -258,7 +259,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
                   }`}
                 >
                   {lvl.toUpperCase()} (
-                  {lvl === 'hsk1' ? '150 Words' : lvl === 'hsk2' ? '300 Words' : '600 Words'})
+                  {lvl === 'hsk1' ? tr("150 Words") : lvl === 'hsk2' ? tr("300 Words") : tr("600 Words")})
                 </button>
               ))}
             </div>
@@ -288,24 +289,24 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
 
               <div className="space-y-2 pt-2 border-t border-[#EDE6DC]">
                 <div className="text-xs font-bold text-stone-900 uppercase tracking-wider">
-                  Included Pedagogical Modules:
+                  {tr("Included Pedagogical Modules:")}
                 </div>
                 <div className="grid grid-cols-2 gap-2 text-xs text-stone-700">
                   <div className="flex items-center gap-2 p-2 rounded-xl bg-[#FAF8F5] border border-[#E8E0D4]">
                     <CheckCircle2 className="w-4 h-4 text-[#C52828] shrink-0" />
-                    <span>SRS Vocabulary ({activeLevelData.wordCount})</span>
+                    <span>{tr("SRS Vocabulary (")}{activeLevelData.wordCount})</span>
                   </div>
                   <div className="flex items-center gap-2 p-2 rounded-xl bg-[#FAF8F5] border border-[#E8E0D4]">
                     <CheckCircle2 className="w-4 h-4 text-[#C52828] shrink-0" />
-                    <span>Multi-Speed Audio Listening</span>
+                    <span>{tr("Multi-Speed Audio Listening")}</span>
                   </div>
                   <div className="flex items-center gap-2 p-2 rounded-xl bg-[#FAF8F5] border border-[#E8E0D4]">
                     <CheckCircle2 className="w-4 h-4 text-[#C52828] shrink-0" />
-                    <span>Authentic Reading Passages</span>
+                    <span>{tr("Authentic Reading Passages")}</span>
                   </div>
                   <div className="flex items-center gap-2 p-2 rounded-xl bg-[#FAF8F5] border border-[#E8E0D4]">
                     <CheckCircle2 className="w-4 h-4 text-[#C52828] shrink-0" />
-                    <span>Official Timed Mock Tests</span>
+                    <span>{tr("Official Timed Mock Tests")}</span>
                   </div>
                 </div>
               </div>
@@ -320,14 +321,14 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
                   }}
                   iconRight={<ChevronRight className="w-4 h-4" />}
                 >
-                  Enter {activeLevelData.name} Syllabus
+                  {tr("Enter")}{" "}{activeLevelData.name}{" "}{tr("Syllabus")}
                 </Button>
                 <Button
                   variant="outline"
                   size="md"
                   onClick={() => onNavigate('mock-tests')}
                 >
-                  Take Practice Exam
+                  {tr("Take Practice Exam")}
                 </Button>
               </div>
             </div>
@@ -335,7 +336,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
             {/* Right Col: Character & Question Sample Preview */}
             <div className="lg:col-span-5 p-6 rounded-2xl bg-[#FAF8F5] border border-[#E2D8CB] space-y-4">
               <div className="text-xs font-bold uppercase tracking-widest text-stone-500">
-                Syllabus Highlight
+                {tr("Syllabus Highlight")}
               </div>
               <div className="p-4 rounded-xl bg-white border border-[#E8DFD0] text-center space-y-2">
                 <div className="font-hanzi-serif text-4xl font-bold text-stone-900">
@@ -346,21 +347,21 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
                 </div>
                 <div className="text-xs font-medium text-stone-600">
                   {activeLevelData.id === 'hsk1'
-                    ? 'to thank / thanks'
+                    ? tr("to thank / thanks")
                     : activeLevelData.id === 'hsk2'
-                    ? 'to assist / help'
-                    : 'to compare / relatively'}
+                    ? tr("to assist / help")
+                    : tr("to compare / relatively")}
                 </div>
               </div>
 
               <div className="p-3.5 rounded-xl bg-[#FFFDF9] border border-[#E6DFD3] text-xs space-y-1">
-                <span className="font-bold text-stone-900">Grammar Pattern:</span>
+                <span className="font-bold text-stone-900">{tr("Grammar Pattern:")}</span>
                 <p className="text-stone-600 text-[11px] leading-relaxed">
                   {activeLevelData.id === 'hsk1'
-                    ? 'Subject + 是 + Noun (Basic identity & demonstratives)'
+                    ? tr("Subject + 是 + Noun (Basic identity & demonstratives)")
                     : activeLevelData.id === 'hsk2'
-                    ? 'Subject + 从 + Point A + 到 + Point B (Spatial & temporal progression)'
-                    : 'A + 比 + B + Adjective + (数量) (Comparative expressions)'}
+                    ? tr("Subject + 从 + Point A + 到 + Point B (Spatial & temporal progression)")
+                    : tr("A + 比 + B + Adjective + (数量) (Comparative expressions)")}
                 </p>
               </div>
             </div>
@@ -370,17 +371,17 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
           <div className="mt-12 max-w-5xl mx-auto p-6 rounded-2xl bg-white border border-[#E2D8CB] shadow-2xs flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="space-y-1 text-center sm:text-left">
               <div className="text-[10px] font-bold text-stone-400 uppercase tracking-widest">
-                Curriculum Roadmap
+                {tr("Curriculum Roadmap")}
               </div>
               <h4 className="text-sm sm:text-base font-bold text-stone-900">
-                HSK 4 (1,200 words), HSK 5 (2,500 words) & HSK 6 (5,000 words)
+                {tr("HSK 4 (1,200 words), HSK 5 (2,500 words) & HSK 6 (5,000 words)")}
               </h4>
               <p className="text-xs text-stone-500">
-                {t('levels.roadmapNote')} Database schemas and lesson architectures prepared for immediate expansion.
+                {t('levels.roadmapNote')}{" "}{tr("Planned for a later version.")}
               </p>
             </div>
             <Badge variant="neutral" size="md">
-              In Academic Validation
+              {tr("Coming later")}
             </Badge>
           </div>
         </div>
@@ -391,7 +392,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center space-y-3 mb-16">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[#E0D7CB] text-xs font-bold text-stone-800 uppercase tracking-widest shadow-2xs">
-              Pedagogical Engine
+              {tr("Pedagogical Engine")}
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-stone-950 tracking-tight">
               {t('landing.featuresTitle')}
@@ -409,15 +410,15 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
                   <BookOpen className="w-6 h-6 text-[#FAF8F5]" />
                 </div>
                 <div className="text-[10px] font-bold text-[#C52828] uppercase tracking-widest">
-                  Pillar 01
+                  {tr("Pillar 01")}
                 </div>
-                <h3 className="text-lg font-bold text-stone-900">Spaced Repetition & Tianzige</h3>
+                <h3 className="text-lg font-bold text-stone-900">{tr("Spaced Repetition & Tianzige")}</h3>
                 <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
-                  SuperMemo SM-2 memory curves prevent forgetting. Practice character stroke structures inside authentic Chinese Tianzige guide grids.
+                  {tr("SuperMemo SM-2 memory curves prevent forgetting. Practice character stroke structures inside authentic Chinese Tianzige guide grids.")}
                 </p>
               </div>
               <div className="pt-2 text-xs font-bold text-stone-800 flex items-center gap-1">
-                <span>Algorithmic recall</span>
+                <span>{tr("Algorithmic recall")}</span>
                 <ChevronRight className="w-3.5 h-3.5 text-[#C52828]" />
               </div>
             </div>
@@ -429,15 +430,15 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
                   <Headphones className="w-6 h-6 text-[#FAF8F5]" />
                 </div>
                 <div className="text-[10px] font-bold text-[#C52828] uppercase tracking-widest">
-                  Pillar 02
+                  {tr("Pillar 02")}
                 </div>
-                <h3 className="text-lg font-bold text-stone-900">Multi-Speed Audio Listening</h3>
+                <h3 className="text-lg font-bold text-stone-900">{tr("Multi-Speed Audio Listening")}</h3>
                 <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
-                  High-fidelity audio dialogues with adjustable speed playback (0.8x slow, 1.0x standard, 1.2x challenge) for acoustic discrimination.
+                  {tr("High-fidelity audio dialogues with adjustable speed playback (0.8x slow, 1.0x standard, 1.2x challenge) for acoustic discrimination.")}
                 </p>
               </div>
               <div className="pt-2 text-xs font-bold text-stone-800 flex items-center gap-1">
-                <span>Native acoustic training</span>
+                <span>{tr("Native acoustic training")}</span>
                 <ChevronRight className="w-3.5 h-3.5 text-[#C52828]" />
               </div>
             </div>
@@ -449,15 +450,15 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
                   <FileText className="w-6 h-6 text-[#FAF8F5]" />
                 </div>
                 <div className="text-[10px] font-bold text-[#C52828] uppercase tracking-widest">
-                  Pillar 03
+                  {tr("Pillar 03")}
                 </div>
-                <h3 className="text-lg font-bold text-stone-900">Contextual Reading & Pinyin Toggle</h3>
+                <h3 className="text-lg font-bold text-stone-900">{tr("Contextual Reading & Pinyin Toggle")}</h3>
                 <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
-                  Real dialogues, notices, and short stories. Toggle pinyin annotation on or off to test character recognition without crutches.
+                  {tr("Real dialogues, notices, and short stories. Toggle pinyin annotation on or off to test character recognition without crutches.")}
                 </p>
               </div>
               <div className="pt-2 text-xs font-bold text-stone-800 flex items-center gap-1">
-                <span>Authentic reading drill</span>
+                <span>{tr("Authentic reading drill")}</span>
                 <ChevronRight className="w-3.5 h-3.5 text-[#C52828]" />
               </div>
             </div>
@@ -469,15 +470,15 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
                   <Award className="w-6 h-6 text-[#FAF8F5]" />
                 </div>
                 <div className="text-[10px] font-bold text-[#C52828] uppercase tracking-widest">
-                  Pillar 04
+                  {tr("Pillar 04")}
                 </div>
-                <h3 className="text-lg font-bold text-stone-900">Full Exam Simulation & Diagnosis</h3>
+                <h3 className="text-lg font-bold text-stone-900">{tr("Full Exam Simulation & Diagnosis")}</h3>
                 <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
-                  Strict official timers, section-by-section breakdown, instant score reporting, and deep mistake reviews with grammar explanations.
+                  {tr("Strict official timers, section-by-section breakdown, instant score reporting, and deep mistake reviews with grammar explanations.")}
                 </p>
               </div>
               <div className="pt-2 text-xs font-bold text-stone-800 flex items-center gap-1">
-                <span>Official test alignment</span>
+                <span>{tr("Official test alignment")}</span>
                 <ChevronRight className="w-3.5 h-3.5 text-[#C52828]" />
               </div>
             </div>
@@ -490,7 +491,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center space-y-3 mb-16">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[#E0D7CB] text-xs font-bold text-stone-800 uppercase tracking-widest shadow-2xs">
-              Dedicated Practice Units
+              {tr("Dedicated Practice Units")}
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-stone-950 tracking-tight">
               {t('landing.skillsTitle')}
@@ -502,12 +503,12 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {[
-              { id: 'vocabulary', title: 'Vocabulary', icon: BookOpen, count: '1050+ Words', desc: 'SRS Flashcards' },
-              { id: 'grammar', title: 'Grammar', icon: Layers, count: '60+ Patterns', desc: 'Sentence Structures' },
-              { id: 'listening', title: 'Listening', icon: Headphones, count: 'Audio Drills', desc: 'Acoustic Training' },
-              { id: 'reading', title: 'Reading', icon: FileText, count: 'Passages', desc: 'Pinyin Toggle' },
-              { id: 'characters', title: 'Characters', icon: PenNib, count: 'Radicals', desc: 'Stroke Orders' },
-              { id: 'writing', title: 'Writing', icon: PenTool, count: 'HSK 3+', desc: 'Sentence Ordering' },
+              { id: 'vocabulary', title: tr("Vocabulary"), icon: BookOpen, count: tr("HSK 1–3 words"), desc: tr("SRS Flashcards") },
+              { id: 'grammar', title: tr("Grammar"), icon: Layers, count: tr("60+ Patterns"), desc: tr("Sentence Structures") },
+              { id: 'listening', title: tr("Listening"), icon: Headphones, count: tr("Audio Drills"), desc: tr("Acoustic Training") },
+              { id: 'reading', title: tr("Reading"), icon: FileText, count: tr("Passages"), desc: tr("Pinyin Toggle") },
+              { id: 'characters', title: tr("Characters"), icon: PenNib, count: tr("Radicals"), desc: tr("Stroke Orders") },
+              { id: 'writing', title: tr("Writing"), icon: PenTool, count: tr("HSK 3+"), desc: tr("Sentence Ordering") },
             ].map((skill) => {
               const Icon = skill.icon;
               return (
@@ -541,30 +542,30 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
             {/* Left Col */}
             <div className="lg:col-span-6 space-y-6 text-left">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-stone-900 border border-stone-800 text-[11px] font-bold text-stone-300 uppercase tracking-widest">
-                Official Examination Protocol
+                {tr("Official Examination Protocol")}
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
                 {t('landing.mockTestTitle')}
               </h2>
               <p className="text-sm sm:text-base text-stone-400 leading-relaxed">
-                {t('landing.mockTestSubtitle')} Experience identical conditions before sitting for your official test at a Confucius Institute or testing center.
+                {t('landing.mockTestSubtitle')}{" "}{tr("Experience identical conditions before sitting for your official test at a Confucius Institute or testing center.")}
               </p>
               <ul className="space-y-3 text-xs sm:text-sm text-stone-300">
                 <li className="flex items-center gap-3">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-                  <span>Strict countdown exam timers with automatic warning alerts</span>
+                  <span>{tr("Strict countdown exam timers with automatic warning alerts")}</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-                  <span>Real listening audio dialogue sequences with authentic pauses</span>
+                  <span>{tr("Real listening audio dialogue sequences with authentic pauses")}</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-                  <span>Question status matrix: Answered, Skipped, and Flagged</span>
+                  <span>{tr("Question status matrix: Answered, Skipped, and Flagged")}</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-                  <span>Instant scoring against the official 120/200 & 180/300 passing threshold</span>
+                  <span>{tr("Instant scoring against the official 120/200 & 180/300 passing threshold")}</span>
                 </li>
               </ul>
               <div className="pt-2 flex items-center gap-4">
@@ -574,7 +575,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
                   onClick={() => onNavigate('mock-tests')}
                   iconRight={<ArrowRight className="w-4 h-4" />}
                 >
-                  Enter Exam Hall
+                  {tr("Enter Exam Hall")}
                 </Button>
               </div>
             </div>
@@ -583,42 +584,42 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
             <div className="lg:col-span-6 p-6 sm:p-8 rounded-3xl bg-stone-900/90 border border-stone-800 shadow-2xl space-y-5">
               <div className="flex items-center justify-between pb-4 border-b border-stone-800">
                 <div>
-                  <div className="text-[10px] font-bold text-stone-400 uppercase tracking-widest">Official Simulation</div>
-                  <div className="text-sm font-bold text-white">HSK 2 Exam Pool A • Section II</div>
+                  <div className="text-[10px] font-bold text-stone-400 uppercase tracking-widest">{tr("Official Simulation")}</div>
+                  <div className="text-sm font-bold text-white">{tr("HSK 2 Exam Pool A • Section II")}</div>
                 </div>
                 <div className="flex items-center gap-1.5 px-3 py-1 rounded-xl bg-[#C52828]/20 text-[#FAF8F5] border border-[#C52828]/40 font-mono text-xs font-bold">
                   <Clock className="w-3.5 h-3.5 text-[#C52828]" />
-                  <span>14:28 Remaining</span>
+                  <span>{tr("14:28 Remaining")}</span>
                 </div>
               </div>
 
               {/* Sample question box */}
               <div className="p-4 rounded-2xl bg-stone-950 border border-stone-800 space-y-3">
-                <div className="text-xs font-bold text-stone-400">Reading Comprehension • Question 18</div>
+                <div className="text-xs font-bold text-stone-400">{tr("Reading Comprehension • Question 18")}</div>
                 <div className="font-hanzi text-lg sm:text-xl text-stone-100 leading-relaxed">
                   他每天早上都跑步，所以身体很好。
                 </div>
                 <div className="text-xs text-stone-400 italic">
-                  “He runs every morning, so his health is very good.”
+                  {tr("“He runs every morning, so his health is very good.”")}
                 </div>
               </div>
 
               {/* Answer options */}
               <div className="space-y-2">
                 {[
-                  { text: 'A. 他喜欢运动 (He likes exercise)', correct: true },
-                  { text: 'B. 他在医院工作 (He works at a hospital)', correct: false },
-                  { text: 'C. 他今天没有跑步 (He did not run today)', correct: false },
+                  { text: tr("A. 他喜欢运动 (He likes exercise)"), correct: true },
+                  { text: tr("B. 他在医院工作 (He works at a hospital)"), correct: false },
+                  { text: tr("C. 他今天没有跑步 (He did not run today)"), correct: false },
                 ].map((opt, idx) => (
                   <div
-                    key={opt.text}
+                    key={tr(opt.text)}
                     className={`p-3 rounded-xl border text-xs font-semibold flex items-center justify-between transition-colors ${
                       opt.correct
                         ? 'bg-[#C52828]/20 border-[#C52828]/60 text-white'
                         : 'bg-stone-950 border-stone-800 text-stone-400'
                     }`}
                   >
-                    <span>{opt.text}</span>
+                    <span>{tr(opt.text)}</span>
                     {opt.correct && <CheckCircle2 className="w-4 h-4 text-emerald-400" />}
                   </div>
                 ))}
@@ -634,13 +635,13 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center space-y-3 mb-16">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[#E0D7CB] text-xs font-bold text-stone-800 uppercase tracking-widest shadow-2xs">
-              Membership & Access
+              {tr("Membership & Access")}
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-stone-950 tracking-tight">
-              Transparent Academic Tiering
+              {tr("Transparent Academic Tiering")}
             </h2>
             <p className="text-base sm:text-lg text-stone-600">
-              Start with foundational features completely free. Upgrade whenever you need unlimited full exam simulation pools.
+              {tr("Start with foundational features completely free. Upgrade whenever you need unlimited full exam simulation pools.")}
             </p>
           </div>
 
@@ -648,29 +649,29 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
             {/* Free Foundation */}
             <div className="p-8 rounded-3xl bg-white border border-[#E4DCCE] shadow-sm space-y-6 flex flex-col justify-between">
               <div className="space-y-4">
-                <Badge variant="success">Free Foundation</Badge>
+                <Badge variant="success">{tr("Free Foundation")}</Badge>
                 <div className="text-3xl sm:text-4xl font-black text-stone-950">
-                  $0 <span className="text-xs font-normal text-stone-500 uppercase tracking-wider">/ Lifetime Free</span>
+                  $0 <span className="text-xs font-normal text-stone-500 uppercase tracking-wider">{tr("/ Lifetime Free")}</span>
                 </div>
                 <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
-                  Full foundational access for beginners and preview for intermediate candidates.
+                  {tr("Full foundational access for beginners and preview for intermediate candidates.")}
                 </p>
                 <ul className="space-y-2.5 text-xs text-stone-700 pt-3 border-t border-[#EDE6DC]">
                   <li className="flex items-center gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span><strong>100% Free HSK 1:</strong> All 150 vocabulary words & lessons</span>
+                    <span><strong>{tr("100% Free HSK 1:")}</strong>{" "}{tr("All 150 vocabulary words & lessons")}</span>
                   </li>
                   <li className="flex items-center gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span><strong>2 Free Simulation Exams</strong> for HSK 2 & HSK 3</span>
+                    <span><strong>{tr("2 Free Simulation Exams")}</strong>{" "}{tr("for HSK 2 & HSK 3")}</span>
                   </li>
                   <li className="flex items-center gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span>Spaced repetition algorithm & daily review scheduling</span>
+                    <span>{tr("Spaced repetition algorithm & daily review scheduling")}</span>
                   </li>
                   <li className="flex items-center gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span>Native speech synthesis audio for all vocabulary</span>
+                    <span>{tr("Native speech synthesis audio for all vocabulary")}</span>
                   </li>
                 </ul>
               </div>
@@ -680,7 +681,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
                 onClick={() => onNavigate('signup')}
                 className="w-full justify-center"
               >
-                Create Free Account
+                {tr("Create Free Account")}
               </Button>
             </div>
 
@@ -688,37 +689,37 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
             <div className="p-8 rounded-3xl bg-[#1C1917] text-white border border-stone-800 shadow-xl space-y-6 flex flex-col justify-between relative overflow-hidden">
               <div className="absolute top-4 right-4">
                 <span className="px-3 py-1 rounded-full bg-[#C52828] text-white text-[10px] font-bold uppercase tracking-widest shadow-xs">
-                  Recommended
+                  {tr("Recommended")}
                 </span>
               </div>
               <div className="space-y-4">
-                <Badge variant="accent">Pro HSK Scholar</Badge>
+                <Badge variant="accent">{tr("Pro HSK Scholar")}</Badge>
                 <div className="text-3xl sm:text-4xl font-black text-[#FAF8F5]">
-                  $9 <span className="text-xs font-normal text-stone-400 uppercase tracking-wider">/ month</span>
+                  $9 <span className="text-xs font-normal text-stone-400 uppercase tracking-wider">{tr("/ month")}</span>
                 </div>
                 <p className="text-xs sm:text-sm text-stone-400 leading-relaxed">
-                  Comprehensive test preparation unlocking the complete intermediate & advanced curriculum.
+                  {tr("Comprehensive test preparation unlocking the complete intermediate & advanced curriculum.")}
                 </p>
                 <ul className="space-y-2.5 text-xs text-stone-300 pt-3 border-t border-stone-800">
                   <li className="flex items-center gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-[#C52828] shrink-0" />
-                    <span><strong>All Lessons (1 to 12+)</strong> for HSK 2 and HSK 3</span>
+                    <span><strong>{tr("All Lessons (1 to 12+)")}</strong>{" "}{tr("for HSK 2 and HSK 3")}</span>
                   </li>
                   <li className="flex items-center gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-[#C52828] shrink-0" />
-                    <span><strong>Unlimited Mock Exams:</strong> All official test pools (A, B, C, D)</span>
+                    <span><strong>{tr("Unlimited Mock Exams:")}</strong>{" "}{tr("All official test pools (A, B, C, D)")}</span>
                   </li>
                   <li className="flex items-center gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-[#C52828] shrink-0" />
-                    <span>Grammatical mistake analysis with detailed explanations</span>
+                    <span>{tr("Grammatical mistake analysis with detailed explanations")}</span>
                   </li>
                   <li className="flex items-center gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-[#C52828] shrink-0" />
-                    <span>Audio playback speed controls (0.8x to 1.2x)</span>
+                    <span>{tr("Audio playback speed controls (0.8x to 1.2x)")}</span>
                   </li>
                   <li className="flex items-center gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-[#C52828] shrink-0" />
-                    <span>Direct priority academic support & study roadmap</span>
+                    <span>{tr("Direct priority academic support & study roadmap")}</span>
                   </li>
                 </ul>
               </div>
@@ -728,7 +729,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
                 onClick={() => onNavigate('signup')}
                 className="w-full justify-center shadow-sm"
               >
-                Start 7-Day Free Trial
+                {tr("Start 7-Day Free Trial")}
               </Button>
             </div>
           </div>
@@ -744,7 +745,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-stone-900 border border-stone-800 text-[11px] font-bold text-stone-400 uppercase tracking-widest">
-            Begin Your Exam Preparation
+            {tr("Begin Your Exam Preparation")}
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white">
             {t('landing.ctaTitle')}
