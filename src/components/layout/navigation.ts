@@ -98,12 +98,15 @@ export interface TabItem {
 const viewsOf = (...ids: View[]) =>
   NAV_SECTIONS.flatMap((s) => s.items).filter((i) => ids.includes(i.id)).flatMap((i) => i.views);
 
-/** Bottom tab bar on phones: one tab per thing students do most. */
+/**
+ * Bottom tab bar on phones: one tab per thing students do most.
+ * HSK courses are reached from the menu (☰), so Laoshi gets that slot.
+ */
 export const MOBILE_TABS: TabItem[] = [
   { id: 'dashboard', labelKey: 'navShort.home', icon: LayoutDashboard, views: viewsOf('dashboard', 'progress', 'profile', 'admin') },
-  { id: 'hsk-levels', label: 'Learn', icon: Layers, views: viewsOf('hsk-levels', 'vocabulary', 'phrases') },
-  { id: 'practice-hub', label: 'Exercises', icon: Sparkles, views: viewsOf('practice-hub') },
   { id: 'tutor', label: 'Laoshi', icon: ChatCircleText, views: ['tutor'] },
+  { id: 'practice-hub', label: 'Exercises', icon: Sparkles, views: viewsOf('practice-hub') },
+  { id: 'vocabulary', labelKey: 'navShort.vocab', icon: BookOpen, views: viewsOf('vocabulary', 'phrases') },
   { id: 'mock-tests', labelKey: 'navShort.exams', icon: FileCheck, views: viewsOf('mock-tests') },
 ];
 
