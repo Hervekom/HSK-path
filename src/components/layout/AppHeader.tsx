@@ -1,5 +1,5 @@
 import React from 'react';
-import { Menu, Flame, Search, Bell, Sparkles, BookOpen } from 'lucide-react';
+import { Menu, Flame, Search, Bell, Sparkles, BookOpen, ShieldCheck } from 'lucide-react';
 import { useI18n } from '../../locales';
 import { LanguageSelector } from '../ui/LanguageSelector';
 import { Button } from '../ui/Button';
@@ -11,6 +11,7 @@ interface AppHeaderProps {
   user: UserProfile;
   streakDays: number;
   onOpenMobileMenu: () => void;
+  isAdmin?: boolean;
 }
 
 export const AppHeader: React.FC<AppHeaderProps> = ({
@@ -19,6 +20,7 @@ export const AppHeader: React.FC<AppHeaderProps> = ({
   user,
   streakDays,
   onOpenMobileMenu,
+  isAdmin = false,
 }) => {
   const { t } = useI18n();
 
@@ -49,15 +51,17 @@ export const AppHeader: React.FC<AppHeaderProps> = ({
         return t('nav.progress');
       case 'profile':
         return t('nav.profile');
+      case 'admin':
+        return t('nav.admin');
       default:
         return 'HSK Path';
     }
   };
 
   return (
-    <header className="sticky top-0 z-20 w-full bg-[#FAF8F5]/92 backdrop-blur-md border-b border-[#E8E2D8] px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between transition-colors">
+    <header className="sticky top-0 z-20 w-full bg-[#FAF8F5]/92 backdrop-blur-md border-b border-[#E8E2D8] px-3 sm:px-6 lg:px-8 h-14 sm:h-16 flex items-center justify-between gap-2 transition-colors">
       {/* Left: Mobile trigger & breadcrumb */}
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-2 sm:gap-3 min-w-0">
         <button
           onClick={onOpenMobileMenu}
           className="lg:hidden p-2 rounded-xl text-stone-700 hover:text-[#C52828] hover:bg-[#F2ECE4] transition-colors cursor-pointer"
@@ -66,8 +70,8 @@ export const AppHeader: React.FC<AppHeaderProps> = ({
           <Menu className="w-5 h-5" />
         </button>
 
-        <div className="flex items-center gap-2.5">
-          <span className="font-bold text-base sm:text-lg text-stone-900 tracking-tight">
+        <div className="flex items-center gap-2.5 min-w-0">
+          <span className="font-bold text-base sm:text-lg text-stone-900 tracking-tight truncate">
             {getTitle()}
           </span>
           <span className="hidden sm:inline-flex items-center text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#1C1917] text-[#FAF8F5] tracking-wider uppercase">
@@ -77,7 +81,7 @@ export const AppHeader: React.FC<AppHeaderProps> = ({
       </div>
 
       {/* Right actions: Quick SRS review trigger, search, streak, language selector, avatar */}
-      <div className="flex items-center gap-2 sm:gap-3">
+      <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
         {/* Quick SRS Review Trigger */}
         <button
           onClick={() => onNavigate('vocabulary')}
@@ -87,6 +91,22 @@ export const AppHeader: React.FC<AppHeaderProps> = ({
           <BookOpen className="w-3.5 h-3.5" />
           <span>Review Due</span>
         </button>
+
+        {isAdmin && (
+          <button
+            onClick={() => onNavigate('admin')}
+            className={`flex items-center gap-1.5 px-2 sm:px-2.5 py-1.5 rounded-xl border text-xs font-bold transition-colors cursor-pointer shadow-2xs ${
+              currentView === 'admin'
+                ? 'bg-stone-900 border-stone-900 text-white'
+                : 'bg-white border-[#E0D7CB] text-stone-700 hover:text-[#C52828]'
+            }`}
+            title={t('nav.admin')}
+            aria-label={t('nav.admin')}
+          >
+            <ShieldCheck className="w-4 h-4" />
+            <span className="hidden sm:inline">{t('nav.admin')}</span>
+          </button>
+        )}
 
         {/* Streak indicator */}
         <div

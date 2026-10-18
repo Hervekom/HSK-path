@@ -19,7 +19,8 @@
     "profile": "个人中心",
     "settings": "系统设置",
     "help": "帮助与指引",
-    "signOut": "退出登录"
+    "signOut": "退出登录",
+    "admin": "管理"
   },
   "landing": {
     "heroTitle": "自信通关 HSK 考试。",
@@ -91,7 +92,10 @@
     "recentActivity": "近期学习记录",
     "noActivity": "暂无学习记录。",
     "practiceNow": "立即练习",
-    "accuracy": "正确率"
+    "accuracy": "正确率",
+    "wordsLearned": "已学词汇",
+    "streakLabel": "连续学习天数",
+    "weeklyGoal": "目标：每周 {goal}"
   },
   "levels": {
     "title": "选择 HSK 等级",
@@ -119,7 +123,8 @@
     "listeningModule": "听力强化训练",
     "readingModule": "阅读理解专项",
     "charactersModule": "汉字书写与笔顺",
-    "testsModule": "全真仿真模考"
+    "testsModule": "全真仿真模考",
+    "openModule": "打开模块"
   },
   "learn": {
     "title": "学习中心",
@@ -196,7 +201,9 @@
     "listenPrompt": "仔细听录音并选择正确答案。",
     "readPrompt": "阅读短文并选出最佳选项。",
     "characterPrompt": "练习笔顺与汉字字形结构。",
-    "writePrompt": "在手写区输入或临摹对应汉字。"
+    "writePrompt": "在手写区输入或临摹对应汉字。",
+    "quickQuiz": "快速测验",
+    "grammarQuiz": "语法句型测验"
   },
   "quiz": {
     "question": "题目",
@@ -273,7 +280,16 @@
     "weeklyActivity": "近七天学习时长",
     "recentScores": "模考历史提分曲线",
     "accuracyRate": "平均答题正确率",
-    "targetExamDate": "备考冲刺建议"
+    "targetExamDate": "备考冲刺建议",
+    "avgMock": "模考均分",
+    "passedOf": "通过 {passed}/{total}",
+    "examTime": "考试时长",
+    "noSkillsYet": "完成一次模考后，这里会显示你的听力、阅读和书写正确率。",
+    "sectionsCount": "{count} 个部分",
+    "levelStrong": "优秀",
+    "levelOk": "良好",
+    "levelWork": "需加强",
+    "skillsTitle": "各项技能正确率"
   },
   "settings": {
     "title": "个人中心与设置",
@@ -291,7 +307,9 @@
     "studyReminders": "每日备考打卡提醒",
     "testReminders": "考前冲刺模考提醒",
     "saveChanges": "保存设置",
-    "savedSuccess": "设置已成功保存！"
+    "savedSuccess": "设置已成功保存！",
+    "dailyGoal": "每日学习目标",
+    "savePreferences": "保存设置"
   },
   "common": {
     "minutes": "分钟",
@@ -302,5 +320,75 @@
     "view": "查看",
     "back": "返回",
     "loading": "加载中..."
+  },
+  "testResults": {
+    "passed": "通过",
+    "failed": "尚未通过",
+    "finalScore": "总分",
+    "sectionBreakdown": "各部分得分",
+    "reviewMistakes": "查看错题",
+    "retakeTest": "重新考试",
+    "backToDashboard": "返回仪表盘"
+  },
+  "vocab": {
+    "radical": "部首",
+    "strokeCount": "笔画",
+    "examples": "例句",
+    "markedLearned": "已学会 ✓",
+    "markAsLearned": "标记为已学会"
+  },
+  "navShort": {
+    "home": "首页",
+    "levels": "等级",
+    "practice": "练习",
+    "vocab": "词汇",
+    "exams": "模考"
+  },
+  "admin": {
+    "badge": "管理后台",
+    "title": "管理中心",
+    "subtitle": "HSK Path 学员、活跃度与模考成绩。",
+    "refresh": "刷新",
+    "loadError": "数据加载失败：",
+    "kpiStudents": "学员",
+    "kpiNew7": "本周新增 {count}",
+    "kpiActive": "近 7 天活跃",
+    "kpiPro": "Pro 学员",
+    "kpiTests": "模考次数",
+    "kpiPassRate": "通过率 {rate}%",
+    "byLevel": "各等级学员",
+    "avgScore": "平均分",
+    "recentTests": "最新模考成绩",
+    "noTests": "暂无模考记录。",
+    "students": "学员",
+    "searchPlaceholder": "搜索姓名或邮箱…",
+    "all": "全部",
+    "sortBy": "排序",
+    "sortRecent": "最近活跃",
+    "sortNewest": "最新注册",
+    "sortWords": "词汇最多",
+    "sortScore": "最高分",
+    "loading": "加载中…",
+    "empty": "未找到学员。",
+    "colStudent": "学员",
+    "colLevel": "等级",
+    "colWords": "词汇",
+    "colTests": "模考",
+    "colBest": "最高",
+    "colLastActive": "最近活跃",
+    "today": "今天",
+    "yesterday": "昨天",
+    "daysAgo": "{days} 天前",
+    "proGranted": "已开通 Pro",
+    "proRemoved": "已取消 Pro",
+    "proAccess": "Pro 权限",
+    "proAccessDesc": "解锁全部课程和 Pro 模考",
+    "streak": "连续学习",
+    "daysShort": "天",
+    "dailyGoal": "每日目标",
+    "signedUp": "注册时间",
+    "favorites": "收藏词汇",
+    "testHistory": "模考记录",
+    "restricted": "此页面仅限管理员访问。"
   }
 }

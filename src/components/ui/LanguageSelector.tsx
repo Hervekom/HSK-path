@@ -60,13 +60,14 @@ export const LanguageSelector: React.FC<LanguageSelectorProps> = ({
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="inline-flex items-center justify-center gap-2 px-3 py-1.5 text-xs sm:text-sm font-semibold text-stone-700 bg-white border border-[#DDD3C6] rounded-xl hover:bg-[#FAF8F5] hover:text-[#C52828] hover:border-[#C52828]/40 transition-colors shadow-2xs cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#C52828]/20"
+        className="inline-flex items-center justify-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 text-xs sm:text-sm font-semibold text-stone-700 bg-white border border-[#DDD3C6] rounded-xl hover:bg-[#FAF8F5] hover:text-[#C52828] hover:border-[#C52828]/40 transition-colors shadow-2xs cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#C52828]/20"
         aria-haspopup="true"
         aria-expanded={isOpen}
       >
         <Globe className="w-4 h-4 text-stone-500 shrink-0" />
-        <span className="font-semibold text-stone-800">{currentLang.nativeName}</span>
-        <ChevronDown className={`w-3.5 h-3.5 text-stone-400 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
+        <span className="hidden sm:inline font-semibold text-stone-800">{currentLang.nativeName}</span>
+        <span className="sm:hidden font-bold text-stone-800 uppercase text-[11px]">{currentLang.code}</span>
+        <ChevronDown className={`hidden sm:block w-3.5 h-3.5 text-stone-400 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
       </button>
 
       {isOpen && (

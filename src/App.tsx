@@ -24,6 +24,7 @@ import { TestResultsView } from './views/TestResultsView';
 import { ReviewMistakesView } from './views/ReviewMistakesView';
 import { ProgressAnalyticsView } from './views/ProgressAnalyticsView';
 import { ProfileSettingsView } from './views/ProfileSettingsView';
+import { AdminView } from './views/AdminView';
 
 // Data & Types
 import { VOCABULARY_DATA } from './data/vocabulary';
@@ -31,17 +32,36 @@ import { HSK2_QUIZ_QUESTIONS, VOCAB_QUIZ_QUESTIONS, GRAMMAR_QUIZ_QUESTIONS } fro
 import { MOCK_TESTS_CATALOG, INITIAL_TEST_RESULTS } from './data/mockTests';
 import { INITIAL_USER_PROFILE } from './data/progressData';
 import { supabase } from './lib/supabase';
-import { loadProgress, saveProgress, computeStreak } from './lib/progressStore';
+import { loadProgress, saveProgress, computeStreak, fetchIsAdmin } from './lib/progressStore';
 import { SRS_STORAGE_KEY } from './utils/srs';
 import type { User } from '@supabase/supabase-js';
 import type { AppState, UserProfile, VocabularyWord, MockTest, TestResult, SkillType, QuizQuestion } from './types';
+
+const ALL_VIEWS: AppState['currentView'][] = [
+  'landing', 'login', 'signup', 'dashboard', 'hsk-levels', 'hsk-detail', 'learn', 'vocabulary',
+  'practice-hub', 'quiz', 'listening-practice', 'reading-practice', 'writing-practice', 'mock-tests',
+  'mock-test-intro', 'mock-test-exam', 'test-results', 'review-mistakes', 'progress', 'profile', 'admin',
+];
+const PUBLIC_VIEWS: AppState['currentView'][] = ['landing', 'login', 'signup', 'hsk-levels', 'hsk-detail'];
+
+function viewFromHash(): AppState['currentView'] | null {
+  const h = window.location.hash.replace(/^#\/?/, '');
+  return (ALL_VIEWS as string[]).includes(h) ? (h as AppState['currentView']) : null;
+}
 
 function HskPathApp() {
   const { t } = useI18n();
   const { addToast } = useToast();
 
   // Navigation & User State
-  const [currentView, setCurrentView] = useState<AppState['currentView']>('landing');
+  const [currentView, setCurrentView] = useState<AppState['currentView']>(() => viewFromHash() || 'landing');
+  const [isDemo, setIsDemo] = useState<boolean>(() => {
+    try {
+      return sessionStorage.getItem('hsk_demo') === '1';
+    } catch {
+      return false;
+    }
+  });
   const [user, setUser] = useState<UserProfile>(INITIAL_USER_PROFILE);
   const [streakDays, setStreakDays] = useState(7);
   const [weeklyMinutes, setWeeklyMinutes] = useState(222); // 3h 42m
@@ -90,6 +110,7 @@ function HskPathApp() {
 
   // ---------- Authentication & cloud persistence (Supabase) ----------
   const [authUserId, setAuthUserId] = useState<string | null>(null);
+  const [isAdmin, setIsAdmin] = useState(false);
   const [hydrated, setHydrated] = useState(false);
   const [authChecked, setAuthChecked] = useState(!supabase);
   const lastActiveRef = useRef<string | null>(null);
@@ -117,7 +138,13 @@ function HskPathApp() {
       studyGoal: '',
       isProUser: false,
     };
-    const profile: UserProfile = { ...baseProfile, ...(stored?.profile || {}), email: authUser.email || '' };
+    const profile: UserProfile = {
+      ...baseProfile,
+      ...(stored?.profile || {}),
+      email: authUser.email || '',
+      isProUser: Boolean(stored?.isPro),
+    };
+    fetchIsAdmin().then(setIsAdmin);
     const learned = new Set(stored?.learnedIds || []);
     const favs = new Set(stored?.favoriteIds || []);
     const { streak, today } = computeStreak(stored?.streakDays ?? 0, stored?.lastActiveDate ?? null);
@@ -164,6 +191,7 @@ function HskPathApp() {
         }
       }
       if (event === 'SIGNED_OUT') {
+        setIsAdmin(false);
         setAuthUserId(null);
         setHydrated(false);
       }
@@ -229,6 +257,12 @@ function HskPathApp() {
   };
 
   const handleDemoLogin = () => {
+    setIsDemo(true);
+    try {
+      sessionStorage.setItem('hsk_demo', '1');
+    } catch {
+      // ignore
+    }
     setAuthUserId(null);
     setHydrated(false);
     resetToDemoData();
@@ -252,6 +286,7 @@ function HskPathApp() {
       await supabase.auth.signOut();
     }
     setAuthUserId(null);
+    setIsAdmin(false);
     setHydrated(false);
     try {
       localStorage.removeItem(SRS_STORAGE_KEY);
@@ -259,8 +294,37 @@ function HskPathApp() {
       // ignore
     }
     resetToDemoData();
+    setIsDemo(false);
+    try {
+      sessionStorage.removeItem('hsk_demo');
+    } catch {
+      // ignore
+    }
     setCurrentView('landing');
   };
+
+  // Keep the URL hash in sync with the current view (browser/phone back button works)
+  useEffect(() => {
+    const target = `#/${currentView}`;
+    if (window.location.hash !== target) {
+      window.history.pushState(null, '', currentView === 'landing' ? window.location.pathname : target);
+    }
+    window.scrollTo({ top: 0 });
+  }, [currentView]);
+
+  useEffect(() => {
+    const onPop = () => setCurrentView(viewFromHash() || 'landing');
+    window.addEventListener('popstate', onPop);
+    return () => window.removeEventListener('popstate', onPop);
+  }, []);
+
+  // Protected views need a session (or demo mode)
+  useEffect(() => {
+    if (!authChecked) return;
+    if (!PUBLIC_VIEWS.includes(currentView) && !authUserId && !isDemo) {
+      setCurrentView('login');
+    }
+  }, [authChecked, currentView, authUserId, isDemo]);
 
   // Navigation guard: signed-in users skip the auth screens
   const navigate = (view: AppState['currentView']) => {
@@ -359,6 +423,7 @@ function HskPathApp() {
     };
 
     setTestHistory((prev) => [newResult, ...prev]);
+    setWeeklyMinutes((m) => m + Math.max(1, Math.round(timeSpentSeconds / 60)));
     setLatestResult(newResult);
     setCurrentView('test-results');
     addToast(isPassed ? 'Congratulations! You passed the mock test!' : 'Exam completed! Review your mistakes to reinforce weak spots.', isPassed ? 'success' : 'warning');
@@ -399,6 +464,7 @@ function HskPathApp() {
         return (
           <AppLayout
             onSignOut={handleSignOut}
+            isAdmin={isAdmin}
             currentView={currentView}
             onNavigate={navigate}
             user={user}
@@ -409,6 +475,7 @@ function HskPathApp() {
               streakDays={streakDays}
               weeklyMinutes={weeklyMinutes}
               learnedWordCount={vocabList.filter((w) => w.isLearned).length}
+              showSampleData={!authUserId}
               testHistory={testHistory}
               onNavigate={navigate}
               onSelectLevel={(lvl) => {
@@ -424,6 +491,7 @@ function HskPathApp() {
         return (
           <AppLayout
             onSignOut={handleSignOut}
+            isAdmin={isAdmin}
             currentView={currentView}
             onNavigate={navigate}
             user={user}
@@ -444,6 +512,7 @@ function HskPathApp() {
         return (
           <AppLayout
             onSignOut={handleSignOut}
+            isAdmin={isAdmin}
             currentView={currentView}
             onNavigate={navigate}
             user={user}
@@ -467,6 +536,7 @@ function HskPathApp() {
         return (
           <AppLayout
             onSignOut={handleSignOut}
+            isAdmin={isAdmin}
             currentView={currentView}
             onNavigate={navigate}
             user={user}
@@ -483,6 +553,7 @@ function HskPathApp() {
         return (
           <AppLayout
             onSignOut={handleSignOut}
+            isAdmin={isAdmin}
             currentView={currentView}
             onNavigate={navigate}
             user={user}
@@ -500,6 +571,7 @@ function HskPathApp() {
         return (
           <AppLayout
             onSignOut={handleSignOut}
+            isAdmin={isAdmin}
             currentView={currentView}
             onNavigate={navigate}
             user={user}
@@ -516,6 +588,7 @@ function HskPathApp() {
         return (
           <AppLayout
             onSignOut={handleSignOut}
+            isAdmin={isAdmin}
             currentView={currentView}
             onNavigate={navigate}
             user={user}
@@ -536,6 +609,7 @@ function HskPathApp() {
         return (
           <AppLayout
             onSignOut={handleSignOut}
+            isAdmin={isAdmin}
             currentView={currentView}
             onNavigate={navigate}
             user={user}
@@ -549,6 +623,7 @@ function HskPathApp() {
         return (
           <AppLayout
             onSignOut={handleSignOut}
+            isAdmin={isAdmin}
             currentView={currentView}
             onNavigate={navigate}
             user={user}
@@ -562,6 +637,7 @@ function HskPathApp() {
         return (
           <AppLayout
             onSignOut={handleSignOut}
+            isAdmin={isAdmin}
             currentView={currentView}
             onNavigate={navigate}
             user={user}
@@ -575,6 +651,7 @@ function HskPathApp() {
         return (
           <AppLayout
             onSignOut={handleSignOut}
+            isAdmin={isAdmin}
             currentView={currentView}
             onNavigate={navigate}
             user={user}
@@ -596,6 +673,7 @@ function HskPathApp() {
         return (
           <AppLayout
             onSignOut={handleSignOut}
+            isAdmin={isAdmin}
             currentView={currentView}
             onNavigate={navigate}
             user={user}
@@ -613,6 +691,7 @@ function HskPathApp() {
         return (
           <AppLayout
             onSignOut={handleSignOut}
+            isAdmin={isAdmin}
             currentView={currentView}
             onNavigate={navigate}
             user={user}
@@ -630,6 +709,7 @@ function HskPathApp() {
         return (
           <AppLayout
             onSignOut={handleSignOut}
+            isAdmin={isAdmin}
             currentView={currentView}
             onNavigate={navigate}
             user={user}
@@ -661,6 +741,7 @@ function HskPathApp() {
         return (
           <AppLayout
             onSignOut={handleSignOut}
+            isAdmin={isAdmin}
             currentView={currentView}
             onNavigate={navigate}
             user={user}
@@ -684,12 +765,14 @@ function HskPathApp() {
         return (
           <AppLayout
             onSignOut={handleSignOut}
+            isAdmin={isAdmin}
             currentView={currentView}
             onNavigate={navigate}
             user={user}
             streakDays={streakDays}
           >
             <ProgressAnalyticsView
+              showSampleData={!authUserId}
               user={user}
               streakDays={streakDays}
               testHistory={testHistory}
@@ -708,6 +791,7 @@ function HskPathApp() {
         return (
           <AppLayout
             onSignOut={handleSignOut}
+            isAdmin={isAdmin}
             currentView={currentView}
             onNavigate={navigate}
             user={user}
@@ -724,6 +808,24 @@ function HskPathApp() {
                 addToast('Progress reset to day 1', 'info');
               }}
             />
+          </AppLayout>
+        );
+
+      case 'admin':
+        return (
+          <AppLayout
+            onSignOut={handleSignOut}
+            isAdmin={isAdmin}
+            currentView={currentView}
+            onNavigate={navigate}
+            user={user}
+            streakDays={streakDays}
+          >
+            {isAdmin ? (
+              <AdminView />
+            ) : (
+              <div className="py-20 text-center text-sm text-stone-500">{t('admin.restricted')}</div>
+            )}
           </AppLayout>
         );
 

@@ -335,7 +335,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
                 </div>
               </div>
 
-              <div className="pt-4 flex items-center gap-4">
+              <div className="pt-4 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 [&>button]:w-full sm:[&>button]:w-auto">
                 <Button
                   variant="luxury"
                   size="md"

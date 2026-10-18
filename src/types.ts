@@ -289,7 +289,8 @@ export interface AppState {
     | 'test-results' 
     | 'review-mistakes' 
     | 'progress' 
-    | 'profile';
+    | 'profile'
+    | 'admin';
   selectedLevel: 'hsk1' | 'hsk2' | 'hsk3';
   selectedWordId: string | null;
   selectedPracticeSkill: SkillType | 'mixed';

@@ -189,10 +189,10 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
             Spaced Repetition & Tianzige Engine
           </div>
           <h1 className="text-2xl sm:text-3xl font-black text-stone-950 tracking-tight">
-            {t('vocab.title')}
+            {t('vocabulary.title')}
           </h1>
           <p className="text-xs sm:text-sm text-stone-500 font-medium mt-0.5">
-            {t('vocab.subtitle')} ({filteredWords.length} / {words.length} active words)
+            ({filteredWords.length} / {words.length} active words)
           </p>
         </div>
 
@@ -566,7 +566,7 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
 
           {/* Cards Grid */}
           {filteredWords.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4">
               {filteredWords.map((word) => {
                 const isPinyinVisible = showPinyin || revealedPinyinIds.has(word.id);
                 const srsData = srsMap[word.id];
@@ -576,12 +576,12 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
                   <div
                     key={word.id}
                     onClick={() => setActiveWordModal(word)}
-                    className="p-5 rounded-2xl bg-white border border-[#E4DCCE] hover:border-[#C52828] hover:bg-[#FFFDFB] shadow-2xs space-y-4 flex flex-col justify-between cursor-pointer transition-all group"
+                    className="p-3 sm:p-5 rounded-2xl bg-white border border-[#E4DCCE] hover:border-[#C52828] hover:bg-[#FFFDFB] shadow-2xs space-y-3 sm:space-y-4 flex flex-col min-w-0 justify-between cursor-pointer transition-all group"
                   >
                     <div className="space-y-3">
                       {/* Top Row: Level + Status + SRS Stage */}
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-1.5">
+                      <div className="flex items-center justify-between gap-1">
+                        <div className="flex items-center gap-1 min-w-0 overflow-hidden">
                           <Badge variant={word.level as any}>{word.level.toUpperCase()}</Badge>
                           {stage === 'due' && (
                             <span className="px-1.5 py-0.5 rounded bg-rose-100 text-rose-800 text-[9px] font-black uppercase">
@@ -590,12 +590,13 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
                           )}
                           {stage === 'mastered' && (
                             <span className="px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-800 text-[9px] font-black uppercase">
-                              Mastered
+                              <span className="hidden sm:inline">Mastered</span>
+                              <span className="sm:hidden">✓</span>
                             </span>
                           )}
                         </div>
 
-                        <div className="flex items-center gap-1.5" onClick={(e) => e.stopPropagation()}>
+                        <div className="flex items-center gap-0.5 sm:gap-1.5 shrink-0" onClick={(e) => e.stopPropagation()}>
                           <button
                             onClick={() => onToggleFavorite(word.id)}
                             className={`p-1 rounded-lg text-stone-300 hover:text-amber-500 cursor-pointer transition-colors ${

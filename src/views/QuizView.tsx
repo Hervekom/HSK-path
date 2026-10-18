@@ -247,7 +247,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
 
         {/* Multiple Choice Options */}
         <div className="space-y-2.5">
-          {currentQ.options.map((opt) => {
+          {currentQ.options.map((opt, optIdx) => {
             const isSelected = selectedOptionId === opt.id;
             const isCorrect = opt.id === currentQ.correctAnswerId;
 
@@ -283,7 +283,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
                       ? 'bg-rose-600 text-white'
                       : 'bg-slate-100 text-slate-700'
                   }`}>
-                    {opt.id.toUpperCase()}
+                    {/^[a-d]$/i.test(opt.id) ? opt.id.toUpperCase() : String.fromCharCode(65 + optIdx)}
                   </span>
                   <div>
                     {opt.hanzi && (

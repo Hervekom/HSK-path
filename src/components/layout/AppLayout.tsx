@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { AppSidebar } from './AppSidebar';
 import { AppHeader } from './AppHeader';
+import { MobileTabBar } from './MobileTabBar';
 import type { AppState, UserProfile } from '../../types';
 
 interface AppLayoutProps {
@@ -10,6 +11,7 @@ interface AppLayoutProps {
   streakDays: number;
   children: React.ReactNode;
   onSignOut?: () => void;
+  isAdmin?: boolean;
 }
 
 export const AppLayout: React.FC<AppLayoutProps> = ({
@@ -19,6 +21,7 @@ export const AppLayout: React.FC<AppLayoutProps> = ({
   streakDays,
   children,
   onSignOut,
+  isAdmin = false,
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -33,6 +36,7 @@ export const AppLayout: React.FC<AppLayoutProps> = ({
         isOpenMobile={mobileMenuOpen}
         onCloseMobile={() => setMobileMenuOpen(false)}
         onSignOut={onSignOut}
+        isAdmin={isAdmin}
       />
 
       {/* Main Content Area */}
@@ -43,11 +47,14 @@ export const AppLayout: React.FC<AppLayoutProps> = ({
           user={user}
           streakDays={streakDays}
           onOpenMobileMenu={() => setMobileMenuOpen(true)}
+          isAdmin={isAdmin}
         />
-        <main className="flex-1 p-4 sm:p-6 lg:p-8 max-w-7xl w-full mx-auto text-[#231F20]">
+        <main className="flex-1 px-4 pt-4 pb-24 sm:px-6 sm:pt-6 lg:p-8 max-w-7xl w-full mx-auto text-[#231F20] min-w-0">
           {children}
         </main>
       </div>
+
+      {currentView !== 'mock-test-exam' && <MobileTabBar currentView={currentView} onNavigate={onNavigate} />}
     </div>
   );
 };

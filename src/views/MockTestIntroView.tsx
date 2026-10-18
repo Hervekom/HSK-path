@@ -65,7 +65,7 @@ export const MockTestIntroView: React.FC<MockTestIntroViewProps> = ({
           <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 text-center space-y-1">
             <Award className="w-5 h-5 text-slate-500 mx-auto" />
             <div className="text-xs font-semibold text-slate-500">Questions</div>
-            <div className="text-xl font-bold text-slate-900">{test.questionsCount} Total</div>
+            <div className="text-xl font-bold text-slate-900">{test.questionsCount ?? test.questions?.length ?? test.totalQuestions}</div>
           </div>
           <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 text-center space-y-1">
             <ShieldCheck className="w-5 h-5 text-emerald-600 mx-auto" />
@@ -83,9 +83,10 @@ export const MockTestIntroView: React.FC<MockTestIntroViewProps> = ({
             {test.sections.map((sec) => (
               <div key={sec.type} className="p-4 flex items-center justify-between bg-white hover:bg-slate-50">
                 <div className="space-y-0.5">
-                  <div className="font-bold text-sm text-slate-900">{sec.name}</div>
+                  <div className="font-bold text-sm text-slate-900">{sec.name || sec.title}</div>
                   <div className="text-xs text-slate-500">
-                    {sec.questionsCount} questions · {sec.maxScore} points
+                    {sec.questionsCount ?? sec.questions?.length ?? test.questions?.filter((q) => q.section === sec.type).length ?? 0} questions
+                    {sec.maxScore ? ` · ${sec.maxScore} points` : ''}
                   </div>
                 </div>
                 <span className="text-xs font-semibold text-slate-700 bg-slate-100 px-3 py-1 rounded-lg">

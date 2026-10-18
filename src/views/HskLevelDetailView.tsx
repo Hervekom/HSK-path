@@ -141,14 +141,15 @@ export const HskLevelDetailView: React.FC<HskLevelDetailViewProps> = ({
       </div>
 
       {/* Level Banner Card */}
-      <div className="p-6 sm:p-8 rounded-3xl bg-white border border-[#E4DACD] shadow-xs space-y-6">
+      <div className="p-5 sm:p-8 rounded-3xl bg-white border border-[#E4DACD] shadow-xs space-y-6">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div className="flex items-center gap-4">
-            <div className="w-14 h-14 rounded-2xl bg-[#C52828] text-white flex items-center justify-center font-extrabold text-xl shadow-xs shrink-0 font-chinese">
-              {currentLevelMeta.name}
+            <div className="w-14 h-14 rounded-2xl bg-[#C52828] text-white flex flex-col items-center justify-center leading-none shadow-xs shrink-0">
+              <span className="text-[10px] font-bold tracking-widest opacity-80">HSK</span>
+              <span className="text-2xl font-extrabold">{currentLevelMeta.name.replace(/\D/g, '')}</span>
             </div>
-            <div>
-              <div className="flex items-center gap-2">
+            <div className="min-w-0">
+              <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
                 <h1 className="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">
                   {currentLevelMeta.name} {language === 'fr' ? 'Programme' : language === 'zh' ? '大纲课程' : 'Curriculum'}
                 </h1>
@@ -162,7 +163,7 @@ export const HskLevelDetailView: React.FC<HskLevelDetailViewProps> = ({
                   </Badge>
                 )}
               </div>
-              <p className="text-xs font-semibold text-stone-500 uppercase tracking-wider mt-0.5">
+              <p className="text-[11px] sm:text-xs font-semibold text-stone-500 uppercase tracking-wider mt-1">
                 {currentLevelMeta.wordCount} {t('levels.coreWords')} &bull; Passing Score: {currentLevelMeta.passingScore} / {currentLevelMeta.totalScore}
               </p>
             </div>

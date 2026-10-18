@@ -240,7 +240,7 @@ export const ProfileSettingsView: React.FC<ProfileSettingsViewProps> = ({
             type="submit"
             variant="primary"
             size="lg"
-            className="shadow-sm"
+            className="shadow-sm w-full sm:w-auto"
             icon={<Save className="w-4 h-4" />}
           >
             {t('settings.savePreferences')}

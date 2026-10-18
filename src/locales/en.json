@@ -19,7 +19,8 @@
     "profile": "Profile",
     "settings": "Settings",
     "help": "Help & Guide",
-    "signOut": "Sign Out"
+    "signOut": "Sign Out",
+    "admin": "Admin"
   },
   "landing": {
     "heroTitle": "Prepare for HSK with confidence.",
@@ -91,7 +92,10 @@
     "recentActivity": "Recent Activity",
     "noActivity": "No recent activities recorded yet.",
     "practiceNow": "Practice Now",
-    "accuracy": "Accuracy"
+    "accuracy": "Accuracy",
+    "wordsLearned": "words learned",
+    "streakLabel": "Days in a row",
+    "weeklyGoal": "Goal: {goal} / week"
   },
   "levels": {
     "title": "Choose your HSK Level",
@@ -119,7 +123,8 @@
     "listeningModule": "Listening Drills",
     "readingModule": "Reading Comprehension",
     "charactersModule": "Hanzi & Stroke Order",
-    "testsModule": "Simulation Mock Exams"
+    "testsModule": "Simulation Mock Exams",
+    "openModule": "Open Module"
   },
   "learn": {
     "title": "Learning Hub",
@@ -196,7 +201,9 @@
     "listenPrompt": "Listen to the audio and choose the correct answer.",
     "readPrompt": "Read the passage carefully and select the best answer.",
     "characterPrompt": "Practice stroke order and character recognition.",
-    "writePrompt": "Write the appropriate character into the box."
+    "writePrompt": "Write the appropriate character into the box.",
+    "quickQuiz": "Quick Quiz",
+    "grammarQuiz": "Grammar Patterns Quiz"
   },
   "quiz": {
     "question": "Question",
@@ -273,7 +280,16 @@
     "weeklyActivity": "Weekly Study Activity",
     "recentScores": "Mock Exam Score History",
     "accuracyRate": "Overall Practice Accuracy",
-    "targetExamDate": "Target Exam Readiness"
+    "targetExamDate": "Target Exam Readiness",
+    "avgMock": "Avg. mock score",
+    "passedOf": "{passed}/{total} passed",
+    "examTime": "Exam time",
+    "noSkillsYet": "Take a mock exam to see your listening, reading and writing accuracy here.",
+    "sectionsCount": "{count} section(s)",
+    "levelStrong": "Strong",
+    "levelOk": "Solid",
+    "levelWork": "Needs work",
+    "skillsTitle": "Skill accuracy"
   },
   "settings": {
     "title": "Profile & Settings",
@@ -291,7 +307,9 @@
     "studyReminders": "Daily Study Reminders",
     "testReminders": "Exam Readiness Alerts",
     "saveChanges": "Save Preferences",
-    "savedSuccess": "Preferences saved successfully!"
+    "savedSuccess": "Preferences saved successfully!",
+    "dailyGoal": "Daily Study Goal",
+    "savePreferences": "Save Preferences"
   },
   "common": {
     "minutes": "min",
@@ -302,5 +320,75 @@
     "view": "View",
     "back": "Back",
     "loading": "Loading..."
+  },
+  "testResults": {
+    "passed": "Passed",
+    "failed": "Not passed yet",
+    "finalScore": "Final Score",
+    "sectionBreakdown": "Section Breakdown",
+    "reviewMistakes": "Review Mistakes",
+    "retakeTest": "Retake Test",
+    "backToDashboard": "Back to Dashboard"
+  },
+  "vocab": {
+    "radical": "Radical",
+    "strokeCount": "Strokes",
+    "examples": "Example Sentences",
+    "markedLearned": "Learned ✓",
+    "markAsLearned": "Mark as Learned"
+  },
+  "navShort": {
+    "home": "Home",
+    "levels": "Levels",
+    "practice": "Practice",
+    "vocab": "Vocab",
+    "exams": "Exams"
+  },
+  "admin": {
+    "badge": "Admin area",
+    "title": "Administration",
+    "subtitle": "Students, activity and exam results on HSK Path.",
+    "refresh": "Refresh",
+    "loadError": "Could not load data:",
+    "kpiStudents": "Students",
+    "kpiNew7": "+{count} this week",
+    "kpiActive": "Active (7 days)",
+    "kpiPro": "Pro students",
+    "kpiTests": "Mock exams taken",
+    "kpiPassRate": "{rate}% passed",
+    "byLevel": "Students by level",
+    "avgScore": "Avg. score",
+    "recentTests": "Latest mock exam results",
+    "noTests": "No mock exam taken yet.",
+    "students": "Students",
+    "searchPlaceholder": "Search name or email…",
+    "all": "All",
+    "sortBy": "Sort by",
+    "sortRecent": "Recently active",
+    "sortNewest": "Newest",
+    "sortWords": "Most words",
+    "sortScore": "Best score",
+    "loading": "Loading…",
+    "empty": "No student found.",
+    "colStudent": "Student",
+    "colLevel": "Level",
+    "colWords": "Words",
+    "colTests": "Exams",
+    "colBest": "Best",
+    "colLastActive": "Last active",
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "daysAgo": "{days} days ago",
+    "proGranted": "Pro access granted",
+    "proRemoved": "Pro access removed",
+    "proAccess": "Pro access",
+    "proAccessDesc": "Unlocks all lessons and Pro mock exams",
+    "streak": "Streak",
+    "daysShort": "d",
+    "dailyGoal": "Daily goal",
+    "signedUp": "Signed up",
+    "favorites": "Favorite words",
+    "testHistory": "Mock exam history",
+    "restricted": "This area is reserved for administrators."
   }
 }

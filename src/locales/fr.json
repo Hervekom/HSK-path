@@ -19,7 +19,8 @@
     "profile": "Profil",
     "settings": "Paramètres",
     "help": "Aide & Guide",
-    "signOut": "Déconnexion"
+    "signOut": "Déconnexion",
+    "admin": "Admin"
   },
   "landing": {
     "heroTitle": "Préparez le HSK avec assurance.",
@@ -91,7 +92,10 @@
     "recentActivity": "Activité Récente",
     "noActivity": "Aucune activité récente enregistrée.",
     "practiceNow": "S'entraîner",
-    "accuracy": "Précision"
+    "accuracy": "Précision",
+    "wordsLearned": "mots appris",
+    "streakLabel": "Jours d'affilée",
+    "weeklyGoal": "Objectif : {goal} / semaine"
   },
   "levels": {
     "title": "Choisissez votre niveau HSK",
@@ -119,7 +123,8 @@
     "listeningModule": "Entraînement à l'Écoute",
     "readingModule": "Compréhension Écrite",
     "charactersModule": "Caractères & Tracés",
-    "testsModule": "Examens Blancs Complets"
+    "testsModule": "Examens Blancs Complets",
+    "openModule": "Ouvrir le module"
   },
   "learn": {
     "title": "Centre d'Apprentissage",
@@ -196,7 +201,9 @@
     "listenPrompt": "Écoutez l'audio et sélectionnez la bonne réponse.",
     "readPrompt": "Lisez attentivement le texte et choisissez la bonne option.",
     "characterPrompt": "Pratiquez l'ordre des traits et la mémorisation.",
-    "writePrompt": "Entrez le caractère correspondant dans le champ prévu."
+    "writePrompt": "Entrez le caractère correspondant dans le champ prévu.",
+    "quickQuiz": "Quiz rapide",
+    "grammarQuiz": "Quiz de grammaire"
   },
   "quiz": {
     "question": "Question",
@@ -273,7 +280,16 @@
     "weeklyActivity": "Activité Hebdomadaire",
     "recentScores": "Historique des Examens Blancs",
     "accuracyRate": "Taux de Précision Moyen",
-    "targetExamDate": "Préparation à l'Examen"
+    "targetExamDate": "Préparation à l'Examen",
+    "avgMock": "Score moyen",
+    "passedOf": "{passed}/{total} réussis",
+    "examTime": "Temps d'examen",
+    "noSkillsYet": "Passe un examen blanc pour voir ici ta précision en compréhension orale, écrite et en expression écrite.",
+    "sectionsCount": "{count} section(s)",
+    "levelStrong": "Excellent",
+    "levelOk": "Correct",
+    "levelWork": "À travailler",
+    "skillsTitle": "Précision par compétence"
   },
   "settings": {
     "title": "Profil & Paramètres",
@@ -291,7 +307,9 @@
     "studyReminders": "Rappels d'étude quotidiens",
     "testReminders": "Alertes de préparation examen",
     "saveChanges": "Enregistrer les modifications",
-    "savedSuccess": "Paramètres mis à jour avec succès !"
+    "savedSuccess": "Paramètres mis à jour avec succès !",
+    "dailyGoal": "Objectif d'étude quotidien",
+    "savePreferences": "Enregistrer"
   },
   "common": {
     "minutes": "min",
@@ -302,5 +320,75 @@
     "view": "Voir",
     "back": "Retour",
     "loading": "Chargement..."
+  },
+  "testResults": {
+    "passed": "Réussi",
+    "failed": "Pas encore réussi",
+    "finalScore": "Score final",
+    "sectionBreakdown": "Détail par section",
+    "reviewMistakes": "Revoir mes erreurs",
+    "retakeTest": "Refaire l'examen",
+    "backToDashboard": "Retour au tableau de bord"
+  },
+  "vocab": {
+    "radical": "Radical",
+    "strokeCount": "Traits",
+    "examples": "Phrases d'exemple",
+    "markedLearned": "Appris ✓",
+    "markAsLearned": "Marquer comme appris"
+  },
+  "navShort": {
+    "home": "Accueil",
+    "levels": "Niveaux",
+    "practice": "Pratique",
+    "vocab": "Vocab",
+    "exams": "Examens"
+  },
+  "admin": {
+    "badge": "Espace admin",
+    "title": "Administration",
+    "subtitle": "Élèves, activité et résultats aux examens sur HSK Path.",
+    "refresh": "Actualiser",
+    "loadError": "Impossible de charger les données :",
+    "kpiStudents": "Élèves",
+    "kpiNew7": "+{count} cette semaine",
+    "kpiActive": "Actifs (7 jours)",
+    "kpiPro": "Élèves Pro",
+    "kpiTests": "Examens blancs passés",
+    "kpiPassRate": "{rate}% réussis",
+    "byLevel": "Élèves par niveau",
+    "avgScore": "Score moyen",
+    "recentTests": "Derniers résultats aux examens blancs",
+    "noTests": "Aucun examen blanc passé pour le moment.",
+    "students": "Élèves",
+    "searchPlaceholder": "Rechercher un nom ou un e-mail…",
+    "all": "Tous",
+    "sortBy": "Trier par",
+    "sortRecent": "Activité récente",
+    "sortNewest": "Plus récents",
+    "sortWords": "Plus de mots",
+    "sortScore": "Meilleur score",
+    "loading": "Chargement…",
+    "empty": "Aucun élève trouvé.",
+    "colStudent": "Élève",
+    "colLevel": "Niveau",
+    "colWords": "Mots",
+    "colTests": "Examens",
+    "colBest": "Meilleur",
+    "colLastActive": "Dernière activité",
+    "today": "Aujourd'hui",
+    "yesterday": "Hier",
+    "daysAgo": "Il y a {days} jours",
+    "proGranted": "Accès Pro activé",
+    "proRemoved": "Accès Pro retiré",
+    "proAccess": "Accès Pro",
+    "proAccessDesc": "Débloque toutes les leçons et les examens Pro",
+    "streak": "Série",
+    "daysShort": "j",
+    "dailyGoal": "Objectif quotidien",
+    "signedUp": "Inscrit le",
+    "favorites": "Mots favoris",
+    "testHistory": "Historique des examens blancs",
+    "restricted": "Cet espace est réservé aux administrateurs."
   }
 }

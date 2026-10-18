@@ -87,9 +87,9 @@ export const TestResultsView: React.FC<TestResultsViewProps> = ({
               const secPercent = Math.round((sec.score / sec.maxScore) * 100);
               return (
                 <div key={sec.section} className="p-4 rounded-xl bg-white border border-slate-200 space-y-2">
-                  <div className="flex items-center justify-between text-xs font-bold text-slate-900">
-                    <span className="capitalize">{sec.section} Comprehension</span>
-                    <span>{sec.score} / {sec.maxScore} pts ({secPercent}%)</span>
+                  <div className="flex items-center justify-between gap-3 text-xs font-bold text-slate-900">
+                    <span className="capitalize">{sec.section}</span>
+                    <span className="whitespace-nowrap">{sec.score} / {sec.maxScore} pts ({secPercent}%)</span>
                   </div>
                   <ProgressBar
                     value={secPercent}
@@ -103,7 +103,7 @@ export const TestResultsView: React.FC<TestResultsViewProps> = ({
         </div>
 
         {/* CTA Buttons: Review Mistakes / Retake / Dashboard */}
-        <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3 border-t border-slate-100">
+        <div className="pt-4 flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-3 border-t border-slate-100">
           <Button
             variant="primary"
             size="lg"

@@ -13,6 +13,7 @@ import {
   ChevronRight,
   Flame,
   Layers,
+  Shield,
 } from 'lucide-react';
 import { useI18n } from '../../locales';
 import { LanguageSelector } from '../ui/LanguageSelector';
@@ -26,6 +27,7 @@ interface AppSidebarProps {
   isOpenMobile?: boolean;
   onCloseMobile?: () => void;
   onSignOut?: () => void;
+  isAdmin?: boolean;
 }
 
 export const AppSidebar: React.FC<AppSidebarProps> = ({
@@ -36,6 +38,7 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({
   isOpenMobile = false,
   onCloseMobile,
   onSignOut,
+  isAdmin = false,
 }) => {
   const { t } = useI18n();
 
@@ -48,6 +51,7 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({
     { id: 'mock-tests', labelKey: 'nav.mockTests', icon: FileCheck },
     { id: 'progress', labelKey: 'nav.progress', icon: TrendingUp },
     { id: 'profile', labelKey: 'nav.profile', icon: Settings },
+    ...(isAdmin ? [{ id: 'admin', labelKey: 'nav.admin', icon: Shield }] : []),
   ] as const;
 
   const handleItemClick = (id: any) => {
@@ -155,7 +159,7 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({
             <Flame className="w-4 h-4 text-amber-600 fill-amber-500" />
             <span>Study Streak</span>
           </div>
-          <span className="font-bold">{streakDays} Days</span>
+          <span className="font-bold">{streakDays} {t('dashboard.days')}</span>
         </div>
 
         {/* Interface Language Selector in Sidebar */}

@@ -69,8 +69,9 @@ export const HskLevelsView: React.FC<HskLevelsViewProps> = ({
             >
               <div className="space-y-5">
                 <div className="flex items-center justify-between">
-                  <div className="w-12 h-12 rounded-2xl bg-[#C52828] text-white flex items-center justify-center font-extrabold text-lg shadow-xs font-chinese">
-                    {lvl.name}
+                  <div className="w-12 h-12 rounded-2xl bg-[#C52828] text-white flex flex-col items-center justify-center leading-none shadow-xs shrink-0">
+                    <span className="text-[9px] font-bold tracking-widest opacity-80">HSK</span>
+                    <span className="text-xl font-extrabold">{lvl.name.replace(/\D/g, '')}</span>
                   </div>
                   <div className="flex items-center gap-1.5 flex-wrap justify-end">
                     {isHsk1 ? (

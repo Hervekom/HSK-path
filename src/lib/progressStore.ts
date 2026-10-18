@@ -11,6 +11,7 @@ export interface StoredProgress {
   weeklyMinutes: number;
   lastActiveDate: string | null;
   srs: Record<string, unknown> | null;
+  isPro?: boolean;
 }
 
 interface Row {
@@ -23,6 +24,7 @@ interface Row {
   weekly_minutes: number | null;
   last_active_date: string | null;
   srs: Record<string, unknown> | null;
+  is_pro?: boolean | null;
 }
 
 export async function loadProgress(userId: string): Promise<StoredProgress | null> {
@@ -46,6 +48,7 @@ export async function loadProgress(userId: string): Promise<StoredProgress | nul
     weeklyMinutes: data.weekly_minutes ?? 0,
     lastActiveDate: data.last_active_date,
     srs: data.srs,
+    isPro: Boolean(data.is_pro),
   };
 }
 
@@ -78,4 +81,41 @@ export function computeStreak(prevStreak: number, lastActiveDate: string | null)
   y.setDate(y.getDate() - 1);
   const yesterday = y.toISOString().slice(0, 10);
   return { streak: lastActiveDate === yesterday ? prevStreak + 1 : 1, today };
+}
+
+export async function fetchIsAdmin(): Promise<boolean> {
+  if (!supabase) return false;
+  const { data, error } = await supabase.rpc('is_admin');
+  if (error) return false;
+  return data === true;
+}
+
+export interface AdminStudentRow {
+  user_id: string;
+  profile: Partial<UserProfile> | null;
+  learned_ids: string[] | null;
+  favorite_ids: string[] | null;
+  test_history: TestResult[] | null;
+  streak_days: number | null;
+  weekly_minutes: number | null;
+  last_active_date: string | null;
+  is_pro: boolean | null;
+  created_at: string;
+  updated_at: string;
+}
+
+export async function fetchAllStudents(): Promise<AdminStudentRow[]> {
+  if (!supabase) return [];
+  const { data, error } = await supabase
+    .from('user_progress')
+    .select('user_id, profile, learned_ids, favorite_ids, test_history, streak_days, weekly_minutes, last_active_date, is_pro, created_at, updated_at')
+    .order('updated_at', { ascending: false });
+  if (error) throw error;
+  return (data || []) as AdminStudentRow[];
+}
+
+export async function adminSetPro(userId: string, value: boolean): Promise<void> {
+  if (!supabase) return;
+  const { error } = await supabase.rpc('admin_set_pro', { target: userId, value });
+  if (error) throw error;
 }

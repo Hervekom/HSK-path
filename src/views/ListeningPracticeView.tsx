@@ -153,7 +153,7 @@ export const ListeningPracticeView: React.FC<ListeningPracticeViewProps> = ({ on
 
         {/* Options */}
         <div className="space-y-2.5">
-          {currentEx.options.map((opt) => {
+          {currentEx.options.map((opt, optIdx) => {
             const isSelected = selectedOptionId === opt.id;
             const isCorrect = opt.id === currentEx.correctAnswerId;
 
@@ -189,7 +189,7 @@ export const ListeningPracticeView: React.FC<ListeningPracticeViewProps> = ({ on
                       ? 'bg-rose-600 text-white'
                       : 'bg-slate-100 text-slate-700'
                   }`}>
-                    {opt.id.toUpperCase()}
+                    {/^[a-d]$/i.test(opt.id) ? opt.id.toUpperCase() : String.fromCharCode(65 + optIdx)}
                   </span>
                   <span>{opt.text}</span>
                 </div>

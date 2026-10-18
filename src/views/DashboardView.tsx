@@ -36,6 +36,7 @@ interface DashboardViewProps {
   onNavigate: (view: AppState['currentView']) => void;
   onSelectLevel: (level: 'hsk1' | 'hsk2' | 'hsk3') => void;
   onStartPractice: (skill: SkillType | 'mixed') => void;
+  showSampleData?: boolean;
 }
 
 export const DashboardView: React.FC<DashboardViewProps> = ({
@@ -47,11 +48,15 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
   onNavigate,
   onSelectLevel,
   onStartPractice,
+  showSampleData = false,
 }) => {
   const { t } = useI18n();
 
   const currentLevelMaxWords = user.currentHsk === 'hsk1' ? 150 : user.currentHsk === 'hsk2' ? 300 : 600;
-  const overallPercentage = Math.round((204 / 300) * 100);
+  const overallPercentage = Math.min(100, Math.round((learnedWordCount / currentLevelMaxWords) * 100));
+  const weeklyGoal = (user.dailyGoalMinutes || 20) * 7;
+  const weeklyPct = Math.round((weeklyMinutes / weeklyGoal) * 100);
+  const fmtMinutes = (m: number) => (m >= 60 ? `${Math.floor(m / 60)}h ${String(m % 60).padStart(2, '0')}m` : `${m}m`);
 
   return (
     <div className="space-y-8 animate-in fade-in duration-200">
@@ -94,12 +99,12 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
       {/* 4 Luxury Stats Cards Grid */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
         {/* Stat 1: Current HSK & Progress */}
-        <div className="p-5 rounded-2xl bg-white border border-[#E4DCCE] shadow-2xs space-y-3">
+        <div className="p-4 sm:p-5 rounded-2xl bg-white border border-[#E4DCCE] shadow-2xs space-y-3 min-w-0">
           <div className="flex items-center justify-between">
             <span className="text-[10px] font-bold text-stone-400 uppercase tracking-widest">
               {t('dashboard.currentHsk')}
             </span>
-            <div className="w-7 h-7 rounded-lg bg-[#1C1917] text-white flex items-center justify-center font-bold text-xs">
+            <div className="h-7 px-1.5 rounded-lg bg-[#1C1917] text-white flex items-center justify-center font-bold text-[10px] shrink-0">
               {user.currentHsk.toUpperCase()}
             </div>
           </div>
@@ -111,7 +116,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
         </div>
 
         {/* Stat 2: Vocabulary Mastered */}
-        <div className="p-5 rounded-2xl bg-white border border-[#E4DCCE] shadow-2xs space-y-3">
+        <div className="p-4 sm:p-5 rounded-2xl bg-white border border-[#E4DCCE] shadow-2xs space-y-3 min-w-0">
           <div className="flex items-center justify-between">
             <span className="text-[10px] font-bold text-stone-400 uppercase tracking-widest">
               {t('dashboard.vocabCount')}
@@ -122,15 +127,15 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           </div>
           <div>
             <div className="text-2xl font-black text-stone-900 tracking-tight">
-              204 <span className="text-xs font-normal text-stone-400 uppercase tracking-wider">/ 300</span>
+              {learnedWordCount} <span className="text-xs font-normal text-stone-400 uppercase tracking-wider">/ {currentLevelMaxWords}</span>
             </div>
-            <p className="text-xs text-stone-500 font-medium mt-0.5">Core HSK 2 Words</p>
+            <p className="text-xs text-stone-500 font-medium mt-0.5">{user.currentHsk.toUpperCase()} · {t('dashboard.wordsLearned')}</p>
           </div>
-          <ProgressBar value={204} max={300} color="emerald" size="sm" />
+          <ProgressBar value={learnedWordCount} max={currentLevelMaxWords} color="emerald" size="sm" />
         </div>
 
         {/* Stat 3: Study Streak */}
-        <div className="p-5 rounded-2xl bg-white border border-[#E4DCCE] shadow-2xs space-y-3">
+        <div className="p-4 sm:p-5 rounded-2xl bg-white border border-[#E4DCCE] shadow-2xs space-y-3 min-w-0">
           <div className="flex items-center justify-between">
             <span className="text-[10px] font-bold text-stone-400 uppercase tracking-widest">
               {t('dashboard.studyStreak')}
@@ -143,20 +148,20 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
             <div className="text-2xl font-black text-stone-900 tracking-tight">
               {streakDays} <span className="text-xs font-normal text-stone-400 uppercase tracking-wider">{t('dashboard.days')}</span>
             </div>
-            <p className="text-xs text-amber-800 font-semibold mt-0.5">Active daily streak</p>
+            <p className="text-xs text-amber-800 font-semibold mt-0.5">{t('dashboard.streakLabel')}</p>
           </div>
           <div className="flex gap-1">
             {['M', 'T', 'W', 'T', 'F', 'S', 'S'].map((day, idx) => (
               <div
                 key={day + idx}
-                className={`flex-1 h-1.5 rounded-full ${idx < 6 ? 'bg-amber-500' : 'bg-amber-300 animate-pulse'}`}
+                className={`flex-1 h-1.5 rounded-full ${idx < Math.min(streakDays, 7) ? 'bg-amber-500' : 'bg-stone-200'}`}
               />
             ))}
           </div>
         </div>
 
         {/* Stat 4: Weekly Study Time */}
-        <div className="p-5 rounded-2xl bg-white border border-[#E4DCCE] shadow-2xs space-y-3">
+        <div className="p-4 sm:p-5 rounded-2xl bg-white border border-[#E4DCCE] shadow-2xs space-y-3 min-w-0">
           <div className="flex items-center justify-between">
             <span className="text-[10px] font-bold text-stone-400 uppercase tracking-widest">
               {t('dashboard.weeklyTime')}
@@ -166,12 +171,10 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
             </div>
           </div>
           <div>
-            <div className="text-2xl font-black text-stone-900 tracking-tight">3h 42m</div>
-            <p className="text-xs text-stone-500 font-medium mt-0.5">Goal: 2h 20m / week</p>
+            <div className="text-2xl font-black text-stone-900 tracking-tight">{fmtMinutes(weeklyMinutes)}</div>
+            <p className="text-xs text-stone-500 font-medium mt-0.5">{t('dashboard.weeklyGoal', { goal: fmtMinutes(weeklyGoal) })}</p>
           </div>
-          <div className="text-[11px] font-semibold text-emerald-600">
-            ✓ 112% of weekly target reached
-          </div>
+          <ProgressBar value={Math.min(100, weeklyPct)} color="amber" size="sm" />
         </div>
       </div>
 
@@ -352,6 +355,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
       </div>
 
       {/* Performance & Weak Areas 2-Column Section */}
+      {showSampleData && (
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Left 2 Cols: 7-Day Performance Chart */}
         <div className="lg:col-span-2 p-6 rounded-3xl bg-white border border-[#E4DCCE] shadow-xs space-y-6">
@@ -374,11 +378,11 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           </div>
 
           {/* Clean 7-Day Performance Bar Chart */}
-          <div className="h-44 flex items-end justify-between gap-3 pt-6 pb-2 px-2 border-b border-stone-100">
+          <div className="h-44 flex items-end justify-between gap-1.5 sm:gap-3 pt-8 pb-2 px-0 sm:px-2 border-b border-stone-100">
             {WEEKLY_PERFORMANCE_HISTORY.map((item, idx) => (
-              <div key={item.day} className="flex-1 flex flex-col items-center gap-2 group h-full justify-end">
+              <div key={item.day} className="relative flex-1 min-w-0 flex flex-col items-center gap-2 group h-full justify-end">
                 {/* Tooltip on hover */}
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity text-[11px] font-bold text-stone-900 bg-stone-100 px-1.5 py-0.5 rounded shadow-2xs -mb-1">
+                <div className="absolute -top-7 left-1/2 -translate-x-1/2 whitespace-nowrap pointer-events-none z-10 opacity-0 group-hover:opacity-100 transition-opacity text-[11px] font-bold text-stone-900 bg-stone-100 px-1.5 py-0.5 rounded shadow-2xs -mb-1">
                   {item.accuracy}%
                 </div>
                 {/* Bar */}
@@ -463,6 +467,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           </Button>
         </div>
       </div>
+      )}
 
       {/* Recent Activity Section */}
       <div className="space-y-4">
