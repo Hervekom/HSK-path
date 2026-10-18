@@ -632,6 +632,7 @@ function HskPathApp() {
             onNavigate={navigate}
             user={user}
             streakDays={streakDays}
+            fullBleed
           >
             <TutorView
               user={user}

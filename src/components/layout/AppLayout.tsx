@@ -13,6 +13,8 @@ interface AppLayoutProps {
   children: React.ReactNode;
   onSignOut?: () => void;
   isAdmin?: boolean;
+  /** Full-screen tool (Laoshi chat): no side padding on phones, page height fixed to the screen. */
+  fullBleed?: boolean;
 }
 
 export const AppLayout: React.FC<AppLayoutProps> = ({
@@ -23,6 +25,7 @@ export const AppLayout: React.FC<AppLayoutProps> = ({
   children,
   onSignOut,
   isAdmin = false,
+  fullBleed = false,
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -50,7 +53,13 @@ export const AppLayout: React.FC<AppLayoutProps> = ({
           onOpenMobileMenu={() => setMobileMenuOpen(true)}
           isAdmin={isAdmin}
         />
-        <main className="flex-1 px-4 pt-4 pb-24 sm:px-6 sm:pt-6 lg:p-8 max-w-7xl w-full mx-auto text-[#231F20] min-w-0">
+        <main
+          className={
+            fullBleed
+              ? 'flex-1 pb-[calc(4rem+env(safe-area-inset-bottom))] lg:p-6 max-w-7xl w-full mx-auto text-[#231F20] min-w-0'
+              : 'flex-1 px-4 pt-4 pb-24 sm:px-6 sm:pt-6 lg:p-8 max-w-7xl w-full mx-auto text-[#231F20] min-w-0'
+          }
+        >
           <SectionTabs currentView={currentView} onNavigate={onNavigate} />
           {children}
         </main>

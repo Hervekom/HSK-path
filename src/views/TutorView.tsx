@@ -210,6 +210,11 @@ export const TutorView: React.FC<TutorViewProps> = ({ user, isSignedIn, knownWor
     listRef.current?.scrollTo({ top: listRef.current.scrollHeight, behavior: 'smooth' });
   }, [messages, sending]);
 
+  // Shrink the input back after sending.
+  useEffect(() => {
+    if (!input && inputRef.current) inputRef.current.style.height = '';
+  }, [input]);
+
   // Today's allowance on the shared key.
   useEffect(() => {
     if (!supabase || !isSignedIn) return;
@@ -313,45 +318,58 @@ export const TutorView: React.FC<TutorViewProps> = ({ user, isSignedIn, knownWor
 
   const onlyGreeting = messages.length === 1 && messages[0].local;
 
+  const quotaText = ownKey
+    ? tr('Using your own API key')
+    : quota
+      ? tr('{used}/{limit} free messages today').replace('{used}', String(quota.used)).replace('{limit}', String(quota.limit))
+      : tr('Your AI Chinese teacher');
+  const iconBtn =
+    'h-8 w-8 sm:h-9 sm:w-9 flex items-center justify-center rounded-lg sm:rounded-xl border border-[#E6DFD3] bg-white text-stone-600 hover:text-stone-900 cursor-pointer';
+
   return (
-    <div className="flex flex-col h-[calc(100dvh-10.5rem)] sm:h-[calc(100dvh-11.5rem)] lg:h-[calc(100dvh-8rem)] min-h-[440px] animate-in fade-in duration-150">
-      {/* Header */}
-      <div className="flex flex-wrap items-center justify-between gap-3 pb-3">
-        <div className="flex items-center gap-3 min-w-0">
-          <div className="w-11 h-11 shrink-0 rounded-xl bg-[#1C1917] border border-stone-800 flex items-center justify-center relative overflow-hidden">
-            <span className="font-hanzi-serif font-bold text-xl text-[#FAF8F5]">师</span>
+    // Fills the screen between the app header and the phone tab bar (no page scroll).
+    <div className="flex flex-col h-[calc(100dvh-7.5rem-env(safe-area-inset-bottom))] sm:h-[calc(100dvh-8rem-env(safe-area-inset-bottom))] lg:h-[calc(100dvh-7rem)] min-h-[360px] animate-in fade-in duration-150">
+      {/* Toolbar: one compact row (the page title is already in the app header on phones) */}
+      <div className="shrink-0 flex items-center justify-between gap-2 px-3 py-2 sm:px-4 lg:px-0 lg:pt-0 lg:pb-3 border-b border-[#E6DFD3] lg:border-0">
+        <div className="flex items-center gap-2.5 lg:gap-3 min-w-0">
+          <div className="w-8 h-8 lg:w-11 lg:h-11 shrink-0 rounded-lg lg:rounded-xl bg-[#1C1917] border border-stone-800 flex items-center justify-center relative overflow-hidden">
+            <span className="font-hanzi-serif font-bold text-base lg:text-xl text-[#FAF8F5]">师</span>
             <div className="absolute inset-x-0 bottom-0 h-0.5 bg-[#C52828]" />
           </div>
           <div className="min-w-0">
-            <h1 className="text-lg sm:text-xl font-extrabold text-stone-950 tracking-tight leading-tight">
+            <h1 className="hidden lg:block text-xl font-extrabold text-stone-950 tracking-tight leading-tight">
               {tr('Laoshi')} <span className="font-hanzi-serif text-[#C52828]">老师</span>
             </h1>
-            <p className="text-xs text-stone-500 truncate">
-              {ownKey ? tr('Using your own API key') : quota ? tr('{used}/{limit} free messages today').replace('{used}', String(quota.used)).replace('{limit}', String(quota.limit)) : tr('Your AI Chinese teacher')}
-            </p>
+            <p className="hidden sm:block text-xs text-stone-500 leading-tight truncate">{quotaText}</p>
+            {/* Phones: just the counter, the page title is in the app header */}
+            {(ownKey || quota) && (
+              <p className="sm:hidden text-[11px] font-semibold text-stone-500 leading-tight whitespace-nowrap" title={quotaText}>
+                {ownKey ? tr('Own key') : `${quota!.used}/${quota!.limit}`}
+              </p>
+            )}
           </div>
         </div>
 
-        <div className="flex items-center gap-1.5">
-          <div className="flex rounded-xl border border-[#E6DFD3] bg-white p-0.5" role="group" aria-label={tr('Level')}>
+        <div className="flex items-center gap-1 sm:gap-1.5 shrink-0">
+          <div className="flex rounded-lg sm:rounded-xl border border-[#E6DFD3] bg-white p-0.5" role="group" aria-label={tr('Level')}>
             {(['hsk1', 'hsk2', 'hsk3'] as Level[]).map((l) => (
               <button
                 key={l}
                 onClick={() => changeLevel(l)}
-                className={`px-2.5 py-1 text-xs font-bold rounded-lg transition-colors cursor-pointer ${
+                className={`h-7 sm:h-8 min-w-7 px-1.5 sm:px-2.5 text-xs font-bold rounded-md sm:rounded-lg transition-colors cursor-pointer ${
                   level === l ? 'bg-[#1C1917] text-white' : 'text-stone-600 hover:text-stone-900'
                 }`}
                 aria-pressed={level === l}
+                aria-label={l.toUpperCase().replace('HSK', 'HSK ')}
               >
-                {l.toUpperCase().replace('HSK', 'HSK ')}
+                <span className="hidden sm:inline">HSK </span>
+                {l.slice(3)}
               </button>
             ))}
           </div>
           <button
             onClick={() => setShowPinyin((v) => !v)}
-            className={`h-9 px-2.5 rounded-xl border text-xs font-bold cursor-pointer transition-colors ${
-              showPinyin ? 'border-[#E6DFD3] bg-white text-[#9A3412]' : 'border-[#E6DFD3] bg-white text-stone-400'
-            }`}
+            className={`${iconBtn} !w-auto px-2 text-xs font-bold ${showPinyin ? '!text-[#9A3412]' : '!text-stone-400'}`}
             title={showPinyin ? tr('Hide Pinyin') : tr('Show Pinyin')}
             aria-label={showPinyin ? tr('Hide Pinyin') : tr('Show Pinyin')}
           >
@@ -359,18 +377,13 @@ export const TutorView: React.FC<TutorViewProps> = ({ user, isSignedIn, knownWor
           </button>
           <button
             onClick={() => setShowTranslation((v) => !v)}
-            className="h-9 w-9 flex items-center justify-center rounded-xl border border-[#E6DFD3] bg-white text-stone-600 hover:text-stone-900 cursor-pointer"
+            className={iconBtn}
             title={showTranslation ? tr('Hide Translation') : tr('Show Translation')}
             aria-label={showTranslation ? tr('Hide Translation') : tr('Show Translation')}
           >
             {showTranslation ? <Eye className="w-4 h-4" /> : <EyeOff className="w-4 h-4" />}
           </button>
-          <button
-            onClick={() => startNew()}
-            className="h-9 w-9 flex items-center justify-center rounded-xl border border-[#E6DFD3] bg-white text-stone-600 hover:text-stone-900 cursor-pointer"
-            title={tr('New conversation')}
-            aria-label={tr('New conversation')}
-          >
+          <button onClick={() => startNew()} className={iconBtn} title={tr('New conversation')} aria-label={tr('New conversation')}>
             <RotateCcw className="w-4 h-4" />
           </button>
           <button
@@ -378,9 +391,7 @@ export const TutorView: React.FC<TutorViewProps> = ({ user, isSignedIn, knownWor
               setSettingsOpen(true);
               setKeyNotice(null);
             }}
-            className={`h-9 w-9 flex items-center justify-center rounded-xl border bg-white cursor-pointer ${
-              ownKey ? 'border-[#0F766E] text-[#0F766E]' : 'border-[#E6DFD3] text-stone-600 hover:text-stone-900'
-            }`}
+            className={`${iconBtn} ${ownKey ? '!border-[#0F766E] !text-[#0F766E]' : ''}`}
             title={tr('Settings')}
             aria-label={tr('Settings')}
           >
@@ -390,8 +401,11 @@ export const TutorView: React.FC<TutorViewProps> = ({ user, isSignedIn, knownWor
       </div>
 
       {/* Conversation */}
-      <div className="flex-1 min-h-0 flex flex-col rounded-2xl border border-[#E6DFD3] bg-white overflow-hidden">
-        <div ref={listRef} className="flex-1 min-h-0 overflow-y-auto px-3 sm:px-5 py-4 space-y-4" aria-live="polite">
+      <div className="flex-1 min-h-0 flex flex-col bg-white lg:rounded-2xl lg:border lg:border-[#E6DFD3] overflow-hidden">
+        <div ref={listRef} className="flex-1 min-h-0 overflow-y-auto px-3 sm:px-5 py-3 sm:py-4 space-y-4" aria-live="polite">
+          <p className="text-[11px] text-stone-400 text-center leading-snug max-w-md mx-auto">
+            {tr('Laoshi is an AI: he can make mistakes. Conversations stay in this browser and are not saved by HSK Path.')}
+          </p>
           {messages.map((m) =>
             m.role === 'user' ? (
               <div key={m.id} className="flex justify-end">
@@ -403,17 +417,17 @@ export const TutorView: React.FC<TutorViewProps> = ({ user, isSignedIn, knownWor
               </div>
             ) : m.error ? (
               <div key={m.id} className="flex">
-                <div className="max-w-[90%] sm:max-w-[75%] flex gap-2 rounded-2xl rounded-bl-md border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
+                <div className="max-w-[94%] sm:max-w-[78%] flex gap-2 rounded-2xl rounded-bl-md border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
                   <AlertCircle className="w-4 h-4 mt-0.5 shrink-0" />
                   <span>{m.error}</span>
                 </div>
               </div>
             ) : (
               <div key={m.id} className="flex gap-2.5">
-                <div className="w-8 h-8 shrink-0 rounded-lg bg-[#1C1917] flex items-center justify-center mt-0.5">
+                <div className="hidden sm:flex w-8 h-8 shrink-0 rounded-lg bg-[#1C1917] items-center justify-center mt-0.5">
                   <span className="font-hanzi-serif font-bold text-sm text-[#FAF8F5]">师</span>
                 </div>
-                <div className="max-w-[88%] sm:max-w-[75%] space-y-2 min-w-0">
+                <div className="max-w-[94%] sm:max-w-[78%] space-y-2 min-w-0">
                   {m.reply?.correction && (
                     <div className="rounded-xl border border-[#F2D3CC] bg-[#FDF3F1] px-3.5 py-2.5 space-y-1.5">
                       <p className="text-[11px] font-bold uppercase tracking-wider text-[#C52828]">{tr('Correction')}</p>
@@ -432,7 +446,7 @@ export const TutorView: React.FC<TutorViewProps> = ({ user, isSignedIn, knownWor
                       {m.reply.correction.explanation && <p className="text-sm text-stone-700 leading-relaxed">{m.reply.correction.explanation}</p>}
                     </div>
                   )}
-                  <div className="rounded-2xl rounded-tl-md bg-[#FAF8F5] border border-[#EFE9DF] px-4 py-3 space-y-1.5">
+                  <div className="rounded-2xl rounded-tl-md bg-[#FAF8F5] border border-[#EFE9DF] px-3.5 sm:px-4 py-2.5 sm:py-3 space-y-1.5">
                     <ChineseLine text={m.text} pinyin={pinyin} showPinyin={showPinyin} big />
                     {showTranslation && m.reply?.translation && (
                       <p className="text-sm text-stone-500 leading-relaxed border-t border-[#EFE9DF] pt-1.5">{m.reply.translation}</p>
@@ -494,13 +508,18 @@ export const TutorView: React.FC<TutorViewProps> = ({ user, isSignedIn, knownWor
             e.preventDefault();
             send(input);
           }}
-          className="border-t border-[#EFE9DF] p-2.5 sm:p-3 flex items-end gap-2"
+          className="shrink-0 border-t border-[#EFE9DF] px-2.5 py-2 sm:p-3 flex items-end gap-2 bg-white"
         >
           <div className="flex-1 min-w-0">
             <textarea
               ref={inputRef}
               value={input}
-              onChange={(e) => setInput(e.target.value.slice(0, MAX_CHARS))}
+              onChange={(e) => {
+                setInput(e.target.value.slice(0, MAX_CHARS));
+                const el = e.target;
+                el.style.height = 'auto';
+                el.style.height = `${Math.min(el.scrollHeight, 128)}px`;
+              }}
               onKeyDown={(e) => {
                 if (e.key === 'Enter' && !e.shiftKey && !e.nativeEvent.isComposing) {
                   e.preventDefault();
@@ -522,7 +541,7 @@ export const TutorView: React.FC<TutorViewProps> = ({ user, isSignedIn, knownWor
           <Button
             type="submit"
             disabled={!input.trim() || sending || !isSignedIn}
-            className="h-11 shrink-0"
+            className="h-11 w-11 sm:w-auto !px-0 sm:!px-4 shrink-0"
             icon={<Send className="w-4 h-4" weight="fill" />}
             aria-label={tr('Send')}
           >
@@ -530,10 +549,6 @@ export const TutorView: React.FC<TutorViewProps> = ({ user, isSignedIn, knownWor
           </Button>
         </form>
       </div>
-
-      <p className="pt-2 text-[11px] text-stone-400 text-center leading-snug">
-        {tr('Laoshi is an AI: he can make mistakes. Conversations stay in this browser and are not saved by HSK Path.')}
-      </p>
 
       {/* Own key settings */}
       {settingsOpen && (

@@ -23,6 +23,7 @@ export const LAOSHI_STRINGS: Record<string, { fr?: string; zh?: string }> = {
   "Show Translation": { fr: "Afficher la traduction", zh: "显示翻译" },
   "Hide Translation": { fr: "Masquer la traduction", zh: "隐藏翻译" },
   "{used}/{limit} free messages today": { fr: "{used}/{limit} messages gratuits aujourd'hui", zh: "今天已用 {used}/{limit} 条免费消息" },
+  "Own key": { fr: "Ma clé", zh: "我的密钥" },
   "Using your own API key": { fr: "Avec votre propre clé API", zh: "正在使用你自己的 API 密钥" },
   "Say hello": { fr: "Dire bonjour", zh: "打招呼" },
   "Give me an exercise": { fr: "Un exercice", zh: "给我一个练习" },
