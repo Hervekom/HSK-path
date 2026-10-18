@@ -35,7 +35,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
 }) => {
   const { t } = useI18n();
 
-  const currentLevelMaxWords = user.currentHsk === 'hsk1' ? 150 : user.currentHsk === 'hsk2' ? 300 : 600;
+  const currentLevelMaxWords = user.currentHsk === 'hsk1' ? 300 : user.currentHsk === 'hsk2' ? 500 : 1000;
   const overallPercentage = Math.min(100, Math.round((learnedWordCount / currentLevelMaxWords) * 100));
   const weeklyGoal = (user.dailyGoalMinutes || 20) * 7;
   const weeklyPct = Math.round((weeklyMinutes / weeklyGoal) * 100);

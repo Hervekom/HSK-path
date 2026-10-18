@@ -1,5 +1,6 @@
 import React from 'react';
 import { tr } from '../locales/tr';
+import { Hsk30Notice } from '../components/ui/Hsk30Notice';
 import { Layers, ChevronRight, CheckCircle2, BookOpen, Headphones, FileText, Sparkles, Award, ShieldCheck } from '../components/icons';
 import { useI18n } from '../locales';
 import { HSK_LEVELS, FUTURE_HSK_LEVELS } from '../data/hskLevels';
@@ -30,6 +31,8 @@ export const HskLevelsView: React.FC<HskLevelsViewProps> = ({
 
   return (
     <div className="space-y-8 animate-in fade-in duration-150">
+      <Hsk30Notice />
+
       {/* Title Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
@@ -183,10 +186,10 @@ export const HskLevelsView: React.FC<HskLevelsViewProps> = ({
         </div>
         <p className="text-xs sm:text-sm text-stone-300 max-w-3xl leading-relaxed">
           {language === 'fr'
-            ? 'La structure de l\'application et les générateurs d\'exercices sont prêts pour accueillir le vocabulaire avancé, les articles de presse et les épreuves de rédaction longue des niveaux supérieurs.'
+            ? 'Prochaines étapes, selon le programme HSK 3.0 : HSK 4 (2 000 mots), HSK 5 (3 600 mots) et HSK 6 (5 400 mots).'
             : language === 'zh'
-            ? '架构已为 HSK 4-6 级高级词汇、时事长文阅读与论述文书写全面预留。'
-            : 'The platform architecture is fully prepared to scale up to advanced HSK 4-6 news reading, speech comprehension, and long-form essay evaluation.'}
+            ? '下一步将按 HSK 3.0 新大纲推出：HSK 4（2000 词）、HSK 5（3600 词）、HSK 6（5400 词）。'
+            : 'Next, following the HSK 3.0 syllabus: HSK 4 (2,000 words), HSK 5 (3,600 words) and HSK 6 (5,400 words).'}
         </p>
       </div>
     </div>

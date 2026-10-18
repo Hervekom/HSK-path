@@ -263,7 +263,14 @@ export function loadSRSState(words: VocabularyWord[]): Record<string, WordSRSDat
     console.warn('Failed to parse saved SRS state from localStorage:', err);
   }
 
-  const initialSeed = generateInitialSRSSeed(words);
+  // Real learners start with an empty review queue; the demo gets a few sample review states.
+  let isDemo = false;
+  try {
+    isDemo = sessionStorage.getItem('hsk_demo') === '1';
+  } catch {
+    isDemo = false;
+  }
+  const initialSeed = isDemo ? generateInitialSRSSeed(words.filter((w) => w.id.startsWith('v-'))) : {};
   try {
     localStorage.setItem(SRS_STORAGE_KEY, JSON.stringify(initialSeed));
   } catch (e) {

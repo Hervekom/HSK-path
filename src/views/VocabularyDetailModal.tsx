@@ -1,5 +1,5 @@
 import React from 'react';
-import { tr } from '../locales/tr';
+import { tr, trPos } from '../locales/tr';
 import {
   Volume2,
   Star,
@@ -42,7 +42,7 @@ export const VocabularyDetailModal: React.FC<VocabularyDetailModalProps> = ({
         <div className="flex items-center justify-between pb-3 border-b border-slate-100">
           <div className="flex items-center gap-2">
             <Badge variant={word.level as any}>{word.level.toUpperCase()}</Badge>
-            <Badge variant="neutral">{tr(word.partOfSpeech)}</Badge>
+            <Badge variant="neutral">{trPos(word.partOfSpeech)}</Badge>
           </div>
           <div className="flex items-center gap-2">
             <button

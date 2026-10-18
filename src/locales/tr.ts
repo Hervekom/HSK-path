@@ -21,3 +21,12 @@ export function tr(english: string | null | undefined): string | undefined {
   const value = entry ? entry[currentLanguage as 'fr' | 'zh'] : undefined;
   return value !== undefined ? value : english;
 }
+
+/** Translate a part-of-speech label such as "verb / noun". */
+export function trPos(pos: string | undefined): string {
+  if (!pos) return '';
+  return pos
+    .split(' / ')
+    .map((p) => tr(p))
+    .join(' / ');
+}

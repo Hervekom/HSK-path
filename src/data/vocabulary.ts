@@ -1,6 +1,7 @@
 import type { VocabularyWord } from '../types';
+import { HSK30_WORDS } from './hsk30Words';
 
-export const VOCABULARY_DATA: VocabularyWord[] = [
+const LEGACY_WORDS: VocabularyWord[] = [
   // ===================== HSK 1 =====================
   {
     id: 'v-hsk1-01',
@@ -466,3 +467,48 @@ export const VOCABULARY_DATA: VocabularyWord[] = [
     tags: ['academic', 'formal'],
   },
 ];
+
+// ---------------------------------------------------------------------------
+// HSK 3.0 vocabulary (official 2025 syllabus, levels 1–3 = 1,000 words).
+// Hand-written entries above (with example sentences) enrich the matching official words
+// and keep their original ids so existing learner progress is preserved.
+// ---------------------------------------------------------------------------
+const POS_LABELS: Record<string, string> = {
+  名: 'noun', 动: 'verb', 形: 'adjective', 副: 'adverb', 代: 'pronoun', 数: 'numeral', 量: 'measure word',
+  介: 'preposition', 连: 'conjunction', 助: 'particle', 叹: 'interjection', 拟声: 'onomatopoeia',
+  前缀: 'prefix', 后缀: 'suffix', 数量: 'numeral + measure word',
+};
+
+function posToEnglish(pos: string): string {
+  const parts = pos
+    .replace(/[（）()]/g, '')
+    .split(/[、,，]/)
+    .map((p) => p.trim())
+    .filter(Boolean)
+    .map((p) => POS_LABELS[p] || p);
+  return parts.length ? [...new Set(parts)].join(' / ') : 'phrase';
+}
+
+const legacyByHanzi = new Map(LEGACY_WORDS.map((w) => [w.hanzi, w]));
+const usedLegacy = new Set<string>();
+
+export const VOCABULARY_DATA: VocabularyWord[] = HSK30_WORDS.map(([sid, level, hanzi, pinyin, pos, en, fr]) => {
+  const legacy = legacyByHanzi.get(hanzi);
+  const base: VocabularyWord = {
+    id: `h30-${sid}`,
+    level: `hsk${level}` as VocabularyWord['level'],
+    hanzi,
+    pinyin,
+    meaning: { en, fr, zh: en },
+    partOfSpeech: posToEnglish(pos),
+    tags: ['hsk3.0'],
+  };
+  if (legacy && !usedLegacy.has(legacy.id)) {
+    usedLegacy.add(legacy.id);
+    return { ...legacy, ...base, id: legacy.id, meaning: { en: legacy.meaning.en, fr: legacy.meaning.fr, zh: legacy.meaning.en } };
+  }
+  return base;
+});
+
+/** Official cumulative vocabulary targets (HSK 3.0, 2025 syllabus). */
+export const HSK30_TARGETS = { hsk1: 300, hsk2: 500, hsk3: 1000 } as const;

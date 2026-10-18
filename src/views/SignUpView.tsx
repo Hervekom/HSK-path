@@ -155,9 +155,9 @@ export const SignUpView: React.FC<SignUpViewProps> = ({ onNavigate, onSignUpSucc
               </label>
               <div className="grid grid-cols-3 gap-2">
                 {[
-                  { id: 'hsk1', label: tr("HSK 1"), sub: tr("150 words") },
-                  { id: 'hsk2', label: tr("HSK 2"), sub: tr("300 words") },
-                  { id: 'hsk3', label: tr("HSK 3"), sub: tr("600 words") },
+                  { id: 'hsk1', label: tr("HSK 1"), sub: tr("300 words") },
+                  { id: 'hsk2', label: tr("HSK 2"), sub: tr("500 words") },
+                  { id: 'hsk3', label: tr("HSK 3"), sub: tr("1,000 words") },
                 ].map((item) => (
                   <button
                     key={item.id}

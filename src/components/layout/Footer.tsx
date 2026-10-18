@@ -47,17 +47,17 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <ul className="space-y-2 text-xs sm:text-sm text-stone-400">
               <li>
                 <button onClick={() => onNavigate('hsk-detail')} className="hover:text-[#FAF8F5] transition-colors cursor-pointer">
-                  {tr("HSK 1 (150 words)")}
+                  {tr("HSK 1 (300 words)")}
                 </button>
               </li>
               <li>
                 <button onClick={() => onNavigate('hsk-detail')} className="hover:text-[#FAF8F5] transition-colors cursor-pointer">
-                  {tr("HSK 2 (300 words)")}
+                  {tr("HSK 2 (500 words)")}
                 </button>
               </li>
               <li>
                 <button onClick={() => onNavigate('hsk-detail')} className="hover:text-[#FAF8F5] transition-colors cursor-pointer">
-                  {tr("HSK 3 (600 words)")}
+                  {tr("HSK 3 (1,000 words)")}
                 </button>
               </li>
               <li className="text-stone-600 text-xs">
@@ -123,6 +123,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         {/* Bottom copyright & seal */}
         <div className="mt-14 pt-8 border-t border-stone-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500">
           <p>{tr("© 2026 HSK Path")}</p>
+          <p className="text-[11px] text-stone-600 text-center sm:text-right">
+            {tr("Vocabulary: official HSK 3.0 syllabus (2025). Definitions based on CC-CEDICT (CC BY-SA 4.0).")}
+          </p>
         </div>
       </div>
     </footer>

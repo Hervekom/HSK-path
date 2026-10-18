@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { tr } from '../locales/tr';
+import { tr, trPos } from '../locales/tr';
 import {
   Brain,
   RotateCw,
@@ -226,7 +226,7 @@ export const SrsReviewModal: React.FC<SrsReviewModalProps> = ({
               <div className="flex items-center justify-between" onClick={(e) => e.stopPropagation()}>
                 <div className="flex items-center gap-2">
                   <Badge variant={currentWord.level as any}>{currentWord.level.toUpperCase()}</Badge>
-                  <Badge variant="neutral">{tr(currentWord.partOfSpeech)}</Badge>
+                  <Badge variant="neutral">{trPos(currentWord.partOfSpeech)}</Badge>
                 </div>
 
                 <div className="flex items-center gap-2">

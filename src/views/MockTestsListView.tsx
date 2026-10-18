@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { tr } from '../locales/tr';
+import { Hsk30Notice } from '../components/ui/Hsk30Notice';
 import { Clock, Award, Lock, Sparkles, ChevronRight, ShieldCheck, CheckCircle2, ArrowUpRight } from '../components/icons';
 import { useI18n } from '../locales';
 import { MOCK_TESTS_CATALOG } from '../data/mockTests';
@@ -84,6 +85,8 @@ export const MockTestsListView: React.FC<MockTestsListViewProps> = ({
           </Button>
         </div>
       </div>
+
+      <Hsk30Notice variant="mock" />
 
       {/* Header & Filter Tabs */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">

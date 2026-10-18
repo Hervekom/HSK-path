@@ -113,9 +113,9 @@ export const ProfileSettingsView: React.FC<ProfileSettingsViewProps> = ({
             </label>
             <div className="grid grid-cols-3 gap-3">
               {[
-                { id: 'hsk1', label: tr("HSK 1"), sub: tr("Beginner (150 words)") },
-                { id: 'hsk2', label: tr("HSK 2"), sub: tr("Elementary (300 words)") },
-                { id: 'hsk3', label: tr("HSK 3"), sub: tr("Intermediate (600 words)") },
+                { id: 'hsk1', label: tr("HSK 1"), sub: tr("Beginner (300 words)") },
+                { id: 'hsk2', label: tr("HSK 2"), sub: tr("Elementary (500 words)") },
+                { id: 'hsk3', label: tr("HSK 3"), sub: tr("Intermediate (1,000 words)") },
               ].map((lvl) => (
                 <button
                   key={lvl.id}

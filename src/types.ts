@@ -31,7 +31,7 @@ export interface VocabularyWord {
   pinyin: string;
   meaning: MultiLingualText;
   partOfSpeech: string;
-  exampleSentence: {
+  exampleSentence?: {
     hanzi: string;
     pinyin: string;
     translation: MultiLingualText;

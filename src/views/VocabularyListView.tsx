@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { tr } from '../locales/tr';
+import { tr, trPos } from '../locales/tr';
 import {
   Search,
   BookOpen,
@@ -58,6 +58,8 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
   const [activeTab, setActiveTab] = useState<'all' | 'due' | 'flashcards'>('all');
 
   const [searchQuery, setSearchQuery] = useState('');
+  const PAGE_SIZE = 60;
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [selectedLevel, setSelectedLevel] = useState<'all' | 'hsk1' | 'hsk2' | 'hsk3'>('all');
   const [selectedStatus, setSelectedStatus] = useState<'all' | 'learned' | 'favorite' | 'unlearned'>('all');
   const [activeWordModal, setActiveWordModal] = useState<VocabularyWord | null>(null);
@@ -178,6 +180,10 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
 
   // Active card in flashcard or SRS mode
   const currentCardList = activeTab === 'due' ? dueWords : filteredWords;
+
+  useEffect(() => {
+    setVisibleCount(PAGE_SIZE);
+  }, [searchQuery, selectedLevel, selectedStatus]);
   const activeFlashcard = currentCardList[sessionIndex] || currentCardList[0];
 
   return (
@@ -343,7 +349,7 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
                 <span className="text-xs font-semibold text-stone-400">
                   {isCardFlipped ? tr("Back (Meaning & Recall)") : tr("Click anywhere to Flip")}
                 </span>
-                <Badge variant="neutral">{tr(activeFlashcard.partOfSpeech)}</Badge>
+                <Badge variant="neutral">{trPos(activeFlashcard.partOfSpeech)}</Badge>
               </div>
 
               {/* Card Center Body in Tianzige grid */}
@@ -567,8 +573,9 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
 
           {/* Cards Grid */}
           {filteredWords.length > 0 ? (
+            <>
             <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4">
-              {filteredWords.map((word) => {
+              {filteredWords.slice(0, visibleCount).map((word) => {
                 const isPinyinVisible = showPinyin || revealedPinyinIds.has(word.id);
                 const srsData = srsMap[word.id];
                 const stage = getSRSStage(srsData);
@@ -675,7 +682,7 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
                       onClick={(e) => e.stopPropagation()}
                     >
                       <span className="text-[10px] font-bold text-stone-400 uppercase tracking-wider">
-                        {tr(word.partOfSpeech)}
+                        {trPos(word.partOfSpeech)}
                       </span>
                       <SpeechButton text={word.hanzi} size="sm" />
                     </div>
@@ -683,6 +690,14 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
                 );
               })}
             </div>
+            {filteredWords.length > visibleCount && (
+              <div className="flex justify-center pt-2">
+                <Button variant="outline" size="md" onClick={() => setVisibleCount((n) => n + PAGE_SIZE)}>
+                  {tr("Show more words")} ({filteredWords.length - visibleCount})
+                </Button>
+              </div>
+            )}
+            </>
           ) : (
             <div className="text-center py-16 bg-white rounded-3xl border border-[#E4DCCE] space-y-3">
               <BookOpen className="w-10 h-10 text-stone-300 mx-auto" />

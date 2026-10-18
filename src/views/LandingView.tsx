@@ -60,7 +60,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
               <div className="inline-flex items-center gap-2.5 px-3 py-1 rounded-full bg-white border border-[#E0D7CB] shadow-2xs">
                 <span className="w-2 h-2 rounded-full bg-[#C52828]" />
                 <span className="text-[11px] font-bold text-stone-800 uppercase tracking-widest">
-                  {tr("HSK 1 · 2 · 3 preparation")}
+                  {tr("New HSK 3.0 syllabus · HSK 1 to 3")}
                 </span>
               </div>
 
@@ -259,7 +259,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
                   }`}
                 >
                   {lvl.toUpperCase()} (
-                  {lvl === 'hsk1' ? tr("150 Words") : lvl === 'hsk2' ? tr("300 Words") : tr("600 Words")})
+                  {lvl === 'hsk1' ? tr("300 Words") : lvl === 'hsk2' ? tr("500 Words") : tr("1,000 Words")})
                 </button>
               ))}
             </div>
@@ -374,7 +374,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
                 {tr("Curriculum Roadmap")}
               </div>
               <h4 className="text-sm sm:text-base font-bold text-stone-900">
-                {tr("HSK 4 (1,200 words), HSK 5 (2,500 words) & HSK 6 (5,000 words)")}
+                {tr("HSK 4 (2,000 words), HSK 5 (3,600 words) & HSK 6 (5,400 words)")}
               </h4>
               <p className="text-xs text-stone-500">
                 {t('levels.roadmapNote')}{" "}{tr("Planned for a later version.")}
@@ -659,7 +659,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
                 <ul className="space-y-2.5 text-xs text-stone-700 pt-3 border-t border-[#EDE6DC]">
                   <li className="flex items-center gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span><strong>{tr("100% Free HSK 1:")}</strong>{" "}{tr("All 150 vocabulary words & lessons")}</span>
+                    <span><strong>{tr("100% Free HSK 1:")}</strong>{" "}{tr("All 300 vocabulary words & lessons")}</span>
                   </li>
                   <li className="flex items-center gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />

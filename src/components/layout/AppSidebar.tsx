@@ -78,7 +78,7 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({
           <div className="flex flex-col">
             <span className="font-bold text-lg text-stone-900 tracking-tight leading-none">{tr("HSK Path")}</span>
             <span className="text-[10px] text-stone-500 font-semibold uppercase tracking-wider mt-1">
-              {tr("HSK 1–3")}
+              {tr("HSK 3.0 · levels 1–3")}
             </span>
           </div>
         </div>
