@@ -188,7 +188,7 @@ export const LoginView: React.FC<LoginViewProps> = ({ onNavigate, onLoginSuccess
 
       {/* Bottom info */}
       <div className="text-center text-xs text-slate-400">
-        © 2026 HSK Path. Secure Academic Preparation SaaS.
+        © 2026 HSK Path
       </div>
     </div>
   );

@@ -186,7 +186,7 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
         <div>
           <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-white border border-[#E0D7CB] text-[10px] font-bold text-stone-600 uppercase tracking-widest mb-1.5 shadow-2xs">
             <span className="w-1.5 h-1.5 rounded-full bg-[#C52828]" />
-            Spaced Repetition & Tianzige Engine
+            Spaced review
           </div>
           <h1 className="text-2xl sm:text-3xl font-black text-stone-950 tracking-tight">
             {t('vocabulary.title')}
@@ -248,7 +248,7 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
                 SRS Queue
               </span>
               <span className="text-xs text-stone-400 font-medium">
-                SuperMemo SM-2 Decay Optimization
+                Based on your past answers
               </span>
             </div>
             <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-white">

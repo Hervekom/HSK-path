@@ -45,10 +45,6 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
       {/* Top Greeting & Action Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-2 border-b border-[#E8E2D8]">
         <div>
-          <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-white border border-[#E0D7CB] text-[10px] font-bold text-stone-600 uppercase tracking-widest mb-2 shadow-2xs">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#C52828]" />
-            Active Scholar Dashboard
-          </div>
           <h1 className="text-2xl sm:text-3xl font-extrabold text-stone-950 tracking-tight">
             {t('dashboard.greeting')}, {user.name.split(' ')[0]}
           </h1>

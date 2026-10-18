@@ -127,7 +127,7 @@ export const DailyChineseWidget: React.FC<DailyChineseWidgetProps> = ({
             </h2>
             <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-blue-50/90 text-blue-700 border border-blue-200/80 text-[11px] font-bold">
               <Search className="w-3 h-3 text-blue-500" />
-              <span>Google Search Grounded</span>
+              <span>Updated daily</span>
             </div>
           </div>
           <p className="text-xs text-slate-500">

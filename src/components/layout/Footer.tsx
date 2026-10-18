@@ -76,7 +76,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               <div className="flex flex-col">
                 <span className="font-bold text-xl text-[#FAF8F5] tracking-tight">HSK Path</span>
                 <span className="text-[10px] text-stone-500 uppercase tracking-wider font-semibold">
-                  Cognitive Chinese Mastery
+                  HSK 1–3 preparation
                 </span>
               </div>
             </div>

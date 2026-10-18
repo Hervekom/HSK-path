@@ -60,12 +60,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, onScrollToSection })
               <span className="font-bold text-lg sm:text-xl tracking-tight text-stone-900 leading-none">
                 HSK Path
               </span>
-              <span className="hidden sm:inline text-[10px] font-bold uppercase tracking-widest px-1.5 py-0.5 rounded bg-stone-900 text-[#FAF8F5]">
-                SaaS
-              </span>
             </div>
             <span className="text-[10px] text-stone-500 font-medium tracking-wide uppercase mt-0.5 hidden sm:inline">
-              Official HSK 1–3 Framework
+              HSK 1–3 preparation
             </span>
           </div>
         </div>

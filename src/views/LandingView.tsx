@@ -59,18 +59,18 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
               <div className="inline-flex items-center gap-2.5 px-3 py-1 rounded-full bg-white border border-[#E0D7CB] shadow-2xs">
                 <span className="w-2 h-2 rounded-full bg-[#C52828]" />
                 <span className="text-[11px] font-bold text-stone-800 uppercase tracking-widest">
-                  Academic Standard • 2026 Hanban Alignment
+                  HSK 1 · 2 · 3 preparation
                 </span>
               </div>
 
               {/* Main Headline */}
               <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight text-stone-950 leading-[1.08]">
-                Master Mandarin with <span className="text-[#C52828] font-serif italic">Cognitive Precision</span> & Exam Rigor.
+                Get ready for the <span className="text-[#C52828] font-serif italic">HSK exam</span>, step by step.
               </h1>
 
               {/* Editorial Subtitle */}
               <p className="text-base sm:text-lg lg:text-xl text-stone-600 font-normal leading-relaxed max-w-2xl">
-                The premier pedagogical SaaS designed for serious learners. Accelerate HSK 1–3 fluency through spaced repetition algorithms, authentic Tianzige stroke drills, and full-fidelity mock examination simulations.
+                Learn the vocabulary with spaced review, practise listening, reading and writing, then check your level with timed mock exams. HSK 1 to 3, in English, French or Chinese.
               </p>
 
               {/* CTAs */}
@@ -82,7 +82,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
                   iconRight={<ArrowRight className="w-4 h-4" />}
                   className="shadow-md cursor-pointer"
                 >
-                  Begin Cognitive Path
+                  Start for free
                 </Button>
                 <Button
                   variant="outline"
@@ -90,28 +90,28 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
                   onClick={() => scrollToSection('hsk-levels')}
                   className="bg-white/80 hover:bg-white text-stone-900 border-[#DED6C9] cursor-pointer"
                 >
-                  Explore Curriculum (1–3)
+                  See the levels
                 </Button>
               </div>
 
               {/* Trust & Academic Accreditations */}
               <div className="pt-6 border-t border-[#E8E2D8] grid grid-cols-3 gap-4 text-left">
                 <div>
-                  <div className="text-2xl font-black text-stone-950 tracking-tight">1,050+</div>
+                  <div className="text-2xl font-black text-stone-950 tracking-tight">3</div>
                   <div className="text-[11px] font-semibold text-stone-500 uppercase tracking-wider mt-0.5">
-                    Verified Words
+                    Levels, HSK 1 to 3
                   </div>
                 </div>
                 <div>
-                  <div className="text-2xl font-black text-stone-950 tracking-tight">100%</div>
+                  <div className="text-2xl font-black text-stone-950 tracking-tight">Free</div>
                   <div className="text-[11px] font-semibold text-stone-500 uppercase tracking-wider mt-0.5">
-                    Hanban Standard
+                    All of HSK 1
                   </div>
                 </div>
                 <div>
-                  <div className="text-2xl font-black text-stone-950 tracking-tight">4.9 / 5.0</div>
+                  <div className="text-2xl font-black text-stone-950 tracking-tight">3</div>
                   <div className="text-[11px] font-semibold text-stone-500 uppercase tracking-wider mt-0.5">
-                    Passing Metric
+                    Languages: EN · FR · 中文
                   </div>
                 </div>
               </div>
@@ -126,20 +126,17 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
                 {/* Header bar of interactive mockup */}
                 <div className="flex items-center justify-between pb-3 border-b border-[#EDE6DC]">
                   <div className="flex items-center gap-2">
-                    <span className="w-2.5 h-2.5 rounded-full bg-rose-500" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-amber-500" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-500" />
-                    <span className="text-[11px] font-mono text-stone-400 ml-2">HSK-Path-Engine v2.4</span>
+                    <span className="text-xs font-bold text-stone-800">Today's review</span>
                   </div>
                   <span className="px-2 py-0.5 rounded-md bg-[#FAF5EB] border border-[#E6D4B0] text-[#8C6405] text-[10px] font-bold uppercase tracking-wider">
-                    SRS Active
+                    6 words due
                   </span>
                 </div>
 
                 {/* Character Interactive Canvas Card */}
                 <div className="p-6 rounded-2xl bg-[#FAF8F5] border border-[#E5DDCF] text-center relative overflow-hidden">
                   <div className="absolute top-3 left-3 text-[10px] font-bold text-stone-400 uppercase tracking-widest">
-                    Spaced Repetition #42
+                    HSK 2 · Word 42
                   </div>
                   <div className="absolute top-3 right-3">
                     <button
@@ -186,8 +183,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
                 {/* Bottom interactive action */}
                 <div className="flex items-center justify-between pt-1">
                   <div className="flex items-center gap-2 text-xs font-semibold text-stone-600">
-                    <BrainCircuit className="w-4 h-4 text-[#C52828]" />
-                    <span>SM-2 Memory Decay Optimizer</span>
+                    <span>Next review in 4 days if you pick “Easy”</span>
                   </div>
                   <Button
                     variant="primary"
@@ -195,7 +191,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
                     onClick={() => onNavigate('vocabulary')}
                     className="text-xs"
                   >
-                    Try Live SRS
+                    Try it
                   </Button>
                 </div>
               </div>
@@ -209,24 +205,24 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 divide-y sm:divide-y-0 sm:divide-x divide-stone-800">
             <div className="pt-4 sm:pt-0 sm:px-4 text-center sm:text-left space-y-1">
-              <div className="text-xs font-bold uppercase tracking-widest text-[#C52828]">Standardized</div>
+              <div className="text-xs font-bold uppercase tracking-widest text-[#C52828]">Levels</div>
               <div className="text-2xl lg:text-3xl font-black text-white">HSK 1, 2 & 3</div>
-              <div className="text-xs text-stone-400">Complete multi-modal syllabus</div>
+              <div className="text-xs text-stone-400">Vocabulary, grammar, listening, reading</div>
             </div>
             <div className="pt-4 sm:pt-0 sm:px-4 text-center sm:text-left space-y-1">
-              <div className="text-xs font-bold uppercase tracking-widest text-amber-500">Retention</div>
-              <div className="text-2xl lg:text-3xl font-black text-white">94.2%</div>
-              <div className="text-xs text-stone-400">30-day recall with SRS</div>
+              <div className="text-xs font-bold uppercase tracking-widest text-amber-500">Review</div>
+              <div className="text-2xl lg:text-3xl font-black text-white">Spaced</div>
+              <div className="text-xs text-stone-400">Words come back right before you forget them</div>
             </div>
             <div className="pt-4 sm:pt-0 sm:px-4 text-center sm:text-left space-y-1">
-              <div className="text-xs font-bold uppercase tracking-widest text-emerald-400">Simulations</div>
-              <div className="text-2xl lg:text-3xl font-black text-white">45+ Pools</div>
-              <div className="text-xs text-stone-400">Timed exams with mistake reviews</div>
+              <div className="text-xs font-bold uppercase tracking-widest text-emerald-400">Mock exams</div>
+              <div className="text-2xl lg:text-3xl font-black text-white">Timed</div>
+              <div className="text-xs text-stone-400">With a review of every mistake</div>
             </div>
             <div className="pt-4 sm:pt-0 sm:px-4 text-center sm:text-left space-y-1">
-              <div className="text-xs font-bold uppercase tracking-widest text-stone-400">Accessibility</div>
-              <div className="text-2xl lg:text-3xl font-black text-white">EN • FR • ZH</div>
-              <div className="text-xs text-stone-400">Multi-language localized UI</div>
+              <div className="text-xs font-bold uppercase tracking-widest text-stone-400">Languages</div>
+              <div className="text-2xl lg:text-3xl font-black text-white">EN • FR • 中文</div>
+              <div className="text-xs text-stone-400">Switch at any time</div>
             </div>
           </div>
         </div>
@@ -632,93 +628,6 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
         </div>
       </section>
 
-      {/* ==================== SECTION: TESTIMONIALS & SCORECARDS ==================== */}
-      <section className="py-20 bg-[#FAF8F5] border-b border-[#E8E2D8]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center space-y-3 mb-16">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[#E0D7CB] text-xs font-bold text-stone-800 uppercase tracking-widest shadow-2xs">
-              Learner Distinction
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-stone-950 tracking-tight">
-              Verified Exam Results from the Cohort
-            </h2>
-            <p className="text-base text-stone-600">
-              Real students who transformed their Mandarin fluency with HSK Path.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-7 rounded-3xl bg-white border border-[#E2D8CB] shadow-xs space-y-4">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-1 text-amber-500">
-                  <Star className="w-4 h-4 fill-current" />
-                  <Star className="w-4 h-4 fill-current" />
-                  <Star className="w-4 h-4 fill-current" />
-                  <Star className="w-4 h-4 fill-current" />
-                  <Star className="w-4 h-4 fill-current" />
-                </div>
-                <Badge variant="success">Passed HSK 2: 194/200</Badge>
-              </div>
-              <p className="text-xs sm:text-sm text-stone-700 leading-relaxed italic">
-                “The spaced repetition drills paired with the Tianzige writing sheets made character retention effortless. I scored 98% in listening after 6 weeks.”
-              </p>
-              <div className="pt-2 border-t border-[#EDE6DC] flex items-center justify-between">
-                <div>
-                  <div className="text-xs font-bold text-stone-900">Dr. Claire Moreau</div>
-                  <div className="text-[10px] text-stone-400">Paris, France</div>
-                </div>
-                <div className="text-xs font-bold text-stone-400">HSK 2 Certified</div>
-              </div>
-            </div>
-
-            <div className="p-7 rounded-3xl bg-white border border-[#E2D8CB] shadow-xs space-y-4">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-1 text-amber-500">
-                  <Star className="w-4 h-4 fill-current" />
-                  <Star className="w-4 h-4 fill-current" />
-                  <Star className="w-4 h-4 fill-current" />
-                  <Star className="w-4 h-4 fill-current" />
-                  <Star className="w-4 h-4 fill-current" />
-                </div>
-                <Badge variant="success">Passed HSK 3: 282/300</Badge>
-              </div>
-              <p className="text-xs sm:text-sm text-stone-700 leading-relaxed italic">
-                “The mock exam timer and listening dialogues reflect the real test identically. Going into the exam hall, I had zero surprises.”
-              </p>
-              <div className="pt-2 border-t border-[#EDE6DC] flex items-center justify-between">
-                <div>
-                  <div className="text-xs font-bold text-stone-900">Marcus Vance</div>
-                  <div className="text-[10px] text-stone-400">London, UK</div>
-                </div>
-                <div className="text-xs font-bold text-stone-400">HSK 3 Certified</div>
-              </div>
-            </div>
-
-            <div className="p-7 rounded-3xl bg-white border border-[#E2D8CB] shadow-xs space-y-4">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-1 text-amber-500">
-                  <Star className="w-4 h-4 fill-current" />
-                  <Star className="w-4 h-4 fill-current" />
-                  <Star className="w-4 h-4 fill-current" />
-                  <Star className="w-4 h-4 fill-current" />
-                  <Star className="w-4 h-4 fill-current" />
-                </div>
-                <Badge variant="success">HSK 1: 100/100 Listening</Badge>
-              </div>
-              <p className="text-xs sm:text-sm text-stone-700 leading-relaxed italic">
-                “Being able to toggle pinyin on and off forced my brain to read characters naturally. Best Mandarin learning tool I have used.”
-              </p>
-              <div className="pt-2 border-t border-[#EDE6DC] flex items-center justify-between">
-                <div>
-                  <div className="text-xs font-bold text-stone-900">Sofia Al-Mansoor</div>
-                  <div className="text-[10px] text-stone-400">Dubai, UAE</div>
-                </div>
-                <div className="text-xs font-bold text-stone-400">HSK 1 Certified</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ==================== SECTION: PRICING ARCHITECTURE ==================== */}
       <section id="pricing" className="py-20 lg:py-28 bg-[#F5EFEB] border-b border-[#E8E2D8]">
