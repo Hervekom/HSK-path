@@ -201,8 +201,8 @@ export const MockTestsListView: React.FC<MockTestsListViewProps> = ({
             >
               <div className="space-y-4">
                 {/* Badges Bar */}
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-1.5">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <div className="flex flex-wrap items-center gap-1.5">
                     <Badge variant={test.level as any}>{test.level?.toUpperCase()}</Badge>
                     {test.isFree ? (
                       <Badge variant="success" size="sm">

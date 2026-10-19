@@ -254,17 +254,17 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ learnedPhraseIds, onTo
               </button>
             ))}
           </div>
-          <div className="flex gap-2 w-full sm:w-auto">
+          <div className="flex flex-wrap gap-2 w-full sm:w-auto">
           <button
             onClick={() => setHidePinyin((v) => !v)}
-            className="flex-1 sm:flex-none justify-center inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-[#E0D7CB] text-xs font-semibold text-stone-700 hover:bg-[#FAF8F5] cursor-pointer whitespace-nowrap"
+            className="flex-1 min-w-0 sm:flex-none justify-center inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-xl border border-[#E0D7CB] text-xs font-semibold text-stone-700 hover:bg-[#FAF8F5] cursor-pointer whitespace-nowrap"
           >
             {hidePinyin ? <Eye className="w-3.5 h-3.5" /> : <EyeOff className="w-3.5 h-3.5" />}
             {hidePinyin ? tr('Show Pinyin') : tr('Hide Pinyin')}
           </button>
           <button
             onClick={() => setHideMeaning((v) => !v)}
-            className="flex-1 sm:flex-none justify-center inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-[#E0D7CB] text-xs font-semibold text-stone-700 hover:bg-[#FAF8F5] cursor-pointer whitespace-nowrap"
+            className="flex-1 min-w-0 sm:flex-none justify-center inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-xl border border-[#E0D7CB] text-xs font-semibold text-stone-700 hover:bg-[#FAF8F5] cursor-pointer whitespace-nowrap"
           >
             {hideMeaning ? <Eye className="w-3.5 h-3.5" /> : <EyeOff className="w-3.5 h-3.5" />}
             {hideMeaning ? tr('Show Translation') : tr('Hide Translation')}

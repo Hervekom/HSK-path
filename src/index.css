@@ -17,6 +17,31 @@
     --accent-emerald: #0F766E;
   }
 
+  /* Phones: never wider than the screen, no automatic text boosting (Chrome Android),
+     so the page always fits the screen width whatever its size. */
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    overflow-x: clip;
+  }
+  body {
+    overflow-x: clip;
+    max-width: 100vw;
+  }
+  img, svg, video, canvas, audio, iframe {
+    max-width: 100%;
+  }
+  /* Long words / URLs never push the layout wider than the screen */
+  p, h1, h2, h3, h4, li, span, a, label, td {
+    overflow-wrap: anywhere;
+  }
+  /* 16px fields: mobile browsers do not zoom in when a field is focused */
+  @media (max-width: 1023px) {
+    input, textarea, select {
+      font-size: max(16px, 1em);
+    }
+  }
+
   body {
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     background-color: #FAF8F5;
