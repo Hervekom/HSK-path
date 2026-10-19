@@ -63,6 +63,36 @@ const speakable = (t: string) =>
     .map((l) => l.replace(/^\s*(男|女|问)：/, ''))
     .join('。');
 
+/** One shared player for item recordings, so starting a new item stops the previous one. */
+let itemPlayer: HTMLAudioElement | null = null;
+
+function stopItemAudio() {
+  if (itemPlayer) {
+    itemPlayer.pause();
+    itemPlayer.onended = itemPlayer.onerror = null;
+  }
+  audioEngine.stop();
+}
+
+/** Plays the recorded file of an item; falls back to the browser voice if the file cannot be played. */
+function playItemAudio(base: string | undefined, q: H3Question, onEnd?: () => void) {
+  stopItemAudio();
+  const fallback = () => audioEngine.speak(speakable(q.transcript || ''), 0.85, onEnd, onEnd);
+  if (!base) return fallback();
+  if (!itemPlayer) itemPlayer = new Audio();
+  const player = itemPlayer;
+  player.src = `${base}${String(q.n).padStart(2, '0')}.mp3`;
+  player.onended = () => onEnd?.();
+  player.onerror = () => {
+    player.onerror = null;
+    fallback();
+  };
+  player.play().catch((err) => {
+    // Autoplay refusals are not file errors; anything else falls back to the browser voice.
+    if (err?.name !== 'NotAllowedError' && err?.name !== 'AbortError') fallback();
+  });
+}
+
 interface Props {
   examId: string;
   isProUser: boolean;
@@ -89,7 +119,7 @@ export const Hsk3ExamView: React.FC<Props> = ({ examId, isProUser, onExit, onFin
 
   useEffect(() => {
     loadHsk3Exam(examId).then(setExam);
-    return () => audioEngine.stop();
+    return () => stopItemAudio();
   }, [examId]);
 
   const locked = Boolean(meta?.isPro && !isProUser);
@@ -145,7 +175,7 @@ export const Hsk3ExamView: React.FC<Props> = ({ examId, isProUser, onExit, onFin
     if (!exam || finishedRef.current) return;
     finishedRef.current = true;
     audioRef.current?.pause();
-    audioEngine.stop();
+    stopItemAudio();
     const parts = scoreH3(exam, answers);
     const total = parts.reduce((a, p) => a + p.score, 0);
     const correct = parts.reduce((a, p) => a + p.correct, 0);
@@ -179,7 +209,7 @@ export const Hsk3ExamView: React.FC<Props> = ({ examId, isProUser, onExit, onFin
   function nextSection() {
     if (phase === 'listening') {
       audioRef.current?.pause();
-      audioEngine.stop();
+      stopItemAudio();
       startSection('reading');
     } else if (phase === 'reading') startSection('writing');
     else if (phase === 'writing') finish();
@@ -198,12 +228,13 @@ export const Hsk3ExamView: React.FC<Props> = ({ examId, isProUser, onExit, onFin
     a.play().catch(() => undefined);
   };
 
+  // ---------- Audio (original exams: one recording per item) ----------
   const playItem = (q: H3Question) => {
     if (!q.transcript) return;
     const used = plays[q.n] || 0;
     if (mode === 'exam' && used >= 2) return;
     setPlays((p) => ({ ...p, [q.n]: used + 1 }));
-    audioEngine.speak(speakable(q.transcript), 0.85);
+    playItemAudio(exam?.itemAudioBase, q);
   };
 
   if (!meta) return null;
@@ -251,7 +282,7 @@ export const Hsk3ExamView: React.FC<Props> = ({ examId, isProUser, onExit, onFin
             <p className="text-sm text-stone-600">
               {isOfficial
                 ? tr('Practice paper published by Hanban / Chinese Testing International, with its original recording.')
-                : tr('Written by HSK Path in the exact format of the official paper, using HSK 1–3 vocabulary. The listening is read by a synthetic voice.')}
+                : tr('Written by HSK Path in the exact format of the official paper, using HSK 1–3 vocabulary. The listening is recorded with synthetic male and female voices.')}
             </p>
           </div>
 
@@ -372,7 +403,7 @@ export const Hsk3ExamView: React.FC<Props> = ({ examId, isProUser, onExit, onFin
         </div>
         {list.length === 0 && <div className="p-8 text-center text-sm text-stone-600 bg-white rounded-2xl border border-[#E4DCCE]">{tr('No mistakes. Well done!')}</div>}
         {list.map((q) => (
-          <ReviewCard key={q.n} q={q} group={groupOf(q)} given={answers[q.n]} />
+          <ReviewCard key={q.n} q={q} group={groupOf(q)} given={answers[q.n]} audioBase={exam.itemAudioBase} />
         ))}
       </div>
     );
@@ -726,7 +757,7 @@ const QuestionCard: React.FC<QCProps> = ({ q, group, value, onAnswer, orderSel, 
   );
 };
 
-const ReviewCard: React.FC<{ q: H3Question; group?: H3Group; given?: string }> = ({ q, group, given }) => {
+const ReviewCard: React.FC<{ q: H3Question; group?: H3Group; given?: string; audioBase?: string }> = ({ q, group, given, audioBase }) => {
   const ok = isH3Correct(q, given);
   const label = (v?: string) => {
     if (!v) return '—';
@@ -769,7 +800,18 @@ const ReviewCard: React.FC<{ q: H3Question; group?: H3Group; given?: string }> =
         <div className="p-3 rounded-xl bg-[#FAF8F5] border border-[#EFE8DE] space-y-1.5">
           <div className="flex items-center justify-between">
             <span className="text-[11px] font-bold uppercase tracking-wider text-stone-500">{tr('Listening script')}</span>
-            <SpeechButton text={speakable(q.transcript)} size="sm" allowSpeedToggle />
+            {audioBase ? (
+              <button
+                onClick={() => playItemAudio(audioBase, q)}
+                className="p-1.5 rounded-lg border border-[#E4DCCE] bg-white text-stone-600 hover:text-[#C52828] cursor-pointer"
+                aria-label={tr('Listen')}
+                title={tr('Listen')}
+              >
+                <SpeakerHigh className="w-3.5 h-3.5" weight="fill" />
+              </button>
+            ) : (
+              <SpeechButton text={speakable(q.transcript)} size="sm" allowSpeedToggle />
+            )}
           </div>
           <p className="font-hanzi-serif text-sm text-stone-800 whitespace-pre-line">{q.transcript}</p>
         </div>

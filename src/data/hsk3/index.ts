@@ -26,5 +26,7 @@ export async function loadHsk3Exam(id: string): Promise<H3Exam | null> {
   }
   const [a, b] = await Promise.all([import('./originals'), import('./originals2')]);
   const all: H3Exam[] = [...a.ORIGINAL_EXAMS, b.HP3_03, b.HP3_04, b.HP3_05];
-  return all.find((e) => e.id === id) || null;
+  const exam = all.find((e) => e.id === id);
+  // Recorded in advance (scripts/generate-hsk3-audio.py): public/hsk3/<id>/01.mp3 … 40.mp3
+  return exam ? { ...exam, itemAudioBase: `/hsk3/${exam.id}/` } : null;
 }

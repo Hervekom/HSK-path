@@ -42,8 +42,13 @@ export interface H3Exam {
   title: string;
   source: 'official' | 'original';
   isPro: boolean;
-  /** Single recording for the whole listening section (official papers). Without it, each item is read by speech synthesis. */
+  /** Single recording for the whole listening section (official papers). */
   audioUrl?: string;
+  /**
+   * Folder of one recording per listening item (original exams): `${itemAudioBase}01.mp3` … `40.mp3`.
+   * Without either, each item is read by the browser's speech synthesis.
+   */
+  itemAudioBase?: string;
   groups: H3Group[];
   questions: H3Question[];
 }
