@@ -17,6 +17,15 @@ export interface H3Group {
   kind: 'image' | 'icon' | 'text' | 'word';
   options: Record<string, string>;
   example?: { letter: string; text: string };
+  /** Author and licence of each picture (free-licensed photos must credit their author). */
+  credits?: Record<string, PhotoCredit>;
+}
+
+export interface PhotoCredit {
+  author: string;
+  license: string;
+  licenseUrl?: string;
+  source: string;
 }
 
 export interface H3Question {

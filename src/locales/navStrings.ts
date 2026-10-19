@@ -23,4 +23,6 @@ export const NAV_STRINGS: Record<string, { fr?: string; zh?: string }> = {
   "All lessons, all mock exams (including the HSK Path HSK 3 exams with their recordings) and 30 Laoshi messages a day.": { fr: "Toutes les leçons, tous les examens blancs (y compris les examens HSK 3 HSK Path avec leurs enregistrements) et 30 messages Laoshi par jour.", zh: "全部课程、全部模拟考试（包括带录音的 HSK Path HSK 3 试卷），以及每天 30 条老师消息。" },
   "HSK 1, the free lessons and exams of HSK 2 and 3, the official HSK 3 papers and 10 Laoshi messages a day.": { fr: "Le HSK 1, les leçons et examens gratuits des HSK 2 et 3, les sujets officiels HSK 3 et 10 messages Laoshi par jour.", zh: "HSK 1、HSK 2 和 3 的免费课程与考试、HSK 3 官方真题，以及每天 10 条老师消息。" },
   "Account menu": { fr: "Menu du compte", zh: "账户菜单" },
+  "Photo credits": { fr: "Crédits photos", zh: "图片来源" },
+  "Unknown author": { fr: "Auteur inconnu", zh: "作者不详" },
 };

@@ -581,13 +581,30 @@ const GroupPanel: React.FC<{ group: H3Group }> = ({ group }) => {
                   {Icon ? (
                     <Icon className="w-14 h-14 sm:w-16 sm:h-16 text-stone-800" weight="duotone" />
                   ) : (
-                    <img src={group.options[L]} alt={L} className="max-w-full max-h-full w-auto h-auto object-contain" decoding="async" />
+                    <img src={group.options[L]} alt={L} className="max-w-full max-h-full w-auto h-auto object-contain" decoding="async" loading="lazy" />
                   )}
                 </span>
               </button>
             );
           })}
         </div>
+        {group.credits && (
+          <details className="-mt-1 px-1 text-[11px] text-stone-500">
+            <summary className="cursor-pointer select-none">{tr('Photo credits')}</summary>
+            <ul className="mt-1 space-y-0.5">
+              {letters.map((L) => {
+                const c = group.credits![L];
+                return c ? (
+                  <li key={L}>
+                    <b>{L}</b> · {c.author || tr('Unknown author')} ·{' '}
+                    {c.licenseUrl ? <a href={c.licenseUrl} target="_blank" rel="noreferrer" className="underline">{c.license}</a> : c.license} ·{' '}
+                    <a href={c.source} target="_blank" rel="noreferrer" className="underline">Wikimedia Commons</a>
+                  </li>
+                ) : null;
+              })}
+            </ul>
+          </details>
+        )}
         {zoom && group.kind === 'image' && (
           <div className="fixed inset-0 z-50 bg-black/70 flex items-center justify-center p-4" onClick={() => setZoom(null)}>
             <div className="bg-white rounded-2xl p-3 max-w-lg w-full space-y-2" onClick={(e) => e.stopPropagation()}>

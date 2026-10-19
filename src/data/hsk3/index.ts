@@ -1,4 +1,25 @@
-import type { H3Exam, H3ExamMeta } from './types';
+import type { H3Exam, H3ExamMeta, H3Group, PhotoCredit } from './types';
+import PHOTOS from './photos.json';
+
+/** Real photos for the picture questions of the HSK Path exams (Wikimedia Commons, free licences). */
+const PHOTO_MAP = PHOTOS as Record<string, PhotoCredit & { file: string }>;
+
+function withPhotos(examId: string, groups: H3Group[]): H3Group[] {
+  return groups.map((g) => {
+    if (g.kind !== 'icon') return g;
+    const letters = Object.keys(g.options);
+    const photos = letters.map((L) => PHOTO_MAP[`${examId}/${g.id}/${L}`]);
+    if (photos.some((p) => !p)) return g; // keep the icons until every picture of the group is ready
+    const options: Record<string, string> = {};
+    const credits: Record<string, PhotoCredit> = {};
+    letters.forEach((L, i) => {
+      const { file, ...credit } = photos[i];
+      options[L] = file;
+      credits[L] = credit;
+    });
+    return { ...g, kind: 'image', options, credits };
+  });
+}
 
 export * from './types';
 
@@ -30,5 +51,7 @@ export async function loadHsk3Exam(id: string): Promise<H3Exam | null> {
   // Recorded in advance, same format as the official papers:
   //  - public/hsk3/<CODE>.mp3: the whole listening section (scripts/build-hsk3-section-audio.py)
   //  - public/hsk3/<id>/01.mp3 … 40.mp3: each item, replayed on the review screen (scripts/generate-hsk3-audio.py)
-  return exam ? { ...exam, audioUrl: `/hsk3/${exam.code}.mp3`, itemAudioBase: `/hsk3/${exam.id}/` } : null;
+  return exam
+    ? { ...exam, groups: withPhotos(exam.id, exam.groups), audioUrl: `/hsk3/${exam.code}.mp3`, itemAudioBase: `/hsk3/${exam.id}/` }
+    : null;
 }
