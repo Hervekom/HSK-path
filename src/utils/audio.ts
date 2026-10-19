@@ -1,9 +1,20 @@
-// Audio synthesis and playback helper for Chinese pronunciation and test audio
+// Audio synthesis and playback helper for Chinese pronunciation and test audio.
+// Texts recorded in advance (src/data/audioClips.json, scripts/generate-clips.py) are played from
+// their MP3 file; anything else uses the browser's Chinese voice, which many devices lack.
+import CLIPS from '../data/audioClips.json';
+
+const RECORDED = CLIPS as Record<string, string>;
 
 class ChineseAudioEngine {
   private isSpeaking = false;
   private currentUtterance: SpeechSynthesisUtterance | null = null;
   private audioCtx: AudioContext | null = null;
+  private player: HTMLAudioElement | null = null;
+
+  /** True when this text has a recorded file. */
+  public hasRecording(text: string): boolean {
+    return Boolean(RECORDED[text.trim()]);
+  }
 
   public speak(
     text: string, 
@@ -16,6 +27,35 @@ class ChineseAudioEngine {
     // Stop any ongoing speech
     this.stop();
 
+    const file = RECORDED[text.trim()];
+    if (file) {
+      if (!this.player) this.player = new Audio();
+      const player = this.player;
+      player.src = file;
+      player.playbackRate = rate;
+      (player as any).preservesPitch = true;
+      player.onended = () => {
+        this.isSpeaking = false;
+        onEnd?.();
+      };
+      player.onerror = () => {
+        player.onerror = null;
+        this.speakWithBrowser(text, rate, onEnd, onError);
+      };
+      this.isSpeaking = true;
+      player.play().catch((err) => {
+        if (err?.name !== 'NotAllowedError' && err?.name !== 'AbortError') this.speakWithBrowser(text, rate, onEnd, onError);
+        else {
+          this.isSpeaking = false;
+          onEnd?.();
+        }
+      });
+      return;
+    }
+    this.speakWithBrowser(text, rate, onEnd, onError);
+  }
+
+  private speakWithBrowser(text: string, rate: number, onEnd?: () => void, onError?: () => void): void {
     if ('speechSynthesis' in window) {
       try {
         const utterance = new SpeechSynthesisUtterance(text);
@@ -65,6 +105,10 @@ class ChineseAudioEngine {
   }
 
   public stop(): void {
+    if (this.player) {
+      this.player.pause();
+      this.player.onended = this.player.onerror = null;
+    }
     if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
       try {
         window.speechSynthesis.cancel();

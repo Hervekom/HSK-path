@@ -549,6 +549,7 @@ function HskPathApp() {
           <AppLayout
             onSignOut={handleSignOut}
             isAdmin={isAdmin}
+            hasPro={hasPro}
             currentView={currentView}
             onNavigate={navigate}
             user={user}
@@ -576,6 +577,7 @@ function HskPathApp() {
           <AppLayout
             onSignOut={handleSignOut}
             isAdmin={isAdmin}
+            hasPro={hasPro}
             currentView={currentView}
             onNavigate={navigate}
             user={user}
@@ -597,6 +599,7 @@ function HskPathApp() {
           <AppLayout
             onSignOut={handleSignOut}
             isAdmin={isAdmin}
+            hasPro={hasPro}
             currentView={currentView}
             onNavigate={navigate}
             user={user}
@@ -621,6 +624,7 @@ function HskPathApp() {
           <AppLayout
             onSignOut={handleSignOut}
             isAdmin={isAdmin}
+            hasPro={hasPro}
             currentView={currentView}
             onNavigate={navigate}
             user={user}
@@ -640,6 +644,7 @@ function HskPathApp() {
           <AppLayout
             onSignOut={handleSignOut}
             isAdmin={isAdmin}
+            hasPro={hasPro}
             currentView={currentView}
             onNavigate={navigate}
             user={user}
@@ -654,6 +659,7 @@ function HskPathApp() {
           <AppLayout
             onSignOut={handleSignOut}
             isAdmin={isAdmin}
+            hasPro={hasPro}
             currentView={currentView}
             onNavigate={navigate}
             user={user}
@@ -671,6 +677,7 @@ function HskPathApp() {
           <AppLayout
             onSignOut={handleSignOut}
             isAdmin={isAdmin}
+            hasPro={hasPro}
             currentView={currentView}
             onNavigate={navigate}
             user={user}
@@ -691,6 +698,7 @@ function HskPathApp() {
           <AppLayout
             onSignOut={handleSignOut}
             isAdmin={isAdmin}
+            hasPro={hasPro}
             currentView={currentView}
             onNavigate={navigate}
             user={user}
@@ -712,6 +720,7 @@ function HskPathApp() {
           <AppLayout
             onSignOut={handleSignOut}
             isAdmin={isAdmin}
+            hasPro={hasPro}
             currentView={currentView}
             onNavigate={navigate}
             user={user}
@@ -726,6 +735,7 @@ function HskPathApp() {
           <AppLayout
             onSignOut={handleSignOut}
             isAdmin={isAdmin}
+            hasPro={hasPro}
             currentView={currentView}
             onNavigate={navigate}
             user={user}
@@ -740,6 +750,7 @@ function HskPathApp() {
           <AppLayout
             onSignOut={handleSignOut}
             isAdmin={isAdmin}
+            hasPro={hasPro}
             currentView={currentView}
             onNavigate={navigate}
             user={user}
@@ -754,6 +765,7 @@ function HskPathApp() {
           <AppLayout
             onSignOut={handleSignOut}
             isAdmin={isAdmin}
+            hasPro={hasPro}
             currentView={currentView}
             onNavigate={navigate}
             user={user}
@@ -777,6 +789,7 @@ function HskPathApp() {
           <AppLayout
             onSignOut={handleSignOut}
             isAdmin={isAdmin}
+            hasPro={hasPro}
             currentView={currentView}
             onNavigate={navigate}
             user={user}
@@ -800,6 +813,7 @@ function HskPathApp() {
           <AppLayout
             onSignOut={handleSignOut}
             isAdmin={isAdmin}
+            hasPro={hasPro}
             currentView={currentView}
             onNavigate={navigate}
             user={user}
@@ -818,6 +832,7 @@ function HskPathApp() {
           <AppLayout
             onSignOut={handleSignOut}
             isAdmin={isAdmin}
+            hasPro={hasPro}
             currentView={currentView}
             onNavigate={navigate}
             user={user}
@@ -836,6 +851,7 @@ function HskPathApp() {
           <AppLayout
             onSignOut={handleSignOut}
             isAdmin={isAdmin}
+            hasPro={hasPro}
             currentView={currentView}
             onNavigate={navigate}
             user={user}
@@ -868,6 +884,7 @@ function HskPathApp() {
           <AppLayout
             onSignOut={handleSignOut}
             isAdmin={isAdmin}
+            hasPro={hasPro}
             currentView={currentView}
             onNavigate={navigate}
             user={user}
@@ -892,6 +909,7 @@ function HskPathApp() {
           <AppLayout
             onSignOut={handleSignOut}
             isAdmin={isAdmin}
+            hasPro={hasPro}
             currentView={currentView}
             onNavigate={navigate}
             user={user}
@@ -918,6 +936,7 @@ function HskPathApp() {
           <AppLayout
             onSignOut={handleSignOut}
             isAdmin={isAdmin}
+            hasPro={hasPro}
             currentView={currentView}
             onNavigate={navigate}
             user={user}
@@ -943,6 +962,7 @@ function HskPathApp() {
           <AppLayout
             onSignOut={handleSignOut}
             isAdmin={isAdmin}
+            hasPro={hasPro}
             currentView={currentView}
             onNavigate={navigate}
             user={user}

@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { tr } from '../../locales/tr';
-import { Menu, Flame, Search, Bell, Sparkles, BookOpen, ShieldCheck } from '../icons';
+import { Menu, Flame, Search, Bell, Sparkles, BookOpen, ShieldCheck, Settings, TrendingUp, LogOut, Crown } from '../icons';
 import { useI18n } from '../../locales';
 import { navItemFor } from './navigation';
 import { LanguageSelector } from '../ui/LanguageSelector';
@@ -14,6 +14,8 @@ interface AppHeaderProps {
   streakDays: number;
   onOpenMobileMenu: () => void;
   isAdmin?: boolean;
+  onSignOut?: () => void;
+  hasPro?: boolean;
 }
 
 export const AppHeader: React.FC<AppHeaderProps> = ({
@@ -23,8 +25,30 @@ export const AppHeader: React.FC<AppHeaderProps> = ({
   streakDays,
   onOpenMobileMenu,
   isAdmin = false,
+  onSignOut,
+  hasPro = false,
 }) => {
   const { t } = useI18n();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  // Close the avatar menu on outside click / Escape / page change
+  useEffect(() => {
+    if (!menuOpen) return;
+    const onDown = (e: MouseEvent | TouchEvent) => {
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) setMenuOpen(false);
+    };
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setMenuOpen(false);
+    document.addEventListener('mousedown', onDown);
+    document.addEventListener('touchstart', onDown);
+    document.addEventListener('keydown', onKey);
+    return () => {
+      document.removeEventListener('mousedown', onDown);
+      document.removeEventListener('touchstart', onDown);
+      document.removeEventListener('keydown', onKey);
+    };
+  }, [menuOpen]);
+  useEffect(() => setMenuOpen(false), [currentView]);
 
   const getTitle = () => {
     const item = navItemFor(currentView);
@@ -104,14 +128,51 @@ export const AppHeader: React.FC<AppHeaderProps> = ({
         {/* Language selector in top app header */}
         <LanguageSelector variant="standard" />
 
-        {/* User avatar */}
-        <button
-          onClick={() => onNavigate('profile')}
-          className="w-8 h-8 rounded-xl bg-[#1C1917] text-[#FAF8F5] border border-stone-800 flex items-center justify-center font-bold text-xs hover:bg-[#C52828] hover:border-[#A82020] transition-colors cursor-pointer shadow-2xs"
-          title={user.name}
-        >
-          {user.name.charAt(0)}
-        </button>
+        {/* User avatar + account menu */}
+        <div className="relative" ref={menuRef}>
+          <button
+            onClick={() => setMenuOpen((o) => !o)}
+            className="w-8 h-8 rounded-xl bg-[#1C1917] text-[#FAF8F5] border border-stone-800 flex items-center justify-center font-bold text-xs hover:bg-[#C52828] hover:border-[#A82020] transition-colors cursor-pointer shadow-2xs"
+            title={user.name}
+            aria-haspopup="menu"
+            aria-expanded={menuOpen}
+            aria-label={tr('Account menu')}
+          >
+            {user.name.charAt(0)}
+          </button>
+          {menuOpen && (
+            <div
+              role="menu"
+              className="absolute right-0 top-10 z-50 w-60 rounded-2xl border border-[#E6DFD3] bg-white shadow-xl p-1.5 animate-in fade-in duration-100"
+            >
+              <div className="px-3 py-2.5 border-b border-[#EFE9DF] mb-1">
+                <p className="text-sm font-bold text-stone-900 truncate">{user.name}</p>
+                <p className="text-[11px] text-stone-500 truncate">{user.email}</p>
+                <span className={`mt-1.5 inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-full border ${hasPro ? 'bg-amber-50 border-amber-200 text-amber-800' : 'bg-stone-50 border-stone-200 text-stone-600'}`}>
+                  {hasPro && <Crown className="w-3 h-3" />} {hasPro ? tr('Pro') : tr('Free')}
+                </span>
+              </div>
+              <button role="menuitem" onClick={() => onNavigate('profile')} className="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-sm text-stone-700 hover:bg-[#FAF8F5] cursor-pointer">
+                <Settings className="w-4 h-4 text-stone-500" /> {t('nav.profile')}
+              </button>
+              <button role="menuitem" onClick={() => onNavigate('progress')} className="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-sm text-stone-700 hover:bg-[#FAF8F5] cursor-pointer">
+                <TrendingUp className="w-4 h-4 text-stone-500" /> {t('nav.progress')}
+              </button>
+              {onSignOut && (
+                <button
+                  role="menuitem"
+                  onClick={() => {
+                    setMenuOpen(false);
+                    onSignOut();
+                  }}
+                  className="w-full flex items-center gap-2.5 px-3 py-2 mt-1 rounded-xl text-sm font-semibold text-[#C52828] hover:bg-[#FDF3F1] border-t border-[#EFE9DF] cursor-pointer"
+                >
+                  <LogOut className="w-4 h-4" /> {t('nav.signOut')}
+                </button>
+              )}
+            </div>
+          )}
+        </div>
       </div>
     </header>
   );

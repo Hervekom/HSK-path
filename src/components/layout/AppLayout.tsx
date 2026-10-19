@@ -15,6 +15,7 @@ interface AppLayoutProps {
   isAdmin?: boolean;
   /** Full-screen tool (Laoshi chat): no side padding on phones, page height fixed to the screen. */
   fullBleed?: boolean;
+  hasPro?: boolean;
 }
 
 export const AppLayout: React.FC<AppLayoutProps> = ({
@@ -26,6 +27,7 @@ export const AppLayout: React.FC<AppLayoutProps> = ({
   onSignOut,
   isAdmin = false,
   fullBleed = false,
+  hasPro = false,
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -52,6 +54,8 @@ export const AppLayout: React.FC<AppLayoutProps> = ({
           streakDays={streakDays}
           onOpenMobileMenu={() => setMobileMenuOpen(true)}
           isAdmin={isAdmin}
+          onSignOut={onSignOut}
+          hasPro={hasPro}
         />
         <main
           className={

@@ -42,9 +42,9 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({
   };
 
   const sidebarContent = (
-    <div className="h-full flex flex-col justify-between bg-[#FAF8F5] border-r border-[#E6DFD3] text-stone-700 select-none">
-      {/* Top Section */}
-      <div className="p-4 space-y-6">
+    <div className="h-full flex flex-col bg-[#FAF8F5] border-r border-[#E6DFD3] text-stone-700 select-none">
+      {/* Top Section: scrolls on short screens so the bottom block (sign out) stays reachable */}
+      <div className="flex-1 min-h-0 overflow-y-auto overscroll-contain p-4 space-y-6">
         {/* Brand */}
         <div
           onClick={() => handleItemClick('dashboard')}
@@ -124,7 +124,7 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({
       </div>
 
       {/* Bottom Section */}
-      <div className="p-4 border-t border-[#E6DFD3] space-y-3 bg-[#FAF8F5]">
+      <div className="shrink-0 p-4 pb-[calc(1rem+env(safe-area-inset-bottom))] border-t border-[#E6DFD3] space-y-3 bg-[#FAF8F5]">
         {/* Study Streak Badge */}
         <div className="flex items-center justify-between px-3 py-2 rounded-xl bg-[#FAF5EB] border border-[#E6D4B0] text-[#8C6405] text-xs font-semibold shadow-2xs">
           <div className="flex items-center gap-2">
@@ -173,7 +173,7 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({
   return (
     <>
       {/* Desktop Persistent Sidebar */}
-      <aside className="hidden lg:block w-64 h-screen sticky top-0 shrink-0 z-30">
+      <aside className="hidden lg:block w-64 h-[100dvh] sticky top-0 shrink-0 z-30">
         {sidebarContent}
       </aside>
 
@@ -184,7 +184,7 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({
             className="fixed inset-0 bg-stone-900/60 backdrop-blur-xs animate-in fade-in"
             onClick={onCloseMobile}
           />
-          <div className="relative w-72 max-w-[85vw] h-full shadow-2xl z-10 animate-in slide-in-from-left duration-200">
+          <div className="relative w-72 max-w-[85vw] h-[100dvh] shadow-2xl z-10 animate-in slide-in-from-left duration-200">
             {sidebarContent}
           </div>
         </div>
