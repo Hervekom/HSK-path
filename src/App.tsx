@@ -37,6 +37,7 @@ import { INITIAL_USER_PROFILE } from './data/progressData';
 import { supabase } from './lib/supabase';
 import { loadProgress, saveProgress, computeStreak, fetchIsAdmin, fetchPlan } from './lib/progressStore';
 import { SRS_STORAGE_KEY } from './utils/srs';
+import { audioEngine } from './utils/audio';
 import type { User } from '@supabase/supabase-js';
 import type { AppState, UserProfile, VocabularyWord, MockTest, TestResult, SkillType, QuizQuestion } from './types';
 
@@ -381,6 +382,11 @@ function HskPathApp() {
     }
     setCurrentView('landing');
   };
+
+  // Leaving a page stops any pronunciation / clip still playing.
+  useEffect(() => {
+    audioEngine.stop();
+  }, [currentView]);
 
   // Keep the URL hash in sync with the current view (browser/phone back button works)
   useEffect(() => {

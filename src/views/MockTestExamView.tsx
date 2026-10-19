@@ -18,6 +18,7 @@ import { Badge } from '../components/ui/Badge';
 import { Button } from '../components/ui/Button';
 import { Modal } from '../components/ui/Modal';
 import { SpeechButton } from '../components/ui/SpeechButton';
+import { audioEngine } from '../utils/audio';
 import type { MockTest, MockTestQuestion, TestResult } from '../types';
 
 interface MockTestExamViewProps {
@@ -41,6 +42,12 @@ export const MockTestExamView: React.FC<MockTestExamViewProps> = ({
 
   const totalQuestions = test.questions.length;
   const currentQ = test.questions[currentQuestionIndex] || test.questions[0];
+
+  // A clip must not keep playing over the next question.
+  useEffect(() => {
+    audioEngine.stop();
+  }, [currentQuestionIndex]);
+  useEffect(() => () => audioEngine.stop(), []);
 
   // Countdown timer effect
   useEffect(() => {

@@ -10,6 +10,15 @@ class ChineseAudioEngine {
   private currentUtterance: SpeechSynthesisUtterance | null = null;
   private audioCtx: AudioContext | null = null;
   private player: HTMLAudioElement | null = null;
+  /** End callback of what is playing now; called once, also when it is interrupted. */
+  private pendingEnd: (() => void) | null = null;
+
+  private finish(): void {
+    const cb = this.pendingEnd;
+    this.pendingEnd = null;
+    this.isSpeaking = false;
+    cb?.();
+  }
 
   /** True when this text has a recorded file. */
   public hasRecording(text: string): boolean {
@@ -28,34 +37,30 @@ class ChineseAudioEngine {
     this.stop();
 
     const file = RECORDED[text.trim()];
+    this.pendingEnd = onEnd || null;
     if (file) {
       if (!this.player) this.player = new Audio();
       const player = this.player;
       player.src = file;
       player.playbackRate = rate;
       (player as any).preservesPitch = true;
-      player.onended = () => {
-        this.isSpeaking = false;
-        onEnd?.();
-      };
+      player.onended = () => this.finish();
       player.onerror = () => {
         player.onerror = null;
-        this.speakWithBrowser(text, rate, onEnd, onError);
+        this.speakWithBrowser(text, rate);
       };
       this.isSpeaking = true;
       player.play().catch((err) => {
-        if (err?.name !== 'NotAllowedError' && err?.name !== 'AbortError') this.speakWithBrowser(text, rate, onEnd, onError);
-        else {
-          this.isSpeaking = false;
-          onEnd?.();
-        }
+        if (err?.name === 'AbortError') return; // replaced by a newer play
+        if (err?.name === 'NotAllowedError') this.finish();
+        else this.speakWithBrowser(text, rate);
       });
       return;
     }
-    this.speakWithBrowser(text, rate, onEnd, onError);
+    this.speakWithBrowser(text, rate);
   }
 
-  private speakWithBrowser(text: string, rate: number, onEnd?: () => void, onError?: () => void): void {
+  private speakWithBrowser(text: string, rate: number): void {
     if ('speechSynthesis' in window) {
       try {
         const utterance = new SpeechSynthesisUtterance(text);
@@ -75,18 +80,17 @@ class ChineseAudioEngine {
         };
 
         utterance.onend = () => {
-          this.isSpeaking = false;
+          if (this.currentUtterance !== utterance) return;
           this.currentUtterance = null;
-          if (onEnd) onEnd();
+          this.finish();
         };
 
-        utterance.onerror = () => {
-          this.isSpeaking = false;
+        utterance.onerror = (ev: SpeechSynthesisErrorEvent) => {
+          if (this.currentUtterance !== utterance) return;
           this.currentUtterance = null;
-          // Fallback tone
-          this.playChime(440, 0.2);
-          if (onError) onError();
-          else if (onEnd) onEnd();
+          // Being stopped or replaced is not an error: no beep.
+          if (ev?.error !== 'interrupted' && ev?.error !== 'canceled') this.playChime(440, 0.2);
+          this.finish();
         };
 
         this.currentUtterance = utterance;
@@ -99,9 +103,7 @@ class ChineseAudioEngine {
 
     // Fallback chime if SpeechSynthesis is blocked in sandboxed iframe
     this.playChime(520, 0.3);
-    setTimeout(() => {
-      if (onEnd) onEnd();
-    }, 1200);
+    setTimeout(() => this.finish(), 1200);
   }
 
   public stop(): void {
@@ -109,6 +111,7 @@ class ChineseAudioEngine {
       this.player.pause();
       this.player.onended = this.player.onerror = null;
     }
+    this.currentUtterance = null;
     if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
       try {
         window.speechSynthesis.cancel();
@@ -116,8 +119,8 @@ class ChineseAudioEngine {
         // ignore
       }
     }
-    this.isSpeaking = false;
-    this.currentUtterance = null;
+    // Let whoever started the previous audio know it ended (e.g. reset its button).
+    this.finish();
   }
 
   public playChime(freq: number = 587.33, duration: number = 0.25): void {

@@ -44,7 +44,7 @@ export const SpeechButton: React.FC<SpeechButtonProps> = ({
 
   const toggleSpeed = (e: React.MouseEvent) => {
     e.stopPropagation();
-    const nextRate = currentRate === 1.0 ? 0.75 : 1.0;
+    const nextRate = currentRate === 1.0 ? 0.8 : 1.0;
     setCurrentRate(nextRate);
   };
 
