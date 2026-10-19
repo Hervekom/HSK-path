@@ -11,6 +11,7 @@ import {
   CheckCircle2,
   RotateCcw,
   Sparkles,
+  Crown,
 } from '../components/icons';
 import { useI18n, SUPPORTED_LANGUAGES } from '../locales';
 import { Card } from '../components/ui/Card';
@@ -21,12 +22,15 @@ import type { UserProfile, Language } from '../types';
 
 interface ProfileSettingsViewProps {
   user: UserProfile;
+  /** Effective plan (Pro flag, or admin). */
+  hasPro?: boolean;
   onUpdateProfile: (updated: Partial<UserProfile>) => void;
   onResetProgress: () => void;
 }
 
 export const ProfileSettingsView: React.FC<ProfileSettingsViewProps> = ({
   user,
+  hasPro = false,
   onUpdateProfile,
   onResetProgress,
 }) => {
@@ -61,6 +65,24 @@ export const ProfileSettingsView: React.FC<ProfileSettingsViewProps> = ({
           {tr("Manage your personal study roadmap, target HSK exam, and interface preferences.")}
         </p>
       </div>
+
+      {/* Current plan */}
+      <Card variant="default" className="p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div className="flex items-center gap-3">
+          <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${hasPro ? 'bg-amber-50 border border-amber-200 text-amber-700' : 'bg-stone-100 border border-stone-200 text-stone-600'}`}>
+            <Crown className="w-5 h-5" />
+          </div>
+          <div>
+            <div className="text-xs font-bold uppercase tracking-wider text-stone-500">{tr('My plan')}</div>
+            <div className="text-base font-extrabold text-stone-950">{hasPro ? tr('Pro') : tr('Free')}</div>
+          </div>
+        </div>
+        <p className="text-xs text-stone-600 sm:max-w-sm sm:text-right leading-relaxed">
+          {hasPro
+            ? tr('All lessons, all mock exams (including the HSK Path HSK 3 exams with their recordings) and 30 Laoshi messages a day.')
+            : tr('HSK 1, the free lessons and exams of HSK 2 and 3, the official HSK 3 papers and 10 Laoshi messages a day.')}
+        </p>
+      </Card>
 
       <form onSubmit={handleSave} className="space-y-6">
         {/* User Info Card */}

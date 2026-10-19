@@ -1,5 +1,5 @@
 -- HSK Path: Laoshi (AI tutor) daily quota on the shared server key.
--- Run once in the Supabase SQL Editor (after schema.sql and admin.sql).
+-- Run in the Supabase SQL Editor (after schema.sql and admin.sql); safe to run again.
 -- Messages sent with a student's own API key are not counted.
 --
 -- Limits are constants inside the functions (not parameters), so a student calling
@@ -46,6 +46,8 @@ begin
     raise exception 'not authenticated';
   end if;
   select coalesce(p.is_pro, false) into pro from public.user_progress p where p.user_id = uid;
+  -- Admins get the Pro allowance (same rule as in the app).
+  pro := coalesce(pro, false) or public.is_admin();
   select coalesce(u.count, 0) into used from public.tutor_usage u where u.user_id = uid and u.day = today;
   select coalesce(sum(u.count), 0) into total from public.tutor_usage u where u.day = today;
   return json_build_object(
@@ -80,6 +82,8 @@ begin
   -- One message counted at a time, so the site-wide total stays exact.
   perform pg_advisory_xact_lock(hashtext('hskpath_tutor_quota'));
   select coalesce(p.is_pro, false) into pro from public.user_progress p where p.user_id = uid;
+  -- Admins get the Pro allowance (same rule as in the app).
+  pro := coalesce(pro, false) or public.is_admin();
   lim := case when coalesce(pro, false) then pro_limit else user_limit end;
   select coalesce(u.count, 0) into used from public.tutor_usage u where u.user_id = uid and u.day = today;
   used := coalesce(used, 0);

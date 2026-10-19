@@ -83,6 +83,17 @@ export function computeStreak(prevStreak: number, lastActiveDate: string | null)
   return { streak: lastActiveDate === yesterday ? prevStreak + 1 : 1, today };
 }
 
+/** Current plan of the signed-in student, read fresh from the database (not from the cached profile). */
+export async function fetchPlan(userId: string): Promise<{ isPro: boolean; isAdmin: boolean } | null> {
+  if (!supabase) return null;
+  const [pro, admin] = await Promise.all([
+    supabase.from('user_progress').select('is_pro').eq('user_id', userId).maybeSingle<{ is_pro: boolean | null }>(),
+    supabase.rpc('is_admin'),
+  ]);
+  if (pro.error) return null;
+  return { isPro: Boolean(pro.data?.is_pro), isAdmin: admin.data === true };
+}
+
 export async function fetchIsAdmin(): Promise<boolean> {
   if (!supabase) return false;
   const { data, error } = await supabase.rpc('is_admin');

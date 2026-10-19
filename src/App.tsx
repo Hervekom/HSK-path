@@ -35,7 +35,7 @@ import { HSK2_QUIZ_QUESTIONS, VOCAB_QUIZ_QUESTIONS, GRAMMAR_QUIZ_QUESTIONS } fro
 import { MOCK_TESTS_CATALOG, INITIAL_TEST_RESULTS } from './data/mockTests';
 import { INITIAL_USER_PROFILE } from './data/progressData';
 import { supabase } from './lib/supabase';
-import { loadProgress, saveProgress, computeStreak, fetchIsAdmin } from './lib/progressStore';
+import { loadProgress, saveProgress, computeStreak, fetchIsAdmin, fetchPlan } from './lib/progressStore';
 import { SRS_STORAGE_KEY } from './utils/srs';
 import type { User } from '@supabase/supabase-js';
 import type { AppState, UserProfile, VocabularyWord, MockTest, TestResult, SkillType, QuizQuestion } from './types';
@@ -251,6 +251,47 @@ function HskPathApp() {
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [hydrateFromCloud]);
+
+  // ---------- Plan (Free / Pro) kept in sync with the database ----------
+  // An admin can change a student's plan at any time: re-read it when the tab comes back,
+  // every minute while the app is open, and before opening any page with Pro content.
+  const planRef = useRef<boolean | null>(null);
+  const refreshPlan = useCallback(async () => {
+    if (!authUserId) return;
+    const plan = await fetchPlan(authUserId);
+    if (!plan) return;
+    setIsAdmin(plan.isAdmin);
+    setUser((u) => (u.isProUser === plan.isPro ? u : { ...u, isProUser: plan.isPro }));
+    const had = planRef.current;
+    planRef.current = plan.isPro;
+    if (had === false && plan.isPro) addToast(tr('Your Pro plan is now active: all Pro content is unlocked.'), 'success');
+    if (had === true && !plan.isPro) addToast(tr('Your plan is now Free.'), 'info');
+  }, [authUserId, addToast]);
+
+  useEffect(() => {
+    if (!authUserId) {
+      planRef.current = null;
+      return;
+    }
+    planRef.current = Boolean(user.isProUser);
+    const onVisible = () => {
+      if (document.visibilityState === 'visible') refreshPlan();
+    };
+    document.addEventListener('visibilitychange', onVisible);
+    window.addEventListener('focus', onVisible);
+    const id = window.setInterval(onVisible, 60_000);
+    return () => {
+      document.removeEventListener('visibilitychange', onVisible);
+      window.removeEventListener('focus', onVisible);
+      window.clearInterval(id);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [authUserId, refreshPlan]);
+
+  useEffect(() => {
+    const proPages: AppState['currentView'][] = ['mock-tests', 'hsk3-exam', 'hsk-detail', 'hsk-levels', 'mock-test-intro', 'tutor', 'profile'];
+    if (proPages.includes(currentView)) refreshPlan();
+  }, [currentView, refreshPlan]);
 
   // SRS state lives in localStorage; get notified when it changes
   useEffect(() => {
@@ -884,6 +925,7 @@ function HskPathApp() {
           >
             <ProfileSettingsView
               user={user}
+              hasPro={hasPro}
               onUpdateProfile={(updated) => {
                 setUser((prev) => ({ ...prev, ...updated }));
                 addToast(tr("Profile updated!"), 'success');

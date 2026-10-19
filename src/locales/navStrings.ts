@@ -14,4 +14,12 @@ export const NAV_STRINGS: Record<string, { fr?: string; zh?: string }> = {
   "Full timed exams, scored like the real HSK.": { fr: "Des examens chronométrés, notés comme le vrai HSK.", zh: "完整计时考试，按真实 HSK 评分。" },
   "Short mock exams by level": { fr: "Examens blancs courts par niveau", zh: "各级别简短模拟考试" },
   "Shorter timed exams for HSK 1, 2 and 3, with a score and a review of your mistakes.": { fr: "Des examens chronométrés plus courts pour les HSK 1, 2 et 3, avec une note et la revue de vos erreurs.", zh: "HSK 1、2、3 的简短计时考试，提供分数和错题复习。" },
+  "Your Pro plan is now active: all Pro content is unlocked.": { fr: "Votre forfait Pro est actif : tout le contenu Pro est débloqué.", zh: "你的 Pro 套餐已生效：所有 Pro 内容均已解锁。" },
+  "Your plan is now Free.": { fr: "Votre forfait est maintenant Gratuit.", zh: "你的套餐已变为免费版。" },
+  "Pro plan active: every exam is unlocked": { fr: "Forfait Pro actif : tous les examens sont débloqués", zh: "Pro 套餐已生效：所有试卷均已解锁" },
+  "My plan": { fr: "Mon forfait", zh: "我的套餐" },
+  "Pro": { fr: "Pro", zh: "Pro" },
+  "Free": { fr: "Gratuit", zh: "免费" },
+  "All lessons, all mock exams (including the HSK Path HSK 3 exams with their recordings) and 30 Laoshi messages a day.": { fr: "Toutes les leçons, tous les examens blancs (y compris les examens HSK 3 HSK Path avec leurs enregistrements) et 30 messages Laoshi par jour.", zh: "全部课程、全部模拟考试（包括带录音的 HSK Path HSK 3 试卷），以及每天 30 条老师消息。" },
+  "HSK 1, the free lessons and exams of HSK 2 and 3, the official HSK 3 papers and 10 Laoshi messages a day.": { fr: "Le HSK 1, les leçons et examens gratuits des HSK 2 et 3, les sujets officiels HSK 3 et 10 messages Laoshi par jour.", zh: "HSK 1、HSK 2 和 3 的免费课程与考试、HSK 3 官方真题，以及每天 10 条老师消息。" },
 };

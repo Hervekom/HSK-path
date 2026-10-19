@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { tr } from '../locales/tr';
 import { Hsk30Notice } from '../components/ui/Hsk30Notice';
-import { Clock, Award, Lock, Sparkles, ChevronRight, ShieldCheck, CheckCircle2, ArrowUpRight } from '../components/icons';
+import { Clock, Award, Lock, Sparkles, ChevronRight, ShieldCheck, CheckCircle2, ArrowUpRight, Crown
+} from '../components/icons';
 import { useI18n } from '../locales';
 import { MOCK_TESTS_CATALOG } from '../data/mockTests';
 import { HSK3_EXAMS } from '../data/hsk3';
@@ -103,6 +104,11 @@ export const MockTestsListView: React.FC<MockTestsListViewProps> = ({
         </div>
 
         <div className="flex items-center gap-2 self-start md:self-center shrink-0">
+          {isProUser ? (
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-amber-50 border border-amber-200 text-xs font-bold text-amber-800">
+              <Crown className="w-3.5 h-3.5" /> {tr('Pro plan active: every exam is unlocked')}
+            </span>
+          ) : (
           <Button
             variant="outline"
             size="sm"
@@ -115,6 +121,7 @@ export const MockTestsListView: React.FC<MockTestsListViewProps> = ({
           >
             {language === 'fr' ? 'Voir l\'offre Pro' : language === 'zh' ? '查看 Pro 特权' : 'View Pro Benefits'}
           </Button>
+          )}
         </div>
       </div>
 
