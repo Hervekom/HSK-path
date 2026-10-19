@@ -864,7 +864,7 @@ export const UI_STRINGS: Record<string, { fr?: string; zh?: string }> = {
   "Timed sections, each recording can be played twice.": { fr: "Parties chronométrées, chaque enregistrement peut être écouté deux fois.", zh: "分部分计时，每段录音可听两次。" },
   "Timed sections, the recording plays once without pause.": { fr: "Parties chronométrées, l'enregistrement passe une fois sans pause.", zh: "分部分计时，录音只播放一遍，不能暂停。" },
   "Write the character that matches the pinyin.": { fr: "Écrivez le caractère qui correspond au pinyin.", zh: "看拼音写汉字。" },
-  "Written by HSK Path in the exact format of the official paper, using HSK 1–3 vocabulary. The listening is recorded with synthetic male and female voices.": { fr: "Rédigé par HSK Path au format exact du sujet officiel, avec le vocabulaire HSK 1 à 3. L'écoute est enregistrée avec des voix de synthèse masculine et féminine.", zh: "由 HSK Path 按官方试卷题型原创编写，使用 HSK 1–3 级词汇。听力由男声和女声合成录音。" },
+  "Written by HSK Path in the exact format of the official paper, using HSK 1–3 vocabulary. The listening is one continuous recording, as on exam day, with synthetic male and female voices.": { fr: "Rédigé par HSK Path au format exact du sujet officiel, avec le vocabulaire HSK 1 à 3. L'écoute est un enregistrement continu, comme le jour de l'examen, avec des voix de synthèse masculine et féminine.", zh: "由 HSK Path 按官方试卷题型原创编写，使用 HSK 1–3 级词汇。听力为一段连续录音，与正式考试相同，由男声和女声合成。" },
   "Your answer": { fr: "Votre réponse", zh: "你的答案" },
   "example": { fr: "exemple", zh: "例" },
   "starts with audio": { fr: "démarre avec l'audio", zh: "随录音开始" },

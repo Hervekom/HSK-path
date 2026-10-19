@@ -282,7 +282,7 @@ export const Hsk3ExamView: React.FC<Props> = ({ examId, isProUser, onExit, onFin
             <p className="text-sm text-stone-600">
               {isOfficial
                 ? tr('Practice paper published by Hanban / Chinese Testing International, with its original recording.')
-                : tr('Written by HSK Path in the exact format of the official paper, using HSK 1–3 vocabulary. The listening is recorded with synthetic male and female voices.')}
+                : tr('Written by HSK Path in the exact format of the official paper, using HSK 1–3 vocabulary. The listening is one continuous recording, as on exam day, with synthetic male and female voices.')}
             </p>
           </div>
 
@@ -313,7 +313,7 @@ export const Hsk3ExamView: React.FC<Props> = ({ examId, isProUser, onExit, onFin
             >
               <div className="text-sm font-bold flex items-center gap-2"><Clock className="w-4 h-4" /> {tr('Real exam conditions')}</div>
               <div className="text-xs text-stone-300 mt-1">
-                {isOfficial
+                {exam.audioUrl
                   ? tr('Timed sections, the recording plays once without pause.')
                   : tr('Timed sections, each recording can be played twice.')}
               </div>
@@ -438,8 +438,8 @@ export const Hsk3ExamView: React.FC<Props> = ({ examId, isProUser, onExit, onFin
         </Button>
       </div>
 
-      {/* Official recording */}
-      {section === 'listening' && isOfficial && exam.audioUrl && (
+      {/* Section recording (official papers and HSK Path exams alike) */}
+      {section === 'listening' && exam.audioUrl && (
         <div className="p-4 rounded-2xl bg-white border border-[#E4DCCE] space-y-3">
           <audio
             ref={audioRef}
@@ -524,7 +524,7 @@ export const Hsk3ExamView: React.FC<Props> = ({ examId, isProUser, onExit, onFin
                         <QuestionCard key={q.n} q={q} group={g} value={answers[q.n]} onAnswer={setAnswer}
                           orderSel={orderSel[q.n] || []} setOrderSel={(v) => { setOrderSel((o) => ({ ...o, [q.n]: v })); setAnswer(q.n, v.map((i) => q.words![i]).join('')); }}
                           compact={g.kind === 'image' || g.kind === 'icon'}
-                          speech={!isOfficial ? { plays: plays[q.n] || 0, limit: mode === 'exam' ? 2 : 99, onPlay: () => playItem(q) } : undefined} />
+                          speech={!exam.audioUrl ? { plays: plays[q.n] || 0, limit: mode === 'exam' ? 2 : 99, onPlay: () => playItem(q) } : undefined} />
                       ))}
                       </div>
                     </div>
@@ -535,7 +535,7 @@ export const Hsk3ExamView: React.FC<Props> = ({ examId, isProUser, onExit, onFin
                 {qs.map((q) => (
                   <QuestionCard key={q.n} q={q} value={answers[q.n]} onAnswer={setAnswer} compact={q.type === 'l-tf'}
                     orderSel={orderSel[q.n] || []} setOrderSel={(v) => { setOrderSel((o) => ({ ...o, [q.n]: v })); setAnswer(q.n, v.map((i) => q.words![i]).join('')); }}
-                    speech={!isOfficial && q.transcript ? { plays: plays[q.n] || 0, limit: mode === 'exam' ? 2 : 99, onPlay: () => playItem(q) } : undefined} />
+                    speech={!exam.audioUrl && q.transcript ? { plays: plays[q.n] || 0, limit: mode === 'exam' ? 2 : 99, onPlay: () => playItem(q) } : undefined} />
                 ))}
                 </div>
               )}

@@ -145,6 +145,8 @@ function HskPathApp() {
   // ---------- Authentication & cloud persistence (Supabase) ----------
   const [authUserId, setAuthUserId] = useState<string | null>(null);
   const [isAdmin, setIsAdmin] = useState(false);
+  // Admins get every Pro feature (to test and support students) without the Pro flag.
+  const hasPro = Boolean(user.isProUser) || isAdmin;
   const [hydrated, setHydrated] = useState(false);
   const [authChecked, setAuthChecked] = useState(!supabase);
   const lastActiveRef = useRef<string | null>(null);
@@ -564,7 +566,7 @@ function HskPathApp() {
               onNavigate={navigate}
               onSelectLevel={setSelectedLevel}
               onStartPractice={handleStartPractice}
-              isProUser={user.isProUser}
+              isProUser={hasPro}
               onSelectTest={(test) => {
                 setActiveTest(test);
                 setCurrentView('mock-test-intro');
@@ -719,7 +721,7 @@ function HskPathApp() {
             <MockTestsListView
               testHistory={testHistory}
               onNavigate={navigate}
-              isProUser={user.isProUser}
+              isProUser={hasPro}
               onOpenHsk3={openHsk3Exam}
               onSelectTest={(test) => {
                 setActiveTest(test);
@@ -742,7 +744,7 @@ function HskPathApp() {
             <Hsk3ExamView
               key={hsk3ExamId}
               examId={hsk3ExamId}
-              isProUser={Boolean(user.isProUser)}
+              isProUser={hasPro}
               onExit={() => setCurrentView('mock-tests')}
               onFinish={(result) => {
                 setTestHistory((h) => [result, ...h]);
