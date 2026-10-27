@@ -44,6 +44,14 @@ export const LessonStudyModal: React.FC<LessonStudyModalProps> = ({
 
   if (!lesson) return null;
 
+  // Speaking task already passed with Laoshi (stored by the tutor page).
+  let missionDone = false;
+  try {
+    missionDone = !!JSON.parse(localStorage.getItem('hskpath_missions_v1') || '{}')[lesson.id];
+  } catch {
+    /* storage unavailable */
+  }
+
   const L = (en: string, fr: string, zh: string) => (language === 'fr' ? fr : language === 'zh' ? zh : en);
   const tabs: Array<{ id: LessonTab; label: string; icon: React.ComponentType<{ className?: string }> }> = [
     ...(hasDialogue ? [{ id: 'dialogue' as const, label: L('Dialogue', 'Dialogue', '情境对话'), icon: MessageSquare }] : []),
@@ -319,11 +327,24 @@ export const LessonStudyModal: React.FC<LessonStudyModalProps> = ({
                 <div className="text-xs font-semibold text-stone-500 mb-1">{L('You can start with:', 'Tu peux commencer par :', '你可以这样开始：')}</div>
                 <div className="text-lg font-hanzi-serif text-stone-900">{lesson.practice.starter}</div>
               </div>
+              {missionDone && (
+                <div className="flex items-center gap-2 p-3 rounded-xl bg-[#F0FDF4] border border-[#BBF7D0] text-sm font-semibold text-[#14532D]">
+                  <CheckCircle2 className="w-4 h-4 shrink-0" />
+                  {L('Mission complete! You can practise it again anytime.', 'Mission réussie ! Tu peux la refaire quand tu veux.', '任务已完成！可以随时再练习。')}
+                </div>
+              )}
               {onPractice && (
                 <Button onClick={() => onPractice(lesson)} iconRight={<ArrowRight className="w-4 h-4" />}>
-                  {L('Practise with Laoshi', 'Pratiquer avec Laoshi', '和老师练习')}
+                  {missionDone ? L('Practise again', 'Refaire la mission', '再练一次') : L('Practise with Laoshi', 'Pratiquer avec Laoshi', '和老师练习')}
                 </Button>
               )}
+              <p className="text-xs text-stone-500">
+                {L(
+                  'Chat with Laoshi in Chinese, then press “Check my mission”: he tells you if you succeeded or gives you tips to try again.',
+                  'Discute en chinois avec Laoshi, puis appuie sur « Vérifier ma mission » : il te dit si c’est réussi ou te donne des conseils pour réessayer.',
+                  '先和老师用中文聊天，再点“检查任务”：老师会告诉你是否完成，或者给你建议再试一次。'
+                )}
+              </p>
             </div>
           )}
 

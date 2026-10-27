@@ -2,7 +2,18 @@
 // Order: sign-in check → input check → quota check (shared key only) → model → count the message.
 import { createClient } from '@supabase/supabase-js';
 import { chat, ProviderError, serverProviderConfig, userProviderConfig, type ProviderConfig } from './ai/provider.js';
-import { buildSystemPrompt, buildTurns, LIMITS, parseTutorInput, parseTutorReply, replyToHistory } from './tutor.js';
+import {
+  buildEvaluationPrompt,
+  buildSystemPrompt,
+  buildTurns,
+  EVAL_LIMITS,
+  LIMITS,
+  parseEvaluation,
+  parseEvaluationInput,
+  parseTutorInput,
+  parseTutorReply,
+  replyToHistory,
+} from './tutor.js';
 
 export interface TutorHttpResult {
   status: number;
@@ -36,9 +47,12 @@ export async function handleTutor(body: unknown, headers: Headers): Promise<Tuto
   const { data: userData, error: userError } = await db.auth.getUser(token);
   if (userError || !userData?.user) return fail(401, 'auth_required');
 
-  // 2. Input.
-  const input = parseTutorInput(body);
-  if ('error' in input) return fail(400, input.error, { maxChars: LIMITS.messageChars });
+  // 2. Input: a chat message, or a check of the lesson's speaking task.
+  const evaluating = (body as { mode?: unknown } | null)?.mode === 'evaluate';
+  const evalInput = evaluating ? parseEvaluationInput(body) : null;
+  if (evalInput && 'error' in evalInput) return fail(400, evalInput.error);
+  const input = evaluating ? null : parseTutorInput(body);
+  if (input && 'error' in input) return fail(400, input.error, { maxChars: LIMITS.messageChars });
 
   // 3. Whose key: the student's own (not counted) or the shared server key (counted).
   const ownKey = header(headers, 'x-laoshi-key');
@@ -63,12 +77,20 @@ export async function handleTutor(body: unknown, headers: Headers): Promise<Tuto
   // 4. Model call.
   let result;
   try {
-    result = await chat(cfg, {
-      system: buildSystemPrompt(input),
-      turns: buildTurns(input),
-      maxTokens: LIMITS.maxTokens,
-      temperature: 0.5,
-    });
+    result =
+      evalInput && !('error' in evalInput)
+        ? await chat(cfg, {
+            system: buildEvaluationPrompt(evalInput),
+            turns: [{ role: 'user', content: evalInput.messages.map((m, i) => `${i + 1}. ${m}`).join('\n') }],
+            maxTokens: EVAL_LIMITS.maxTokens,
+            temperature: 0.2,
+          })
+        : await chat(cfg, {
+            system: buildSystemPrompt(input as Exclude<typeof input, null | { error: string }>),
+            turns: buildTurns(input as Exclude<typeof input, null | { error: string }>),
+            maxTokens: LIMITS.maxTokens,
+            temperature: 0.5,
+          });
   } catch (err) {
     const code = err instanceof ProviderError ? err.code : 'unavailable';
     // Log the error kind only: never the key or the conversation.
@@ -79,8 +101,10 @@ export async function handleTutor(body: unknown, headers: Headers): Promise<Tuto
     return fail(502, 'provider_error');
   }
 
-  const reply = parseTutorReply(result.text);
-  if (!reply.reply) return fail(502, 'provider_error');
+  const evaluation = evaluating ? parseEvaluation(result.text) : null;
+  if (evaluating && !evaluation) return fail(502, 'provider_error');
+  const reply = evaluating ? null : parseTutorReply(result.text);
+  if (reply && !reply.reply) return fail(502, 'provider_error');
 
   // 5. Count the message on the shared key once the student actually got an answer.
   let quota: { used: number; limit: number } | null = null;
@@ -91,8 +115,9 @@ export async function handleTutor(body: unknown, headers: Headers): Promise<Tuto
   }
   console.log('[laoshi] reply', result.provider, result.model, 'tokens', result.totalTokens ?? '?', usingOwnKey ? 'own-key' : 'shared');
 
+  if (evaluation) return { status: 200, body: { ok: true, evaluation, quota, ownKey: usingOwnKey } };
   return {
     status: 200,
-    body: { ok: true, ...reply, history: replyToHistory(reply), quota, ownKey: usingOwnKey },
+    body: { ok: true, ...reply!, history: replyToHistory(reply!), quota, ownKey: usingOwnKey },
   };
 }

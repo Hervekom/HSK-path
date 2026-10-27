@@ -22,6 +22,8 @@ export interface TutorInput {
   level: TutorLevel;
   language: TutorLanguage;
   knownWords: string[];
+  /** Speaking task from a lesson that the student is working on, if any. */
+  mission: string;
 }
 
 export interface TutorReply {
@@ -74,7 +76,7 @@ export function parseTutorInput(body: any): TutorInput | { error: string } {
     .filter((w: string) => w && CJK.test(w) && !/[^㐀-鿿·]/.test(w))
     .slice(0, LIMITS.knownWords);
 
-  return { message, history, level, language, knownWords };
+  return { message, history, level, language, knownWords, mission: clip(body?.mission, 300) };
 }
 
 function sampleVocabulary(level: TutorLevel): string[] {
@@ -112,7 +114,7 @@ HOW TO TEACH
 - Reuse the student's known words when you can. Avoid words above their level; if one is necessary, explain it in "tip".
 - Do not write pinyin in "reply" or "corrected": the app adds it. In "explanation" and "tip", a new word may be followed by its pinyin with tone marks, e.g. 坐 (zuò).
 
-Student's known words: ${known}
+${input.mission ? `CURRENT SPEAKING TASK (from the student's lesson): "${input.mission}". Steer the conversation so the student can complete this task: ask the questions that lead them to say what the task requires. Do not do the task for them.\n\n` : ''}Student's known words: ${known}
 Words from this level you can use: ${sampleVocabulary(input.level).join('、')}
 Grammar points studied in HSK Path at this level: ${grammarForLevel(input.level).join(' | ') || '(none)'}
 
@@ -152,4 +154,61 @@ export function parseTutorReply(text: string): TutorReply {
 /** Compact text of a tutor turn, sent back as history on the next message. */
 export function replyToHistory(r: TutorReply): string {
   return r.correction ? `[correction: ${r.correction.corrected}] ${r.reply}` : r.reply;
+}
+
+// ---------------------------------------------------------------------------
+// Mission check: did the student complete the lesson's speaking task?
+
+export interface EvaluationInput {
+  mission: string;
+  starter: string;
+  messages: string[];
+  level: TutorLevel;
+  language: TutorLanguage;
+}
+
+export interface Evaluation {
+  passed: boolean;
+  feedback: string;
+  advice: string[];
+  example: string;
+}
+
+export const EVAL_LIMITS = { messages: 12, maxTokens: 600 };
+
+export function parseEvaluationInput(body: any): EvaluationInput | { error: string } {
+  const mission = clip(body?.mission, 300);
+  if (!mission) return { error: 'empty_message' };
+  const messages = (Array.isArray(body?.messages) ? body.messages : [])
+    .map((m: unknown) => clip(m, LIMITS.messageChars))
+    .filter(Boolean)
+    .slice(-EVAL_LIMITS.messages);
+  if (!messages.length) return { error: 'empty_message' };
+  const level: TutorLevel = ['hsk1', 'hsk2', 'hsk3'].includes(body?.level) ? body.level : 'hsk1';
+  const language: TutorLanguage = ['en', 'fr', 'zh'].includes(body?.language) ? body.language : 'en';
+  return { mission, starter: clip(body?.starter, 120), messages, level, language };
+}
+
+export function buildEvaluationPrompt(input: EvaluationInput): string {
+  return `You are Laoshi (老师), a kind but honest Mandarin teacher in HSK Path. A student at level ${input.level.toUpperCase()} (${LEVEL_STYLE[input.level]}) was given this speaking task: "${input.mission}".${input.starter ? ` Suggested opening: "${input.starter}".` : ''}
+
+Judge ONLY the student's own Chinese messages (given by the user). The task is PASSED when the student, in Chinese, actually did what the task asks (all its parts), with sentences understandable to a native speaker at this level. Small mistakes are fine if the meaning is clear. It is NOT passed if a part of the task is missing, if the student mostly wrote in another language, only copied the suggested opening without completing it, or if the Chinese is not understandable.
+
+Write in ${EXPLANATION_LANGUAGE[input.language]}. Answer with ONE JSON object only, no markdown:
+{"passed": true or false, "feedback": "1–2 short sentences: what the student did well and, if not passed, what is missing", "advice": ["0 to 3 short, concrete tips to succeed (empty if passed)"], "example": "one or two model Chinese sentences that would complete the task at this level"}`;
+}
+
+export function parseEvaluation(text: string): Evaluation | null {
+  const cleaned = text.replace(/```(?:json)?/gi, '').trim();
+  const start = cleaned.indexOf('{');
+  const end = cleaned.lastIndexOf('}');
+  if (start === -1 || end <= start) return null;
+  try {
+    const d = JSON.parse(cleaned.slice(start, end + 1));
+    if (typeof d?.passed !== 'boolean') return null;
+    const advice = (Array.isArray(d.advice) ? d.advice : []).map((a: unknown) => clip(a, 240)).filter(Boolean).slice(0, 3);
+    return { passed: d.passed, feedback: clip(d.feedback, 400), advice: d.passed ? [] : advice, example: clip(d.example, 200) };
+  } catch {
+    return null;
+  }
 }

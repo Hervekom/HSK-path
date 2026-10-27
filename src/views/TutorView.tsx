@@ -3,7 +3,7 @@ import { tr } from '../locales/tr';
 import { useI18n } from '../locales';
 import { supabase } from '../lib/supabase';
 import { Button } from '../components/ui/Button';
-import { Send, Settings, RotateCcw, Eye, EyeOff, X, Lightbulb, AlertCircle, ExternalLink, Info, Target } from '../components/icons';
+import { Send, Settings, RotateCcw, Eye, EyeOff, X, Lightbulb, AlertCircle, ExternalLink, Info, Target, CheckCircle2 } from '../components/icons';
 import type { AppState, UserProfile } from '../types';
 
 type Level = 'hsk1' | 'hsk2' | 'hsk3';
@@ -24,7 +24,29 @@ interface ChatMessage {
   reply?: TutorReply;
   error?: string;
   local?: boolean; // greeting written by the app, not sent as history
+  evaluation?: { passed: boolean; feedback: string; advice: string[]; example: string };
 }
+
+interface Mission {
+  lessonId?: string;
+  level?: Level;
+  task: { en: string; fr: string; zh: string };
+  starter: string;
+  done?: boolean;
+}
+
+/** Lesson speaking tasks completed, by lesson id (read by the lesson modal too). */
+export const MISSIONS_DONE_KEY = 'hskpath_missions_v1';
+
+// A speaking task handed over from a lesson (see HskLevelDetailView).
+const readMission = (): Mission | null => {
+  try {
+    const raw = sessionStorage.getItem('laoshi_mission');
+    return raw ? JSON.parse(raw) : null;
+  } catch {
+    return null;
+  }
+};
 
 interface TutorViewProps {
   user: UserProfile;
@@ -184,26 +206,18 @@ export const TutorView: React.FC<TutorViewProps> = ({ user, isSignedIn, knownWor
   const [saved] = useState(() => loadJson<{ level: Level; messages: ChatMessage[] } | null>(CHAT_KEY, null));
   const [level, setLevel] = useState<Level>(() => {
     // A lesson task sets the level of that lesson.
-    try {
-      const m = JSON.parse(sessionStorage.getItem('laoshi_mission') || 'null');
-      if (m?.level) return m.level as Level;
-    } catch {
-      /* ignore */
-    }
+    const m = readMission();
+    if (m?.level) return m.level;
     return saved?.messages?.length && saved.level ? saved.level : user.currentHsk || 'hsk1';
   });
-  const [messages, setMessages] = useState<ChatMessage[]>(() =>
-    saved?.messages?.length ? saved.messages : [greeting(user.currentHsk || 'hsk1', language)]
-  );
-  // A speaking task handed over from a lesson (see HskLevelDetailView).
-  const [mission, setMission] = useState<{ task: { en: string; fr: string; zh: string }; starter: string } | null>(() => {
-    try {
-      const raw = sessionStorage.getItem('laoshi_mission');
-      return raw ? JSON.parse(raw) : null;
-    } catch {
-      return null;
-    }
+  const [messages, setMessages] = useState<ChatMessage[]>(() => {
+    // A lesson task starts a fresh conversation at the lesson's level.
+    const m = readMission();
+    if (m) return [greeting(m.level || user.currentHsk || 'hsk1', language)];
+    return saved?.messages?.length ? saved.messages : [greeting(user.currentHsk || 'hsk1', language)];
   });
+  const [mission, setMission] = useState<Mission | null>(readMission);
+  const [checking, setChecking] = useState(false);
   useEffect(() => {
     try {
       sessionStorage.removeItem('laoshi_mission');
@@ -289,7 +303,7 @@ export const TutorView: React.FC<TutorViewProps> = ({ user, isSignedIn, knownWor
         res = await fetch('/api/tutor', {
           method: 'POST',
           headers,
-          body: JSON.stringify({ message, history, level, language, knownWords }),
+          body: JSON.stringify({ message, history, level, language, knownWords, mission: mission && !mission.done ? mission.task.en : '' }),
         });
       } catch {
         throw Object.assign(new Error('network'), { code: 'network' });
@@ -317,6 +331,61 @@ export const TutorView: React.FC<TutorViewProps> = ({ user, isSignedIn, knownWor
     } finally {
       setSending(false);
       inputRef.current?.focus();
+    }
+  };
+
+  const studentMessages = messages.filter((m) => m.role === 'user').map((m) => m.text);
+
+  /** Ask Laoshi whether the lesson's speaking task is done; show the verdict in the chat. */
+  const checkMission = async () => {
+    if (!mission || checking || sending || !isSignedIn || !supabase || !studentMessages.length) return;
+    setChecking(true);
+    try {
+      const { data: sessionData } = await supabase.auth.getSession();
+      const token = sessionData.session?.access_token;
+      if (!token) throw Object.assign(new Error('auth'), { code: 'auth_required' });
+      const headers: Record<string, string> = { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` };
+      if (ownKey?.key) {
+        headers['X-Laoshi-Key'] = ownKey.key;
+        headers['X-Laoshi-Provider'] = ownKey.provider;
+      }
+      let res: Response;
+      try {
+        res = await fetch('/api/tutor', {
+          method: 'POST',
+          headers,
+          body: JSON.stringify({
+            mode: 'evaluate',
+            mission: mission.task.en,
+            starter: mission.starter,
+            messages: studentMessages,
+            level,
+            language,
+          }),
+        });
+      } catch {
+        throw Object.assign(new Error('network'), { code: 'network' });
+      }
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || !data?.ok || !data.evaluation) throw Object.assign(new Error('api'), { code: data?.error || 'unknown', data });
+      if (data.quota) setQuota(data.quota);
+      const evaluation = data.evaluation as NonNullable<ChatMessage['evaluation']>;
+      setMessages((prev) => [...prev, { id: `v-${Date.now()}`, role: 'laoshi', text: '', local: true, evaluation }]);
+      if (evaluation.passed) {
+        setMission((m) => (m ? { ...m, done: true } : m));
+        if (mission.lessonId) {
+          const done = loadJson<Record<string, string>>(MISSIONS_DONE_KEY, {});
+          saveJson(MISSIONS_DONE_KEY, { ...done, [mission.lessonId]: new Date().toISOString() });
+        }
+      }
+    } catch (err: any) {
+      if (err?.code === 'quota_user' && err?.data) setQuota({ used: err.data.used, limit: err.data.limit });
+      setMessages((prev) => [
+        ...prev,
+        { id: `e-${Date.now()}`, role: 'laoshi', text: '', error: errorText(err?.code || 'unknown', err?.data || {}) },
+      ]);
+    } finally {
+      setChecking(false);
     }
   };
 
@@ -438,6 +507,48 @@ export const TutorView: React.FC<TutorViewProps> = ({ user, isSignedIn, knownWor
                   </p>
                 </div>
               </div>
+            ) : m.evaluation ? (
+              <div key={m.id} className="flex">
+                <div
+                  className={`max-w-[94%] sm:max-w-[78%] rounded-2xl rounded-bl-md border px-4 py-3 space-y-2 text-sm ${
+                    m.evaluation.passed ? 'border-[#BBF7D0] bg-[#F0FDF4] text-[#14532D]' : 'border-amber-200 bg-amber-50 text-amber-900'
+                  }`}
+                >
+                  <p className="font-bold flex items-center gap-1.5">
+                    {m.evaluation.passed ? <CheckCircle2 className="w-4 h-4" /> : <RotateCcw className="w-4 h-4" />}
+                    {m.evaluation.passed
+                      ? (language === 'fr' ? 'Mission réussie, bravo !' : language === 'zh' ? '任务完成，真棒！' : 'Mission complete, well done!')
+                      : (language === 'fr' ? 'Pas encore : on réessaie !' : language === 'zh' ? '还差一点，再试试！' : 'Not yet: try again!')}
+                  </p>
+                  {m.evaluation.feedback && <p className="leading-relaxed">{m.evaluation.feedback}</p>}
+                  {m.evaluation.advice.length > 0 && (
+                    <ul className="list-disc pl-5 space-y-1 leading-relaxed">
+                      {m.evaluation.advice.map((a, i) => (
+                        <li key={i}>{a}</li>
+                      ))}
+                    </ul>
+                  )}
+                  {m.evaluation.example && (
+                    <div className="pt-1">
+                      <p className="text-xs font-semibold opacity-80">
+                        {m.evaluation.passed
+                          ? (language === 'fr' ? 'Une autre façon de le dire :' : language === 'zh' ? '也可以这样说：' : 'Another way to say it:')
+                          : (language === 'fr' ? 'Par exemple :' : language === 'zh' ? '例如：' : 'For example:')}
+                      </p>
+                      <ChineseLine text={m.evaluation.example} pinyin={pinyin} showPinyin={showPinyin} />
+                    </div>
+                  )}
+                  {!m.evaluation.passed && (
+                    <p className="text-xs opacity-80">
+                      {language === 'fr'
+                        ? 'Continue la conversation avec ces conseils, puis vérifie à nouveau ta mission.'
+                        : language === 'zh'
+                          ? '按照建议继续聊天，然后再检查一次。'
+                          : 'Keep chatting with these tips, then check your mission again.'}
+                    </p>
+                  )}
+                </div>
+              </div>
             ) : m.error ? (
               <div key={m.id} className="flex">
                 <div className="max-w-[94%] sm:max-w-[78%] flex gap-2 rounded-2xl rounded-bl-md border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
@@ -511,15 +622,43 @@ export const TutorView: React.FC<TutorViewProps> = ({ user, isSignedIn, knownWor
 
         {/* Lesson task */}
         {mission && (
-          <div className="mx-3 sm:mx-5 mb-2 flex items-start gap-2 rounded-xl bg-[#FFF7ED] border border-[#FED7AA] px-3 py-2 text-sm text-[#7C2D12]">
-            <Target className="w-4 h-4 mt-0.5 shrink-0" />
-            <span className="flex-1 leading-relaxed">
-              <strong>{language === 'fr' ? 'Mission : ' : language === 'zh' ? '任务：' : 'Mission: '}</strong>
-              {mission.task[language as 'en' | 'fr' | 'zh'] ?? mission.task.en}
-            </span>
-            <button onClick={() => setMission(null)} aria-label="×" className="shrink-0 cursor-pointer text-[#9A3412] hover:text-[#7C2D12]">
-              <X className="w-4 h-4" />
-            </button>
+          <div
+            className={`mx-3 sm:mx-5 mb-2 rounded-xl border px-3 py-2 text-sm ${
+              mission.done ? 'bg-[#F0FDF4] border-[#BBF7D0] text-[#14532D]' : 'bg-[#FFF7ED] border-[#FED7AA] text-[#7C2D12]'
+            }`}
+          >
+            <div className="flex items-start gap-2">
+              {mission.done ? <CheckCircle2 className="w-4 h-4 mt-0.5 shrink-0" /> : <Target className="w-4 h-4 mt-0.5 shrink-0" />}
+              <span className="flex-1 leading-relaxed">
+                <strong>
+                  {mission.done
+                    ? (language === 'fr' ? 'Mission réussie : ' : language === 'zh' ? '任务完成：' : 'Mission complete: ')
+                    : (language === 'fr' ? 'Mission : ' : language === 'zh' ? '任务：' : 'Mission: ')}
+                </strong>
+                {mission.task[language as 'en' | 'fr' | 'zh'] ?? mission.task.en}
+              </span>
+              <button onClick={() => setMission(null)} aria-label="×" className="shrink-0 cursor-pointer opacity-70 hover:opacity-100">
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+            {!mission.done && isSignedIn && (
+              <div className="mt-2 flex items-center justify-between gap-2 pl-6">
+                <span className="text-xs opacity-80">
+                  {studentMessages.length
+                    ? (language === 'fr' ? 'Fini ? Laoshi vérifie si la mission est réussie.' : language === 'zh' ? '说完了吗？让老师检查一下。' : 'Done? Laoshi will check your mission.')
+                    : (language === 'fr' ? 'Écris en chinois, puis fais vérifier ta mission.' : language === 'zh' ? '先用中文聊一聊，再检查任务。' : 'Chat in Chinese, then have your mission checked.')}
+                </span>
+                <button
+                  onClick={checkMission}
+                  disabled={!studentMessages.length || checking || sending}
+                  className="shrink-0 px-3 py-1.5 rounded-lg bg-[#C2410C] text-white text-xs font-bold cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed hover:bg-[#9A3412] transition-colors"
+                >
+                  {checking
+                    ? (language === 'fr' ? 'Vérification…' : language === 'zh' ? '检查中…' : 'Checking…')
+                    : (language === 'fr' ? 'Vérifier ma mission' : language === 'zh' ? '检查任务' : 'Check my mission')}
+                </button>
+              </div>
+            )}
           </div>
         )}
 
