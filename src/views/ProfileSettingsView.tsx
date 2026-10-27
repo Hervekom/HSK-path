@@ -18,6 +18,7 @@ import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
 import { Button } from '../components/ui/Button';
 import { LanguageSelector } from '../components/ui/LanguageSelector';
+import { InstallAppCard } from '../components/ui/InstallAppCard';
 import type { UserProfile, Language } from '../types';
 
 interface ProfileSettingsViewProps {
@@ -83,6 +84,8 @@ export const ProfileSettingsView: React.FC<ProfileSettingsViewProps> = ({
             : tr('HSK 1, the free lessons and exams of HSK 2 and 3, the official HSK 3 papers and 10 Laoshi messages a day.')}
         </p>
       </Card>
+
+      <InstallAppCard />
 
       <form onSubmit={handleSave} className="space-y-6">
         {/* User Info Card */}

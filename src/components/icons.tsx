@@ -82,6 +82,8 @@ import {
   Warning as PhWarning,
   WarningCircle as PhWarningCircle,
   X as PhX,
+  DownloadSimple as PhDownloadSimple,
+  Export as PhExport,
   XCircle as PhXCircle,
 } from '@phosphor-icons/react';
 
@@ -125,6 +127,8 @@ export const ArrowLeft = make(PhArrowLeft, 'ArrowLeft');
 export const PenTool = make(PhPenNib, 'PenTool');
 export const Flame = make(PhFire, 'Flame');
 export const X = make(PhX, 'X');
+export const DownloadSimple = make(PhDownloadSimple, 'DownloadSimple');
+export const ShareIos = make(PhExport, 'ShareIos');
 export const TrendingUp = make(PhTrendUp, 'TrendingUp');
 export const Eye = make(PhEye, 'Eye');
 export const EyeOff = make(PhEyeSlash, 'EyeOff');

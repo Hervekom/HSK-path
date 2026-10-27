@@ -9,6 +9,7 @@ import { ProgressBar } from '../components/ui/ProgressBar';
 import { DailyChineseWidget } from '../components/DailyChineseWidget';
 import { WEEKLY_PERFORMANCE_HISTORY } from '../data/progressData';
 import type { AppState, UserProfile, TestResult, SkillType } from '../types';
+import { InstallAppCard } from '../components/ui/InstallAppCard';
 
 interface DashboardViewProps {
   user: UserProfile;
@@ -74,6 +75,8 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           </Button>
         </div>
       </div>
+
+      <InstallAppCard variant="banner" />
 
       {/* 4 Luxury Stats Cards Grid */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
