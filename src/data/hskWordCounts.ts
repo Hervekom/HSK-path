@@ -1,6 +1,6 @@
 // Word counts per HSK level, computed from the official HSK 3.0 list (hsk30Words.ts)
 // so the numbers shown on the site always match the words students actually study.
-import { HSK30_WORDS } from './hsk30Words';
+import { HSK30_WORDS } from './hsk30Words.js';
 
 export type CoreLevel = 'hsk1' | 'hsk2' | 'hsk3';
 export const CORE_LEVELS: CoreLevel[] = ['hsk1', 'hsk2', 'hsk3'];

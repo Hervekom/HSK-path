@@ -1,8 +1,9 @@
+// Runtime imports keep the .js extension: the Laoshi API (Vercel, Node ESM) loads this file too.
 import type { HskLesson, HskLessonExtras } from '../types';
-import { buildGeneratedLessons, buildVocabQuiz } from './generatedLessons';
-import { LESSON_CONTENT } from './lessonContent';
-import { HSK1_EXTRAS, HSK1_ORDER } from './hsk1Course';
-import { HSK2_EXTRAS, HSK2_ORDER, HSK3_EXTRAS, HSK3_ORDER } from './hsk23Course';
+import { buildGeneratedLessons, buildVocabQuiz } from './generatedLessons.js';
+import { LESSON_CONTENT } from './lessonContent.js';
+import { HSK1_EXTRAS, HSK1_ORDER } from './hsk1Course.js';
+import { HSK2_EXTRAS, HSK2_ORDER, HSK3_EXTRAS, HSK3_ORDER } from './hsk23Course.js';
 
 const HAND_WRITTEN_LESSONS: HskLesson[] = [
   // =========================================================================

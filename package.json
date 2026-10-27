@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "clean": "rm -rf dist server.js",
     "lint": "tsc --noEmit",
-    "check:words": "tsx scripts/check-word-counts.ts"
+    "check:words": "tsx scripts/check-word-counts.ts",
+    "check:api": "bash scripts/check-api-load.sh"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",

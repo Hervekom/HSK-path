@@ -1,8 +1,8 @@
 import type { HskLesson, QuizQuestion } from '../types';
-import { HSK30_WORDS, type Hsk30Row } from './hsk30Words';
-import { GENERATED_LESSON_PLAN } from './lessonPlan';
-import type { CoreLevel } from './hskWordCounts';
-import { LESSON_CONTENT } from './lessonContent';
+import { HSK30_WORDS, type Hsk30Row } from './hsk30Words.js';
+import { GENERATED_LESSON_PLAN } from './lessonPlan.js';
+import type { CoreLevel } from './hskWordCounts.js';
+import { LESSON_CONTENT } from './lessonContent.js';
 
 const BY_ID = new Map<number, Hsk30Row>(HSK30_WORDS.map((r) => [r[0], r]));
 const LEVEL_NUM: Record<CoreLevel, number> = { hsk1: 1, hsk2: 2, hsk3: 3 };
