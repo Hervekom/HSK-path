@@ -44,6 +44,9 @@ for (const level of ['hsk1', 'hsk2', 'hsk3'] as const) {
   if (missing.length) errors.push(`${level} lessons miss ${missing.length} words: ${missing.slice(0, 20).join(' ')}`);
   const ids = HSK_LESSONS_DATA.filter((l) => l.level === level).map((l) => l.id);
   if (new Set(ids).size !== ids.length) errors.push(`${level} has duplicate lesson ids`);
+  for (const l of HSK_LESSONS_DATA.filter((x) => x.level === level)) {
+    if (!l.dialogue.length || !l.grammarPoints.length || !l.quickQuiz.length) errors.push(`${l.id} is missing a dialogue, grammar point or quiz`);
+  }
 }
 
 if (errors.length) {

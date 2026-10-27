@@ -1,5 +1,6 @@
 import type { HskLesson } from '../types';
-import { buildGeneratedLessons } from './generatedLessons';
+import { buildGeneratedLessons, buildVocabQuiz } from './generatedLessons';
+import { LESSON_CONTENT } from './lessonContent';
 
 const HAND_WRITTEN_LESSONS: HskLesson[] = [
   // =========================================================================
@@ -857,11 +858,21 @@ const HAND_WRITTEN_LESSONS: HskLesson[] = [
   },
 ];
 
+// Hand-written lessons that still lack a dialogue, grammar or quiz get them from the shared content.
+const completeLesson = (l: HskLesson): HskLesson => ({
+  ...l,
+  grammarPoints: l.grammarPoints?.length ? l.grammarPoints : LESSON_CONTENT[l.id]?.grammarPoints ?? [],
+  dialogue: l.dialogue?.length ? l.dialogue : LESSON_CONTENT[l.id]?.dialogue ?? [],
+  quickQuiz: l.quickQuiz?.length
+    ? l.quickQuiz
+    : buildVocabQuiz(l.level, l.id, l.vocabulary.map((v) => ({ hanzi: v.hanzi, pinyin: v.pinyin, en: v.meaning.en, fr: v.meaning.fr }))),
+});
+
 const countFor = (level: HskLesson['level']) => HAND_WRITTEN_LESSONS.filter((l) => l.level === level).length;
 
 // Hand-written lessons first, then thematic lessons that cover the rest of the official list.
 // HSK 1 stays fully free; beyond the two free lessons, HSK 2 and HSK 3 are Pro.
 export const HSK_LESSONS_DATA: HskLesson[] = (['hsk1', 'hsk2', 'hsk3'] as const).flatMap((level) => [
-  ...HAND_WRITTEN_LESSONS.filter((l) => l.level === level),
+  ...HAND_WRITTEN_LESSONS.filter((l) => l.level === level).map(completeLesson),
   ...buildGeneratedLessons(level, countFor(level) + 1, level === 'hsk1'),
 ]);

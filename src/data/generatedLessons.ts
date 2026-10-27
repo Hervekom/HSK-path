@@ -2,12 +2,21 @@ import type { HskLesson, QuizQuestion } from '../types';
 import { HSK30_WORDS, type Hsk30Row } from './hsk30Words';
 import { GENERATED_LESSON_PLAN } from './lessonPlan';
 import type { CoreLevel } from './hskWordCounts';
+import { LESSON_CONTENT } from './lessonContent';
 
 const BY_ID = new Map<number, Hsk30Row>(HSK30_WORDS.map((r) => [r[0], r]));
 const LEVEL_NUM: Record<CoreLevel, number> = { hsk1: 1, hsk2: 2, hsk3: 3 };
 
 /** Short gloss for quiz prompts: first sense only. */
 const firstSense = (s: string) => s.split(';')[0].trim();
+
+type QuizWord = { hanzi: string; pinyin: string; en: string; fr: string };
+
+/** Vocabulary quiz from a lesson's word list: “which word means …?”, options from the same lesson. */
+export function buildVocabQuiz(level: CoreLevel, lessonId: string, words: QuizWord[]): QuizQuestion[] {
+  const rows = words.map((w) => [0, 1, w.hanzi, w.pinyin, '', w.en, w.fr] as unknown as Hsk30Row);
+  return buildQuiz(level, lessonId, rows);
+}
 
 function buildQuiz(level: CoreLevel, lessonId: string, rows: Hsk30Row[]): QuizQuestion[] {
   const count = Math.min(5, rows.length);
@@ -90,8 +99,8 @@ export function buildGeneratedLessons(level: CoreLevel, startNumber: number, fre
         zh: `学习${sample}等本主题词语，并完成随堂小测验。`,
       },
       vocabulary: rows.map((r) => ({ hanzi: r[2], pinyin: r[3], meaning: { en: r[5], fr: r[6], zh: r[2] } })),
-      grammarPoints: [],
-      dialogue: [],
+      grammarPoints: LESSON_CONTENT[id]?.grammarPoints ?? [],
+      dialogue: LESSON_CONTENT[id]?.dialogue ?? [],
       quickQuiz: buildQuiz(level, id, rows),
     } as HskLesson;
   });
