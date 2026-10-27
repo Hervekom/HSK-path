@@ -4,7 +4,7 @@ import { Modal } from './Modal';
 import { Button } from './Button';
 import { Badge } from './Badge';
 import { SpeechButton } from './SpeechButton';
-import { BookOpen, MessageSquare, Award, CheckCircle2, XCircle, ArrowRight, Lightbulb } from '../icons';
+import { BookOpen, MessageSquare, Award, CheckCircle2, XCircle, ArrowRight, Lightbulb, Volume2, PenTool, Globe, Target } from '../icons';
 import type { HskLesson } from '../../types';
 import { isSyllabusWord, type CoreLevel } from '../../data/hskWordCounts';
 import { useI18n } from '../../locales';
@@ -14,16 +14,21 @@ interface LessonStudyModalProps {
   isOpen: boolean;
   onClose: () => void;
   onCompleteLesson?: (lessonId: string) => void;
+  /** Opens Laoshi with this lesson's speaking task. */
+  onPractice?: (lesson: HskLesson) => void;
 }
+
+type LessonTab = 'dialogue' | 'grammar' | 'vocab' | 'sounds' | 'hanzi' | 'culture' | 'quiz' | 'practice';
 
 export const LessonStudyModal: React.FC<LessonStudyModalProps> = ({
   lesson,
   isOpen,
   onClose,
   onCompleteLesson,
+  onPractice,
 }) => {
   const { language, getLocalized } = useI18n();
-  const [activeTab, setActiveTab] = useState<'dialogue' | 'grammar' | 'vocab' | 'quiz'>('dialogue');
+  const [activeTab, setActiveTab] = useState<LessonTab>('dialogue');
   const [selectedAnswers, setSelectedAnswers] = useState<Record<string, string>>({});
   const [isCompleted, setIsCompleted] = useState(false);
 
@@ -38,6 +43,18 @@ export const LessonStudyModal: React.FC<LessonStudyModalProps> = ({
   }, [lesson?.id]);
 
   if (!lesson) return null;
+
+  const L = (en: string, fr: string, zh: string) => (language === 'fr' ? fr : language === 'zh' ? zh : en);
+  const tabs: Array<{ id: LessonTab; label: string; icon: React.ComponentType<{ className?: string }> }> = [
+    ...(hasDialogue ? [{ id: 'dialogue' as const, label: L('Dialogue', 'Dialogue', '情境对话'), icon: MessageSquare }] : []),
+    ...(hasGrammar ? [{ id: 'grammar' as const, label: L('Grammar', 'Grammaire', '核心语法'), icon: Lightbulb }] : []),
+    { id: 'vocab', label: L('Vocab', 'Vocabulaire', '重点生词'), icon: BookOpen },
+    ...(lesson.pronunciation ? [{ id: 'sounds' as const, label: L('Pinyin', 'Pinyin', '拼音'), icon: Volume2 }] : []),
+    ...(lesson.characters ? [{ id: 'hanzi' as const, label: L('Characters', 'Caractères', '汉字'), icon: PenTool }] : []),
+    ...(lesson.culture ? [{ id: 'culture' as const, label: L('Culture', 'Culture', '文化'), icon: Globe }] : []),
+    ...(lesson.quickQuiz?.length ? [{ id: 'quiz' as const, label: L('Quiz', 'Quiz', '随堂测验'), icon: Award }] : []),
+    ...(lesson.practice ? [{ id: 'practice' as const, label: L('Speak', 'Pratique', '运用'), icon: Target }] : []),
+  ];
 
   const handleSelectAnswer = (qId: string, optId: string) => {
     setSelectedAnswers((prev) => ({ ...prev, [qId]: optId }));
@@ -77,58 +94,20 @@ export const LessonStudyModal: React.FC<LessonStudyModalProps> = ({
             </p>
           </div>
 
-          {/* Tab Navigation */}
-          <div className="flex items-center gap-1.5 p-1 bg-[#ECE4D8] rounded-xl self-start sm:self-center overflow-x-auto max-w-full">
-            {hasDialogue && (
-            <button
-              onClick={() => setActiveTab('dialogue')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-colors cursor-pointer flex items-center gap-1.5 whitespace-nowrap ${
-                activeTab === 'dialogue'
-                  ? 'bg-white text-stone-900 shadow-xs'
-                  : 'text-stone-600 hover:text-stone-900'
-              }`}
-            >
-              <MessageSquare className="w-3.5 h-3.5" />
-              {language === 'fr' ? 'Dialogue' : language === 'zh' ? '情境对话' : 'Dialogue'}
-            </button>
-            )}
-            {hasGrammar && (
-            <button
-              onClick={() => setActiveTab('grammar')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-colors cursor-pointer flex items-center gap-1.5 whitespace-nowrap ${
-                activeTab === 'grammar'
-                  ? 'bg-white text-stone-900 shadow-xs'
-                  : 'text-stone-600 hover:text-stone-900'
-              }`}
-            >
-              <Lightbulb className="w-3.5 h-3.5" />
-              {language === 'fr' ? 'Grammaire' : language === 'zh' ? '核心语法' : 'Grammar'}
-            </button>
-            )}
-            <button
-              onClick={() => setActiveTab('vocab')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-colors cursor-pointer flex items-center gap-1.5 whitespace-nowrap ${
-                activeTab === 'vocab'
-                  ? 'bg-white text-stone-900 shadow-xs'
-                  : 'text-stone-600 hover:text-stone-900'
-              }`}
-            >
-              <BookOpen className="w-3.5 h-3.5" />
-              {language === 'fr' ? 'Vocabulaire' : language === 'zh' ? '重点生词' : 'Vocab'}
-            </button>
-            {lesson.quickQuiz && lesson.quickQuiz.length > 0 && (
+          {/* Tab Navigation: wraps on small screens so every section stays visible */}
+          <div className="flex flex-wrap items-center gap-1 p-1 bg-[#ECE4D8] rounded-xl self-start sm:self-center max-w-full">
+            {tabs.map(({ id, label, icon: Icon }) => (
               <button
-                onClick={() => setActiveTab('quiz')}
-                className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-colors cursor-pointer flex items-center gap-1.5 whitespace-nowrap ${
-                  activeTab === 'quiz'
-                    ? 'bg-white text-stone-900 shadow-xs'
-                    : 'text-stone-600 hover:text-stone-900'
+                key={id}
+                onClick={() => setActiveTab(id)}
+                className={`px-2.5 py-1.5 rounded-lg text-xs font-bold transition-colors cursor-pointer flex items-center gap-1.5 whitespace-nowrap ${
+                  activeTab === id ? 'bg-white text-stone-900 shadow-xs' : 'text-stone-600 hover:text-stone-900'
                 }`}
               >
-                <Award className="w-3.5 h-3.5 text-[#C52828]" />
-                {language === 'fr' ? 'Quiz' : language === 'zh' ? '随堂测验' : 'Quiz'}
+                <Icon className={`w-3.5 h-3.5 ${id === 'quiz' ? 'text-[#C52828]' : ''}`} />
+                {label}
               </button>
-            )}
+            ))}
           </div>
         </div>
 
@@ -249,6 +228,86 @@ export const LessonStudyModal: React.FC<LessonStudyModalProps> = ({
                   </div>
                 ))}
               </div>
+            </div>
+          )}
+
+          {/* PINYIN */}
+          {activeTab === 'sounds' && lesson.pronunciation && (
+            <div className="space-y-4">
+              <div className="p-5 rounded-2xl bg-white border border-[#E2D8CC] space-y-3">
+                <h3 className="text-base sm:text-lg font-bold text-stone-900">{getLocalized(lesson.pronunciation.title)}</h3>
+                <p className="text-sm text-stone-700 leading-relaxed">{getLocalized(lesson.pronunciation.explanation)}</p>
+              </div>
+              <div className="grid grid-cols-2 gap-2.5">
+                {lesson.pronunciation.examples.map((ex) => (
+                  <div key={ex.hanzi} className="p-3.5 rounded-xl bg-[#FAF8F5] border border-[#EAE2D5] flex items-center justify-between gap-2">
+                    <div className="min-w-0">
+                      <div className="text-xl font-hanzi-serif font-bold text-stone-900">{ex.hanzi}</div>
+                      <div className="text-sm text-[#9A3412]">{ex.pinyin}</div>
+                    </div>
+                    <SpeechButton text={ex.hanzi} size="sm" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* CHARACTERS */}
+          {activeTab === 'hanzi' && lesson.characters && (
+            <div className="space-y-4">
+              <div className="p-5 rounded-2xl bg-white border border-[#E2D8CC] space-y-3">
+                <h3 className="text-base sm:text-lg font-bold text-stone-900">{getLocalized(lesson.characters.title)}</h3>
+                <p className="text-sm text-stone-700 leading-relaxed">{getLocalized(lesson.characters.explanation)}</p>
+              </div>
+              <div className="space-y-2.5">
+                {lesson.characters.components.map((c) => (
+                  <div key={c.component} className="p-4 rounded-xl bg-[#FAF8F5] border border-[#EAE2D5] flex items-center gap-4">
+                    <div className="w-14 h-14 shrink-0 rounded-xl bg-white border border-[#E2D8CC] flex items-center justify-center text-3xl font-hanzi-serif font-bold text-[#C52828]">
+                      {c.component}
+                    </div>
+                    <div className="min-w-0">
+                      <div className="text-sm font-semibold text-stone-800">{language === 'fr' ? c.meaning.fr : c.meaning.en}</div>
+                      <div className="flex flex-wrap gap-1.5 mt-1.5">
+                        {c.examples.map((e) => (
+                          <span key={e} className="px-2 py-0.5 rounded-md bg-white border border-[#E2D8CC] text-lg font-hanzi-serif text-stone-900">{e}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* CULTURE */}
+          {activeTab === 'culture' && lesson.culture && (
+            <div className="p-5 rounded-2xl bg-white border border-[#E2D8CC] space-y-3">
+              <h3 className="text-base sm:text-lg font-bold text-stone-900">{getLocalized(lesson.culture.title)}</h3>
+              <p className="text-sm sm:text-base text-stone-700 leading-relaxed">{getLocalized(lesson.culture.body)}</p>
+            </div>
+          )}
+
+          {/* SPEAKING TASK WITH LAOSHI */}
+          {activeTab === 'practice' && lesson.practice && (
+            <div className="p-5 rounded-2xl bg-white border border-[#E2D8CC] space-y-4">
+              <div className="flex items-start gap-3">
+                <div className="w-10 h-10 shrink-0 rounded-xl bg-[#1C1917] flex items-center justify-center">
+                  <span className="font-hanzi-serif font-bold text-[#FAF8F5]">师</span>
+                </div>
+                <div>
+                  <div className="text-xs uppercase tracking-wider font-semibold text-stone-500">{L('Your mission', 'Ta mission', '任务')}</div>
+                  <p className="text-sm sm:text-base font-semibold text-stone-900 leading-relaxed">{getLocalized(lesson.practice.task)}</p>
+                </div>
+              </div>
+              <div className="p-3.5 rounded-xl bg-[#FAF8F5] border border-[#EAE2D5]">
+                <div className="text-xs font-semibold text-stone-500 mb-1">{L('You can start with:', 'Tu peux commencer par :', '你可以这样开始：')}</div>
+                <div className="text-lg font-hanzi-serif text-stone-900">{lesson.practice.starter}</div>
+              </div>
+              {onPractice && (
+                <Button onClick={() => onPractice(lesson)} iconRight={<ArrowRight className="w-4 h-4" />}>
+                  {L('Practise with Laoshi', 'Pratiquer avec Laoshi', '和老师练习')}
+                </Button>
+              )}
             </div>
           )}
 

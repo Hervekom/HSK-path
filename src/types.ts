@@ -186,6 +186,23 @@ export interface HskLesson {
   }>;
   dialogue: LessonDialogueLine[];
   quickQuiz: QuizQuestion[];
+  /** Course sections modelled on classic beginner textbooks (optional). */
+  pronunciation?: HskLessonExtras['pronunciation'];
+  characters?: HskLessonExtras['characters'];
+  culture?: HskLessonExtras['culture'];
+  practice?: HskLessonExtras['practice'];
+}
+
+export interface HskLessonExtras {
+  pronunciation: { title: MultiLingualText; explanation: MultiLingualText; examples: Array<{ hanzi: string; pinyin: string }> };
+  characters: {
+    title: MultiLingualText;
+    explanation: MultiLingualText;
+    components: Array<{ component: string; meaning: { en: string; fr: string }; examples: string[] }>;
+  };
+  culture?: { title: MultiLingualText; body: MultiLingualText };
+  /** Speaking task done with Laoshi; `starter` is a first message the learner can send. */
+  practice: { task: MultiLingualText; starter: string };
 }
 
 

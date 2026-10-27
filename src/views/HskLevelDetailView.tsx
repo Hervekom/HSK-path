@@ -417,6 +417,16 @@ export const HskLevelDetailView: React.FC<HskLevelDetailViewProps> = ({
         lesson={activeLesson}
         isOpen={!!activeLesson}
         onClose={() => setActiveLesson(null)}
+        onPractice={(l) => {
+          // Hand the lesson's speaking task to Laoshi, which picks it up on open.
+          try {
+            sessionStorage.setItem('laoshi_mission', JSON.stringify({ level: l.level, ...l.practice }));
+          } catch {
+            /* storage unavailable: Laoshi simply opens without the task */
+          }
+          setActiveLesson(null);
+          onNavigate('tutor');
+        }}
       />
 
       {/* Pro Upgrade Modal */}

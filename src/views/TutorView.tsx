@@ -3,7 +3,7 @@ import { tr } from '../locales/tr';
 import { useI18n } from '../locales';
 import { supabase } from '../lib/supabase';
 import { Button } from '../components/ui/Button';
-import { Send, Settings, RotateCcw, Eye, EyeOff, X, Lightbulb, AlertCircle, ExternalLink, Info } from '../components/icons';
+import { Send, Settings, RotateCcw, Eye, EyeOff, X, Lightbulb, AlertCircle, ExternalLink, Info, Target } from '../components/icons';
 import type { AppState, UserProfile } from '../types';
 
 type Level = 'hsk1' | 'hsk2' | 'hsk3';
@@ -182,13 +182,36 @@ export const TutorView: React.FC<TutorViewProps> = ({ user, isSignedIn, knownWor
 
   // A saved conversation keeps its own level; otherwise start at the student's HSK level.
   const [saved] = useState(() => loadJson<{ level: Level; messages: ChatMessage[] } | null>(CHAT_KEY, null));
-  const [level, setLevel] = useState<Level>(() =>
-    saved?.messages?.length && saved.level ? saved.level : user.currentHsk || 'hsk1'
-  );
+  const [level, setLevel] = useState<Level>(() => {
+    // A lesson task sets the level of that lesson.
+    try {
+      const m = JSON.parse(sessionStorage.getItem('laoshi_mission') || 'null');
+      if (m?.level) return m.level as Level;
+    } catch {
+      /* ignore */
+    }
+    return saved?.messages?.length && saved.level ? saved.level : user.currentHsk || 'hsk1';
+  });
   const [messages, setMessages] = useState<ChatMessage[]>(() =>
     saved?.messages?.length ? saved.messages : [greeting(user.currentHsk || 'hsk1', language)]
   );
-  const [input, setInput] = useState('');
+  // A speaking task handed over from a lesson (see HskLevelDetailView).
+  const [mission, setMission] = useState<{ task: { en: string; fr: string; zh: string }; starter: string } | null>(() => {
+    try {
+      const raw = sessionStorage.getItem('laoshi_mission');
+      return raw ? JSON.parse(raw) : null;
+    } catch {
+      return null;
+    }
+  });
+  useEffect(() => {
+    try {
+      sessionStorage.removeItem('laoshi_mission');
+    } catch {
+      /* ignore */
+    }
+  }, []);
+  const [input, setInput] = useState(() => mission?.starter ?? '');
   const [sending, setSending] = useState(false);
   const [showPinyin, setShowPinyin] = useState(true);
   const [showTranslation, setShowTranslation] = useState(true);
@@ -485,6 +508,20 @@ export const TutorView: React.FC<TutorViewProps> = ({ user, isSignedIn, knownWor
             </div>
           )}
         </div>
+
+        {/* Lesson task */}
+        {mission && (
+          <div className="mx-3 sm:mx-5 mb-2 flex items-start gap-2 rounded-xl bg-[#FFF7ED] border border-[#FED7AA] px-3 py-2 text-sm text-[#7C2D12]">
+            <Target className="w-4 h-4 mt-0.5 shrink-0" />
+            <span className="flex-1 leading-relaxed">
+              <strong>{language === 'fr' ? 'Mission : ' : language === 'zh' ? '任务：' : 'Mission: '}</strong>
+              {mission.task[language as 'en' | 'fr' | 'zh'] ?? mission.task.en}
+            </span>
+            <button onClick={() => setMission(null)} aria-label="×" className="shrink-0 cursor-pointer text-[#9A3412] hover:text-[#7C2D12]">
+              <X className="w-4 h-4" />
+            </button>
+          </div>
+        )}
 
         {/* Starters */}
         {onlyGreeting && isSignedIn && (
