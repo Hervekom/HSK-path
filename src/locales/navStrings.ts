@@ -25,4 +25,9 @@ export const NAV_STRINGS: Record<string, { fr?: string; zh?: string }> = {
   "Account menu": { fr: "Menu du compte", zh: "账户菜单" },
   "Photo credits": { fr: "Crédits photos", zh: "图片来源" },
   "Unknown author": { fr: "Auteur inconnu", zh: "作者不详" },
+  "+ {n} bonus": { fr: "+ {n} bonus", zh: "+ {n} 个拓展词" },
+  "bonus": { fr: "hors programme", zh: "拓展词" },
+  "Useful word outside the official HSK 3.0 list for this level: not counted in the level total.": { fr: "Mot utile hors du programme officiel HSK 3.0 de ce niveau : il n'est pas compté dans le total du niveau.", zh: "本级 HSK 3.0 官方词表以外的常用词，不计入本级词汇总数。" },
+  "{new} new words · {total} in total": { fr: "{new} nouveaux mots · {total} au total", zh: "新增 {new} 词 · 累计 {total} 词" },
+  "{total} words": { fr: "{total} mots", zh: "{total} 词" },
 };

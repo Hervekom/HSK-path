@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { tr } from '../locales/tr';
+import { levelWordTemplate, type CoreLevel } from '../data/hskWordCounts';
 import { ArrowRight, BookOpen, Headphones, FileText, PenTool, Award, TrendingUp, CheckCircle2, Sparkles, Layers, Volume2, Clock, ChevronRight, ShieldCheck, Zap, Star, BrainCircuit, RotateCw, Target, GraduationCap, PenNib } from '../components/icons';
 import { useI18n } from '../locales';
 import { HSK_LEVELS, FUTURE_HSK_LEVELS } from '../data/hskLevels';
@@ -16,7 +17,7 @@ interface LandingViewProps {
 }
 
 export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLevel }) => {
-  const { t, getLocalized } = useI18n();
+  const { t, getLocalized, language } = useI18n();
   const [selectedCurriculumTab, setSelectedCurriculumTab] = useState<'hsk1' | 'hsk2' | 'hsk3'>('hsk2');
   const [audioPlaying, setAudioPlaying] = useState(false);
 
@@ -278,7 +279,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
                     {getLocalized(activeLevelData.badge)}
                   </Badge>
                   <div className="text-xs font-bold text-[#C52828] uppercase tracking-wider mt-1">
-                    {activeLevelData.wordCount} {t('levels.coreWords')}
+                    {(() => { const w = levelWordTemplate(activeLevelData.id as CoreLevel); return Object.entries(w.vars).reduce((t, [k, v]) => t.replace(`{${k}}`, v.toLocaleString(language === 'fr' ? 'fr-FR' : 'en-US')), tr(w.key)); })()}
                   </div>
                 </div>
               </div>

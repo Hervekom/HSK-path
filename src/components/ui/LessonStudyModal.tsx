@@ -6,6 +6,7 @@ import { Badge } from './Badge';
 import { SpeechButton } from './SpeechButton';
 import { BookOpen, MessageSquare, Award, CheckCircle2, XCircle, ArrowRight, Lightbulb } from '../icons';
 import type { HskLesson } from '../../types';
+import { isSyllabusWord, type CoreLevel } from '../../data/hskWordCounts';
 import { useI18n } from '../../locales';
 
 interface LessonStudyModalProps {
@@ -212,8 +213,16 @@ export const LessonStudyModal: React.FC<LessonStudyModalProps> = ({
                     className="p-3.5 rounded-xl bg-[#FAF8F5] border border-[#E7DDD0] flex items-center justify-between gap-3"
                   >
                     <div>
-                      <div className="text-base font-bold text-stone-900 font-chinese">
+                      <div className="text-base font-bold text-stone-900 font-chinese flex items-center gap-2">
                         {w.hanzi}
+                        {!isSyllabusWord(w.hanzi, lesson.level as CoreLevel) && (
+                          <span
+                            className="text-[10px] font-semibold font-sans px-1.5 py-0.5 rounded-md bg-stone-100 text-stone-500 border border-stone-200"
+                            title={tr('Useful word outside the official HSK 3.0 list for this level: not counted in the level total.')}
+                          >
+                            {tr('bonus')}
+                          </span>
+                        )}
                       </div>
                       <div className="text-xs text-stone-500 font-medium">
                         {w.pinyin}

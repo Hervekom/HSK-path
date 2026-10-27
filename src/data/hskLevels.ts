@@ -1,4 +1,5 @@
 import type { HskLevelId, MultiLingualText } from '../types';
+import { NEW_WORDS, TOTAL_WORDS, FUTURE_TOTAL_WORDS } from './hskWordCounts';
 
 export interface HskLevelMeta {
   id: 'hsk1' | 'hsk2' | 'hsk3';
@@ -7,7 +8,10 @@ export interface HskLevelMeta {
   badge: MultiLingualText;
   description: MultiLingualText;
   longDescription: MultiLingualText;
+  /** Words required for this level (cumulative, official HSK 3.0 list). */
   wordCount: number;
+  /** Words introduced at this level. */
+  newWordCount: number;
   estimatedHours: number;
   passingScore: number;
   totalScore: number;
@@ -47,7 +51,8 @@ export const HSK_LEVELS: HskLevelMeta[] = [
       fr: 'Posez les bases du chinois : pinyin, expressions du quotidien, présentations, nombres et heure, avec les 300 mots du programme officiel HSK 3.0 pour le niveau 1.',
       zh: '夯实中文基础：拼音、日常用语、自我介绍、数字与时间，掌握 HSK 3.0 新大纲一级的 300 个词。',
     },
-    wordCount: 300,
+    wordCount: TOTAL_WORDS.hsk1,
+    newWordCount: NEW_WORDS.hsk1,
     estimatedHours: 40,
     passingScore: 120,
     totalScore: 200,
@@ -86,7 +91,8 @@ export const HSK_LEVELS: HskLevelMeta[] = [
       fr: 'Enrichissez votre communication quotidienne : émotions, directions, projets, achats. 200 nouveaux mots, 500 au total (programme officiel HSK 3.0).',
       zh: '拓展日常交际：表达情感、问路、计划、购物。新增 200 词，累计 500 词（HSK 3.0 新大纲）。',
     },
-    wordCount: 500,
+    wordCount: TOTAL_WORDS.hsk2,
+    newWordCount: NEW_WORDS.hsk2,
     estimatedHours: 60,
     passingScore: 120,
     totalScore: 200,
@@ -125,7 +131,8 @@ export const HSK_LEVELS: HskLevelMeta[] = [
       fr: 'Maîtrisez les phrases complexes, les textes courts et la lecture fluide. 500 nouveaux mots, 1 000 au total (programme officiel HSK 3.0). Le HSK 3.0 comprend désormais une épreuve orale.',
       zh: '掌握复句表达，提升短文阅读与书写能力。新增 500 词，累计 1000 词（HSK 3.0 新大纲）。HSK 3.0 三级起含口语考试。',
     },
-    wordCount: 1000,
+    wordCount: TOTAL_WORDS.hsk3,
+    newWordCount: NEW_WORDS.hsk3,
     estimatedHours: 90,
     passingScore: 180,
     totalScore: 300,
@@ -148,7 +155,7 @@ export const HSK_LEVELS: HskLevelMeta[] = [
 ];
 
 export const FUTURE_HSK_LEVELS = [
-  { level: 'HSK 4', words: 1200, status: 'In Development' },
-  { level: 'HSK 5', words: 2500, status: 'Planned' },
-  { level: 'HSK 6', words: 5000, status: 'Planned' },
+  { level: 'HSK 4', words: FUTURE_TOTAL_WORDS.hsk4, status: 'Planned' },
+  { level: 'HSK 5', words: FUTURE_TOTAL_WORDS.hsk5, status: 'Planned' },
+  { level: 'HSK 6', words: FUTURE_TOTAL_WORDS.hsk6, status: 'Planned' },
 ];

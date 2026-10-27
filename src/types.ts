@@ -167,6 +167,7 @@ export interface HskLesson {
   description: MultiLingualText;
   isFree: boolean;
   estimatedMinutes: number;
+  /** Words of the official HSK 3.0 list taught in the lesson (bonus words not counted). */
   wordCount: number;
   vocabulary: Array<{
     hanzi: string;

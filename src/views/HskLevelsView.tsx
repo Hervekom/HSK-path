@@ -1,5 +1,6 @@
 import React from 'react';
 import { tr } from '../locales/tr';
+import { levelWordTemplate, type CoreLevel } from '../data/hskWordCounts';
 import { Hsk30Notice } from '../components/ui/Hsk30Notice';
 import { Layers, ChevronRight, CheckCircle2, BookOpen, Headphones, FileText, Sparkles, Award, ShieldCheck } from '../components/icons';
 import { useI18n } from '../locales';
@@ -95,7 +96,7 @@ export const HskLevelsView: React.FC<HskLevelsViewProps> = ({
                 <div>
                   <h3 className="text-2xl font-bold text-stone-900">{lvl.name}</h3>
                   <p className="text-xs font-semibold text-stone-500 uppercase tracking-wider mt-0.5">
-                    {lvl.wordCount} {t('levels.coreWords')} &bull; ~{lvl.estimatedHours}h {language === 'fr' ? 'd\'étude' : tr("Study")}
+                    {(() => { const w = levelWordTemplate(lvl.id as CoreLevel); return Object.entries(w.vars).reduce((t, [k, v]) => t.replace(`{${k}}`, v.toLocaleString(language === 'fr' ? 'fr-FR' : 'en-US')), tr(w.key)); })()} &bull; ~{lvl.estimatedHours}h {language === 'fr' ? 'd\'étude' : tr("Study")}
                   </p>
                 </div>
 
@@ -132,7 +133,7 @@ export const HskLevelsView: React.FC<HskLevelsViewProps> = ({
                 <div className="grid grid-cols-2 gap-2 text-[11px] font-semibold text-stone-700">
                   <div className="p-2 rounded-lg bg-[#FAF8F5] border border-[#ECE3D8] flex items-center gap-1.5">
                     <BookOpen className="w-3.5 h-3.5 text-stone-500" />
-                    <span>{lvl.wordCount} {language === 'fr' ? 'Mots' : tr("Words")}</span>
+                    <span>{lvl.newWordCount === lvl.wordCount ? lvl.wordCount : `+${lvl.newWordCount}`} {language === 'fr' ? 'Mots' : tr("Words")}</span>
                   </div>
                   <div className="p-2 rounded-lg bg-[#FAF8F5] border border-[#ECE3D8] flex items-center gap-1.5">
                     <Headphones className="w-3.5 h-3.5 text-stone-500" />

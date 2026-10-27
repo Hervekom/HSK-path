@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
+import { NEW_WORDS, TOTAL_WORDS } from '../data/hskWordCounts';
 import { tr, trPos } from '../locales/tr';
 import {
   Search,
@@ -531,6 +532,9 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
                     }`}
                   >
                     {lvl === 'all' ? tr("All Levels") : lvl.toUpperCase()}
+                    <span className={`ml-1 font-semibold ${selectedLevel === lvl ? 'text-white/60' : 'text-stone-400'}`}>
+                      {lvl === 'all' ? TOTAL_WORDS.hsk3 : NEW_WORDS[lvl]}
+                    </span>
                   </button>
                 ))}
               </div>

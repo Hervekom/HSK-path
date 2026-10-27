@@ -38,6 +38,7 @@ import { supabase } from './lib/supabase';
 import { loadProgress, saveProgress, computeStreak, fetchIsAdmin, fetchPlan } from './lib/progressStore';
 import { SRS_STORAGE_KEY } from './utils/srs';
 import { audioEngine } from './utils/audio';
+import { isRequiredFor } from './data/hskWordCounts';
 import type { User } from '@supabase/supabase-js';
 import type { AppState, UserProfile, VocabularyWord, MockTest, TestResult, SkillType, QuizQuestion } from './types';
 
@@ -565,7 +566,7 @@ function HskPathApp() {
               user={user}
               streakDays={streakDays}
               weeklyMinutes={weeklyMinutes}
-              learnedWordCount={vocabList.filter((w) => w.isLearned).length}
+              learnedWordCount={vocabList.filter((w) => w.isLearned && isRequiredFor(w.level, user.currentHsk)).length}
               showSampleData={!authUserId}
               testHistory={testHistory}
               onNavigate={navigate}

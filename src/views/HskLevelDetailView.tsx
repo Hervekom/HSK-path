@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { tr } from '../locales/tr';
+import { lessonWordCounts, levelWordTemplate, type CoreLevel } from '../data/hskWordCounts';
 import {
   ArrowLeft,
   BookOpen,
@@ -165,7 +166,7 @@ export const HskLevelDetailView: React.FC<HskLevelDetailViewProps> = ({
                 )}
               </div>
               <p className="text-[11px] sm:text-xs font-semibold text-stone-500 uppercase tracking-wider mt-1">
-                {currentLevelMeta.wordCount} {t('levels.coreWords')}{" "}{tr("• Passing Score:")}{" "}{currentLevelMeta.passingScore} / {currentLevelMeta.totalScore}
+                {(() => { const w = levelWordTemplate(currentLevelMeta.id as CoreLevel); return Object.entries(w.vars).reduce((t, [k, v]) => t.replace(`{${k}}`, v.toLocaleString(language === 'fr' ? 'fr-FR' : 'en-US')), tr(w.key)); })()}{" "}{tr("• Passing Score:")}{" "}{currentLevelMeta.passingScore} / {currentLevelMeta.totalScore}
               </p>
             </div>
           </div>
@@ -256,7 +257,13 @@ export const HskLevelDetailView: React.FC<HskLevelDetailViewProps> = ({
                 </div>
 
                 <div className="pt-3 border-t border-[#ECE3D8] flex items-center justify-between text-xs text-stone-500 font-medium">
-                  <span>{lesson.estimatedMinutes}{" "}{tr("min •")}{" "}{lesson.vocabulary.length} {language === 'fr' ? 'mots' : language === 'zh' ? '词汇' : 'words'}</span>
+                  <span>
+                    {lesson.estimatedMinutes}{" "}{tr("min •")}{" "}
+                    {(() => {
+                      const c = lessonWordCounts(lesson.vocabulary, lesson.level as CoreLevel);
+                      return `${c.syllabus} ${language === 'fr' ? 'mots' : language === 'zh' ? '词汇' : 'words'}${c.extra ? ` ${tr('+ {n} bonus').replace('{n}', String(c.extra))}` : ''}`;
+                    })()}
+                  </span>
                   <span className={`font-bold flex items-center gap-1 ${isLocked ? 'text-amber-800' : 'text-[#C52828]'}`}>
                     {isLocked 
                       ? (language === 'fr' ? 'Débloquer Pro' : language === 'zh' ? '解锁课程' : 'Unlock Pro') 

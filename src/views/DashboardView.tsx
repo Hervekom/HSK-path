@@ -1,5 +1,6 @@
 import React from 'react';
 import { tr } from '../locales/tr';
+import { TOTAL_WORDS } from '../data/hskWordCounts';
 import { Sparkles, Flame, Clock, BookOpen, Headphones, FileText, Layers, ArrowRight, TrendingUp, AlertCircle, Award, ChevronRight, CheckCircle2, Calendar, PenTool, BrainCircuit, Zap, Timer } from '../components/icons';
 import { useI18n } from '../locales';
 import { Card } from '../components/ui/Card';
@@ -36,7 +37,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
 }) => {
   const { t } = useI18n();
 
-  const currentLevelMaxWords = user.currentHsk === 'hsk1' ? 300 : user.currentHsk === 'hsk2' ? 500 : 1000;
+  const currentLevelMaxWords = TOTAL_WORDS[user.currentHsk];
   const overallPercentage = Math.min(100, Math.round((learnedWordCount / currentLevelMaxWords) * 100));
   const weeklyGoal = (user.dailyGoalMinutes || 20) * 7;
   const weeklyPct = Math.round((weeklyMinutes / weeklyGoal) * 100);
