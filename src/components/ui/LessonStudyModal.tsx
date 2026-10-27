@@ -16,6 +16,8 @@ interface LessonStudyModalProps {
   onCompleteLesson?: (lessonId: string) => void;
   /** Opens Laoshi with this lesson's speaking task. */
   onPractice?: (lesson: HskLesson) => void;
+  /** Tab to open first (e.g. 'practice' when coming back from Laoshi). */
+  initialTab?: 'practice';
 }
 
 type LessonTab = 'dialogue' | 'grammar' | 'vocab' | 'sounds' | 'hanzi' | 'culture' | 'saying' | 'quiz' | 'practice';
@@ -26,6 +28,7 @@ export const LessonStudyModal: React.FC<LessonStudyModalProps> = ({
   onClose,
   onCompleteLesson,
   onPractice,
+  initialTab,
 }) => {
   const { language, getLocalized } = useI18n();
   const [activeTab, setActiveTab] = useState<LessonTab>('dialogue');
@@ -37,7 +40,11 @@ export const LessonStudyModal: React.FC<LessonStudyModalProps> = ({
   // Open each lesson on its first tab that actually has content.
   useEffect(() => {
     if (!lesson) return;
-    setActiveTab(lesson.dialogue?.length ? 'dialogue' : lesson.grammarPoints?.length ? 'grammar' : 'vocab');
+    setActiveTab(
+      initialTab === 'practice' && lesson.practice
+        ? 'practice'
+        : lesson.dialogue?.length ? 'dialogue' : lesson.grammarPoints?.length ? 'grammar' : 'vocab'
+    );
     setSelectedAnswers({});
     setIsCompleted(false);
   }, [lesson?.id]);

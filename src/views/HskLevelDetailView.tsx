@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { tr } from '../locales/tr';
 import { lessonWordCounts, levelWordTemplate, type CoreLevel } from '../data/hskWordCounts';
 import {
@@ -48,6 +48,24 @@ export const HskLevelDetailView: React.FC<HskLevelDetailViewProps> = ({
 }) => {
   const { t, getLocalized, language } = useI18n();
   const [activeLesson, setActiveLesson] = useState<HskLesson | null>(null);
+  const [lessonTab, setLessonTab] = useState<'practice' | undefined>(undefined);
+
+  // Coming back from a Laoshi mission: reopen that lesson on its Practice tab.
+  useEffect(() => {
+    let target: { lessonId?: string } | null = null;
+    try {
+      target = JSON.parse(sessionStorage.getItem('hskpath_open_lesson') || 'null');
+      sessionStorage.removeItem('hskpath_open_lesson');
+    } catch {
+      /* storage unavailable */
+    }
+    const lesson = target?.lessonId ? HSK_LESSONS_DATA.find((l) => l.id === target!.lessonId) : undefined;
+    if (!lesson) return;
+    if (lesson.level !== selectedLevel) onSelectLevel(lesson.level);
+    setLessonTab('practice');
+    setActiveLesson(lesson);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   const [showProModal, setShowProModal] = useState(false);
   const [proModalFeature, setProModalFeature] = useState<string>('');
 
@@ -416,7 +434,11 @@ export const HskLevelDetailView: React.FC<HskLevelDetailViewProps> = ({
       <LessonStudyModal
         lesson={activeLesson}
         isOpen={!!activeLesson}
-        onClose={() => setActiveLesson(null)}
+        initialTab={lessonTab}
+        onClose={() => {
+          setActiveLesson(null);
+          setLessonTab(undefined);
+        }}
         onPractice={(l) => {
           // Hand the lesson's speaking task to Laoshi, which picks it up on open.
           try {

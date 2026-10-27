@@ -334,6 +334,18 @@ export const TutorView: React.FC<TutorViewProps> = ({ user, isSignedIn, knownWor
     }
   };
 
+  /** Back to the lesson the mission came from, opened on its Practice tab. */
+  const backToLesson = () => {
+    if (!mission?.lessonId) return;
+    try {
+      sessionStorage.setItem('hskpath_open_lesson', JSON.stringify({ lessonId: mission.lessonId }));
+    } catch {
+      /* storage unavailable: the level page simply opens */
+    }
+    onNavigate('hsk-detail');
+  };
+  const backLabel = language === 'fr' ? 'Retour à la leçon' : language === 'zh' ? '返回课文' : 'Back to the lesson';
+
   const studentMessages = messages.filter((m) => m.role === 'user').map((m) => m.text);
 
   /** Ask Laoshi whether the lesson's speaking task is done; show the verdict in the chat. */
@@ -538,6 +550,14 @@ export const TutorView: React.FC<TutorViewProps> = ({ user, isSignedIn, knownWor
                       <ChineseLine text={m.evaluation.example} pinyin={pinyin} showPinyin={showPinyin} />
                     </div>
                   )}
+                  {m.evaluation.passed && mission?.lessonId && (
+                    <button
+                      onClick={backToLesson}
+                      className="mt-1 px-3 py-1.5 rounded-lg bg-[#15803D] text-white text-xs font-bold cursor-pointer hover:bg-[#166534] transition-colors"
+                    >
+                      ← {backLabel}
+                    </button>
+                  )}
                   {!m.evaluation.passed && (
                     <p className="text-xs opacity-80">
                       {language === 'fr'
@@ -641,6 +661,21 @@ export const TutorView: React.FC<TutorViewProps> = ({ user, isSignedIn, knownWor
                 <X className="w-4 h-4" />
               </button>
             </div>
+            {mission.done && mission.lessonId && (
+              <div className="mt-2 pl-6">
+                <button
+                  onClick={backToLesson}
+                  className="px-3 py-1.5 rounded-lg bg-[#15803D] text-white text-xs font-bold cursor-pointer hover:bg-[#166534] transition-colors"
+                >
+                  ← {backLabel}
+                </button>
+              </div>
+            )}
+            {!mission.done && mission.lessonId && (
+              <button onClick={backToLesson} className="mt-1 pl-6 text-xs font-semibold underline underline-offset-2 opacity-80 hover:opacity-100 cursor-pointer">
+                ← {backLabel}
+              </button>
+            )}
             {!mission.done && isSignedIn && (
               <div className="mt-2 flex items-center justify-between gap-2 pl-6">
                 <span className="text-xs opacity-80">
