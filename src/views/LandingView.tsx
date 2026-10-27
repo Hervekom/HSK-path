@@ -247,7 +247,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate, onSelectLe
 
           {/* Interactive Level Switcher Tabs */}
           <div className="flex justify-center mb-10">
-            <div className="inline-flex p-1.5 rounded-2xl bg-[#EFE8DE] border border-[#E0D7CB]">
+            <div className="inline-flex flex-wrap justify-center max-w-full p-1.5 rounded-2xl bg-[#EFE8DE] border border-[#E0D7CB]">
               {(['hsk1', 'hsk2', 'hsk3'] as const).map((lvl) => (
                 <button
                   key={lvl}

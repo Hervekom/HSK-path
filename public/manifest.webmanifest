@@ -8,7 +8,7 @@
   "start_url": "/#/dashboard",
   "scope": "/",
   "display": "standalone",
-  "orientation": "portrait",
+  "orientation": "any",
   "background_color": "#FAF8F5",
   "theme_color": "#FAF8F5",
   "categories": ["education"],

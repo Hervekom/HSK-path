@@ -7,7 +7,7 @@
  * - /api/* (Laoshi), Supabase and every other site: never touched.
  * Bump VERSION to drop old caches.
  */
-const VERSION = 'v1';
+const VERSION = 'v2';
 const SHELL = `hsk-shell-${VERSION}`;
 const STATIC = `hsk-static-${VERSION}`;
 const MEDIA = `hsk-media-${VERSION}`;

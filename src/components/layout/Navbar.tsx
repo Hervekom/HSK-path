@@ -69,7 +69,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, onScrollToSection })
         </div>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden md:flex items-center gap-1 lg:gap-2 text-[13px] font-medium text-stone-700 bg-white/70 px-3 py-1.5 rounded-full border border-[#E8E2D8] shadow-2xs backdrop-blur-xs">
+        <nav className="hidden lg:flex items-center gap-1 lg:gap-2 text-[13px] font-medium text-stone-700 bg-white/70 px-3 py-1.5 rounded-full border border-[#E8E2D8] shadow-2xs backdrop-blur-xs">
           <button
             onClick={() => handleNavClick('features')}
             className="px-3.5 py-1 rounded-full hover:text-[#C52828] hover:bg-[#FAF8F5] transition-colors cursor-pointer"

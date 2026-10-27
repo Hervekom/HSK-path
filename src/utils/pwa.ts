@@ -25,8 +25,31 @@ export function isIos(): boolean {
   return /iPad|iPhone|iPod/.test(ua) || (ua.includes('Macintosh') && navigator.maxTouchPoints > 1);
 }
 
+/** Installed app: lock the zoom level (pinch, double tap, field focus) like a native app. */
+function applyStandaloneMode() {
+  const root = document.documentElement;
+  const on = isStandalone();
+  root.classList.toggle('standalone', on);
+  const vp = document.querySelector<HTMLMetaElement>('meta[name="viewport"]');
+  if (!vp) return;
+  const base = vp.dataset.base ?? vp.content;
+  vp.dataset.base = base;
+  vp.content = on ? `${base}, maximum-scale=1, user-scalable=no` : base;
+}
+
 export function registerPwa() {
   if (typeof window === 'undefined') return;
+
+  applyStandaloneMode();
+  window.matchMedia?.('(display-mode: standalone)').addEventListener?.('change', applyStandaloneMode);
+  // iOS ignores user-scalable=no: block the pinch gesture itself in the installed app.
+  document.addEventListener(
+    'gesturestart',
+    (e) => {
+      if (document.documentElement.classList.contains('standalone')) e.preventDefault();
+    },
+    { passive: false },
+  );
 
   window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();

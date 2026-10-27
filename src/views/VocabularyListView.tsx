@@ -505,7 +505,7 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
         <div className="space-y-6">
           {/* Search & Filter Bar */}
           <div className="p-4 rounded-2xl bg-white border border-[#E4DCCE] shadow-2xs space-y-3">
-            <div className="flex flex-col md:flex-row gap-3">
+            <div className="flex flex-col md:flex-row md:flex-wrap gap-3">
               {/* Search input */}
               <div className="relative flex-1">
                 <Search className="w-4 h-4 text-stone-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
@@ -519,7 +519,7 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
               </div>
 
               {/* Level Filter Tabs */}
-              <div className="inline-flex p-1 bg-[#EFE8DE] rounded-xl border border-[#E0D7CB] shrink-0">
+              <div className="flex flex-wrap self-start max-w-full p-1 bg-[#EFE8DE] rounded-xl border border-[#E0D7CB]">
                 {(['all', 'hsk1', 'hsk2', 'hsk3'] as const).map((lvl) => (
                   <button
                     key={lvl}
@@ -536,7 +536,7 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
               </div>
 
               {/* Status Filter Tabs */}
-              <div className="inline-flex p-1 bg-[#EFE8DE] rounded-xl border border-[#E0D7CB] shrink-0">
+              <div className="flex flex-wrap self-start max-w-full p-1 bg-[#EFE8DE] rounded-xl border border-[#E0D7CB]">
                 {(['all', 'learned', 'unlearned', 'favorite'] as const).map((status) => (
                   <button
                     key={status}
