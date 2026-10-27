@@ -1,6 +1,7 @@
 import type { HskLesson } from '../types';
+import { buildGeneratedLessons } from './generatedLessons';
 
-export const HSK_LESSONS_DATA: HskLesson[] = [
+const HAND_WRITTEN_LESSONS: HskLesson[] = [
   // =========================================================================
   // HSK 1 LESSONS (100% FREE - ALL LESSONS INCLUDED)
   // =========================================================================
@@ -855,3 +856,12 @@ export const HSK_LESSONS_DATA: HskLesson[] = [
     quickQuiz: [],
   },
 ];
+
+const countFor = (level: HskLesson['level']) => HAND_WRITTEN_LESSONS.filter((l) => l.level === level).length;
+
+// Hand-written lessons first, then thematic lessons that cover the rest of the official list.
+// HSK 1 stays fully free; beyond the two free lessons, HSK 2 and HSK 3 are Pro.
+export const HSK_LESSONS_DATA: HskLesson[] = (['hsk1', 'hsk2', 'hsk3'] as const).flatMap((level) => [
+  ...HAND_WRITTEN_LESSONS.filter((l) => l.level === level),
+  ...buildGeneratedLessons(level, countFor(level) + 1, level === 'hsk1'),
+]);

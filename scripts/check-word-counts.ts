@@ -35,6 +35,17 @@ for (const lesson of HSK_LESSONS_DATA) {
   expect(`${lesson.id} announced words`, lesson.wordCount, c.syllabus);
 }
 
+// Lessons of each level must, together, teach every word of that level's official list.
+for (const level of ['hsk1', 'hsk2', 'hsk3'] as const) {
+  const n = { hsk1: 1, hsk2: 2, hsk3: 3 }[level];
+  const taught = new Set(HSK_LESSONS_DATA.filter((l) => l.level === level).flatMap((l) => l.vocabulary.map((v) => v.hanzi)));
+  const official = [...new Set(HSK30_WORDS.filter((w) => w[1] === n).map((w) => w[2]))];
+  const missing = official.filter((h) => !taught.has(h));
+  if (missing.length) errors.push(`${level} lessons miss ${missing.length} words: ${missing.slice(0, 20).join(' ')}`);
+  const ids = HSK_LESSONS_DATA.filter((l) => l.level === level).map((l) => l.id);
+  if (new Set(ids).size !== ids.length) errors.push(`${level} has duplicate lesson ids`);
+}
+
 if (errors.length) {
   console.error('Word counts do not match:\n- ' + errors.join('\n- '));
   process.exit(1);

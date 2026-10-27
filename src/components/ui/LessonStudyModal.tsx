@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { tr } from '../../locales/tr';
 import { Modal } from './Modal';
 import { Button } from './Button';
@@ -26,6 +26,16 @@ export const LessonStudyModal: React.FC<LessonStudyModalProps> = ({
   const [activeTab, setActiveTab] = useState<'dialogue' | 'grammar' | 'vocab' | 'quiz'>('dialogue');
   const [selectedAnswers, setSelectedAnswers] = useState<Record<string, string>>({});
   const [isCompleted, setIsCompleted] = useState(false);
+
+  const hasDialogue = !!lesson?.dialogue?.length;
+  const hasGrammar = !!lesson?.grammarPoints?.length;
+  // Open each lesson on its first tab that actually has content.
+  useEffect(() => {
+    if (!lesson) return;
+    setActiveTab(lesson.dialogue?.length ? 'dialogue' : lesson.grammarPoints?.length ? 'grammar' : 'vocab');
+    setSelectedAnswers({});
+    setIsCompleted(false);
+  }, [lesson?.id]);
 
   if (!lesson) return null;
 
@@ -69,6 +79,7 @@ export const LessonStudyModal: React.FC<LessonStudyModalProps> = ({
 
           {/* Tab Navigation */}
           <div className="flex items-center gap-1.5 p-1 bg-[#ECE4D8] rounded-xl self-start sm:self-center overflow-x-auto max-w-full">
+            {hasDialogue && (
             <button
               onClick={() => setActiveTab('dialogue')}
               className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-colors cursor-pointer flex items-center gap-1.5 whitespace-nowrap ${
@@ -80,6 +91,8 @@ export const LessonStudyModal: React.FC<LessonStudyModalProps> = ({
               <MessageSquare className="w-3.5 h-3.5" />
               {language === 'fr' ? 'Dialogue' : language === 'zh' ? '情境对话' : 'Dialogue'}
             </button>
+            )}
+            {hasGrammar && (
             <button
               onClick={() => setActiveTab('grammar')}
               className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-colors cursor-pointer flex items-center gap-1.5 whitespace-nowrap ${
@@ -91,6 +104,7 @@ export const LessonStudyModal: React.FC<LessonStudyModalProps> = ({
               <Lightbulb className="w-3.5 h-3.5" />
               {language === 'fr' ? 'Grammaire' : language === 'zh' ? '核心语法' : 'Grammar'}
             </button>
+            )}
             <button
               onClick={() => setActiveTab('vocab')}
               className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-colors cursor-pointer flex items-center gap-1.5 whitespace-nowrap ${
