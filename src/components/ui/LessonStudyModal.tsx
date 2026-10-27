@@ -4,7 +4,7 @@ import { Modal } from './Modal';
 import { Button } from './Button';
 import { Badge } from './Badge';
 import { SpeechButton } from './SpeechButton';
-import { BookOpen, MessageSquare, Award, CheckCircle2, XCircle, ArrowRight, Lightbulb, Volume2, PenTool, Globe, Target } from '../icons';
+import { BookOpen, MessageSquare, Award, CheckCircle2, XCircle, ArrowRight, Lightbulb, Volume2, PenTool, Globe, Target, Sparkles } from '../icons';
 import type { HskLesson } from '../../types';
 import { isSyllabusWord, type CoreLevel } from '../../data/hskWordCounts';
 import { useI18n } from '../../locales';
@@ -18,7 +18,7 @@ interface LessonStudyModalProps {
   onPractice?: (lesson: HskLesson) => void;
 }
 
-type LessonTab = 'dialogue' | 'grammar' | 'vocab' | 'sounds' | 'hanzi' | 'culture' | 'quiz' | 'practice';
+type LessonTab = 'dialogue' | 'grammar' | 'vocab' | 'sounds' | 'hanzi' | 'culture' | 'saying' | 'quiz' | 'practice';
 
 export const LessonStudyModal: React.FC<LessonStudyModalProps> = ({
   lesson,
@@ -51,6 +51,7 @@ export const LessonStudyModal: React.FC<LessonStudyModalProps> = ({
     { id: 'vocab', label: L('Vocab', 'Vocabulaire', '重点生词'), icon: BookOpen },
     ...(lesson.pronunciation ? [{ id: 'sounds' as const, label: L('Pinyin', 'Pinyin', '拼音'), icon: Volume2 }] : []),
     ...(lesson.characters ? [{ id: 'hanzi' as const, label: L('Characters', 'Caractères', '汉字'), icon: PenTool }] : []),
+    ...(lesson.saying ? [{ id: 'saying' as const, label: L('Saying', 'Proverbe', '俗语'), icon: Sparkles }] : []),
     ...(lesson.culture ? [{ id: 'culture' as const, label: L('Culture', 'Culture', '文化'), icon: Globe }] : []),
     ...(lesson.quickQuiz?.length ? [{ id: 'quiz' as const, label: L('Quiz', 'Quiz', '随堂测验'), icon: Award }] : []),
     ...(lesson.practice ? [{ id: 'practice' as const, label: L('Speak', 'Pratique', '运用'), icon: Target }] : []),
@@ -276,6 +277,21 @@ export const LessonStudyModal: React.FC<LessonStudyModalProps> = ({
                   </div>
                 ))}
               </div>
+            </div>
+          )}
+
+          {/* SAYING */}
+          {activeTab === 'saying' && lesson.saying && (
+            <div className="p-5 sm:p-6 rounded-2xl bg-white border border-[#E2D8CC] space-y-3">
+              <div className="flex items-start justify-between gap-3">
+                <div className="min-w-0">
+                  <div className="text-2xl sm:text-3xl font-hanzi-serif font-bold text-stone-900 leading-snug">{lesson.saying.hanzi}</div>
+                  <div className="text-sm text-[#9A3412] mt-1">{lesson.saying.pinyin}</div>
+                </div>
+                <SpeechButton text={lesson.saying.hanzi} size="sm" />
+              </div>
+              <p className="text-sm sm:text-base font-semibold text-stone-800">{getLocalized(lesson.saying.meaning)}</p>
+              {language !== 'zh' && <p className="text-sm text-stone-500">{lesson.saying.meaning.zh}</p>}
             </div>
           )}
 

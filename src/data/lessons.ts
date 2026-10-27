@@ -1,7 +1,8 @@
-import type { HskLesson } from '../types';
+import type { HskLesson, HskLessonExtras } from '../types';
 import { buildGeneratedLessons, buildVocabQuiz } from './generatedLessons';
 import { LESSON_CONTENT } from './lessonContent';
 import { HSK1_EXTRAS, HSK1_ORDER } from './hsk1Course';
+import { HSK2_EXTRAS, HSK2_ORDER, HSK3_EXTRAS, HSK3_ORDER } from './hsk23Course';
 
 const HAND_WRITTEN_LESSONS: HskLesson[] = [
   // =========================================================================
@@ -884,21 +885,28 @@ const renumber = (l: HskLesson, n: number): HskLesson => ({
   },
 });
 
-// HSK 1 follows a beginner-course progression (greetings and pronunciation first, then
-// names, numbers, family, dates, food…). Ids never change, so saved progress is kept.
-const orderHsk1 = (lessons: HskLesson[]): HskLesson[] => {
-  const rank = (id: string) => (HSK1_ORDER.includes(id) ? HSK1_ORDER.indexOf(id) : HSK1_ORDER.length);
+// Each level follows a course-book progression (HSK 1: greetings and pronunciation first,
+// then names, numbers, family…; HSK 2 and 3: grammar in textbook order). Ids never change,
+// so saved progress is kept, and the two free lessons of HSK 2 and 3 stay first.
+const COURSE: Record<HskLesson['level'], { order: string[]; extras: Record<string, HskLessonExtras> }> = {
+  hsk1: { order: HSK1_ORDER, extras: HSK1_EXTRAS },
+  hsk2: { order: HSK2_ORDER, extras: HSK2_EXTRAS },
+  hsk3: { order: HSK3_ORDER, extras: HSK3_EXTRAS },
+};
+
+const applyCourse = (level: HskLesson['level'], lessons: HskLesson[]): HskLesson[] => {
+  const { order, extras } = COURSE[level];
+  const rank = (id: string) => (order.includes(id) ? order.indexOf(id) : order.length);
   return [...lessons]
     .sort((a, b) => rank(a.id) - rank(b.id) || a.lessonNumber - b.lessonNumber)
-    .map((l, i) => renumber({ ...l, ...HSK1_EXTRAS[l.id] }, i + 1));
+    .map((l, i) => renumber({ ...l, ...extras[l.id] }, i + 1));
 };
 
 // Hand-written lessons first, then thematic lessons that cover the rest of the official list.
 // HSK 1 stays fully free; beyond the two free lessons, HSK 2 and HSK 3 are Pro.
-export const HSK_LESSONS_DATA: HskLesson[] = (['hsk1', 'hsk2', 'hsk3'] as const).flatMap((level) => {
-  const lessons = [
+export const HSK_LESSONS_DATA: HskLesson[] = (['hsk1', 'hsk2', 'hsk3'] as const).flatMap((level) =>
+  applyCourse(level, [
     ...HAND_WRITTEN_LESSONS.filter((l) => l.level === level).map(completeLesson),
     ...buildGeneratedLessons(level, countFor(level) + 1, level === 'hsk1'),
-  ];
-  return level === 'hsk1' ? orderHsk1(lessons) : lessons;
-});
+  ])
+);

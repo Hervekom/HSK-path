@@ -191,10 +191,11 @@ export interface HskLesson {
   characters?: HskLessonExtras['characters'];
   culture?: HskLessonExtras['culture'];
   practice?: HskLessonExtras['practice'];
+  saying?: HskLessonExtras['saying'];
 }
 
 export interface HskLessonExtras {
-  pronunciation: { title: MultiLingualText; explanation: MultiLingualText; examples: Array<{ hanzi: string; pinyin: string }> };
+  pronunciation?: { title: MultiLingualText; explanation: MultiLingualText; examples: Array<{ hanzi: string; pinyin: string }> };
   characters: {
     title: MultiLingualText;
     explanation: MultiLingualText;
@@ -203,6 +204,8 @@ export interface HskLessonExtras {
   culture?: { title: MultiLingualText; body: MultiLingualText };
   /** Speaking task done with Laoshi; `starter` is a first message the learner can send. */
   practice: { task: MultiLingualText; starter: string };
+  /** A common saying (俗语) linked to the lesson theme. */
+  saying?: { hanzi: string; pinyin: string; meaning: MultiLingualText };
 }
 
 
