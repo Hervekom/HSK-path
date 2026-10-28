@@ -192,6 +192,16 @@ export interface HskLesson {
   culture?: HskLessonExtras['culture'];
   practice?: HskLessonExtras['practice'];
   saying?: HskLessonExtras['saying'];
+  /** Lesson text told in scenes (setting + dialogue), like a course book. */
+  scenes?: LessonScene[];
+  /** Short narrative passage read after the scenes. */
+  story?: Array<{ hanzi: string; pinyin: string; translation: MultiLingualText }>;
+}
+
+export interface LessonScene {
+  title: MultiLingualText;
+  setting: MultiLingualText;
+  lines: LessonDialogueLine[];
 }
 
 export interface HskLessonExtras {

@@ -4,6 +4,7 @@ import { buildGeneratedLessons, buildVocabQuiz } from './generatedLessons.js';
 import { LESSON_CONTENT } from './lessonContent.js';
 import { HSK1_EXTRAS, HSK1_ORDER } from './hsk1Course.js';
 import { HSK2_EXTRAS, HSK2_ORDER, HSK3_EXTRAS, HSK3_ORDER } from './hsk23Course.js';
+import { LESSON_SCENES } from './lessonScenes.js';
 
 const HAND_WRITTEN_LESSONS: HskLesson[] = [
   // =========================================================================
@@ -895,12 +896,19 @@ const COURSE: Record<HskLesson['level'], { order: string[]; extras: Record<strin
   hsk3: { order: HSK3_ORDER, extras: HSK3_EXTRAS },
 };
 
+// Lessons told in scenes: the scenes become the lesson text (and its dialogue, line by line).
+const withScenes = (l: HskLesson): HskLesson => {
+  const sc = LESSON_SCENES[l.id];
+  if (!sc?.scenes?.length) return l;
+  return { ...l, scenes: sc.scenes, story: sc.story, dialogue: sc.scenes.flatMap((s) => s.lines) };
+};
+
 const applyCourse = (level: HskLesson['level'], lessons: HskLesson[]): HskLesson[] => {
   const { order, extras } = COURSE[level];
   const rank = (id: string) => (order.includes(id) ? order.indexOf(id) : order.length);
   return [...lessons]
     .sort((a, b) => rank(a.id) - rank(b.id) || a.lessonNumber - b.lessonNumber)
-    .map((l, i) => renumber({ ...l, ...extras[l.id] }, i + 1));
+    .map((l, i) => renumber(withScenes({ ...l, ...extras[l.id] }), i + 1));
 };
 
 // Hand-written lessons first, then thematic lessons that cover the rest of the official list.

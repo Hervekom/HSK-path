@@ -61,7 +61,7 @@ export const LessonStudyModal: React.FC<LessonStudyModalProps> = ({
 
   const L = (en: string, fr: string, zh: string) => (language === 'fr' ? fr : language === 'zh' ? zh : en);
   const tabs: Array<{ id: LessonTab; label: string; icon: React.ComponentType<{ className?: string }> }> = [
-    ...(hasDialogue ? [{ id: 'dialogue' as const, label: L('Dialogue', 'Dialogue', '情境对话'), icon: MessageSquare }] : []),
+    ...(hasDialogue ? [{ id: 'dialogue' as const, label: lesson.scenes?.length ? L('Story', 'Histoire', '课文') : L('Dialogue', 'Dialogue', '情境对话'), icon: MessageSquare }] : []),
     ...(hasGrammar ? [{ id: 'grammar' as const, label: L('Grammar', 'Grammaire', '核心语法'), icon: Lightbulb }] : []),
     { id: 'vocab', label: L('Vocab', 'Vocabulaire', '重点生词'), icon: BookOpen },
     ...(lesson.pronunciation ? [{ id: 'sounds' as const, label: L('Pinyin', 'Pinyin', '拼音'), icon: Volume2 }] : []),
@@ -136,34 +136,56 @@ export const LessonStudyModal: React.FC<LessonStudyModalProps> = ({
                 <p className="font-semibold">{getLocalized(lesson.description)}</p>
               </div>
 
-              <div className="space-y-4">
-                <h3 className="text-sm font-bold uppercase tracking-wider text-stone-500">
-                  {language === 'fr' ? 'Dialogue interactif avec prononciation' : language === 'zh' ? '情景会话与标准发音' : 'Interactive Dialogue with Audio'}
-                </h3>
+              {(lesson.scenes?.length ? lesson.scenes : [{ title: null, setting: null, lines: lesson.dialogue }]).map((scene, sIdx) => (
+                <div key={sIdx} className="space-y-3">
+                  {scene.title ? (
+                    <div className="flex items-start justify-between gap-3">
+                      <div className="min-w-0">
+                        <div className="text-[11px] font-bold uppercase tracking-wider text-[#C52828]">
+                          {L('Scene', 'Scène', '情景')} {sIdx + 1}
+                        </div>
+                        <h3 className="text-base sm:text-lg font-bold text-stone-900 leading-snug">{getLocalized(scene.title)}</h3>
+                        {scene.setting && <p className="text-sm italic text-stone-500 leading-relaxed mt-0.5">{getLocalized(scene.setting)}</p>}
+                      </div>
+                      <SpeechButton text={scene.lines.map((l) => l.audioText || l.hanzi).join('')} size="sm" />
+                    </div>
+                  ) : (
+                    <h3 className="text-sm font-bold uppercase tracking-wider text-stone-500">
+                      {L('Interactive Dialogue with Audio', 'Dialogue interactif avec prononciation', '情景会话与标准发音')}
+                    </h3>
+                  )}
+                  {scene.lines.map((line, idx) => (
+                    <div key={idx} className="p-3.5 sm:p-4 rounded-2xl bg-[#F8F5F0] border border-[#EBE3D7] hover:border-[#DFD5C6] transition-all space-y-1.5">
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs font-bold text-[#C52828] px-2 py-0.5 rounded-md bg-[#C52828]/10">{line.speaker}</span>
+                        <SpeechButton text={line.audioText || line.hanzi} size="sm" />
+                      </div>
+                      <div className="text-lg sm:text-xl font-bold text-stone-900 font-chinese tracking-wide">{line.hanzi}</div>
+                      <div className="text-xs sm:text-sm text-stone-500 font-medium font-sans">{line.pinyin}</div>
+                      <div className="text-xs sm:text-sm text-stone-700 pt-1 border-t border-[#EAE1D3]">{getLocalized(line.meaning)}</div>
+                    </div>
+                  ))}
+                </div>
+              ))}
 
-                {lesson.dialogue.map((line, idx) => (
-                  <div
-                    key={idx}
-                    className="p-4 rounded-2xl bg-[#F8F5F0] border border-[#EBE3D7] hover:border-[#DFD5C6] transition-all space-y-2"
-                  >
-                    <div className="flex items-center justify-between">
-                      <span className="text-xs font-bold text-[#C52828] px-2 py-0.5 rounded-md bg-[#C52828]/10">
-                        {line.speaker}
-                      </span>
-                      <SpeechButton text={line.audioText || line.hanzi} size="sm" />
+              {lesson.story?.length ? (
+                <div className="space-y-3">
+                  <div className="flex items-start justify-between gap-3">
+                    <div>
+                      <div className="text-[11px] font-bold uppercase tracking-wider text-[#C52828]">{L('Reading', 'Lecture', '短文')}</div>
+                      <h3 className="text-base sm:text-lg font-bold text-stone-900">{L('The story', "L'histoire", '课文')}</h3>
                     </div>
-                    <div className="text-lg sm:text-xl font-bold text-stone-900 font-chinese tracking-wide">
-                      {line.hanzi}
-                    </div>
-                    <div className="text-xs sm:text-sm text-stone-500 font-medium font-sans">
-                      {line.pinyin}
-                    </div>
-                    <div className="text-xs sm:text-sm text-stone-700 pt-1 border-t border-[#EAE1D3]">
-                      {getLocalized(line.meaning)}
-                    </div>
+                    <SpeechButton text={lesson.story.map((p) => p.hanzi).join('')} size="sm" />
                   </div>
-                ))}
-              </div>
+                  {lesson.story.map((p, i) => (
+                    <div key={i} className="p-4 rounded-2xl bg-white border border-[#E2D8CC] space-y-1.5">
+                      <p className="text-lg font-chinese text-stone-900 leading-relaxed">{p.hanzi}</p>
+                      <p className="text-xs sm:text-sm text-stone-500">{p.pinyin}</p>
+                      <p className="text-xs sm:text-sm text-stone-700 pt-1 border-t border-[#EAE1D3]">{getLocalized(p.translation)}</p>
+                    </div>
+                  ))}
+                </div>
+              ) : null}
             </div>
           )}
 
