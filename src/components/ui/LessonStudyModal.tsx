@@ -35,7 +35,24 @@ export const LessonStudyModal: React.FC<LessonStudyModalProps> = ({
   const [selectedAnswers, setSelectedAnswers] = useState<Record<string, string>>({});
   const [isCompleted, setIsCompleted] = useState(false);
 
-  const hasDialogue = !!lesson?.dialogue?.length;
+  // The story texts are a large file: load them only when a lesson is opened.
+  const [story, setStory] = useState<{ id: string; scenes?: HskLesson['scenes']; story?: HskLesson['story'] } | null>(null);
+  useEffect(() => {
+    if (!lesson?.hasStory || story?.id === lesson.id) return;
+    let alive = true;
+    import('../../data/lessonScenes').then((m) => {
+      if (alive) setStory({ id: lesson.id, ...m.LESSON_SCENES[lesson.id] });
+    });
+    return () => {
+      alive = false;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [lesson?.id]);
+  const loaded = story && lesson && story.id === lesson.id ? story : null;
+  const scenes = loaded?.scenes ?? lesson?.scenes;
+  const reading = loaded?.story ?? lesson?.story;
+
+  const hasDialogue = !!lesson?.dialogue?.length || !!lesson?.hasStory;
   const hasGrammar = !!lesson?.grammarPoints?.length;
   // Open each lesson on its first tab that actually has content.
   useEffect(() => {
@@ -61,7 +78,7 @@ export const LessonStudyModal: React.FC<LessonStudyModalProps> = ({
 
   const L = (en: string, fr: string, zh: string) => (language === 'fr' ? fr : language === 'zh' ? zh : en);
   const tabs: Array<{ id: LessonTab; label: string; icon: React.ComponentType<{ className?: string }> }> = [
-    ...(hasDialogue ? [{ id: 'dialogue' as const, label: lesson.scenes?.length ? L('Story', 'Histoire', '课文') : L('Dialogue', 'Dialogue', '情境对话'), icon: MessageSquare }] : []),
+    ...(hasDialogue ? [{ id: 'dialogue' as const, label: lesson.hasStory ? L('Story', 'Histoire', '课文') : L('Dialogue', 'Dialogue', '情境对话'), icon: MessageSquare }] : []),
     ...(hasGrammar ? [{ id: 'grammar' as const, label: L('Grammar', 'Grammaire', '核心语法'), icon: Lightbulb }] : []),
     { id: 'vocab', label: L('Vocab', 'Vocabulaire', '重点生词'), icon: BookOpen },
     ...(lesson.pronunciation ? [{ id: 'sounds' as const, label: L('Pinyin', 'Pinyin', '拼音'), icon: Volume2 }] : []),
@@ -136,7 +153,10 @@ export const LessonStudyModal: React.FC<LessonStudyModalProps> = ({
                 <p className="font-semibold">{getLocalized(lesson.description)}</p>
               </div>
 
-              {(lesson.scenes?.length ? lesson.scenes : [{ title: null, setting: null, lines: lesson.dialogue }]).map((scene, sIdx) => (
+              {lesson.hasStory && !scenes ? (
+                <p className="text-sm text-stone-500">{L('Loading the story…', "Chargement de l'histoire…", '正在加载课文……')}</p>
+              ) : null}
+              {(scenes?.length ? scenes : lesson.hasStory ? [] : [{ title: null, setting: null, lines: lesson.dialogue }]).map((scene, sIdx) => (
                 <div key={sIdx} className="space-y-3">
                   {scene.title ? (
                     <div className="flex items-start justify-between gap-3">
@@ -168,16 +188,16 @@ export const LessonStudyModal: React.FC<LessonStudyModalProps> = ({
                 </div>
               ))}
 
-              {lesson.story?.length ? (
+              {reading?.length ? (
                 <div className="space-y-3">
                   <div className="flex items-start justify-between gap-3">
                     <div>
                       <div className="text-[11px] font-bold uppercase tracking-wider text-[#C52828]">{L('Reading', 'Lecture', '短文')}</div>
                       <h3 className="text-base sm:text-lg font-bold text-stone-900">{L('The story', "L'histoire", '课文')}</h3>
                     </div>
-                    <SpeechButton text={lesson.story.map((p) => p.hanzi).join('')} size="sm" />
+                    <SpeechButton text={reading.map((p) => p.hanzi).join('')} size="sm" />
                   </div>
-                  {lesson.story.map((p, i) => (
+                  {reading.map((p, i) => (
                     <div key={i} className="p-4 rounded-2xl bg-white border border-[#E2D8CC] space-y-1.5">
                       <p className="text-lg font-chinese text-stone-900 leading-relaxed">{p.hanzi}</p>
                       <p className="text-xs sm:text-sm text-stone-500">{p.pinyin}</p>

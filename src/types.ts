@@ -192,6 +192,8 @@ export interface HskLesson {
   culture?: HskLessonExtras['culture'];
   practice?: HskLessonExtras['practice'];
   saying?: HskLessonExtras['saying'];
+  /** True when the lesson has a story in scenes (loaded on demand from lessonScenes.ts). */
+  hasStory?: boolean;
   /** Lesson text told in scenes (setting + dialogue), like a course book. */
   scenes?: LessonScene[];
   /** Short narrative passage read after the scenes. */

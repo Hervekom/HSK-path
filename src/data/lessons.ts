@@ -4,7 +4,7 @@ import { buildGeneratedLessons, buildVocabQuiz } from './generatedLessons.js';
 import { LESSON_CONTENT } from './lessonContent.js';
 import { HSK1_EXTRAS, HSK1_ORDER } from './hsk1Course.js';
 import { HSK2_EXTRAS, HSK2_ORDER, HSK3_EXTRAS, HSK3_ORDER } from './hsk23Course.js';
-import { LESSON_SCENES } from './lessonScenes.js';
+import { LESSON_INTROS } from './lessonIntros.js';
 
 const HAND_WRITTEN_LESSONS: HskLesson[] = [
   // =========================================================================
@@ -896,13 +896,12 @@ const COURSE: Record<HskLesson['level'], { order: string[]; extras: Record<strin
   hsk3: { order: HSK3_ORDER, extras: HSK3_EXTRAS },
 };
 
-// Lessons told in scenes: the scenes become the lesson text (and its dialogue, line by line).
+// Lessons told as a story: the full scenes are loaded when the lesson is opened
+// (lessonScenes.ts); here only the opening line replaces the generic “Learn …” blurb.
 const withScenes = (l: HskLesson): HskLesson => {
-  const sc = LESSON_SCENES[l.id];
-  if (!sc?.scenes?.length) return l;
-  // Generic “Learn …” blurbs of the thematic lessons give way to the opening of the story.
-  const description = l.description.en.startsWith('Learn ') ? sc.scenes[0].setting : l.description;
-  return { ...l, description, scenes: sc.scenes, story: sc.story, dialogue: sc.scenes.flatMap((s) => s.lines) };
+  const intro = LESSON_INTROS[l.id];
+  if (!intro) return l;
+  return { ...l, hasStory: true, description: l.description.en.startsWith('Learn ') ? intro : l.description };
 };
 
 const applyCourse = (level: HskLesson['level'], lessons: HskLesson[]): HskLesson[] => {

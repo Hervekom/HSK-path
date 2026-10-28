@@ -7,7 +7,7 @@
  * - /api/* (Laoshi), Supabase and every other site: never touched.
  * Bump VERSION to drop old caches.
  */
-const VERSION = 'v2';
+const VERSION = 'v3';
 const SHELL = `hsk-shell-${VERSION}`;
 const STATIC = `hsk-static-${VERSION}`;
 const MEDIA = `hsk-media-${VERSION}`;
@@ -23,8 +23,12 @@ self.addEventListener('install', (event) => {
       .then((page) => page && page.text())
       .then((html) => {
         // Keep the current build's scripts and styles so the app opens offline from the first visit.
-        const assets = [...new Set((html || '').match(/\/assets\/[^"' )]+/g) || [])];
-        return caches.open(STATIC).then((c) => c.addAll(assets));
+        const fromPage = (html || '').match(/\/assets\/[^"' )]+/g) || [];
+        // Pages loaded on demand are listed in /asset-list.json (written at build time).
+        return fetch('/asset-list.json', { cache: 'no-store' })
+          .then((r) => (r.ok ? r.json() : []))
+          .catch(() => [])
+          .then((list) => caches.open(STATIC).then((c) => c.addAll([...new Set([...fromPage, ...list])])));
       })
       .then(() => self.skipWaiting()),
   );

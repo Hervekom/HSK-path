@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { lazy, Suspense, useCallback, useEffect, useRef, useState } from 'react';
 import { tr } from './locales/tr';
 import { LanguageProvider, useI18n } from './locales';
 import { ToastProvider, useToast } from './components/ui/Toast';
@@ -9,25 +9,6 @@ import { LandingView } from './views/LandingView';
 import { LoginView } from './views/LoginView';
 import { SignUpView } from './views/SignUpView';
 import { DashboardView } from './views/DashboardView';
-import { HskLevelsView } from './views/HskLevelsView';
-import { HskLevelDetailView } from './views/HskLevelDetailView';
-import { VocabularyListView } from './views/VocabularyListView';
-import { PracticeHubView } from './views/PracticeHubView';
-import { QuizView } from './views/QuizView';
-import { ListeningPracticeView } from './views/ListeningPracticeView';
-import { ReadingPracticeView } from './views/ReadingPracticeView';
-import { WritingPracticeView } from './views/WritingPracticeView';
-import { MockTestsListView } from './views/MockTestsListView';
-import { MockTestIntroView } from './views/MockTestIntroView';
-import { MockTestExamView } from './views/MockTestExamView';
-import { TestResultsView } from './views/TestResultsView';
-import { ReviewMistakesView } from './views/ReviewMistakesView';
-import { ProgressAnalyticsView } from './views/ProgressAnalyticsView';
-import { ProfileSettingsView } from './views/ProfileSettingsView';
-import { AdminView } from './views/AdminView';
-import { PhrasesView } from './views/PhrasesView';
-import { Hsk3ExamView } from './views/Hsk3ExamView';
-import { TutorView } from './views/TutorView';
 
 // Data & Types
 import { VOCABULARY_DATA } from './data/vocabulary';
@@ -41,6 +22,27 @@ import { audioEngine } from './utils/audio';
 import { isRequiredFor } from './data/hskWordCounts';
 import type { User } from '@supabase/supabase-js';
 import type { AppState, UserProfile, VocabularyWord, MockTest, TestResult, SkillType, QuizQuestion } from './types';
+
+// Pages loaded on first visit, so the first screen downloads less.
+const HskLevelsView = lazy(() => import('./views/HskLevelsView').then((m) => ({ default: m.HskLevelsView })));
+const HskLevelDetailView = lazy(() => import('./views/HskLevelDetailView').then((m) => ({ default: m.HskLevelDetailView })));
+const VocabularyListView = lazy(() => import('./views/VocabularyListView').then((m) => ({ default: m.VocabularyListView })));
+const PracticeHubView = lazy(() => import('./views/PracticeHubView').then((m) => ({ default: m.PracticeHubView })));
+const QuizView = lazy(() => import('./views/QuizView').then((m) => ({ default: m.QuizView })));
+const ListeningPracticeView = lazy(() => import('./views/ListeningPracticeView').then((m) => ({ default: m.ListeningPracticeView })));
+const ReadingPracticeView = lazy(() => import('./views/ReadingPracticeView').then((m) => ({ default: m.ReadingPracticeView })));
+const WritingPracticeView = lazy(() => import('./views/WritingPracticeView').then((m) => ({ default: m.WritingPracticeView })));
+const MockTestsListView = lazy(() => import('./views/MockTestsListView').then((m) => ({ default: m.MockTestsListView })));
+const MockTestIntroView = lazy(() => import('./views/MockTestIntroView').then((m) => ({ default: m.MockTestIntroView })));
+const MockTestExamView = lazy(() => import('./views/MockTestExamView').then((m) => ({ default: m.MockTestExamView })));
+const TestResultsView = lazy(() => import('./views/TestResultsView').then((m) => ({ default: m.TestResultsView })));
+const ReviewMistakesView = lazy(() => import('./views/ReviewMistakesView').then((m) => ({ default: m.ReviewMistakesView })));
+const ProgressAnalyticsView = lazy(() => import('./views/ProgressAnalyticsView').then((m) => ({ default: m.ProgressAnalyticsView })));
+const ProfileSettingsView = lazy(() => import('./views/ProfileSettingsView').then((m) => ({ default: m.ProfileSettingsView })));
+const AdminView = lazy(() => import('./views/AdminView').then((m) => ({ default: m.AdminView })));
+const PhrasesView = lazy(() => import('./views/PhrasesView').then((m) => ({ default: m.PhrasesView })));
+const Hsk3ExamView = lazy(() => import('./views/Hsk3ExamView').then((m) => ({ default: m.Hsk3ExamView })));
+const TutorView = lazy(() => import('./views/TutorView').then((m) => ({ default: m.TutorView })));
 
 const ALL_VIEWS: AppState['currentView'][] = [
   'landing', 'login', 'signup', 'dashboard', 'hsk-levels', 'hsk-detail', 'learn', 'vocabulary',
@@ -996,17 +998,21 @@ function HskPathApp() {
     }
   };
 
-  if (!authChecked) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-[#FAF8F5]">
-        <div className="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center animate-pulse">
-          <span className="font-hanzi font-bold text-rose-400">道</span>
-        </div>
+  const splash = (
+    <div className="min-h-screen flex items-center justify-center bg-[#FAF8F5]">
+      <div className="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center animate-pulse">
+        <span className="font-hanzi font-bold text-rose-400">道</span>
       </div>
-    );
-  }
+    </div>
+  );
 
-  return <div className="min-h-screen font-sans antialiased text-slate-900">{renderViewContent()}</div>;
+  if (!authChecked) return splash;
+
+  return (
+    <div className="min-h-screen font-sans antialiased text-slate-900">
+      <Suspense fallback={splash}>{renderViewContent()}</Suspense>
+    </div>
+  );
 }
 
 export default function App() {
