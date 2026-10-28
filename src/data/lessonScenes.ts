@@ -4217,5 +4217,3106 @@ export const LESSON_SCENES: Record<string, Pick<HskLesson, 'scenes' | 'story'>> 
     ]
    }
   ]
+ },
+ "lesson-hsk2-01": {
+  "scenes": [
+   {
+    "title": {
+     "en": "Taxi or bus?",
+     "fr": "Taxi ou bus ?",
+     "zh": "打车还是坐公共汽车？"
+    },
+    "setting": {
+     "en": "A new school year. David has to go to the airport to meet a friend.",
+     "fr": "Une nouvelle année universitaire. David doit aller à l'aéroport chercher une amie.",
+     "zh": "新学年开始了，大卫要去机场接朋友。"
+    },
+    "lines": [
+     {
+      "speaker": "大卫",
+      "hanzi": "小明，去机场坐出租车好还是坐公共汽车好？",
+      "pinyin": "Xiǎomíng, qù jīchǎng zuò chūzūchē hǎo háishi zuò gōnggòng qìchē hǎo?",
+      "meaning": {
+       "en": "Xiaoming, is it better to take a taxi or the bus to the airport?",
+       "fr": "Xiaoming, pour l'aéroport, c'est mieux le taxi ou le bus ?",
+       "zh": "小明，去机场坐出租车好还是坐公共汽车好？"
+      },
+      "audioText": "小明，去机场坐出租车好还是坐公共汽车好？"
+     },
+     {
+      "speaker": "小明",
+      "hanzi": "出租车比公共汽车快，但是比公共汽车贵。",
+      "pinyin": "Chūzūchē bǐ gōnggòng qìchē kuài, dànshì bǐ gōnggòng qìchē guì.",
+      "meaning": {
+       "en": "A taxi is faster than the bus, but more expensive.",
+       "fr": "Le taxi est plus rapide que le bus, mais plus cher.",
+       "zh": "出租车比公共汽车快，但是比公共汽车贵。"
+      },
+      "audioText": "出租车比公共汽车快，但是比公共汽车贵。"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "贵多少？",
+      "pinyin": "Guì duōshao?",
+      "meaning": {
+       "en": "How much more expensive?",
+       "fr": "Combien plus cher ?",
+       "zh": "贵多少？"
+      },
+      "audioText": "贵多少？"
+     },
+     {
+      "speaker": "小明",
+      "hanzi": "坐公共汽车二十块，打车一百多块。",
+      "pinyin": "Zuò gōnggòng qìchē èrshí kuài, dǎchē yìbǎi duō kuài.",
+      "meaning": {
+       "en": "The bus is twenty yuan; a taxi is over a hundred.",
+       "fr": "Le bus coûte vingt yuans, le taxi plus de cent.",
+       "zh": "坐公共汽车二十块，打车一百多块。"
+      },
+      "audioText": "坐公共汽车二十块，打车一百多块。"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "那我坐公共汽车，便宜！",
+      "pinyin": "Nà wǒ zuò gōnggòng qìchē, piányi!",
+      "meaning": {
+       "en": "Then I'll take the bus, it's cheap!",
+       "fr": "Alors je prends le bus, c'est moins cher !",
+       "zh": "那我坐公共汽车，便宜！"
+      },
+      "audioText": "那我坐公共汽车，便宜！"
+     }
+    ]
+   },
+   {
+    "title": {
+     "en": "On the bus",
+     "fr": "Dans le bus",
+     "zh": "在公共汽车上"
+    },
+    "setting": {
+     "en": "The bus is crowded and moving slowly. David calls Anna.",
+     "fr": "Le bus est bondé et avance lentement. David appelle Anna.",
+     "zh": "车上人很多，车开得很慢，大卫给安娜打电话。"
+    },
+    "lines": [
+     {
+      "speaker": "安娜",
+      "hanzi": "大卫，你在哪儿？",
+      "pinyin": "Dàwèi, nǐ zài nǎr?",
+      "meaning": {
+       "en": "David, where are you?",
+       "fr": "David, tu es où ?",
+       "zh": "大卫，你在哪儿？"
+      },
+      "audioText": "大卫，你在哪儿？"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "我在公共汽车上，车太慢了！",
+      "pinyin": "Wǒ zài gōnggòng qìchē shang, chē tài màn le!",
+      "meaning": {
+       "en": "I'm on the bus; it's so slow!",
+       "fr": "Je suis dans le bus, il est trop lent !",
+       "zh": "我在公共汽车上，车太慢了！"
+      },
+      "audioText": "我在公共汽车上，车太慢了！"
+     },
+     {
+      "speaker": "安娜",
+      "hanzi": "下次坐地铁吧，地铁比公共汽车快多了。",
+      "pinyin": "Xià cì zuò dìtiě ba, dìtiě bǐ gōnggòng qìchē kuài duō le.",
+      "meaning": {
+       "en": "Take the underground next time; it's much faster than the bus.",
+       "fr": "La prochaine fois, prends le métro, il est beaucoup plus rapide que le bus.",
+       "zh": "下次坐地铁吧，地铁比公共汽车快多了。"
+      },
+      "audioText": "下次坐地铁吧，地铁比公共汽车快多了。"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "好，我记得了。",
+      "pinyin": "Hǎo, wǒ jìde le.",
+      "meaning": {
+       "en": "OK, I'll remember.",
+       "fr": "D'accord, je retiens.",
+       "zh": "好，我记得了。"
+      },
+      "audioText": "好，我记得了。"
+     }
+    ]
+   },
+   {
+    "title": {
+     "en": "At the airport",
+     "fr": "À l'aéroport",
+     "zh": "在机场"
+    },
+    "setting": {
+     "en": "David finally meets Mary, an American student who is joining his class.",
+     "fr": "David retrouve enfin Mary, une étudiante américaine qui rejoint sa classe.",
+     "zh": "大卫在机场接到了玛丽，她是新来的美国同学。"
+    },
+    "lines": [
+     {
+      "speaker": "玛丽",
+      "hanzi": "你好！你是大卫吗？",
+      "pinyin": "Nǐ hǎo! Nǐ shì Dàwèi ma?",
+      "meaning": {
+       "en": "Hello! Are you David?",
+       "fr": "Bonjour ! Tu es David ?",
+       "zh": "你好！你是大卫吗？"
+      },
+      "audioText": "你好！你是大卫吗？"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "是，你是玛丽吧？欢迎你来北京！",
+      "pinyin": "Shì, nǐ shì Mǎlì ba? Huānyíng nǐ lái Běijīng!",
+      "meaning": {
+       "en": "Yes, you must be Mary. Welcome to Beijing!",
+       "fr": "Oui, tu dois être Mary. Bienvenue à Pékin !",
+       "zh": "是，你是玛丽吧？欢迎你来北京！"
+      },
+      "audioText": "是，你是玛丽吧？欢迎你来北京！"
+     },
+     {
+      "speaker": "玛丽",
+      "hanzi": "谢谢！北京比我想的大。",
+      "pinyin": "Xièxie! Běijīng bǐ wǒ xiǎng de dà.",
+      "meaning": {
+       "en": "Thanks! Beijing is bigger than I thought.",
+       "fr": "Merci ! Pékin est plus grand que je ne pensais.",
+       "zh": "谢谢！北京比我想的大。"
+      },
+      "audioText": "谢谢！北京比我想的大。"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "是啊。我们坐出租车回学校吧，你的东西太多了。",
+      "pinyin": "Shì a. Wǒmen zuò chūzūchē huí xuéxiào ba, nǐ de dōngxi tài duō le.",
+      "meaning": {
+       "en": "Yes. Let's take a taxi back to the university; you have too many bags.",
+       "fr": "Oui. Prenons un taxi pour rentrer à l'université, tu as trop de bagages.",
+       "zh": "是啊。我们坐出租车回学校吧，你的东西太多了。"
+      },
+      "audioText": "是啊。我们坐出租车回学校吧，你的东西太多了。"
+     }
+    ]
+   }
+  ],
+  "story": [
+   {
+    "hanzi": "今天我去机场接玛丽。我坐公共汽车去，车很慢，但是很便宜。回来的时候我们坐出租车，出租车比公共汽车快多了。",
+    "pinyin": "Jīntiān wǒ qù jīchǎng jiē Mǎlì. Wǒ zuò gōnggòng qìchē qù, chē hěn màn, dànshì hěn piányi. Huílai de shíhou wǒmen zuò chūzūchē, chūzūchē bǐ gōnggòng qìchē kuài duō le.",
+    "translation": {
+     "en": "Today I went to the airport to meet Mary. I took the bus there; it was slow but cheap. On the way back we took a taxi, which was much faster than the bus.",
+     "fr": "Aujourd'hui, je suis allé chercher Mary à l'aéroport. J'y suis allé en bus : lent, mais pas cher. Au retour, nous avons pris un taxi, beaucoup plus rapide que le bus.",
+     "zh": "今天我去机场接玛丽。我坐公共汽车去，车很慢，但是很便宜。回来的时候我们坐出租车，出租车比公共汽车快多了。"
+    }
+   }
+  ]
+ },
+ "lesson-hsk2-02": {
+  "scenes": [
+   {
+    "title": {
+     "en": "The menu",
+     "fr": "La carte",
+     "zh": "看菜单"
+    },
+    "setting": {
+     "en": "David takes Mary to a small restaurant near the university.",
+     "fr": "David emmène Mary dans un petit restaurant près de l'université.",
+     "zh": "大卫带玛丽去学校旁边的一个饭馆。"
+    },
+    "lines": [
+     {
+      "speaker": "服务员",
+      "hanzi": "你们好！这是菜单。",
+      "pinyin": "Nǐmen hǎo! Zhè shì càidān.",
+      "meaning": {
+       "en": "Hello! Here's the menu.",
+       "fr": "Bonjour ! Voici la carte.",
+       "zh": "你们好！这是菜单。"
+      },
+      "audioText": "你们好！这是菜单。"
+     },
+     {
+      "speaker": "玛丽",
+      "hanzi": "大卫，这里什么菜好吃？",
+      "pinyin": "Dàwèi, zhèlǐ shénme cài hǎochī?",
+      "meaning": {
+       "en": "David, what's good here?",
+       "fr": "David, qu'est-ce qui est bon ici ?",
+       "zh": "大卫，这里什么菜好吃？"
+      },
+      "audioText": "大卫，这里什么菜好吃？"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "这里的鱼很好吃。你想吃鱼吗？",
+      "pinyin": "Zhèlǐ de yú hěn hǎochī. Nǐ xiǎng chī yú ma?",
+      "meaning": {
+       "en": "The fish is very good here. Do you want fish?",
+       "fr": "Le poisson est très bon ici. Tu veux du poisson ?",
+       "zh": "这里的鱼很好吃。你想吃鱼吗？"
+      },
+      "audioText": "这里的鱼很好吃。你想吃鱼吗？"
+     },
+     {
+      "speaker": "玛丽",
+      "hanzi": "想！我还要一个菜，不要肉。",
+      "pinyin": "Xiǎng! Wǒ hái yào yí ge cài, búyào ròu.",
+      "meaning": {
+       "en": "Yes! I'd also like a vegetable dish, no meat.",
+       "fr": "Oui ! Je voudrais aussi un plat sans viande.",
+       "zh": "想！我还要一个菜，不要肉。"
+      },
+      "audioText": "想！我还要一个菜，不要肉。"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "服务员，我们要一个鱼，一个青菜。",
+      "pinyin": "Fúwùyuán, wǒmen yào yí ge yú, yí ge qīngcài.",
+      "meaning": {
+       "en": "Waiter, we'd like a fish and a green vegetable dish.",
+       "fr": "Serveur, nous prendrons un poisson et un plat de légumes verts.",
+       "zh": "服务员，我们要一个鱼，一个青菜。"
+      },
+      "audioText": "服务员，我们要一个鱼，一个青菜。"
+     }
+    ]
+   },
+   {
+    "title": {
+     "en": "Shoes and a shirt",
+     "fr": "Des chaussures et une chemise",
+     "zh": "买鞋和衣服"
+    },
+    "setting": {
+     "en": "After lunch they go shopping in the mall next door.",
+     "fr": "Après le déjeuner, ils font du shopping dans le centre commercial à côté.",
+     "zh": "吃完饭，他们去旁边的商场买东西。"
+    },
+    "lines": [
+     {
+      "speaker": "玛丽",
+      "hanzi": "这双鞋多少钱？",
+      "pinyin": "Zhè shuāng xié duōshao qián?",
+      "meaning": {
+       "en": "How much are these shoes?",
+       "fr": "Combien coûte cette paire de chaussures ?",
+       "zh": "这双鞋多少钱？"
+      },
+      "audioText": "这双鞋多少钱？"
+     },
+     {
+      "speaker": "服务员",
+      "hanzi": "三百块。",
+      "pinyin": "Sānbǎi kuài.",
+      "meaning": {
+       "en": "Three hundred yuan.",
+       "fr": "Trois cents yuans.",
+       "zh": "三百块。"
+      },
+      "audioText": "三百块。"
+     },
+     {
+      "speaker": "玛丽",
+      "hanzi": "有点儿贵。我想看看那件衣服。",
+      "pinyin": "Yǒudiǎnr guì. Wǒ xiǎng kànkan nà jiàn yīfu.",
+      "meaning": {
+       "en": "A bit expensive. I'd like to look at that piece of clothing.",
+       "fr": "Un peu cher. J'aimerais voir ce vêtement-là.",
+       "zh": "有点儿贵。我想看看那件衣服。"
+      },
+      "audioText": "有点儿贵。我想看看那件衣服。"
+     },
+     {
+      "speaker": "服务员",
+      "hanzi": "这件吗？一百二十块，很便宜。",
+      "pinyin": "Zhè jiàn ma? Yìbǎi'èrshí kuài, hěn piányi.",
+      "meaning": {
+       "en": "This one? A hundred and twenty yuan, very cheap.",
+       "fr": "Celui-ci ? Cent vingt yuans, ce n'est pas cher.",
+       "zh": "这件吗？一百二十块，很便宜。"
+      },
+      "audioText": "这件吗？一百二十块，很便宜。"
+     },
+     {
+      "speaker": "玛丽",
+      "hanzi": "好，我要这件。",
+      "pinyin": "Hǎo, wǒ yào zhè jiàn.",
+      "meaning": {
+       "en": "OK, I'll take this one.",
+       "fr": "D'accord, je prends celui-ci.",
+       "zh": "好，我要这件。"
+      },
+      "audioText": "好，我要这件。"
+     }
+    ]
+   },
+   {
+    "title": {
+     "en": "Who pays?",
+     "fr": "Qui paie ?",
+     "zh": "谁买单？"
+    },
+    "setting": {
+     "en": "Back at the restaurant the next day, Xiaoming joins them.",
+     "fr": "Le lendemain, au restaurant, Xiaoming les rejoint.",
+     "zh": "第二天，小明也来饭馆吃饭。"
+    },
+    "lines": [
+     {
+      "speaker": "小明",
+      "hanzi": "服务员，买单！",
+      "pinyin": "Fúwùyuán, mǎidān!",
+      "meaning": {
+       "en": "Waiter, the bill please!",
+       "fr": "Serveur, l'addition !",
+       "zh": "服务员，买单！"
+      },
+      "audioText": "服务员，买单！"
+     },
+     {
+      "speaker": "玛丽",
+      "hanzi": "小明，我想给钱。",
+      "pinyin": "Xiǎomíng, wǒ xiǎng gěi qián.",
+      "meaning": {
+       "en": "Xiaoming, I want to pay.",
+       "fr": "Xiaoming, je veux payer.",
+       "zh": "小明，我想给钱。"
+      },
+      "audioText": "小明，我想给钱。"
+     },
+     {
+      "speaker": "小明",
+      "hanzi": "不用，你是新同学，今天我请客。",
+      "pinyin": "Búyòng, nǐ shì xīn tóngxué, jīntiān wǒ qǐngkè.",
+      "meaning": {
+       "en": "No need, you're the new classmate; today it's on me.",
+       "fr": "Pas besoin, tu es la nouvelle, aujourd'hui c'est moi qui invite.",
+       "zh": "不用，你是新同学，今天我请客。"
+      },
+      "audioText": "不用，你是新同学，今天我请客。"
+     },
+     {
+      "speaker": "玛丽",
+      "hanzi": "谢谢你！下次我请你们。",
+      "pinyin": "Xièxie nǐ! Xià cì wǒ qǐng nǐmen.",
+      "meaning": {
+       "en": "Thank you! Next time I'll treat you.",
+       "fr": "Merci ! La prochaine fois, c'est moi qui vous invite.",
+       "zh": "谢谢你！下次我请你们。"
+      },
+      "audioText": "谢谢你！下次我请你们。"
+     }
+    ]
+   }
+  ],
+  "story": [
+   {
+    "hanzi": "中国的饭馆很多，菜也很便宜。今天我和玛丽、小明一起吃饭。我想买单，可是小明说他要请客。下次我要请他。",
+    "pinyin": "Zhōngguó de fànguǎn hěn duō, cài yě hěn piányi. Jīntiān wǒ hé Mǎlì, Xiǎomíng yìqǐ chī fàn. Wǒ xiǎng mǎidān, kěshì Xiǎomíng shuō tā yào qǐngkè. Xià cì wǒ yào qǐng tā.",
+    "translation": {
+     "en": "There are lots of restaurants in China, and the food is cheap. Today I ate with Mary and Xiaoming. I wanted to pay, but Xiaoming said it was his treat. Next time I'll treat him.",
+     "fr": "Il y a beaucoup de restaurants en Chine, et les plats ne sont pas chers. Aujourd'hui, j'ai mangé avec Mary et Xiaoming. Je voulais payer, mais Xiaoming a dit qu'il invitait. La prochaine fois, c'est moi qui l'inviterai.",
+     "zh": "中国的饭馆很多，菜也很便宜。今天我和玛丽、小明一起吃饭。我想买单，可是小明说他要请客。下次我要请他。"
+    }
+   }
+  ]
+ },
+ "lesson-hsk2-04": {
+  "scenes": [
+   {
+    "title": {
+     "en": "What sports do you play?",
+     "fr": "Quel sport fais-tu ?",
+     "zh": "你喜欢什么运动？"
+    },
+    "setting": {
+     "en": "The university basketball team is looking for new players.",
+     "fr": "L'équipe de basket de l'université cherche de nouveaux joueurs.",
+     "zh": "学校的篮球队要找新同学。"
+    },
+    "lines": [
+     {
+      "speaker": "小明",
+      "hanzi": "大卫，你打过篮球吗？",
+      "pinyin": "Dàwèi, nǐ dǎguo lánqiú ma?",
+      "meaning": {
+       "en": "David, have you ever played basketball?",
+       "fr": "David, tu as déjà joué au basket ?",
+       "zh": "大卫，你打过篮球吗？"
+      },
+      "audioText": "大卫，你打过篮球吗？"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "打过，我很喜欢打篮球。你呢？",
+      "pinyin": "Dǎguo, wǒ hěn xǐhuan dǎ lánqiú. Nǐ ne?",
+      "meaning": {
+       "en": "Yes, I love basketball. And you?",
+       "fr": "Oui, j'adore le basket. Et toi ?",
+       "zh": "打过，我很喜欢打篮球。你呢？"
+      },
+      "audioText": "打过，我很喜欢打篮球。你呢？"
+     },
+     {
+      "speaker": "小明",
+      "hanzi": "我更喜欢踢足球，但是篮球也会打。",
+      "pinyin": "Wǒ gèng xǐhuan tī zúqiú, dànshì lánqiú yě huì dǎ.",
+      "meaning": {
+       "en": "I prefer football, but I can play basketball too.",
+       "fr": "Je préfère le foot, mais je sais aussi jouer au basket.",
+       "zh": "我更喜欢踢足球，但是篮球也会打。"
+      },
+      "audioText": "我更喜欢踢足球，但是篮球也会打。"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "我们一起去学校的篮球队吧！",
+      "pinyin": "Wǒmen yìqǐ qù xuéxiào de lánqiú duì ba!",
+      "meaning": {
+       "en": "Let's join the university basketball team together!",
+       "fr": "Allons ensemble dans l'équipe de basket de l'université !",
+       "zh": "我们一起去学校的篮球队吧！"
+      },
+      "audioText": "我们一起去学校的篮球队吧！"
+     }
+    ]
+   },
+   {
+    "title": {
+     "en": "Have you ever...?",
+     "fr": "Tu as déjà… ?",
+     "zh": "你去过吗？"
+    },
+    "setting": {
+     "en": "Mary talks about her hobbies with Anna.",
+     "fr": "Mary parle de ses loisirs avec Anna.",
+     "zh": "玛丽和安娜说自己的爱好。"
+    },
+    "lines": [
+     {
+      "speaker": "安娜",
+      "hanzi": "玛丽，你的爱好是什么？",
+      "pinyin": "Mǎlì, nǐ de àihào shì shénme?",
+      "meaning": {
+       "en": "Mary, what are your hobbies?",
+       "fr": "Mary, quels sont tes loisirs ?",
+       "zh": "玛丽，你的爱好是什么？"
+      },
+      "audioText": "玛丽，你的爱好是什么？"
+     },
+     {
+      "speaker": "玛丽",
+      "hanzi": "我喜欢跳舞和画画儿。",
+      "pinyin": "Wǒ xǐhuan tiàowǔ hé huà huàr.",
+      "meaning": {
+       "en": "I like dancing and drawing.",
+       "fr": "J'aime danser et dessiner.",
+       "zh": "我喜欢跳舞和画画儿。"
+      },
+      "audioText": "我喜欢跳舞和画画儿。"
+     },
+     {
+      "speaker": "安娜",
+      "hanzi": "你学过中国舞吗？",
+      "pinyin": "Nǐ xuéguo Zhōngguó wǔ ma?",
+      "meaning": {
+       "en": "Have you ever learned Chinese dance?",
+       "fr": "Tu as déjà appris la danse chinoise ?",
+       "zh": "你学过中国舞吗？"
+      },
+      "audioText": "你学过中国舞吗？"
+     },
+     {
+      "speaker": "玛丽",
+      "hanzi": "没学过，很想学！",
+      "pinyin": "Méi xuéguo, hěn xiǎng xué!",
+      "meaning": {
+       "en": "No, never, but I'd love to!",
+       "fr": "Jamais, mais j'ai très envie !",
+       "zh": "没学过，很想学！"
+      },
+      "audioText": "没学过，很想学！"
+     }
+    ]
+   },
+   {
+    "title": {
+     "en": "Travel plans",
+     "fr": "Des projets de voyage",
+     "zh": "一起去旅游"
+    },
+    "setting": {
+     "en": "The four friends plan a weekend trip.",
+     "fr": "Les quatre amis préparent un voyage le week-end.",
+     "zh": "四个朋友想周末一起去旅游。"
+    },
+    "lines": [
+     {
+      "speaker": "小明",
+      "hanzi": "你们去过长城吗？",
+      "pinyin": "Nǐmen qùguo Chángchéng ma?",
+      "meaning": {
+       "en": "Have you ever been to the Great Wall?",
+       "fr": "Vous êtes déjà allés à la Grande Muraille ?",
+       "zh": "你们去过长城吗？"
+      },
+      "audioText": "你们去过长城吗？"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "我去过一次，非常有意思。",
+      "pinyin": "Wǒ qùguo yí cì, fēicháng yǒu yìsi.",
+      "meaning": {
+       "en": "I've been once; it was really interesting.",
+       "fr": "J'y suis allé une fois, c'était passionnant.",
+       "zh": "我去过一次，非常有意思。"
+      },
+      "audioText": "我去过一次，非常有意思。"
+     },
+     {
+      "speaker": "玛丽",
+      "hanzi": "我没去过！",
+      "pinyin": "Wǒ méi qùguo!",
+      "meaning": {
+       "en": "I've never been!",
+       "fr": "Je n'y suis jamais allée !",
+       "zh": "我没去过！"
+      },
+      "audioText": "我没去过！"
+     },
+     {
+      "speaker": "安娜",
+      "hanzi": "那这个星期六我们一起去吧！",
+      "pinyin": "Nà zhège xīngqīliù wǒmen yìqǐ qù ba!",
+      "meaning": {
+       "en": "Then let's all go this Saturday!",
+       "fr": "Alors allons-y ensemble samedi !",
+       "zh": "那这个星期六我们一起去吧！"
+      },
+      "audioText": "那这个星期六我们一起去吧！"
+     }
+    ]
+   }
+  ],
+  "story": [
+   {
+    "hanzi": "我很喜欢运动，跑步、游泳、打篮球我都喜欢。今天我和小明去了学校的篮球队。星期六我们四个人要一起去长城，玛丽没去过，她很高兴。",
+    "pinyin": "Wǒ hěn xǐhuan yùndòng, pǎobù, yóuyǒng, dǎ lánqiú wǒ dōu xǐhuan. Jīntiān wǒ hé Xiǎomíng qù le xuéxiào de lánqiú duì. Xīngqīliù wǒmen sì ge rén yào yìqǐ qù Chángchéng, Mǎlì méi qùguo, tā hěn gāoxìng.",
+    "translation": {
+     "en": "I love sport: running, swimming, basketball, I like them all. Today Xiaoming and I joined the university basketball team. On Saturday the four of us are going to the Great Wall; Mary has never been and she's very happy.",
+     "fr": "J'adore le sport : course, natation, basket, j'aime tout. Aujourd'hui, Xiaoming et moi avons rejoint l'équipe de basket. Samedi, nous irons à quatre à la Grande Muraille ; Mary n'y est jamais allée, elle est ravie.",
+     "zh": "我很喜欢运动，跑步、游泳、打篮球我都喜欢。今天我和小明去了学校的篮球队。星期六我们四个人要一起去长城，玛丽没去过，她很高兴。"
+    }
+   }
+  ]
+ },
+ "lesson-hsk2-05": {
+  "scenes": [
+   {
+    "title": {
+     "en": "The red one",
+     "fr": "Le rouge",
+     "zh": "红色的"
+    },
+    "setting": {
+     "en": "Before the trip, Mary needs a warm coat.",
+     "fr": "Avant le voyage, Mary a besoin d'un manteau chaud.",
+     "zh": "去长城以前，玛丽想买一件衣服。"
+    },
+    "lines": [
+     {
+      "speaker": "玛丽",
+      "hanzi": "安娜，这件红色的好看还是白色的好看？",
+      "pinyin": "Ānnà, zhè jiàn hóngsè de hǎokàn háishi báisè de hǎokàn?",
+      "meaning": {
+       "en": "Anna, which looks better, the red one or the white one?",
+       "fr": "Anna, lequel est le plus joli, le rouge ou le blanc ?",
+       "zh": "安娜，这件红色的好看还是白色的好看？"
+      },
+      "audioText": "安娜，这件红色的好看还是白色的好看？"
+     },
+     {
+      "speaker": "安娜",
+      "hanzi": "红色的好看。白色的不好洗。",
+      "pinyin": "Hóngsè de hǎokàn. Báisè de bù hǎo xǐ.",
+      "meaning": {
+       "en": "The red one. White is hard to wash.",
+       "fr": "Le rouge. Le blanc, c'est difficile à laver.",
+       "zh": "红色的好看。白色的不好洗。"
+      },
+      "audioText": "红色的好看。白色的不好洗。"
+     },
+     {
+      "speaker": "玛丽",
+      "hanzi": "那我买红色的。",
+      "pinyin": "Nà wǒ mǎi hóngsè de.",
+      "meaning": {
+       "en": "Then I'll buy the red one.",
+       "fr": "Alors je prends le rouge.",
+       "zh": "那我买红色的。"
+      },
+      "audioText": "那我买红色的。"
+     },
+     {
+      "speaker": "安娜",
+      "hanzi": "你还要买裤子吗？",
+      "pinyin": "Nǐ hái yào mǎi kùzi ma?",
+      "meaning": {
+       "en": "Do you need trousers too?",
+       "fr": "Tu veux aussi un pantalon ?",
+       "zh": "你还要买裤子吗？"
+      },
+      "audioText": "你还要买裤子吗？"
+     },
+     {
+      "speaker": "玛丽",
+      "hanzi": "要一条黑色的。",
+      "pinyin": "Yào yì tiáo hēisè de.",
+      "meaning": {
+       "en": "Yes, a pair of black ones.",
+       "fr": "Oui, un noir.",
+       "zh": "要一条黑色的。"
+      },
+      "audioText": "要一条黑色的。"
+     }
+    ]
+   },
+   {
+    "title": {
+     "en": "Whose bag?",
+     "fr": "À qui est ce sac ?",
+     "zh": "这是谁的包？"
+    },
+    "setting": {
+     "en": "On the Great Wall, someone has left a bag on a step.",
+     "fr": "Sur la Grande Muraille, quelqu'un a laissé un sac sur une marche.",
+     "zh": "在长城上，有一个包没有人拿。"
+    },
+    "lines": [
+     {
+      "speaker": "大卫",
+      "hanzi": "这个绿色的包是谁的？",
+      "pinyin": "Zhège lǜsè de bāo shì shéi de?",
+      "meaning": {
+       "en": "Whose is this green bag?",
+       "fr": "À qui est ce sac vert ?",
+       "zh": "这个绿色的包是谁的？"
+      },
+      "audioText": "这个绿色的包是谁的？"
+     },
+     {
+      "speaker": "小明",
+      "hanzi": "不是我的，我的是黑色的。",
+      "pinyin": "Bú shì wǒ de, wǒ de shì hēisè de.",
+      "meaning": {
+       "en": "Not mine, mine is black.",
+       "fr": "Pas à moi, le mien est noir.",
+       "zh": "不是我的，我的是黑色的。"
+      },
+      "audioText": "不是我的，我的是黑色的。"
+     },
+     {
+      "speaker": "安娜",
+      "hanzi": "也不是我的。",
+      "pinyin": "Yě bú shì wǒ de.",
+      "meaning": {
+       "en": "Not mine either.",
+       "fr": "Ce n'est pas le mien non plus.",
+       "zh": "也不是我的。"
+      },
+      "audioText": "也不是我的。"
+     },
+     {
+      "speaker": "玛丽",
+      "hanzi": "是我的！谢谢你，大卫！",
+      "pinyin": "Shì wǒ de! Xièxie nǐ, Dàwèi!",
+      "meaning": {
+       "en": "It's mine! Thank you, David!",
+       "fr": "C'est le mien ! Merci, David !",
+       "zh": "是我的！谢谢你，大卫！"
+      },
+      "audioText": "是我的！谢谢你，大卫！"
+     }
+    ]
+   },
+   {
+    "title": {
+     "en": "A new watch",
+     "fr": "Une nouvelle montre",
+     "zh": "新手表"
+    },
+    "setting": {
+     "en": "On the way back, Xiaoming notices David's new watch.",
+     "fr": "Au retour, Xiaoming remarque la nouvelle montre de David.",
+     "zh": "回来的路上，小明看见大卫的新手表。"
+    },
+    "lines": [
+     {
+      "speaker": "小明",
+      "hanzi": "你的手表真好看，是新的吗？",
+      "pinyin": "Nǐ de shǒubiǎo zhēn hǎokàn, shì xīn de ma?",
+      "meaning": {
+       "en": "Your watch is lovely. Is it new?",
+       "fr": "Ta montre est très jolie, elle est neuve ?",
+       "zh": "你的手表真好看，是新的吗？"
+      },
+      "audioText": "你的手表真好看，是新的吗？"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "是我妈妈送我的。",
+      "pinyin": "Shì wǒ māma sòng wǒ de.",
+      "meaning": {
+       "en": "My mum gave it to me.",
+       "fr": "C'est ma mère qui me l'a offerte.",
+       "zh": "是我妈妈送我的。"
+      },
+      "audioText": "是我妈妈送我的。"
+     },
+     {
+      "speaker": "小明",
+      "hanzi": "什么颜色的？是白色的吗？",
+      "pinyin": "Shénme yánsè de? Shì báisè de ma?",
+      "meaning": {
+       "en": "What colour is it? White?",
+       "fr": "De quelle couleur ? Blanche ?",
+       "zh": "什么颜色的？是白色的吗？"
+      },
+      "audioText": "什么颜色的？是白色的吗？"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "不是，是银色的。",
+      "pinyin": "Bú shì, shì yínsè de.",
+      "meaning": {
+       "en": "No, it's silver.",
+       "fr": "Non, elle est argentée.",
+       "zh": "不是，是银色的。"
+      },
+      "audioText": "不是，是银色的。"
+     }
+    ]
+   }
+  ],
+  "story": [
+   {
+    "hanzi": "今天我们去长城了。天气很冷，玛丽穿了一件红色的新衣服，很好看。她的包是绿色的，差一点儿就不见了。",
+    "pinyin": "Jīntiān wǒmen qù Chángchéng le. Tiānqì hěn lěng, Mǎlì chuān le yí jiàn hóngsè de xīn yīfu, hěn hǎokàn. Tā de bāo shì lǜsè de, chà yìdiǎnr jiù bújiàn le.",
+    "translation": {
+     "en": "Today we went to the Great Wall. It was very cold; Mary wore a lovely new red coat. Her bag is green, and it almost got lost.",
+     "fr": "Aujourd'hui, nous sommes allés à la Grande Muraille. Il faisait très froid ; Mary portait un nouveau manteau rouge, très joli. Son sac est vert, et il a failli disparaître.",
+     "zh": "今天我们去长城了。天气很冷，玛丽穿了一件红色的新衣服，很好看。她的包是绿色的，差一点儿就不见了。"
+    }
+   }
+  ]
+ },
+ "lesson-hsk2-06": {
+  "scenes": [
+   {
+    "title": {
+     "en": "Grandparents",
+     "fr": "Les grands-parents",
+     "zh": "爷爷奶奶"
+    },
+    "setting": {
+     "en": "Xiaoming shows a photo of his grandparents, who live in the countryside.",
+     "fr": "Xiaoming montre une photo de ses grands-parents, qui vivent à la campagne.",
+     "zh": "小明给朋友们看爷爷奶奶的照片。"
+    },
+    "lines": [
+     {
+      "speaker": "小明",
+      "hanzi": "这是我爷爷，这是我奶奶。",
+      "pinyin": "Zhè shì wǒ yéye, zhè shì wǒ nǎinai.",
+      "meaning": {
+       "en": "This is my grandpa, and this is my grandma.",
+       "fr": "Voici mon grand-père, et voici ma grand-mère.",
+       "zh": "这是我爷爷，这是我奶奶。"
+      },
+      "audioText": "这是我爷爷，这是我奶奶。"
+     },
+     {
+      "speaker": "玛丽",
+      "hanzi": "你爷爷个子真高！",
+      "pinyin": "Nǐ yéye gèzi zhēn gāo!",
+      "meaning": {
+       "en": "Your grandpa is really tall!",
+       "fr": "Ton grand-père est vraiment grand !",
+       "zh": "你爷爷个子真高！"
+      },
+      "audioText": "你爷爷个子真高！"
+     },
+     {
+      "speaker": "小明",
+      "hanzi": "对，他一米八。奶奶眼睛很大，很爱笑。",
+      "pinyin": "Duì, tā yì mǐ bā. Nǎinai yǎnjing hěn dà, hěn ài xiào.",
+      "meaning": {
+       "en": "Yes, he's 1.80 m. Grandma has big eyes and loves to laugh.",
+       "fr": "Oui, il mesure un mètre quatre-vingts. Grand-mère a de grands yeux et adore rire.",
+       "zh": "对，他一米八。奶奶眼睛很大，很爱笑。"
+      },
+      "audioText": "对，他一米八。奶奶眼睛很大，很爱笑。"
+     },
+     {
+      "speaker": "安娜",
+      "hanzi": "他们住在北京吗？",
+      "pinyin": "Tāmen zhù zài Běijīng ma?",
+      "meaning": {
+       "en": "Do they live in Beijing?",
+       "fr": "Ils habitent à Pékin ?",
+       "zh": "他们住在北京吗？"
+      },
+      "audioText": "他们住在北京吗？"
+     },
+     {
+      "speaker": "小明",
+      "hanzi": "不，他们住在南方。",
+      "pinyin": "Bù, tāmen zhù zài nánfāng.",
+      "meaning": {
+       "en": "No, they live in the south.",
+       "fr": "Non, ils habitent dans le sud.",
+       "zh": "不，他们住在南方。"
+      },
+      "audioText": "不，他们住在南方。"
+     }
+    ]
+   },
+   {
+    "title": {
+     "en": "When I was little",
+     "fr": "Quand j'étais petit",
+     "zh": "小时候"
+    },
+    "setting": {
+     "en": "Another photo shows a little boy with long hair.",
+     "fr": "Une autre photo montre un petit garçon aux cheveux longs.",
+     "zh": "另一张照片上有一个头发很长的小男孩儿。"
+    },
+    "lines": [
+     {
+      "speaker": "大卫",
+      "hanzi": "这个小男孩儿是谁？",
+      "pinyin": "Zhège xiǎo nánháir shì shéi?",
+      "meaning": {
+       "en": "Who's this little boy?",
+       "fr": "Qui est ce petit garçon ?",
+       "zh": "这个小男孩儿是谁？"
+      },
+      "audioText": "这个小男孩儿是谁？"
+     },
+     {
+      "speaker": "小明",
+      "hanzi": "是我！那时候我五岁。",
+      "pinyin": "Shì wǒ! Nà shíhou wǒ wǔ suì.",
+      "meaning": {
+       "en": "It's me! I was five then.",
+       "fr": "C'est moi ! J'avais cinq ans.",
+       "zh": "是我！那时候我五岁。"
+      },
+      "audioText": "是我！那时候我五岁。"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "你的头发真长！",
+      "pinyin": "Nǐ de tóufa zhēn cháng!",
+      "meaning": {
+       "en": "Your hair was so long!",
+       "fr": "Tu avais les cheveux si longs !",
+       "zh": "你的头发真长！"
+      },
+      "audioText": "你的头发真长！"
+     },
+     {
+      "speaker": "小明",
+      "hanzi": "是啊，奶奶不想让我剪。",
+      "pinyin": "Shì a, nǎinai bù xiǎng ràng wǒ jiǎn.",
+      "meaning": {
+       "en": "Yes, Grandma didn't want me to cut it.",
+       "fr": "Oui, ma grand-mère ne voulait pas que je les coupe.",
+       "zh": "是啊，奶奶不想让我剪。"
+      },
+      "audioText": "是啊，奶奶不想让我剪。"
+     }
+    ]
+   },
+   {
+    "title": {
+     "en": "Husband and wife",
+     "fr": "Mari et femme",
+     "zh": "丈夫和妻子"
+    },
+    "setting": {
+     "en": "Mr Wang comes into the café with a woman.",
+     "fr": "Le professeur Wang entre dans le café avec une femme.",
+     "zh": "王老师和一个女人来到咖啡馆。"
+    },
+    "lines": [
+     {
+      "speaker": "王老师",
+      "hanzi": "同学们好！这是我妻子。",
+      "pinyin": "Tóngxuémen hǎo! Zhè shì wǒ qīzi.",
+      "meaning": {
+       "en": "Hello, everyone! This is my wife.",
+       "fr": "Bonjour à tous ! Voici ma femme.",
+       "zh": "同学们好！这是我妻子。"
+      },
+      "audioText": "同学们好！这是我妻子。"
+     },
+     {
+      "speaker": "安娜",
+      "hanzi": "您好！",
+      "pinyin": "Nín hǎo!",
+      "meaning": {
+       "en": "Hello!",
+       "fr": "Bonjour, madame !",
+       "zh": "您好！"
+      },
+      "audioText": "您好！"
+     },
+     {
+      "speaker": "王老师的妻子",
+      "hanzi": "你们好！我丈夫常常说你们很努力。",
+      "pinyin": "Nǐmen hǎo! Wǒ zhàngfu chángcháng shuō nǐmen hěn nǔlì.",
+      "meaning": {
+       "en": "Hello! My husband often says you work very hard.",
+       "fr": "Bonjour ! Mon mari dit souvent que vous travaillez beaucoup.",
+       "zh": "你们好！我丈夫常常说你们很努力。"
+      },
+      "audioText": "你们好！我丈夫常常说你们很努力。"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "谢谢！王老师自己也很努力。",
+      "pinyin": "Xièxie! Wáng lǎoshī zìjǐ yě hěn nǔlì.",
+      "meaning": {
+       "en": "Thank you! Mr Wang works very hard himself.",
+       "fr": "Merci ! Le professeur Wang aussi travaille beaucoup.",
+       "zh": "谢谢！王老师自己也很努力。"
+      },
+      "audioText": "谢谢！王老师自己也很努力。"
+     }
+    ]
+   }
+  ],
+  "story": [
+   {
+    "hanzi": "小明的爷爷个子很高，奶奶眼睛很大。小明小时候头发很长，很可爱。今天我们还看见了王老师的妻子，她很爱笑。",
+    "pinyin": "Xiǎomíng de yéye gèzi hěn gāo, nǎinai yǎnjing hěn dà. Xiǎomíng xiǎoshíhou tóufa hěn cháng, hěn kě'ài. Jīntiān wǒmen hái kànjiàn le Wáng lǎoshī de qīzi, tā hěn ài xiào.",
+    "translation": {
+     "en": "Xiaoming's grandpa is very tall, and his grandma has big eyes. When Xiaoming was little, he had long hair and was very cute. Today we also met Mr Wang's wife; she loves to laugh.",
+     "fr": "Le grand-père de Xiaoming est très grand, et sa grand-mère a de grands yeux. Petit, Xiaoming avait les cheveux longs, il était adorable. Aujourd'hui, nous avons aussi rencontré la femme du professeur Wang ; elle rit beaucoup.",
+     "zh": "小明的爷爷个子很高，奶奶眼睛很大。小明小时候头发很长，很可爱。今天我们还看见了王老师的妻子，她很爱笑。"
+    }
+   }
+  ]
+ },
+ "lesson-hsk2-11": {
+  "scenes": [
+   {
+    "title": {
+     "en": "Why so tired?",
+     "fr": "Pourquoi si fatigué ?",
+     "zh": "你为什么这么累？"
+    },
+    "setting": {
+     "en": "Monday morning. Xiaoming can barely keep his eyes open.",
+     "fr": "Lundi matin. Xiaoming garde à peine les yeux ouverts.",
+     "zh": "星期一早上，小明很累。"
+    },
+    "lines": [
+     {
+      "speaker": "大卫",
+      "hanzi": "小明，你为什么这么累？",
+      "pinyin": "Xiǎomíng, nǐ wèi shénme zhème lèi?",
+      "meaning": {
+       "en": "Xiaoming, why are you so tired?",
+       "fr": "Xiaoming, pourquoi es-tu si fatigué ?",
+       "zh": "小明，你为什么这么累？"
+      },
+      "audioText": "小明，你为什么这么累？"
+     },
+     {
+      "speaker": "小明",
+      "hanzi": "因为昨天晚上有篮球比赛，所以我睡得很晚。",
+      "pinyin": "Yīnwèi zuótiān wǎnshang yǒu lánqiú bǐsài, suǒyǐ wǒ shuì de hěn wǎn.",
+      "meaning": {
+       "en": "Because there was a basketball match last night, I went to bed late.",
+       "fr": "Comme il y avait un match de basket hier soir, je me suis couché tard.",
+       "zh": "因为昨天晚上有篮球比赛，所以我睡得很晚。"
+      },
+      "audioText": "因为昨天晚上有篮球比赛，所以我睡得很晚。"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "你们赢了吗？",
+      "pinyin": "Nǐmen yíng le ma?",
+      "meaning": {
+       "en": "Did you win?",
+       "fr": "Vous avez gagné ?",
+       "zh": "你们赢了吗？"
+      },
+      "audioText": "你们赢了吗？"
+     },
+     {
+      "speaker": "小明",
+      "hanzi": "虽然我们很努力，但是没赢。",
+      "pinyin": "Suīrán wǒmen hěn nǔlì, dànshì méi yíng.",
+      "meaning": {
+       "en": "Although we tried hard, we didn't win.",
+       "fr": "On a fait de notre mieux, mais on n'a pas gagné.",
+       "zh": "虽然我们很努力，但是没赢。"
+      },
+      "audioText": "虽然我们很努力，但是没赢。"
+     }
+    ]
+   },
+   {
+    "title": {
+     "en": "The best teacher",
+     "fr": "Le meilleur professeur",
+     "zh": "最好的老师"
+    },
+    "setting": {
+     "en": "Mary asks why everyone likes Mr Wang.",
+     "fr": "Mary demande pourquoi tout le monde aime le professeur Wang.",
+     "zh": "玛丽问为什么大家都喜欢王老师。"
+    },
+    "lines": [
+     {
+      "speaker": "玛丽",
+      "hanzi": "为什么你们都说王老师最好？",
+      "pinyin": "Wèi shénme nǐmen dōu shuō Wáng lǎoshī zuì hǎo?",
+      "meaning": {
+       "en": "Why do you all say Mr Wang is the best?",
+       "fr": "Pourquoi dites-vous tous que le professeur Wang est le meilleur ?",
+       "zh": "为什么你们都说王老师最好？"
+      },
+      "audioText": "为什么你们都说王老师最好？"
+     },
+     {
+      "speaker": "安娜",
+      "hanzi": "因为他上课很有意思，他的问题也很有意思。",
+      "pinyin": "Yīnwèi tā shàngkè hěn yǒu yìsi, tā de wèntí yě hěn yǒu yìsi.",
+      "meaning": {
+       "en": "Because his classes are fun, and so are his questions.",
+       "fr": "Parce que ses cours sont intéressants, et ses questions aussi.",
+       "zh": "因为他上课很有意思，他的问题也很有意思。"
+      },
+      "audioText": "因为他上课很有意思，他的问题也很有意思。"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "虽然他的作业很多，但是我们都喜欢他。",
+      "pinyin": "Suīrán tā de zuòyè hěn duō, dànshì wǒmen dōu xǐhuan tā.",
+      "meaning": {
+       "en": "Even though he gives lots of homework, we all like him.",
+       "fr": "Même s'il donne beaucoup de devoirs, on l'aime tous.",
+       "zh": "虽然他的作业很多，但是我们都喜欢他。"
+      },
+      "audioText": "虽然他的作业很多，但是我们都喜欢他。"
+     }
+    ]
+   },
+   {
+    "title": {
+     "en": "Like this",
+     "fr": "Comme ça",
+     "zh": "这样说"
+    },
+    "setting": {
+     "en": "In class, Mr Wang corrects Mary's sentence.",
+     "fr": "En classe, le professeur Wang corrige une phrase de Mary.",
+     "zh": "上课的时候，王老师帮玛丽改句子。"
+    },
+    "lines": [
+     {
+      "speaker": "玛丽",
+      "hanzi": "老师，“我很累，因为我工作”，这样说对吗？",
+      "pinyin": "Lǎoshī, \"wǒ hěn lèi, yīnwèi wǒ gōngzuò\", zhèyàng shuō duì ma?",
+      "meaning": {
+       "en": "Teacher, “我很累，因为我工作” — is it right to say it like that?",
+       "fr": "Professeur, « 我很累，因为我工作 », c'est correct de dire ça ?",
+       "zh": "老师，“我很累，因为我工作”，这样说对吗？"
+      },
+      "audioText": "老师，“我很累，因为我工作”，这样说对吗？"
+     },
+     {
+      "speaker": "王老师",
+      "hanzi": "我们一般那样说：“因为工作，所以我很累。”",
+      "pinyin": "Wǒmen yìbān nàyàng shuō: \"yīnwèi gōngzuò, suǒyǐ wǒ hěn lèi.\"",
+      "meaning": {
+       "en": "We usually say it like this: “因为工作，所以我很累。”",
+       "fr": "On le dit plutôt comme ça : « 因为工作，所以我很累。 »",
+       "zh": "我们一般那样说：“因为工作，所以我很累。”"
+      },
+      "audioText": "我们一般那样说：“因为工作，所以我很累。”"
+     },
+     {
+      "speaker": "玛丽",
+      "hanzi": "懂了，原因在前边。",
+      "pinyin": "Dǒng le, yuányīn zài qiánbian.",
+      "meaning": {
+       "en": "I see: the reason goes first.",
+       "fr": "Compris, la cause vient en premier.",
+       "zh": "懂了，原因在前边。"
+      },
+      "audioText": "懂了，原因在前边。"
+     },
+     {
+      "speaker": "王老师",
+      "hanzi": "对，你说得很好！",
+      "pinyin": "Duì, nǐ shuō de hěn hǎo!",
+      "meaning": {
+       "en": "Exactly, well said!",
+       "fr": "Exactement, très bien !",
+       "zh": "对，你说得很好！"
+      },
+      "audioText": "对，你说得很好！"
+     }
+    ]
+   }
+  ],
+  "story": [
+   {
+    "hanzi": "因为昨天有篮球比赛，所以小明今天很累。虽然他们没赢，但是大家都很高兴。王老师是我们最喜欢的老师，因为他的课很有意思。",
+    "pinyin": "Yīnwèi zuótiān yǒu lánqiú bǐsài, suǒyǐ Xiǎomíng jīntiān hěn lèi. Suīrán tāmen méi yíng, dànshì dàjiā dōu hěn gāoxìng. Wáng lǎoshī shì wǒmen zuì xǐhuan de lǎoshī, yīnwèi tā de kè hěn yǒu yìsi.",
+    "translation": {
+     "en": "Because there was a basketball match yesterday, Xiaoming is very tired today. Although they didn't win, everyone was happy. Mr Wang is our favourite teacher because his classes are interesting.",
+     "fr": "Comme il y avait un match de basket hier, Xiaoming est très fatigué aujourd'hui. Ils n'ont pas gagné, mais tout le monde était content. Le professeur Wang est notre professeur préféré, parce que ses cours sont intéressants.",
+     "zh": "因为昨天有篮球比赛，所以小明今天很累。虽然他们没赢，但是大家都很高兴。王老师是我们最喜欢的老师，因为他的课很有意思。"
+    }
+   }
+  ]
+ },
+ "lesson-hsk2-07": {
+  "scenes": [
+   {
+    "title": {
+     "en": "Is it far?",
+     "fr": "C'est loin ?",
+     "zh": "远不远？"
+    },
+    "setting": {
+     "en": "Mary wants to find a bookshop she saw online.",
+     "fr": "Mary veut trouver une librairie qu'elle a vue en ligne.",
+     "zh": "玛丽想去一个书店。"
+    },
+    "lines": [
+     {
+      "speaker": "玛丽",
+      "hanzi": "小明，那个书店离学校远吗？",
+      "pinyin": "Xiǎomíng, nàge shūdiàn lí xuéxiào yuǎn ma?",
+      "meaning": {
+       "en": "Xiaoming, is that bookshop far from the university?",
+       "fr": "Xiaoming, cette librairie est loin de l'université ?",
+       "zh": "小明，那个书店离学校远吗？"
+      },
+      "audioText": "小明，那个书店离学校远吗？"
+     },
+     {
+      "speaker": "小明",
+      "hanzi": "不远，很近，走路十分钟。",
+      "pinyin": "Bù yuǎn, hěn jìn, zǒulù shí fēnzhōng.",
+      "meaning": {
+       "en": "Not far, very close: ten minutes on foot.",
+       "fr": "Non, c'est tout près : dix minutes à pied.",
+       "zh": "不远，很近，走路十分钟。"
+      },
+      "audioText": "不远，很近，走路十分钟。"
+     },
+     {
+      "speaker": "玛丽",
+      "hanzi": "怎么走？",
+      "pinyin": "Zěnme zǒu?",
+      "meaning": {
+       "en": "How do I get there?",
+       "fr": "Comment on y va ?",
+       "zh": "怎么走？"
+      },
+      "audioText": "怎么走？"
+     },
+     {
+      "speaker": "小明",
+      "hanzi": "出了学校往右走，在路的左边。",
+      "pinyin": "Chū le xuéxiào wǎng yòu zǒu, zài lù de zuǒbian.",
+      "meaning": {
+       "en": "Leave the university, go right, and it's on the left side of the road.",
+       "fr": "En sortant de l'université, va à droite, c'est sur le côté gauche de la route.",
+       "zh": "出了学校往右走，在路的左边。"
+      },
+      "audioText": "出了学校往右走，在路的左边。"
+     }
+    ]
+   },
+   {
+    "title": {
+     "en": "Left or right?",
+     "fr": "À gauche ou à droite ?",
+     "zh": "左边还是右边？"
+    },
+    "setting": {
+     "en": "Mary is lost and calls Xiaoming.",
+     "fr": "Mary s'est perdue et appelle Xiaoming.",
+     "zh": "玛丽找不到书店，给小明打电话。"
+    },
+    "lines": [
+     {
+      "speaker": "玛丽",
+      "hanzi": "小明，我在一个饭馆前面，书店在哪儿？",
+      "pinyin": "Xiǎomíng, wǒ zài yí ge fànguǎn qiánmiàn, shūdiàn zài nǎr?",
+      "meaning": {
+       "en": "Xiaoming, I'm in front of a restaurant. Where's the bookshop?",
+       "fr": "Xiaoming, je suis devant un restaurant. Où est la librairie ?",
+       "zh": "小明，我在一个饭馆前面，书店在哪儿？"
+      },
+      "audioText": "小明，我在一个饭馆前面，书店在哪儿？"
+     },
+     {
+      "speaker": "小明",
+      "hanzi": "你往前走，书店在饭馆旁边。",
+      "pinyin": "Nǐ wǎng qián zǒu, shūdiàn zài fànguǎn pángbiān.",
+      "meaning": {
+       "en": "Keep going; the bookshop is next to the restaurant.",
+       "fr": "Continue tout droit, la librairie est à côté du restaurant.",
+       "zh": "你往前走，书店在饭馆旁边。"
+      },
+      "audioText": "你往前走，书店在饭馆旁边。"
+     },
+     {
+      "speaker": "玛丽",
+      "hanzi": "左边还是右边？",
+      "pinyin": "Zuǒbian háishi yòubian?",
+      "meaning": {
+       "en": "On the left or the right?",
+       "fr": "À gauche ou à droite ?",
+       "zh": "左边还是右边？"
+      },
+      "audioText": "左边还是右边？"
+     },
+     {
+      "speaker": "小明",
+      "hanzi": "右边，有一个很大的门。",
+      "pinyin": "Yòubian, yǒu yí ge hěn dà de mén.",
+      "meaning": {
+       "en": "On the right, there's a big door.",
+       "fr": "À droite, il y a une grande porte.",
+       "zh": "右边，有一个很大的门。"
+      },
+      "audioText": "右边，有一个很大的门。"
+     },
+     {
+      "speaker": "玛丽",
+      "hanzi": "看见了！谢谢！",
+      "pinyin": "Kànjiàn le! Xièxie!",
+      "meaning": {
+       "en": "I see it! Thanks!",
+       "fr": "Je la vois ! Merci !",
+       "zh": "看见了！谢谢！"
+      },
+      "audioText": "看见了！谢谢！"
+     }
+    ]
+   },
+   {
+    "title": {
+     "en": "Inside the bookshop",
+     "fr": "Dans la librairie",
+     "zh": "在书店里面"
+    },
+    "setting": {
+     "en": "Inside, Mary meets Anna by chance.",
+     "fr": "À l'intérieur, Mary croise Anna par hasard.",
+     "zh": "在书店里面，玛丽看见了安娜。"
+    },
+    "lines": [
+     {
+      "speaker": "安娜",
+      "hanzi": "玛丽，你也来了！",
+      "pinyin": "Mǎlì, nǐ yě lái le!",
+      "meaning": {
+       "en": "Mary, you're here too!",
+       "fr": "Mary, toi aussi tu es là !",
+       "zh": "玛丽，你也来了！"
+      },
+      "audioText": "玛丽，你也来了！"
+     },
+     {
+      "speaker": "玛丽",
+      "hanzi": "是啊。汉语书在哪儿？",
+      "pinyin": "Shì a. Hànyǔ shū zài nǎr?",
+      "meaning": {
+       "en": "Yes. Where are the Chinese books?",
+       "fr": "Oui. Où sont les livres de chinois ?",
+       "zh": "是啊。汉语书在哪儿？"
+      },
+      "audioText": "是啊。汉语书在哪儿？"
+     },
+     {
+      "speaker": "安娜",
+      "hanzi": "在上面，楼上。我们一起去吧。",
+      "pinyin": "Zài shàngmiàn, lóushàng. Wǒmen yìqǐ qù ba.",
+      "meaning": {
+       "en": "Upstairs. Let's go together.",
+       "fr": "En haut, à l'étage. Allons-y ensemble.",
+       "zh": "在上面，楼上。我们一起去吧。"
+      },
+      "audioText": "在上面，楼上。我们一起去吧。"
+     }
+    ]
+   }
+  ],
+  "story": [
+   {
+    "hanzi": "那个书店离学校很近，可是我还是找不到。小明告诉我往前走，书店就在饭馆的右边。在书店里面我看见了安娜，我们一起买了很多书。",
+    "pinyin": "Nàge shūdiàn lí xuéxiào hěn jìn, kěshì wǒ háishi zhǎo bu dào. Xiǎomíng gàosu wǒ wǎng qián zǒu, shūdiàn jiù zài fànguǎn de yòubian. Zài shūdiàn lǐmiàn wǒ kànjiàn le Ānnà, wǒmen yìqǐ mǎi le hěn duō shū.",
+    "translation": {
+     "en": "That bookshop is very close to the university, but I still couldn't find it. Xiaoming told me to go straight on: the bookshop was just to the right of the restaurant. Inside, I saw Anna and we bought lots of books together. (Mary)",
+     "fr": "Cette librairie est tout près de l'université, mais je ne la trouvais pas. Xiaoming m'a dit d'aller tout droit : elle était juste à droite du restaurant. À l'intérieur, j'ai vu Anna et nous avons acheté plein de livres ensemble. (Mary)",
+     "zh": "那个书店离学校很近，可是我还是找不到。小明告诉我往前走，书店就在饭馆的右边。在书店里面我看见了安娜，我们一起买了很多书。"
+    }
+   }
+  ]
+ },
+ "lesson-hsk2-09": {
+  "scenes": [
+   {
+    "title": {
+     "en": "To the museum",
+     "fr": "Vers le musée",
+     "zh": "去博物馆"
+    },
+    "setting": {
+     "en": "Saturday. The friends want to go to a museum across the city.",
+     "fr": "Samedi. Les amis veulent aller dans un musée à l'autre bout de la ville.",
+     "zh": "星期六，朋友们想去一个很远的地方玩儿。"
+    },
+    "lines": [
+     {
+      "speaker": "大卫",
+      "hanzi": "我们怎么去？坐地铁还是打车？",
+      "pinyin": "Wǒmen zěnme qù? Zuò dìtiě háishi dǎchē?",
+      "meaning": {
+       "en": "How shall we go? Underground or taxi?",
+       "fr": "Comment on y va ? Métro ou taxi ?",
+       "zh": "我们怎么去？坐地铁还是打车？"
+      },
+      "audioText": "我们怎么去？坐地铁还是打车？"
+     },
+     {
+      "speaker": "小明",
+      "hanzi": "坐地铁吧，地铁站就在学校门口。",
+      "pinyin": "Zuò dìtiě ba, dìtiě zhàn jiù zài xuéxiào ménkǒu.",
+      "meaning": {
+       "en": "Let's take the underground; the station is right at the university gate.",
+       "fr": "Prenons le métro, la station est juste devant l'université.",
+       "zh": "坐地铁吧，地铁站就在学校门口。"
+      },
+      "audioText": "坐地铁吧，地铁站就在学校门口。"
+     },
+     {
+      "speaker": "玛丽",
+      "hanzi": "地铁票多少钱？",
+      "pinyin": "Dìtiě piào duōshao qián?",
+      "meaning": {
+       "en": "How much is an underground ticket?",
+       "fr": "Combien coûte un ticket de métro ?",
+       "zh": "地铁票多少钱？"
+      },
+      "audioText": "地铁票多少钱？"
+     },
+     {
+      "speaker": "小明",
+      "hanzi": "五块。门票是四十块。",
+      "pinyin": "Wǔ kuài. Ménpiào shì sìshí kuài.",
+      "meaning": {
+       "en": "Five yuan. The entrance ticket is forty.",
+       "fr": "Cinq yuans. L'entrée coûte quarante yuans.",
+       "zh": "五块。门票是四十块。"
+      },
+      "audioText": "五块。门票是四十块。"
+     }
+    ]
+   },
+   {
+    "title": {
+     "en": "Where's the toilet?",
+     "fr": "Où sont les toilettes ?",
+     "zh": "洗手间在哪儿？"
+    },
+    "setting": {
+     "en": "In the station, Mary asks a staff member for help.",
+     "fr": "Dans la station, Mary demande de l'aide à un employé.",
+     "zh": "在地铁站，玛丽问工作人员。"
+    },
+    "lines": [
+     {
+      "speaker": "玛丽",
+      "hanzi": "请问，洗手间在哪儿？",
+      "pinyin": "Qǐngwèn, xǐshǒujiān zài nǎr?",
+      "meaning": {
+       "en": "Excuse me, where's the toilet?",
+       "fr": "Excusez-moi, où sont les toilettes ?",
+       "zh": "请问，洗手间在哪儿？"
+      },
+      "audioText": "请问，洗手间在哪儿？"
+     },
+     {
+      "speaker": "工作人员",
+      "hanzi": "在那个门口，往左走。",
+      "pinyin": "Zài nàge ménkǒu, wǎng zuǒ zǒu.",
+      "meaning": {
+       "en": "At that exit, go left.",
+       "fr": "À cette sortie, allez à gauche.",
+       "zh": "在那个门口，往左走。"
+      },
+      "audioText": "在那个门口，往左走。"
+     },
+     {
+      "speaker": "玛丽",
+      "hanzi": "谢谢！附近有药店吗？我有点儿头疼。",
+      "pinyin": "Xièxie! Fùjìn yǒu yàodiàn ma? Wǒ yǒudiǎnr tóu téng.",
+      "meaning": {
+       "en": "Thanks! Is there a pharmacy nearby? I have a slight headache.",
+       "fr": "Merci ! Il y a une pharmacie près d'ici ? J'ai un peu mal à la tête.",
+       "zh": "谢谢！附近有药店吗？我有点儿头疼。"
+      },
+      "audioText": "谢谢！附近有药店吗？我有点儿头疼。"
+     },
+     {
+      "speaker": "工作人员",
+      "hanzi": "有，商场一楼有药店。",
+      "pinyin": "Yǒu, shāngchǎng yì lóu yǒu yàodiàn.",
+      "meaning": {
+       "en": "Yes, there's one on the ground floor of the shopping centre.",
+       "fr": "Oui, il y en a une au rez-de-chaussée du centre commercial.",
+       "zh": "有，商场一楼有药店。"
+      },
+      "audioText": "有，商场一楼有药店。"
+     }
+    ]
+   },
+   {
+    "title": {
+     "en": "Lost in the city",
+     "fr": "Perdus en ville",
+     "zh": "走错路了"
+    },
+    "setting": {
+     "en": "After the museum, they can't find the restaurant they booked.",
+     "fr": "Après le musée, ils ne trouvent pas le restaurant qu'ils ont réservé.",
+     "zh": "从博物馆出来，他们找不到饭馆了。"
+    },
+    "lines": [
+     {
+      "speaker": "安娜",
+      "hanzi": "我们走错路了吗？",
+      "pinyin": "Wǒmen zǒu cuò lù le ma?",
+      "meaning": {
+       "en": "Did we take the wrong way?",
+       "fr": "On s'est trompés de chemin ?",
+       "zh": "我们走错路了吗？"
+      },
+      "audioText": "我们走错路了吗？"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "可能。我问一下。请问，去这个饭馆怎么走？",
+      "pinyin": "Kěnéng. Wǒ wèn yíxià. Qǐngwèn, qù zhège fànguǎn zěnme zǒu?",
+      "meaning": {
+       "en": "Maybe. Let me ask. Excuse me, how do we get to this restaurant?",
+       "fr": "Peut-être. Je vais demander. Excusez-moi, comment va-t-on à ce restaurant ?",
+       "zh": "可能。我问一下。请问，去这个饭馆怎么走？"
+      },
+      "audioText": "可能。我问一下。请问，去这个饭馆怎么走？"
+     },
+     {
+      "speaker": "路人",
+      "hanzi": "在那个酒店楼下，走路五分钟。",
+      "pinyin": "Zài nàge jiǔdiàn lóuxià, zǒulù wǔ fēnzhōng.",
+      "meaning": {
+       "en": "It's below that hotel, five minutes' walk.",
+       "fr": "Il est au pied de cet hôtel, à cinq minutes à pied.",
+       "zh": "在那个酒店楼下，走路五分钟。"
+      },
+      "audioText": "在那个酒店楼下，走路五分钟。"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "太好了，谢谢您！",
+      "pinyin": "Tài hǎo le, xièxie nín!",
+      "meaning": {
+       "en": "Great, thank you!",
+       "fr": "Super, merci !",
+       "zh": "太好了，谢谢您！"
+      },
+      "audioText": "太好了，谢谢您！"
+     }
+    ]
+   }
+  ],
+  "story": [
+   {
+    "hanzi": "星期六我们坐地铁去了博物馆。地铁站就在学校门口，很方便。回来的时候我们走错了路，一个人告诉我们饭馆在酒店楼下。",
+    "pinyin": "Xīngqīliù wǒmen zuò dìtiě qù le bówùguǎn. Dìtiě zhàn jiù zài xuéxiào ménkǒu, hěn fāngbiàn. Huílai de shíhou wǒmen zǒu cuò le lù, yí ge rén gàosu wǒmen fànguǎn zài jiǔdiàn lóuxià.",
+    "translation": {
+     "en": "On Saturday we took the underground to the museum. The station is right at the university gate, very convenient. On the way back we got lost; someone told us the restaurant was below the hotel.",
+     "fr": "Samedi, nous sommes allés au musée en métro. La station est juste devant l'université, c'est très pratique. Au retour, nous nous sommes perdus ; quelqu'un nous a dit que le restaurant était au pied de l'hôtel.",
+     "zh": "星期六我们坐地铁去了博物馆。地铁站就在学校门口，很方便。回来的时候我们走错了路，一个人告诉我们饭馆在酒店楼下。"
+    }
+   }
+  ]
+ },
+ "lesson-hsk2-13": {
+  "scenes": [
+   {
+    "title": {
+     "en": "Can you help me?",
+     "fr": "Tu peux m'aider ?",
+     "zh": "你能帮我吗？"
+    },
+    "setting": {
+     "en": "Mary is moving to a new room and has too many things.",
+     "fr": "Mary change de chambre et a trop d'affaires.",
+     "zh": "玛丽要换房间，东西太多了。"
+    },
+    "lines": [
+     {
+      "speaker": "玛丽",
+      "hanzi": "不好意思，大卫，你能帮我一个忙吗？",
+      "pinyin": "Bù hǎoyìsi, Dàwèi, nǐ néng bāng wǒ yí ge máng ma?",
+      "meaning": {
+       "en": "Sorry to bother you, David, can you do me a favour?",
+       "fr": "Excuse-moi, David, tu peux me rendre un service ?",
+       "zh": "不好意思，大卫，你能帮我一个忙吗？"
+      },
+      "audioText": "不好意思，大卫，你能帮我一个忙吗？"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "可以啊，什么事？",
+      "pinyin": "Kěyǐ a, shénme shì?",
+      "meaning": {
+       "en": "Sure, what is it?",
+       "fr": "Bien sûr, qu'est-ce qu'il y a ?",
+       "zh": "可以啊，什么事？"
+      },
+      "audioText": "可以啊，什么事？"
+     },
+     {
+      "speaker": "玛丽",
+      "hanzi": "帮我拿这些东西到新房间，好吗？",
+      "pinyin": "Bāng wǒ ná zhèxiē dōngxi dào xīn fángjiān, hǎo ma?",
+      "meaning": {
+       "en": "Help me carry these things to my new room, OK?",
+       "fr": "Aide-moi à porter ces affaires dans ma nouvelle chambre, d'accord ?",
+       "zh": "帮我拿这些东西到新房间，好吗？"
+      },
+      "audioText": "帮我拿这些东西到新房间，好吗？"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "没问题，我叫小明也来帮忙。",
+      "pinyin": "Méi wèntí, wǒ jiào Xiǎomíng yě lái bāngmáng.",
+      "meaning": {
+       "en": "No problem, I'll ask Xiaoming to come and help too.",
+       "fr": "Pas de problème, je vais demander à Xiaoming de venir aider aussi.",
+       "zh": "没问题，我叫小明也来帮忙。"
+      },
+      "audioText": "没问题，我叫小明也来帮忙。"
+     }
+    ]
+   },
+   {
+    "title": {
+     "en": "Introducing a friend",
+     "fr": "Présenter un ami",
+     "zh": "介绍朋友"
+    },
+    "setting": {
+     "en": "Xiaoming arrives with a friend.",
+     "fr": "Xiaoming arrive avec un ami.",
+     "zh": "小明带着一个朋友来了。"
+    },
+    "lines": [
+     {
+      "speaker": "小明",
+      "hanzi": "我给你们介绍一下，这是我的同学小李。",
+      "pinyin": "Wǒ gěi nǐmen jièshào yíxià, zhè shì wǒ de tóngxué Xiǎo Lǐ.",
+      "meaning": {
+       "en": "Let me introduce you: this is my classmate Xiao Li.",
+       "fr": "Je vous présente mon camarade Xiao Li.",
+       "zh": "我给你们介绍一下，这是我的同学小李。"
+      },
+      "audioText": "我给你们介绍一下，这是我的同学小李。"
+     },
+     {
+      "speaker": "小李",
+      "hanzi": "你们好！小明让我来帮忙。",
+      "pinyin": "Nǐmen hǎo! Xiǎomíng ràng wǒ lái bāngmáng.",
+      "meaning": {
+       "en": "Hello! Xiaoming asked me to come and help.",
+       "fr": "Bonjour ! Xiaoming m'a demandé de venir aider.",
+       "zh": "你们好！小明让我来帮忙。"
+      },
+      "audioText": "你们好！小明让我来帮忙。"
+     },
+     {
+      "speaker": "玛丽",
+      "hanzi": "太谢谢你们了！",
+      "pinyin": "Tài xièxie nǐmen le!",
+      "meaning": {
+       "en": "Thank you so much!",
+       "fr": "Merci beaucoup à vous !",
+       "zh": "太谢谢你们了！"
+      },
+      "audioText": "太谢谢你们了！"
+     },
+     {
+      "speaker": "小李",
+      "hanzi": "不客气，大家是朋友嘛。",
+      "pinyin": "Bú kèqi, dàjiā shì péngyou ma.",
+      "meaning": {
+       "en": "You're welcome, we're all friends.",
+       "fr": "De rien, on est tous amis.",
+       "zh": "不客气，大家是朋友嘛。"
+      },
+      "audioText": "不客气，大家是朋友嘛。"
+     }
+    ]
+   },
+   {
+    "title": {
+     "en": "A message for the teacher",
+     "fr": "Un message pour le professeur",
+     "zh": "告诉老师"
+    },
+    "setting": {
+     "en": "Mary must tell Mr Wang her new room number.",
+     "fr": "Mary doit donner son nouveau numéro de chambre au professeur Wang.",
+     "zh": "玛丽要告诉王老师她的新房间号。"
+    },
+    "lines": [
+     {
+      "speaker": "玛丽",
+      "hanzi": "大卫，你可以告诉王老师我的新房间号吗？",
+      "pinyin": "Dàwèi, nǐ kěyǐ gàosu Wáng lǎoshī wǒ de xīn fángjiān hào ma?",
+      "meaning": {
+       "en": "David, can you tell Mr Wang my new room number?",
+       "fr": "David, tu peux donner mon nouveau numéro de chambre au professeur Wang ?",
+       "zh": "大卫，你可以告诉王老师我的新房间号吗？"
+      },
+      "audioText": "大卫，你可以告诉王老师我的新房间号吗？"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "可以，你等一下，我给他打电话。",
+      "pinyin": "Kěyǐ, nǐ děng yíxià, wǒ gěi tā dǎ diànhuà.",
+      "meaning": {
+       "en": "Sure, wait a moment, I'll call him.",
+       "fr": "Bien sûr, attends, je l'appelle.",
+       "zh": "可以，你等一下，我给他打电话。"
+      },
+      "audioText": "可以，你等一下，我给他打电话。"
+     },
+     {
+      "speaker": "玛丽",
+      "hanzi": "希望他明天不送书来我的老房间。",
+      "pinyin": "Xīwàng tā míngtiān bú sòng shū lái wǒ de lǎo fángjiān.",
+      "meaning": {
+       "en": "I hope he won't bring the books to my old room tomorrow.",
+       "fr": "J'espère qu'il ne m'apportera pas les livres dans mon ancienne chambre demain.",
+       "zh": "希望他明天不送书来我的老房间。"
+      },
+      "audioText": "希望他明天不送书来我的老房间。"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "别担心，我跟他说。",
+      "pinyin": "Bié dānxīn, wǒ gēn tā shuō.",
+      "meaning": {
+       "en": "Don't worry, I'll tell him.",
+       "fr": "Ne t'inquiète pas, je vais lui dire.",
+       "zh": "别担心，我跟他说。"
+      },
+      "audioText": "别担心，我跟他说。"
+     }
+    ]
+   }
+  ],
+  "story": [
+   {
+    "hanzi": "今天玛丽换了房间。她的东西很多，我和小明都去帮忙了。小明还介绍了他的同学小李。大家一起拿东西，很快就完了。",
+    "pinyin": "Jīntiān Mǎlì huàn le fángjiān. Tā de dōngxi hěn duō, wǒ hé Xiǎomíng dōu qù bāngmáng le. Xiǎomíng hái jièshào le tā de tóngxué Xiǎo Lǐ. Dàjiā yìqǐ ná dōngxi, hěn kuài jiù wán le.",
+    "translation": {
+     "en": "Today Mary changed rooms. She had lots of things, so Xiaoming and I went to help. Xiaoming also introduced his classmate Xiao Li. We carried everything together and finished quickly.",
+     "fr": "Aujourd'hui, Mary a changé de chambre. Elle avait beaucoup d'affaires, alors Xiaoming et moi sommes allés aider. Xiaoming nous a aussi présenté son camarade Xiao Li. Nous avons tout porté ensemble et avons vite fini.",
+     "zh": "今天玛丽换了房间。她的东西很多，我和小明都去帮忙了。小明还介绍了他的同学小李。大家一起拿东西，很快就完了。"
+    }
+   }
+  ]
+ },
+ "lesson-hsk2-12": {
+  "scenes": [
+   {
+    "title": {
+     "en": "Exam tomorrow",
+     "fr": "Examen demain",
+     "zh": "明天考试"
+    },
+    "setting": {
+     "en": "The end-of-term exam is tomorrow. Mr Wang gives some advice.",
+     "fr": "L'examen de fin de semestre est demain. Le professeur Wang donne des conseils.",
+     "zh": "明天期末考试，王老师告诉大家考试的事。"
+    },
+    "lines": [
+     {
+      "speaker": "王老师",
+      "hanzi": "同学们，明天考试，大家准备好了吗？",
+      "pinyin": "Tóngxuémen, míngtiān kǎoshì, dàjiā zhǔnbèi hǎo le ma?",
+      "meaning": {
+       "en": "Everyone, the exam is tomorrow. Are you ready?",
+       "fr": "Chers élèves, l'examen est demain. Vous êtes prêts ?",
+       "zh": "同学们，明天考试，大家准备好了吗？"
+      },
+      "audioText": "同学们，明天考试，大家准备好了吗？"
+     },
+     {
+      "speaker": "玛丽",
+      "hanzi": "老师，考试有多少题？",
+      "pinyin": "Lǎoshī, kǎoshì yǒu duōshao tí?",
+      "meaning": {
+       "en": "Teacher, how many questions are there?",
+       "fr": "Professeur, il y a combien de questions ?",
+       "zh": "老师，考试有多少题？"
+      },
+      "audioText": "老师，考试有多少题？"
+     },
+     {
+      "speaker": "王老师",
+      "hanzi": "四十个题。别忘了写姓名。",
+      "pinyin": "Sìshí ge tí. Bié wàng le xiě xìngmíng.",
+      "meaning": {
+       "en": "Forty. Don't forget to write your full name.",
+       "fr": "Quarante. N'oubliez pas d'écrire vos nom et prénom.",
+       "zh": "四十个题。别忘了写姓名。"
+      },
+      "audioText": "四十个题。别忘了写姓名。"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "要带什么？",
+      "pinyin": "Yào dài shénme?",
+      "meaning": {
+       "en": "What should we bring?",
+       "fr": "Qu'est-ce qu'il faut apporter ?",
+       "zh": "要带什么？"
+      },
+      "audioText": "要带什么？"
+     },
+     {
+      "speaker": "王老师",
+      "hanzi": "带笔就可以。",
+      "pinyin": "Dài bǐ jiù kěyǐ.",
+      "meaning": {
+       "en": "Just a pen.",
+       "fr": "Juste un stylo.",
+       "zh": "带笔就可以。"
+      },
+      "audioText": "带笔就可以。"
+     }
+    ]
+   },
+   {
+    "title": {
+     "en": "Revising together",
+     "fr": "Réviser ensemble",
+     "zh": "一起复习"
+    },
+    "setting": {
+     "en": "In the evening, the friends revise in the classroom.",
+     "fr": "Le soir, les amis révisent dans la salle de classe.",
+     "zh": "晚上，朋友们在教室里复习。"
+    },
+    "lines": [
+     {
+      "speaker": "安娜",
+      "hanzi": "大卫，这个词是什么意思？我忘了。",
+      "pinyin": "Dàwèi, zhège cí shì shénme yìsi? Wǒ wàng le.",
+      "meaning": {
+       "en": "David, what does this word mean? I forgot.",
+       "fr": "David, que veut dire ce mot ? J'ai oublié.",
+       "zh": "大卫，这个词是什么意思？我忘了。"
+      },
+      "audioText": "大卫，这个词是什么意思？我忘了。"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "是“记得”，就是“没忘”。",
+      "pinyin": "Shì \"jìde\", jiù shì \"méi wàng\".",
+      "meaning": {
+       "en": "It's 记得, meaning “not forgotten”.",
+       "fr": "C'est 记得, ça veut dire « ne pas avoir oublié ».",
+       "zh": "是“记得”，就是“没忘”。"
+      },
+      "audioText": "是“记得”，就是“没忘”。"
+     },
+     {
+      "speaker": "安娜",
+      "hanzi": "懂了，谢谢！你都看完了吗？",
+      "pinyin": "Dǒng le, xièxie! Nǐ dōu kàn wán le ma?",
+      "meaning": {
+       "en": "Got it, thanks! Have you finished going through everything?",
+       "fr": "Compris, merci ! Tu as tout relu ?",
+       "zh": "懂了，谢谢！你都看完了吗？"
+      },
+      "audioText": "懂了，谢谢！你都看完了吗？"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "还没看完，还有十页。",
+      "pinyin": "Hái méi kàn wán, hái yǒu shí yè.",
+      "meaning": {
+       "en": "Not yet, ten pages left.",
+       "fr": "Pas encore, il me reste dix pages.",
+       "zh": "还没看完，还有十页。"
+      },
+      "audioText": "还没看完，还有十页。"
+     }
+    ]
+   },
+   {
+    "title": {
+     "en": "After the exam",
+     "fr": "Après l'examen",
+     "zh": "考完了"
+    },
+    "setting": {
+     "en": "The exam is over. Everyone compares answers.",
+     "fr": "L'examen est terminé. Chacun compare ses réponses.",
+     "zh": "考完试了，大家说考得怎么样。"
+    },
+    "lines": [
+     {
+      "speaker": "小明",
+      "hanzi": "你们考得怎么样？",
+      "pinyin": "Nǐmen kǎo de zěnmeyàng?",
+      "meaning": {
+       "en": "How did your exam go?",
+       "fr": "Comment s'est passé votre examen ?",
+       "zh": "你们考得怎么样？"
+      },
+      "audioText": "你们考得怎么样？"
+     },
+     {
+      "speaker": "玛丽",
+      "hanzi": "我写错了一个字，但是都写完了。",
+      "pinyin": "Wǒ xiě cuò le yí ge zì, dànshì dōu xiě wán le.",
+      "meaning": {
+       "en": "I wrote one character wrong, but I finished everything.",
+       "fr": "Je me suis trompée sur un caractère, mais j'ai tout fini.",
+       "zh": "我写错了一个字，但是都写完了。"
+      },
+      "audioText": "我写错了一个字，但是都写完了。"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "我有一个题没看懂。",
+      "pinyin": "Wǒ yǒu yí ge tí méi kàn dǒng.",
+      "meaning": {
+       "en": "There was one question I didn't understand.",
+       "fr": "Il y a une question que je n'ai pas comprise.",
+       "zh": "我有一个题没看懂。"
+      },
+      "audioText": "我有一个题没看懂。"
+     },
+     {
+      "speaker": "安娜",
+      "hanzi": "没关系，我们去吃饭吧！",
+      "pinyin": "Méi guānxi, wǒmen qù chī fàn ba!",
+      "meaning": {
+       "en": "Never mind, let's go and eat!",
+       "fr": "Pas grave, allons manger !",
+       "zh": "没关系，我们去吃饭吧！"
+      },
+      "audioText": "没关系，我们去吃饭吧！"
+     }
+    ]
+   }
+  ],
+  "story": [
+   {
+    "hanzi": "明天考试，今天晚上我们在教室复习。安娜忘了一个词的意思，我告诉了她。考完试以后，我们一起去吃饭，大家都很高兴。",
+    "pinyin": "Míngtiān kǎoshì, jīntiān wǎnshang wǒmen zài jiàoshì fùxí. Ānnà wàng le yí ge cí de yìsi, wǒ gàosu le tā. Kǎo wán shì yǐhòu, wǒmen yìqǐ qù chī fàn, dàjiā dōu hěn gāoxìng.",
+    "translation": {
+     "en": "The exam was tomorrow, so tonight we revised in the classroom. Anna forgot the meaning of a word and I told her. After the exam we all went out to eat, very happy.",
+     "fr": "L'examen était le lendemain, alors ce soir-là nous avons révisé en classe. Anna avait oublié le sens d'un mot, je le lui ai dit. Après l'examen, nous sommes tous allés manger, très contents.",
+     "zh": "明天考试，今天晚上我们在教室复习。安娜忘了一个词的意思，我告诉了她。考完试以后，我们一起去吃饭，大家都很高兴。"
+    }
+   }
+  ]
+ },
+ "lesson-hsk2-03": {
+  "scenes": [
+   {
+    "title": {
+     "en": "Not feeling well",
+     "fr": "Pas en forme",
+     "zh": "不舒服"
+    },
+    "setting": {
+     "en": "The morning of the next exam, David wakes up ill.",
+     "fr": "Le matin du prochain examen, David se réveille malade.",
+     "zh": "第二个考试那天早上，大卫生病了。"
+    },
+    "lines": [
+     {
+      "speaker": "大卫",
+      "hanzi": "小明，我头很疼，身体也不舒服。",
+      "pinyin": "Xiǎomíng, wǒ tóu hěn téng, shēntǐ yě bù shūfu.",
+      "meaning": {
+       "en": "Xiaoming, I have a bad headache and I don't feel well.",
+       "fr": "Xiaoming, j'ai très mal à la tête et je ne me sens pas bien.",
+       "zh": "小明，我头很疼，身体也不舒服。"
+      },
+      "audioText": "小明，我头很疼，身体也不舒服。"
+     },
+     {
+      "speaker": "小明",
+      "hanzi": "你别去考试了，我们去医院吧。",
+      "pinyin": "Nǐ bié qù kǎoshì le, wǒmen qù yīyuàn ba.",
+      "meaning": {
+       "en": "Don't go to the exam; let's go to the hospital.",
+       "fr": "Ne va pas à l'examen, allons à l'hôpital.",
+       "zh": "你别去考试了，我们去医院吧。"
+      },
+      "audioText": "你别去考试了，我们去医院吧。"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "可是今天有考试……",
+      "pinyin": "Kěshì jīntiān yǒu kǎoshì……",
+      "meaning": {
+       "en": "But there's an exam today…",
+       "fr": "Mais il y a un examen aujourd'hui…",
+       "zh": "可是今天有考试……"
+      },
+      "audioText": "可是今天有考试……"
+     },
+     {
+      "speaker": "小明",
+      "hanzi": "身体最重要！我告诉王老师。",
+      "pinyin": "Shēntǐ zuì zhòngyào! Wǒ gàosu Wáng lǎoshī.",
+      "meaning": {
+       "en": "Your health matters most! I'll tell Mr Wang.",
+       "fr": "La santé avant tout ! Je préviens le professeur Wang.",
+       "zh": "身体最重要！我告诉王老师。"
+      },
+      "audioText": "身体最重要！我告诉王老师。"
+     }
+    ]
+   },
+   {
+    "title": {
+     "en": "At the doctor's",
+     "fr": "Chez le médecin",
+     "zh": "看医生"
+    },
+    "setting": {
+     "en": "Xiaoming's father examines David.",
+     "fr": "Le père de Xiaoming examine David.",
+     "zh": "小明的爸爸给大卫看病。"
+    },
+    "lines": [
+     {
+      "speaker": "医生",
+      "hanzi": "大卫，你哪儿不舒服？",
+      "pinyin": "Dàwèi, nǐ nǎr bù shūfu?",
+      "meaning": {
+       "en": "David, where does it hurt?",
+       "fr": "David, où as-tu mal ?",
+       "zh": "大卫，你哪儿不舒服？"
+      },
+      "audioText": "大卫，你哪儿不舒服？"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "头疼，晚上睡不好。",
+      "pinyin": "Tóu téng, wǎnshang shuì bu hǎo.",
+      "meaning": {
+       "en": "I have a headache and I can't sleep at night.",
+       "fr": "J'ai mal à la tête et je dors mal la nuit.",
+       "zh": "头疼，晚上睡不好。"
+      },
+      "audioText": "头疼，晚上睡不好。"
+     },
+     {
+      "speaker": "医生",
+      "hanzi": "你太累了。这个药一天吃三次。",
+      "pinyin": "Nǐ tài lèi le. Zhège yào yì tiān chī sān cì.",
+      "meaning": {
+       "en": "You're too tired. Take this medicine three times a day.",
+       "fr": "Tu es trop fatigué. Prends ce médicament trois fois par jour.",
+       "zh": "你太累了。这个药一天吃三次。"
+      },
+      "audioText": "你太累了。这个药一天吃三次。"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "我可以喝咖啡吗？",
+      "pinyin": "Wǒ kěyǐ hē kāfēi ma?",
+      "meaning": {
+       "en": "Can I drink coffee?",
+       "fr": "Je peux boire du café ?",
+       "zh": "我可以喝咖啡吗？"
+      },
+      "audioText": "我可以喝咖啡吗？"
+     },
+     {
+      "speaker": "医生",
+      "hanzi": "别喝了，多喝水，多休息。",
+      "pinyin": "Bié hē le, duō hē shuǐ, duō xiūxi.",
+      "meaning": {
+       "en": "Don't, drink lots of water and rest a lot.",
+       "fr": "Non, bois beaucoup d'eau et repose-toi.",
+       "zh": "别喝了，多喝水，多休息。"
+      },
+      "audioText": "别喝了，多喝水，多休息。"
+     }
+    ]
+   },
+   {
+    "title": {
+     "en": "The teacher's call",
+     "fr": "L'appel du professeur",
+     "zh": "王老师的电话"
+    },
+    "setting": {
+     "en": "In the afternoon Mr Wang calls David.",
+     "fr": "L'après-midi, le professeur Wang appelle David.",
+     "zh": "下午，王老师给大卫打电话。"
+    },
+    "lines": [
+     {
+      "speaker": "王老师",
+      "hanzi": "大卫，身体好点儿了吗？",
+      "pinyin": "Dàwèi, shēntǐ hǎo diǎnr le ma?",
+      "meaning": {
+       "en": "David, are you feeling a bit better?",
+       "fr": "David, tu te sens un peu mieux ?",
+       "zh": "大卫，身体好点儿了吗？"
+      },
+      "audioText": "大卫，身体好点儿了吗？"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "好点儿了，老师。对不起，我没去考试。",
+      "pinyin": "Hǎo diǎnr le, lǎoshī. Duìbuqǐ, wǒ méi qù kǎoshì.",
+      "meaning": {
+       "en": "A bit better, teacher. Sorry I missed the exam.",
+       "fr": "Un peu mieux, professeur. Désolé, je n'ai pas passé l'examen.",
+       "zh": "好点儿了，老师。对不起，我没去考试。"
+      },
+      "audioText": "好点儿了，老师。对不起，我没去考试。"
+     },
+     {
+      "speaker": "王老师",
+      "hanzi": "没关系，下星期你再考。别着急，好好休息。",
+      "pinyin": "Méi guānxi, xià xīngqī nǐ zài kǎo. Bié zháojí, hǎohǎo xiūxi.",
+      "meaning": {
+       "en": "It's fine, you'll take it next week. Don't worry, rest well.",
+       "fr": "Pas grave, tu le passeras la semaine prochaine. Ne t'inquiète pas, repose-toi bien.",
+       "zh": "没关系，下星期你再考。别着急，好好休息。"
+      },
+      "audioText": "没关系，下星期你再考。别着急，好好休息。"
+     }
+    ]
+   }
+  ],
+  "story": [
+   {
+    "hanzi": "今天早上我生病了，头很疼。小明的爸爸说我太累了，让我多休息，别喝咖啡。王老师说下星期我可以再考试。",
+    "pinyin": "Jīntiān zǎoshang wǒ shēngbìng le, tóu hěn téng. Xiǎomíng de bàba shuō wǒ tài lèi le, ràng wǒ duō xiūxi, bié hē kāfēi. Wáng lǎoshī shuō xià xīngqī wǒ kěyǐ zài kǎoshì.",
+    "translation": {
+     "en": "This morning I was ill with a bad headache. Xiaoming's dad said I was too tired, told me to rest a lot and not to drink coffee. Mr Wang said I can take the exam next week.",
+     "fr": "Ce matin, j'étais malade, avec un gros mal de tête. Le père de Xiaoming a dit que j'étais trop fatigué, qu'il fallait me reposer et ne pas boire de café. Le professeur Wang a dit que je pourrai passer l'examen la semaine prochaine.",
+     "zh": "今天早上我生病了，头很疼。小明的爸爸说我太累了，让我多休息，别喝咖啡。王老师说下星期我可以再考试。"
+    }
+   }
+  ]
+ },
+ "lesson-hsk2-14": {
+  "scenes": [
+   {
+    "title": {
+     "en": "Coffee or tea?",
+     "fr": "Café ou thé ?",
+     "zh": "咖啡还是茶？"
+    },
+    "setting": {
+     "en": "David feels better. The friends meet at a café.",
+     "fr": "David va mieux. Les amis se retrouvent dans un café.",
+     "zh": "大卫身体好了，朋友们在咖啡馆见面。"
+    },
+    "lines": [
+     {
+      "speaker": "服务员",
+      "hanzi": "您好，几位？",
+      "pinyin": "Nín hǎo, jǐ wèi?",
+      "meaning": {
+       "en": "Hello, how many?",
+       "fr": "Bonjour, vous êtes combien ?",
+       "zh": "您好，几位？"
+      },
+      "audioText": "您好，几位？"
+     },
+     {
+      "speaker": "小明",
+      "hanzi": "四位。",
+      "pinyin": "Sì wèi.",
+      "meaning": {
+       "en": "Four.",
+       "fr": "Quatre.",
+       "zh": "四位。"
+      },
+      "audioText": "四位。"
+     },
+     {
+      "speaker": "服务员",
+      "hanzi": "你们喝咖啡还是喝茶？",
+      "pinyin": "Nǐmen hē kāfēi háishi hē chá?",
+      "meaning": {
+       "en": "Coffee or tea?",
+       "fr": "Café ou thé ?",
+       "zh": "你们喝咖啡还是喝茶？"
+      },
+      "audioText": "你们喝咖啡还是喝茶？"
+     },
+     {
+      "speaker": "玛丽",
+      "hanzi": "我要一杯咖啡，安娜要奶茶。",
+      "pinyin": "Wǒ yào yì bēi kāfēi, Ānnà yào nǎichá.",
+      "meaning": {
+       "en": "A coffee for me, and Anna wants milk tea.",
+       "fr": "Un café pour moi, et Anna veut un thé au lait.",
+       "zh": "我要一杯咖啡，安娜要奶茶。"
+      },
+      "audioText": "我要一杯咖啡，安娜要奶茶。"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "我要绿茶，医生说别喝咖啡。",
+      "pinyin": "Wǒ yào lǜchá, yīshēng shuō bié hē kāfēi.",
+      "meaning": {
+       "en": "Green tea for me; the doctor said no coffee.",
+       "fr": "Un thé vert pour moi ; le médecin a dit pas de café.",
+       "zh": "我要绿茶，医生说别喝咖啡。"
+      },
+      "audioText": "我要绿茶，医生说别喝咖啡。"
+     }
+    ]
+   },
+   {
+    "title": {
+     "en": "Fish or meat?",
+     "fr": "Poisson ou viande ?",
+     "zh": "鱼还是肉？"
+    },
+    "setting": {
+     "en": "For dinner, they order in a restaurant famous for noodles.",
+     "fr": "Pour le dîner, ils commandent dans un restaurant connu pour ses nouilles.",
+     "zh": "晚上，他们去一个面条很有名的饭馆。"
+    },
+    "lines": [
+     {
+      "speaker": "服务员",
+      "hanzi": "你们要几碗面？",
+      "pinyin": "Nǐmen yào jǐ wǎn miàn?",
+      "meaning": {
+       "en": "How many bowls of noodles?",
+       "fr": "Combien de bols de nouilles ?",
+       "zh": "你们要几碗面？"
+      },
+      "audioText": "你们要几碗面？"
+     },
+     {
+      "speaker": "小明",
+      "hanzi": "四碗。再来一条鱼。",
+      "pinyin": "Sì wǎn. Zài lái yì tiáo yú.",
+      "meaning": {
+       "en": "Four. And a fish as well.",
+       "fr": "Quatre. Et aussi un poisson.",
+       "zh": "四碗。再来一条鱼。"
+      },
+      "audioText": "四碗。再来一条鱼。"
+     },
+     {
+      "speaker": "安娜",
+      "hanzi": "我不吃鱼，有肉吗？",
+      "pinyin": "Wǒ bù chī yú, yǒu ròu ma?",
+      "meaning": {
+       "en": "I don't eat fish. Is there meat?",
+       "fr": "Je ne mange pas de poisson. Il y a de la viande ?",
+       "zh": "我不吃鱼，有肉吗？"
+      },
+      "audioText": "我不吃鱼，有肉吗？"
+     },
+     {
+      "speaker": "服务员",
+      "hanzi": "有，牛肉还是羊肉？",
+      "pinyin": "Yǒu, niúròu háishi yángròu?",
+      "meaning": {
+       "en": "Yes, beef or lamb?",
+       "fr": "Oui, bœuf ou agneau ?",
+       "zh": "有，牛肉还是羊肉？"
+      },
+      "audioText": "有，牛肉还是羊肉？"
+     },
+     {
+      "speaker": "安娜",
+      "hanzi": "牛肉，谢谢。",
+      "pinyin": "Niúròu, xièxie.",
+      "meaning": {
+       "en": "Beef, thanks.",
+       "fr": "Du bœuf, merci.",
+       "zh": "牛肉，谢谢。"
+      },
+      "audioText": "牛肉，谢谢。"
+     }
+    ]
+   },
+   {
+    "title": {
+     "en": "Ten thousand steps",
+     "fr": "Dix mille pas",
+     "zh": "走了一万步"
+    },
+    "setting": {
+     "en": "After dinner they walk back to the university.",
+     "fr": "Après le dîner, ils rentrent à pied à l'université.",
+     "zh": "吃完饭，他们走路回学校。"
+    },
+    "lines": [
+     {
+      "speaker": "玛丽",
+      "hanzi": "我们今天走了多少步？",
+      "pinyin": "Wǒmen jīntiān zǒu le duōshao bù?",
+      "meaning": {
+       "en": "How many steps did we walk today?",
+       "fr": "Combien de pas avons-nous faits aujourd'hui ?",
+       "zh": "我们今天走了多少步？"
+      },
+      "audioText": "我们今天走了多少步？"
+     },
+     {
+      "speaker": "小明",
+      "hanzi": "我看看手机……一万多步！",
+      "pinyin": "Wǒ kànkan shǒujī…… yíwàn duō bù!",
+      "meaning": {
+       "en": "Let me check my phone… over ten thousand!",
+       "fr": "Je regarde mon téléphone… plus de dix mille !",
+       "zh": "我看看手机……一万多步！"
+      },
+      "audioText": "我看看手机……一万多步！"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "太好了，吃了那么多，也要多走走。",
+      "pinyin": "Tài hǎo le, chī le nàme duō, yě yào duō zǒuzou.",
+      "meaning": {
+       "en": "Great; after eating so much, we need to walk.",
+       "fr": "Super, après avoir autant mangé, il faut marcher.",
+       "zh": "太好了，吃了那么多，也要多走走。"
+      },
+      "audioText": "太好了，吃了那么多，也要多走走。"
+     },
+     {
+      "speaker": "安娜",
+      "hanzi": "下次我们还来这个饭馆吧！",
+      "pinyin": "Xià cì wǒmen hái lái zhège fànguǎn ba!",
+      "meaning": {
+       "en": "Let's come back to this restaurant next time!",
+       "fr": "Revenons dans ce restaurant la prochaine fois !",
+       "zh": "下次我们还来这个饭馆吧！"
+      },
+      "audioText": "下次我们还来这个饭馆吧！"
+     }
+    ]
+   }
+  ],
+  "story": [
+   {
+    "hanzi": "今天我们去了咖啡馆，玛丽喝咖啡，安娜喝奶茶，我喝绿茶。晚上我们吃了面条和鱼。回学校的时候，我们走了一万多步。",
+    "pinyin": "Jīntiān wǒmen qù le kāfēiguǎn, Mǎlì hē kāfēi, Ānnà hē nǎichá, wǒ hē lǜchá. Wǎnshang wǒmen chī le miàntiáo hé yú. Huí xuéxiào de shíhou, wǒmen zǒu le yíwàn duō bù.",
+    "translation": {
+     "en": "Today we went to a café: Mary had coffee, Anna milk tea and I had green tea. In the evening we ate noodles and fish. Walking back to the university, we did over ten thousand steps.",
+     "fr": "Aujourd'hui, nous sommes allés au café : Mary a pris un café, Anna un thé au lait et moi un thé vert. Le soir, nous avons mangé des nouilles et du poisson. En rentrant à l'université, nous avons fait plus de dix mille pas.",
+     "zh": "今天我们去了咖啡馆，玛丽喝咖啡，安娜喝奶茶，我喝绿茶。晚上我们吃了面条和鱼。回学校的时候，我们走了一万多步。"
+    }
+   }
+  ]
+ },
+ "lesson-hsk2-16": {
+  "scenes": [
+   {
+    "title": {
+     "en": "You speak so well!",
+     "fr": "Tu parles si bien !",
+     "zh": "你说得真好！"
+    },
+    "setting": {
+     "en": "At a party, a Chinese student talks to David.",
+     "fr": "À une fête, une étudiante chinoise parle avec David.",
+     "zh": "在一个晚会上，一个中国同学和大卫聊天。"
+    },
+    "lines": [
+     {
+      "speaker": "中国同学",
+      "hanzi": "你从哪个国家来？",
+      "pinyin": "Nǐ cóng nǎge guójiā lái?",
+      "meaning": {
+       "en": "Which country are you from?",
+       "fr": "De quel pays viens-tu ?",
+       "zh": "你从哪个国家来？"
+      },
+      "audioText": "你从哪个国家来？"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "我从法国来，来中国一年多了。",
+      "pinyin": "Wǒ cóng Fǎguó lái, lái Zhōngguó yì nián duō le.",
+      "meaning": {
+       "en": "From France; I've been in China for over a year.",
+       "fr": "De France, je suis en Chine depuis plus d'un an.",
+       "zh": "我从法国来，来中国一年多了。"
+      },
+      "audioText": "我从法国来，来中国一年多了。"
+     },
+     {
+      "speaker": "中国同学",
+      "hanzi": "你汉语说得真好！",
+      "pinyin": "Nǐ Hànyǔ shuō de zhēn hǎo!",
+      "meaning": {
+       "en": "Your Chinese is really good!",
+       "fr": "Tu parles vraiment bien chinois !",
+       "zh": "你汉语说得真好！"
+      },
+      "audioText": "你汉语说得真好！"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "哪里哪里，我说得还不太好。",
+      "pinyin": "Nǎlǐ nǎlǐ, wǒ shuō de hái bú tài hǎo.",
+      "meaning": {
+       "en": "Oh, not at all, my Chinese isn't that good yet.",
+       "fr": "Oh non, je ne parle pas encore très bien.",
+       "zh": "哪里哪里，我说得还不太好。"
+      },
+      "audioText": "哪里哪里，我说得还不太好。"
+     }
+    ]
+   },
+   {
+    "title": {
+     "en": "Studying online",
+     "fr": "Étudier en ligne",
+     "zh": "上网学习"
+    },
+    "setting": {
+     "en": "Mary explains how she practises at home.",
+     "fr": "Mary explique comment elle s'entraîne chez elle.",
+     "zh": "玛丽说她在家怎么学习。"
+    },
+    "lines": [
+     {
+      "speaker": "安娜",
+      "hanzi": "玛丽，你汉字写得很快！",
+      "pinyin": "Mǎlì, nǐ Hànzì xiě de hěn kuài!",
+      "meaning": {
+       "en": "Mary, you write characters fast!",
+       "fr": "Mary, tu écris vite les caractères !",
+       "zh": "玛丽，你汉字写得很快！"
+      },
+      "audioText": "玛丽，你汉字写得很快！"
+     },
+     {
+      "speaker": "玛丽",
+      "hanzi": "我每天上网学习，网上有很多好课。",
+      "pinyin": "Wǒ měi tiān shàngwǎng xuéxí, wǎngshang yǒu hěn duō hǎo kè.",
+      "meaning": {
+       "en": "I study online every day; there are lots of good courses online.",
+       "fr": "J'étudie en ligne tous les jours, il y a plein de bons cours sur internet.",
+       "zh": "我每天上网学习，网上有很多好课。"
+      },
+      "audioText": "我每天上网学习，网上有很多好课。"
+     },
+     {
+      "speaker": "安娜",
+      "hanzi": "你学得很认真。",
+      "pinyin": "Nǐ xué de hěn rènzhēn.",
+      "meaning": {
+       "en": "You study very seriously.",
+       "fr": "Tu étudies très sérieusement.",
+       "zh": "你学得很认真。"
+      },
+      "audioText": "你学得很认真。"
+     },
+     {
+      "speaker": "玛丽",
+      "hanzi": "我想下个学期考HSK三级。",
+      "pinyin": "Wǒ xiǎng xià ge xuéqī kǎo HSK sān jí.",
+      "meaning": {
+       "en": "I want to take HSK 3 next term.",
+       "fr": "Je veux passer le HSK 3 le semestre prochain.",
+       "zh": "我想下个学期考HSK三级。"
+      },
+      "audioText": "我想下个学期考HSK三级。"
+     }
+    ]
+   },
+   {
+    "title": {
+     "en": "A call from home",
+     "fr": "Un appel de la maison",
+     "zh": "和家人视频"
+    },
+    "setting": {
+     "en": "In the evening, David opens his laptop to call his family.",
+     "fr": "Le soir, David ouvre son ordinateur pour appeler sa famille.",
+     "zh": "晚上，大卫打开电脑给家里打电话。"
+    },
+    "lines": [
+     {
+      "speaker": "妈妈",
+      "hanzi": "大卫，你最近过得怎么样？",
+      "pinyin": "Dàwèi, nǐ zuìjìn guò de zěnmeyàng?",
+      "meaning": {
+       "en": "David, how have you been lately?",
+       "fr": "David, comment vas-tu ces temps-ci ?",
+       "zh": "大卫，你最近过得怎么样？"
+      },
+      "audioText": "大卫，你最近过得怎么样？"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "很好！我汉语说得越来越好了。",
+      "pinyin": "Hěn hǎo! Wǒ Hànyǔ shuō de yuèláiyuè hǎo le.",
+      "meaning": {
+       "en": "Great! My Chinese is getting better and better.",
+       "fr": "Très bien ! Je parle chinois de mieux en mieux.",
+       "zh": "很好！我汉语说得越来越好了。"
+      },
+      "audioText": "很好！我汉语说得越来越好了。"
+     },
+     {
+      "speaker": "妈妈",
+      "hanzi": "你过年回家吗？",
+      "pinyin": "Nǐ guònián huí jiā ma?",
+      "meaning": {
+       "en": "Are you coming home for Chinese New Year?",
+       "fr": "Tu rentres pour le Nouvel An chinois ?",
+       "zh": "你过年回家吗？"
+      },
+      "audioText": "你过年回家吗？"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "不回去了，小明请我去他家过年。",
+      "pinyin": "Bù huíqu le, Xiǎomíng qǐng wǒ qù tā jiā guònián.",
+      "meaning": {
+       "en": "No, Xiaoming invited me to spend New Year with his family.",
+       "fr": "Non, Xiaoming m'a invité à passer le Nouvel An chez lui.",
+       "zh": "不回去了，小明请我去他家过年。"
+      },
+      "audioText": "不回去了，小明请我去他家过年。"
+     }
+    ]
+   }
+  ],
+  "story": [
+   {
+    "hanzi": "今天晚会上，一个中国同学说我汉语说得很好，我很高兴。玛丽每天上网学习，她学得很认真。晚上我给妈妈打电话，告诉她过年我不回去了。",
+    "pinyin": "Jīntiān wǎnhuì shang, yí ge Zhōngguó tóngxué shuō wǒ Hànyǔ shuō de hěn hǎo, wǒ hěn gāoxìng. Mǎlì měi tiān shàngwǎng xuéxí, tā xué de hěn rènzhēn. Wǎnshang wǒ gěi māma dǎ diànhuà, gàosu tā guònián wǒ bù huíqu le.",
+    "translation": {
+     "en": "At tonight's party, a Chinese student said my Chinese was very good, and I was very happy. Mary studies online every day; she works very seriously. In the evening I called Mum and told her I won't go home for New Year.",
+     "fr": "À la fête ce soir, une étudiante chinoise m'a dit que je parlais très bien chinois, j'étais ravi. Mary étudie en ligne tous les jours, très sérieusement. Le soir, j'ai appelé maman pour lui dire que je ne rentrerai pas pour le Nouvel An.",
+     "zh": "今天晚会上，一个中国同学说我汉语说得很好，我很高兴。玛丽每天上网学习，她学得很认真。晚上我给妈妈打电话，告诉她过年我不回去了。"
+    }
+   }
+  ]
+ },
+ "lesson-hsk2-08": {
+  "scenes": [
+   {
+    "title": {
+     "en": "Come in!",
+     "fr": "Entre !",
+     "zh": "快进来！"
+    },
+    "setting": {
+     "en": "New Year's Eve. David arrives at Xiaoming's home in the snow.",
+     "fr": "Veille du Nouvel An. David arrive chez Xiaoming sous la neige.",
+     "zh": "除夕，大卫来到小明家，外面下着雪。"
+    },
+    "lines": [
+     {
+      "speaker": "小明",
+      "hanzi": "大卫，外面冷，快进来！",
+      "pinyin": "Dàwèi, wàimiàn lěng, kuài jìnlai!",
+      "meaning": {
+       "en": "David, it's cold outside, come in quickly!",
+       "fr": "David, il fait froid dehors, entre vite !",
+       "zh": "大卫，外面冷，快进来！"
+      },
+      "audioText": "大卫，外面冷，快进来！"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "谢谢！叔叔阿姨在家吗？",
+      "pinyin": "Xièxie! Shūshu āyí zài jiā ma?",
+      "meaning": {
+       "en": "Thanks! Are your parents home?",
+       "fr": "Merci ! Tes parents sont là ?",
+       "zh": "谢谢！叔叔阿姨在家吗？"
+      },
+      "audioText": "谢谢！叔叔阿姨在家吗？"
+     },
+     {
+      "speaker": "小明",
+      "hanzi": "在，他们在楼上，我们上去吧。",
+      "pinyin": "Zài, tāmen zài lóushàng, wǒmen shàngqu ba.",
+      "meaning": {
+       "en": "Yes, they're upstairs; let's go up.",
+       "fr": "Oui, ils sont en haut, montons.",
+       "zh": "在，他们在楼上，我们上去吧。"
+      },
+      "audioText": "在，他们在楼上，我们上去吧。"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "好，我把鞋放在这儿。",
+      "pinyin": "Hǎo, wǒ bǎ xié fàng zài zhèr.",
+      "meaning": {
+       "en": "OK, I'll leave my shoes here.",
+       "fr": "D'accord, je laisse mes chaussures ici.",
+       "zh": "好，我把鞋放在这儿。"
+      },
+      "audioText": "好，我把鞋放在这儿。"
+     }
+    ]
+   },
+   {
+    "title": {
+     "en": "Go and get the grandparents",
+     "fr": "Va chercher les grands-parents",
+     "zh": "去接爷爷奶奶"
+    },
+    "setting": {
+     "en": "The grandparents' train has arrived.",
+     "fr": "Le train des grands-parents est arrivé.",
+     "zh": "爷爷奶奶坐火车来北京过年。"
+    },
+    "lines": [
+     {
+      "speaker": "妈妈",
+      "hanzi": "小明，爷爷奶奶到了，你下去接他们吧。",
+      "pinyin": "Xiǎomíng, yéye nǎinai dào le, nǐ xiàqu jiē tāmen ba.",
+      "meaning": {
+       "en": "Xiaoming, Grandpa and Grandma are here; go down and get them.",
+       "fr": "Xiaoming, papi et mamie sont arrivés, descends les chercher.",
+       "zh": "小明，爷爷奶奶到了，你下去接他们吧。"
+      },
+      "audioText": "小明，爷爷奶奶到了，你下去接他们吧。"
+     },
+     {
+      "speaker": "小明",
+      "hanzi": "好！大卫，我们一起下去。",
+      "pinyin": "Hǎo! Dàwèi, wǒmen yìqǐ xiàqu.",
+      "meaning": {
+       "en": "OK! David, let's go down together.",
+       "fr": "D'accord ! David, descendons ensemble.",
+       "zh": "好！大卫，我们一起下去。"
+      },
+      "audioText": "好！大卫，我们一起下去。"
+     },
+     {
+      "speaker": "爷爷",
+      "hanzi": "小明，快过来，帮奶奶拿一下东西。",
+      "pinyin": "Xiǎomíng, kuài guòlai, bāng nǎinai ná yíxià dōngxi.",
+      "meaning": {
+       "en": "Xiaoming, come here, help Grandma with her bags.",
+       "fr": "Xiaoming, viens vite aider mamie à porter ses affaires.",
+       "zh": "小明，快过来，帮奶奶拿一下东西。"
+      },
+      "audioText": "小明，快过来，帮奶奶拿一下东西。"
+     },
+     {
+      "speaker": "小明",
+      "hanzi": "来了！",
+      "pinyin": "Lái le!",
+      "meaning": {
+       "en": "Coming!",
+       "fr": "J'arrive !",
+       "zh": "来了！"
+      },
+      "audioText": "来了！"
+     }
+    ]
+   },
+   {
+    "title": {
+     "en": "Fireworks",
+     "fr": "Les feux d'artifice",
+     "zh": "出去看烟花"
+    },
+    "setting": {
+     "en": "At midnight, everyone goes out to watch the fireworks.",
+     "fr": "À minuit, tout le monde sort voir les feux d'artifice.",
+     "zh": "十二点，大家出去看烟花。"
+    },
+    "lines": [
+     {
+      "speaker": "妹妹",
+      "hanzi": "大卫哥哥，快出来看！",
+      "pinyin": "Dàwèi gēge, kuài chūlai kàn!",
+      "meaning": {
+       "en": "Big brother David, come out and look!",
+       "fr": "Grand frère David, viens vite voir !",
+       "zh": "大卫哥哥，快出来看！"
+      },
+      "audioText": "大卫哥哥，快出来看！"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "真漂亮！",
+      "pinyin": "Zhēn piàoliang!",
+      "meaning": {
+       "en": "Beautiful!",
+       "fr": "C'est magnifique !",
+       "zh": "真漂亮！"
+      },
+      "audioText": "真漂亮！"
+     },
+     {
+      "speaker": "爸爸",
+      "hanzi": "外面太冷了，看完了就回来吧。",
+      "pinyin": "Wàimiàn tài lěng le, kàn wán le jiù huílai ba.",
+      "meaning": {
+       "en": "It's too cold outside; come back in when it's over.",
+       "fr": "Il fait trop froid dehors ; rentrez quand c'est fini.",
+       "zh": "外面太冷了，看完了就回来吧。"
+      },
+      "audioText": "外面太冷了，看完了就回来吧。"
+     },
+     {
+      "speaker": "小明",
+      "hanzi": "好，我们一会儿就回去。",
+      "pinyin": "Hǎo, wǒmen yíhuìr jiù huíqu.",
+      "meaning": {
+       "en": "OK, we'll go back in a minute.",
+       "fr": "D'accord, on rentre dans une minute.",
+       "zh": "好，我们一会儿就回去。"
+      },
+      "audioText": "好，我们一会儿就回去。"
+     }
+    ]
+   }
+  ],
+  "story": [
+   {
+    "hanzi": "除夕那天，我去小明家过年。外面下着雪，小明让我快进去。爷爷奶奶也来了，我们下去接他们。十二点，大家出去看烟花，然后回来吃饺子。",
+    "pinyin": "Chúxī nà tiān, wǒ qù Xiǎomíng jiā guònián. Wàimiàn xià zhe xuě, Xiǎomíng ràng wǒ kuài jìnqu. Yéye nǎinai yě lái le, wǒmen xiàqu jiē tāmen. Shí'èr diǎn, dàjiā chūqu kàn yānhuā, ránhòu huílai chī jiǎozi.",
+    "translation": {
+     "en": "On New Year's Eve, I spent the festival at Xiaoming's home. It was snowing; Xiaoming told me to come in quickly. His grandparents came too, and we went down to meet them. At midnight everyone went out to watch the fireworks, then came back in to eat dumplings.",
+     "fr": "Le soir du réveillon, j'ai fêté le Nouvel An chez Xiaoming. Il neigeait ; Xiaoming m'a dit d'entrer vite. Ses grands-parents sont venus aussi, et nous sommes descendus les chercher. À minuit, tout le monde est sorti voir les feux d'artifice, puis nous sommes rentrés manger des raviolis.",
+     "zh": "除夕那天，我去小明家过年。外面下着雪，小明让我快进去。爷爷奶奶也来了，我们下去接他们。十二点，大家出去看烟花，然后回来吃饺子。"
+    }
+   }
+  ]
+ },
+ "lesson-hsk2-10": {
+  "scenes": [
+   {
+    "title": {
+     "en": "Every year",
+     "fr": "Chaque année",
+     "zh": "每年都这样"
+    },
+    "setting": {
+     "en": "New Year's Day. The family talks about their traditions.",
+     "fr": "Jour du Nouvel An. La famille parle de ses traditions.",
+     "zh": "大年初一，家人说起过年的习惯。"
+    },
+    "lines": [
+     {
+      "speaker": "大卫",
+      "hanzi": "你们每年都一起过年吗？",
+      "pinyin": "Nǐmen měi nián dōu yìqǐ guònián ma?",
+      "meaning": {
+       "en": "Do you spend New Year together every year?",
+       "fr": "Vous fêtez le Nouvel An ensemble chaque année ?",
+       "zh": "你们每年都一起过年吗？"
+      },
+      "audioText": "你们每年都一起过年吗？"
+     },
+     {
+      "speaker": "奶奶",
+      "hanzi": "是啊，每年过年一家人都在一起。",
+      "pinyin": "Shì a, měi nián guònián yì jiārén dōu zài yìqǐ.",
+      "meaning": {
+       "en": "Yes, every year the whole family is together.",
+       "fr": "Oui, chaque année toute la famille est réunie.",
+       "zh": "是啊，每年过年一家人都在一起。"
+      },
+      "audioText": "是啊，每年过年一家人都在一起。"
+     },
+     {
+      "speaker": "小明",
+      "hanzi": "小时候我每年都去爷爷奶奶家过年。",
+      "pinyin": "Xiǎoshíhou wǒ měi nián dōu qù yéye nǎinai jiā guònián.",
+      "meaning": {
+       "en": "When I was little, I went to my grandparents' every year for New Year.",
+       "fr": "Petit, j'allais chez mes grands-parents tous les ans pour le Nouvel An.",
+       "zh": "小时候我每年都去爷爷奶奶家过年。"
+      },
+      "audioText": "小时候我每年都去爷爷奶奶家过年。"
+     },
+     {
+      "speaker": "爷爷",
+      "hanzi": "他从小就喜欢吃奶奶做的饺子。",
+      "pinyin": "Tā cóngxiǎo jiù xǐhuan chī nǎinai zuò de jiǎozi.",
+      "meaning": {
+       "en": "Since he was small, he's loved Grandma's dumplings.",
+       "fr": "Depuis tout petit, il adore les raviolis de sa grand-mère.",
+       "zh": "他从小就喜欢吃奶奶做的饺子。"
+      },
+      "audioText": "他从小就喜欢吃奶奶做的饺子。"
+     }
+    ]
+   },
+   {
+    "title": {
+     "en": "How many times?",
+     "fr": "Combien de fois ?",
+     "zh": "吃了几次饺子？"
+    },
+    "setting": {
+     "en": "At lunch, there are dumplings again.",
+     "fr": "Au déjeuner, encore des raviolis.",
+     "zh": "中午，又吃饺子。"
+    },
+    "lines": [
+     {
+      "speaker": "妹妹",
+      "hanzi": "大卫哥哥，你今天吃了几次饺子？",
+      "pinyin": "Dàwèi gēge, nǐ jīntiān chī le jǐ cì jiǎozi?",
+      "meaning": {
+       "en": "Big brother David, how many times have you eaten dumplings today?",
+       "fr": "Grand frère David, combien de fois as-tu mangé des raviolis aujourd'hui ?",
+       "zh": "大卫哥哥，你今天吃了几次饺子？"
+      },
+      "audioText": "大卫哥哥，你今天吃了几次饺子？"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "已经吃了两次了！",
+      "pinyin": "Yǐjīng chī le liǎng cì le!",
+      "meaning": {
+       "en": "Twice already!",
+       "fr": "Déjà deux fois !",
+       "zh": "已经吃了两次了！"
+      },
+      "audioText": "已经吃了两次了！"
+     },
+     {
+      "speaker": "妈妈",
+      "hanzi": "过年就是这样，一天吃三次也很正常。",
+      "pinyin": "Guònián jiù shì zhèyàng, yì tiān chī sān cì yě hěn zhèngcháng.",
+      "meaning": {
+       "en": "That's New Year: eating them three times a day is normal.",
+       "fr": "C'est ça le Nouvel An : en manger trois fois par jour, c'est normal.",
+       "zh": "过年就是这样，一天吃三次也很正常。"
+      },
+      "audioText": "过年就是这样，一天吃三次也很正常。"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "我很喜欢，可是快要吃不下了。",
+      "pinyin": "Wǒ hěn xǐhuan, kěshì kuàiyào chī bu xià le.",
+      "meaning": {
+       "en": "I love them, but I'm almost too full.",
+       "fr": "J'adore, mais je n'en peux bientôt plus.",
+       "zh": "我很喜欢，可是快要吃不下了。"
+      },
+      "audioText": "我很喜欢，可是快要吃不下了。"
+     }
+    ]
+   },
+   {
+    "title": {
+     "en": "A birthday surprise",
+     "fr": "Un anniversaire surprise",
+     "zh": "生日快乐"
+    },
+    "setting": {
+     "en": "That evening, it's also Grandma's birthday.",
+     "fr": "Ce soir-là, c'est aussi l'anniversaire de la grand-mère.",
+     "zh": "这天晚上也是奶奶的生日。"
+    },
+    "lines": [
+     {
+      "speaker": "小明",
+      "hanzi": "准备好了吗？一会儿奶奶就进来了！",
+      "pinyin": "Zhǔnbèi hǎo le ma? Yíhuìr nǎinai jiù jìnlai le!",
+      "meaning": {
+       "en": "Ready? Grandma's coming in a moment!",
+       "fr": "Vous êtes prêts ? Mamie entre dans un instant !",
+       "zh": "准备好了吗？一会儿奶奶就进来了！"
+      },
+      "audioText": "准备好了吗？一会儿奶奶就进来了！"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "准备好了！",
+      "pinyin": "Zhǔnbèi hǎo le!",
+      "meaning": {
+       "en": "Ready!",
+       "fr": "Prêts !",
+       "zh": "准备好了！"
+      },
+      "audioText": "准备好了！"
+     },
+     {
+      "speaker": "大家",
+      "hanzi": "奶奶，生日快乐！",
+      "pinyin": "Nǎinai, shēngrì kuàilè!",
+      "meaning": {
+       "en": "Happy birthday, Grandma!",
+       "fr": "Joyeux anniversaire, mamie !",
+       "zh": "奶奶，生日快乐！"
+      },
+      "audioText": "奶奶，生日快乐！"
+     },
+     {
+      "speaker": "奶奶",
+      "hanzi": "谢谢！这是我最快乐的生日！",
+      "pinyin": "Xièxie! Zhè shì wǒ zuì kuàilè de shēngrì!",
+      "meaning": {
+       "en": "Thank you! This is my happiest birthday!",
+       "fr": "Merci ! C'est mon plus bel anniversaire !",
+       "zh": "谢谢！这是我最快乐的生日！"
+      },
+      "audioText": "谢谢！这是我最快乐的生日！"
+     }
+    ]
+   }
+  ],
+  "story": [
+   {
+    "hanzi": "在中国，每年过年一家人都要在一起。小明从小就在爷爷奶奶家过年。今天我已经吃了两次饺子了。晚上是奶奶的生日，我们一起说“生日快乐”。",
+    "pinyin": "Zài Zhōngguó, měi nián guònián yì jiārén dōu yào zài yìqǐ. Xiǎomíng cóngxiǎo jiù zài yéye nǎinai jiā guònián. Jīntiān wǒ yǐjīng chī le liǎng cì jiǎozi le. Wǎnshang shì nǎinai de shēngrì, wǒmen yìqǐ shuō \"shēngrì kuàilè\".",
+    "translation": {
+     "en": "In China, the whole family gets together every year for New Year. Since he was small, Xiaoming has spent New Year at his grandparents'. Today I've already eaten dumplings twice. In the evening it was Grandma's birthday, and we all said “Happy birthday”.",
+     "fr": "En Chine, toute la famille se réunit chaque année pour le Nouvel An. Depuis tout petit, Xiaoming le fête chez ses grands-parents. Aujourd'hui, j'ai déjà mangé des raviolis deux fois. Le soir, c'était l'anniversaire de la grand-mère, et nous avons tous dit « Joyeux anniversaire ».",
+     "zh": "在中国，每年过年一家人都要在一起。小明从小就在爷爷奶奶家过年。今天我已经吃了两次饺子了。晚上是奶奶的生日，我们一起说“生日快乐”。"
+    }
+   }
+  ]
+ },
+ "lesson-hsk2-15": {
+  "scenes": [
+   {
+    "title": {
+     "en": "Spring is here",
+     "fr": "Le printemps est là",
+     "zh": "天晴了"
+    },
+    "setting": {
+     "en": "April. After a week of rain, the sun is back.",
+     "fr": "Avril. Après une semaine de pluie, le soleil revient.",
+     "zh": "四月，下了一个星期的雨，天终于晴了。"
+    },
+    "lines": [
+     {
+      "speaker": "安娜",
+      "hanzi": "你们看，天晴了！",
+      "pinyin": "Nǐmen kàn, tiān qíng le!",
+      "meaning": {
+       "en": "Look, it's cleared up!",
+       "fr": "Regardez, le ciel s'est dégagé !",
+       "zh": "你们看，天晴了！"
+      },
+      "audioText": "你们看，天晴了！"
+     },
+     {
+      "speaker": "玛丽",
+      "hanzi": "太好了，我们去公园吧。",
+      "pinyin": "Tài hǎo le, wǒmen qù gōngyuán ba.",
+      "meaning": {
+       "en": "Great, let's go to the park.",
+       "fr": "Super, allons au parc.",
+       "zh": "太好了，我们去公园吧。"
+      },
+      "audioText": "太好了，我们去公园吧。"
+     },
+     {
+      "speaker": "小明",
+      "hanzi": "公园里的花都开了。",
+      "pinyin": "Gōngyuán li de huā dōu kāi le.",
+      "meaning": {
+       "en": "The flowers in the park are all out.",
+       "fr": "Les fleurs du parc sont toutes écloses.",
+       "zh": "公园里的花都开了。"
+      },
+      "audioText": "公园里的花都开了。"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "那我们走吧！",
+      "pinyin": "Nà wǒmen zǒu ba!",
+      "meaning": {
+       "en": "Then let's go!",
+       "fr": "Alors allons-y !",
+       "zh": "那我们走吧！"
+      },
+      "audioText": "那我们走吧！"
+     }
+    ]
+   },
+   {
+    "title": {
+     "en": "In the park",
+     "fr": "Au parc",
+     "zh": "在公园里"
+    },
+    "setting": {
+     "en": "Birds are flying over the lake.",
+     "fr": "Des oiseaux volent au-dessus du lac.",
+     "zh": "湖上有很多鸟在飞。"
+    },
+    "lines": [
+     {
+      "speaker": "玛丽",
+      "hanzi": "你看，那只鸟不动了。",
+      "pinyin": "Nǐ kàn, nà zhī niǎo bú dòng le.",
+      "meaning": {
+       "en": "Look, that bird has stopped moving.",
+       "fr": "Regarde, cet oiseau ne bouge plus.",
+       "zh": "你看，那只鸟不动了。"
+      },
+      "audioText": "你看，那只鸟不动了。"
+     },
+     {
+      "speaker": "小明",
+      "hanzi": "它可能累了。",
+      "pinyin": "Tā kěnéng lèi le.",
+      "meaning": {
+       "en": "Maybe it's tired.",
+       "fr": "Il est peut-être fatigué.",
+       "zh": "它可能累了。"
+      },
+      "audioText": "它可能累了。"
+     },
+     {
+      "speaker": "安娜",
+      "hanzi": "我也累了，我们坐一会儿吧。",
+      "pinyin": "Wǒ yě lèi le, wǒmen zuò yíhuìr ba.",
+      "meaning": {
+       "en": "I'm tired too; let's sit for a while.",
+       "fr": "Moi aussi je suis fatiguée, asseyons-nous un moment.",
+       "zh": "我也累了，我们坐一会儿吧。"
+      },
+      "audioText": "我也累了，我们坐一会儿吧。"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "在这儿看花，真快乐！",
+      "pinyin": "Zài zhèr kàn huā, zhēn kuàilè!",
+      "meaning": {
+       "en": "Looking at the flowers here is so nice!",
+       "fr": "Regarder les fleurs ici, quel bonheur !",
+       "zh": "在这儿看花，真快乐！"
+      },
+      "audioText": "在这儿看花，真快乐！"
+     }
+    ]
+   },
+   {
+    "title": {
+     "en": "Clouds again",
+     "fr": "De nouveau des nuages",
+     "zh": "天阴了"
+    },
+    "setting": {
+     "en": "In the afternoon, the sky turns grey.",
+     "fr": "L'après-midi, le ciel devient gris.",
+     "zh": "下午，天阴了。"
+    },
+    "lines": [
+     {
+      "speaker": "小明",
+      "hanzi": "天阴了，可能要下雨了。",
+      "pinyin": "Tiān yīn le, kěnéng yào xià yǔ le.",
+      "meaning": {
+       "en": "It's clouding over; it might rain.",
+       "fr": "Le ciel se couvre, il va peut-être pleuvoir.",
+       "zh": "天阴了，可能要下雨了。"
+      },
+      "audioText": "天阴了，可能要下雨了。"
+     },
+     {
+      "speaker": "玛丽",
+      "hanzi": "我的伞坏了！",
+      "pinyin": "Wǒ de sǎn huài le!",
+      "meaning": {
+       "en": "My umbrella is broken!",
+       "fr": "Mon parapluie est cassé !",
+       "zh": "我的伞坏了！"
+      },
+      "audioText": "我的伞坏了！"
+     },
+     {
+      "speaker": "大卫",
+      "hanzi": "没关系，我们回去吧。",
+      "pinyin": "Méi guānxi, wǒmen huíqu ba.",
+      "meaning": {
+       "en": "Never mind, let's go back.",
+       "fr": "Pas grave, rentrons.",
+       "zh": "没关系，我们回去吧。"
+      },
+      "audioText": "没关系，我们回去吧。"
+     },
+     {
+      "speaker": "安娜",
+      "hanzi": "今天虽然没去很远的地方，但是很有意思。",
+      "pinyin": "Jīntiān suīrán méi qù hěn yuǎn de dìfang, dànshì hěn yǒu yìsi.",
+      "meaning": {
+       "en": "We didn't go far today, but it was great fun.",
+       "fr": "On n'est pas allés loin aujourd'hui, mais c'était très sympa.",
+       "zh": "今天虽然没去很远的地方，但是很有意思。"
+      },
+      "audioText": "今天虽然没去很远的地方，但是很有意思。"
+     }
+    ]
+   }
+  ],
+  "story": [
+   {
+    "hanzi": "春天来了。下了一个星期的雨，今天天晴了，我们去公园看花。湖上有很多鸟在飞。下午天阴了，我们就回去了。在中国的第二年，我很快乐。",
+    "pinyin": "Chūntiān lái le. Xià le yí ge xīngqī de yǔ, jīntiān tiān qíng le, wǒmen qù gōngyuán kàn huā. Hú shang yǒu hěn duō niǎo zài fēi. Xiàwǔ tiān yīn le, wǒmen jiù huíqu le. Zài Zhōngguó de dì èr nián, wǒ hěn kuàilè.",
+    "translation": {
+     "en": "Spring has come. After a week of rain, today it cleared up and we went to the park to see the flowers. Lots of birds were flying over the lake. In the afternoon it clouded over, so we went back. In my second year in China, I'm very happy.",
+     "fr": "Le printemps est arrivé. Après une semaine de pluie, le ciel s'est dégagé aujourd'hui et nous sommes allés voir les fleurs au parc. Beaucoup d'oiseaux volaient au-dessus du lac. L'après-midi, le ciel s'est couvert, alors nous sommes rentrés. Pour ma deuxième année en Chine, je suis très heureux.",
+     "zh": "春天来了。下了一个星期的雨，今天天晴了，我们去公园看花。湖上有很多鸟在飞。下午天阴了，我们就回去了。在中国的第二年，我很快乐。"
+    }
+   }
+  ]
  }
 };
