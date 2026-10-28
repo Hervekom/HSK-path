@@ -3,7 +3,9 @@
 // their MP3 file; anything else uses the browser's Chinese voice, which many devices lack.
 import CLIPS from '../data/audioClips.json';
 
-const RECORDED = CLIPS as Record<string, string>;
+// Recordings known so far. Large sets (the lesson stories) are added when they are loaded.
+// A list of files (a whole scene) is played in order.
+const RECORDED: Record<string, string | string[]> = { ...(CLIPS as Record<string, string>) };
 
 class ChineseAudioEngine {
   private isSpeaking = false;
@@ -18,6 +20,11 @@ class ChineseAudioEngine {
     this.pendingEnd = null;
     this.isSpeaking = false;
     cb?.();
+  }
+
+  /** Adds recorded files ({ exact text: file }) loaded later, e.g. a lesson's story audio. */
+  public addRecordings(map: Record<string, string | string[]>): void {
+    Object.assign(RECORDED, map);
   }
 
   /** True when this text has a recorded file. */
@@ -36,28 +43,35 @@ class ChineseAudioEngine {
     // Stop any ongoing speech
     this.stop();
 
-    const file = RECORDED[text.trim()];
+    const rec = RECORDED[text.trim()];
     this.pendingEnd = onEnd || null;
-    if (file) {
-      if (!this.player) this.player = new Audio();
-      const player = this.player;
-      player.src = file;
-      player.playbackRate = rate;
-      (player as any).preservesPitch = true;
-      player.onended = () => this.finish();
-      player.onerror = () => {
-        player.onerror = null;
-        this.speakWithBrowser(text, rate);
-      };
+    if (rec) {
       this.isSpeaking = true;
-      player.play().catch((err) => {
-        if (err?.name === 'AbortError') return; // replaced by a newer play
-        if (err?.name === 'NotAllowedError') this.finish();
-        else this.speakWithBrowser(text, rate);
-      });
+      this.playFiles(Array.isArray(rec) ? rec : [rec], 0, text, rate);
       return;
     }
     this.speakWithBrowser(text, rate);
+  }
+
+  private playFiles(files: string[], index: number, text: string, rate: number): void {
+    if (!this.player) this.player = new Audio();
+    const player = this.player;
+    player.src = files[index];
+    player.playbackRate = rate;
+    (player as any).preservesPitch = true;
+    player.onended = () => {
+      if (index + 1 < files.length) this.playFiles(files, index + 1, text, rate);
+      else this.finish();
+    };
+    player.onerror = () => {
+      player.onerror = null;
+      this.speakWithBrowser(text, rate);
+    };
+    player.play().catch((err) => {
+      if (err?.name === 'AbortError') return; // replaced by a newer play
+      if (err?.name === 'NotAllowedError') this.finish();
+      else this.speakWithBrowser(text, rate);
+    });
   }
 
   private speakWithBrowser(text: string, rate: number): void {

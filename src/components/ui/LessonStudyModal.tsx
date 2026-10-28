@@ -6,6 +6,7 @@ import { Badge } from './Badge';
 import { SpeechButton } from './SpeechButton';
 import { BookOpen, MessageSquare, Award, CheckCircle2, XCircle, ArrowRight, Lightbulb, Volume2, PenTool, Globe, Target, Sparkles } from '../icons';
 import type { HskLesson } from '../../types';
+import { audioEngine } from '../../utils/audio';
 import { isSyllabusWord, type CoreLevel } from '../../data/hskWordCounts';
 import { useI18n } from '../../locales';
 
@@ -40,7 +41,11 @@ export const LessonStudyModal: React.FC<LessonStudyModalProps> = ({
   useEffect(() => {
     if (!lesson?.hasStory || story?.id === lesson.id) return;
     let alive = true;
-    import('../../data/lessonScenes').then((m) => {
+    Promise.all([
+      import('../../data/lessonScenes'),
+      // Recorded voices for the scenes and readings (falls back to the browser voice without them).
+      import('../../data/lessonAudio.json').then((a) => audioEngine.addRecordings(a.default as Record<string, string>)).catch(() => undefined),
+    ]).then(([m]) => {
       if (alive) setStory({ id: lesson.id, ...m.LESSON_SCENES[lesson.id] });
     });
     return () => {
