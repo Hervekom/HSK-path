@@ -900,7 +900,9 @@ const COURSE: Record<HskLesson['level'], { order: string[]; extras: Record<strin
 const withScenes = (l: HskLesson): HskLesson => {
   const sc = LESSON_SCENES[l.id];
   if (!sc?.scenes?.length) return l;
-  return { ...l, scenes: sc.scenes, story: sc.story, dialogue: sc.scenes.flatMap((s) => s.lines) };
+  // Generic “Learn …” blurbs of the thematic lessons give way to the opening of the story.
+  const description = l.description.en.startsWith('Learn ') ? sc.scenes[0].setting : l.description;
+  return { ...l, description, scenes: sc.scenes, story: sc.story, dialogue: sc.scenes.flatMap((s) => s.lines) };
 };
 
 const applyCourse = (level: HskLesson['level'], lessons: HskLesson[]): HskLesson[] => {
