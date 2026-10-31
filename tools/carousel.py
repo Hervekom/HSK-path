@@ -175,8 +175,12 @@ class Deck:
         self.slides.append(("rule", dict(kicker=kicker, title=title, label=label, rows=rows, note=note)))
     def checklist(self, kicker, title, items):
         self.slides.append(("checklist", dict(kicker=kicker, title=title, items=items)))
-    def recap(self, bad, good_title, items, cta):
-        self.slides.append(("recap", dict(bad=bad, good_title=good_title, items=items, cta=cta)))
+    def recap(self, bad, good_title, items, cta, url=None, share=None):
+        """url / share (optionnels) : ligne « Practice free → url » et ligne de partage sous le CTA."""
+        self.slides.append(("recap", dict(bad=bad, good_title=good_title, items=items, cta=cta, url=url, share=share)))
+    def quiz(self, kicker, title, options, note=None):
+        """Question à choix multiple : options = ["bù yào", "bú yào", ...] (lettres A, B, C ajoutées)."""
+        self.slides.append(("quiz", dict(kicker=kicker, title=title, options=options, note=note)))
 
     def _render(self, idx, kind, a, W, H):
         im, d, y = self._frame(idx, W, H)
@@ -199,14 +203,14 @@ class Deck:
                 d.text(((pill[0] + pill[2]) / 2, py + 13), "Swipe  →", font=font("semi", 36), fill=INK, anchor="ms")
         elif kind == "rule":
             y = self._headline(d, y + 40, a["kicker"], a["title"], W, 96)
-            n = len(a["rows"]); rh = 140
+            n = len(a["rows"]); rh = 140 if n <= 3 else 118
             top = y + 80 if a["note"] else max(y + 90, int(H * 0.40))
             box = (80, top, W - 80, top + 90 + n * rh)
             self._card(im, box)
             d = ImageDraw.Draw(im)
             d.text((130, box[1] + 70), a["label"], font=font("semi", 32), fill=GREY, anchor="ls")
             for i, (hz, py_, mean) in enumerate(a["rows"]):
-                base = box[1] + 90 + rh * i + 100
+                base = box[1] + 90 + rh * i + (100 if rh == 140 else 86)
                 w = draw_text(d, (130, base), hz, "bold", 76, INK, cjk_kind="cjk")
                 d.text((130 + w + 36, base - 8), py_, font=font("bold", 50), fill=RED, anchor="ls")
                 d.text((W - 130, base - 8), mean, font=font("med", 36), fill=GREY, anchor="rs")
@@ -225,14 +229,30 @@ class Deck:
                 self._check(d, 150, cy)
                 draw_text(d, (200, cy + 16), it, "semi", 44, INK)
                 if i < n - 1: d.line((200, box[1] + 20 + rh * (i + 1), W - 120, box[1] + 20 + rh * (i + 1)), fill=LINE, width=2)
+        elif kind == "quiz":
+            y = self._headline(d, y + 40, a["kicker"], a["title"], W, 96)
+            n = len(a["options"]); rh = 130
+            top = max(y + 90, int(H * 0.40))
+            box = (80, top, W - 80, top + 40 + n * rh)
+            self._card(im, box)
+            d = ImageDraw.Draw(im)
+            for i, opt in enumerate(a["options"]):
+                cy = box[1] + 20 + rh * i + rh / 2
+                d.ellipse((126, cy - 32, 190, cy + 32), outline=RED, width=5)
+                d.text((158, cy + 14), "ABCDE"[i], font=font("bold", 38), fill=RED, anchor="ms")
+                draw_text(d, (225, cy + 18), opt, "semi", 50, INK)
+                if i < n - 1: d.line((225, box[1] + 20 + rh * (i + 1), W - 120, box[1] + 20 + rh * (i + 1)), fill=LINE, width=2)
+            if a["note"]:
+                draw_text(d, (80, box[3] + 72), a["note"], "med", 34, GREY)
         elif kind == "recap":
+            compact = bool(a.get("url") or a.get("share"))
             bad = (80, y + 30, W - 80, y + 200)
             self._card(im, bad, radius=36)
             d = ImageDraw.Draw(im)
             d.text((130, bad[1] + 66), "Bad:", font=font("semi", 36), fill=GREY, anchor="ls")
             w = draw_text(d, (130, bad[1] + 138), a["bad"], "bold", 48, (150, 150, 150))
             d.line((130, bad[1] + 122, 130 + w, bad[1] + 122), fill=(150, 150, 150), width=4)
-            n = len(a["items"]); rh = 112
+            n = len(a["items"]); rh = 96 if compact else 112
             good = (80, bad[3] + 50, W - 80, bad[3] + 50 + 140 + n * rh)
             self._card(im, good)
             d = ImageDraw.Draw(im)
@@ -241,11 +261,21 @@ class Deck:
                 cy = good[1] + 140 + rh * i + rh / 2
                 self._check(d, 155, cy)
                 draw_text(d, (205, cy + 16), it, "semi", 42, INK)
-            cy = good[3] + 95
+            cy = good[3] + (80 if compact else 95)
             d.text((W / 2 + 24, cy), a["cta"], font=font("bold", 40), fill=INK, anchor="ms")
             tw = d.textlength(a["cta"], font=font("bold", 40))
             bx = W / 2 + 24 - tw / 2 - 52
             d.polygon([(bx, cy - 34), (bx + 26, cy - 34), (bx + 26, cy + 2), (bx + 13, cy - 10), (bx, cy + 2)], outline=INK, width=4)
+            if a.get("url"):
+                cy += 56
+                t1, t2 = "Practice free → ", a["url"]
+                w1 = d.textlength(t1, font=font("semi", 36)); w2 = d.textlength(t2, font=font("bold", 36))
+                x = W / 2 - (w1 + w2) / 2
+                d.text((x, cy), t1, font=font("semi", 36), fill=GREY, anchor="ls")
+                d.text((x + w1, cy), t2, font=font("bold", 36), fill=RED, anchor="ls")
+            if a.get("share"):
+                cy += 46
+                d.text((W / 2, cy), a["share"], font=font("med", 32), fill=GREY, anchor="ms")
         return im
 
     def save(self, outdir, name, fmt="png", size=(1080, 1350)):

@@ -4,7 +4,8 @@
 
 - Format Instagram / Facebook : `size=(1080,1350)`, `fmt="png"`
 - Format TikTok : `size=(1080,1920)`, `fmt="jpg"` (TikTok refuse le PNG) — marges hautes/basses déjà gérées
-- Types de slides : `cover`, `rule` (exemples 汉字 / pinyin / sens), `checklist`, `recap` (Bad / Good + « Save this »)
+- Types de slides : `cover`, `rule` (exemples 汉字 / pinyin / sens ; 4 lignes max), `checklist`, `quiz` (question + options A/B/C), `recap` (Bad / Good + « Save this » ; paramètres optionnels `url=` → « Practice free → … » et `share=` → ligne de partage)
+- Exemple quiz : `2026-11-01/carousel-week1-review-*.png`
 - Dans les titres, `*mot*` = mot en rouge. Exemple complet : voir `2026-10-31/carousel-tone-rules-*.png`.
 
 # Générateur de Reels / TikTok vidéo
