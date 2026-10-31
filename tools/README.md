@@ -13,3 +13,9 @@
 captures de l'app dans un téléphone incliné en perspective, zoom + défilement lent, pastille de légende « • … » en bas,
 fondus, puis carte de fin (logo 道, « HSK Path », slogan noir + ligne rouge, bouton, URL). Musique douce générée (libre de droits).
 Captures de l'app (mode démo, 1170×2532) : `assets/app-screens/*.png`. Rendu ≈ 2-3 min.
+
+# Format TikTok « Guess the word » (le plus performant)
+
+`guess.py` → `make_guess(word, pinyin, meaning, ex_zh, ex_py, ex_en, out_prefix, level)` : 3 slides verticales JPEG
+fond noir (accroche « Guess this HSK 1 word » + gros caractère / réponse + exemple / « Follow @hskpath » + URL).
+C'est le format du 1er TikTok (欢迎) : 613 vues et 28 j'aime en ~16 h pour un compte neuf. Publié chaque nuit vers 2h57 (Shanghai).
