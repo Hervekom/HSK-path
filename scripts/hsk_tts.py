@@ -34,14 +34,14 @@ def spoken_form(text: str) -> str:
     return text
 
 
-def load_tts(models: str):
+def load_tts(models: str, extra_lexicons: tuple = ()):
     d = os.path.join(models, 'kokoro-multi-lang-v1_0') + '/'
     cfg = sherpa_onnx.OfflineTtsConfig(
         model=sherpa_onnx.OfflineTtsModelConfig(
             kokoro=sherpa_onnx.OfflineTtsKokoroModelConfig(
                 model=d + 'model.onnx', voices=d + 'voices.bin', tokens=d + 'tokens.txt',
                 data_dir=d + 'espeak-ng-data', dict_dir=d + 'dict',
-                lexicon=d + 'lexicon-us-en.txt,' + d + 'lexicon-zh.txt'),
+                lexicon=','.join([d + 'lexicon-us-en.txt', d + 'lexicon-zh.txt', *extra_lexicons])),
             num_threads=os.cpu_count() or 2),
         rule_fsts=d + 'date-zh.fst,' + d + 'phone-zh.fst,' + d + 'number-zh.fst',
         max_num_sentences=1)

@@ -1,6 +1,6 @@
 import React from 'react';
 import { tr } from '../locales/tr';
-import { Sparkles, Headphones, FileText, Layers, PenTool, BookOpen, ArrowRight, Clock, Flame, Award, Play } from '../components/icons';
+import { Sparkles, Headphones, FileText, Layers, PenTool, BookOpen, ArrowRight, Clock, Flame, Award, Play, Microphone } from '../components/icons';
 import { useI18n } from '../locales';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
@@ -105,6 +105,31 @@ export const PracticeHubView: React.FC<PracticeHubViewProps> = ({
 
       {/* Categorized Practice Drills Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        {/* 0. Pronunciation */}
+        <Card
+          variant="interactive"
+          onClick={() => onNavigate('pronunciation')}
+          className="p-6 space-y-4 flex flex-col justify-between hover:border-slate-300"
+        >
+          <div className="space-y-3">
+            <div className="w-11 h-11 rounded-xl bg-[#C52828] text-white flex items-center justify-center">
+              <Microphone className="w-6 h-6" />
+            </div>
+            <h3 className="text-lg font-bold text-slate-900">{tr('Pronunciation')}</h3>
+            <p className="text-xs text-slate-600 leading-relaxed">
+              {tr('Train your ear and your voice: the four tones, every HSK word and the lesson dialogues, with your melody compared with the model.')}
+            </p>
+          </div>
+          <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#C52828]">
+            <span className="flex items-center gap-1 text-slate-500 font-normal">
+              <Clock className="w-3 h-3" />{" "}{tr("~5 min session")}
+            </span>
+            <span className="flex items-center gap-1">
+              {tr('Speak')}{" "}<ArrowRight className="w-3.5 h-3.5" />
+            </span>
+          </div>
+        </Card>
+
         {/* 1. Listening Practice */}
         <Card
           variant="interactive"

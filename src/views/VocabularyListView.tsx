@@ -28,6 +28,7 @@ import { Badge } from '../components/ui/Badge';
 import { Button } from '../components/ui/Button';
 import { SpeechButton } from '../components/ui/SpeechButton';
 import { VocabularyDetailModal } from './VocabularyDetailModal';
+import { focusWord } from '../utils/pronProgress';
 import {
   loadSRSState,
   saveSRSState,
@@ -735,6 +736,14 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
         onClose={() => setActiveWordModal(null)}
         onToggleLearned={onToggleLearned}
         onToggleFavorite={onToggleFavorite}
+        onPractise={
+          onNavigate
+            ? (w) => {
+                focusWord(w.hanzi, w.pinyin);
+                onNavigate('pronunciation');
+              }
+            : undefined
+        }
       />
     </div>
   );

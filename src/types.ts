@@ -315,6 +315,7 @@ export interface AppState {
     | 'hsk3-exam'
     | 'practice-hub' 
     | 'tutor' 
+    | 'pronunciation'
     | 'quiz' 
     | 'listening-practice' 
     | 'reading-practice' 

@@ -2,11 +2,13 @@
 import { LAOSHI_STRINGS } from './laoshiStrings';
 import { NAV_STRINGS } from './navStrings';
 import { APP_STRINGS } from './appStrings';
+import { PRON_STRINGS } from './pronStrings';
 
 export const UI_STRINGS: Record<string, { fr?: string; zh?: string }> = {
   ...LAOSHI_STRINGS,
   ...NAV_STRINGS,
   ...APP_STRINGS,
+  ...PRON_STRINGS,
   "Student": { fr: "Élève", zh: "学员" },
   "Welcome back! Ready for today's study session.": { fr: "Bon retour ! Prêt pour la séance du jour ?", zh: "欢迎回来！准备好今天的学习了吗？" },
   "Demo mode — progress is not saved.": { fr: "Mode démo : la progression n'est pas enregistrée.", zh: "演示模式：学习进度不会保存。" },

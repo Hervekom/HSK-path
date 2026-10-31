@@ -85,6 +85,10 @@ import {
   DownloadSimple as PhDownloadSimple,
   Export as PhExport,
   XCircle as PhXCircle,
+  Microphone as PhMicrophone,
+  Stop as PhStop,
+  Ear as PhEar,
+  Waveform as PhWaveform,
 } from '@phosphor-icons/react';
 
 export type AppIconProps = IconProps & { strokeWidth?: number | string };
@@ -188,3 +192,7 @@ export const House = make(PhHouse, 'House');
 export const ChatCircleText = make(PhChatCircleText, 'ChatCircleText');
 export const Siren = make(PhSiren, 'Siren');
 export const ChatsCircle = make(PhChatsCircle, 'ChatsCircle');
+export const Microphone = make(PhMicrophone, 'Microphone');
+export const Stop = make(PhStop, 'Stop');
+export const Ear = make(PhEar, 'Ear');
+export const Waveform = make(PhWaveform, 'Waveform');

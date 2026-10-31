@@ -8,6 +8,7 @@ import {
   Sparkles,
   Layers,
   X,
+  Microphone,
 } from '../components/icons';
 import { useI18n } from '../locales';
 import { Modal } from '../components/ui/Modal';
@@ -22,6 +23,8 @@ interface VocabularyDetailModalProps {
   onClose: () => void;
   onToggleLearned: (id: string) => void;
   onToggleFavorite: (id: string) => void;
+  /** Opens the Pronunciation page on this word. */
+  onPractise?: (word: VocabularyWord) => void;
 }
 
 export const VocabularyDetailModal: React.FC<VocabularyDetailModalProps> = ({
@@ -30,6 +33,7 @@ export const VocabularyDetailModal: React.FC<VocabularyDetailModalProps> = ({
   onClose,
   onToggleLearned,
   onToggleFavorite,
+  onPractise,
 }) => {
   const { t, getLocalized } = useI18n();
 
@@ -81,7 +85,7 @@ export const VocabularyDetailModal: React.FC<VocabularyDetailModalProps> = ({
           <div className="text-base font-semibold text-rose-800">
             {getLocalized(word.meaning)}
           </div>
-          <div className="pt-2 flex justify-center">
+          <div className="pt-2 flex flex-wrap items-center justify-center gap-2">
             <SpeechButton
               text={word.hanzi}
               size="md"
@@ -89,6 +93,16 @@ export const VocabularyDetailModal: React.FC<VocabularyDetailModalProps> = ({
               label={tr("Listen Pronunciation")}
               allowSpeedToggle
             />
+            {onPractise && (
+              <button
+                type="button"
+                onClick={() => onPractise(word)}
+                className="inline-flex items-center gap-1.5 p-2 px-3 text-xs font-semibold rounded-xl border border-[#E2D9CC] bg-white text-stone-700 hover:bg-[#FAF8F5] hover:text-[#C52828] cursor-pointer"
+              >
+                <Microphone className="w-4 h-4 text-stone-500" />
+                {tr('Practise saying it')}
+              </button>
+            )}
           </div>
         </div>
 

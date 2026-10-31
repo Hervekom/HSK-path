@@ -23,8 +23,24 @@ class ChineseAudioEngine {
   }
 
   /** Adds recorded files ({ exact text: file }) loaded later, e.g. a lesson's story audio. */
-  public addRecordings(map: Record<string, string | string[]>): void {
-    Object.assign(RECORDED, map);
+  public addRecordings(map: Record<string, string | string[]>, overwrite = true): void {
+    if (overwrite) Object.assign(RECORDED, map);
+    else for (const [k, v] of Object.entries(map)) if (!RECORDED[k]) RECORDED[k] = v;
+  }
+
+  /** Plays given files in order (no text lookup), e.g. one reading of a polyphone. */
+  public playFiles(files: string | string[], rate: number = 1.0, onEnd?: () => void): void {
+    if (typeof window === 'undefined') return;
+    this.stop();
+    const list = Array.isArray(files) ? files : [files];
+    this.pendingEnd = onEnd || null;
+    this.isSpeaking = true;
+    this.playList(list, 0, '', rate);
+  }
+
+  /** Recorded file(s) for a text, if any. */
+  public recordingFor(text: string): string | string[] | undefined {
+    return RECORDED[text.trim()];
   }
 
   /** True when this text has a recorded file. */
@@ -47,29 +63,30 @@ class ChineseAudioEngine {
     this.pendingEnd = onEnd || null;
     if (rec) {
       this.isSpeaking = true;
-      this.playFiles(Array.isArray(rec) ? rec : [rec], 0, text, rate);
+      this.playList(Array.isArray(rec) ? rec : [rec], 0, text, rate);
       return;
     }
     this.speakWithBrowser(text, rate);
   }
 
-  private playFiles(files: string[], index: number, text: string, rate: number): void {
+  private playList(files: string[], index: number, text: string, rate: number): void {
     if (!this.player) this.player = new Audio();
     const player = this.player;
     player.src = files[index];
     player.playbackRate = rate;
     (player as any).preservesPitch = true;
     player.onended = () => {
-      if (index + 1 < files.length) this.playFiles(files, index + 1, text, rate);
+      if (index + 1 < files.length) this.playList(files, index + 1, text, rate);
       else this.finish();
     };
     player.onerror = () => {
       player.onerror = null;
-      this.speakWithBrowser(text, rate);
+      if (text) this.speakWithBrowser(text, rate);
+      else this.finish();
     };
     player.play().catch((err) => {
       if (err?.name === 'AbortError') return; // replaced by a newer play
-      if (err?.name === 'NotAllowedError') this.finish();
+      if (err?.name === 'NotAllowedError' || !text) this.finish();
       else this.speakWithBrowser(text, rate);
     });
   }

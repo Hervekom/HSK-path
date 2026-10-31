@@ -12,6 +12,7 @@ import {
   TrendingUp,
   Settings,
   Shield,
+  Microphone,
 } from '../icons';
 import type { AppState } from '../../types';
 
@@ -62,6 +63,7 @@ export const NAV_SECTIONS: NavSection[] = [
         icon: Sparkles,
         views: ['practice-hub', 'quiz', 'listening-practice', 'reading-practice', 'writing-practice'],
       },
+      { id: 'pronunciation', label: 'Pronunciation', icon: Microphone, views: ['pronunciation'] },
       { id: 'tutor', labelKey: 'nav.tutor', icon: ChatCircleText, views: ['tutor'] },
       {
         id: 'mock-tests',
@@ -105,7 +107,7 @@ const viewsOf = (...ids: View[]) =>
 export const MOBILE_TABS: TabItem[] = [
   { id: 'dashboard', labelKey: 'navShort.home', icon: LayoutDashboard, views: viewsOf('dashboard', 'progress', 'profile', 'admin') },
   { id: 'tutor', label: 'Laoshi', icon: ChatCircleText, views: ['tutor'] },
-  { id: 'practice-hub', label: 'Exercises', icon: Sparkles, views: viewsOf('practice-hub') },
+  { id: 'practice-hub', label: 'Exercises', icon: Sparkles, views: viewsOf('practice-hub', 'pronunciation') },
   { id: 'vocabulary', labelKey: 'navShort.vocab', icon: BookOpen, views: viewsOf('vocabulary', 'phrases') },
   { id: 'mock-tests', labelKey: 'navShort.exams', icon: FileCheck, views: viewsOf('mock-tests') },
 ];

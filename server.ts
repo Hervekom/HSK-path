@@ -3,6 +3,7 @@ import path from 'path';
 import { createServer as createViteServer } from 'vite';
 import { getDailyChinese } from './server/dailyChinese';
 import { handleTutor } from './server/tutorHandler';
+import { handlePronounce } from './server/pronounceHandler';
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -10,7 +11,7 @@ dotenv.config();
 const app = express();
 const PORT = Number(process.env.PORT) || 3000;
 
-app.use(express.json());
+app.use(express.json({ limit: '2mb' }));
 
 // Health endpoint
 app.get('/api/health', (req, res) => {
@@ -29,6 +30,13 @@ app.all('/api/daily-chinese', async (req, res) => {
 app.post('/api/tutor', async (req, res) => {
   res.setHeader('Cache-Control', 'no-store');
   const result = await handleTutor(req.body, req.headers);
+  res.status(result.status).json(result.body);
+});
+
+// API endpoint: transcription of a learner's recording (Pronunciation page)
+app.post('/api/pronounce', async (req, res) => {
+  res.setHeader('Cache-Control', 'no-store');
+  const result = await handlePronounce(req.body, req.headers);
   res.status(result.status).json(result.body);
 });
 
