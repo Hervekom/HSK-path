@@ -27,8 +27,64 @@ interface Row {
   is_pro?: boolean | null;
 }
 
-export async function loadProgress(userId: string): Promise<StoredProgress | null> {
-  if (!supabase) return null;
+// A copy of the progress stays on the device, so the installed app works offline:
+// - loaded when the database can't be reached;
+// - every save writes it first; a save that fails offline is marked "pending" and sent
+//   once the connection is back (and wins over the older copy in the database).
+const cacheKey = (userId: string) => `hskpath_progress_${userId}`;
+const pendingKey = (userId: string) => `hskpath_progress_pending_${userId}`;
+
+function readCache(userId: string): StoredProgress | null {
+  try {
+    const raw = localStorage.getItem(cacheKey(userId));
+    return raw ? (JSON.parse(raw) as StoredProgress) : null;
+  } catch {
+    return null;
+  }
+}
+
+function writeCache(userId: string, p: StoredProgress) {
+  try {
+    localStorage.setItem(cacheKey(userId), JSON.stringify(p));
+  } catch {
+    // storage full or blocked: the database copy still works online
+  }
+}
+
+export function hasPendingProgress(userId: string): boolean {
+  try {
+    return localStorage.getItem(pendingKey(userId)) === '1';
+  } catch {
+    return false;
+  }
+}
+
+function setPending(userId: string, on: boolean) {
+  try {
+    if (on) localStorage.setItem(pendingKey(userId), '1');
+    else localStorage.removeItem(pendingKey(userId));
+  } catch {
+    // ignore
+  }
+}
+
+export interface LoadResult {
+  /** null: no progress saved yet (new student), or offline with nothing on this device. */
+  progress: StoredProgress | null;
+  /** True when the database could not be reached. */
+  offline: boolean;
+}
+
+export async function loadProgress(userId: string): Promise<LoadResult> {
+  const cached = readCache(userId);
+  if (!supabase) return { progress: cached, offline: false };
+  // Changes made offline that never reached the database are newer than its copy.
+  if (cached && hasPendingProgress(userId)) {
+    if (typeof navigator !== 'undefined' && navigator.onLine === false) return { progress: cached, offline: true };
+    const { data } = await supabase.from('user_progress').select('is_pro').eq('user_id', userId).maybeSingle<{ is_pro: boolean | null }>();
+    return { progress: data ? { ...cached, isPro: Boolean(data.is_pro) } : cached, offline: !data };
+  }
+  if (typeof navigator !== 'undefined' && navigator.onLine === false) return { progress: cached, offline: true };
   const { data, error } = await supabase
     .from('user_progress')
     .select('*')
@@ -36,10 +92,10 @@ export async function loadProgress(userId: string): Promise<StoredProgress | nul
     .maybeSingle<Row>();
   if (error) {
     console.warn('loadProgress failed', error);
-    return null;
+    return { progress: cached, offline: true };
   }
-  if (!data) return null;
-  return {
+  if (!data) return { progress: null, offline: false };
+  const progress: StoredProgress = {
     profile: data.profile || {},
     learnedIds: data.learned_ids || [],
     favoriteIds: data.favorite_ids || [],
@@ -50,10 +106,18 @@ export async function loadProgress(userId: string): Promise<StoredProgress | nul
     srs: data.srs,
     isPro: Boolean(data.is_pro),
   };
+  writeCache(userId, progress);
+  return { progress, offline: false };
 }
 
-export async function saveProgress(userId: string, p: StoredProgress): Promise<void> {
-  if (!supabase) return;
+/** Saves on the device, then in the database. Returns false when the database could not be reached. */
+export async function saveProgress(userId: string, p: StoredProgress): Promise<boolean> {
+  writeCache(userId, { ...p, isPro: p.isPro ?? readCache(userId)?.isPro });
+  if (!supabase) return true;
+  if (typeof navigator !== 'undefined' && navigator.onLine === false) {
+    setPending(userId, true);
+    return false;
+  }
   const { error } = await supabase.from('user_progress').upsert(
     {
       user_id: userId,
@@ -69,7 +133,13 @@ export async function saveProgress(userId: string, p: StoredProgress): Promise<v
     },
     { onConflict: 'user_id' }
   );
-  if (error) console.warn('saveProgress failed', error);
+  if (error) {
+    console.warn('saveProgress failed', error);
+    setPending(userId, true);
+    return false;
+  }
+  setPending(userId, false);
+  return true;
 }
 
 /** Streak: +1 if last activity was yesterday, unchanged if today, reset to 1 otherwise. */
@@ -90,14 +160,15 @@ export async function fetchPlan(userId: string): Promise<{ isPro: boolean; isAdm
     supabase.from('user_progress').select('is_pro').eq('user_id', userId).maybeSingle<{ is_pro: boolean | null }>(),
     supabase.rpc('is_admin'),
   ]);
-  if (pro.error) return null;
+  if (pro.error || admin.error) return null;
   return { isPro: Boolean(pro.data?.is_pro), isAdmin: admin.data === true };
 }
 
-export async function fetchIsAdmin(): Promise<boolean> {
+/** null when the database can't be reached (offline): keep the last known value. */
+export async function fetchIsAdmin(): Promise<boolean | null> {
   if (!supabase) return false;
   const { data, error } = await supabase.rpc('is_admin');
-  if (error) return false;
+  if (error) return null;
   return data === true;
 }
 

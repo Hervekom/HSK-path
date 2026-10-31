@@ -15,8 +15,8 @@ import { VOCABULARY_DATA } from './data/vocabulary';
 import { HSK2_QUIZ_QUESTIONS, VOCAB_QUIZ_QUESTIONS, GRAMMAR_QUIZ_QUESTIONS } from './data/exercises';
 import { MOCK_TESTS_CATALOG, INITIAL_TEST_RESULTS } from './data/mockTests';
 import { INITIAL_USER_PROFILE } from './data/progressData';
-import { supabase } from './lib/supabase';
-import { loadProgress, saveProgress, computeStreak, fetchIsAdmin, fetchPlan } from './lib/progressStore';
+import { supabase, storedAuthUser } from './lib/supabase';
+import { loadProgress, saveProgress, computeStreak, fetchIsAdmin, fetchPlan, hasPendingProgress } from './lib/progressStore';
 import { SRS_STORAGE_KEY } from './utils/srs';
 import { audioEngine } from './utils/audio';
 import { isRequiredFor } from './data/hskWordCounts';
@@ -154,6 +154,8 @@ function HskPathApp() {
   const [hydrated, setHydrated] = useState(false);
   const [authChecked, setAuthChecked] = useState(!supabase);
   const lastActiveRef = useRef<string | null>(null);
+  /** True when the progress was loaded without the database (offline start). */
+  const offlineStartRef = useRef(false);
   const [srsTick, setSrsTick] = useState(0);
 
   const resetToDemoData = () => {
@@ -168,7 +170,7 @@ function HskPathApp() {
 
   const hydrateFromCloud = useCallback(async (authUser: User) => {
     setHydrated(false);
-    const stored = await loadProgress(authUser.id);
+    const { progress: stored, offline } = await loadProgress(authUser.id);
     const meta = (authUser.user_metadata || {}) as Record<string, any>;
     const baseProfile: UserProfile = {
       ...INITIAL_USER_PROFILE,
@@ -185,7 +187,21 @@ function HskPathApp() {
       email: authUser.email || '',
       isProUser: Boolean(stored?.isPro),
     };
-    fetchIsAdmin().then(setIsAdmin);
+    const adminKey = `hskpath_admin_${authUser.id}`;
+    try {
+      setIsAdmin(localStorage.getItem(adminKey) === '1');
+    } catch {
+      // ignore
+    }
+    fetchIsAdmin().then((admin) => {
+      if (admin === null) return; // offline: keep the last known value
+      setIsAdmin(admin);
+      try {
+        localStorage.setItem(adminKey, admin ? '1' : '0');
+      } catch {
+        // ignore
+      }
+    });
     const learned = new Set(stored?.learnedIds || []);
     const favs = new Set(stored?.favoriteIds || []);
     const { streak, today } = computeStreak(stored?.streakDays ?? 0, stored?.lastActiveDate ?? null);
@@ -209,17 +225,31 @@ function HskPathApp() {
     setStreakDays(streak);
     setWeeklyMinutes(stored?.weeklyMinutes ?? 0);
     setAuthUserId(authUser.id);
-    setHydrated(true);
+    // Offline with no copy on this device: show the app but never save, or the empty
+    // progress would overwrite the real one once the connection is back.
+    setHydrated(!(offline && !stored));
+    offlineStartRef.current = offline;
   }, []);
 
   // Restore session on load + react to auth events
   useEffect(() => {
     if (!supabase) return;
     let cancelled = false;
-    supabase.auth.getSession().then(async ({ data }) => {
+    // Offline (installed app on the metro…): getSession() would try to refresh an expired
+    // token for a long time and then report no session. Use the user saved on this device.
+    const sessionUser = async (): Promise<User | null> => {
+      if (!navigator.onLine) return storedAuthUser();
+      const timeout = new Promise<'timeout'>((r) => window.setTimeout(() => r('timeout'), 6000));
+      const res = await Promise.race([supabase!.auth.getSession(), timeout]);
+      if (res === 'timeout') return storedAuthUser();
+      if (res.data.session?.user) return res.data.session.user;
+      // A network error keeps the saved session; a revoked one has been removed by supabase-js.
+      return res.error ? storedAuthUser() : null;
+    };
+    sessionUser().then(async (sessionUserValue) => {
       if (cancelled) return;
-      if (data.session?.user) {
-        await hydrateFromCloud(data.session.user);
+      if (sessionUserValue) {
+        await hydrateFromCloud(sessionUserValue);
         setCurrentView((v) => (v === 'landing' || v === 'login' || v === 'signup' ? 'dashboard' : v));
       }
       setAuthChecked(true);
@@ -303,6 +333,24 @@ function HskPathApp() {
     window.addEventListener('hsk-srs-changed', onSrs);
     return () => window.removeEventListener('hsk-srs-changed', onSrs);
   }, []);
+
+  // Back online: send the changes made offline, or load the real progress if the app
+  // started offline without a copy on this device.
+  useEffect(() => {
+    if (!supabase || !authUserId) return;
+    const onOnline = async () => {
+      if (hasPendingProgress(authUserId) && hydrated) {
+        setSrsTick((n) => n + 1); // re-runs the autosave below
+        return;
+      }
+      if (!hydrated || offlineStartRef.current) {
+        const { data } = await supabase!.auth.getSession();
+        if (data.session?.user?.id === authUserId) hydrateFromCloud(data.session.user);
+      }
+    };
+    window.addEventListener('online', onOnline);
+    return () => window.removeEventListener('online', onOnline);
+  }, [authUserId, hydrated, hydrateFromCloud]);
 
   // Debounced autosave of the signed-in user's progress
   useEffect(() => {

@@ -1,13 +1,15 @@
 /*
  * HSK Path service worker (installable app / PWA).
- * - Pages: network first, cached copy when offline (updates arrive on the next launch).
+ * - Pages: network first (4 s at most on a weak connection), cached copy when offline.
+ *   When a new version of the site is seen, all its files are stored in the background,
+ *   so every page keeps opening offline after an update.
  * - Built files (/assets/*, hashed names), icons, photos: cache first.
  * - Short recordings (exercise clips, per-question exam audio): cached once played, then work offline.
  *   Long full-exam recordings stay on the network (too big to keep on every phone).
  * - /api/* (Laoshi), Supabase and every other site: never touched.
  * Bump VERSION to drop old caches.
  */
-const VERSION = 'v3';
+const VERSION = 'v4';
 const SHELL = `hsk-shell-${VERSION}`;
 const STATIC = `hsk-static-${VERSION}`;
 const MEDIA = `hsk-media-${VERSION}`;
@@ -21,15 +23,7 @@ self.addEventListener('install', (event) => {
       .open(SHELL)
       .then((c) => c.addAll(PRECACHE).then(() => c.match('/')))
       .then((page) => page && page.text())
-      .then((html) => {
-        // Keep the current build's scripts and styles so the app opens offline from the first visit.
-        const fromPage = (html || '').match(/\/assets\/[^"' )]+/g) || [];
-        // Pages loaded on demand are listed in /asset-list.json (written at build time).
-        return fetch('/asset-list.json', { cache: 'no-store' })
-          .then((r) => (r.ok ? r.json() : []))
-          .catch(() => [])
-          .then((list) => caches.open(STATIC).then((c) => c.addAll([...new Set([...fromPage, ...list])])));
-      })
+      .then((html) => storeBuild(html || ''))
       .then(() => self.skipWaiting()),
   );
 });
@@ -55,7 +49,7 @@ self.addEventListener('fetch', (event) => {
   if (path.startsWith('/api/')) return;
 
   if (req.mode === 'navigate') {
-    event.respondWith(networkFirstPage(req));
+    event.respondWith(networkFirstPage(req, event));
     return;
   }
   if (path.endsWith('.mp3')) {
@@ -67,14 +61,53 @@ self.addEventListener('fetch', (event) => {
   }
 });
 
-async function networkFirstPage(req) {
+/**
+ * Stores every script and style of the build that this page uses: those named in the page,
+ * plus the pages loaded on demand listed in /asset-list.json (written at build time).
+ * Files of older builds are removed.
+ */
+async function storeBuild(html) {
+  const fromPage = html.match(/\/assets\/[^"' )]+/g) || [];
+  const list = await fetch('/asset-list.json', { cache: 'no-store' })
+    .then((r) => (r.ok ? r.json() : []))
+    .catch(() => []);
+  const wanted = [...new Set([...fromPage, ...list])];
+  const cache = await caches.open(STATIC);
+  const have = new Set((await cache.keys()).map((r) => new URL(r.url).pathname));
+  // One by one: a single failure must not drop the rest.
+  await Promise.all(wanted.filter((f) => !have.has(f)).map((f) => cache.add(f).catch(() => {})));
+  if (list.length) {
+    const keep = new Set(wanted);
+    await Promise.all(
+      [...have].filter((f) => f.startsWith('/assets/') && !keep.has(f)).map((f) => cache.delete(f)),
+    );
+  }
+}
+
+const withTimeout = (promise, ms) =>
+  Promise.race([promise, new Promise((_, reject) => setTimeout(() => reject(new Error('timeout')), ms))]);
+
+async function networkFirstPage(req, event) {
   const cache = await caches.open(SHELL);
+  const network = fetch(req);
   try {
-    const res = await fetch(req);
-    if (res.ok) cache.put('/', res.clone());
+    const res = await withTimeout(network, 4000);
+    if (res.ok) {
+      const copy = res.clone();
+      event.waitUntil(
+        copy.text().then(async (html) => {
+          const old = await cache.match('/');
+          const oldHtml = old ? await old.text() : '';
+          await cache.put('/', new Response(html, { headers: { 'Content-Type': 'text/html; charset=utf-8' } }));
+          if (html !== oldHtml) await storeBuild(html);
+        }),
+      );
+    }
     return res;
   } catch {
-    return (await cache.match('/')) || Response.error();
+    const hit = await cache.match('/');
+    if (hit) return hit;
+    return network; // nothing stored yet: wait for the network after all
   }
 }
 

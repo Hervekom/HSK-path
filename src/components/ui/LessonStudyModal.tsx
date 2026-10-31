@@ -44,7 +44,7 @@ export const LessonStudyModal: React.FC<LessonStudyModalProps> = ({
     Promise.all([
       import('../../data/lessonScenes'),
       // Recorded voices for the scenes and readings (falls back to the browser voice without them).
-      import('../../data/lessonAudio.json').then((a) => audioEngine.addRecordings(a.default as Record<string, string>)).catch(() => undefined),
+      import('../../data/lessonAudio.json').then((a) => audioEngine.addRecordings(a.default as unknown as Record<string, string | string[]>)).catch(() => undefined),
     ]).then(([m]) => {
       if (alive) setStory({ id: lesson.id, ...m.LESSON_SCENES[lesson.id] });
     });
