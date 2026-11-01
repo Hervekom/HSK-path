@@ -2,7 +2,7 @@ import React from 'react';
 import { Flame, Star, Trophy } from '@phosphor-icons/react';
 import { tr } from '../locales/tr';
 import { BADGES } from '../game/badges';
-import { dayKey, levelOf, shiftDay, streakView, type GameState } from '../game/engine';
+import { dayKey, levelOf, shiftDay, streakCta, streakView, type GameState } from '../game/engine';
 import { BadgeIcon } from '../components/game/BadgeIcon';
 import type { AppState } from '../types';
 
@@ -54,6 +54,11 @@ export const AchievementsView: React.FC<Props> = ({ game, goal, words, phrases, 
           <p className="text-xs mt-1 tabular-nums opacity-90">
             {s.todayXp} / {s.goal} XP {tr('today')}
           </p>
+          {!s.todayDone && (
+            <button type="button" onClick={() => onNavigate('vocabulary')} className="mt-3 w-full px-4 py-3 rounded-2xl bg-white text-stone-900 text-sm font-extrabold cursor-pointer hover:bg-stone-100">
+              {tr(streakCta(s))}
+            </button>
+          )}
         </div>
         <div className="p-5 rounded-3xl bg-white border border-[#E4DCCE]">
           <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-stone-500">

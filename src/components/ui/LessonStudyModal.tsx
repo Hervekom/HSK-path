@@ -119,8 +119,9 @@ export const LessonStudyModal: React.FC<LessonStudyModalProps> = ({
       onClose={onClose}
       maxWidth="xl"
       id="lesson-study-modal"
+      flush
     >
-      <div className="flex flex-col h-full max-h-[85vh]">
+      <div className="flex flex-col flex-1 min-h-0">
         {/* Modal Top Bar */}
         <div className="p-5 sm:p-6 border-b border-[#EAE2D5] bg-[#FAF8F5] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div>
@@ -172,7 +173,7 @@ export const LessonStudyModal: React.FC<LessonStudyModalProps> = ({
               {(scenes?.length ? scenes : lesson.hasStory ? [] : [{ title: null, setting: null, lines: lesson.dialogue }]).map((scene, sIdx) => (
                 <div key={sIdx} className="space-y-3">
                   {scene.title ? (
-                    <div className="flex items-start justify-between gap-3">
+                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-3">
                       <div className="min-w-0">
                         <div className="text-[11px] font-bold uppercase tracking-wider text-[#C52828]">
                           {L('Scene', 'Scène', '情景')} {sIdx + 1}

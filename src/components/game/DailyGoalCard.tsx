@@ -1,7 +1,7 @@
 import React from 'react';
-import { Flame, CheckCircle, Trophy, UsersThree } from '@phosphor-icons/react';
+import { Flame, CheckCircle, Trophy, UsersThree, ArrowRight } from '@phosphor-icons/react';
 import { tr } from '../../locales/tr';
-import { dailyGoalXp, emptyGame, streakView } from '../../game/engine';
+import { dailyGoalXp, emptyGame, streakCta, streakView } from '../../game/engine';
 import { BADGES } from '../../game/badges';
 import type { AppState, UserProfile } from '../../types';
 
@@ -35,7 +35,25 @@ export const DailyGoalCard: React.FC<{ user: UserProfile; onNavigate: (v: AppSta
                   : tr('Reach your daily goal to start a streak.')}
           </p>
         </div>
+        {!s.todayDone && (
+          <button
+            type="button"
+            onClick={() => onNavigate('vocabulary')}
+            className="hidden sm:inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-white text-stone-900 text-sm font-extrabold shadow-md cursor-pointer hover:bg-stone-100 shrink-0"
+          >
+            {tr(streakCta(s))} <ArrowRight className="w-4 h-4" weight="bold" />
+          </button>
+        )}
       </div>
+      {!s.todayDone && (
+        <button
+          type="button"
+          onClick={() => onNavigate('vocabulary')}
+          className="sm:hidden mt-3 w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-white text-stone-900 text-base font-extrabold shadow-md cursor-pointer active:bg-stone-100"
+        >
+          <Flame className="w-5 h-5 text-[#C52828]" weight="fill" /> {tr(streakCta(s))}
+        </button>
+      )}
       <div className="mt-3">
         <div className="flex justify-between text-xs font-bold opacity-90">
           <span>{tr("Today's goal")}</span>
@@ -48,11 +66,6 @@ export const DailyGoalCard: React.FC<{ user: UserProfile; onNavigate: (v: AppSta
         </div>
       </div>
       <div className="flex flex-wrap gap-2 mt-3">
-        {!s.todayDone && (
-          <button type="button" onClick={() => onNavigate('vocabulary')} className="px-3 py-1.5 rounded-xl bg-white text-stone-900 text-xs font-bold cursor-pointer">
-            {tr("Let's go")}
-          </button>
-        )}
         <button type="button" onClick={() => onNavigate('achievements')} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/15 text-xs font-bold cursor-pointer">
           <Trophy className="w-3.5 h-3.5" weight="fill" /> {earned} {tr('badges')}
         </button>

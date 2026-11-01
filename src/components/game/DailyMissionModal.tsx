@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Flame, BookOpen, ChatsCircle, GraduationCap, Lightning, X, ArrowRight, UsersThree, CheckCircle } from '@phosphor-icons/react';
 import { tr } from '../../locales/tr';
 import type { StreakView } from '../../game/engine';
-import { XP } from '../../game/engine';
+import { XP, streakCta } from '../../game/engine';
 import { social, CHEER_EMOJI, type SocialOverview } from '../../lib/social';
 import type { AppState } from '../../types';
 
@@ -105,6 +105,15 @@ export const DailyMissionModal: React.FC<Props> = ({ streak, name, signedIn, onC
               <div className="h-full rounded-full bg-white transition-all" style={{ width: `${pct}%` }} />
             </div>
           </div>
+          {!streak.todayDone && (
+            <button
+              type="button"
+              onClick={() => onGo(TASKS[0].view)}
+              className="mt-4 w-full inline-flex items-center justify-center gap-2 px-4 py-3.5 rounded-2xl bg-white text-stone-900 text-base font-extrabold shadow-md cursor-pointer hover:bg-stone-100 active:bg-stone-100"
+            >
+              <Flame className="w-5 h-5 text-[#C52828]" weight="fill" /> {tr(streakCta(streak))}
+            </button>
+          )}
         </div>
 
         <div className="p-4 sm:p-5 space-y-4">
@@ -121,7 +130,7 @@ export const DailyMissionModal: React.FC<Props> = ({ streak, name, signedIn, onC
 
           {!streak.todayDone && (
             <div className="space-y-2">
-              <p className="text-xs font-bold uppercase tracking-wider text-stone-500">{tr('Quick ways to reach it')}</p>
+              <p className="text-xs font-bold uppercase tracking-wider text-stone-500">{tr('Or choose an activity')}</p>
               {TASKS.map((t) => {
                 const Icon = t.icon;
                 return (
@@ -160,11 +169,6 @@ export const DailyMissionModal: React.FC<Props> = ({ streak, name, signedIn, onC
           )}
 
           <div className="flex gap-2">
-            {!streak.todayDone && (
-              <button type="button" onClick={() => onGo(TASKS[0].view)} className="flex-1 px-4 py-3 rounded-2xl bg-[#C52828] text-white font-bold cursor-pointer hover:bg-[#A82020]">
-                {tr("Let's go")}
-              </button>
-            )}
             <button type="button" onClick={close} className="flex-1 px-4 py-3 rounded-2xl border border-[#E2D9CC] text-stone-700 font-semibold cursor-pointer">
               {streak.todayDone ? tr('Close') : tr('Later')}
             </button>

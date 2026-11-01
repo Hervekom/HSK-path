@@ -76,9 +76,29 @@ export function shiftDay(key: string, delta: number): string {
   return dayKey(new Date(y, m - 1, d + delta));
 }
 
-/** Daily XP goal from the minutes the learner chose at sign-up (10 min → 20 XP … 60 min → 120 XP). */
+/**
+ * Daily XP goal from the minutes the learner chose at sign-up (10 min → 15 XP, 20 min → 20 XP,
+ * 60 min → 60 XP): one lesson, or ten flashcards, is enough to keep the streak on a normal day.
+ */
 export function dailyGoalXp(minutes?: number): number {
-  return Math.max(20, Math.min(120, Math.round((minutes || 20) * 2)));
+  return Math.max(15, Math.min(60, Math.round(minutes || 20)));
+}
+
+/** Label of the main button next to the streak: start it, save it, or keep going. */
+export function streakCta(v: { count: number; atRisk: boolean; todayDone: boolean }): string {
+  if (v.todayDone) return 'Keep practising';
+  if (v.atRisk) return 'Save my streak';
+  if (v.count === 0) return 'Start my streak';
+  return "Let's go";
+}
+
+/** Lessons finished at least once (kept for good, unlike the daily "seen" keys). */
+export function doneLessons(g: GameState | undefined): Set<string> {
+  const out = new Set<string>();
+  for (const k of Object.keys(g?.stats || {})) if (k.startsWith('done:lesson:')) out.add(k.slice(12));
+  // lessons finished before this was recorded (still in the recent "seen" keys)
+  for (const k of Object.keys(g?.seen || {})) if (k.startsWith('lesson:')) out.add(k.slice(7));
+  return out;
 }
 
 export function emptyGame(): GameState {
@@ -143,6 +163,7 @@ export function applyEarn(g: GameState, e: EarnEvent, goal: number, today = dayK
   next.stats[e.source] = (next.stats[e.source] || 0) + 1;
   if (e.key) next.stats[`${e.source}Unique`] = Object.keys(next.seen).filter((k) => k.startsWith(`${e.source}:`)).length;
   for (const [k, v] of Object.entries(e.stats || {})) next.stats[k] = (next.stats[k] || 0) + v;
+  if (e.key?.startsWith('lesson:')) next.stats[`done:${e.key}`] = 1;
 
   const before = next.xp[today] || 0;
   next.xp[today] = before + xp;

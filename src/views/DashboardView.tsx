@@ -1,4 +1,5 @@
 import { DailyGoalCard } from '../components/game/DailyGoalCard';
+import { HSK_LESSONS_DATA } from '../data/lessons';
 import React from 'react';
 import { tr } from '../locales/tr';
 import { TOTAL_WORDS } from '../data/hskWordCounts';
@@ -23,6 +24,9 @@ interface DashboardViewProps {
   onSelectLevel: (level: 'hsk1' | 'hsk2' | 'hsk3') => void;
   onStartPractice: (skill: SkillType | 'mixed') => void;
   showSampleData?: boolean;
+  /** Lessons already finished (ids). */
+  doneLessonIds?: Set<string>;
+  hasPro?: boolean;
 }
 
 export const DashboardView: React.FC<DashboardViewProps> = ({
@@ -35,8 +39,10 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
   onSelectLevel,
   onStartPractice,
   showSampleData = false,
+  doneLessonIds = new Set<string>(),
+  hasPro = false,
 }) => {
-  const { t } = useI18n();
+  const { t, getLocalized } = useI18n();
 
   const currentLevelMaxWords = TOTAL_WORDS[user.currentHsk];
   const overallPercentage = Math.min(100, Math.round((learnedWordCount / currentLevelMaxWords) * 100));
@@ -164,59 +170,76 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
         </div>
       </div>
 
-      {/* Large Hero "Continue Learning & SRS Track" Card */}
-      <div className="p-6 sm:p-8 rounded-3xl bg-[#1C1917] text-white shadow-xl flex flex-col md:flex-row md:items-center justify-between gap-6 border border-stone-800 relative overflow-hidden">
-        {/* Subtle ambient red glow */}
-        <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-b from-[#C52828]/20 to-transparent blur-3xl pointer-events-none" />
-
-        <div className="space-y-3 max-w-xl relative z-10">
-          <div className="flex items-center gap-2">
-            <span className="px-2.5 py-0.5 rounded-full bg-[#C52828]/30 text-[#FAF8F5] border border-[#C52828]/50 text-[10px] font-bold uppercase tracking-wider">
-              {t('dashboard.continueLearning')}
-            </span>
-            <span className="text-xs text-stone-400 font-medium">
-              {tr("HSK 2 ·")}{" "}{t('dashboard.lesson')} 8
-            </span>
-          </div>
-
-          <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
-            {tr("HSK 2 Vocabulary & Directions Drill")}
-          </h2>
-          <p className="text-xs sm:text-sm text-stone-300 leading-relaxed">
-            {tr("Practice essential location prepositions (在, 往, 离) and travel vocabulary (宾馆, 飞机场, 车站) with SRS algorithm.")}
-          </p>
-
-          <div className="space-y-1.5 pt-2 max-w-md">
-            <div className="flex justify-between text-xs text-stone-300 font-medium">
-              <span>{tr("Track Retention Mastery")}</span>
-              <span className="font-bold text-white">68% {t('dashboard.complete')}</span>
+      {/* Continue learning: the learner's own next lesson */}
+      {(() => {
+        const levelLessons = HSK_LESSONS_DATA.filter((l) => l.level === user.currentHsk);
+        const done = levelLessons.filter((l) => doneLessonIds.has(l.id)).length;
+        const next = levelLessons.find((l) => !doneLessonIds.has(l.id));
+        const pct = levelLessons.length ? Math.round((done / levelLessons.length) * 100) : 0;
+        const levelName = user.currentHsk.toUpperCase().replace('HSK', 'HSK ');
+        const locked = next ? !next.isFree && !hasPro : false;
+        const openNext = () => {
+          if (next && !locked) {
+            try {
+              sessionStorage.setItem('hskpath_open_lesson', JSON.stringify({ lessonId: next.id, tab: 'study' }));
+            } catch {
+              /* storage unavailable: the level page opens instead */
+            }
+          }
+          onSelectLevel(user.currentHsk);
+        };
+        return (
+          <div className="p-5 sm:p-8 rounded-3xl bg-[#1C1917] text-white shadow-xl flex flex-col md:flex-row md:items-center justify-between gap-5 sm:gap-6 border border-stone-800 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-b from-[#C52828]/20 to-transparent blur-3xl pointer-events-none" />
+            <div className="space-y-3 max-w-xl relative z-10 min-w-0">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="px-2.5 py-0.5 rounded-full bg-[#C52828]/30 text-[#FAF8F5] border border-[#C52828]/50 text-[10px] font-bold uppercase tracking-wider">
+                  {next ? (done ? t('dashboard.continueLearning') : tr('Your first lesson')) : tr('Level complete')}
+                </span>
+                {next && (
+                  <span className="text-xs text-stone-400 font-medium">
+                    {levelName} · {t('dashboard.lesson')} {next.lessonNumber}
+                  </span>
+                )}
+              </div>
+              <h2 className="text-xl sm:text-3xl font-extrabold tracking-tight text-white">
+                {next ? getLocalized(next.title) : `${levelName} : ${tr('all lessons done!')}`}
+              </h2>
+              <p className="text-sm text-stone-300 leading-relaxed">
+                {next ? getLocalized(next.subtitle) : tr('Check your level with a mock exam, then move on to the next level.')}
+              </p>
+              <div className="space-y-1.5 pt-1 max-w-md">
+                <div className="flex justify-between text-xs text-stone-300 font-medium">
+                  <span>{tr('Lessons done')}: {done} / {levelLessons.length}</span>
+                  <span className="font-bold text-white">{pct}%</span>
+                </div>
+                <div className="w-full h-2 bg-stone-800 rounded-full overflow-hidden border border-stone-700">
+                  <div className="h-full bg-[#C52828] rounded-full transition-all duration-500" style={{ width: `${pct}%` }} />
+                </div>
+              </div>
             </div>
-            <div className="w-full h-2 bg-stone-800 rounded-full overflow-hidden border border-stone-700">
-              <div className="w-[68%] h-full bg-[#C52828] rounded-full transition-all duration-500" />
+            <div className="shrink-0 relative z-10 flex flex-col sm:flex-row gap-3">
+              {next ? (
+                <Button variant="primary" size="lg" onClick={openNext} className="w-full sm:w-auto shadow-md" iconRight={<ArrowRight className="w-4 h-4" />}>
+                  {done ? t('dashboard.continue') : tr('Start the lesson')}
+                </Button>
+              ) : (
+                <Button variant="primary" size="lg" onClick={() => onNavigate('mock-tests')} className="w-full sm:w-auto shadow-md" iconRight={<ArrowRight className="w-4 h-4" />}>
+                  {tr('Take a mock exam')}
+                </Button>
+              )}
+              <Button
+                variant="secondary"
+                size="lg"
+                onClick={() => onNavigate('vocabulary')}
+                className="w-full sm:w-auto bg-stone-800 text-stone-200 border-stone-700 hover:bg-stone-700"
+              >
+                {tr("Review Due (SRS)")}
+              </Button>
             </div>
           </div>
-        </div>
-
-        <div className="shrink-0 relative z-10 flex flex-col sm:flex-row gap-3">
-          <Button
-            variant="primary"
-            size="lg"
-            onClick={() => onStartPractice('vocabulary')}
-            className="w-full sm:w-auto shadow-md"
-            iconRight={<ArrowRight className="w-4 h-4" />}
-          >
-            {t('dashboard.continue')}
-          </Button>
-          <Button
-            variant="secondary"
-            size="lg"
-            onClick={() => onNavigate('vocabulary')}
-            className="w-full sm:w-auto bg-stone-800 text-stone-200 border-stone-700 hover:bg-stone-700"
-          >
-            {tr("Review Due (SRS)")}
-          </Button>
-        </div>
-      </div>
+        );
+      })()}
 
       {/* Today's Practice Section */}
       <div className="space-y-4">

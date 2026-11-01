@@ -16,7 +16,7 @@ import { HSK2_QUIZ_QUESTIONS, VOCAB_QUIZ_QUESTIONS, GRAMMAR_QUIZ_QUESTIONS } fro
 import { MOCK_TESTS_CATALOG, INITIAL_TEST_RESULTS } from './data/mockTests';
 import { INITIAL_USER_PROFILE } from './data/progressData';
 import { supabase, storedAuthUser } from './lib/supabase';
-import { earn, EARN_EVENT, STAT_EVENT, applyEarn, dailyGoalXp, dayKey, emptyGame, migrateGame, streakView, type EarnEvent } from './game/engine';
+import { earn, EARN_EVENT, STAT_EVENT, applyEarn, dailyGoalXp, dayKey, emptyGame, migrateGame, doneLessons, streakView, type EarnEvent } from './game/engine';
 import { newBadges, BADGES, type BadgeDef } from './game/badges';
 import { DailyMissionModal } from './components/game/DailyMissionModal';
 import { BadgeUnlockedModal } from './components/game/BadgeUnlockedModal';
@@ -721,6 +721,8 @@ function HskPathApp() {
               weeklyMinutes={weeklyMinutes}
               learnedWordCount={vocabList.filter((w) => w.isLearned && isRequiredFor(w.level, user.currentHsk)).length}
               showSampleData={!authUserId}
+              doneLessonIds={doneLessons(user.game)}
+              hasPro={hasPro}
               testHistory={testHistory}
               onNavigate={navigate}
               onSelectLevel={(lvl) => {
@@ -771,6 +773,7 @@ function HskPathApp() {
               onSelectLevel={setSelectedLevel}
               onStartPractice={handleStartPractice}
               isProUser={hasPro}
+              doneLessonIds={doneLessons(user.game)}
               onSelectTest={(test) => {
                 setActiveTest(test);
                 setCurrentView('mock-test-intro');

@@ -36,6 +36,7 @@ interface HskLevelDetailViewProps {
   onStartPractice: (skill: SkillType | 'mixed') => void;
   onSelectTest?: (test: MockTest) => void;
   isProUser?: boolean;
+  doneLessonIds?: Set<string>;
 }
 
 export const HskLevelDetailView: React.FC<HskLevelDetailViewProps> = ({
@@ -45,6 +46,7 @@ export const HskLevelDetailView: React.FC<HskLevelDetailViewProps> = ({
   onStartPractice,
   onSelectTest,
   isProUser = false,
+  doneLessonIds = new Set<string>(),
 }) => {
   const { t, getLocalized, language } = useI18n();
   const [activeLesson, setActiveLesson] = useState<HskLesson | null>(null);
@@ -52,7 +54,7 @@ export const HskLevelDetailView: React.FC<HskLevelDetailViewProps> = ({
 
   // Coming back from a Laoshi mission: reopen that lesson on its Practice tab.
   useEffect(() => {
-    let target: { lessonId?: string } | null = null;
+    let target: { lessonId?: string; tab?: string } | null = null;
     try {
       target = JSON.parse(sessionStorage.getItem('hskpath_open_lesson') || 'null');
       sessionStorage.removeItem('hskpath_open_lesson');
@@ -62,7 +64,7 @@ export const HskLevelDetailView: React.FC<HskLevelDetailViewProps> = ({
     const lesson = target?.lessonId ? HSK_LESSONS_DATA.find((l) => l.id === target!.lessonId) : undefined;
     if (!lesson) return;
     if (lesson.level !== selectedLevel) onSelectLevel(lesson.level);
-    setLessonTab('practice');
+    setLessonTab(target?.tab === 'study' ? undefined : 'practice');
     setActiveLesson(lesson);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -70,9 +72,8 @@ export const HskLevelDetailView: React.FC<HskLevelDetailViewProps> = ({
   const [proModalFeature, setProModalFeature] = useState<string>('');
 
   const currentLevelMeta = HSK_LEVELS.find((l) => l.id === selectedLevel) || HSK_LEVELS[1];
-  const progress = selectedLevel === 'hsk1' ? 100 : selectedLevel === 'hsk2' ? 68 : 24;
-
   const levelLessons = HSK_LESSONS_DATA.filter((l) => l.level === selectedLevel);
+  const progress = levelLessons.length ? Math.round((levelLessons.filter((l) => doneLessonIds.has(l.id)).length / levelLessons.length) * 100) : 0;
   const levelMockTests = MOCK_TESTS_CATALOG.filter((t) => t.level === selectedLevel);
 
   const getModuleIcon = (iconName: string) => {
