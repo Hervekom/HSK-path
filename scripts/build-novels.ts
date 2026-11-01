@@ -92,8 +92,10 @@ function tokens(text: string): Tok[] {
 
 mkdirSync(OUT, { recursive: true });
 const index: unknown[] = [];
+const EXTRA: Record<string, unknown[]> = JSON.parse(readFileSync(`${SRC}/_extra.json`, 'utf8'));
 for (const f of readdirSync(SRC).filter((f) => f.endsWith('.json') && !f.startsWith('_')).sort()) {
   const s = JSON.parse(readFileSync(`${SRC}/${f}`, 'utf8'));
+  s.questions = [...s.questions, ...(EXTRA[s.id] || [])];
   const chapters = s.chapters.map((c: { title: string; paragraphs: string[] }) => ({
     title: tokens(c.title),
     paragraphs: c.paragraphs.map((p) => tokens(p)),

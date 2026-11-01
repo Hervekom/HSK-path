@@ -15,7 +15,7 @@
   },
   "chars": 487,
   "chapters": 5,
-  "questions": 8
+  "questions": 13
  },
  {
   "id": "nuwa",
@@ -33,7 +33,7 @@
   },
   "chars": 702,
   "chapters": 6,
-  "questions": 8
+  "questions": 14
  },
  {
   "id": "houyi",
@@ -51,7 +51,7 @@
   },
   "chars": 714,
   "chapters": 6,
-  "questions": 8
+  "questions": 13
  },
  {
   "id": "change",
@@ -69,7 +69,7 @@
   },
   "chars": 756,
   "chapters": 6,
-  "questions": 8
+  "questions": 13
  },
  {
   "id": "jingwei",
@@ -87,7 +87,7 @@
   },
   "chars": 657,
   "chapters": 6,
-  "questions": 8
+  "questions": 13
  },
  {
   "id": "yugong",
@@ -105,7 +105,7 @@
   },
   "chars": 660,
   "chapters": 6,
-  "questions": 8
+  "questions": 13
  },
  {
   "id": "niulang",
@@ -123,7 +123,7 @@
   },
   "chars": 784,
   "chapters": 6,
-  "questions": 8
+  "questions": 13
  },
  {
   "id": "mulan",
@@ -141,7 +141,7 @@
   },
   "chars": 740,
   "chapters": 6,
-  "questions": 8
+  "questions": 13
  },
  {
   "id": "baishe",
@@ -159,7 +159,7 @@
   },
   "chars": 974,
   "chapters": 7,
-  "questions": 8
+  "questions": 13
  },
  {
   "id": "liangzhu",
@@ -177,7 +177,7 @@
   },
   "chars": 795,
   "chapters": 6,
-  "questions": 8
+  "questions": 13
  },
  {
   "id": "mengjiangnu",
@@ -195,7 +195,7 @@
   },
   "chars": 793,
   "chapters": 6,
-  "questions": 8
+  "questions": 13
  },
  {
   "id": "wukong",
@@ -213,7 +213,7 @@
   },
   "chars": 1124,
   "chapters": 7,
-  "questions": 8
+  "questions": 14
  },
  {
   "id": "caochuan",
@@ -231,7 +231,7 @@
   },
   "chars": 832,
   "chapters": 6,
-  "questions": 8
+  "questions": 13
  },
  {
   "id": "nianshou",
@@ -249,7 +249,7 @@
   },
   "chars": 747,
   "chapters": 6,
-  "questions": 8
+  "questions": 13
  },
  {
   "id": "maliang",
@@ -267,6 +267,6 @@
   },
   "chars": 920,
   "chapters": 7,
-  "questions": 8
+  "questions": 13
  }
 ]

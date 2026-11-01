@@ -72,7 +72,7 @@
   ],
   "questions": [
     {
-      "q": { "fr": "Quel est l'endroit préféré de Nüwa (la princesse) ?", "en": "What is the princess Nüwa's favourite place?" },
+      "q": { "fr": "Quel est l'endroit préféré de la princesse ?", "en": "What is the princess's favourite place?" },
       "options": [
         { "fr": "La montagne", "en": "The mountain" },
         { "fr": "La mer de l'Est", "en": "The eastern sea" },
