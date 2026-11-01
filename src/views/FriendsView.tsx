@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { Copy, ShareNetwork, UserPlus, Flame, CheckCircle, Sword, Trophy, X, Check, UsersThree, DotsThree } from '@phosphor-icons/react';
 import { tr } from '../locales/tr';
 import { social, CHEER_EMOJI, type SocialOverview, type FriendCard, type Challenge, type Cheer, type AddFriendStatus } from '../lib/social';
@@ -159,6 +160,7 @@ export const FriendsView: React.FC<Props> = ({ signedIn, game, goal, myName, onN
     }),
   ].sort((a, b) => b.week - a.week);
 
+  const menuRow = board.find((r) => r.id === menu && r.card);
   const nameOf = (id: string) => data?.friends.find((f) => f.user_id === id)?.name || tr('Friend');
   const incomingChallenges = (data?.challenges || []).filter((c) => c.status === 'pending' && c.creator === c.other);
   const outgoingChallenges = (data?.challenges || []).filter((c) => c.status === 'pending' && c.creator !== c.other);
@@ -231,30 +233,32 @@ export const FriendsView: React.FC<Props> = ({ signedIn, game, goal, myName, onN
           <h2 className="text-base font-bold text-stone-900">{tr('Waiting for your answer')}</h2>
           {data!.incoming.map((r) => (
             <div key={`f${r.id}`} className="flex items-center gap-3 p-3 rounded-2xl bg-white border border-[#E4DCCE]">
-              <UserPlus className="w-5 h-5 text-[#C52828]" />
-              <span className="flex-1 text-sm text-stone-800">
+              <UserPlus className="w-5 h-5 text-[#C52828] shrink-0" />
+              <span className="flex-1 min-w-0 text-sm text-stone-800">
                 <b>{r.name}</b> {tr('wants to be your friend')}
               </span>
-              <button type="button" disabled={busy} onClick={() => run(() => social.respondFriend(r.id, true), 'You are now friends!')} className="w-9 h-9 rounded-xl bg-emerald-600 text-white grid place-items-center cursor-pointer" aria-label={tr('Accept')}>
+              <button type="button" disabled={busy} onClick={() => run(() => social.respondFriend(r.id, true), 'You are now friends!')} className="w-10 h-10 shrink-0 rounded-xl bg-emerald-600 text-white grid place-items-center cursor-pointer" aria-label={tr('Accept')}>
                 <Check className="w-4 h-4" weight="bold" />
               </button>
-              <button type="button" disabled={busy} onClick={() => run(() => social.respondFriend(r.id, false))} className="w-9 h-9 rounded-xl border border-[#E2D9CC] grid place-items-center cursor-pointer" aria-label={tr('Decline')}>
+              <button type="button" disabled={busy} onClick={() => run(() => social.respondFriend(r.id, false))} className="w-10 h-10 shrink-0 rounded-xl border border-[#E2D9CC] grid place-items-center cursor-pointer" aria-label={tr('Decline')}>
                 <X className="w-4 h-4" />
               </button>
             </div>
           ))}
           {incomingChallenges.map((c) => (
-            <div key={`c${c.id}`} className="flex items-center gap-3 p-3 rounded-2xl bg-white border border-[#E4DCCE]">
-              <Sword className="w-5 h-5 text-[#C52828]" />
-              <span className="flex-1 text-sm text-stone-800">
+            <div key={`c${c.id}`} className="flex flex-wrap items-center gap-3 p-3 rounded-2xl bg-white border border-[#E4DCCE]">
+              <Sword className="w-5 h-5 text-[#C52828] shrink-0" />
+              <span className="flex-1 min-w-[10rem] text-sm text-stone-800">
                 <b>{nameOf(c.other)}</b> {tr('challenges you: most XP in')} {c.days} {tr('days')}
               </span>
-              <button type="button" disabled={busy} onClick={() => run(() => social.respondChallenge(c.id, true), 'Challenge accepted: good luck!')} className="px-3 h-9 rounded-xl bg-[#C52828] text-white text-sm font-bold cursor-pointer">
-                {tr('Accept')}
-              </button>
-              <button type="button" disabled={busy} onClick={() => run(() => social.respondChallenge(c.id, false))} className="w-9 h-9 rounded-xl border border-[#E2D9CC] grid place-items-center cursor-pointer" aria-label={tr('Decline')}>
-                <X className="w-4 h-4" />
-              </button>
+              <div className="ml-auto flex items-center gap-2 shrink-0">
+                <button type="button" disabled={busy} onClick={() => run(() => social.respondChallenge(c.id, true), 'Challenge accepted: good luck!')} className="px-4 h-10 rounded-xl bg-[#C52828] text-white text-sm font-bold cursor-pointer">
+                  {tr('Accept')}
+                </button>
+                <button type="button" disabled={busy} onClick={() => run(() => social.respondChallenge(c.id, false))} className="w-10 h-10 shrink-0 rounded-xl border border-[#E2D9CC] grid place-items-center cursor-pointer" aria-label={tr('Decline')}>
+                  <X className="w-4 h-4" />
+                </button>
+              </div>
             </div>
           ))}
         </section>
@@ -281,67 +285,63 @@ export const FriendsView: React.FC<Props> = ({ signedIn, game, goal, myName, onN
         )}
         <ol className="space-y-2">
           {board.map((r, i) => (
-            <li key={r.id} className={`p-3 rounded-2xl border flex items-center gap-3 ${r.me ? 'bg-rose-50 border-rose-200' : 'bg-white border-[#E4DCCE]'}`}>
+            <li key={r.id} className={`p-3 rounded-2xl border flex items-center gap-2.5 sm:gap-3 ${r.me ? 'bg-rose-50 border-rose-200' : 'bg-white border-[#E4DCCE]'}`}>
               <span className={`w-8 h-8 rounded-full grid place-items-center text-sm font-black shrink-0 ${i === 0 ? 'bg-amber-400 text-white' : i === 1 ? 'bg-stone-300 text-white' : i === 2 ? 'bg-[#D9A877] text-white' : 'bg-stone-100 text-stone-600'}`}>{i + 1}</span>
               <div className="flex-1 min-w-0">
                 <div className="text-sm font-bold text-stone-900 truncate">
                   {r.name} {r.me && <span className="text-xs font-semibold text-stone-500">({tr('you')})</span>}
                 </div>
-                <div className="flex items-center gap-2 text-xs text-stone-500">
-                  <span className="inline-flex items-center gap-0.5">
-                    <Flame className={`w-3.5 h-3.5 ${r.streak ? 'text-orange-500' : 'text-stone-300'}`} weight="fill" /> {r.streak}
+                <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-xs text-stone-500 mt-0.5">
+                  <span className="inline-flex items-center gap-0.5 whitespace-nowrap font-semibold text-stone-700">
+                    <Flame className={`w-3.5 h-3.5 ${r.streak ? 'text-orange-500' : 'text-stone-300'}`} weight="fill" /> {r.streak} {tr(r.streak === 1 ? 'day' : 'days')}
                   </span>
                   {r.todayDone ? (
-                    <span className="inline-flex items-center gap-0.5 text-emerald-700">
-                      <CheckCircle className="w-3.5 h-3.5" weight="fill" /> {tr('goal done today')}
+                    <span className="inline-flex items-center gap-0.5 whitespace-nowrap text-emerald-700">
+                      <CheckCircle className="w-3.5 h-3.5" weight="fill" /> {tr('goal done')}
                     </span>
                   ) : (
-                    <span>{tr('goal not done yet')}</span>
-                  )}
-                  {r.card && Object.keys(r.card.badges || {}).length > 0 && (
-                    <span className="hidden sm:inline">· {Object.keys(r.card.badges).length} {tr('badges')}</span>
+                    <span className="whitespace-nowrap">{tr('goal to do')}</span>
                   )}
                 </div>
               </div>
-              <span className="text-sm font-black text-stone-900 tabular-nums shrink-0">{r.week} XP</span>
+              <span className="text-sm font-black text-stone-900 tabular-nums shrink-0 whitespace-nowrap">{r.week} XP</span>
               {r.card && (
-                <div className="relative shrink-0">
-                  <button type="button" onClick={() => setMenu(menu === r.id ? null : r.id)} className="w-9 h-9 rounded-xl border border-[#E2D9CC] grid place-items-center cursor-pointer" aria-label={tr('Actions')}>
-                    <DotsThree className="w-5 h-5" weight="bold" />
-                  </button>
-                  {menu === r.id && (
-                    <div className="absolute right-0 top-11 z-20 w-60 p-2 rounded-2xl bg-white border border-[#E4DCCE] shadow-lg space-y-1" onMouseLeave={() => setMenu(null)}>
-                      <p className="px-2 pt-1 text-[11px] font-bold uppercase tracking-wider text-stone-400">{tr('Encourage')}</p>
-                      <div className="flex gap-1 px-1">
-                        {(Object.keys(CHEER_EMOJI) as Cheer['kind'][]).map((k) => (
-                          <button key={k} type="button" disabled={busy} onClick={() => (setMenu(null), cheer(r.card!, k))} className="flex-1 h-10 rounded-xl hover:bg-[#FAF8F5] text-xl cursor-pointer">
-                            {CHEER_EMOJI[k]}
-                          </button>
-                        ))}
-                      </div>
-                      <button type="button" disabled={busy} onClick={() => (setMenu(null), challenge(r.card!))} className="w-full flex items-center gap-2 px-2 py-2 rounded-xl hover:bg-[#FAF8F5] text-sm font-semibold text-stone-800 cursor-pointer">
-                        <Sword className="w-4 h-4 text-[#C52828]" /> {tr('Challenge (7 days)')}
-                      </button>
-                      <FriendBadges card={r.card} />
-                      <button
-                        type="button"
-                        disabled={busy}
-                        onClick={() => {
-                          setMenu(null);
-                          if (window.confirm(`${tr('Remove')} ${r.name} ${tr('from your friends?')}`)) void run(() => social.removeFriend(r.card!.user_id));
-                        }}
-                        className="w-full text-left px-2 py-2 rounded-xl hover:bg-rose-50 text-sm text-rose-700 cursor-pointer"
-                      >
-                        {tr('Remove friend')}
-                      </button>
-                    </div>
-                  )}
-                </div>
+                <button
+                  type="button"
+                  onClick={() => setMenu(r.id)}
+                  className="w-10 h-10 rounded-xl border border-[#E2D9CC] grid place-items-center cursor-pointer shrink-0 active:bg-stone-100"
+                  aria-label={`${tr('Actions')}: ${r.name}`}
+                >
+                  <DotsThree className="w-5 h-5" weight="bold" />
+                </button>
               )}
             </li>
           ))}
         </ol>
       </section>
+
+      {menuRow?.card && (
+        <FriendSheet
+          card={menuRow.card}
+          week={menuRow.week}
+          streak={menuRow.streak}
+          todayDone={menuRow.todayDone}
+          busy={busy}
+          onClose={() => setMenu(null)}
+          onCheer={(k) => {
+            setMenu(null);
+            void cheer(menuRow.card!, k);
+          }}
+          onChallenge={() => {
+            setMenu(null);
+            void challenge(menuRow.card!);
+          }}
+          onRemove={() => {
+            setMenu(null);
+            void run(() => social.removeFriend(menuRow.card!.user_id));
+          }}
+        />
+      )}
 
       {(data?.outgoing.length || outgoingChallenges.length) ? (
         <section className="space-y-1.5">
@@ -365,20 +365,151 @@ export const FriendsView: React.FC<Props> = ({ signedIn, game, goal, myName, onN
   );
 };
 
-const FriendBadges: React.FC<{ card: FriendCard }> = ({ card }) => {
-  const got = BADGES.filter((b) => card.badges?.[b.id]).slice(-6);
-  if (!got.length) return null;
-  return (
-    <div className="px-2 py-1">
-      <p className="text-[11px] font-bold uppercase tracking-wider text-stone-400 mb-1">{tr('Latest badges')}</p>
-      <div className="flex flex-wrap gap-1">
-        {got.map((b) => (
-          <span key={b.id} title={tr(b.title)}>
-            <BadgeIcon icon={b.icon} tier={b.tier} earned size="sm" />
+const CHEER_LABEL: Record<Cheer['kind'], string> = { fire: 'Keep it up!', clap: 'Well done!', muscle: 'You can do it!', heart: 'Thinking of you' };
+
+/** Actions on a friend: a bottom sheet on phones, a centred dialog on larger screens. */
+const FriendSheet: React.FC<{
+  card: FriendCard;
+  week: number;
+  streak: number;
+  todayDone: boolean;
+  busy: boolean;
+  onClose: () => void;
+  onCheer: (k: Cheer['kind']) => void;
+  onChallenge: () => void;
+  onRemove: () => void;
+}> = ({ card, week, streak, todayDone, busy, onClose, onCheer, onChallenge, onRemove }) => {
+  const [confirmRemove, setConfirmRemove] = useState(false);
+  const got = BADGES.filter((b) => card.badges?.[b.id]);
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && onClose();
+    window.addEventListener('keydown', onKey);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      window.removeEventListener('keydown', onKey);
+      document.body.style.overflow = prev;
+    };
+  }, [onClose]);
+  return createPortal(
+    <div className="fixed inset-0 z-[80] bg-stone-950/50 flex items-end sm:items-center justify-center sm:p-4" onClick={onClose}>
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-label={card.name}
+        className="w-full sm:max-w-md max-h-[88vh] overflow-y-auto bg-white rounded-t-3xl sm:rounded-3xl shadow-xl pb-[max(1rem,env(safe-area-inset-bottom))] animate-in slide-in-from-bottom-4 duration-200"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="sm:hidden flex justify-center pt-2.5">
+          <span className="w-10 h-1.5 rounded-full bg-stone-200" />
+        </div>
+        <div className="flex items-start gap-3 px-5 pt-4">
+          <span className="w-12 h-12 rounded-2xl bg-[#1C1917] text-white grid place-items-center text-lg font-black shrink-0">
+            {(card.name || '?').charAt(0).toUpperCase()}
           </span>
-        ))}
+          <div className="flex-1 min-w-0">
+            <div className="text-lg font-extrabold text-stone-950 break-words">{card.name}</div>
+            <div className="text-sm text-stone-500">{(card.level || 'hsk1').toUpperCase().replace('HSK', 'HSK ')}</div>
+          </div>
+          <button type="button" onClick={onClose} className="w-10 h-10 rounded-xl bg-stone-100 grid place-items-center cursor-pointer shrink-0" aria-label={tr('Close')}>
+            <X className="w-4 h-4" />
+          </button>
+        </div>
+
+        <div className="grid grid-cols-3 gap-2 px-5 mt-4">
+          <div className="p-2.5 rounded-2xl bg-[#FAF8F5] border border-[#EFE8DE] text-center">
+            <div className="text-xl font-black text-stone-900 inline-flex items-center gap-1">
+              <Flame className={`w-5 h-5 ${streak ? 'text-orange-500' : 'text-stone-300'}`} weight="fill" />
+              {streak}
+            </div>
+            <div className="text-xs text-stone-500">{tr('Streak')}</div>
+          </div>
+          <div className="p-2.5 rounded-2xl bg-[#FAF8F5] border border-[#EFE8DE] text-center">
+            <div className="text-xl font-black text-stone-900 tabular-nums">{week}</div>
+            <div className="text-xs text-stone-500">{tr('XP this week')}</div>
+          </div>
+          <div className="p-2.5 rounded-2xl bg-[#FAF8F5] border border-[#EFE8DE] text-center">
+            <div className="text-xl font-black text-stone-900">{got.length}</div>
+            <div className="text-xs text-stone-500">{tr('Badges')}</div>
+          </div>
+        </div>
+        <p className={`mx-5 mt-2 text-sm font-semibold flex items-center gap-1.5 ${todayDone ? 'text-emerald-700' : 'text-stone-500'}`}>
+          {todayDone ? <CheckCircle className="w-4 h-4" weight="fill" /> : <Flame className="w-4 h-4" />}
+          {todayDone ? tr('goal done today') : tr('goal not done yet')}
+        </p>
+
+        <div className="px-5 mt-5">
+          <p className="text-sm font-bold text-stone-900">{tr('Encourage')}</p>
+          <p className="text-xs text-stone-500">{tr('Your friend will see it the next time they open the app.')}</p>
+          <div className="grid grid-cols-2 gap-2 mt-2">
+            {(Object.keys(CHEER_EMOJI) as Cheer['kind'][]).map((k) => (
+              <button
+                key={k}
+                type="button"
+                disabled={busy}
+                onClick={() => onCheer(k)}
+                className="flex items-center gap-2 px-3 py-3 rounded-2xl border border-[#E8E2D8] text-left cursor-pointer active:bg-[#FAF8F5] hover:border-stone-900 disabled:opacity-50"
+              >
+                <span className="text-2xl leading-none">{CHEER_EMOJI[k]}</span>
+                <span className="text-sm font-semibold text-stone-800 leading-tight">{tr(CHEER_LABEL[k])}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div className="px-5 mt-4">
+          <button
+            type="button"
+            disabled={busy}
+            onClick={onChallenge}
+            className="w-full flex items-center gap-3 px-4 py-3.5 rounded-2xl bg-[#C52828] text-white text-left cursor-pointer hover:bg-[#A82020] disabled:opacity-50"
+          >
+            <Sword className="w-5 h-5 shrink-0" weight="fill" />
+            <span className="flex-1">
+              <span className="block text-sm font-bold">{tr('Challenge (7 days)')}</span>
+              <span className="block text-xs opacity-90">{tr('Whoever earns the most XP in 7 days wins +50 XP.')}</span>
+            </span>
+          </button>
+        </div>
+
+        {got.length > 0 && (
+          <div className="px-5 mt-5">
+            <p className="text-sm font-bold text-stone-900 mb-2">{tr('Latest badges')}</p>
+            <div className="flex flex-wrap gap-3">
+              {got.slice(-6).map((b) => (
+                <div key={b.id} className="w-16 flex flex-col items-center text-center">
+                  <BadgeIcon icon={b.icon} tier={b.tier} earned size="sm" />
+                  <div className="text-[11px] leading-tight text-stone-600 mt-1">{tr(b.title)}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <div className="px-5 mt-5">
+          {confirmRemove ? (
+            <div className="p-3 rounded-2xl bg-rose-50 border border-rose-200 space-y-2">
+              <p className="text-sm text-rose-900">
+                {tr('Remove')} <b>{card.name}</b> {tr('from your friends?')}
+              </p>
+              <div className="flex gap-2">
+                <button type="button" onClick={onRemove} disabled={busy} className="flex-1 py-2.5 rounded-xl bg-rose-700 text-white text-sm font-bold cursor-pointer">
+                  {tr('Remove')}
+                </button>
+                <button type="button" onClick={() => setConfirmRemove(false)} className="flex-1 py-2.5 rounded-xl border border-rose-200 text-sm font-semibold text-rose-900 cursor-pointer">
+                  {tr('Cancel')}
+                </button>
+              </div>
+            </div>
+          ) : (
+            <button type="button" onClick={() => setConfirmRemove(true)} className="w-full py-3 rounded-2xl text-sm font-semibold text-rose-700 cursor-pointer hover:bg-rose-50">
+              {tr('Remove friend')}
+            </button>
+          )}
+        </div>
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 };
 
