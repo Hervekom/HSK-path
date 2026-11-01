@@ -1,3 +1,5 @@
+import { doneLessons } from '../game/engine';
+import { HSK_LESSONS_DATA } from '../data/lessons';
 import React from 'react';
 import { tr } from '../locales/tr';
 import { levelWordTemplate, type CoreLevel } from '../data/hskWordCounts';
@@ -24,10 +26,12 @@ export const HskLevelsView: React.FC<HskLevelsViewProps> = ({
 }) => {
   const { t, getLocalized, language } = useI18n();
 
+  // Share of the level's lessons the learner has finished.
+  const done = doneLessons(user.game);
   const getProgressForLevel = (levelId: 'hsk1' | 'hsk2' | 'hsk3') => {
-    if (levelId === 'hsk1') return 100;
-    if (levelId === 'hsk2') return 68;
-    return 24;
+    const lessons = HSK_LESSONS_DATA.filter((l) => l.level === levelId);
+    if (!lessons.length) return 0;
+    return Math.round((lessons.filter((l) => done.has(l.id)).length / lessons.length) * 100);
   };
 
   return (
