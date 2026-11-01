@@ -212,7 +212,11 @@ class Deck:
             for i, (hz, py_, mean) in enumerate(a["rows"]):
                 base = box[1] + 90 + rh * i + (100 if rh == 140 else 86)
                 w = draw_text(d, (130, base), hz, "bold", 76, INK, cjk_kind="cjk")
-                d.text((130 + w + 36, base - 8), py_, font=font("bold", 50), fill=RED, anchor="ls")
+                # pinyin réduit automatiquement s'il chevaucherait le sens (min 30 px)
+                room = (W - 130 - d.textlength(mean, font=font("med", 36)) - 30) - (130 + w + 36)
+                ps = 50
+                while ps > 30 and d.textlength(py_, font=font("bold", ps)) > room: ps -= 2
+                d.text((130 + w + 36, base - 8), py_, font=font("bold", ps), fill=RED, anchor="ls")
                 d.text((W - 130, base - 8), mean, font=font("med", 36), fill=GREY, anchor="rs")
                 if i < n - 1: d.line((130, base + 42, W - 130, base + 42), fill=LINE, width=2)
             if a["note"]:
