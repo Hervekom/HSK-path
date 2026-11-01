@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { earn } from '../game/engine';
 import { tr } from '../locales/tr';
 import {
   ArrowLeft,
@@ -57,6 +58,7 @@ export const ListeningPracticeView: React.FC<ListeningPracticeViewProps> = ({ on
       setShowTranscript(false);
     } else {
       // Completed all
+      earn('practice');
       alert(`Drill completed! Score: ${correctCount + (selectedOptionId === currentEx.correctAnswerId ? 1 : 0)} / ${LISTENING_EXERCISES.length}`);
       onExit();
     }

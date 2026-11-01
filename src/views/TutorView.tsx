@@ -6,6 +6,7 @@ import { Button } from '../components/ui/Button';
 import { Send, Settings, RotateCcw, Eye, EyeOff, X, Lightbulb, AlertCircle, ExternalLink, Info, Target, CheckCircle2 } from '../components/icons';
 import type { AppState, UserProfile } from '../types';
 import { VoiceInputButton } from '../components/pronunciation/VoiceInputButton';
+import { earn } from '../game/engine';
 
 type Level = 'hsk1' | 'hsk2' | 'hsk3';
 type OwnProvider = 'groq' | 'gemini';
@@ -313,6 +314,7 @@ export const TutorView: React.FC<TutorViewProps> = ({ user, isSignedIn, knownWor
       if (!res.ok || !data?.ok) throw Object.assign(new Error('api'), { code: data?.error || 'unknown', data });
 
       if (data.quota) setQuota(data.quota);
+      earn('laoshi');
       setMessages((prev) => [
         ...prev,
         {

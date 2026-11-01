@@ -13,6 +13,8 @@ import {
   Settings,
   Shield,
   Microphone,
+  Trophy,
+  Users,
 } from '../icons';
 import type { AppState } from '../../types';
 
@@ -78,6 +80,8 @@ export const NAV_SECTIONS: NavSection[] = [
     title: 'My progress',
     items: [
       { id: 'progress', labelKey: 'nav.progress', icon: TrendingUp, views: ['progress'] },
+      { id: 'achievements', label: 'Badges & streak', icon: Trophy, views: ['achievements'] },
+      { id: 'friends', label: 'Friends', icon: Users, views: ['friends'] },
       { id: 'profile', labelKey: 'nav.profile', icon: Settings, views: ['profile'] },
       { id: 'admin', labelKey: 'nav.admin', icon: Shield, views: ['admin'], adminOnly: true },
     ],
@@ -105,7 +109,7 @@ const viewsOf = (...ids: View[]) =>
  * HSK courses are reached from the menu (☰), so Laoshi gets that slot.
  */
 export const MOBILE_TABS: TabItem[] = [
-  { id: 'dashboard', labelKey: 'navShort.home', icon: LayoutDashboard, views: viewsOf('dashboard', 'progress', 'profile', 'admin') },
+  { id: 'dashboard', labelKey: 'navShort.home', icon: LayoutDashboard, views: viewsOf('dashboard', 'progress', 'profile', 'admin', 'achievements', 'friends') },
   { id: 'tutor', label: 'Laoshi', icon: ChatCircleText, views: ['tutor'] },
   { id: 'practice-hub', label: 'Exercises', icon: Sparkles, views: viewsOf('practice-hub', 'pronunciation') },
   { id: 'vocabulary', labelKey: 'navShort.vocab', icon: BookOpen, views: viewsOf('vocabulary', 'phrases') },

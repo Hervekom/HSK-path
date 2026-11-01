@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { earn } from '../../game/engine';
 import { tr } from '../../locales/tr';
 import { Modal } from './Modal';
 import { Button } from './Button';
@@ -106,6 +107,7 @@ export const LessonStudyModal: React.FC<LessonStudyModalProps> = ({
 
   const handleFinish = () => {
     setIsCompleted(true);
+    earn('lesson', { key: `lesson:${lesson.id}` });
     if (onCompleteLesson) {
       onCompleteLesson(lesson.id);
     }

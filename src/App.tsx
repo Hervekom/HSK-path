@@ -16,6 +16,11 @@ import { HSK2_QUIZ_QUESTIONS, VOCAB_QUIZ_QUESTIONS, GRAMMAR_QUIZ_QUESTIONS } fro
 import { MOCK_TESTS_CATALOG, INITIAL_TEST_RESULTS } from './data/mockTests';
 import { INITIAL_USER_PROFILE } from './data/progressData';
 import { supabase, storedAuthUser } from './lib/supabase';
+import { earn, EARN_EVENT, STAT_EVENT, applyEarn, dailyGoalXp, dayKey, emptyGame, migrateGame, streakView, type EarnEvent } from './game/engine';
+import { newBadges, BADGES, type BadgeDef } from './game/badges';
+import { DailyMissionModal } from './components/game/DailyMissionModal';
+import { BadgeUnlockedModal } from './components/game/BadgeUnlockedModal';
+import { demoGame } from './game/demo';
 import { loadProgress, saveProgress, computeStreak, fetchIsAdmin, fetchPlan, hasPendingProgress } from './lib/progressStore';
 import { SRS_STORAGE_KEY } from './utils/srs';
 import { audioEngine } from './utils/audio';
@@ -44,12 +49,14 @@ const AdminView = lazy(() => import('./views/AdminView').then((m) => ({ default:
 const PhrasesView = lazy(() => import('./views/PhrasesView').then((m) => ({ default: m.PhrasesView })));
 const Hsk3ExamView = lazy(() => import('./views/Hsk3ExamView').then((m) => ({ default: m.Hsk3ExamView })));
 const TutorView = lazy(() => import('./views/TutorView').then((m) => ({ default: m.TutorView })));
+const AchievementsView = lazy(() => import('./views/AchievementsView').then((m) => ({ default: m.AchievementsView })));
+const FriendsView = lazy(() => import('./views/FriendsView').then((m) => ({ default: m.FriendsView })));
 const SpeakingTestView = lazy(() => import('./views/SpeakingTestView').then((m) => ({ default: m.SpeakingTestView })));
 const PronunciationView = lazy(() => import('./views/PronunciationView').then((m) => ({ default: m.PronunciationView })));
 
 const ALL_VIEWS: AppState['currentView'][] = [
   'landing', 'login', 'signup', 'dashboard', 'hsk-levels', 'hsk-detail', 'learn', 'vocabulary',
-  'practice-hub', 'tutor', 'pronunciation', 'speaking', 'quiz', 'listening-practice', 'reading-practice', 'writing-practice', 'mock-tests',
+  'practice-hub', 'tutor', 'pronunciation', 'speaking', 'achievements', 'friends', 'quiz', 'listening-practice', 'reading-practice', 'writing-practice', 'mock-tests',
   'mock-test-intro', 'mock-test-exam', 'test-results', 'review-mistakes', 'progress', 'profile', 'admin', 'phrases', 'hsk3-exam',
 ];
 const PUBLIC_VIEWS: AppState['currentView'][] = ['landing', 'login', 'signup', 'hsk-levels', 'hsk-detail'];
@@ -75,7 +82,7 @@ function HskPathApp() {
       return false;
     }
   });
-  const [user, setUser] = useState<UserProfile>(INITIAL_USER_PROFILE);
+  const [user, setUser] = useState<UserProfile>(() => ({ ...INITIAL_USER_PROFILE, game: demoGame() }));
   const [streakDays, setStreakDays] = useState(7);
   const [weeklyMinutes, setWeeklyMinutes] = useState(222); // 3h 42m
 
@@ -87,6 +94,7 @@ function HskPathApp() {
   // Everyday phrases marked as known (stored in learnedIds with a "phrase:" prefix)
   const [learnedPhraseIds, setLearnedPhraseIds] = useState<Set<string>>(new Set());
   const handleTogglePhrase = (key: string) => {
+    if (!learnedPhraseIds.has(key)) earn('phrase', { key });
     setLearnedPhraseIds((prev) => {
       const next = new Set(prev);
       if (next.has(key)) next.delete(key);
@@ -128,6 +136,7 @@ function HskPathApp() {
       prev.map((w) => {
         if (w.id === id) {
           const next = !w.isLearned;
+          if (next) earn('word', { key: `word:${id}` });
           addToast(next ? `Marked "${w.hanzi}" as learned!` : `Unmarked "${w.hanzi}"`, 'success');
           return { ...w, isLearned: next };
         }
@@ -161,8 +170,46 @@ function HskPathApp() {
   const offlineStartRef = useRef(false);
   const [srsTick, setSrsTick] = useState(0);
 
+  // ---------- Daily goal, streak and badges (src/game) ----------
+  const userRef = useRef(user);
+  userRef.current = user;
+  const goalXp = dailyGoalXp(user.dailyGoalMinutes);
+  const streak = streakView(user.game || emptyGame(), goalXp);
+  const [celebrate, setCelebrate] = useState<BadgeDef[]>([]);
+  const [missionOpen, setMissionOpen] = useState(false);
+
+  // Any page reports an activity with earn(); it is applied here and saved with the profile.
+  useEffect(() => {
+    const onEarn = (ev: Event) => {
+      const e = (ev as CustomEvent<EarnEvent>).detail;
+      const u = userRef.current;
+      const res = applyEarn(u.game || emptyGame(), e, dailyGoalXp(u.dailyGoalMinutes));
+      userRef.current = { ...u, game: res.game };
+      setUser((prev) => ({ ...prev, game: res.game }));
+      if (res.goalReached) {
+        addToast(`${tr('Daily goal reached!')} ${tr('Streak')}: ${res.game.streak.count} ${tr(res.game.streak.count > 1 ? 'days' : 'day')} 🔥`, 'success');
+      }
+    };
+    const onStat = (ev: Event) => {
+      const { key, value } = (ev as CustomEvent<{ key: string; value: number }>).detail;
+      const u = userRef.current;
+      const g = u.game || emptyGame();
+      if (g.stats[key] === value) return;
+      const game = { ...g, stats: { ...g.stats, [key]: value } };
+      userRef.current = { ...u, game };
+      setUser((prev) => ({ ...prev, game }));
+    };
+    window.addEventListener(EARN_EVENT, onEarn);
+    window.addEventListener(STAT_EVENT, onStat);
+    return () => {
+      window.removeEventListener(EARN_EVENT, onEarn);
+      window.removeEventListener(STAT_EVENT, onStat);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const resetToDemoData = () => {
-    setUser(INITIAL_USER_PROFILE);
+    setUser({ ...INITIAL_USER_PROFILE, game: demoGame() });
     setStreakDays(7);
     setWeeklyMinutes(222);
     setVocabList(VOCABULARY_DATA);
@@ -220,7 +267,7 @@ function HskPathApp() {
       // ignore
     }
 
-    setUser(profile);
+    setUser({ ...profile, game: migrateGame((stored?.profile as { game?: unknown } | undefined)?.game, stored?.streakDays, stored?.lastActiveDate) });
     setVocabList(VOCABULARY_DATA.map((w) => ({ ...w, isLearned: learned.has(w.id), isFavorite: favs.has(w.id) })));
     setLearnedPhraseIds(new Set([...learned].filter((id) => id.startsWith('phrase:'))));
     setTestHistory(stored?.testHistory || []);
@@ -468,6 +515,50 @@ function HskPathApp() {
     return () => window.removeEventListener('popstate', onPop);
   }, []);
 
+  // Badges: checked whenever the progress changes.
+  const wordsLearned = vocabList.filter((w) => w.isLearned).length;
+  const gameReady = hydrated || isDemo;
+  useEffect(() => {
+    const g = user.game;
+    if (!g || !gameReady) return;
+    const found = newBadges(g, { words: wordsLearned, phrases: learnedPhraseIds.size, friends: g.stats.friends || 0 });
+    if (!found.length) return;
+    const today = dayKey();
+    const add = Object.fromEntries(found.map((b) => [b.id, today]));
+    setUser((prev) => {
+      const pg = prev.game || emptyGame();
+      return { ...prev, game: { ...pg, badges: { ...pg.badges, ...add } } };
+    });
+    setCelebrate((c) => [...c, ...found.filter((b) => !c.some((x) => x.id === b.id))]);
+  }, [user.game, wordsLearned, learnedPhraseIds.size, gameReady]);
+
+  // The streak shown everywhere is the daily-goal streak.
+  useEffect(() => {
+    if (gameReady) setStreakDays(streak.count);
+  }, [streak.count, gameReady]);
+
+  // Reminder of today's goal: once a day, when the learner arrives in the app.
+  useEffect(() => {
+    if (!gameReady || ['landing', 'login', 'signup'].includes(currentView)) return;
+    const key = `hskpath_mission_${authUserId || 'demo'}_${dayKey()}`;
+    try {
+      if (localStorage.getItem(key)) return;
+    } catch {
+      // storage blocked: show it anyway
+    }
+    // the key is written only when the reminder really opens (the effect can re-run before)
+    const t = window.setTimeout(() => {
+      try {
+        localStorage.setItem(key, '1');
+      } catch {
+        // ignore
+      }
+      setMissionOpen(true);
+    }, 900);
+    return () => window.clearTimeout(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [gameReady, authUserId, currentView === 'landing' || currentView === 'login' || currentView === 'signup']);
+
   // Protected views need a session (or demo mode)
   useEffect(() => {
     if (!authChecked) return;
@@ -512,6 +603,7 @@ function HskPathApp() {
 
   // Mock Test Submission Handler
   const handleSubmitMockTest = (userAnswers: Record<string, string>, timeSpentSeconds: number) => {
+    earn('exam');
     // Calculate total score based on questions
     let score = 0;
     const listeningAnswers = activeTest.questions.filter((q) => q.section === 'listening');
@@ -761,6 +853,20 @@ function HskPathApp() {
           </AppLayout>
         );
 
+      case 'achievements':
+        return (
+          <AppLayout onSignOut={handleSignOut} isAdmin={isAdmin} hasPro={hasPro} currentView={currentView} onNavigate={navigate} user={user} streakDays={streakDays}>
+            <AchievementsView game={user.game || emptyGame()} goal={goalXp} words={wordsLearned} phrases={learnedPhraseIds.size} onNavigate={navigate} />
+          </AppLayout>
+        );
+
+      case 'friends':
+        return (
+          <AppLayout onSignOut={handleSignOut} isAdmin={isAdmin} hasPro={hasPro} currentView={currentView} onNavigate={navigate} user={user} streakDays={streakDays}>
+            <FriendsView signedIn={Boolean(authUserId)} game={user.game || emptyGame()} goal={goalXp} myName={user.name} onNavigate={navigate} />
+          </AppLayout>
+        );
+
       case 'speaking':
         return (
           <AppLayout
@@ -806,6 +912,7 @@ function HskPathApp() {
               title={activeQuizTitle}
               questions={activeQuizQuestions}
               onFinishQuiz={(score, total) => {
+                earn('quiz');
                 addToast(`Drill complete! ${score}/${total} correct.`, 'success');
               }}
               onExit={() => setCurrentView('practice-hub')}
@@ -901,6 +1008,7 @@ function HskPathApp() {
               onFinish={(result) => {
                 setTestHistory((h) => [result, ...h]);
                 setLatestResult(result);
+                earn('hsk3', { stats: result.isPassed ? { hsk3Pass: 1 } : {} });
               }}
             />
           </AppLayout>
@@ -1100,6 +1208,19 @@ function HskPathApp() {
   return (
     <div className="min-h-screen font-sans antialiased text-slate-900">
       <Suspense fallback={splash}>{renderViewContent()}</Suspense>
+      {missionOpen && (
+        <DailyMissionModal
+          streak={streak}
+          name={user.name}
+          signedIn={Boolean(authUserId)}
+          onClose={() => setMissionOpen(false)}
+          onGo={(view) => {
+            setMissionOpen(false);
+            navigate(view);
+          }}
+        />
+      )}
+      {!missionOpen && celebrate.length > 0 && <BadgeUnlockedModal badges={celebrate} onClose={() => setCelebrate([])} onSeeAll={() => (setCelebrate([]), navigate('achievements'))} />}
     </div>
   );
 }

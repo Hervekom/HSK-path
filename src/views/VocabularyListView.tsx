@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
+import { earn } from '../game/engine';
 import { NEW_WORDS, TOTAL_WORDS } from '../data/hskWordCounts';
 import { tr, trPos } from '../locales/tr';
 import {
@@ -128,6 +129,7 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
   const handleGradeWord = (wordId: string, grade: SRSGrade) => {
     const currentData = srsMap[wordId];
     const updated = calculateNextSRSState(currentData, grade);
+    earn('srs');
     const newMap = { ...srsMap, [wordId]: updated };
     setSrsMap(newMap);
     saveSRSState(newMap);

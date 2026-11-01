@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { earn } from '../game/engine';
 import { tr } from '../locales/tr';
 import {
   ArrowLeft,
@@ -71,6 +72,7 @@ export const WritingPracticeView: React.FC<WritingPracticeViewProps> = ({ onExit
       setIsAnswerChecked(false);
       setIsCorrect(false);
     } else {
+      earn('practice');
       alert(tr("Sentence ordering practice complete!"));
       onExit();
     }

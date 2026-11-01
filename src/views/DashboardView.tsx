@@ -1,3 +1,4 @@
+import { DailyGoalCard } from '../components/game/DailyGoalCard';
 import React from 'react';
 import { tr } from '../locales/tr';
 import { TOTAL_WORDS } from '../data/hskWordCounts';
@@ -78,6 +79,8 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
       </div>
 
       <InstallAppCard variant="banner" />
+
+      <DailyGoalCard user={user} onNavigate={onNavigate} />
 
       {/* 4 Luxury Stats Cards Grid */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">

@@ -108,12 +108,12 @@ export const AppHeader: React.FC<AppHeaderProps> = ({
 
         {/* Streak indicator */}
         <div
-          onClick={() => onNavigate('progress')}
+          onClick={() => onNavigate('achievements')}
           className="flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-[#FAF5EB] border border-[#E6D4B0] text-[#8C6405] text-xs font-bold cursor-pointer hover:bg-[#F5EAD4] transition-colors shadow-2xs"
           title={tr("Daily Study Streak")}
         >
           <Flame className="w-4 h-4 text-amber-600 fill-amber-500" />
-          <span>{streakDays}d</span>
+          <span>{streakDays}{tr('d')}</span>
         </div>
 
         {/* Global Search trigger for vocabulary */}

@@ -24,6 +24,7 @@ import {
   type QuestionTask,
 } from '../data/speakingTest';
 import type { AppState } from '../types';
+import { earn } from '../game/engine';
 
 type Part = 'repeat' | 'picture' | 'question';
 type Phase = 'intro' | Part | 'results';
@@ -93,6 +94,7 @@ export const SpeakingTestView: React.FC<Props> = ({ onNavigate }) => {
     setIdx(0);
     window.scrollTo({ top: 0 });
     if (!full) return setPhase('results');
+    if (phase === 'question') earn('speaking', { amount: 20, stats: { speakingFull: 1 } });
     setPhase(phase === 'repeat' ? 'picture' : phase === 'picture' ? 'question' : 'results');
   };
 
@@ -261,7 +263,10 @@ export const SpeakingTestView: React.FC<Props> = ({ onNavigate }) => {
           mission={`Speaking test, describe a picture: say in Chinese what the people in the picture are doing, in two or three sentences. The picture shows ${pictureSet[idx].scene}.`}
           canTranscribe={canTranscribe}
           language={language}
-          onResult={(r) => setOpenResults((o) => ({ ...o, [pictureSet[idx].id]: r }))}
+          onResult={(r) => {
+            setOpenResults((o) => ({ ...o, [pictureSet[idx].id]: r }));
+            earn('speaking');
+          }}
           onNext={goNext}
           last={idx === count - 1}
         />
@@ -284,7 +289,10 @@ export const SpeakingTestView: React.FC<Props> = ({ onNavigate }) => {
           mission={`Speaking test, answer a question: answer "${questionSet[idx].question}" in Chinese with three to five connected sentences at HSK 3 level.`}
           canTranscribe={canTranscribe}
           language={language}
-          onResult={(r) => setOpenResults((o) => ({ ...o, [questionSet[idx].id]: r }))}
+          onResult={(r) => {
+            setOpenResults((o) => ({ ...o, [questionSet[idx].id]: r }));
+            earn('speaking');
+          }}
           onNext={goNext}
           last={idx === count - 1}
         />

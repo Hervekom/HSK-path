@@ -1,4 +1,5 @@
 // What the learner has practised on the Pronunciation page, kept in this browser only.
+import { earn } from '../game/engine';
 const KEY = 'hskpath_pron_v1';
 
 /** Set by other pages (e.g. a vocabulary card) to open one word on the Pronunciation page. */
@@ -51,6 +52,7 @@ export function recordScore(key: string, score: number): PronProgress {
   const prev = p.items[key];
   p.items[key] = { best: Math.max(prev?.best ?? 0, score), last: score, n: (prev?.n ?? 0) + 1, t: Date.now() };
   save(p);
+  earn('pron', { stats: score >= 90 ? { pronGreat: 1 } : {} });
   return p;
 }
 
@@ -58,5 +60,6 @@ export function recordTones(kind: 'listen' | 'say', ok: number, n: number): Pron
   const p = loadProgress();
   p[kind] = { ok: p[kind].ok + ok, n: p[kind].n + n };
   save(p);
+  earn('tones');
   return p;
 }

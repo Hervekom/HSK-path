@@ -270,6 +270,8 @@ export interface UserProfile {
     studyReminders: boolean;
     testReminders: boolean;
   };
+  /** Daily goal, streak, XP and badges (src/game/engine.ts). */
+  game?: import('./game/engine').GameState;
 }
 
 export interface DailyVocabItem {
@@ -317,6 +319,8 @@ export interface AppState {
     | 'tutor' 
     | 'pronunciation'
     | 'speaking'
+    | 'achievements'
+    | 'friends'
     | 'quiz' 
     | 'listening-practice' 
     | 'reading-practice' 

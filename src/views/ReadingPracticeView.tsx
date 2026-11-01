@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { earn } from '../game/engine';
 import { tr } from '../locales/tr';
 import {
   ArrowLeft,
@@ -49,6 +50,7 @@ export const ReadingPracticeView: React.FC<ReadingPracticeViewProps> = ({ onExit
       setSelectedOptionId(null);
       setIsAnswerSubmitted(false);
     } else {
+      earn('practice');
       alert(tr("Reading practice complete!"));
       onExit();
     }
