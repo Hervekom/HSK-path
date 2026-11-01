@@ -24,3 +24,10 @@ C'est le format du 1er TikTok (欢迎) : 613 vues et 28 j'aime en ~16 h pour un 
 # Appels à l'engagement (demande de Herve)
 Chaque publication pousse à liker, commenter, sauvegarder et SURTOUT partager.
 `make_guess(..., share="Send this to a friend learning Chinese")` ajoute la ligne de partage sur la slide 3.
+
+# Mettre à jour les captures de l'app (quand le code de l'app change)
+1. git clone --depth 1 https://github.com/Hervekom/hsk-path (branche main) ; npm install ; PORT=3123 npx tsx server.ts &
+2. Playwright (python), viewport 390×844, device_scale_factor 3, is_mobile ; add_init_script("sessionStorage.setItem('hsk_demo','1')") pour le mode démo.
+3. Pour chaque vue : goto http://localhost:3123/#/<vue>, reload, attendre que le texte de la page dépasse 200 caractères, screenshot → assets/app-screens/<vue>.png
+   Vues : landing dashboard hsk-levels vocabulary phrases novels pronunciation speaking achievements practice-hub tutor mock-tests progress listening-practice quiz
+4. Mettre à jour assets/APP-FEATURES.md (fonctionnalités + commit de référence).
