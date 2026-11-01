@@ -176,6 +176,8 @@ export const GAME_STRINGS: Record<string, { fr?: string; zh?: string }> = {
   "The great myths and legends every Chinese person knows. Short stories (7 to 15 minutes).": { fr: "Les grands mythes et légendes que tout Chinois connaît. Histoires courtes (7 à 15 minutes).", zh: "每个中国人都知道的神话传说。短篇故事（7 到 15 分钟）。" },
   "Chinese stories written only in pinyin. Read the whole story, then answer the questions to check that you really understood it.": { fr: "Des histoires chinoises écrites uniquement en pinyin. Lisez toute l’histoire, puis répondez aux questions pour vérifier que vous l’avez vraiment comprise.", zh: "只用拼音写成的中国故事。读完整个故事，再回答问题，看看你是否真的读懂了。" },
   "Read 15 stories in pinyin.": { fr: "Lisez 15 histoires en pinyin.", zh: "读完 15 个拼音故事。" },
+  "Translation": { fr: "Traduction", zh: "翻译" },
+  "See the translation": { fr: "Voir la traduction", zh: "查看翻译" },
   'Time left': { fr: 'Temps restant', zh: '剩余时间' },
   'Today': { fr: 'Aujourd\'hui', zh: '今天' },
   'Today: done': { fr: 'Aujourd\'hui : fait', zh: '今天：已完成' },

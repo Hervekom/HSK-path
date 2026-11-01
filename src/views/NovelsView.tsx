@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import {
-  ArrowLeft, ArrowRight, BookOpenText, CheckCircle, Clock, Eye, EyeSlash, ListBullets, Question, SpeakerHigh, Stop, TextAa, Trophy, X, XCircle,
+  ArrowLeft, ArrowRight, BookOpenText, Translate, CheckCircle, Clock, Eye, EyeSlash, ListBullets, Question, SpeakerHigh, Stop, TextAa, Trophy, X, XCircle,
 } from '@phosphor-icons/react';
 import { tr } from '../locales/tr';
 import { useI18n } from '../locales';
@@ -30,7 +30,7 @@ interface NovelMeta {
 }
 interface Novel extends NovelMeta {
   chapters: never;
-  chapterList: Array<{ title: Tok[]; paragraphs: Tok[][] }>;
+  chapterList: Array<{ title: Tok[]; paragraphs: Tok[][]; titleTr?: L2; tr?: L2[] }>;
   glossary: Array<{ w: string; p: string; fr: string; en: string }>;
   questions: never;
   quiz: Array<{ q: L2; options: L2[]; answer: number; why: L2 }>;
@@ -92,11 +92,11 @@ function savePos(id: string, chapter: number) {
 }
 
 const PREF_KEY = 'hskpath_novel_prefs';
-function readPrefs(): { size: number; hanzi: boolean } {
+function readPrefs(): { size: number; hanzi: boolean; tr: boolean } {
   try {
-    return { size: 1, hanzi: false, ...JSON.parse(localStorage.getItem(PREF_KEY) || '{}') };
+    return { size: 1, hanzi: false, tr: false, ...JSON.parse(localStorage.getItem(PREF_KEY) || '{}') };
   } catch {
-    return { size: 1, hanzi: false };
+    return { size: 1, hanzi: false, tr: false };
   }
 }
 
@@ -243,6 +243,7 @@ const NovelReader: React.FC<{ id: string; onBack: () => void; best?: number; L: 
   const [picked, setPicked] = useState<Word | null>(null);
   const [glossary, setGlossary] = useState(false);
   const [playing, setPlaying] = useState<number | null>(null);
+  const [revealed, setRevealed] = useState<Set<number>>(new Set());
   const topRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -261,6 +262,7 @@ const NovelReader: React.FC<{ id: string; onBack: () => void; best?: number; L: 
     audioEngine.stop();
     setPlaying(null);
     setPicked(null);
+    setRevealed(new Set());
     topRef.current?.scrollIntoView({ block: 'start' });
     window.scrollTo({ top: 0 });
   }, [chapter, id]);
@@ -291,17 +293,28 @@ const NovelReader: React.FC<{ id: string; onBack: () => void; best?: number; L: 
     <div ref={topRef} className="max-w-3xl mx-auto space-y-5 animate-in fade-in duration-150 pb-24">
       {/* header */}
       <div className="flex items-center justify-between gap-2">
-        <button type="button" onClick={onBack} className="inline-flex items-center gap-1.5 text-sm font-bold text-stone-600 hover:text-stone-950 cursor-pointer py-2">
-          <ArrowLeft className="w-4 h-4" /> {tr('All stories')}
+        <button type="button" onClick={onBack} className="inline-flex items-center gap-1.5 text-sm font-bold text-stone-600 hover:text-stone-950 cursor-pointer py-2 min-w-10 whitespace-nowrap" aria-label={tr('All stories')}>
+          <ArrowLeft className="w-4 h-4 shrink-0" /> <span className="hidden sm:inline">{tr('All stories')}</span>
         </button>
         <div className="flex items-center gap-1.5">
+          {ch.tr && (
+            <button
+              type="button"
+              onClick={() => setPrefs((p) => ({ ...p, tr: !p.tr }))}
+              className={`inline-flex items-center gap-1.5 h-10 px-3 rounded-xl border text-sm font-bold cursor-pointer ${prefs.tr ? 'bg-[#1C1917] text-white border-[#1C1917]' : 'bg-white border-[#E2D9CC] text-stone-700'}`}
+              aria-pressed={prefs.tr}
+              aria-label={tr('Translation')}
+            >
+              <Translate className="w-4 h-4" /> <span className="hidden sm:inline">{tr('Translation')}</span>
+            </button>
+          )}
           <button
             type="button"
             onClick={() => setPrefs((p) => ({ ...p, hanzi: !p.hanzi }))}
             className={`inline-flex items-center gap-1.5 h-10 px-3 rounded-xl border text-sm font-bold cursor-pointer ${prefs.hanzi ? 'bg-[#1C1917] text-white border-[#1C1917]' : 'bg-white border-[#E2D9CC] text-stone-700'}`}
             aria-pressed={prefs.hanzi}
           >
-            {prefs.hanzi ? <Eye className="w-4 h-4" /> : <EyeSlash className="w-4 h-4" />} 汉字
+            {prefs.hanzi ? <Eye className="w-4 h-4 hidden sm:block" /> : <EyeSlash className="w-4 h-4 hidden sm:block" />} <span className="whitespace-nowrap">汉字</span>
           </button>
           <button
             type="button"
@@ -328,6 +341,7 @@ const NovelReader: React.FC<{ id: string; onBack: () => void; best?: number; L: 
           {tr('Chapter')} {chapter + 1} / {total}
         </div>
         <h1 className="text-2xl sm:text-3xl font-extrabold text-stone-950">{words(ch.title).map((w) => w.pre + w.p + w.post).join(' ')}</h1>
+        {ch.titleTr && prefs.tr && <p className="text-sm italic text-stone-500">{L(ch.titleTr)}</p>}
         {chapter === 0 && <p className="text-sm text-stone-500">{novel.titlePinyin} · {L(novel.title)}</p>}
         <div className="flex justify-center gap-1 pt-2">
           {novel.chapterList.map((_, i) => (
@@ -346,7 +360,8 @@ const NovelReader: React.FC<{ id: string; onBack: () => void; best?: number; L: 
       <article className="p-5 sm:p-8 rounded-3xl bg-[#FFFDF8] border border-[#EDE4D3] space-y-6">
         {ch.paragraphs.map((para, pi) => (
           <div key={pi} className="flex gap-3">
-            <p className={`flex-1 min-w-0 text-stone-900 ${SIZES[prefs.size]}`}>
+            <div className="flex-1 min-w-0">
+            <p className={`text-stone-900 ${SIZES[prefs.size]}`}>
               {words(para).map((w, wi) => (
                 <React.Fragment key={wi}>
                   <button
@@ -367,6 +382,19 @@ const NovelReader: React.FC<{ id: string; onBack: () => void; best?: number; L: 
                 </React.Fragment>
               ))}
             </p>
+            {ch.tr?.[pi] &&
+              (prefs.tr || revealed.has(pi) ? (
+                <p className="mt-2 pl-3 border-l-2 border-[#E5C9A8] text-[0.95rem] leading-relaxed text-stone-600 italic">{L(ch.tr[pi])}</p>
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => setRevealed((r) => new Set(r).add(pi))}
+                  className="mt-1 inline-flex items-center gap-1 text-xs font-semibold text-stone-400 hover:text-stone-700 cursor-pointer py-1"
+                >
+                  <Translate className="w-3.5 h-3.5" /> {tr('See the translation')}
+                </button>
+              ))}
+            </div>
             <button
               type="button"
               onClick={() => speak(pi, plainHanzi(para))}

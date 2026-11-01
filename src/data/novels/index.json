@@ -1,5 +1,6 @@
 [
  {
+  "translated": true,
   "id": "pangu",
   "order": 1,
   "category": "legend",
@@ -19,6 +20,7 @@
   "questions": 13
  },
  {
+  "translated": true,
   "id": "nuwa",
   "order": 2,
   "category": "legend",
@@ -38,6 +40,7 @@
   "questions": 14
  },
  {
+  "translated": true,
   "id": "houyi",
   "order": 3,
   "category": "legend",
@@ -57,6 +60,7 @@
   "questions": 13
  },
  {
+  "translated": true,
   "id": "change",
   "order": 4,
   "category": "legend",
@@ -76,6 +80,7 @@
   "questions": 13
  },
  {
+  "translated": true,
   "id": "jingwei",
   "order": 5,
   "category": "legend",
@@ -95,6 +100,7 @@
   "questions": 13
  },
  {
+  "translated": true,
   "id": "yugong",
   "order": 6,
   "category": "legend",
@@ -114,6 +120,7 @@
   "questions": 13
  },
  {
+  "translated": true,
   "id": "niulang",
   "order": 7,
   "category": "legend",
@@ -133,6 +140,7 @@
   "questions": 13
  },
  {
+  "translated": true,
   "id": "mulan",
   "order": 8,
   "category": "legend",
@@ -152,6 +160,7 @@
   "questions": 13
  },
  {
+  "translated": true,
   "id": "baishe",
   "order": 9,
   "category": "legend",
@@ -171,6 +180,7 @@
   "questions": 13
  },
  {
+  "translated": true,
   "id": "liangzhu",
   "order": 10,
   "category": "legend",
@@ -190,6 +200,7 @@
   "questions": 13
  },
  {
+  "translated": true,
   "id": "mengjiangnu",
   "order": 11,
   "category": "legend",
@@ -209,6 +220,7 @@
   "questions": 13
  },
  {
+  "translated": true,
   "id": "wukong",
   "order": 12,
   "category": "legend",
@@ -228,6 +240,7 @@
   "questions": 14
  },
  {
+  "translated": true,
   "id": "caochuan",
   "order": 13,
   "category": "legend",
@@ -247,6 +260,7 @@
   "questions": 13
  },
  {
+  "translated": true,
   "id": "nianshou",
   "order": 14,
   "category": "legend",
@@ -266,6 +280,7 @@
   "questions": 13
  },
  {
+  "translated": true,
   "id": "maliang",
   "order": 15,
   "category": "legend",
@@ -285,6 +300,7 @@
   "questions": 13
  },
  {
+  "translated": true,
   "id": "kongzi",
   "order": 101,
   "category": "history",
@@ -308,6 +324,7 @@
   "questions": 13
  },
  {
+  "translated": true,
   "id": "qinshihuang",
   "order": 102,
   "category": "history",
@@ -331,6 +348,7 @@
   "questions": 14
  },
  {
+  "translated": true,
   "id": "zhangqian",
   "order": 103,
   "category": "history",
@@ -354,6 +372,7 @@
   "questions": 13
  },
  {
+  "translated": true,
   "id": "simaqian",
   "order": 104,
   "category": "history",
@@ -377,6 +396,7 @@
   "questions": 13
  },
  {
+  "translated": true,
   "id": "cailun",
   "order": 105,
   "category": "history",
@@ -400,6 +420,7 @@
   "questions": 13
  },
  {
+  "translated": true,
   "id": "libing",
   "order": 106,
   "category": "history",
@@ -423,6 +444,7 @@
   "questions": 13
  },
  {
+  "translated": true,
   "id": "xuanzang",
   "order": 107,
   "category": "history",
@@ -446,6 +468,7 @@
   "questions": 14
  },
  {
+  "translated": true,
   "id": "jianzhen",
   "order": 108,
   "category": "history",
@@ -469,6 +492,7 @@
   "questions": 13
  },
  {
+  "translated": true,
   "id": "libai",
   "order": 109,
   "category": "history",
@@ -492,6 +516,7 @@
   "questions": 13
  },
  {
+  "translated": true,
   "id": "zhenghe",
   "order": 110,
   "category": "history",
@@ -515,6 +540,7 @@
   "questions": 13
  },
  {
+  "translated": true,
   "id": "yuefei",
   "order": 111,
   "category": "history",
@@ -538,6 +564,7 @@
   "questions": 13
  },
  {
+  "translated": true,
   "id": "lishizhen",
   "order": 112,
   "category": "history",
@@ -561,6 +588,7 @@
   "questions": 13
  },
  {
+  "translated": true,
   "id": "zhantianyou",
   "order": 113,
   "category": "history",
@@ -584,6 +612,7 @@
   "questions": 13
  },
  {
+  "translated": true,
   "id": "tuyouyou",
   "order": 114,
   "category": "history",
@@ -607,6 +636,7 @@
   "questions": 13
  },
  {
+  "translated": true,
   "id": "yuanlongping",
   "order": 115,
   "category": "history",

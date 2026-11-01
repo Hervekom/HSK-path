@@ -1,7 +1,7 @@
 // Builds src/data/novels/*.json from content/novels/*.json: adds the pinyin of every word.
 // Source paragraphs are written with a space between words; "^" marks a proper name.
 // Run: npx tsx scripts/build-novels.ts
-import { readFileSync, writeFileSync, readdirSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, readdirSync, mkdirSync, existsSync } from 'node:fs';
 import { pinyin } from 'pinyin-pro';
 
 const SRC = 'content/novels';
@@ -151,12 +151,34 @@ for (const f of readdirSync(SRC).filter((f) => (f.endsWith('.json') || f.endsWit
     title: tokens(c.title),
     paragraphs: c.paragraphs.map((p) => tokens(p)),
   }));
+  // translations (content/novels/tr/<id>.txt): "# fr | en" per chapter title, "fr | en" per paragraph
+  const trFile = `${SRC}/tr/${s.id}.txt`;
+  if (existsSync(trFile)) {
+    const lines = readFileSync(trFile, 'utf8').split('\n').map((l) => l.trim()).filter(Boolean);
+    const split = (l: string) => {
+      const i = l.lastIndexOf(' | ');
+      if (i < 0) throw new Error(`${s.id}: missing " | " in ${l.slice(0, 60)}`);
+      return { fr: l.slice(0, i).trim(), en: l.slice(i + 3).trim() };
+    };
+    let k = 0;
+    chapters.forEach((c: any, ci: number) => {
+      const t = lines[k++];
+      if (!t || !t.startsWith('# ')) throw new Error(`${s.id}: chapter ${ci + 1} title expected, got ${t?.slice(0, 40)}`);
+      c.titleTr = split(t.slice(2));
+      c.tr = c.paragraphs.map((_: unknown, pi: number) => {
+        const l = lines[k++];
+        if (!l || l.startsWith('# ')) throw new Error(`${s.id}: chapter ${ci + 1} paragraph ${pi + 1} missing`);
+        return split(l);
+      });
+    });
+    if (k !== lines.length) throw new Error(`${s.id}: ${lines.length - k} extra translation lines`);
+  }
   const chars = s.chapters.reduce((n: number, c: { paragraphs: string[] }) => n + c.paragraphs.join('').replace(/[^㐀-鿿]/g, '').length, 0);
   const glossary = s.glossary.map((g: { w: string }) => ({ ...g, p: g.w.split(' / ').map((w) => FIX[w] ?? apostrophe(neutral(w, pinyin(w, { type: 'array', toneSandhi: true }) as string[]))).join(' / ') }));
   const titlePy = s.titlePinyin ?? pinyin(s.hanzi);
   const story = { ...s, titlePinyin: titlePy, chars, chapters, glossary };
   writeFileSync(`${OUT}/${s.id}.json`, JSON.stringify(story));
-  index.push({ id: s.id, order: s.order, category: s.category ?? 'legend', era: s.era, hanzi: s.hanzi, titlePinyin: titlePy, title: s.title, level: s.level, summary: s.summary, chars, chapters: chapters.length, questions: s.questions.length });
+  index.push({ translated: chapters.every((c: any) => c.tr), id: s.id, order: s.order, category: s.category ?? 'legend', era: s.era, hanzi: s.hanzi, titlePinyin: titlePy, title: s.title, level: s.level, summary: s.summary, chars, chapters: chapters.length, questions: s.questions.length });
   console.log(s.id, chars, 'chars');
 }
 (index as Array<{ order: number }>).sort((a, b) => a.order - b.order);
