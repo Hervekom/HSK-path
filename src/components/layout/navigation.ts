@@ -63,7 +63,7 @@ export const NAV_SECTIONS: NavSection[] = [
         icon: Sparkles,
         views: ['practice-hub', 'quiz', 'listening-practice', 'reading-practice', 'writing-practice'],
       },
-      { id: 'pronunciation', label: 'Pronunciation', icon: Microphone, views: ['pronunciation'] },
+      { id: 'pronunciation', label: 'Pronunciation', icon: Microphone, views: ['pronunciation', 'speaking'] },
       { id: 'tutor', labelKey: 'nav.tutor', icon: ChatCircleText, views: ['tutor'] },
       {
         id: 'mock-tests',

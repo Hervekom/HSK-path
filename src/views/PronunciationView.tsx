@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { tr } from '../locales/tr';
 import { useI18n } from '../locales';
-import { Info, Lock, Waveform, BookOpen, ChatsCircle } from '../components/icons';
+import { Info, Lock, Waveform, BookOpen, ChatsCircle, Microphone, ArrowRight } from '../components/icons';
 import { HSK_LESSONS_DATA } from '../data/lessons';
 import type { AppState, HskLesson, LessonScene } from '../types';
 import { loadWordAudio, wordId } from '../utils/wordAudio';
@@ -39,7 +39,7 @@ function readFocus(): { hanzi: string; pinyin: string } | null {
   }
 }
 
-export const PronunciationView: React.FC<PronunciationViewProps> = ({ hasPro, isSignedIn }) => {
+export const PronunciationView: React.FC<PronunciationViewProps> = ({ hasPro, isSignedIn, onNavigate }) => {
   const { getLocalized } = useI18n();
   const [focus] = useState(readFocus);
   const [tab, setTab] = useState<Tab>(() => {
@@ -92,6 +92,22 @@ export const PronunciationView: React.FC<PronunciationViewProps> = ({ hasPro, is
           ))}
         </dl>
       </div>
+
+      <button
+        type="button"
+        onClick={() => onNavigate('speaking')}
+        className="w-full text-left p-4 rounded-2xl bg-[#1C1917] text-white flex items-center gap-4 hover:bg-stone-800 cursor-pointer"
+      >
+        <span className="w-11 h-11 rounded-xl bg-[#C52828] grid place-items-center shrink-0">
+          <Microphone className="w-5 h-5" />
+        </span>
+        <span className="min-w-0 flex-1">
+          <span className="block text-[11px] font-bold uppercase tracking-wider text-rose-300">HSK 3.0 · {tr('New')}</span>
+          <span className="block text-base font-bold">{tr('HSK 3 speaking test')}</span>
+          <span className="block text-xs text-stone-300">{tr('Repeat sentences, describe pictures, answer questions: Laoshi checks your answers.')}</span>
+        </span>
+        <ArrowRight className="w-5 h-5 shrink-0" />
+      </button>
 
       {mic && <MicNotice error={mic} />}
 

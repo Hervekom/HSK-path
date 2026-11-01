@@ -33,6 +33,13 @@ interface SpeakCardProps {
   onPrev?: () => void;
   onNext?: () => void;
   onScored: (key: string, score: number) => void;
+  /**
+   * true: listen-and-repeat, the text stays hidden until the learner has spoken (or asks to see it).
+   * 'pinyin': read-aloud, the characters are shown but not the pinyin and meaning.
+   */
+  hideText?: boolean | 'pinyin';
+  /** Play the model as soon as the item is shown. */
+  autoPlay?: boolean;
 }
 
 interface Result {
@@ -103,7 +110,7 @@ function PinyinLine({ hanzi, pinyin, big }: { hanzi: string; pinyin: string; big
   );
 }
 
-export const SpeakCard: React.FC<SpeakCardProps> = ({ item, kind, canTranscribe, position, onPrev, onNext, onScored }) => {
+export const SpeakCard: React.FC<SpeakCardProps> = ({ item, kind, canTranscribe, position, onPrev, onNext, onScored, hideText, autoPlay }) => {
   const mic = useRecorder();
   const [slow, setSlow] = useState(false);
   const [playing, setPlaying] = useState<'model' | 'me' | 'both' | null>(null);
@@ -112,6 +119,7 @@ export const SpeakCard: React.FC<SpeakCardProps> = ({ item, kind, canTranscribe,
   const lastRec = useRef<Recording | null>(null);
   const stopMine = useRef<(() => void) | null>(null);
   const runId = useRef(0);
+  const [revealed, setRevealed] = useState(!hideText);
 
   // New item: clear the previous attempt.
   useEffect(() => {
@@ -121,6 +129,10 @@ export const SpeakCard: React.FC<SpeakCardProps> = ({ item, kind, canTranscribe,
     lastRec.current = null;
     mic.setError(null);
     stopAll();
+    setRevealed(!hideText);
+    let t: number | undefined;
+    if (autoPlay) t = window.setTimeout(() => playModel(), 350);
+    return () => window.clearTimeout(t);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [item.key]);
 
@@ -179,6 +191,7 @@ export const SpeakCard: React.FC<SpeakCardProps> = ({ item, kind, canTranscribe,
     const overall = overallScore(transcript ? transcript.accuracy : null, melody);
     setResult({ overall, melody, transcript, heard: heard && 'text' in heard ? heard.text : null, note, user, model });
     setBusy(false);
+    setRevealed(true);
     if (transcript || melody !== null) onScored(item.key, overall);
   }
 
@@ -197,14 +210,36 @@ export const SpeakCard: React.FC<SpeakCardProps> = ({ item, kind, canTranscribe,
             </span>
           )}
         </div>
-        <p
-          lang="zh-CN"
-          className={`font-hanzi font-bold text-stone-950 break-words ${kind === 'word' ? 'text-5xl sm:text-6xl' : 'text-2xl sm:text-3xl leading-snug'}`}
-        >
-          {item.hanzi}
-        </p>
-        <PinyinLine hanzi={item.hanzi} pinyin={item.pinyin} big={kind === 'word'} />
-        {item.meaning && <p className="text-sm text-stone-500">{item.meaning}</p>}
+        {revealed || hideText === 'pinyin' ? (
+          <>
+            <p
+              lang="zh-CN"
+              className={`font-hanzi font-bold text-stone-950 break-words ${kind === 'word' ? 'text-5xl sm:text-6xl' : 'text-2xl sm:text-3xl leading-snug'}`}
+            >
+              {item.hanzi}
+            </p>
+            {revealed ? (
+              <>
+                <PinyinLine hanzi={item.hanzi} pinyin={item.pinyin} big={kind === 'word'} />
+                {item.meaning && <p className="text-sm text-stone-500">{item.meaning}</p>}
+              </>
+            ) : (
+              <div className="space-y-1">
+                <p className="text-sm font-semibold text-stone-700">{tr('Read it aloud, then check')}</p>
+                <button type="button" onClick={() => setRevealed(true)} className="text-xs font-semibold text-[#C52828] underline underline-offset-2 cursor-pointer">
+                  {tr('Show the pinyin')}
+                </button>
+              </div>
+            )}
+          </>
+        ) : (
+          <div className="py-3 space-y-1">
+            <p className="text-base font-bold text-stone-900">{tr('Listen, then repeat')}</p>
+            <button type="button" onClick={() => setRevealed(true)} className="text-xs font-semibold text-[#C52828] underline underline-offset-2 cursor-pointer">
+              {tr('Show the text')}
+            </button>
+          </div>
+        )}
         <div className="flex items-center justify-center gap-2 pt-2">
           <button
             type="button"

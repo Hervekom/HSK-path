@@ -66,3 +66,49 @@ export async function transcribe(rec: Recording): Promise<TranscribeResult> {
   }
   return { text: String(body.text || ''), quota: body.quota ?? null, ownKey: Boolean(body.ownKey) };
 }
+
+/**
+ * Longer answers (speaking test): the recording is cut at quiet moments into pieces of at most
+ * 14 seconds, each checked like a short recording (each piece counts as one check).
+ * Returns what could be transcribed; throws only when the first piece fails.
+ */
+export async function transcribeLong(rec: Recording): Promise<TranscribeResult & { pieces: number }> {
+  const sr = rec.sampleRate;
+  const max = Math.floor(14 * sr);
+  const win = Math.floor(0.05 * sr);
+  const pieces: Float32Array[] = [];
+  let start = 0;
+  while (rec.samples.length - start > max) {
+    // quietest 50 ms window between 9 s and 14 s after the start of the piece
+    let best = start + max;
+    let bestE = Infinity;
+    for (let i = start + Math.floor(9 * sr); i + win < start + max; i += win) {
+      let e = 0;
+      for (let j = i; j < i + win; j++) e += rec.samples[j] * rec.samples[j];
+      if (e < bestE) {
+        bestE = e;
+        best = i + Math.floor(win / 2);
+      }
+    }
+    pieces.push(rec.samples.subarray(start, best));
+    start = best;
+  }
+  pieces.push(rec.samples.subarray(start));
+
+  const texts: string[] = [];
+  let quota: TranscribeResult['quota'] = null;
+  let own = false;
+  for (let k = 0; k < pieces.length; k++) {
+    if (pieces[k].length < 0.3 * sr) continue;
+    try {
+      const r = await transcribe({ samples: pieces[k], sampleRate: sr, hadSpeech: true });
+      texts.push(r.text);
+      quota = r.quota ?? quota;
+      own = r.ownKey;
+    } catch (e) {
+      if (!texts.length) throw e;
+      break;
+    }
+  }
+  return { text: texts.join(''), quota, ownKey: own, pieces: pieces.length };
+}

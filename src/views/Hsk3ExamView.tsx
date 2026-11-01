@@ -16,6 +16,27 @@ import {
   type H3Exam, type H3Question, type H3Group,
 } from '../data/hsk3';
 import type { TestResult } from '../types';
+import { pinyin as toPinyin } from 'pinyin-pro';
+import { Microphone } from '../components/icons';
+import { SpeakSheet } from '../components/pronunciation/SpeakSheet';
+import type { SpeakItem } from '../components/pronunciation/SpeakCard';
+
+/** Lines of a listening script to repeat aloud: wrapped lines joined, labels and questions removed. */
+function scriptLines(transcript: string): string[] {
+  const merged: string[] = [];
+  for (const raw of transcript.split('\n')) {
+    const l = raw.trim();
+    if (!l) continue;
+    if (/^(男|女|问)：|^★/.test(l) || !merged.length) merged.push(l);
+    else merged[merged.length - 1] += l;
+  }
+  return merged
+    .filter((l) => !/^(问：|★)/.test(l))
+    .map((l) => l.replace(/^(男|女)：/, ''))
+    .flatMap((l) => (l.length > 28 ? l.match(/[^。？！]+[。？！]?/g) || [l] : [l]))
+    .map((l) => l.trim())
+    .filter((l) => /[一-鿿]/.test(l));
+}
 
 const ICONS: Record<string, React.ComponentType<any>> = {
   Bicycle, Phone, AirplaneTilt, BookOpen: PhBookOpen, ForkKnife, Umbrella, Television, Basketball, Coffee,
@@ -776,6 +797,16 @@ const QuestionCard: React.FC<QCProps> = ({ q, group, value, onAnswer, orderSel, 
 
 const ReviewCard: React.FC<{ q: H3Question; group?: H3Group; given?: string; audioBase?: string }> = ({ q, group, given, audioBase }) => {
   const ok = isH3Correct(q, given);
+  const [repeat, setRepeat] = useState<SpeakItem[] | null>(null);
+  const openRepeat = () =>
+    setRepeat(
+      scriptLines(q.transcript || '').map((t) => ({
+        key: `s:${t}`,
+        hanzi: t,
+        pinyin: toPinyin(t, { toneType: 'symbol', nonZh: 'consecutive' }),
+        audio: audioEngine.recordingFor(t),
+      })),
+    );
   const label = (v?: string) => {
     if (!v) return '—';
     if (q.type === 'l-mc' || q.type === 'r-mc') {
@@ -817,6 +848,14 @@ const ReviewCard: React.FC<{ q: H3Question; group?: H3Group; given?: string; aud
         <div className="p-3 rounded-xl bg-[#FAF8F5] border border-[#EFE8DE] space-y-1.5">
           <div className="flex items-center justify-between">
             <span className="text-[11px] font-bold uppercase tracking-wider text-stone-500">{tr('Listening script')}</span>
+            <span className="flex items-center gap-1.5">
+            <button
+              type="button"
+              onClick={openRepeat}
+              className="inline-flex items-center gap-1 px-2 py-1 rounded-lg bg-[#1C1917] text-white text-[11px] font-bold cursor-pointer hover:bg-stone-800"
+            >
+              <Microphone className="w-3.5 h-3.5" /> {tr('Repeat')}
+            </button>
             {audioBase ? (
               <button
                 onClick={() => playItemAudio(audioBase, q)}
@@ -829,9 +868,13 @@ const ReviewCard: React.FC<{ q: H3Question; group?: H3Group; given?: string; aud
             ) : (
               <SpeechButton text={speakable(q.transcript)} size="sm" allowSpeedToggle />
             )}
+            </span>
           </div>
           <p className="font-hanzi-serif text-sm text-stone-800 whitespace-pre-line">{q.transcript}</p>
         </div>
+      )}
+      {repeat && repeat.length > 0 && (
+        <SpeakSheet title={`${tr('Repeat')} · ${q.n}`} kind="sentence" items={repeat} onClose={() => setRepeat(null)} />
       )}
     </div>
   );

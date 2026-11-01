@@ -5,6 +5,7 @@ import { supabase } from '../lib/supabase';
 import { Button } from '../components/ui/Button';
 import { Send, Settings, RotateCcw, Eye, EyeOff, X, Lightbulb, AlertCircle, ExternalLink, Info, Target, CheckCircle2 } from '../components/icons';
 import type { AppState, UserProfile } from '../types';
+import { VoiceInputButton } from '../components/pronunciation/VoiceInputButton';
 
 type Level = 'hsk1' | 'hsk2' | 'hsk3';
 type OwnProvider = 'groq' | 'gemini';
@@ -749,6 +750,13 @@ export const TutorView: React.FC<TutorViewProps> = ({ user, isSignedIn, knownWor
               </p>
             )}
           </div>
+          <VoiceInputButton
+            disabled={!isSignedIn || sending}
+            onText={(t) => {
+              setInput((cur) => (cur ? `${cur}${t}` : t).slice(0, MAX_CHARS));
+              inputRef.current?.focus();
+            }}
+          />
           <Button
             type="submit"
             disabled={!input.trim() || sending || !isSignedIn}

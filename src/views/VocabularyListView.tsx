@@ -21,6 +21,7 @@ import {
   TrendingUp,
   Award,
   Check,
+  Microphone,
 } from '../components/icons';
 import { useI18n } from '../locales';
 import { Card } from '../components/ui/Card';
@@ -29,6 +30,8 @@ import { Button } from '../components/ui/Button';
 import { SpeechButton } from '../components/ui/SpeechButton';
 import { VocabularyDetailModal } from './VocabularyDetailModal';
 import { focusWord } from '../utils/pronProgress';
+import { SpeakSheet } from '../components/pronunciation/SpeakSheet';
+import { loadWordAudio, wordId } from '../utils/wordAudio';
 import {
   loadSRSState,
   saveSRSState,
@@ -189,6 +192,15 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
     setVisibleCount(PAGE_SIZE);
   }, [searchQuery, selectedLevel, selectedStatus]);
   const activeFlashcard = currentCardList[sessionIndex] || currentCardList[0];
+
+  // "Say it" on a flashcard: read the characters aloud before flipping (pinyin hidden until checked).
+  const [sayIt, setSayIt] = useState<{ hanzi: string; pinyin: string; meaning: string; audio?: string; key: string } | null>(null);
+  const openSayIt = async (hanzi: string, pinyin: string, meaning: string) => {
+    const files = await loadWordAudio();
+    const id = wordId(hanzi, pinyin);
+    const key = id ? `w${id}` : `v:${hanzi}`;
+    setSayIt({ hanzi, pinyin, meaning, audio: files[key], key });
+  };
 
   return (
     <div className="space-y-8 animate-in fade-in duration-200">
@@ -398,7 +410,16 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
 
               {/* Card Bottom Controls */}
               <div className="flex items-center justify-between pt-4 border-t border-stone-100" onClick={(e) => e.stopPropagation()}>
-                <SpeechButton text={activeFlashcard.hanzi} size="md" showLabel />
+                <div className="flex items-center gap-2">
+                  <SpeechButton text={activeFlashcard.hanzi} size="md" showLabel />
+                  <button
+                    type="button"
+                    onClick={() => openSayIt(activeFlashcard.hanzi, activeFlashcard.pinyin, getLocalized(activeFlashcard.meaning))}
+                    className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-[#1C1917] text-white text-xs font-bold hover:bg-stone-800 cursor-pointer"
+                  >
+                    <Microphone className="w-4 h-4" /> {tr('Say it')}
+                  </button>
+                </div>
 
                 <div className="flex items-center gap-2">
                   <button
@@ -727,6 +748,16 @@ export const VocabularyListView: React.FC<VocabularyListViewProps> = ({
             </div>
           )}
         </div>
+      )}
+
+      {sayIt && (
+        <SpeakSheet
+          title={tr('Say it')}
+          kind="word"
+          hideText={isCardFlipped ? undefined : 'pinyin'}
+          onClose={() => setSayIt(null)}
+          items={[{ key: sayIt.key, hanzi: sayIt.hanzi, pinyin: sayIt.pinyin, meaning: sayIt.meaning, audio: sayIt.audio }]}
+        />
       )}
 
       {/* Vocabulary Detail Modal */}

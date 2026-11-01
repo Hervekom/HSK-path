@@ -4,11 +4,14 @@ import { Modal } from './Modal';
 import { Button } from './Button';
 import { Badge } from './Badge';
 import { SpeechButton } from './SpeechButton';
-import { BookOpen, MessageSquare, Award, CheckCircle2, XCircle, ArrowRight, Lightbulb, Volume2, PenTool, Globe, Target, Sparkles } from '../icons';
+import { Microphone, BookOpen, MessageSquare, Award, CheckCircle2, XCircle, ArrowRight, Lightbulb, Volume2, PenTool, Globe, Target, Sparkles } from '../icons';
 import type { HskLesson } from '../../types';
 import { audioEngine } from '../../utils/audio';
 import { isSyllabusWord, type CoreLevel } from '../../data/hskWordCounts';
 import { useI18n } from '../../locales';
+import { SpeakSheet } from '../pronunciation/SpeakSheet';
+import { RolePlaySheet, type RoleLine } from '../pronunciation/RolePlaySheet';
+import type { SpeakItem } from '../pronunciation/SpeakCard';
 
 interface LessonStudyModalProps {
   lesson: HskLesson | null;
@@ -35,6 +38,9 @@ export const LessonStudyModal: React.FC<LessonStudyModalProps> = ({
   const [activeTab, setActiveTab] = useState<LessonTab>('dialogue');
   const [selectedAnswers, setSelectedAnswers] = useState<Record<string, string>>({});
   const [isCompleted, setIsCompleted] = useState(false);
+  // Speaking practice opened from the lesson (repeat lines, role-play, pinyin examples).
+  const [speak, setSpeak] = useState<{ title: string; items: SpeakItem[]; start: number; kind: 'word' | 'sentence' } | null>(null);
+  const [rolePlay, setRolePlay] = useState<{ title: string; lines: RoleLine[] } | null>(null);
 
   // The story texts are a large file: load them only when a lesson is opened.
   const [story, setStory] = useState<{ id: string; scenes?: HskLesson['scenes']; story?: HskLesson['story'] } | null>(null);
@@ -172,7 +178,21 @@ export const LessonStudyModal: React.FC<LessonStudyModalProps> = ({
                         <h3 className="text-base sm:text-lg font-bold text-stone-900 leading-snug">{getLocalized(scene.title)}</h3>
                         {scene.setting && <p className="text-sm italic text-stone-500 leading-relaxed mt-0.5">{getLocalized(scene.setting)}</p>}
                       </div>
-                      <SpeechButton text={scene.lines.map((l) => l.audioText || l.hanzi).join('')} size="sm" />
+                      <div className="flex items-center gap-1.5 shrink-0">
+                        <button
+                          type="button"
+                          onClick={() =>
+                            setRolePlay({
+                              title: getLocalized(scene.title),
+                              lines: scene.lines.map((l) => ({ speaker: l.speaker, hanzi: l.hanzi, pinyin: l.pinyin, meaning: getLocalized(l.meaning), audioText: l.audioText })),
+                            })
+                          }
+                          className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-[#1C1917] text-white text-xs font-bold cursor-pointer hover:bg-stone-800"
+                        >
+                          <Microphone className="w-3.5 h-3.5" /> {tr('Role-play')}
+                        </button>
+                        <SpeechButton text={scene.lines.map((l) => l.audioText || l.hanzi).join('')} size="sm" />
+                      </div>
                     </div>
                   ) : (
                     <h3 className="text-sm font-bold uppercase tracking-wider text-stone-500">
@@ -183,7 +203,28 @@ export const LessonStudyModal: React.FC<LessonStudyModalProps> = ({
                     <div key={idx} className="p-3.5 sm:p-4 rounded-2xl bg-[#F8F5F0] border border-[#EBE3D7] hover:border-[#DFD5C6] transition-all space-y-1.5">
                       <div className="flex items-center justify-between">
                         <span className="text-xs font-bold text-[#C52828] px-2 py-0.5 rounded-md bg-[#C52828]/10">{line.speaker}</span>
-                        <SpeechButton text={line.audioText || line.hanzi} size="sm" />
+                        <div className="flex items-center gap-1.5">
+                          <button
+                            type="button"
+                            onClick={() =>
+                              setSpeak({
+                                title: scene.title ? getLocalized(scene.title) : tr('Repeat the dialogue'),
+                                kind: 'sentence',
+                                start: idx,
+                                items: scene.lines.map((l) => {
+                                  const text = (l.audioText || l.hanzi).trim();
+                                  return { key: `s:${text}`, hanzi: l.hanzi, pinyin: l.pinyin, meaning: getLocalized(l.meaning), audio: audioEngine.recordingFor(text) };
+                                }),
+                              })
+                            }
+                            className="w-8 h-8 rounded-lg border border-[#E2D8CC] bg-white grid place-items-center text-stone-700 hover:text-[#C52828] hover:border-[#C52828] cursor-pointer"
+                            aria-label={tr('Say it')}
+                            title={tr('Say it')}
+                          >
+                            <Microphone className="w-4 h-4" />
+                          </button>
+                          <SpeechButton text={line.audioText || line.hanzi} size="sm" />
+                        </div>
                       </div>
                       <div className="text-lg sm:text-xl font-bold text-stone-900 font-chinese tracking-wide">{line.hanzi}</div>
                       <div className="text-xs sm:text-sm text-stone-500 font-medium font-sans">{line.pinyin}</div>
@@ -302,13 +343,31 @@ export const LessonStudyModal: React.FC<LessonStudyModalProps> = ({
                 <p className="text-sm text-stone-700 leading-relaxed">{getLocalized(lesson.pronunciation.explanation)}</p>
               </div>
               <div className="grid grid-cols-2 gap-2.5">
-                {lesson.pronunciation.examples.map((ex) => (
+                {lesson.pronunciation.examples.map((ex, exIdx) => (
                   <div key={ex.hanzi} className="p-3.5 rounded-xl bg-[#FAF8F5] border border-[#EAE2D5] flex items-center justify-between gap-2">
                     <div className="min-w-0">
                       <div className="text-xl font-hanzi-serif font-bold text-stone-900">{ex.hanzi}</div>
                       <div className="text-sm text-[#9A3412]">{ex.pinyin}</div>
                     </div>
-                    <SpeechButton text={ex.hanzi} size="sm" />
+                    <div className="flex flex-col sm:flex-row items-center gap-1.5">
+                      <button
+                        type="button"
+                        onClick={() =>
+                          setSpeak({
+                            title: getLocalized(lesson.pronunciation!.title),
+                            kind: 'word',
+                            start: exIdx,
+                            items: lesson.pronunciation!.examples.map((e) => ({ key: `v:${e.hanzi}`, hanzi: e.hanzi, pinyin: e.pinyin, audio: audioEngine.recordingFor(e.hanzi) })),
+                          })
+                        }
+                        className="w-8 h-8 rounded-lg border border-[#E2D8CC] bg-white grid place-items-center text-stone-700 hover:text-[#C52828] hover:border-[#C52828] cursor-pointer"
+                        aria-label={tr('Say it')}
+                        title={tr('Say it')}
+                      >
+                        <Microphone className="w-4 h-4" />
+                      </button>
+                      <SpeechButton text={ex.hanzi} size="sm" />
+                    </div>
                   </div>
                 ))}
               </div>
@@ -486,6 +545,8 @@ export const LessonStudyModal: React.FC<LessonStudyModalProps> = ({
           </Button>
         </div>
       </div>
+      {speak && <SpeakSheet title={speak.title} items={speak.items} startIndex={speak.start} kind={speak.kind} onClose={() => setSpeak(null)} />}
+      {rolePlay && <RolePlaySheet title={rolePlay.title} lines={rolePlay.lines} onClose={() => setRolePlay(null)} />}
     </Modal>
   );
 };

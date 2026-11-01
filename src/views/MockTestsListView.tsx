@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { tr } from '../locales/tr';
 import { Hsk30Notice } from '../components/ui/Hsk30Notice';
-import { Clock, Award, Lock, Sparkles, ChevronRight, ShieldCheck, CheckCircle2, ArrowUpRight, Crown
+import { Microphone, Clock, Award, Lock, Sparkles, ChevronRight, ShieldCheck, CheckCircle2, ArrowUpRight, Crown
 } from '../components/icons';
 import { useI18n } from '../locales';
 import { MOCK_TESTS_CATALOG } from '../data/mockTests';
@@ -25,6 +25,7 @@ export const MockTestsListView: React.FC<MockTestsListViewProps> = ({
   testHistory,
   isProUser = false,
   onOpenHsk3,
+  onNavigate,
 }) => {
   const { t, getLocalized, language } = useI18n();
   const [selectedLevel, setSelectedLevel] = useState<'all' | 'hsk1' | 'hsk2' | 'hsk3'>('all');
@@ -175,6 +176,20 @@ export const MockTestsListView: React.FC<MockTestsListViewProps> = ({
           <p className="text-[11px] text-stone-500">
             {tr('Official papers H31001–H31005: practice papers published by Hanban / Chinese Testing International. They follow the HSK 2.0 format; almost all of their vocabulary is part of the HSK 3.0 syllabus.')}
           </p>
+          <button
+            type="button"
+            onClick={() => onNavigate('speaking')}
+            className="w-full text-left p-4 rounded-2xl bg-[#1C1917] text-white flex items-center gap-4 hover:bg-stone-800 cursor-pointer"
+          >
+            <span className="w-10 h-10 rounded-xl bg-[#C52828] grid place-items-center shrink-0">
+              <Microphone className="w-5 h-5" />
+            </span>
+            <span className="min-w-0 flex-1">
+              <span className="block text-sm font-bold">{tr('HSK 3 speaking test')}</span>
+              <span className="block text-xs text-stone-300">{tr('Since HSK 3.0, level 3 also has a speaking test: practise its three tasks.')}</span>
+            </span>
+            <ChevronRight className="w-5 h-5 shrink-0" />
+          </button>
         </section>
       )}
 

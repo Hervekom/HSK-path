@@ -316,6 +316,7 @@ export interface AppState {
     | 'practice-hub' 
     | 'tutor' 
     | 'pronunciation'
+    | 'speaking'
     | 'quiz' 
     | 'listening-practice' 
     | 'reading-practice' 

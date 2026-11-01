@@ -29,6 +29,9 @@ import { SpeechButton } from '../components/ui/SpeechButton';
 import { Button } from '../components/ui/Button';
 import { Badge } from '../components/ui/Badge';
 import type { AppState } from '../types';
+import { Microphone } from '../components/icons';
+import { SpeakSheet } from '../components/pronunciation/SpeakSheet';
+import { loadSpeakAudio } from '../utils/speakAudio';
 
 type LevelFilter = 'all' | 1 | 2 | 3 | 4;
 
@@ -71,6 +74,11 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ learnedPhraseIds, onTo
   const [hideMeaning, setHideMeaning] = useState(false);
   const [revealed, setRevealed] = useState<Set<string>>(new Set());
   const [quiz, setQuiz] = useState<QuizState | null>(null);
+  const [speakFrom, setSpeakFrom] = useState<number | null>(null);
+  const [recorded, setRecorded] = useState<Record<string, string>>({});
+  useEffect(() => {
+    void loadSpeakAudio().then(setRecorded);
+  }, []);
 
   const meaningOf = (p: PhraseRow) => (language === 'fr' ? p[5] : p[6]);
   const noteOf = (p: PhraseRow) => (language === 'fr' ? p[7] : p[8]);
@@ -321,7 +329,21 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ learnedPhraseIds, onTo
                     {p[4]}
                   </div>
                 </div>
-                <SpeechButton text={p[3]} size="md" allowSpeedToggle />
+                <div className="flex items-center gap-1.5 shrink-0">
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setSpeakFrom(list.indexOf(p));
+                    }}
+                    className="w-9 h-9 rounded-xl bg-[#1C1917] text-white grid place-items-center hover:bg-stone-800 cursor-pointer"
+                    aria-label={tr('Say it')}
+                    title={tr('Say it')}
+                  >
+                    <Microphone className="w-4 h-4" />
+                  </button>
+                  <SpeechButton text={p[3]} size="md" allowSpeedToggle />
+                </div>
               </div>
               <div className={`text-sm ${showMeaning ? 'text-stone-800' : 'text-transparent bg-stone-100 rounded select-none'}`}>
                 {meaningOf(p)}
@@ -360,6 +382,15 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ learnedPhraseIds, onTo
           );
         })}
       </div>
+      {speakFrom !== null && (
+        <SpeakSheet
+          title={tr('Everyday phrases')}
+          kind="sentence"
+          startIndex={speakFrom}
+          onClose={() => setSpeakFrom(null)}
+          items={list.map((p) => ({ key: `p:${p[0]}`, hanzi: p[3], pinyin: p[4], meaning: meaningOf(p), audio: recorded[p[3]] }))}
+        />
+      )}
     </div>
   );
 };
