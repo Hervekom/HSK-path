@@ -23,6 +23,15 @@ interface LessonStudyModalProps {
   onPractice?: (lesson: HskLesson) => void;
   /** Tab to open first (e.g. 'practice' when coming back from Laoshi). */
   initialTab?: 'practice';
+  /** Lesson that comes after this one (null on the last lesson of the level). */
+  nextLesson?: HskLesson | null;
+  /** The next lesson needs Pro. */
+  nextLocked?: boolean;
+  onNext?: () => void;
+  /** After the last lesson of the level. */
+  onLevelDone?: () => void;
+  /** Finished before: no XP shown again. */
+  alreadyDone?: boolean;
 }
 
 type LessonTab = 'dialogue' | 'grammar' | 'vocab' | 'sounds' | 'hanzi' | 'culture' | 'saying' | 'quiz' | 'practice';
@@ -34,11 +43,19 @@ export const LessonStudyModal: React.FC<LessonStudyModalProps> = ({
   onCompleteLesson,
   onPractice,
   initialTab,
+  nextLesson,
+  nextLocked = false,
+  onNext,
+  onLevelDone,
+  alreadyDone = false,
 }) => {
   const { language, getLocalized } = useI18n();
   const [activeTab, setActiveTab] = useState<LessonTab>('dialogue');
   const [selectedAnswers, setSelectedAnswers] = useState<Record<string, string>>({});
   const [isCompleted, setIsCompleted] = useState(false);
+  const [celebrate, setCelebrate] = useState(false);
+  const [xpGiven, setXpGiven] = useState(false);
+  const scrollRef = React.useRef<HTMLDivElement>(null);
   // Speaking practice opened from the lesson (repeat lines, role-play, pinyin examples).
   const [speak, setSpeak] = useState<{ title: string; items: SpeakItem[]; start: number; kind: 'word' | 'sentence' } | null>(null);
   const [rolePlay, setRolePlay] = useState<{ title: string; lines: RoleLine[] } | null>(null);
@@ -76,6 +93,8 @@ export const LessonStudyModal: React.FC<LessonStudyModalProps> = ({
     );
     setSelectedAnswers({});
     setIsCompleted(false);
+    setCelebrate(false);
+    scrollRef.current?.scrollTo({ top: 0 });
   }, [lesson?.id]);
 
   if (!lesson) return null;
@@ -106,12 +125,14 @@ export const LessonStudyModal: React.FC<LessonStudyModalProps> = ({
   };
 
   const handleFinish = () => {
-    // second click on "Lesson completed": just close
     if (isCompleted) {
-      onClose();
+      if (nextLesson && onNext) onNext();
+      else setCelebrate(true);
       return;
     }
     setIsCompleted(true);
+    setCelebrate(true);
+    setXpGiven(!alreadyDone);
     earn('lesson', { key: `lesson:${lesson.id}` });
     if (onCompleteLesson) {
       onCompleteLesson(lesson.id);
@@ -126,7 +147,55 @@ export const LessonStudyModal: React.FC<LessonStudyModalProps> = ({
       id="lesson-study-modal"
       flush
     >
-      <div className="flex flex-col flex-1 min-h-0">
+      <div className="relative flex flex-col flex-1 min-h-0">
+        {celebrate && (
+          <div className="absolute inset-0 z-20 bg-white/97 backdrop-blur-sm flex items-center justify-center p-5 animate-in fade-in duration-200">
+            <div className="w-full max-w-sm text-center space-y-4">
+              <div className="w-20 h-20 mx-auto rounded-full bg-emerald-100 grid place-items-center">
+                <CheckCircle2 className="w-11 h-11 text-emerald-600" />
+              </div>
+              <div>
+                <p className="text-xs font-bold uppercase tracking-wider text-emerald-700">
+                  {L(`Lesson ${lesson.lessonNumber} completed`, `Leçon ${lesson.lessonNumber} terminée`, `第 ${lesson.lessonNumber} 课完成`)}
+                </p>
+                <h3 className="text-2xl font-extrabold text-stone-950 mt-1">{L('Well done!', 'Bravo\u00a0!', '太棒了！')}</h3>
+                {xpGiven && <p className="text-lg font-black text-[#C52828] mt-1">+20 XP</p>}
+              </div>
+              {nextLesson ? (
+                <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-[#EFE8DE] text-left">
+                  <p className="text-xs font-bold uppercase tracking-wider text-stone-500">
+                    {L(`Next · Lesson ${nextLesson.lessonNumber}`, `Ensuite · Leçon ${nextLesson.lessonNumber}`, `下一课 · 第 ${nextLesson.lessonNumber} 课`)}
+                  </p>
+                  <p className="text-base font-bold text-stone-900 mt-0.5">{getLocalized(nextLesson.title)}</p>
+                  <p className="text-sm text-stone-500">{getLocalized(nextLesson.subtitle)}</p>
+                </div>
+              ) : (
+                <p className="text-sm text-stone-600">{L('You finished every lesson of this level. Check your level with a mock exam!', 'Vous avez terminé toutes les leçons de ce niveau. Vérifiez votre niveau avec un examen blanc\u00a0!', '你已完成本级所有课程，用模拟考试检验一下吧！')}</p>
+              )}
+              <div className="space-y-2">
+                {nextLesson ? (
+                  <Button variant="primary" size="lg" className="w-full" onClick={() => onNext?.()} iconRight={<ArrowRight className="w-4 h-4" />}>
+                    {nextLocked ? L('Unlock the next lesson', 'Débloquer la leçon suivante', '解锁下一课') : L('Next lesson', 'Leçon suivante', '下一课')}
+                  </Button>
+                ) : (
+                  onLevelDone && (
+                    <Button variant="primary" size="lg" className="w-full" onClick={onLevelDone} iconRight={<ArrowRight className="w-4 h-4" />}>
+                      {L('Take a mock exam', 'Passer un examen blanc', '参加模拟考试')}
+                    </Button>
+                  )
+                )}
+                <div className="flex gap-2">
+                  <Button variant="outline" size="lg" className="flex-1" onClick={() => setCelebrate(false)}>
+                    {L('Review', 'Revoir', '复习')}
+                  </Button>
+                  <Button variant="outline" size="lg" className="flex-1" onClick={onClose}>
+                    {L('Close', 'Fermer', '关闭')}
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
         {/* Modal Top Bar */}
         <div className="p-5 sm:p-6 border-b border-[#EAE2D5] bg-[#FAF8F5] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div>
@@ -164,7 +233,7 @@ export const LessonStudyModal: React.FC<LessonStudyModalProps> = ({
         </div>
 
         {/* Scrollable Content Area */}
-        <div className="flex-1 overflow-y-auto p-5 sm:p-8 space-y-6">
+        <div ref={scrollRef} className="flex-1 overflow-y-auto p-5 sm:p-8 space-y-6">
           {/* TAB 1: DIALOGUE */}
           {activeTab === 'dialogue' && (
             <div className="space-y-6">
@@ -547,9 +616,11 @@ export const LessonStudyModal: React.FC<LessonStudyModalProps> = ({
             onClick={handleFinish}
             iconRight={<ArrowRight className="w-4 h-4" />}
           >
-            {isCompleted 
-              ? (language === 'fr' ? 'Leçon Terminée' : language === 'zh' ? '已完成学习' : 'Lesson Completed') 
-              : (language === 'fr' ? 'Marquer comme appris' : language === 'zh' ? '完成本课' : 'Mark as Learned')}
+            {isCompleted
+              ? nextLesson
+                ? L('Next lesson', 'Leçon suivante', '下一课')
+                : L('Lesson completed', 'Leçon terminée', '已完成学习')
+              : L('Finish the lesson', 'Terminer la leçon', '完成本课')}
           </Button>
         </div>
       </div>

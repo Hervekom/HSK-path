@@ -73,6 +73,7 @@ export const HskLevelDetailView: React.FC<HskLevelDetailViewProps> = ({
 
   const currentLevelMeta = HSK_LEVELS.find((l) => l.id === selectedLevel) || HSK_LEVELS[1];
   const levelLessons = HSK_LESSONS_DATA.filter((l) => l.level === selectedLevel);
+  const nextLesson = activeLesson ? levelLessons[levelLessons.findIndex((l) => l.id === activeLesson.id) + 1] || null : null;
   const progress = levelLessons.length ? Math.round((levelLessons.filter((l) => doneLessonIds.has(l.id)).length / levelLessons.length) * 100) : 0;
   const levelMockTests = MOCK_TESTS_CATALOG.filter((t) => t.level === selectedLevel);
 
@@ -238,7 +239,7 @@ export const HskLevelDetailView: React.FC<HskLevelDetailViewProps> = ({
                 key={lesson.id}
                 onClick={() => handleLessonAction(lesson)}
                 className={`p-5 rounded-2xl border transition-all cursor-pointer flex flex-col justify-between space-y-4 ${
-                  isLocked
+                  doneLessonIds.has(lesson.id) ? 'bg-emerald-50/40 border-emerald-200 hover:border-emerald-500' : isLocked
                     ? 'bg-[#FAF7F2] border-[#E8DEC9] hover:border-amber-400'
                     : 'bg-white border-[#E2D8CC] hover:border-[#C52828] shadow-xs'
                 }`}
@@ -248,7 +249,11 @@ export const HskLevelDetailView: React.FC<HskLevelDetailViewProps> = ({
                     <span className="text-xs font-bold text-[#C52828] bg-[#C52828]/10 px-2 py-0.5 rounded-md">
                       {lesson.level.toUpperCase()} &bull; {language === 'fr' ? `Leçon ${lesson.lessonNumber}` : language === 'zh' ? `第 ${lesson.lessonNumber} 课` : `Lesson ${lesson.lessonNumber}`}
                     </span>
-                    {lesson.isFree ? (
+                    {doneLessonIds.has(lesson.id) ? (
+                      <span className="inline-flex items-center gap-1 text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-md">
+                        <CheckCircle2 className="w-3.5 h-3.5" /> {language === 'fr' ? 'Terminée' : language === 'zh' ? '已完成' : 'Done'}
+                      </span>
+                    ) : lesson.isFree ? (
                       <Badge variant="success" size="sm">
                         {language === 'fr' ? 'Gratuit' : language === 'zh' ? '免费体验' : 'Free Access'}
                       </Badge>
@@ -286,7 +291,9 @@ export const HskLevelDetailView: React.FC<HskLevelDetailViewProps> = ({
                   <span className={`font-bold flex items-center gap-1 ${isLocked ? 'text-amber-800' : 'text-[#C52828]'}`}>
                     {isLocked 
                       ? (language === 'fr' ? 'Débloquer Pro' : language === 'zh' ? '解锁课程' : 'Unlock Pro') 
-                      : (language === 'fr' ? 'Commencer la leçon' : language === 'zh' ? '进入学习' : 'Start Lesson')}
+                      : doneLessonIds.has(lesson.id)
+                        ? (language === 'fr' ? 'Revoir' : language === 'zh' ? '复习' : 'Review')
+                        : (language === 'fr' ? 'Commencer la leçon' : language === 'zh' ? '进入学习' : 'Start Lesson')}
                     <ChevronRight className="w-3.5 h-3.5" />
                   </span>
                 </div>
@@ -436,6 +443,23 @@ export const HskLevelDetailView: React.FC<HskLevelDetailViewProps> = ({
         lesson={activeLesson}
         isOpen={!!activeLesson}
         initialTab={lessonTab}
+        alreadyDone={activeLesson ? doneLessonIds.has(activeLesson.id) : false}
+        nextLesson={nextLesson}
+        nextLocked={Boolean(nextLesson && !nextLesson.isFree && !isProUser)}
+        onNext={() => {
+          if (!nextLesson) return;
+          setLessonTab(undefined);
+          if (!nextLesson.isFree && !isProUser) {
+            setActiveLesson(null);
+            handleLessonAction(nextLesson);
+          } else {
+            setActiveLesson(nextLesson);
+          }
+        }}
+        onLevelDone={() => {
+          setActiveLesson(null);
+          onNavigate('mock-tests');
+        }}
         onClose={() => {
           setActiveLesson(null);
           setLessonTab(undefined);
