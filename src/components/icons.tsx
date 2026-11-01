@@ -6,6 +6,7 @@
 import React, { forwardRef } from 'react';
 import type { Icon as PhosphorIcon, IconProps } from '@phosphor-icons/react';
 import {
+  Books as PhBooks,
   HandWaving as PhHandWaving,
   HandsPraying as PhHandsPraying,
   BowlFood as PhBowlFood,
@@ -111,6 +112,7 @@ function make(Base: PhosphorIcon, name: string) {
 export const Sparkles = make(PhListChecks, 'Sparkles');
 export const CheckCircle2 = make(PhCheckCircle, 'CheckCircle2');
 export const BookOpen = make(PhBookOpenText, 'BookOpen');
+export const Books = make(PhBooks, 'Books');
 export const ArrowRight = make(PhArrowRight, 'ArrowRight');
 export const Layers = make(PhStack, 'Layers');
 export const Award = make(PhMedal, 'Award');

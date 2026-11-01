@@ -1,0 +1,171 @@
+{
+  "id": "wukong",
+  "order": 12,
+  "hanzi": "美猴王大闹天宫",
+  "titlePinyin": "Měi Hóuwáng dà nào Tiāngōng",
+  "title": { "fr": "Le Roi des singes sème le chaos au Ciel", "en": "The Monkey King Wreaks Havoc in Heaven" },
+  "level": "hsk3",
+  "summary": {
+    "fr": "Né d'une pierre, un singe devient roi, apprend 72 transformations et vole l'arme d'un roi-dragon. Puis il décide que même le Ciel ne peut pas le commander. Tiré du Voyage vers l'Ouest.",
+    "en": "Born from a stone, a monkey becomes king, learns 72 transformations and takes a dragon king's weapon. Then he decides that even Heaven cannot rule him. From Journey to the West."
+  },
+  "chapters": [
+    {
+      "title": "石头 里 的 猴子",
+      "paragraphs": [
+        "很久 很久 以前，在 东海 的 ^花果山 上，有 一 块 很 大 的 石头。这 块 石头 吸收 了 千万 年 的 阳光 和 月光。有 一 天，“砰”的 一 声，石头 裂开 了，跳 出来 一 只{zhī} 石 猴！",
+        "石 猴 的 眼睛 发出 两 道 金光，一直 射 到 天上。天上 的 ^玉皇大帝 吓 了 一 跳，派人 去 看。回来 的 人 说：“没 什么，只是 一 只{zhī} 猴子。”",
+        "^花果山 上 有 很 多 猴子。山 上 有 一 个 大 瀑布，猴子们 说：“谁 敢 跳 进 瀑布，看看 后面 有 什么，我们 就 让 他 当 大王！”石 猴 第一 个 跳 了 进去。原来 瀑布 后面 有 一 个 又 大 又 舒服 的 山洞，叫“水帘洞”。从 那 以后，石 猴 就 成了“美 猴王”。"
+      ]
+    },
+    {
+      "title": "学 本领",
+      "paragraphs": [
+        "美 猴王 快乐 地{de} 过 了 很 多 年。有 一 天，他 突然 哭 了：“我们 现在 很 快乐，可是 总有 一 天 会 老，会 死。”",
+        "他 决定 去 找 一 位 神仙，学习 长生不老 的 本领。他 坐着 一 只{zhī} 小 木筏，漂过 大海，找 了 十 年，终于 找到 了 ^菩提祖师。",
+        "祖师 给 他 起 了 一 个 名字，叫 ^孙悟空。^悟空 非常 聪明，学会 了 七十二 种 变化，可以 变成 鸟、鱼、树，什么 都 能 变。他 还 学会 了 翻 跟头，一 个 跟头 就 能 翻 十万八千 里！"
+      ]
+    },
+    {
+      "title": "龙宫 里 的 金箍棒",
+      "paragraphs": [
+        "^悟空 回到 ^花果山，觉得 自己 还 需要 一 件 好 兵器。他 来到 东海 龙宫，对 龙王 说：“老 龙王，借 我 一 件 兵器 吧！”",
+        "龙王 拿出 很 多 刀 和 剑，^悟空 拿 在 手 里 一 试，都 太 轻 了。最后，龙王 带 他 去 看 海 底 的 一 根 大 铁柱。这 根 铁柱 有 一万 三千 五百 斤 重！",
+        "^悟空 走 过去，说：“小 一点儿！”铁柱 就 变 小 了。“再 小 一点儿！”铁柱 变成 了 一 根 棍子，上面 写着：“如意 金箍棒”。^悟空 高兴 极 了，还 能 把 它 变得 像 针 一样 小，放 在 耳朵 里。"
+      ]
+    },
+    {
+      "title": "弼马温",
+      "paragraphs": [
+        "龙王 去 天上 告状。^玉皇大帝 想：“这 只{zhī} 猴子 太 厉害 了，不如 让 他 来 天上 当 个 官，好 管 他。”就 给 了 ^悟空 一 个 官，叫“弼马温”。",
+        "^悟空 很 高兴，每天 认真 地{de} 养 马。可是 后来 他 才 知道，“弼马温”只是 一 个 养 马 的 小 官！他 气 坏 了：“竟然 看不起 我 老 孙！”他 打 出 南天门，回到 了 ^花果山，自己 给 自己 起 了 一 个 称号：“齐天大圣”，意思 是 跟 天 一样 大 的 圣人。"
+      ]
+    },
+    {
+      "title": "蟠桃 会",
+      "paragraphs": [
+        "^玉皇大帝 没有 办法，只好 承认 他 是“齐天大圣”，还 让 他 去 管 ^王母娘娘 的 蟠桃园。蟠桃园 里 的 桃子 三千 年 才 熟，吃 了 能 长生不老。",
+        "^悟空 一 看，这么 好 的 桃子，不 吃 太 可惜 了！他 偷偷 把 最 大 最 好 的 桃子 都 吃 了。",
+        "后来 他 听说 ^王母娘娘 要 开 蟠桃 宴会，请 了 所有 的 神仙，却 没有 请 他。他 生气 地{de} 跑到 宴会 上，把 好 酒 好 菜 吃 了 个 精光，又 跑到 ^太上老君 家，把 他 的 仙丹 也 全部 吃 了，然后 大笑着 回 了 ^花果山。"
+      ]
+    },
+    {
+      "title": "八卦炉",
+      "paragraphs": [
+        "^玉皇大帝 大怒，派 了 十万 天兵 天将 去 抓 ^悟空。可是 谁 也 打不过 他。最后，^二郎神 和 ^太上老君 一起 才 抓住 了 他。",
+        "天兵 用 刀 砍 他，用 火 烧 他，用 雷 打 他，可是 他 吃 了 仙丹 和 蟠桃，一点儿 事 都 没有！^太上老君 说：“把 他 放 进 我 的 八卦炉，烧 他 七七四十九 天！”",
+        "四十九 天 以后，炉子 一 打开，^悟空 跳 了 出来，一点儿 都 没有 死，还 练成 了 一 双 火眼金睛，能 看出 一切 妖怪！他 拿出 金箍棒，从 天宫 的 这 头 打到 那 头，神仙们 吓得 到处 跑。这 就 是“大 闹 天宫”。"
+      ]
+    },
+    {
+      "title": "如来 的 手掌",
+      "paragraphs": [
+        "^玉皇大帝 只好 请 西方 的 ^如来佛祖 来 帮忙。^如来 笑着 对 ^悟空 说：“你 如果 能 翻 出 我 的 手掌，天宫 就 给 你。”",
+        "^悟空 想：“我 一 个 跟头 十万八千 里，你 的 手 才 多 大？”他 跳到 ^如来 手 上，一 个 跟头 翻 了 出去，看见 五 根 大 柱子，以为 到 了 天 的 尽头。他 在 柱子 上 写 了“齐天大圣 到 此 一 游”。",
+        "回来 一 看，那 五 根 柱子 竟然 是 ^如来 的 五 根 手指！^悟空 还 没 反应 过来，^如来 把 手 一 翻，变成 了 一 座 大 山，把 他 压 在 了 山 下面。这 一 压，就 是 五百 年。五百 年 以后，一 个 叫 ^唐僧 的 和尚 救出 了 他，他们 一起 去 西天 取经 —— 那 是 另 一 个 更 长 的 冒险 了。"
+      ]
+    }
+  ],
+  "glossary": [
+    { "w": "猴子", "fr": "singe", "en": "monkey" },
+    { "w": "瀑布", "fr": "cascade", "en": "waterfall" },
+    { "w": "本领", "fr": "talent, compétence", "en": "skill" },
+    { "w": "变化", "fr": "transformation", "en": "transformation" },
+    { "w": "翻跟头", "fr": "faire un saut périlleux", "en": "to somersault" },
+    { "w": "兵器", "fr": "arme", "en": "weapon" },
+    { "w": "龙王", "fr": "roi dragon", "en": "Dragon King" },
+    { "w": "告状", "fr": "se plaindre (de qqn)", "en": "to complain about sb" },
+    { "w": "桃子", "fr": "pêche", "en": "peach" },
+    { "w": "手掌", "fr": "paume de la main", "en": "palm" }
+  ],
+  "questions": [
+    {
+      "q": { "fr": "D'où naît le singe ?", "en": "Where is the monkey born from?" },
+      "options": [
+        { "fr": "D'un arbre", "en": "A tree" },
+        { "fr": "D'une grande pierre", "en": "A big stone" },
+        { "fr": "D'un œuf", "en": "An egg" },
+        { "fr": "D'une pêche", "en": "A peach" }
+      ],
+      "answer": 1,
+      "why": { "fr": "« shítou lièkāi le, tiào chūlai yì zhī shí hóu! »", "en": "“shítou lièkāi le, tiào chūlai yì zhī shí hóu!”" }
+    },
+    {
+      "q": { "fr": "Comment devient-il roi des singes ?", "en": "How does he become king of the monkeys?" },
+      "options": [
+        { "fr": "Il est le plus vieux", "en": "He is the oldest" },
+        { "fr": "Il ose sauter le premier dans la cascade", "en": "He is the first to dare jump into the waterfall" },
+        { "fr": "Il bat tous les autres", "en": "He beats all the others" },
+        { "fr": "L'Empereur de Jade le nomme", "en": "The Jade Emperor appoints him" }
+      ],
+      "answer": 1,
+      "why": { "fr": "« Shí hóu dì-yī gè tiào le jìnqu » et trouve la Shuǐlián Dòng.", "en": "“Shí hóu dì-yī gè tiào le jìnqu” and finds the Shuǐlián Dòng." }
+    },
+    {
+      "q": { "fr": "Pourquoi le roi singe pleure-t-il un jour ?", "en": "Why does the Monkey King cry one day?" },
+      "options": [
+        { "fr": "Il a peur de vieillir et de mourir", "en": "He is afraid of growing old and dying" },
+        { "fr": "Il a perdu son bâton", "en": "He lost his staff" },
+        { "fr": "Les singes le quittent", "en": "The monkeys leave him" },
+        { "fr": "Il a faim", "en": "He is hungry" }
+      ],
+      "answer": 0,
+      "why": { "fr": "« zǒng yǒu yì tiān huì lǎo, huì sǐ ».", "en": "“zǒng yǒu yì tiān huì lǎo, huì sǐ”." }
+    },
+    {
+      "q": { "fr": "Quelle distance parcourt-il en un saut ?", "en": "How far does one somersault take him?" },
+      "options": [
+        { "fr": "Mille li", "en": "A thousand li" },
+        { "fr": "Dix mille li", "en": "Ten thousand li" },
+        { "fr": "Cent huit mille li", "en": "A hundred and eight thousand li" },
+        { "fr": "Un million de li", "en": "A million li" }
+      ],
+      "answer": 2,
+      "why": { "fr": "« yí gè gēntou jiù néng fān shíwàn bāqiān lǐ! »", "en": "“yí gè gēntou jiù néng fān shíwàn bāqiān lǐ!”" }
+    },
+    {
+      "q": { "fr": "Pourquoi se fâche-t-il contre son poste au Ciel ?", "en": "Why does he get angry about his post in Heaven?" },
+      "options": [
+        { "fr": "Il doit travailler la nuit", "en": "He has to work at night" },
+        { "fr": "C'est un petit poste de gardien de chevaux", "en": "It is just a lowly stable-keeper's job" },
+        { "fr": "Il n'est pas payé", "en": "He isn't paid" },
+        { "fr": "Les chevaux le mordent", "en": "The horses bite him" }
+      ],
+      "answer": 1,
+      "why": { "fr": "« Bìmǎwēn zhǐshì yí gè yǎng mǎ de xiǎo guān! »", "en": "“Bìmǎwēn zhǐshì yí gè yǎng mǎ de xiǎo guān!”" }
+    },
+    {
+      "q": { "fr": "Que fait-il dans le verger de pêches ?", "en": "What does he do in the peach orchard?" },
+      "options": [
+        { "fr": "Il plante de nouveaux arbres", "en": "He plants new trees" },
+        { "fr": "Il mange en cachette les plus belles pêches", "en": "He secretly eats the best peaches" },
+        { "fr": "Il protège les pêches des voleurs", "en": "He guards the peaches from thieves" },
+        { "fr": "Il dort", "en": "He sleeps" }
+      ],
+      "answer": 1,
+      "why": { "fr": "« bǎ zuì dà zuì hǎo de táozi dōu chī le ».", "en": "“bǎ zuì dà zuì hǎo de táozi dōu chī le”." }
+    },
+    {
+      "q": { "fr": "Qu'obtient-il après 49 jours dans le fourneau ?", "en": "What does he gain after 49 days in the furnace?" },
+      "options": [
+        { "fr": "Des yeux de feu qui voient tous les démons", "en": "Fiery golden eyes that can see every demon" },
+        { "fr": "Des ailes", "en": "Wings" },
+        { "fr": "Un nouveau nom", "en": "A new name" },
+        { "fr": "Rien, il est blessé", "en": "Nothing, he is hurt" }
+      ],
+      "answer": 0,
+      "why": { "fr": "« huǒyǎn jīnjīng, néng kànchū yíqiè yāoguài! »", "en": "“huǒyǎn jīnjīng, néng kànchū yíqiè yāoguài!”" }
+    },
+    {
+      "q": { "fr": "Que sont les cinq piliers qu'il voit ?", "en": "What are the five pillars he sees?" },
+      "options": [
+        { "fr": "Les montagnes du bout du monde", "en": "The mountains at the end of the world" },
+        { "fr": "Les cinq doigts du Bouddha", "en": "The Buddha's five fingers" },
+        { "fr": "Les portes du Ciel", "en": "The gates of Heaven" },
+        { "fr": "Des arbres", "en": "Trees" }
+      ],
+      "answer": 1,
+      "why": { "fr": "« nà wǔ gēn zhùzi jìngrán shì Rúlái de wǔ gēn shǒuzhǐ! »", "en": "“nà wǔ gēn zhùzi jìngrán shì Rúlái de wǔ gēn shǒuzhǐ!”" }
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "id": "nuwa",
+  "order": 2,
+  "hanzi": "女娲造人补天",
+  "titlePinyin": "Nǚwā zào rén bǔ tiān",
+  "title": { "fr": "Nüwa crée les hommes et répare le ciel", "en": "Nüwa Makes People and Mends the Sky" },
+  "level": "hsk2",
+  "summary": {
+    "fr": "Une déesse se sent seule dans un monde magnifique mais silencieux. Elle façonne les premiers humains dans la boue… puis le ciel se fend et le feu tombe sur la terre.",
+    "en": "A goddess feels lonely in a beautiful but silent world. She shapes the first humans out of mud… then the sky cracks and fire falls on the earth."
+  },
+  "chapters": [
+    {
+      "title": "安静 的 世界",
+      "paragraphs": [
+        "^盘古 开 天 地 以后，世界 上 有 了 山，有 了 河，有 了 花 和 鸟。世界 很 美，可是 也 很 安静。",
+        "那时候，有 一 位 女神，她 叫 ^女娲。她 很 聪明，也 很 善良。她 每天 在 山 上 和 河 边 走来走去。",
+        "有 一 天，她 坐 在 河 边，看着 水 里 的 自己，心里 觉得 很 孤单：“世界 这么 大，这么 美，可是 没有 人 跟 我 说话，没有 人 跟 我 笑。”"
+      ]
+    },
+    {
+      "title": "用 泥土 做 人",
+      "paragraphs": [
+        "^女娲 看见 河 边 有 很 多 黄色 的 泥土。她 想 了 想，用 水 和 泥土 做 了 一 个 小 人。这个 小 人 有 头，有 手，有 脚，样子 跟 她 差不多。",
+        "她 轻轻 地{de} 对 小 人 吹 了 一 口 气。小 人 动 了！他 站 起来，看着 ^女娲，笑 了，还 叫 她：“妈妈！”",
+        "^女娲 高兴 极 了。她 又 做 了 第二 个，第三 个……她 做 了 男人，也 做 了 女人。小 人们 在 她 身边 跑来跑去，又 唱 又 跳。"
+      ]
+    },
+    {
+      "title": "更 多 的 人",
+      "paragraphs": [
+        "可是 世界 太 大 了，一 个 一 个 地{de} 做，太 慢 了。^女娲 做 了 很 久，手 很 累。",
+        "她 想 了 一 个 好 办法：她 拿起 一 根 长长 的 绳子，放 进 泥 水 里，然后 用力 一 甩。泥 点 掉 在 地 上，都 变成 了 小 人！",
+        "就 这样，世界 上 的 人 越来越 多。^女娲 还 教 他们 结婚，生 孩子，一 家 人 一起 生活。从 那 以后，人们 都 叫 ^女娲 “人类 的 妈妈”。"
+      ]
+    },
+    {
+      "title": "天 破 了",
+      "paragraphs": [
+        "人们 快乐 地{de} 生活 了 很 多 年。可是 有 一 天，天 上 的 两 个 神 打 起来 了。一 个 是 水 神 ^共工，一 个 是 火 神 ^祝融。",
+        "^共工 打 输 了，他 非常 生气，用 头 去 撞 西边 的 一 座 大 山。那 座 山 是 支撑 天空 的 柱子。“轰隆！”山 倒 了，天 也 破 了 一 个 大 洞！",
+        "天 上 的 火 掉 下来，森林 烧 起来 了。地 上 也 裂开 了，大 水 冲 出来，淹没 了 村子。很 多 野兽 跑 出来 吃 人。人们 哭着 喊：“妈妈，救救 我们！”"
+      ]
+    },
+    {
+      "title": "五 色 石",
+      "paragraphs": [
+        "^女娲 看到 她 的 孩子们 这么 痛苦，心里 非常 难过。她 决定：“我 一定 要 把 天 补 好！”",
+        "她 走遍 了 大 江 大 河，找到 了 红、黄、蓝、白、黑 五 种 颜色 的 石头。她 点起 大 火，烧 了 九 天 九 夜，把 五 色 石 炼成 了 很 热 的 石 浆。",
+        "^女娲 用 石 浆 一 点 一 点 地{de} 补 天 上 的 大 洞。最后，天 终于 补 好 了！今天 我们 看到 天 上 美丽 的 彩霞，据说 就 是 那 五 色 石 的 颜色。"
+      ]
+    },
+    {
+      "title": "新 的 开始",
+      "paragraphs": [
+        "可是 天 还 不 稳。^女娲 找到 一 只{zhī} 很 大 很 大 的 乌龟，用 它 的 四 条 腿 做 了 四 根 新 的 柱子，把 天 撑 了 起来。",
+        "她 又 用 芦苇 烧 成 的 灰 挡住 了 大 水，赶走 了 吃 人 的 野兽。大 地 又 安静 了，春天 又 来 了。",
+        "人们 跪 在 地 上 感谢 ^女娲。^女娲 看着 她 的 孩子们，笑 了。她 知道，这个 世界 不会 再 孤单 了。"
+      ]
+    }
+  ],
+  "glossary": [
+    { "w": "女神", "fr": "déesse", "en": "goddess" },
+    { "w": "孤单", "fr": "seul, solitaire", "en": "lonely" },
+    { "w": "泥土", "fr": "terre, boue", "en": "clay, mud" },
+    { "w": "吹", "fr": "souffler", "en": "to blow" },
+    { "w": "绳子", "fr": "corde", "en": "rope" },
+    { "w": "撞", "fr": "heurter, cogner", "en": "to crash into" },
+    { "w": "柱子", "fr": "pilier, colonne", "en": "pillar" },
+    { "w": "洞", "fr": "trou", "en": "hole" },
+    { "w": "补", "fr": "réparer, raccommoder", "en": "to mend" },
+    { "w": "乌龟", "fr": "tortue", "en": "turtle" }
+  ],
+  "questions": [
+    {
+      "q": { "fr": "Pourquoi Nüwa se sent-elle triste au début ?", "en": "Why does Nüwa feel sad at the beginning?" },
+      "options": [
+        { "fr": "Le monde est laid", "en": "The world is ugly" },
+        { "fr": "Elle est seule, personne ne lui parle", "en": "She is alone; nobody talks to her" },
+        { "fr": "Elle a perdu sa maison", "en": "She lost her home" },
+        { "fr": "Il pleut tout le temps", "en": "It rains all the time" }
+      ],
+      "answer": 1,
+      "why": { "fr": "Elle se sent gūdān (seule) : « méiyǒu rén gēn wǒ shuōhuà ».", "en": "She feels gūdān (lonely): “méiyǒu rén gēn wǒ shuōhuà”." }
+    },
+    {
+      "q": { "fr": "Avec quoi fabrique-t-elle le premier petit homme ?", "en": "What does she make the first little person from?" },
+      "options": [
+        { "fr": "Du bois", "en": "Wood" },
+        { "fr": "De l'eau et de la terre jaune", "en": "Water and yellow clay" },
+        { "fr": "Des pierres", "en": "Stones" },
+        { "fr": "Des fleurs", "en": "Flowers" }
+      ],
+      "answer": 1,
+      "why": { "fr": "« yòng shuǐ hé nítǔ zuò le yí gè xiǎo rén ».", "en": "“yòng shuǐ hé nítǔ zuò le yí gè xiǎo rén”." }
+    },
+    {
+      "q": { "fr": "Que dit le premier petit homme quand il se met à bouger ?", "en": "What does the first little person say when he comes alive?" },
+      "options": [
+        { "fr": "« Bonjour ! »", "en": "“Hello!”" },
+        { "fr": "« Maman ! »", "en": "“Mum!”" },
+        { "fr": "« J'ai faim ! »", "en": "“I'm hungry!”" },
+        { "fr": "Rien du tout", "en": "Nothing at all" }
+      ],
+      "answer": 1,
+      "why": { "fr": "Il l'appelle « Māma! ».", "en": "He calls her “Māma!”." }
+    },
+    {
+      "q": { "fr": "Comment Nüwa crée-t-elle beaucoup d'humains plus vite ?", "en": "How does Nüwa make many people faster?" },
+      "options": [
+        { "fr": "Elle demande de l'aide à Pangu", "en": "She asks Pangu for help" },
+        { "fr": "Elle secoue une corde trempée dans la boue", "en": "She swings a rope dipped in mud" },
+        { "fr": "Elle utilise de la magie avec le feu", "en": "She uses fire magic" },
+        { "fr": "Elle chante une chanson", "en": "She sings a song" }
+      ],
+      "answer": 1,
+      "why": { "fr": "Les gouttes de boue (ní diǎn) tombées de la corde deviennent des hommes.", "en": "Drops of mud (ní diǎn) from the rope become people." }
+    },
+    {
+      "q": { "fr": "Pourquoi le ciel se casse-t-il ?", "en": "Why does the sky break?" },
+      "options": [
+        { "fr": "Gonggong frappe une montagne qui soutient le ciel", "en": "Gonggong rams a mountain that holds up the sky" },
+        { "fr": "Il y a un tremblement de terre", "en": "There is an earthquake" },
+        { "fr": "Les hommes ont fait la guerre", "en": "People went to war" },
+        { "fr": "Le soleil est trop chaud", "en": "The sun is too hot" }
+      ],
+      "answer": 0,
+      "why": { "fr": "Gonggong, en colère, cogne la montagne-pilier avec sa tête.", "en": "Angry Gonggong hits the pillar mountain with his head." }
+    },
+    {
+      "q": { "fr": "Combien de couleurs ont les pierres de Nüwa ?", "en": "How many colours do Nüwa's stones have?" },
+      "options": [
+        { "fr": "Trois", "en": "Three" },
+        { "fr": "Cinq", "en": "Five" },
+        { "fr": "Sept", "en": "Seven" },
+        { "fr": "Neuf", "en": "Nine" }
+      ],
+      "answer": 1,
+      "why": { "fr": "« wǔ zhǒng yánsè de shítou » : rouge, jaune, bleu, blanc, noir.", "en": "“wǔ zhǒng yánsè de shítou”: red, yellow, blue, white, black." }
+    },
+    {
+      "q": { "fr": "Que sont devenues les pierres de couleur, selon la légende ?", "en": "According to the legend, what did the coloured stones become?" },
+      "options": [
+        { "fr": "Les étoiles", "en": "The stars" },
+        { "fr": "Les nuages colorés du ciel", "en": "The coloured clouds in the sky" },
+        { "fr": "L'arc-en-ciel de la pluie", "en": "Rainbows after rain" },
+        { "fr": "Les montagnes", "en": "The mountains" }
+      ],
+      "answer": 1,
+      "why": { "fr": "Les cǎixiá (nuages colorés) auraient la couleur des cinq pierres.", "en": "The cǎixiá (coloured clouds) are said to have the colours of the five stones." }
+    },
+    {
+      "q": { "fr": "Avec quoi Nüwa fait-elle les quatre nouveaux piliers ?", "en": "What does Nüwa use for the four new pillars?" },
+      "options": [
+        { "fr": "Quatre arbres", "en": "Four trees" },
+        { "fr": "Les pattes d'une tortue géante", "en": "The legs of a giant turtle" },
+        { "fr": "Des pierres de couleur", "en": "Coloured stones" },
+        { "fr": "Quatre montagnes", "en": "Four mountains" }
+      ],
+      "answer": 1,
+      "why": { "fr": "« yòng tā de sì tiáo tuǐ zuò le sì gēn xīn de zhùzi ».", "en": "“yòng tā de sì tiáo tuǐ zuò le sì gēn xīn de zhùzi”." }
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "id": "change",
+  "order": 4,
+  "hanzi": "嫦娥奔月",
+  "titlePinyin": "Cháng'é bēn yuè",
+  "title": { "fr": "Chang'e s'envole vers la lune", "en": "Chang'e Flies to the Moon" },
+  "level": "hsk2",
+  "summary": {
+    "fr": "Une potion d'immortalité, un voleur sans pitié, et une femme qui doit choisir en une seconde. L'histoire qui explique la fête de la mi-automne.",
+    "en": "An elixir of immortality, a ruthless thief, and a woman who must choose in one second. The story behind the Mid-Autumn Festival."
+  },
+  "chapters": [
+    {
+      "title": "英雄 和 他 的 妻子",
+      "paragraphs": [
+        "^后羿 射 下 九 个 太阳 以后，成了 大家 心中 的 英雄。他 不能 回 天 上 了，就 和 妻子 ^嫦娥 住 在 一 个 小 村子 里。",
+        "^嫦娥 又 漂亮 又 善良。她 常常 帮助 村子 里 的 老人 和 孩子，大家 都 很 喜欢 她。^后羿 和 ^嫦娥 非常 相爱，每天 晚上 一起 看 月亮，一起 聊天。",
+        "很 多 年轻 人 想 跟 ^后羿 学 射箭。^后羿 收 了 很 多 学生。其中 有 一 个 叫 ^逢蒙 的 人，他 很 会 说 好听 的 话，可是 心 很 坏。"
+      ]
+    },
+    {
+      "title": "神奇 的 药",
+      "paragraphs": [
+        "有 一 天，^后羿 去 很 远 的 ^昆仑山 看望 ^王母娘娘。^王母娘娘 说：“你 为 人们 做 了 好事，我 送 你 一 包 神药。吃 了 它，就 能 长生不老，飞 到 天 上 去。”",
+        "^后羿 很 高兴，可是 他 想：“我 不 想 一 个 人 去 天 上。没有 ^嫦娥，长生不老 有 什么 意思 呢？”",
+        "他 回到 家，把 药 交给 ^嫦娥，说：“这 药 只 够 一 个 人 吃。我们 先 把 它 藏 起来 吧。”^嫦娥 把 药 放 在 一 个 小 盒子 里，藏 在 床 下面。可是 ^逢蒙 在 窗户 外面 偷偷 听到 了。"
+      ]
+    },
+    {
+      "title": "八月 十五",
+      "paragraphs": [
+        "八月 十五 那 天，^后羿 带着 学生们 出去 打猎。^逢蒙 说 自己 生病 了，留 在 家 里。",
+        "等 大家 走 远 了，^逢蒙 拿着 刀 冲 进 ^嫦娥 的 家：“快 把 神药 给 我！不 给，我 就 杀 了 你！”",
+        "^嫦娥 很 害怕，可是 她 知道，绝对 不能 让 这样 的 坏人 长生不老。她 打开 盒子，没有 时间 想 了，一口 把 药 全部 吃 了 下去。"
+      ]
+    },
+    {
+      "title": "飞 向 月亮",
+      "paragraphs": [
+        "药 一 下 肚子，^嫦娥 的 身体 就 变得 很 轻 很 轻。她 慢慢 地{de} 离开 了 地面，飞 出 了 窗户，越 飞 越 高。",
+        "她 心里 想着 ^后羿，不 想 飞 得 太 远。所以 她 停 在 了 离 人间 最 近 的 地方 —— 月亮 上。",
+        "月亮 上 很 冷，很 安静，只 有 一 棵 桂花 树 和 一 只{zhī} 白色 的 小 兔子。^嫦娥 抱着 小 兔子，看着 下面 的 村子，流 下 了 眼泪。"
+      ]
+    },
+    {
+      "title": "月亮 上 的 影子",
+      "paragraphs": [
+        "晚上，^后羿 回到 家，发现 ^嫦娥 不见 了。邻居们 哭着 告诉 他 发生 了 什么。^逢蒙 早就 逃跑 了。",
+        "^后羿 跑 到 院子 里，大声 喊着 ^嫦娥 的 名字。他 抬头 一 看：今天 的 月亮 特别 圆，特别 亮，月亮 上 好像 有 一 个 人 在 看着 他，那 正 是 ^嫦娥！",
+        "^后羿 追着 月亮 跑，可是 他 往 前 跑，月亮 就 往 后 退。他 怎么 也 追 不 上。"
+      ]
+    },
+    {
+      "title": "中秋节",
+      "paragraphs": [
+        "^后羿 没有 办法，只好 在 院子 里 摆 上 一 张 桌子，放 上 ^嫦娥 最 喜欢 吃 的 水果 和 点心，对着 月亮 想念 她。",
+        "村子 里 的 人 知道 了 这 件 事，也 学 ^后羿 的 样子，在 八月 十五 的 晚上 摆 上 水果 和 点心，向 月亮 上 善良 的 ^嫦娥 祈祷 平安 和 幸福。",
+        "就 这样，一 年 又 一 年，八月 十五 变成 了 中国 的 中秋节。今天，中秋节 的 晚上，一 家 人 还 会 坐 在 一起，吃 月饼，看 月亮。也许 你 抬头 看 的 时候，也 能 看到 月亮 上 的 ^嫦娥 和 她 的 小 兔子。"
+      ]
+    }
+  ],
+  "glossary": [
+    { "w": "妻子", "fr": "épouse", "en": "wife" },
+    { "w": "神药", "fr": "remède magique, élixir", "en": "magic elixir" },
+    { "w": "长生不老", "fr": "vivre éternellement sans vieillir", "en": "eternal youth" },
+    { "w": "藏", "fr": "cacher", "en": "to hide (sth)" },
+    { "w": "偷偷", "fr": "en cachette", "en": "secretly" },
+    { "w": "打猎", "fr": "chasser", "en": "to go hunting" },
+    { "w": "兔子", "fr": "lapin", "en": "rabbit" },
+    { "w": "眼泪", "fr": "larmes", "en": "tears" },
+    { "w": "想念", "fr": "penser à qqn qui manque", "en": "to miss (sb)" },
+    { "w": "月饼", "fr": "gâteau de lune", "en": "mooncake" }
+  ],
+  "questions": [
+    {
+      "q": { "fr": "Pourquoi Houyi et Chang'e vivent-ils dans un village ?", "en": "Why do Houyi and Chang'e live in a village?" },
+      "options": [
+        { "fr": "Ils aiment la campagne", "en": "They like the countryside" },
+        { "fr": "Houyi ne peut plus retourner au ciel", "en": "Houyi can no longer return to heaven" },
+        { "fr": "Ils n'ont pas d'argent", "en": "They have no money" },
+        { "fr": "Le roi les a envoyés là", "en": "The king sent them there" }
+      ],
+      "answer": 1,
+      "why": { "fr": "« Tā bù néng huí tiān shàng le » — suite de l'histoire de Houyi.", "en": "“Tā bù néng huí tiān shàng le” — continuing Houyi's story." }
+    },
+    {
+      "q": { "fr": "Comment est Fengmeng ?", "en": "What is Fengmeng like?" },
+      "options": [
+        { "fr": "Gentil et timide", "en": "Kind and shy" },
+        { "fr": "Il parle bien, mais il a un mauvais cœur", "en": "He speaks nicely, but has a wicked heart" },
+        { "fr": "Il est le meilleur ami de Chang'e", "en": "He is Chang'e's best friend" },
+        { "fr": "Il est très vieux", "en": "He is very old" }
+      ],
+      "answer": 1,
+      "why": { "fr": "« hěn huì shuō hǎotīng de huà, kěshì xīn hěn huài ».", "en": "“hěn huì shuō hǎotīng de huà, kěshì xīn hěn huài”." }
+    },
+    {
+      "q": { "fr": "Pourquoi Houyi ne prend-il pas l'élixir tout de suite ?", "en": "Why doesn't Houyi take the elixir right away?" },
+      "options": [
+        { "fr": "Il a peur du goût", "en": "He is afraid of the taste" },
+        { "fr": "Il ne veut pas aller au ciel sans Chang'e", "en": "He doesn't want to go to heaven without Chang'e" },
+        { "fr": "Il veut le vendre", "en": "He wants to sell it" },
+        { "fr": "Il l'a perdu", "en": "He lost it" }
+      ],
+      "answer": 1,
+      "why": { "fr": "« Méiyǒu Cháng'é, chángshēng bù lǎo yǒu shénme yìsi ne? »", "en": "“Méiyǒu Cháng'é, chángshēng bù lǎo yǒu shénme yìsi ne?”" }
+    },
+    {
+      "q": { "fr": "Où Chang'e cache-t-elle l'élixir ?", "en": "Where does Chang'e hide the elixir?" },
+      "options": [
+        { "fr": "Dans le jardin", "en": "In the garden" },
+        { "fr": "Dans une boîte sous le lit", "en": "In a box under the bed" },
+        { "fr": "Dans la cuisine", "en": "In the kitchen" },
+        { "fr": "Dans un arbre", "en": "In a tree" }
+      ],
+      "answer": 1,
+      "why": { "fr": "« fàng zài yí gè xiǎo hézi lǐ, cáng zài chuáng xiàmiàn ».", "en": "“fàng zài yí gè xiǎo hézi lǐ, cáng zài chuáng xiàmiàn”." }
+    },
+    {
+      "q": { "fr": "Pourquoi Chang'e avale-t-elle tout l'élixir ?", "en": "Why does Chang'e swallow all the elixir?" },
+      "options": [
+        { "fr": "Elle veut devenir déesse", "en": "She wants to become a goddess" },
+        { "fr": "Pour qu'un homme méchant ne devienne pas immortel", "en": "So that a wicked man cannot become immortal" },
+        { "fr": "Elle est malade", "en": "She is ill" },
+        { "fr": "Houyi le lui a demandé", "en": "Houyi asked her to" }
+      ],
+      "answer": 1,
+      "why": { "fr": "« juéduì bù néng ràng zhèyàng de huàirén chángshēng bù lǎo ».", "en": "“juéduì bù néng ràng zhèyàng de huàirén chángshēng bù lǎo”." }
+    },
+    {
+      "q": { "fr": "Pourquoi s'arrête-t-elle sur la lune ?", "en": "Why does she stop on the moon?" },
+      "options": [
+        { "fr": "C'est l'endroit du ciel le plus proche des hommes et de Houyi", "en": "It is the place in the sky closest to people and to Houyi" },
+        { "fr": "Il y fait chaud", "en": "It is warm there" },
+        { "fr": "Le lapin l'appelle", "en": "The rabbit calls her" },
+        { "fr": "La Reine Mère l'y attend", "en": "The Queen Mother is waiting there" }
+      ],
+      "answer": 0,
+      "why": { "fr": "Elle pense à Houyi et s'arrête au lieu « lí rénjiān zuì jìn ».", "en": "She thinks of Houyi and stops at the place “lí rénjiān zuì jìn”." }
+    },
+    {
+      "q": { "fr": "Qui vit avec Chang'e sur la lune ?", "en": "Who lives with Chang'e on the moon?" },
+      "options": [
+        { "fr": "Un dragon", "en": "A dragon" },
+        { "fr": "Un petit lapin blanc", "en": "A little white rabbit" },
+        { "fr": "Houyi", "en": "Houyi" },
+        { "fr": "Personne", "en": "Nobody" }
+      ],
+      "answer": 1,
+      "why": { "fr": "Il y a un osmanthe (guìhuā shù) et « yì zhī báisè de xiǎo tùzi ».", "en": "There is an osmanthus tree and “yì zhī báisè de xiǎo tùzi”." }
+    },
+    {
+      "q": { "fr": "Quelle fête vient de cette histoire ?", "en": "Which festival comes from this story?" },
+      "options": [
+        { "fr": "Le Nouvel An chinois", "en": "Chinese New Year" },
+        { "fr": "La fête de la mi-automne", "en": "The Mid-Autumn Festival" },
+        { "fr": "La fête des bateaux-dragons", "en": "The Dragon Boat Festival" },
+        { "fr": "La fête des lanternes", "en": "The Lantern Festival" }
+      ],
+      "answer": 1,
+      "why": { "fr": "Le 15 du 8e mois est devenu le Zhōngqiū jié : on mange des yuèbing.", "en": "The 15th of the 8th month became Zhōngqiū jié: people eat yuèbing." }
+    }
+  ]
+}

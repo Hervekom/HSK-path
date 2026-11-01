@@ -1,13 +1,13 @@
 import React from 'react';
 import {
   Flame, Crown, BookOpen, GraduationCap, Brain, ChatsCircle, Microphone, Waveform, Medal, ChatCircleText,
-  Student, Lightning, Exam, Trophy, Star, UsersThree, HandsClapping, Sword, Lock,
+  Student, Lightning, Exam, Trophy, Star, UsersThree, HandsClapping, Sword, Lock, BookOpenText,
 } from '@phosphor-icons/react';
 import type { BadgeTier } from '../../game/badges';
 
 const ICONS: Record<string, React.ComponentType<any>> = {
   Flame, Crown, BookOpen, GraduationCap, Brain, ChatsCircle, Microphone, Waveform, Medal, ChatCircleText,
-  Student, Lightning, Exam, Trophy, Star, UsersThree, HandsClapping, Sword,
+  Student, Lightning, Exam, Trophy, Star, UsersThree, HandsClapping, Sword, BookOpenText,
 };
 
 const TIER: Record<BadgeTier, { bg: string; ring: string; fg: string }> = {

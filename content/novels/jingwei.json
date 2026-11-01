@@ -1,0 +1,163 @@
+{
+  "id": "jingwei",
+  "order": 5,
+  "hanzi": "精卫填海",
+  "titlePinyin": "Jīngwèi tián hǎi",
+  "title": { "fr": "Jingwei veut combler la mer", "en": "Jingwei Fills the Sea" },
+  "level": "hsk2",
+  "summary": {
+    "fr": "Une princesse adore la mer… jusqu'au jour où la mer l'emporte. Transformée en petit oiseau, elle fait une promesse impossible.",
+    "en": "A princess loves the sea… until the day the sea takes her. Turned into a little bird, she makes an impossible promise."
+  },
+  "chapters": [
+    {
+      "title": "喜欢 大海 的 公主",
+      "paragraphs": [
+        "很久 以前，有 一 位 皇帝，叫 ^炎帝。他 有 一 个 小 女儿，名字 叫 ^女娃。^女娃 又 聪明 又 可爱，^炎帝 非常 爱 她。",
+        "^女娃 住 在 山 里，可是 她 最 喜欢 的 地方 是 东边 的 大海。她 常常 听 别人 说：“大海 很 大 很 蓝，比 天空 还 宽。”",
+        "她 每天 都 问 爸爸：“我 可以 去 看 大海 吗？”^炎帝 总是 说：“等 你 长大 一点儿 再 去 吧。大海 很 美，可是 也 很 危险。”"
+      ]
+    },
+    {
+      "title": "一 个 人 去 海 边",
+      "paragraphs": [
+        "^女娃 等 啊 等，等 了 一 年 又 一 年。有 一 天，她 再 也 等不了 了。她 没有 告诉 任何 人，自己 一 个 人 划着 小 船 去 了 东海。",
+        "大海 真 美 啊！太阳 照 在 水 上，海 面 像 一 块 闪闪发光 的 蓝色 宝石。海鸟 在 天上 飞，鱼 在 水 里 游。^女娃 开心 地{de} 笑 了，她 把 小 船 划得 越来越 远。"
+      ]
+    },
+    {
+      "title": "风暴",
+      "paragraphs": [
+        "突然，天 黑 了 下来。大 风 吹 起来 了，海 浪 像 山 一样 高。小 船 在 浪 里 跳来跳去，像 一 片 小小 的 树叶。",
+        "^女娃 害怕 极 了，她 大声 喊：“爸爸！救救 我！”可是 这里 离 家 太 远 了，没有 人 听见 她 的 声音。",
+        "一 个 大 浪 打 过来，小 船 翻 了。^女娃 掉 进 了 冰冷 的 海 里，再 也 没有 回来。"
+      ]
+    },
+    {
+      "title": "一 只 小 鸟",
+      "paragraphs": [
+        "第二 天 早上，海 边 飞 来 了 一 只{zhī} 小 鸟。它 的 头 上 有 花色 的 羽毛，嘴 是 白色 的，脚 是 红色 的。",
+        "它 一边 飞 一边 叫：“精卫！精卫！”声音 听 起来 非常 伤心。人们 说，这 只{zhī} 小 鸟 就 是 ^女娃 变 的，所以 叫 它 ^精卫。",
+        "^精卫 非常 恨 大海。她 想：“大海 夺走 了 我 的 生命。以后 还 会 有 别的 孩子 被 它 夺走。我 一定 要 把 大海 填平！”"
+      ]
+    },
+    {
+      "title": "一 块 又 一 块",
+      "paragraphs": [
+        "从 那 天 起，^精卫 每天 飞 到 西边 的 山 上，用 小小 的 嘴 衔起 一 块 小 石头，或者 一 根 小 树枝，然后 飞 很 远 很 远 的 路，把 它 扔 进 东海。",
+        "大海 看见 了，哈哈 大笑：“小 鸟，你 太 傻 了！就 算 你 填 一 百 万 年，也 填不平 我！”",
+        "^精卫 在 天上 回答：“就 算 一 千 万 年，一 万 万 年，我 也 要 填！只要 我 活着，我 就 不 会 停！”"
+      ]
+    },
+    {
+      "title": "永远 不 放弃",
+      "paragraphs": [
+        "春天 过去 了，夏天 来 了；冬天 过去 了，又 是 一 个 春天。不管 刮风 下雨，^精卫 每天 都 在 飞。",
+        "后来，^精卫 和 一 只{zhī} 海燕 结婚 了，生 了 很 多 小 鸟。小 鸟们 长大 以后，也 跟着 妈妈 一起 衔 石头，填 大海。",
+        "直到 今天，大海 还 没有 被 填平。可是 中国人 一直 记得 这 只{zhī} 小 鸟。“^精卫 填 海” 这 句 话 告诉 我们：不管 事情 多么 难，只要 不 放弃，就 是 了不起 的 人。"
+      ]
+    }
+  ],
+  "glossary": [
+    { "w": "公主", "fr": "princesse", "en": "princess" },
+    { "w": "皇帝", "fr": "empereur", "en": "emperor" },
+    { "w": "危险", "fr": "dangereux", "en": "dangerous" },
+    { "w": "划船", "fr": "ramer", "en": "to row a boat" },
+    { "w": "海浪", "fr": "vague", "en": "wave" },
+    { "w": "翻", "fr": "chavirer", "en": "to capsize" },
+    { "w": "羽毛", "fr": "plume", "en": "feather" },
+    { "w": "恨", "fr": "haïr", "en": "to hate" },
+    { "w": "衔", "fr": "tenir dans le bec", "en": "to hold in the beak" },
+    { "w": "放弃", "fr": "abandonner", "en": "to give up" }
+  ],
+  "questions": [
+    {
+      "q": { "fr": "Quel est l'endroit préféré de Nüwa (la princesse) ?", "en": "What is the princess Nüwa's favourite place?" },
+      "options": [
+        { "fr": "La montagne", "en": "The mountain" },
+        { "fr": "La mer de l'Est", "en": "The eastern sea" },
+        { "fr": "Le palais", "en": "The palace" },
+        { "fr": "La forêt", "en": "The forest" }
+      ],
+      "answer": 1,
+      "why": { "fr": "« zuì xǐhuan de dìfang shì dōngbian de dàhǎi ».", "en": "“zuì xǐhuan de dìfang shì dōngbian de dàhǎi”." }
+    },
+    {
+      "q": { "fr": "Que répond son père quand elle veut voir la mer ?", "en": "What does her father answer when she wants to see the sea?" },
+      "options": [
+        { "fr": "Vas-y tout de suite", "en": "Go right now" },
+        { "fr": "Attends d'être un peu plus grande", "en": "Wait until you are a bit older" },
+        { "fr": "Jamais", "en": "Never" },
+        { "fr": "Va avec ton frère", "en": "Go with your brother" }
+      ],
+      "answer": 1,
+      "why": { "fr": "« Děng nǐ zhǎngdà yìdiǎnr zài qù ba ».", "en": "“Děng nǐ zhǎngdà yìdiǎnr zài qù ba”." }
+    },
+    {
+      "q": { "fr": "Comment part-elle à la mer ?", "en": "How does she go to the sea?" },
+      "options": [
+        { "fr": "Avec son père, à cheval", "en": "With her father, on horseback" },
+        { "fr": "Seule, en ramant dans une petite barque", "en": "Alone, rowing a little boat" },
+        { "fr": "Avec des amis, à pied", "en": "With friends, on foot" },
+        { "fr": "Sur le dos d'un oiseau", "en": "On a bird's back" }
+      ],
+      "answer": 1,
+      "why": { "fr": "« zìjǐ yí gè rén huázhe xiǎo chuán qù le Dōnghǎi ».", "en": "“zìjǐ yí gè rén huázhe xiǎo chuán qù le Dōnghǎi”." }
+    },
+    {
+      "q": { "fr": "Que se passe-t-il pendant la tempête ?", "en": "What happens during the storm?" },
+      "options": [
+        { "fr": "Un pêcheur la sauve", "en": "A fisherman saves her" },
+        { "fr": "La barque chavire et elle tombe à l'eau", "en": "The boat capsizes and she falls into the water" },
+        { "fr": "Elle rentre vite à la maison", "en": "She hurries home" },
+        { "fr": "Elle se cache sur une île", "en": "She hides on an island" }
+      ],
+      "answer": 1,
+      "why": { "fr": "« xiǎo chuán fān le. Nǚwá diào jìn le bīnglěng de hǎi lǐ ».", "en": "“xiǎo chuán fān le. Nǚwá diào jìn le bīnglěng de hǎi lǐ”." }
+    },
+    {
+      "q": { "fr": "Pourquoi l'oiseau s'appelle-t-il Jingwei ?", "en": "Why is the bird called Jingwei?" },
+      "options": [
+        { "fr": "C'est le nom de sa mère", "en": "It is her mother's name" },
+        { "fr": "Parce qu'il crie « jīngwèi ! »", "en": "Because it cries “jīngwèi!”" },
+        { "fr": "L'empereur lui a donné ce nom", "en": "The emperor named it" },
+        { "fr": "C'est le nom de la mer", "en": "It is the name of the sea" }
+      ],
+      "answer": 1,
+      "why": { "fr": "Il vole en criant « Jīngwèi! Jīngwèi! ».", "en": "It flies crying “Jīngwèi! Jīngwèi!”." }
+    },
+    {
+      "q": { "fr": "Pourquoi Jingwei veut-elle combler la mer ?", "en": "Why does Jingwei want to fill the sea?" },
+      "options": [
+        { "fr": "Pour construire une maison", "en": "To build a house" },
+        { "fr": "Pour que la mer ne prenne plus la vie d'autres enfants", "en": "So the sea will not take other children's lives" },
+        { "fr": "Pour retrouver sa barque", "en": "To find her boat" },
+        { "fr": "Parce que son père le demande", "en": "Because her father asks her to" }
+      ],
+      "answer": 1,
+      "why": { "fr": "« Yǐhòu hái huì yǒu biéde háizi bèi tā duózǒu ».", "en": "“Yǐhòu hái huì yǒu biéde háizi bèi tā duózǒu”." }
+    },
+    {
+      "q": { "fr": "Que répond Jingwei quand la mer se moque d'elle ?", "en": "What does Jingwei answer when the sea laughs at her?" },
+      "options": [
+        { "fr": "Qu'elle va abandonner", "en": "That she will give up" },
+        { "fr": "Qu'elle ne s'arrêtera jamais tant qu'elle vivra", "en": "That she will never stop as long as she lives" },
+        { "fr": "Qu'elle va appeler son père", "en": "That she will call her father" },
+        { "fr": "Rien, elle part", "en": "Nothing, she leaves" }
+      ],
+      "answer": 1,
+      "why": { "fr": "« Zhǐyào wǒ huózhe, wǒ jiù bú huì tíng! »", "en": "“Zhǐyào wǒ huózhe, wǒ jiù bú huì tíng!”" }
+    },
+    {
+      "q": { "fr": "Quel est le message de l'expression « Jīngwèi tián hǎi » ?", "en": "What does the saying “Jīngwèi tián hǎi” teach?" },
+      "options": [
+        { "fr": "Il ne faut pas aller à la mer", "en": "You should not go to the sea" },
+        { "fr": "Il ne faut jamais abandonner, même si c'est très difficile", "en": "Never give up, even when it is very hard" },
+        { "fr": "Les oiseaux sont intelligents", "en": "Birds are clever" },
+        { "fr": "Il faut écouter ses parents", "en": "You must listen to your parents" }
+      ],
+      "answer": 1,
+      "why": { "fr": "« bùguǎn shìqing duōme nán, zhǐyào bú fàngqì… »", "en": "“bùguǎn shìqing duōme nán, zhǐyào bú fàngqì…”" }
+    }
+  ]
+}

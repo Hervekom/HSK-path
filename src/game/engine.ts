@@ -19,7 +19,8 @@ export type XpSource =
   | 'laoshi' // a message to the tutor
   | 'speaking' // one task of the speaking test
   | 'cheer' // encouragement sent to a friend
-  | 'challenge'; // challenge won
+  | 'challenge' // challenge won
+  | 'novel'; // story read and its questions answered
 
 export const XP: Record<XpSource, number> = {
   word: 5,
@@ -36,6 +37,7 @@ export const XP: Record<XpSource, number> = {
   speaking: 6,
   cheer: 1,
   challenge: 50,
+  novel: 30,
 };
 
 export interface GameState {
@@ -163,7 +165,7 @@ export function applyEarn(g: GameState, e: EarnEvent, goal: number, today = dayK
   next.stats[e.source] = (next.stats[e.source] || 0) + 1;
   if (e.key) next.stats[`${e.source}Unique`] = Object.keys(next.seen).filter((k) => k.startsWith(`${e.source}:`)).length;
   for (const [k, v] of Object.entries(e.stats || {})) next.stats[k] = (next.stats[k] || 0) + v;
-  if (e.key?.startsWith('lesson:')) next.stats[`done:${e.key}`] = 1;
+  if (e.key?.startsWith('lesson:') || e.key?.startsWith('novel:')) next.stats[`done:${e.key}`] = 1;
 
   const before = next.xp[today] || 0;
   next.xp[today] = before + xp;

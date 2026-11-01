@@ -15,6 +15,7 @@ import {
   Microphone,
   Trophy,
   Users,
+  Books,
 } from '../icons';
 import type { AppState } from '../../types';
 
@@ -53,6 +54,7 @@ export const NAV_SECTIONS: NavSection[] = [
       { id: 'hsk-levels', label: 'HSK courses', icon: Layers, views: ['hsk-levels', 'hsk-detail', 'learn'] },
       { id: 'vocabulary', labelKey: 'nav.vocabulary', icon: BookOpen, views: ['vocabulary'], badge: 'srs' },
       { id: 'phrases', labelKey: 'nav.phrases', icon: ChatsCircle, views: ['phrases'] },
+      { id: 'novels', label: 'Stories in pinyin', icon: Books, views: ['novels'] },
     ],
   },
   {
@@ -112,7 +114,7 @@ export const MOBILE_TABS: TabItem[] = [
   { id: 'dashboard', labelKey: 'navShort.home', icon: LayoutDashboard, views: viewsOf('dashboard', 'progress', 'profile', 'admin', 'achievements', 'friends') },
   { id: 'tutor', label: 'Laoshi', icon: ChatCircleText, views: ['tutor'] },
   { id: 'practice-hub', label: 'Exercises', icon: Sparkles, views: viewsOf('practice-hub', 'pronunciation') },
-  { id: 'vocabulary', labelKey: 'navShort.vocab', icon: BookOpen, views: viewsOf('vocabulary', 'phrases') },
+  { id: 'vocabulary', labelKey: 'navShort.vocab', icon: BookOpen, views: viewsOf('vocabulary', 'phrases', 'novels') },
   { id: 'mock-tests', labelKey: 'navShort.exams', icon: FileCheck, views: viewsOf('mock-tests') },
 ];
 

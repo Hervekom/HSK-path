@@ -1,0 +1,163 @@
+{
+  "id": "nianshou",
+  "order": 14,
+  "hanzi": "年兽的故事",
+  "titlePinyin": "Niánshòu de gùshi",
+  "title": { "fr": "Le monstre Nian", "en": "The Nian Monster" },
+  "level": "hsk2",
+  "summary": {
+    "fr": "Chaque veille de Nouvel An, un monstre sort de la mer pour dévorer bêtes et villageois. Cette année, un vieux mendiant refuse de s'enfuir… Pourquoi les Chinois mettent du rouge et lancent des pétards.",
+    "en": "Every New Year's Eve a monster rises from the sea to eat animals and villagers. This year, an old beggar refuses to flee… Why Chinese people use red and set off firecrackers."
+  },
+  "chapters": [
+    {
+      "title": "可怕 的 “年”",
+      "paragraphs": [
+        "很久 以前，海 里 住着 一 个 怪兽，名字 叫“年”。它 的 头 上 有 长长 的 角，眼睛 像 两 个 红 灯笼，嘴巴 大 得 能 吞下 一 头 牛。",
+        "“年”一 年 里 大部分 时间 都 在 海 底 睡觉。可是 每 年 冬天 的 最后 一 个 晚上，它 都 会 爬 上 岸，跑 进 村子 里，吃 牛，吃 羊，有时候 还 吃 人。",
+        "所以，每 到 这 一 天，村子 里 的 人 都 很 害怕。大家 关上 门，带着 老人 和 孩子，逃到 很 远 的 山 里 去 躲“年”。"
+      ]
+    },
+    {
+      "title": "奇怪 的 老 爷爷",
+      "paragraphs": [
+        "这 一 年 的 最后 一 天，村子 里 的 人 又 在 准备 逃跑。大家 都 很 忙，有 的 赶 牛，有 的 背 东西，到处 都 是 叫 声 和 哭 声。",
+        "这时候，村子 里 来 了 一 位 白 头发 的 老 爷爷。他 穿着 很 旧 的 衣服，拿着 一 根 拐杖，看 起来 像 一 个 要饭 的。大家 都 太 忙 了，没有 人 理 他。",
+        "只 有 村 东边 的 一 位 老 婆婆 给 了 他 一些 吃 的，对 他 说：“老人家，你 快 跟 我们 一起 上山 吧，“年”马上 就要 来 了！”"
+      ]
+    },
+    {
+      "title": "我 不 走",
+      "paragraphs": [
+        "老 爷爷 笑着 摸 了 摸 胡子，说：“婆婆，如果 你 让 我 在 你 家 住 一 晚上，我 一定 把“年”赶走。”",
+        "老 婆婆 以为 他 在 开 玩笑，还 想 再 劝 劝 他。可是 老 爷爷 只是 笑，一点儿 也 不 害怕。老 婆婆 没有 办法，只好 一 个 人 上 山 去 了。"
+      ]
+    },
+    {
+      "title": "半夜",
+      "paragraphs": [
+        "半夜，“年”真的 来 了。它 跑 进 村子，发现 跟 以前 不 一样：村 东边 老 婆婆 的 家 门 上 贴着 大 红 纸，屋子 里 灯火 通明。",
+        "“年”全身 发抖，大叫 一 声，向 老 婆婆 的 家 冲 过去。快 到 门口 的 时候，院子 里 突然 传来 “噼噼啪啪” 的 炸响 —— 原来 是 竹子 在 火 里 烧 得 爆 开 了！",
+        "“年”吓 了 一 大 跳，不 敢 再 往 前 走 了。这时候，大门 打开 了，老 爷爷 穿着 一 件 红 袍子，站 在 院子 里 哈哈 大笑。“年”吓得 脸色 都 变 了，转身 就 跑，一直 逃 回 了 大海。"
+      ]
+    },
+    {
+      "title": "“年”的 秘密",
+      "paragraphs": [
+        "第二 天 是 新年 的 第一 天。村民们 从 山 里 回来，发现 村子 好好 的，什么 都 没有 被 破坏，觉得 非常 奇怪。",
+        "老 婆婆 这才 想起 老 爷爷 的 话。大家 跑到 她 家，只 看见 门 上 贴着 红 纸，院子 里 还 有 一 堆 没 烧 完 的 竹子，几 根 红 蜡烛 还 亮着。老 爷爷 已经 不见 了。",
+        "大家 终于 明白 了：原来“年”最 怕 三 样 东西 —— 红色、火光 和 很 大 的 响声！"
+      ]
+    },
+    {
+      "title": "过 年",
+      "paragraphs": [
+        "从 那 以后，每 年 的 最后 一 个 晚上，家家户户 都 在 门 上 贴 红 对联，放 鞭炮，点 灯笼，一 家 人 一起 吃 饭，一 晚上 都 不 睡觉，这 叫“守岁”。",
+        "第二 天 早上，大家 走 出 门，见面 的 时候 都 会 笑着 说：“恭喜！恭喜！”意思 是 祝贺 大家 又 平安 地{de} 过 了 一 年。",
+        "这 就 是 中国 最 重要 的 节日 —— 春节，人们 也 叫 它“过 年”。“过 年”的 意思，就 是 打败 了“年”，平平安安 地{de} 走 进 新 的 一 年。"
+      ]
+    }
+  ],
+  "glossary": [
+    { "w": "怪兽", "fr": "monstre", "en": "monster" },
+    { "w": "角", "fr": "corne", "en": "horn" },
+    { "w": "灯笼", "fr": "lanterne", "en": "lantern" },
+    { "w": "吞", "fr": "avaler", "en": "to swallow" },
+    { "w": "要饭", "fr": "mendier", "en": "to beg" },
+    { "w": "劝", "fr": "persuader, conseiller", "en": "to urge" },
+    { "w": "贴", "fr": "coller", "en": "to stick, paste" },
+    { "w": "竹子", "fr": "bambou", "en": "bamboo" },
+    { "w": "鞭炮", "fr": "pétards", "en": "firecrackers" },
+    { "w": "对联", "fr": "sentences parallèles (rouleaux de porte)", "en": "couplets (door scrolls)" }
+  ],
+  "questions": [
+    {
+      "q": { "fr": "Quand le monstre Nian sort-il de la mer ?", "en": "When does the Nian monster come out of the sea?" },
+      "options": [
+        { "fr": "Chaque nuit", "en": "Every night" },
+        { "fr": "Le dernier soir de chaque année", "en": "On the last night of every year" },
+        { "fr": "En été", "en": "In summer" },
+        { "fr": "Quand il pleut", "en": "When it rains" }
+      ],
+      "answer": 1,
+      "why": { "fr": "« měi nián dōngtiān de zuìhòu yí gè wǎnshang ».", "en": "“měi nián dōngtiān de zuìhòu yí gè wǎnshang”." }
+    },
+    {
+      "q": { "fr": "Que font les villageois chaque année ?", "en": "What do the villagers do every year?" },
+      "options": [
+        { "fr": "Ils combattent le monstre", "en": "They fight the monster" },
+        { "fr": "Ils s'enfuient dans les montagnes", "en": "They flee into the mountains" },
+        { "fr": "Ils se cachent dans la mer", "en": "They hide in the sea" },
+        { "fr": "Ils font une fête", "en": "They throw a party" }
+      ],
+      "answer": 1,
+      "why": { "fr": "« táo dào hěn yuǎn de shān lǐ qù duǒ “Nián” ».", "en": "“táo dào hěn yuǎn de shān lǐ qù duǒ “Nián””." }
+    },
+    {
+      "q": { "fr": "Qui aide le vieil homme ?", "en": "Who helps the old man?" },
+      "options": [
+        { "fr": "Le chef du village", "en": "The village head" },
+        { "fr": "Une vieille dame à l'est du village", "en": "An old woman on the east side of the village" },
+        { "fr": "Des enfants", "en": "Some children" },
+        { "fr": "Personne", "en": "Nobody" }
+      ],
+      "answer": 1,
+      "why": { "fr": "« cūn dōngbian de yí wèi lǎo pópo gěi le tā yìxiē chī de ».", "en": "“cūn dōngbian de yí wèi lǎo pópo gěi le tā yìxiē chī de”." }
+    },
+    {
+      "q": { "fr": "Que demande le vieil homme ?", "en": "What does the old man ask for?" },
+      "options": [
+        { "fr": "De l'argent", "en": "Money" },
+        { "fr": "Passer la nuit chez la vieille dame", "en": "To spend the night at the old woman's house" },
+        { "fr": "Un cheval", "en": "A horse" },
+        { "fr": "Venir dans la montagne", "en": "To come to the mountains" }
+      ],
+      "answer": 1,
+      "why": { "fr": "« rúguǒ nǐ ràng wǒ zài nǐ jiā zhù yì wǎnshang… ».", "en": "“rúguǒ nǐ ràng wǒ zài nǐ jiā zhù yì wǎnshang…”." }
+    },
+    {
+      "q": { "fr": "Qu'est-ce qui fait ce bruit « pīpīpāpā » ?", "en": "What makes the “pīpīpāpā” noise?" },
+      "options": [
+        { "fr": "Du bambou qui éclate dans le feu", "en": "Bamboo bursting in the fire" },
+        { "fr": "La pluie", "en": "Rain" },
+        { "fr": "Le monstre qui court", "en": "The monster running" },
+        { "fr": "Des tambours", "en": "Drums" }
+      ],
+      "answer": 0,
+      "why": { "fr": "« yuánlái shì zhúzi zài huǒ lǐ shāo de bào kāi le! »", "en": "“yuánlái shì zhúzi zài huǒ lǐ shāo de bào kāi le!”" }
+    },
+    {
+      "q": { "fr": "De quelles trois choses le monstre a-t-il peur ?", "en": "Which three things is the monster afraid of?" },
+      "options": [
+        { "fr": "L'eau, le vent et la neige", "en": "Water, wind and snow" },
+        { "fr": "Le rouge, la lumière du feu et les grands bruits", "en": "Red, firelight and loud noises" },
+        { "fr": "Les chiens, les enfants et la musique", "en": "Dogs, children and music" },
+        { "fr": "Le soleil, la lune et les étoiles", "en": "The sun, moon and stars" }
+      ],
+      "answer": 1,
+      "why": { "fr": "« hóngsè, huǒguāng hé hěn dà de xiǎngshēng! »", "en": "“hóngsè, huǒguāng hé hěn dà de xiǎngshēng!”" }
+    },
+    {
+      "q": { "fr": "Qu'est-ce que « shǒusuì » ?", "en": "What is “shǒusuì”?" },
+      "options": [
+        { "fr": "Ne pas dormir de la nuit du réveillon", "en": "Staying up all night on New Year's Eve" },
+        { "fr": "Un plat du Nouvel An", "en": "A New Year dish" },
+        { "fr": "Un type de pétard", "en": "A kind of firecracker" },
+        { "fr": "Donner de l'argent aux enfants", "en": "Giving money to children" }
+      ],
+      "answer": 0,
+      "why": { "fr": "« yì wǎnshang dōu bú shuìjiào, zhè jiào “shǒusuì” ».", "en": "“yì wǎnshang dōu bú shuìjiào, zhè jiào “shǒusuì””." }
+    },
+    {
+      "q": { "fr": "Selon l'histoire, que signifie « guò nián » ?", "en": "According to the story, what does “guò nián” mean?" },
+      "options": [
+        { "fr": "Avoir un an de plus", "en": "To turn one year older" },
+        { "fr": "Avoir vaincu le Nian et entrer en paix dans la nouvelle année", "en": "Having beaten the Nian and entering the new year safely" },
+        { "fr": "Faire un voyage", "en": "To go on a trip" },
+        { "fr": "Manger beaucoup", "en": "To eat a lot" }
+      ],
+      "answer": 1,
+      "why": { "fr": "« jiù shì dǎbài le “Nián”, píngpíng'ān'ān de zǒu jìn xīn de yì nián ».", "en": "“jiù shì dǎbài le “Nián”, píngpíng'ān'ān de zǒu jìn xīn de yì nián”." }
+    }
+  ]
+}

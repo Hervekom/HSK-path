@@ -1,0 +1,171 @@
+{
+  "id": "maliang",
+  "order": 15,
+  "hanzi": "神笔马良",
+  "titlePinyin": "Shénbǐ Mǎ Liáng",
+  "title": { "fr": "Ma Liang et le pinceau magique", "en": "Ma Liang and the Magic Brush" },
+  "level": "hsk2",
+  "summary": {
+    "fr": "Un garçon pauvre rêve d'avoir un pinceau. Un soir, un vieil homme lui en offre un : tout ce qu'il dessine devient réel. Mais l'empereur aussi veut ce pinceau…",
+    "en": "A poor boy dreams of owning a brush. One night an old man gives him one: everything he paints comes to life. But the emperor wants the brush too…"
+  },
+  "chapters": [
+    {
+      "title": "爱 画画儿 的 孩子",
+      "paragraphs": [
+        "很久 以前，有 一 个 孩子 叫 ^马良。他 的 爸爸 妈妈 很 早 就 死 了，他 一 个 人 生活，每天 上 山 砍柴，日子 过 得 很 苦。",
+        "^马良 最 喜欢 画画儿。可是 他 太 穷 了，买不起 笔。他 就 用 树枝 在 地 上 画，用 石头 在 墙 上 画。他 画 的 鸟，好像 会 飞；他 画 的 鱼，好像 会 游。",
+        "有 一 次，他 走过 一 个 画家 的 家，鼓起 勇气 说：“先生，能 借 我 一 支 笔 吗？我 想 学 画画儿。”画家 看 了 看 他 的 破 衣服，大笑：“穷 孩子 还 想 学 画画儿？走 开！”"
+      ]
+    },
+    {
+      "title": "神奇 的 笔",
+      "paragraphs": [
+        "^马良 没有 放弃，他 每天 都 练习。一 年 又 一 年，他 画得 越来越 好。",
+        "一 天 晚上，^马良 太 累 了，躺 在 窑洞 里 睡着 了。忽然，屋子 里 亮 了，一 位 白 胡子 老 爷爷 出现 在 他 面前，送给 他 一 支 金光闪闪 的 笔，说：“这 是 一 支 神笔。你 要 好好 用 它，帮助 穷人。”",
+        "^马良 醒 来，发现 手 里 真的 有 一 支 笔！他 马上 在 墙 上 画 了 一 只{zhī} 鸟。鸟 扇 了 扇 翅膀，竟然 从 墙 上 飞 了 下来，唱着 歌 飞 出 了 窗户！"
+      ]
+    },
+    {
+      "title": "帮助 穷人",
+      "paragraphs": [
+        "从 那 以后，^马良 每天 拿着 神笔，到 村子 里 帮助 穷人。",
+        "谁 家 没有 牛 耕地，他 就 画 一 头 牛；谁 家 没有 水 浇田，他 就 画 一 条 河；谁 家 没有 灯，他 就 画 一 盏 灯。村子 里 的 人 都 非常 感谢 他。",
+        "可是 ^马良 有 一 个 原则：他 只 为 穷人 画画儿，从来 不 给 有钱 人 画。"
+      ]
+    },
+    {
+      "title": "贪心 的 财主",
+      "paragraphs": [
+        "村子 里 有 一 个 很 有钱 的 财主，他 又 贪心 又 坏。他 听说 了 神笔 的 事，就 派人 把 ^马良 抓 来，关 在 马棚 里，说：“给 我 画 金子！不 画，就 别 想 吃饭！”",
+        "^马良 一 笔 也 不 画。晚上，他 用 神笔 在 墙 上 画 了 一 扇 门，推开 门 就 逃 了 出去。财主 带着 人 骑 马 追 来，^马良 画 了 一 张 弓 和 一 支 箭，一 箭 射中 了 财主。"
+      ]
+    },
+    {
+      "title": "皇帝 的 命令",
+      "paragraphs": [
+        "^马良 有 神笔 的 事情，最后 传到 了 皇帝 那里。皇帝 马上 派 兵 把 ^马良 抓 进 了 皇宫。",
+        "皇帝 说：“给 我 画 一 座 金山！”^马良 不 想 给 这个 坏 皇帝 画，就 故意 画 了 一 条 龙。龙 一 出来，就 张开 大 嘴，把 宫殿 弄得 乱七八糟。皇帝 很 生气，把 ^马良 关 进 了 大牢，还 抢走 了 神笔。",
+        "皇帝 自己 拿 着 神笔 画 金山。可是 他 画 出来 的 不 是 金子，而是 一 堆 大 石头，石头 滚 下来，差点儿 把 他 砸 死。他 又 画 了 一 块 金砖，金砖 变成 了 一 条 大 蛇，追着 他 咬。"
+      ]
+    },
+    {
+      "title": "大海 和 金山",
+      "paragraphs": [
+        "皇帝 没有 办法，只好 把 ^马良 放 出来，说：“你 帮 我 画画儿，我 就 给 你 很 多 金子，还 把 公主 嫁给 你。”^马良 想 了 想，说：“好 吧。”",
+        "皇帝 说：“我 要 看 大海！”^马良 一挥 笔，画 了 一 片 蓝蓝 的 大海。皇帝 又 说：“海 里 要 有 一 座 金山！”^马良 又 在 海 的 中间 画 了 一 座 金光闪闪 的 金山。",
+        "皇帝 高兴 极 了：“快，给 我 画 一 条 大 船！我 要 去 金山 拿 金子！”^马良 画 了 一 条 大 船，皇帝 带着 大臣们 上 了 船。“风 太 小 了，再 大 一点儿！”^马良 就 画 风。"
+      ]
+    },
+    {
+      "title": "^马良 去 哪儿 了？",
+      "paragraphs": [
+        "^马良 不停 地{de} 画 风，风 越来越 大，浪 越来越 高。皇帝 害怕 了，大喊：“够 了！够 了！别 画 了！”^马良 却 一直 画，好像 没 听见 一样。",
+        "最后，一 个 大 浪 打 过来，大 船 翻 了，贪心 的 皇帝 和 大臣们 都 掉 进 了 大海。",
+        "后来，^马良 去 了 哪里，没有 人 知道。有 人 说，他 回到 了 自己 的 村子；也 有 人 说，他 还在 很多 地方 走来走去，用 他 的 神笔 帮助 需要 帮助 的 人。"
+      ]
+    }
+  ],
+  "glossary": [
+    { "w": "画画儿", "fr": "dessiner, peindre", "en": "to draw, paint" },
+    { "w": "砍柴", "fr": "couper du bois", "en": "to chop firewood" },
+    { "w": "穷", "fr": "pauvre", "en": "poor" },
+    { "w": "笔", "fr": "pinceau, stylo", "en": "brush, pen" },
+    { "w": "勇气", "fr": "courage", "en": "courage" },
+    { "w": "翅膀", "fr": "ailes", "en": "wings" },
+    { "w": "原则", "fr": "principe", "en": "principle" },
+    { "w": "财主", "fr": "riche propriétaire", "en": "rich landlord" },
+    { "w": "贪心", "fr": "avide", "en": "greedy" },
+    { "w": "皇宫", "fr": "palais impérial", "en": "imperial palace" }
+  ],
+  "questions": [
+    {
+      "q": { "fr": "Pourquoi Ma Liang dessine-t-il avec des branches et des pierres ?", "en": "Why does Ma Liang draw with sticks and stones?" },
+      "options": [
+        { "fr": "Il préfère", "en": "He prefers it" },
+        { "fr": "Il est trop pauvre pour acheter un pinceau", "en": "He is too poor to buy a brush" },
+        { "fr": "Son professeur le lui demande", "en": "His teacher tells him to" },
+        { "fr": "Il n'aime pas le papier", "en": "He doesn't like paper" }
+      ],
+      "answer": 1,
+      "why": { "fr": "« tā tài qióng le, mǎi bu qǐ bǐ ».", "en": "“tā tài qióng le, mǎi bu qǐ bǐ”." }
+    },
+    {
+      "q": { "fr": "Comment réagit le peintre quand Ma Liang demande un pinceau ?", "en": "How does the painter react when Ma Liang asks for a brush?" },
+      "options": [
+        { "fr": "Il lui en donne un", "en": "He gives him one" },
+        { "fr": "Il se moque de lui et le chasse", "en": "He laughs at him and sends him away" },
+        { "fr": "Il lui donne des cours", "en": "He gives him lessons" },
+        { "fr": "Il ne répond pas", "en": "He doesn't answer" }
+      ],
+      "answer": 1,
+      "why": { "fr": "« Qióng háizi hái xiǎng xué huà huàr? Zǒu kāi! »", "en": "“Qióng háizi hái xiǎng xué huà huàr? Zǒu kāi!”" }
+    },
+    {
+      "q": { "fr": "Que se passe-t-il avec le premier oiseau qu'il dessine ?", "en": "What happens to the first bird he draws?" },
+      "options": [
+        { "fr": "Il s'envole du mur", "en": "It flies off the wall" },
+        { "fr": "Il disparaît", "en": "It disappears" },
+        { "fr": "Il devient en or", "en": "It turns to gold" },
+        { "fr": "Rien", "en": "Nothing" }
+      ],
+      "answer": 0,
+      "why": { "fr": "« cóng qiáng shàng fēi le xiàlai… fēi chū le chuānghu! »", "en": "“cóng qiáng shàng fēi le xiàlai… fēi chū le chuānghu!”" }
+    },
+    {
+      "q": { "fr": "Quel est le principe de Ma Liang ?", "en": "What is Ma Liang's principle?" },
+      "options": [
+        { "fr": "Dessiner seulement pour les pauvres", "en": "Paint only for the poor" },
+        { "fr": "Dessiner seulement la nuit", "en": "Paint only at night" },
+        { "fr": "Ne jamais dessiner d'animaux", "en": "Never paint animals" },
+        { "fr": "Se faire payer en or", "en": "Be paid in gold" }
+      ],
+      "answer": 0,
+      "why": { "fr": "« tā zhǐ wèi qióngrén huà huàr ».", "en": "“tā zhǐ wèi qióngrén huà huàr”." }
+    },
+    {
+      "q": { "fr": "Comment s'échappe-t-il de l'écurie du riche propriétaire ?", "en": "How does he escape from the landlord's stable?" },
+      "options": [
+        { "fr": "Il dessine une porte sur le mur", "en": "He draws a door on the wall" },
+        { "fr": "Un ami l'aide", "en": "A friend helps him" },
+        { "fr": "Il casse le mur", "en": "He breaks the wall" },
+        { "fr": "Il dessine des ailes", "en": "He draws wings" }
+      ],
+      "answer": 0,
+      "why": { "fr": "« zài qiáng shàng huà le yí shàn mén, tuīkāi mén jiù táo le chūqu ».", "en": "“zài qiáng shàng huà le yí shàn mén, tuīkāi mén jiù táo le chūqu”." }
+    },
+    {
+      "q": { "fr": "Que dessine l'empereur avec le pinceau magique ?", "en": "What happens when the emperor uses the brush?" },
+      "options": [
+        { "fr": "Une montagne d'or", "en": "A mountain of gold" },
+        { "fr": "Des pierres qui roulent et un serpent qui le poursuit", "en": "Rolling rocks and a snake that chases him" },
+        { "fr": "Un beau palais", "en": "A beautiful palace" },
+        { "fr": "Rien, le pinceau ne marche pas du tout", "en": "Nothing, the brush doesn't work at all" }
+      ],
+      "answer": 1,
+      "why": { "fr": "Il obtient « yì duī dà shítou », puis la brique d'or devient « yì tiáo dà shé ».", "en": "He gets “yì duī dà shítou”, then the gold brick becomes “yì tiáo dà shé”." }
+    },
+    {
+      "q": { "fr": "Pourquoi Ma Liang accepte-t-il finalement de dessiner pour l'empereur ?", "en": "Why does Ma Liang finally agree to paint for the emperor?" },
+      "options": [
+        { "fr": "Il veut épouser la princesse", "en": "He wants to marry the princess" },
+        { "fr": "Il a un plan pour punir l'empereur avide", "en": "He has a plan to punish the greedy emperor" },
+        { "fr": "Il a peur", "en": "He is afraid" },
+        { "fr": "Il veut de l'or", "en": "He wants gold" }
+      ],
+      "answer": 1,
+      "why": { "fr": "Il dessine la mer, la montagne d'or, le bateau… puis du vent jusqu'à ce que le bateau chavire.", "en": "He paints the sea, the gold mountain, the ship… then wind until the ship capsizes." }
+    },
+    {
+      "q": { "fr": "Que devient Ma Liang à la fin ?", "en": "What becomes of Ma Liang at the end?" },
+      "options": [
+        { "fr": "Il devient empereur", "en": "He becomes emperor" },
+        { "fr": "Personne ne le sait vraiment", "en": "Nobody really knows" },
+        { "fr": "Il tombe à la mer", "en": "He falls into the sea" },
+        { "fr": "Il perd son pinceau", "en": "He loses his brush" }
+      ],
+      "answer": 1,
+      "why": { "fr": "« Mǎ Liáng qù le nǎlǐ, méiyǒu rén zhīdào ».", "en": "“Mǎ Liáng qù le nǎlǐ, méiyǒu rén zhīdào”." }
+    }
+  ]
+}

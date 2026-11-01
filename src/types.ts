@@ -321,6 +321,7 @@ export interface AppState {
     | 'speaking'
     | 'achievements'
     | 'friends'
+    | 'novels'
     | 'quiz' 
     | 'listening-practice' 
     | 'reading-practice' 

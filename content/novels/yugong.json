@@ -1,0 +1,164 @@
+{
+  "id": "yugong",
+  "order": 6,
+  "hanzi": "愚公移山",
+  "titlePinyin": "Yúgōng yí shān",
+  "title": { "fr": "Le vieux fou qui déplaçait les montagnes", "en": "The Foolish Old Man Who Moved the Mountains" },
+  "level": "hsk2",
+  "summary": {
+    "fr": "Deux montagnes géantes bloquent la porte de sa maison. Un vieil homme de 90 ans décide de les enlever… avec une pelle et un panier.",
+    "en": "Two giant mountains block the door of his house. A 90-year-old man decides to remove them… with a shovel and a basket."
+  },
+  "chapters": [
+    {
+      "title": "门 前 的 两 座 大 山",
+      "paragraphs": [
+        "很久 以前，在 两 座 大 山 的 北边，住着 一 位 老人。大家 都 叫 他 ^愚公。^愚公 已经 九十 岁 了，头发 和 胡子 都 白 了。",
+        "这 两 座 山 一 座 叫 ^太行山，一 座 叫 ^王屋山。它们 又 高 又 大，挡 在 ^愚公 家 的 门 前。",
+        "^愚公 一 家 人 每次 去 南边 的 城里 买 东西，都 要 绕 很 远 很 远 的 路。走 一 趟，常常 要 好几 个 月。"
+      ]
+    },
+    {
+      "title": "家庭 会议",
+      "paragraphs": [
+        "有 一 天 晚上，^愚公 把 全家 人 叫 到 一起，说：“这 两 座 山 让 我们 太 不 方便 了。我 想，我们 一起 把 山 搬走，开 一 条 直接 去 南边 的 路，好 不 好？”",
+        "儿子 和 孙子们 都 说：“好！我们 支持 您！”",
+        "可是 ^愚公 的 妻子 有点儿 担心：“你 已经 这么 老 了，连 一 座 小 土 山 都 搬不动，怎么 搬 这么 大 的 山 呢？而且，挖 出来 的 石头 和 土 放 在 哪儿 呢？”",
+        "大家 想 了 想，说：“我们 可以 把 石头 和 土 扔 到 很 远 的 渤海 边 去。”"
+      ]
+    },
+    {
+      "title": "开始 挖 山",
+      "paragraphs": [
+        "第二 天 一 早，^愚公 就 带着 儿子 和 孙子们 上 山 了。他们 拿着 锤子 和 铲子，一 块 一 块 地{de} 敲 石头，一 筐 一 筐 地{de} 挖 土。",
+        "邻居 家 有 一 个 七八 岁 的 小 男孩，他 也 蹦蹦跳跳 地{de} 跑 来 帮忙。",
+        "渤海 离 这里 非常 远。他们 把 土 运 到 海 边，再 回来，一 个 来回 就 要 整整 一 年。"
+      ]
+    },
+    {
+      "title": "聪明 的 老人",
+      "paragraphs": [
+        "河 边 住着 一 位 老人，大家 叫 他 ^智叟。他 觉得 自己 很 聪明。他 看到 ^愚公 在 挖 山，笑 得 弯 下 了 腰。",
+        "^智叟 说：“^愚公 啊，你 太 傻 了！你 已经 九十 岁 了，还 能 活 几 年？你 连 山 上 的 一 根 草 都 拔不完，还 想 搬 两 座 大 山？”"
+      ]
+    },
+    {
+      "title": "子子孙孙",
+      "paragraphs": [
+        "^愚公 叹 了 一 口 气，说：“你 才 是 不 明白 啊！我 死 了，还 有 我 的 儿子；儿子 死 了，还 有 孙子。孙子 又 有 儿子，儿子 又 有 孙子，子子孙孙，没有 穷尽。”",
+        "“可是 山 不 会 再 长{zhǎng} 高 了。我们 挖 一点儿，它 就 少 一点儿。为什么 搬不走 呢？”",
+        "^智叟 听 了，张着 嘴，一 句 话 也 说不 出来。"
+      ]
+    },
+    {
+      "title": "神仙 的 帮助",
+      "paragraphs": [
+        "山 上 的 山神 听到 了 他们 的 话，吓 坏 了：“这个 老人 真 的 会 一直 挖 下去！我 的 山 就要 没有 了！”他 赶快 去 告诉 了 ^天帝。",
+        "^天帝 被 ^愚公 的 决心 感动 了。他 派 了 两 个 力气 非常 大 的 神仙 下来。两 个 神仙 一 人 背起 一 座 山，一 座 放 到 了 东边，一 座 放 到 了 南边。",
+        "从 那 以后，^愚公 家 门 前 再 也 没有 大 山 挡路 了。今天 中国人 说“^愚公 移 山”，意思 是：只要 有 决心，一直 努力，再 难 的 事情 也 能 做到。"
+      ]
+    }
+  ],
+  "glossary": [
+    { "w": "胡子", "fr": "barbe", "en": "beard" },
+    { "w": "挡", "fr": "bloquer", "en": "to block" },
+    { "w": "绕路", "fr": "faire un détour", "en": "to take a detour" },
+    { "w": "搬", "fr": "déplacer, déménager", "en": "to move" },
+    { "w": "挖", "fr": "creuser", "en": "to dig" },
+    { "w": "筐", "fr": "panier", "en": "basket" },
+    { "w": "傻", "fr": "bête, idiot", "en": "silly" },
+    { "w": "孙子", "fr": "petit-fils", "en": "grandson" },
+    { "w": "决心", "fr": "détermination", "en": "determination" },
+    { "w": "感动", "fr": "touché, ému", "en": "moved, touched" }
+  ],
+  "questions": [
+    {
+      "q": { "fr": "Quel âge a Yugong ?", "en": "How old is Yugong?" },
+      "options": [
+        { "fr": "50 ans", "en": "50" },
+        { "fr": "70 ans", "en": "70" },
+        { "fr": "90 ans", "en": "90" },
+        { "fr": "100 ans", "en": "100" }
+      ],
+      "answer": 2,
+      "why": { "fr": "« Yúgōng yǐjīng jiǔshí suì le ».", "en": "“Yúgōng yǐjīng jiǔshí suì le”." }
+    },
+    {
+      "q": { "fr": "Quel est le problème des deux montagnes ?", "en": "What is the problem with the two mountains?" },
+      "options": [
+        { "fr": "Elles sont dangereuses", "en": "They are dangerous" },
+        { "fr": "Elles obligent la famille à faire un très long détour", "en": "They force the family to take a very long detour" },
+        { "fr": "Elles cachent le soleil", "en": "They hide the sun" },
+        { "fr": "Elles sont pleines d'animaux", "en": "They are full of animals" }
+      ],
+      "answer": 1,
+      "why": { "fr": "Pour aller en ville il faut « rào hěn yuǎn de lù », parfois plusieurs mois.", "en": "To go to town they must “rào hěn yuǎn de lù”, sometimes for months." }
+    },
+    {
+      "q": { "fr": "Que s'inquiète de savoir la femme de Yugong ?", "en": "What worries Yugong's wife?" },
+      "options": [
+        { "fr": "Où mettre la terre et les pierres", "en": "Where to put the earth and stones" },
+        { "fr": "Qui va faire la cuisine", "en": "Who will cook" },
+        { "fr": "Combien cela coûte", "en": "How much it costs" },
+        { "fr": "Si les voisins seront fâchés", "en": "Whether the neighbours will be angry" }
+      ],
+      "answer": 0,
+      "why": { "fr": "« wā chūlai de shítou hé tǔ fàng zài nǎr ne? » (et il est très âgé).", "en": "“wā chūlai de shítou hé tǔ fàng zài nǎr ne?” (and he is very old)." }
+    },
+    {
+      "q": { "fr": "Où jettent-ils la terre ?", "en": "Where do they throw the earth?" },
+      "options": [
+        { "fr": "Dans la rivière", "en": "Into the river" },
+        { "fr": "Au bord de la mer de Bohai", "en": "On the shore of the Bohai Sea" },
+        { "fr": "Derrière la maison", "en": "Behind the house" },
+        { "fr": "Dans la ville", "en": "In the town" }
+      ],
+      "answer": 1,
+      "why": { "fr": "« rēng dào hěn yuǎn de Bóhǎi biān qù ».", "en": "“rēng dào hěn yuǎn de Bóhǎi biān qù”." }
+    },
+    {
+      "q": { "fr": "Combien de temps dure un aller-retour jusqu'à la mer ?", "en": "How long does one round trip to the sea take?" },
+      "options": [
+        { "fr": "Un jour", "en": "One day" },
+        { "fr": "Un mois", "en": "One month" },
+        { "fr": "Une année entière", "en": "A whole year" },
+        { "fr": "Dix ans", "en": "Ten years" }
+      ],
+      "answer": 2,
+      "why": { "fr": "« yí gè láihuí jiù yào zhěngzhěng yì nián ».", "en": "“yí gè láihuí jiù yào zhěngzhěng yì nián”." }
+    },
+    {
+      "q": { "fr": "Que pense Zhisou de Yugong ?", "en": "What does Zhisou think of Yugong?" },
+      "options": [
+        { "fr": "Qu'il est très courageux", "en": "That he is very brave" },
+        { "fr": "Qu'il est stupide", "en": "That he is foolish" },
+        { "fr": "Qu'il est très riche", "en": "That he is very rich" },
+        { "fr": "Qu'il est malade", "en": "That he is ill" }
+      ],
+      "answer": 1,
+      "why": { "fr": "« nǐ tài shǎ le! » : tu es trop bête.", "en": "“nǐ tài shǎ le!”: you are too silly." }
+    },
+    {
+      "q": { "fr": "Quel est l'argument principal de Yugong ?", "en": "What is Yugong's main argument?" },
+      "options": [
+        { "fr": "Il est très fort", "en": "He is very strong" },
+        { "fr": "Ses descendants continueront, et la montagne ne grandit plus", "en": "His descendants will go on, and the mountain no longer grows" },
+        { "fr": "Les dieux l'aideront", "en": "The gods will help him" },
+        { "fr": "Il a beaucoup d'argent", "en": "He has a lot of money" }
+      ],
+      "answer": 1,
+      "why": { "fr": "« zǐzǐsūnsūn, méiyǒu qióngjìn… shān bú huì zài zhǎng gāo le ».", "en": "“zǐzǐsūnsūn, méiyǒu qióngjìn… shān bú huì zài zhǎng gāo le”." }
+    },
+    {
+      "q": { "fr": "Comment les montagnes disparaissent-elles finalement ?", "en": "How do the mountains finally disappear?" },
+      "options": [
+        { "fr": "La famille finit de les creuser", "en": "The family finishes digging them" },
+        { "fr": "Deux dieux très forts les emportent sur leur dos", "en": "Two very strong gods carry them away on their backs" },
+        { "fr": "Un tremblement de terre", "en": "An earthquake" },
+        { "fr": "Zhisou les déplace", "en": "Zhisou moves them" }
+      ],
+      "answer": 1,
+      "why": { "fr": "Touché par sa détermination, Tiāndì envoie deux dieux qui portent les montagnes.", "en": "Moved by his determination, Tiāndì sends two gods who carry the mountains away." }
+    }
+  ]
+}

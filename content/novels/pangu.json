@@ -1,0 +1,157 @@
+{
+  "id": "pangu",
+  "order": 1,
+  "hanzi": "盘古开天地",
+  "titlePinyin": "Pángǔ kāi tiān dì",
+  "title": { "fr": "Pangu sépare le ciel et la terre", "en": "Pangu Separates Heaven and Earth" },
+  "level": "hsk2",
+  "summary": {
+    "fr": "Avant le monde, il n'y avait qu'un œuf immense et noir. Un géant y dormait depuis dix-huit mille ans… Le mythe chinois de la création.",
+    "en": "Before the world, there was only a huge black egg. A giant had slept inside for eighteen thousand years… The Chinese creation myth."
+  },
+  "chapters": [
+    {
+      "title": "一个 很 大 的 蛋",
+      "paragraphs": [
+        "很久 很久 以前，没有 天，也 没有 地。世界 像 一个 很 大 很 大 的 蛋。蛋 里面 非常 黑，什么 都 看不见。",
+        "在 这个 大 蛋 里面，有 一个 人 在 睡觉。他 叫 ^盘古。^盘古 睡 了 很 长 时间，一 万 八千 年！",
+        "这么 长 的 时间，没有 人 跟 他 说话，没有 光，也 没有 声音。只有 黑色，只有 安静。"
+      ]
+    },
+    {
+      "title": "^盘古 醒 了",
+      "paragraphs": [
+        "有 一 天，^盘古 终于 醒 了。他 睁开 眼睛，可是 什么 都 看不见。他 想 站 起来，可是 身体 动不了。",
+        "“这里 太 黑 了！太 小 了！”^盘古 很 不 高兴。他 想：“我 要 出去！我 要 看见 光！”",
+        "^盘古 有 一 把 很 大 的 斧子。他 拿起 斧子，用 全身 的 力气，向 黑暗 砍 去。"
+      ]
+    },
+    {
+      "title": "天 和 地 分开 了",
+      "paragraphs": [
+        "“轰！”一 声 大 响，大 蛋 破 了！蛋 里面 的 东西 开始 分开。",
+        "轻 的、清 的 东西 慢慢 往 上 走，变成 了 天。重 的、浑 的 东西 慢慢 往 下 走，变成 了 地。",
+        "^盘古 很 高兴。可是 他 又 担心 了：“如果 天 和 地 又 合 在 一起，怎么办？”"
+      ]
+    },
+    {
+      "title": "一 万 八千 年 的 工作",
+      "paragraphs": [
+        "所以 ^盘古 站 在 天 和 地 中间。他 用 头 顶着 天，用 脚 踩着 地。",
+        "天 每天 高 一 丈，地 每天 厚 一 丈，^盘古 也 每天 长高 一 丈。就 这样，又 过 了 一 万 八千 年。",
+        "现在 天 已经 非常 高 了，地 也 非常 厚 了。天 和 地 不会 再 合 在 一起 了。可是 ^盘古 太 累 了，他 慢慢 地{de} 倒 了 下去。"
+      ]
+    },
+    {
+      "title": "^盘古 变成 了 世界",
+      "paragraphs": [
+        "^盘古 死 了，可是 他 的 身体 没有 消失。他 的 身体 变成 了 我们 的 世界。",
+        "他 的 左 眼 变成 了 太阳，右 眼 变成 了 月亮。他 的 头发 变成 了 天上 的 星星。他 说话 的 声音 变成 了 打雷 的 声音。",
+        "他 的 身体 变成 了 高高 的 山，他 的 血 变成 了 长长 的 河。他 的 汗 变成 了 雨 和 露水。",
+        "从 那 以后，世界 上 有 了 光，有 了 山 和 河，有 了 花 和 草。中国人 说，这个 美丽 的 世界 是 ^盘古 给 我们 的。"
+      ]
+    }
+  ],
+  "glossary": [
+    { "w": "以前", "fr": "autrefois, avant", "en": "before, long ago" },
+    { "w": "蛋", "fr": "œuf", "en": "egg" },
+    { "w": "醒", "fr": "se réveiller", "en": "to wake up" },
+    { "w": "斧子", "fr": "hache", "en": "axe" },
+    { "w": "砍", "fr": "frapper (avec une hache), couper", "en": "to chop" },
+    { "w": "分开", "fr": "se séparer", "en": "to separate" },
+    { "w": "丈", "fr": "zhang (mesure ≈ 3,3 m)", "en": "zhang (≈ 3.3 m)" },
+    { "w": "变成", "fr": "devenir, se transformer en", "en": "to become, turn into" },
+    { "w": "太阳 / 月亮", "fr": "soleil / lune", "en": "sun / moon" },
+    { "w": "打雷", "fr": "tonnerre", "en": "thunder" }
+  ],
+  "questions": [
+    {
+      "q": { "fr": "Au début de l'histoire, à quoi ressemble le monde ?", "en": "At the start, what does the world look like?" },
+      "options": [
+        { "fr": "À un très grand œuf", "en": "A very big egg" },
+        { "fr": "À une grande montagne", "en": "A big mountain" },
+        { "fr": "À une mer sans fin", "en": "An endless sea" },
+        { "fr": "À un jardin de fleurs", "en": "A flower garden" }
+      ],
+      "answer": 0,
+      "why": { "fr": "« 世界像一个很大很大的蛋 » : le monde ressemble à un énorme œuf.", "en": "“shìjiè xiàng yí gè hěn dà de dàn”: the world is like a huge egg." }
+    },
+    {
+      "q": { "fr": "Combien de temps Pangu a-t-il dormi ?", "en": "How long did Pangu sleep?" },
+      "options": [
+        { "fr": "Cent ans", "en": "A hundred years" },
+        { "fr": "Mille ans", "en": "A thousand years" },
+        { "fr": "Dix-huit mille ans", "en": "Eighteen thousand years" },
+        { "fr": "Un seul jour", "en": "Just one day" }
+      ],
+      "answer": 2,
+      "why": { "fr": "« yí wàn bāqiān nián » = 18 000 ans.", "en": "“yí wàn bāqiān nián” = 18,000 years." }
+    },
+    {
+      "q": { "fr": "Pourquoi Pangu n'est-il pas content quand il se réveille ?", "en": "Why is Pangu unhappy when he wakes up?" },
+      "options": [
+        { "fr": "Il a faim", "en": "He is hungry" },
+        { "fr": "Il fait trop noir et c'est trop petit", "en": "It is too dark and too small" },
+        { "fr": "Il a perdu sa hache", "en": "He lost his axe" },
+        { "fr": "Il est malade", "en": "He is ill" }
+      ],
+      "answer": 1,
+      "why": { "fr": "« Zhèlǐ tài hēi le! Tài xiǎo le! » : c'est trop noir, trop petit.", "en": "“Zhèlǐ tài hēi le! Tài xiǎo le!”: too dark, too small." }
+    },
+    {
+      "q": { "fr": "Avec quoi Pangu casse-t-il l'œuf ?", "en": "What does Pangu use to break the egg?" },
+      "options": [
+        { "fr": "Avec ses mains", "en": "His hands" },
+        { "fr": "Avec une épée", "en": "A sword" },
+        { "fr": "Avec une grande hache", "en": "A big axe" },
+        { "fr": "Avec le feu", "en": "Fire" }
+      ],
+      "answer": 2,
+      "why": { "fr": "« yì bǎ hěn dà de fǔzi » : une très grande hache.", "en": "“yì bǎ hěn dà de fǔzi”: a very big axe." }
+    },
+    {
+      "q": { "fr": "Que deviennent les choses légères et claires ?", "en": "What do the light, clear things become?" },
+      "options": [
+        { "fr": "La terre", "en": "The earth" },
+        { "fr": "Le ciel", "en": "The sky" },
+        { "fr": "La mer", "en": "The sea" },
+        { "fr": "Les nuages", "en": "The clouds" }
+      ],
+      "answer": 1,
+      "why": { "fr": "Les choses légères montent et deviennent le ciel (tiān) ; les lourdes descendent et deviennent la terre (dì).", "en": "Light things rise and become the sky (tiān); heavy things sink and become the earth (dì)." }
+    },
+    {
+      "q": { "fr": "Pourquoi Pangu reste-t-il debout entre le ciel et la terre ?", "en": "Why does Pangu stand between heaven and earth?" },
+      "options": [
+        { "fr": "Pour regarder les étoiles", "en": "To watch the stars" },
+        { "fr": "Parce qu'il ne peut pas s'asseoir", "en": "Because he cannot sit down" },
+        { "fr": "Pour qu'ils ne se referment pas", "en": "So that they do not join together again" },
+        { "fr": "Pour attendre ses amis", "en": "To wait for his friends" }
+      ],
+      "answer": 2,
+      "why": { "fr": "Il s'inquiète : « rúguǒ tiān hé dì yòu hé zài yìqǐ, zěnmebàn? »", "en": "He worries: “rúguǒ tiān hé dì yòu hé zài yìqǐ, zěnmebàn?”" }
+    },
+    {
+      "q": { "fr": "Que devient l'œil gauche de Pangu ?", "en": "What does Pangu's left eye become?" },
+      "options": [
+        { "fr": "La lune", "en": "The moon" },
+        { "fr": "Une étoile", "en": "A star" },
+        { "fr": "Le soleil", "en": "The sun" },
+        { "fr": "Un lac", "en": "A lake" }
+      ],
+      "answer": 2,
+      "why": { "fr": "« zuǒ yǎn biànchéng le tàiyáng » ; l'œil droit devient la lune.", "en": "“zuǒ yǎn biànchéng le tàiyáng”; the right eye becomes the moon." }
+    },
+    {
+      "q": { "fr": "Que devient le sang de Pangu ?", "en": "What does Pangu's blood become?" },
+      "options": [
+        { "fr": "Les montagnes", "en": "The mountains" },
+        { "fr": "Les rivières", "en": "The rivers" },
+        { "fr": "La pluie", "en": "The rain" },
+        { "fr": "Le tonnerre", "en": "Thunder" }
+      ],
+      "answer": 1,
+      "why": { "fr": "« tā de xiě biànchéng le chángcháng de hé » : de longues rivières.", "en": "“tā de xiě biànchéng le chángcháng de hé”: long rivers." }
+    }
+  ]
+}

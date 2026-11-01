@@ -1,0 +1,164 @@
+{
+  "id": "houyi",
+  "order": 3,
+  "hanzi": "后羿射日",
+  "titlePinyin": "Hòuyì shè rì",
+  "title": { "fr": "Houyi abat les soleils", "en": "Houyi Shoots Down the Suns" },
+  "level": "hsk2",
+  "summary": {
+    "fr": "Un matin, dix soleils se lèvent en même temps. Les rivières sèchent, les récoltes brûlent… Seul un archer ose lever son arc vers le ciel.",
+    "en": "One morning, ten suns rise at the same time. Rivers dry up, crops burn… Only one archer dares to aim his bow at the sky."
+  },
+  "chapters": [
+    {
+      "title": "十 个 太阳",
+      "paragraphs": [
+        "很久 以前，天 上 有 十 个 太阳。它们 都 是 ^天帝 的 孩子，住 在 东边 大 海 里 的 一 棵 大 树 上。",
+        "每天 早上，只 有 一 个 太阳 出来 工作。它 从 东边 走到 西边，给 人们 光 和 温暖。其他 九 个 太阳 在 树 上 睡觉，等着 自己 的 那 一 天。",
+        "人们 很 喜欢 太阳。白天，大家 在 地 里 种{zhòng} 粮食；晚上，大家 回家 吃饭，休息。日子 过得 很 平静。"
+      ]
+    },
+    {
+      "title": "可怕 的 早上",
+      "paragraphs": [
+        "可是 有 一 天，十 个 太阳 觉得 每天 等 太 无聊 了。最 小 的 太阳 说：“我们 一起 出去 玩 吧！一定 很 有意思！”",
+        "第二 天 早上，十 个 太阳 一起 跳 上 了 天空。它们 笑着，跑着，玩得 非常 开心。",
+        "可是 地 上 的 人们 就 惨 了！天气 热 得 像 火 一样。河 里 的 水 干 了，地 里 的 粮食 死 了，树 也 烧 起来 了。很 多 人 热 死 了，活着 的 人 只能 躲 在 山洞 里。"
+      ]
+    },
+    {
+      "title": "勇敢 的 ^后羿",
+      "paragraphs": [
+        "那时候，有 一 个 年轻 人 叫 ^后羿。他 力气 很 大，射箭 射得 特别 好，一百 步 以外 也 能 射中 一 片 树叶。",
+        "^后羿 看到 人们 这么 痛苦，心里 非常 难过。他 对 太阳们 喊：“请 你们 回去 吧！人们 快 活 不 下去 了！”",
+        "可是 太阳们 正 玩得 高兴，根本 不 听。它们 还 笑着 说：“你 一 个 小小 的 人，能 拿 我们 怎么样？”"
+      ]
+    },
+    {
+      "title": "九 支 箭",
+      "paragraphs": [
+        "^后羿 生气 了。他 爬 上 最 高 的 山，拿出 他 的 红色 大 弓 和 白色 的 箭。他 拉开 弓，对准 一 个 太阳，“嗖”的 一 声，箭 飞 了 出去。",
+        "“砰！”那 个 太阳 被 射中 了，变成 一 只{zhī} 金色 的 三 脚 乌鸦，掉 了 下来。天气 马上 凉快 了 一点儿。",
+        "人们 看见 了，都 高兴 地{de} 喊：“射得 好！再 射！再 射！”^后羿 一 箭 又 一 箭，一共 射 下来 九 个 太阳。"
+      ]
+    },
+    {
+      "title": "最后 一 个 太阳",
+      "paragraphs": [
+        "最后 只 剩下 一 个 太阳 了。它 非常 害怕，躲 在 云 后面，全身 发抖。^后羿 又 拉开 了 弓。",
+        "这时候，一 个 老人 跑 过来 说：“年轻 人，别 射 了！如果 一 个 太阳 都 没有，世界 就 会 又 冷 又 黑，粮食 也 长{zhǎng} 不 出来 啊！”",
+        "^后羿 想 了 想，放下 了 弓。他 对 最后 一 个 太阳 说：“从 今天 起，你 要 每天 按时 出来，按时 回去，好好 照顾 人们。”太阳 赶快 点头 答应 了。"
+      ]
+    },
+    {
+      "title": "英雄",
+      "paragraphs": [
+        "从 那 以后，天 上 只 有 一 个 太阳。它 每天 早上 从 东边 出来，晚上 从 西边 下去，从来 不 迟到。",
+        "河 里 又 有 了 水，地 里 又 长出 了 粮食。人们 从 山洞 里 走 出来，又 开始 了 幸福 的 生活。",
+        "大家 都 说 ^后羿 是 一 个 大 英雄。可是 ^天帝 失去 了 九 个 孩子，非常 生气。他 不 让 ^后羿 再 回到 天 上 了。^后羿 和 他 美丽 的 妻子 ^嫦娥 只好 留 在 人间……他们 后来 的 故事，就 是 另 一 个 有名 的 传说 了。"
+      ]
+    }
+  ],
+  "glossary": [
+    { "w": "太阳", "fr": "soleil", "en": "sun" },
+    { "w": "温暖", "fr": "chaleur douce", "en": "warmth" },
+    { "w": "粮食", "fr": "céréales, récoltes", "en": "grain, crops" },
+    { "w": "无聊", "fr": "ennuyeux, s'ennuyer", "en": "bored, boring" },
+    { "w": "躲", "fr": "se cacher", "en": "to hide" },
+    { "w": "射箭", "fr": "tirer à l'arc", "en": "to shoot arrows" },
+    { "w": "弓 / 箭", "fr": "arc / flèche", "en": "bow / arrow" },
+    { "w": "乌鸦", "fr": "corbeau", "en": "crow" },
+    { "w": "剩下", "fr": "rester (il reste)", "en": "to be left over" },
+    { "w": "英雄", "fr": "héros", "en": "hero" }
+  ],
+  "questions": [
+    {
+      "q": { "fr": "Où vivent les dix soleils ?", "en": "Where do the ten suns live?" },
+      "options": [
+        { "fr": "Dans une grotte", "en": "In a cave" },
+        { "fr": "Sur un grand arbre dans la mer de l'Est", "en": "On a big tree in the eastern sea" },
+        { "fr": "Au sommet d'une montagne", "en": "On top of a mountain" },
+        { "fr": "Derrière la lune", "en": "Behind the moon" }
+      ],
+      "answer": 1,
+      "why": { "fr": "« zhù zài dōngbian dà hǎi lǐ de yì kē dà shù shàng ».", "en": "“zhù zài dōngbian dà hǎi lǐ de yì kē dà shù shàng”." }
+    },
+    {
+      "q": { "fr": "Normalement, combien de soleils sortent chaque jour ?", "en": "Normally, how many suns come out each day?" },
+      "options": [
+        { "fr": "Un seul", "en": "Only one" },
+        { "fr": "Deux", "en": "Two" },
+        { "fr": "Cinq", "en": "Five" },
+        { "fr": "Dix", "en": "Ten" }
+      ],
+      "answer": 0,
+      "why": { "fr": "« zhǐ yǒu yí gè tàiyáng chūlai gōngzuò ».", "en": "“zhǐ yǒu yí gè tàiyáng chūlai gōngzuò”." }
+    },
+    {
+      "q": { "fr": "Pourquoi les dix soleils sortent-ils ensemble ?", "en": "Why do the ten suns go out together?" },
+      "options": [
+        { "fr": "Leur père le leur demande", "en": "Their father tells them to" },
+        { "fr": "Ils s'ennuient et veulent s'amuser", "en": "They are bored and want to have fun" },
+        { "fr": "Ils veulent punir les hommes", "en": "They want to punish people" },
+        { "fr": "Il fait trop froid sur terre", "en": "It is too cold on earth" }
+      ],
+      "answer": 1,
+      "why": { "fr": "Ils trouvent l'attente wúliáo (ennuyeuse) : « wǒmen yìqǐ chūqù wán ba! »", "en": "They find waiting wúliáo (boring): “wǒmen yìqǐ chūqù wán ba!”" }
+    },
+    {
+      "q": { "fr": "Où se cachent les survivants ?", "en": "Where do the survivors hide?" },
+      "options": [
+        { "fr": "Dans la rivière", "en": "In the river" },
+        { "fr": "Dans des grottes", "en": "In caves" },
+        { "fr": "Sous les arbres", "en": "Under the trees" },
+        { "fr": "Dans leurs maisons", "en": "In their houses" }
+      ],
+      "answer": 1,
+      "why": { "fr": "« zhǐnéng duǒ zài shāndòng lǐ ».", "en": "“zhǐnéng duǒ zài shāndòng lǐ”." }
+    },
+    {
+      "q": { "fr": "Quel est le talent de Houyi ?", "en": "What is Houyi's talent?" },
+      "options": [
+        { "fr": "Il nage très bien", "en": "He swims very well" },
+        { "fr": "Il tire à l'arc à merveille", "en": "He is a superb archer" },
+        { "fr": "Il chante très bien", "en": "He sings beautifully" },
+        { "fr": "Il fabrique des maisons", "en": "He builds houses" }
+      ],
+      "answer": 1,
+      "why": { "fr": "« shèjiàn shè de tèbié hǎo », il touche une feuille à cent pas.", "en": "“shèjiàn shè de tèbié hǎo”: he can hit a leaf from a hundred paces." }
+    },
+    {
+      "q": { "fr": "Que devient un soleil touché par une flèche ?", "en": "What does a sun turn into when it is hit?" },
+      "options": [
+        { "fr": "Une étoile", "en": "A star" },
+        { "fr": "Un corbeau doré à trois pattes", "en": "A golden three-legged crow" },
+        { "fr": "Une pierre", "en": "A stone" },
+        { "fr": "Un nuage", "en": "A cloud" }
+      ],
+      "answer": 1,
+      "why": { "fr": "« biànchéng yì zhī jīnsè de sān jiǎo wūyā ».", "en": "“biànchéng yì zhī jīnsè de sān jiǎo wūyā”." }
+    },
+    {
+      "q": { "fr": "Pourquoi Houyi ne tire-t-il pas sur le dernier soleil ?", "en": "Why doesn't Houyi shoot the last sun?" },
+      "options": [
+        { "fr": "Il n'a plus de flèches", "en": "He has no arrows left" },
+        { "fr": "Un vieil homme lui explique qu'on a besoin d'un soleil", "en": "An old man explains that people need one sun" },
+        { "fr": "Le soleil est trop loin", "en": "The sun is too far away" },
+        { "fr": "Il est trop fatigué", "en": "He is too tired" }
+      ],
+      "answer": 1,
+      "why": { "fr": "Sans soleil, le monde serait « yòu lěng yòu hēi » et rien ne pousserait.", "en": "Without a sun the world would be “yòu lěng yòu hēi” and nothing would grow." }
+    },
+    {
+      "q": { "fr": "Quelle conséquence l'exploit de Houyi a-t-il pour lui ?", "en": "What happens to Houyi because of what he did?" },
+      "options": [
+        { "fr": "Il devient roi", "en": "He becomes king" },
+        { "fr": "L'Empereur céleste lui interdit de revenir au ciel", "en": "The Heavenly Emperor forbids him to return to heaven" },
+        { "fr": "Il perd sa femme", "en": "He loses his wife" },
+        { "fr": "Il devient un soleil", "en": "He becomes a sun" }
+      ],
+      "answer": 1,
+      "why": { "fr": "Tiāndì, qui a perdu neuf enfants, ne le laisse plus revenir au ciel.", "en": "Tiāndì, who lost nine children, no longer lets him go back to heaven." }
+    }
+  ]
+}

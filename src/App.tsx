@@ -50,13 +50,14 @@ const PhrasesView = lazy(() => import('./views/PhrasesView').then((m) => ({ defa
 const Hsk3ExamView = lazy(() => import('./views/Hsk3ExamView').then((m) => ({ default: m.Hsk3ExamView })));
 const TutorView = lazy(() => import('./views/TutorView').then((m) => ({ default: m.TutorView })));
 const AchievementsView = lazy(() => import('./views/AchievementsView').then((m) => ({ default: m.AchievementsView })));
+const NovelsView = lazy(() => import('./views/NovelsView').then((m) => ({ default: m.NovelsView })));
 const FriendsView = lazy(() => import('./views/FriendsView').then((m) => ({ default: m.FriendsView })));
 const SpeakingTestView = lazy(() => import('./views/SpeakingTestView').then((m) => ({ default: m.SpeakingTestView })));
 const PronunciationView = lazy(() => import('./views/PronunciationView').then((m) => ({ default: m.PronunciationView })));
 
 const ALL_VIEWS: AppState['currentView'][] = [
   'landing', 'login', 'signup', 'dashboard', 'hsk-levels', 'hsk-detail', 'learn', 'vocabulary',
-  'practice-hub', 'tutor', 'pronunciation', 'speaking', 'achievements', 'friends', 'quiz', 'listening-practice', 'reading-practice', 'writing-practice', 'mock-tests',
+  'practice-hub', 'tutor', 'pronunciation', 'speaking', 'achievements', 'friends', 'novels', 'quiz', 'listening-practice', 'reading-practice', 'writing-practice', 'mock-tests',
   'mock-test-intro', 'mock-test-exam', 'test-results', 'review-mistakes', 'progress', 'profile', 'admin', 'phrases', 'hsk3-exam',
 ];
 const PUBLIC_VIEWS: AppState['currentView'][] = ['landing', 'login', 'signup', 'hsk-levels', 'hsk-detail'];
@@ -860,6 +861,13 @@ function HskPathApp() {
         return (
           <AppLayout onSignOut={handleSignOut} isAdmin={isAdmin} hasPro={hasPro} currentView={currentView} onNavigate={navigate} user={user} streakDays={streakDays}>
             <AchievementsView game={user.game || emptyGame()} goal={goalXp} words={wordsLearned} phrases={learnedPhraseIds.size} onNavigate={navigate} />
+          </AppLayout>
+        );
+
+      case 'novels':
+        return (
+          <AppLayout onSignOut={handleSignOut} isAdmin={isAdmin} hasPro={hasPro} currentView={currentView} onNavigate={navigate} user={user} streakDays={streakDays}>
+            <NovelsView game={user.game || emptyGame()} />
           </AppLayout>
         );
 

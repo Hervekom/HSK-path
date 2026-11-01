@@ -1,0 +1,272 @@
+[
+ {
+  "id": "pangu",
+  "order": 1,
+  "hanzi": "盘古开天地",
+  "titlePinyin": "Pángǔ kāi tiān dì",
+  "title": {
+   "fr": "Pangu sépare le ciel et la terre",
+   "en": "Pangu Separates Heaven and Earth"
+  },
+  "level": "hsk2",
+  "summary": {
+   "fr": "Avant le monde, il n'y avait qu'un œuf immense et noir. Un géant y dormait depuis dix-huit mille ans… Le mythe chinois de la création.",
+   "en": "Before the world, there was only a huge black egg. A giant had slept inside for eighteen thousand years… The Chinese creation myth."
+  },
+  "chars": 487,
+  "chapters": 5,
+  "questions": 8
+ },
+ {
+  "id": "nuwa",
+  "order": 2,
+  "hanzi": "女娲造人补天",
+  "titlePinyin": "Nǚwā zào rén bǔ tiān",
+  "title": {
+   "fr": "Nüwa crée les hommes et répare le ciel",
+   "en": "Nüwa Makes People and Mends the Sky"
+  },
+  "level": "hsk2",
+  "summary": {
+   "fr": "Une déesse se sent seule dans un monde magnifique mais silencieux. Elle façonne les premiers humains dans la boue… puis le ciel se fend et le feu tombe sur la terre.",
+   "en": "A goddess feels lonely in a beautiful but silent world. She shapes the first humans out of mud… then the sky cracks and fire falls on the earth."
+  },
+  "chars": 702,
+  "chapters": 6,
+  "questions": 8
+ },
+ {
+  "id": "houyi",
+  "order": 3,
+  "hanzi": "后羿射日",
+  "titlePinyin": "Hòuyì shè rì",
+  "title": {
+   "fr": "Houyi abat les soleils",
+   "en": "Houyi Shoots Down the Suns"
+  },
+  "level": "hsk2",
+  "summary": {
+   "fr": "Un matin, dix soleils se lèvent en même temps. Les rivières sèchent, les récoltes brûlent… Seul un archer ose lever son arc vers le ciel.",
+   "en": "One morning, ten suns rise at the same time. Rivers dry up, crops burn… Only one archer dares to aim his bow at the sky."
+  },
+  "chars": 714,
+  "chapters": 6,
+  "questions": 8
+ },
+ {
+  "id": "change",
+  "order": 4,
+  "hanzi": "嫦娥奔月",
+  "titlePinyin": "Cháng'é bēn yuè",
+  "title": {
+   "fr": "Chang'e s'envole vers la lune",
+   "en": "Chang'e Flies to the Moon"
+  },
+  "level": "hsk2",
+  "summary": {
+   "fr": "Une potion d'immortalité, un voleur sans pitié, et une femme qui doit choisir en une seconde. L'histoire qui explique la fête de la mi-automne.",
+   "en": "An elixir of immortality, a ruthless thief, and a woman who must choose in one second. The story behind the Mid-Autumn Festival."
+  },
+  "chars": 756,
+  "chapters": 6,
+  "questions": 8
+ },
+ {
+  "id": "jingwei",
+  "order": 5,
+  "hanzi": "精卫填海",
+  "titlePinyin": "Jīngwèi tián hǎi",
+  "title": {
+   "fr": "Jingwei veut combler la mer",
+   "en": "Jingwei Fills the Sea"
+  },
+  "level": "hsk2",
+  "summary": {
+   "fr": "Une princesse adore la mer… jusqu'au jour où la mer l'emporte. Transformée en petit oiseau, elle fait une promesse impossible.",
+   "en": "A princess loves the sea… until the day the sea takes her. Turned into a little bird, she makes an impossible promise."
+  },
+  "chars": 657,
+  "chapters": 6,
+  "questions": 8
+ },
+ {
+  "id": "yugong",
+  "order": 6,
+  "hanzi": "愚公移山",
+  "titlePinyin": "Yúgōng yí shān",
+  "title": {
+   "fr": "Le vieux fou qui déplaçait les montagnes",
+   "en": "The Foolish Old Man Who Moved the Mountains"
+  },
+  "level": "hsk2",
+  "summary": {
+   "fr": "Deux montagnes géantes bloquent la porte de sa maison. Un vieil homme de 90 ans décide de les enlever… avec une pelle et un panier.",
+   "en": "Two giant mountains block the door of his house. A 90-year-old man decides to remove them… with a shovel and a basket."
+  },
+  "chars": 660,
+  "chapters": 6,
+  "questions": 8
+ },
+ {
+  "id": "niulang",
+  "order": 7,
+  "hanzi": "牛郎织女",
+  "titlePinyin": "Niúláng Zhīnǚ",
+  "title": {
+   "fr": "Le Bouvier et la Tisserande",
+   "en": "The Cowherd and the Weaver Girl"
+  },
+  "level": "hsk3",
+  "summary": {
+   "fr": "Un pauvre bouvier, un bœuf qui parle, et une fée descendue du ciel pour se baigner. Un amour si fort que les oiseaux construisent un pont dans le ciel.",
+   "en": "A poor cowherd, a talking ox, and a fairy who came down from heaven to bathe. A love so strong that birds build a bridge across the sky."
+  },
+  "chars": 784,
+  "chapters": 6,
+  "questions": 8
+ },
+ {
+  "id": "mulan",
+  "order": 8,
+  "hanzi": "花木兰",
+  "titlePinyin": "Huā Mùlán",
+  "title": {
+   "fr": "Hua Mulan",
+   "en": "Hua Mulan"
+  },
+  "level": "hsk3",
+  "summary": {
+   "fr": "L'empereur appelle un homme de chaque famille à la guerre. Le père de Mulan est vieux et malade. Elle coupe ses cheveux, prend son cheval… et personne ne doit découvrir son secret.",
+   "en": "The emperor calls one man from every family to war. Mulan's father is old and ill. She cuts her hair, takes his horse… and nobody must discover her secret."
+  },
+  "chars": 740,
+  "chapters": 6,
+  "questions": 8
+ },
+ {
+  "id": "baishe",
+  "order": 9,
+  "hanzi": "白蛇传",
+  "titlePinyin": "Bái shé zhuàn",
+  "title": {
+   "fr": "La Légende du Serpent blanc",
+   "en": "The Legend of the White Snake"
+  },
+  "level": "hsk3",
+  "summary": {
+   "fr": "Un serpent qui a médité mille ans prend la forme d'une belle jeune femme. Sous la pluie du lac de l'Ouest, elle rencontre un jeune homme… mais un moine veut les séparer à tout prix.",
+   "en": "A snake who meditated for a thousand years takes the shape of a beautiful woman. In the rain by West Lake she meets a young man… but a monk wants to part them at any cost."
+  },
+  "chars": 974,
+  "chapters": 7,
+  "questions": 8
+ },
+ {
+  "id": "liangzhu",
+  "order": 10,
+  "hanzi": "梁山伯与祝英台",
+  "titlePinyin": "Liáng Shānbó yǔ Zhù Yīngtái",
+  "title": {
+   "fr": "Les Amants papillons",
+   "en": "The Butterfly Lovers"
+  },
+  "level": "hsk3",
+  "summary": {
+   "fr": "Une jeune fille se déguise en garçon pour aller étudier. Pendant trois ans, son meilleur ami ne devine rien… Le « Roméo et Juliette » chinois.",
+   "en": "A girl disguises herself as a boy to go to school. For three years her best friend suspects nothing… The Chinese “Romeo and Juliet”."
+  },
+  "chars": 795,
+  "chapters": 6,
+  "questions": 8
+ },
+ {
+  "id": "mengjiangnu",
+  "order": 11,
+  "hanzi": "孟姜女哭长城",
+  "titlePinyin": "Mèng Jiāngnǚ kū Chángchéng",
+  "title": {
+   "fr": "Les larmes de Meng Jiangnü",
+   "en": "Meng Jiangnü's Tears"
+  },
+  "level": "hsk3",
+  "summary": {
+   "fr": "Le premier empereur construit la Grande Muraille avec des milliers d'hommes. Une jeune mariée marche des mois dans le froid pour apporter des vêtements chauds à son mari…",
+   "en": "The First Emperor builds the Great Wall with thousands of men. A young bride walks for months through the cold to bring warm clothes to her husband…"
+  },
+  "chars": 793,
+  "chapters": 6,
+  "questions": 8
+ },
+ {
+  "id": "wukong",
+  "order": 12,
+  "hanzi": "美猴王大闹天宫",
+  "titlePinyin": "Měi Hóuwáng dà nào Tiāngōng",
+  "title": {
+   "fr": "Le Roi des singes sème le chaos au Ciel",
+   "en": "The Monkey King Wreaks Havoc in Heaven"
+  },
+  "level": "hsk3",
+  "summary": {
+   "fr": "Né d'une pierre, un singe devient roi, apprend 72 transformations et vole l'arme d'un roi-dragon. Puis il décide que même le Ciel ne peut pas le commander. Tiré du Voyage vers l'Ouest.",
+   "en": "Born from a stone, a monkey becomes king, learns 72 transformations and takes a dragon king's weapon. Then he decides that even Heaven cannot rule him. From Journey to the West."
+  },
+  "chars": 1124,
+  "chapters": 7,
+  "questions": 8
+ },
+ {
+  "id": "caochuan",
+  "order": 13,
+  "hanzi": "草船借箭",
+  "titlePinyin": "Cǎo chuán jiè jiàn",
+  "title": {
+   "fr": "Emprunter des flèches avec des bateaux de paille",
+   "en": "Borrowing Arrows with Straw Boats"
+  },
+  "level": "hsk3",
+  "summary": {
+   "fr": "Un général jaloux exige 100 000 flèches en dix jours, espérant voir Zhuge Liang échouer. Zhuge Liang répond : « Trois jours suffiront. » Tiré des Trois Royaumes.",
+   "en": "A jealous general demands 100,000 arrows in ten days, hoping Zhuge Liang will fail. Zhuge Liang replies: “Three days will do.” From the Three Kingdoms."
+  },
+  "chars": 832,
+  "chapters": 6,
+  "questions": 8
+ },
+ {
+  "id": "nianshou",
+  "order": 14,
+  "hanzi": "年兽的故事",
+  "titlePinyin": "Niánshòu de gùshi",
+  "title": {
+   "fr": "Le monstre Nian",
+   "en": "The Nian Monster"
+  },
+  "level": "hsk2",
+  "summary": {
+   "fr": "Chaque veille de Nouvel An, un monstre sort de la mer pour dévorer bêtes et villageois. Cette année, un vieux mendiant refuse de s'enfuir… Pourquoi les Chinois mettent du rouge et lancent des pétards.",
+   "en": "Every New Year's Eve a monster rises from the sea to eat animals and villagers. This year, an old beggar refuses to flee… Why Chinese people use red and set off firecrackers."
+  },
+  "chars": 747,
+  "chapters": 6,
+  "questions": 8
+ },
+ {
+  "id": "maliang",
+  "order": 15,
+  "hanzi": "神笔马良",
+  "titlePinyin": "Shénbǐ Mǎ Liáng",
+  "title": {
+   "fr": "Ma Liang et le pinceau magique",
+   "en": "Ma Liang and the Magic Brush"
+  },
+  "level": "hsk2",
+  "summary": {
+   "fr": "Un garçon pauvre rêve d'avoir un pinceau. Un soir, un vieil homme lui en offre un : tout ce qu'il dessine devient réel. Mais l'empereur aussi veut ce pinceau…",
+   "en": "A poor boy dreams of owning a brush. One night an old man gives him one: everything he paints comes to life. But the emperor wants the brush too…"
+  },
+  "chars": 920,
+  "chapters": 7,
+  "questions": 8
+ }
+]

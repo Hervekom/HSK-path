@@ -1,0 +1,164 @@
+{
+  "id": "mulan",
+  "order": 8,
+  "hanzi": "花木兰",
+  "titlePinyin": "Huā Mùlán",
+  "title": { "fr": "Hua Mulan", "en": "Hua Mulan" },
+  "level": "hsk3",
+  "summary": {
+    "fr": "L'empereur appelle un homme de chaque famille à la guerre. Le père de Mulan est vieux et malade. Elle coupe ses cheveux, prend son cheval… et personne ne doit découvrir son secret.",
+    "en": "The emperor calls one man from every family to war. Mulan's father is old and ill. She cuts her hair, takes his horse… and nobody must discover her secret."
+  },
+  "chapters": [
+    {
+      "title": "织布机 旁 的 叹气",
+      "paragraphs": [
+        "很久 以前，在 中国 北方 的 一 个 村子 里，住着 一 个 姑娘，她 叫 ^花木兰。^木兰 每天 坐 在 窗户 边 织布，织布机 发出 “唧唧” 的 声音。",
+        "可是 这 几 天，织布机 的 声音 停 了，只 听见 ^木兰 在 叹气。妈妈 问 她：“女儿，你 在 想 什么 呢？”",
+        "^木兰 拿出 一 张 纸，说：“昨天 晚上，我 看见 了 皇帝 的 军帖。北方 的 敌人 打 过来 了，每 家 都 要 出 一 个 男人 去 打仗。军帖 上 有 爸爸 的 名字。”"
+      ]
+    },
+    {
+      "title": "替 父 从 军",
+      "paragraphs": [
+        "^木兰 的 爸爸 已经 很 老 了，身体 也 不 好。她 没有 哥哥，弟弟 还 很 小。如果 爸爸 去 打仗，可能 就 回不来 了。",
+        "^木兰 想 了 一 夜。第二 天 早上，她 对 爸爸 妈妈 说：“我 要 替 爸爸 去 打仗！”",
+        "爸爸 妈妈 吓 坏 了：“你 是 女孩子，怎么 能 去 打仗？”^木兰 说：“我 从 小 跟 爸爸 学 骑马、射箭，我 不 比 男孩子 差。我 穿上 男人 的 衣服，没有 人 会 发现 的。”爸爸 看着 女儿 坚定 的 眼睛，流 下 了 眼泪。"
+      ]
+    },
+    {
+      "title": "出发",
+      "paragraphs": [
+        "^木兰 去 东边 的 市场 买 了 一 匹 好 马，去 西边 的 市场 买 了 马鞍，又 去 南边 买 了 缰绳，去 北边 买 了 长 鞭子。",
+        "她 剪 短 了 头发，穿上 盔甲，和 家 人 告别，骑着 马 出发 了。",
+        "晚上，她 睡 在 黄河 边。她 听不见 爸爸 妈妈 叫 女儿 的 声音，只 听见 黄河 的 水 哗哗 地{de} 流。第二 天 晚上，她 到 了 黑山，只 听见 敌人 的 马 在 远处 叫。"
+      ]
+    },
+    {
+      "title": "十二 年 的 战争",
+      "paragraphs": [
+        "战争 非常 残酷。冬天 的 夜晚，风 像 刀子 一样，铁 衣 冰冷。很 多 士兵 都 死 在 了 战场 上。",
+        "^木兰 打仗 非常 勇敢，又 很 聪明。她 好几 次 带着 士兵们 打败 了 敌人，从 一 个 普通 的 士兵，变成 了 一 位 将军。",
+        "她 和 士兵们 一起 吃饭，一起 睡觉，一起 打仗，整整 十二 年，可是 从来 没有 人 发现 她 是 女孩子。"
+      ]
+    },
+    {
+      "title": "皇帝 的 奖赏",
+      "paragraphs": [
+        "战争 终于 结束 了！皇帝 很 高兴，要 给 ^木兰 很 高 的 官，还要 送 她 很 多 金子 和 银子。",
+        "^木兰 说：“谢谢 皇上，我 不要 做 官，也 不要 金银。我 只 想 要 一 匹 跑得 快 的 骆驼，让 我 早点儿 回家 看 爸爸 妈妈。”皇帝 同意 了。"
+      ]
+    },
+    {
+      "title": "回家",
+      "paragraphs": [
+        "爸爸 妈妈 听说 女儿 回来 了，互相 扶着 走 到 村口 去 接 她。姐姐 赶快 化 了 妆。小 弟弟 已经 长{zhǎng} 成 了 大 小伙子，高兴 地{de} 磨刀，准备 杀 猪 杀 羊。",
+        "^木兰 走 进 自己 的 房间，脱下 盔甲，穿上 以前 的 漂亮 衣服，梳好 头发，对着 镜子 戴上 了 花。",
+        "她 走 出 门，去 见 一起 打仗 的 战友们。战友们 都 惊呆 了：“一起 打 了 十二 年 仗，我们 竟然 不 知道 ^木兰 是 个 姑娘！”",
+        "^木兰 笑着 说：“兔子 跑 的 时候，谁 能 分得清 哪 只{zhī} 是 公 的，哪 只{zhī} 是 母 的 呢？”直到 今天，^花木兰 还是 中国 最 有名 的 女 英雄。"
+      ]
+    }
+  ],
+  "glossary": [
+    { "w": "织布机", "fr": "métier à tisser", "en": "loom" },
+    { "w": "叹气", "fr": "soupirer", "en": "to sigh" },
+    { "w": "敌人", "fr": "ennemi", "en": "enemy" },
+    { "w": "打仗", "fr": "faire la guerre, combattre", "en": "to fight a war" },
+    { "w": "替", "fr": "à la place de", "en": "in place of" },
+    { "w": "骑马", "fr": "monter à cheval", "en": "to ride a horse" },
+    { "w": "盔甲", "fr": "armure", "en": "armour" },
+    { "w": "士兵", "fr": "soldat", "en": "soldier" },
+    { "w": "将军", "fr": "général", "en": "general" },
+    { "w": "骆驼", "fr": "chameau", "en": "camel" }
+  ],
+  "questions": [
+    {
+      "q": { "fr": "Pourquoi Mulan soupire-t-elle au lieu de tisser ?", "en": "Why does Mulan sigh instead of weaving?" },
+      "options": [
+        { "fr": "Elle est fatiguée de tisser", "en": "She is tired of weaving" },
+        { "fr": "Le nom de son père est sur l'ordre de l'armée", "en": "Her father's name is on the army call-up" },
+        { "fr": "Elle veut se marier", "en": "She wants to get married" },
+        { "fr": "Son cheval est malade", "en": "Her horse is ill" }
+      ],
+      "answer": 1,
+      "why": { "fr": "« Jūntiě shàng yǒu bàba de míngzi ».", "en": "“Jūntiě shàng yǒu bàba de míngzi”." }
+    },
+    {
+      "q": { "fr": "Pourquoi le père ne peut-il pas partir ?", "en": "Why can't her father go?" },
+      "options": [
+        { "fr": "Il est vieux et en mauvaise santé", "en": "He is old and in poor health" },
+        { "fr": "Il est en voyage", "en": "He is travelling" },
+        { "fr": "Il a peur", "en": "He is afraid" },
+        { "fr": "Il travaille pour l'empereur", "en": "He works for the emperor" }
+      ],
+      "answer": 0,
+      "why": { "fr": "« yǐjīng hěn lǎo le, shēntǐ yě bù hǎo ».", "en": "“yǐjīng hěn lǎo le, shēntǐ yě bù hǎo”." }
+    },
+    {
+      "q": { "fr": "Pourquoi Mulan pense-t-elle pouvoir combattre ?", "en": "Why does Mulan think she can fight?" },
+      "options": [
+        { "fr": "Elle a appris à monter à cheval et tirer à l'arc avec son père", "en": "She learned riding and archery from her father" },
+        { "fr": "Elle a une épée magique", "en": "She has a magic sword" },
+        { "fr": "Son frère l'accompagne", "en": "Her brother goes with her" },
+        { "fr": "L'empereur la connaît", "en": "The emperor knows her" }
+      ],
+      "answer": 0,
+      "why": { "fr": "« Wǒ cóng xiǎo gēn bàba xué qímǎ, shèjiàn ».", "en": "“Wǒ cóng xiǎo gēn bàba xué qímǎ, shèjiàn”." }
+    },
+    {
+      "q": { "fr": "Que fait-elle dans les quatre marchés ?", "en": "What does she do at the four markets?" },
+      "options": [
+        { "fr": "Elle vend ses tissus", "en": "She sells her cloth" },
+        { "fr": "Elle achète le cheval et l'équipement", "en": "She buys the horse and its gear" },
+        { "fr": "Elle cherche des soldats", "en": "She looks for soldiers" },
+        { "fr": "Elle dit au revoir à ses amies", "en": "She says goodbye to her friends" }
+      ],
+      "answer": 1,
+      "why": { "fr": "Cheval à l'est, selle à l'ouest, rênes au sud, fouet au nord.", "en": "Horse in the east, saddle in the west, reins in the south, whip in the north." }
+    },
+    {
+      "q": { "fr": "Combien de temps dure la guerre ?", "en": "How long does the war last?" },
+      "options": [
+        { "fr": "Deux ans", "en": "Two years" },
+        { "fr": "Cinq ans", "en": "Five years" },
+        { "fr": "Douze ans", "en": "Twelve years" },
+        { "fr": "Vingt ans", "en": "Twenty years" }
+      ],
+      "answer": 2,
+      "why": { "fr": "« zhěngzhěng shí'èr nián ».", "en": "“zhěngzhěng shí'èr nián”." }
+    },
+    {
+      "q": { "fr": "Que demande Mulan à l'empereur ?", "en": "What does Mulan ask the emperor for?" },
+      "options": [
+        { "fr": "Un poste important", "en": "A high position" },
+        { "fr": "De l'or et de l'argent", "en": "Gold and silver" },
+        { "fr": "Un chameau rapide pour rentrer chez elle", "en": "A fast camel to go home" },
+        { "fr": "Une grande maison", "en": "A big house" }
+      ],
+      "answer": 2,
+      "why": { "fr": "« Wǒ zhǐ xiǎng yào yì pǐ pǎo de kuài de luòtuo ».", "en": "“Wǒ zhǐ xiǎng yào yì pǐ pǎo de kuài de luòtuo”." }
+    },
+    {
+      "q": { "fr": "Comment réagissent ses compagnons d'armes ?", "en": "How do her fellow soldiers react?" },
+      "options": [
+        { "fr": "Ils sont stupéfaits : ils ne savaient pas que c'était une femme", "en": "They are stunned: they never knew she was a woman" },
+        { "fr": "Ils sont fâchés", "en": "They are angry" },
+        { "fr": "Ils le savaient depuis le début", "en": "They knew from the start" },
+        { "fr": "Ils ne viennent pas", "en": "They don't come" }
+      ],
+      "answer": 0,
+      "why": { "fr": "« Zhànyǒumen dōu jīngdāi le ».", "en": "“Zhànyǒumen dōu jīngdāi le”." }
+    },
+    {
+      "q": { "fr": "Que veut dire Mulan avec l'image des lapins ?", "en": "What does Mulan mean with the image of the rabbits?" },
+      "options": [
+        { "fr": "Elle aime les lapins", "en": "She likes rabbits" },
+        { "fr": "Quand on court (au combat), on ne voit pas si on est homme ou femme", "en": "When running (in battle), you can't tell male from female" },
+        { "fr": "Elle veut chasser", "en": "She wants to go hunting" },
+        { "fr": "Les lapins sont rapides comme les chevaux", "en": "Rabbits are as fast as horses" }
+      ],
+      "answer": 1,
+      "why": { "fr": "Quand les lapins courent, qui peut distinguer le mâle de la femelle ?", "en": "When rabbits run, who can tell which is male and which is female?" }
+    }
+  ]
+}
