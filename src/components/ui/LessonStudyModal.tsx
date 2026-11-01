@@ -106,6 +106,11 @@ export const LessonStudyModal: React.FC<LessonStudyModalProps> = ({
   };
 
   const handleFinish = () => {
+    // second click on "Lesson completed": just close
+    if (isCompleted) {
+      onClose();
+      return;
+    }
     setIsCompleted(true);
     earn('lesson', { key: `lesson:${lesson.id}` });
     if (onCompleteLesson) {

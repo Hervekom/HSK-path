@@ -1,3 +1,4 @@
+import { doneLessons } from './engine';
 // Badges ("prix"): unlocked by streaks, progress and activities. Titles are English keys
 // translated by tr() (see locales/gameStrings.ts).
 import type { GameState } from './engine';
@@ -21,6 +22,7 @@ export interface BadgeDef {
 }
 
 const stat = (k: string) => (g: GameState) => g.stats[k] || 0;
+const lessonsDone = (g: GameState) => doneLessons(g).size;
 const streakBest = (g: GameState) => Math.max(g.streak.best, g.streak.count);
 
 const B = (id: string, icon: string, tier: BadgeTier, title: string, desc: string, value: (g: GameState, c: BadgeContext) => number, target: number): BadgeDef => ({
@@ -54,8 +56,8 @@ export const BADGES: BadgeDef[] = [
   B('speaking-full', 'Medal', 'silver', 'Speaking test done', 'Finish the whole HSK 3 speaking test.', stat('speakingFull'), 1),
   B('laoshi-20', 'ChatCircleText', 'bronze', 'Talking with Laoshi', 'Send 20 messages to Laoshi.', stat('laoshi'), 20),
   // courses & exams
-  B('lesson-1', 'Student', 'bronze', 'First lesson', 'Finish a lesson.', stat('lesson'), 1),
-  B('lesson-10', 'Student', 'silver', 'Dedicated student', 'Finish 10 lessons.', stat('lesson'), 10),
+  B('lesson-1', 'Student', 'bronze', 'First lesson', 'Finish a lesson.', lessonsDone, 1),
+  B('lesson-10', 'Student', 'silver', 'Dedicated student', 'Finish 10 lessons.', lessonsDone, 10),
   B('quiz-10', 'Lightning', 'silver', 'Quiz master', 'Finish 10 drills.', (g) => (g.stats.quiz || 0) + (g.stats.practice || 0), 10),
   B('exam-1', 'Exam', 'bronze', 'First mock exam', 'Finish a mock exam.', (g) => (g.stats.exam || 0) + (g.stats.hsk3 || 0), 1),
   B('hsk3-pass', 'Trophy', 'gold', 'HSK 3 ready', 'Pass a full HSK 3 exam (180 / 300 or more).', stat('hsk3Pass'), 1),
