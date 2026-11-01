@@ -1,0 +1,158 @@
+id: tuyouyou
+order: 114
+category: history
+level: hsk3
+hanzi: 屠呦呦和青蒿素
+pinyin: Tú Yōuyōu hé qīnghāosù
+title: Tu Youyou et l'artémisinine | Tu Youyou and Artemisinin
+era: née en 1930 | born 1930
+summary: Le paludisme tue des millions de personnes. Une chercheuse sans doctorat, sans diplôme étranger, lit un livre vieux de 1 600 ans et y trouve une phrase… Après 190 échecs, elle teste le remède sur elle-même. Prix Nobel 2015. | Malaria kills millions. A researcher with no doctorate and no foreign degree reads a 1,600-year-old book and finds one sentence… After 190 failures she tests the remedy on herself. Nobel Prize 2015.
+
+# 呦呦 鹿鸣
+1930 年 12 月，在 ^浙江 ^宁波，一 个 女孩 出生 了。她 是 家 里 唯一 的 女儿。爸爸 很 喜欢 读 古书，给 女儿 起 名字 的 时候，想到 了《诗经》里 的 一 句：“呦呦鹿鸣，食野之苹。”意思 是：小鹿 呦呦 地{de} 叫着，在 原野 上 吃 草。
+于是，女孩 的 名字 就 叫 ^屠呦呦。爸爸 没有 想到，诗 的 下 一 句 是 说 小鹿 吃 的 那 种 草，而 这 个 女孩 的 一生，也 会 和 一 种 草 紧紧 地{de} 连 在 一起。
+^屠呦呦 小 时候，家 附近 有 很多 中药店。她 常常 站 在 柜台 前，看 店员 把 一 种 一 种 的 草药 放 在 小 秤 上 称。那些 草 和 根，有 的 香，有 的 苦，能 治 不同 的 病。她 觉得 非常 神奇。
+
+# 一 场 大 病
+十六 岁 那 年，^屠呦呦 得 了 肺结核。那时候 这 是 一 种 非常 可怕 的 病，很 多 人 因为 它 死去。她 不得不 停学，在 家 里 养 了 两 年 病。
+病好 以后，她 做 了 一 个 决定：“我 要 学 医药。学会 了，不但 能 让 自己 远离 疾病，还 能 救治 更 多 的 人。”
+1951 年，她 考 上 了 ^北京 大学 医学院 的 药学系。那时候，学 药 的 女生 很 少。她 学习 非常 用功，特别 喜欢 研究 植物。毕业 以后，她 被 分配 到 了 ^北京 的 中医 研究院 工作。
+
+# 中医 和 西医
+在 研究院，^屠呦呦 遇到 了 一 个 新 的 挑战：她 学 的 是 西方 的 现代 药学，可是 研究院 研究 的 是 中医 中药。
+1959 年，她 参加 了 一 个 特别 的 学习班：让 学 西医 的 人 系统 地{de} 学习 中医。整整 两 年 半，她 读 了 很 多 中医 古书，还 跟着 老 药工 去 药材 市场，学习 怎么 辨认 和 炮制 药材。
+后来 她 说：“这 两 年 半，是 我 一生 中 非常 重要 的 时光。”因为 她 学会 了 用 两 种 眼睛 看 世界：一 种 是 现代 科学 的 眼睛，一 种 是 古老 中医 的 眼睛。
+
+# 可怕 的 疟疾
+在 世界 上，有 一 种 非常 古老、非常 可怕 的 疾病，叫 疟疾。它 是 由 蚊子 传播 的。人 得 了 疟疾，会 一会儿 冷 得 发抖，一会儿 热 得 发烧，严重 的 时候 会 死。每 年，全世界 都 有 几百 万 人 因为 疟疾 死去，很 多 是 小 孩子。
+以前，人们 用 一 种 叫“奎宁”的 药 治疗 疟疾，后来 又 有 了 一 种 新 药 叫“氯喹”。可是 到 了 二十 世纪 六十 年代，疟原虫 对 这些 药 产生 了 抗药性，药 越来越 没 用 了。
+那时候，在 东南亚 的 战争 中，疟疾 让 大量 士兵 病倒，死于 疟疾 的 人 比 死于 战斗 的 还 多。很 多 国家 都 在 拼命 寻找 新 的 抗 疟 药，可是 一直 没有 成功。
+
+# 五二三 任务
+1967 年 5 月 23 日，中国 启动 了 一 个 秘密 的 科研 项目，为了 保密，它 的 名字 就 叫“五二三 任务”。全国 六十 多 个 单位、五百 多 个 科学家 参加 了 这个 项目。
+1969 年，三十九 岁 的 ^屠呦呦 被 任命 为 研究院 抗 疟 小组 的 组长。那时候，她 没有 博士 学位，没有 留学 经历，也 没有 什么 名气。她 的 两 个 女儿 都 还 很 小，一 个 四 岁，一 个 刚 满 一 岁。为了 工作，她 不得不 把 大 女儿 送到 别人 家，小 女儿 送 回 了 老家。
+后来，大 女儿 接 回家 的 时候，已经 不 认识 妈妈 了，躲 在 别人 身后，不 肯 叫 她。^屠呦呦 心里 很 难过，可是 她 知道，还 有 很 多 孩子 在 等着 新 药。
+
+# 两千 个 药方
+^屠呦呦 和 她 的 同事们 开始 了 艰难 的 寻找。她们 翻阅 了 大量 古代 医书，走访 了 很 多 老 中医，收集 了 两千 多 个 可能 治疗 疟疾 的 药方，从 中 选出 了 六百四十 个，编成 了 一 本 小 册子。
+然后，她们 一 个 一 个 地{de} 试。她们 把 这些 中药 提取 出来，给 得 了 疟疾 的 老鼠 吃，看看 哪 种 能 杀死 老鼠 血液 里 的 疟原虫。
+一 次，两 次，一百 次……试 了 两百 多 种 中药，三百八十 多 个 提取物，大部分 都 没有 用。青蒿 也 在 里面，第一 次 试验 的 时候 效果 很 好，可是 后来 再 试，效果 却 越来越 差，有 时候 只有 百分之十几。大家 都 有点儿 失望 了。
+
+# 一千六百 年 前 的 一 句 话
+为什么 青蒿 有时候 有用，有时候 没用 呢？^屠呦呦 又 一 次 拿起 了 古书。
+在 东晋 时代 一 个 叫 ^葛洪 的 医生 写 的《肘后备急方》里，她 读到 了 这样 一 句 话：“青蒿一握，以水二升渍，绞取汁，尽服之。”意思 是：拿 一 把 青蒿，用 两 升 水 泡，然后 把 汁 拧 出来，全部 喝 下去。
+^屠呦呦 的 眼睛 停 在 了 这 句 话 上。古人 为什么 不 用 煮 的，而 是 用“绞”的 呢？她 突然 明白 了：也许 是 高温 破坏 了 青蒿 里 有用 的 东西！以前 她们 都 是 用 加热 的 方法 提取 的。
+
+# 第一百九十一 号
+^屠呦呦 决定 改用 一 种 沸点 很 低 的 溶剂 —— 乙醚 来 提取，温度 只 有 三十五 度 左右。她 还 发现，只有 青蒿 的 叶子 有效，茎 是 没有 用 的。
+1971 年 10 月 4 日，在 失败 了 一百九十 次 以后，第一百九十一 号 样品 的 试验 结果 出来 了：疟原虫 的 抑制率 达到 了 百分之百！整个 实验室 都 沸腾 了。
+可是 那时候 条件 很 差，没有 好 的 通风 设备。乙醚 对 身体 有害，她们 每天 在 乙醚 中 工作，很 多 人 头晕、流鼻血，^屠呦呦 也 得 了 中毒性 肝炎。可是 没有 一 个 人 停 下来。
+
+# 以 身 试 药
+在 给 病人 用 药 以前，必须 先 证明 它 对 人 是 安全 的。可是 动物 试验 中，有 的 动物 出现 了 一些 可疑 的 反应。如果 按照 正常 的 程序，可能 要 再 等 很 久，而 疟疾 流行 的 季节 马上 就要 过去 了。
+^屠呦呦 向 领导 申请：“我 是 组长，我 有 责任 第一 个 试 药。”1972 年 7 月，她 和 两 个 同事 一起 住进 了 医院，亲自 吃 了 这 种 药。一 个 星期 以后，三 个 人 都 没有 出现 问题。
+同 年，她们 带着 药 到 ^海南 的 疟疾 流行 区，治疗 了 三十 个 病人，效果 非常 好。后来，她们 从 青蒿 中 得到 了 一 种 纯 的 晶体，叫“青蒿素”。
+
+# 晚 来 的 诺贝尔奖
+青蒿素 被 发现 以后，挽救 了 全世界 几百 万 人 的 生命，特别 是 在 ^非洲。世界卫生组织 把 以 青蒿素 为 基础 的 联合 疗法，作为 治疗 疟疾 的 首选 方法。
+可是 很 长 时间 里，^屠呦呦 的 名字 几乎 没有 人 知道。她 一直 默默 地{de} 在 实验室 里 工作。直到 2011 年，她 获得 了 美国 的 拉斯克 奖；2015 年 10 月 5 日，她 获得 了 诺贝尔 生理学 或 医学奖。那 一 年，她 八十五 岁。
+她 是 第一 位 获得 诺贝尔 科学 类 奖项 的 中国 本土 科学家，也 是 第一 位 获得 这个 奖 的 中国 女性。人们 叫 她“三无 科学家”：没有 博士 学位，没有 留学 经历，没有 院士 头衔。
+
+# 一 份 礼物
+在 ^瑞典 领奖 的 时候，^屠呦呦 做 了 一 个 演讲，题目 是：“青蒿素 —— 中医药 给 世界 的 一 份 礼物”。她 说：“青蒿素 的 发现，是 集体 的 成功。”她 感谢 了 一起 工作 的 所有 同事，也 感谢 了 一千六百 年 前 的 ^葛洪。
+记者 问 她 成功 的 秘诀。她 说：“没有 什么 秘诀。就 是 坚持，一 次 不行，就 再 来 一 次。”
+2019 年，^屠呦呦 获得 了 中国 的 最 高 荣誉 ——“共和国勋章”。她 把 奖金 捐 了 出来，用来 支持 年轻 科学家 的 研究。直到 九十 多 岁，她 还 常常 去 实验室，关心 青蒿素 的 新 研究。那 只{zhī} 在 原野 上 吃 草 的 小鹿，最后 真的 找到 了 那 株 救 人 的 草。
+
+@glossary
+中药 | médecine chinoise (remède) | Chinese herbal medicine
+肺结核 | tuberculose | tuberculosis
+疟疾 | paludisme | malaria
+蚊子 | moustique | mosquito
+抗药性 | résistance aux médicaments | drug resistance
+项目 | projet | project
+提取 | extraire | to extract
+青蒿 | armoise annuelle | sweet wormwood
+沸点 | point d'ébullition | boiling point
+样品 | échantillon | sample
+诺贝尔奖 | prix Nobel | Nobel Prize
+坚持 | persévérer | to persevere
+
+@questions
+Q D'où vient le prénom Youyou ? | Where does the name Youyou come from?
++ D'un vers du Shijing où un faon brame en mangeant de l'herbe | From a line in the Shijing where a fawn calls while eating grass
+- Du nom de sa grand-mère | From her grandmother's name
+- D'un médicament | From a medicine
+- D'une ville | From a city
+= « Yōuyōu lù míng, shí yě zhī píng. » | “Yōuyōu lù míng, shí yě zhī píng.”
+Q Pourquoi décide-t-elle d'étudier la pharmacie ? | Why does she decide to study pharmacy?
++ Après avoir guéri de la tuberculose, elle veut soigner les autres | After recovering from tuberculosis, she wants to heal others
+- Son père est pharmacien | Her father is a pharmacist
+- C'est bien payé | It pays well
+- Son école l'oblige | Her school makes her
+= « bùdàn néng ràng zìjǐ yuǎnlí jíbìng, hái néng jiùzhì gèng duō de rén ». | “bùdàn néng ràng zìjǐ yuǎnlí jíbìng, hái néng jiùzhì gèng duō de rén”.
+Q Qu'apprend-elle pendant la formation de deux ans et demi ? | What does she learn during the two-and-a-half-year course?
++ La médecine chinoise traditionnelle, alors qu'elle venait de la pharmacie moderne | Traditional Chinese medicine, having trained in modern pharmacy
+- L'anglais | English
+- La chirurgie | Surgery
+- L'agriculture | Agriculture
+= Elle apprend à voir avec « deux paires d'yeux ». | She learns to see “with two pairs of eyes”.
+Q Pourquoi fallait-il un nouveau médicament contre le paludisme dans les années 1960 ? | Why was a new malaria drug needed in the 1960s?
++ Le parasite était devenu résistant aux anciens médicaments | The parasite had become resistant to the old drugs
+- Les anciens étaient trop chers | The old ones were too expensive
+- Les moustiques avaient disparu | Mosquitoes had disappeared
+- Il n'y avait jamais eu de médicament | There had never been a drug
+= « nüèyuánchóng duì zhèxiē yào chǎnshēng le kàngyàoxìng ». | “nüèyuánchóng duì zhèxiē yào chǎnshēng le kàngyàoxìng”.
+Q D'où vient le nom « mission 523 » ? | Where does the name “Project 523” come from?
++ De sa date de lancement, le 23 mai 1967 | From its launch date, 23 May 1967
+- Du nombre de chercheurs | From the number of researchers
+- D'un numéro de laboratoire | From a lab number
+- D'un médicament | From a medicine
+= « 1967 nián 5 yuè 23 rì… jiù jiào “Wǔ'èrsān rènwu” ». | “1967 nián 5 yuè 23 rì… jiù jiào “Wǔ'èrsān rènwu””.
+Q Quel sacrifice personnel fait-elle pour le projet ? | What personal sacrifice does she make for the project?
++ Elle confie ses deux petites filles à d'autres | She leaves her two small daughters with others
+- Elle vend sa maison | She sells her house
+- Elle quitte son mari | She leaves her husband
+- Elle part à l'étranger | She goes abroad
+= Plus tard, sa fille aînée ne la reconnaît plus. | Later her elder daughter no longer recognises her.
+Q Combien de recettes rassemblent-elles au départ ? | How many recipes do they collect at first?
++ Plus de 2 000, dont 640 retenues | Over 2,000, of which 640 are selected
+- 10 | 10
+- 191 | 191
+- 52 | 52
+= « shōují le liǎngqiān duō gè… xuǎnchū le liùbǎi sìshí gè ». | “shōují le liǎngqiān duō gè… xuǎnchū le liùbǎi sìshí gè”.
+Q Quelle idée lui donne le livre de Ge Hong ? | What idea does Ge Hong's book give her?
++ La chaleur détruit peut-être le principe actif ; il faut extraire à froid | Heat may destroy the active ingredient; it must be extracted cold
+- Il faut faire bouillir longtemps | It must be boiled for a long time
+- Il faut ajouter du sel | Salt must be added
+- Il faut utiliser les racines | The roots must be used
+= Le texte dit « jiǎo qǔ zhī » (presser), pas faire bouillir. | The text says “jiǎo qǔ zhī” (wring out), not boil.
+Q Quelle partie de la plante est efficace ? | Which part of the plant works?
++ Les feuilles | The leaves
+- Les tiges | The stems
+- Les racines | The roots
+- Les fleurs | The flowers
+= « zhǐyǒu qīnghāo de yèzi yǒuxiào, jīng shì méiyǒu yòng de ». | “zhǐyǒu qīnghāo de yèzi yǒuxiào, jīng shì méiyǒu yòng de”.
+Q Quel est le résultat de l'échantillon n° 191 ? | What is the result of sample no. 191?
++ 100 % d'inhibition du parasite | 100% inhibition of the parasite
+- Aucun effet | No effect
+- 10 % | 10%
+- Il tue les souris | It kills the mice
+= « yìzhìlǜ dádào le bǎi fēn zhī bǎi ». | “yìzhìlǜ dádào le bǎi fēn zhī bǎi”.
+Q Pourquoi Tu Youyou teste-t-elle le médicament sur elle-même ? | Why does Tu Youyou test the drug on herself?
++ Pour gagner du temps avant la fin de la saison du paludisme, en tant que responsable | To save time before the malaria season ends, as team leader
+- Parce qu'elle a le paludisme | Because she has malaria
+- Pour devenir célèbre | To become famous
+- Parce que c'est obligatoire | Because it's compulsory
+= « Wǒ shì zǔzhǎng, wǒ yǒu zérèn dìyī gè shì yào. » | “Wǒ shì zǔzhǎng, wǒ yǒu zérèn dìyī gè shì yào.”
+Q Pourquoi l'appelle-t-on la « scientifique aux trois sans » ? | Why is she called the “three-withouts scientist”?
++ Sans doctorat, sans études à l'étranger, sans titre d'académicienne | No doctorate, no study abroad, no academician title
+- Sans argent, sans maison, sans famille | No money, no home, no family
+- Sans laboratoire, sans équipe, sans livres | No lab, no team, no books
+- Sans peur, sans repos, sans erreur | No fear, no rest, no mistakes
+= « méiyǒu bóshì xuéwèi, méiyǒu liúxué jīnglì, méiyǒu yuànshì tóuxián ». | “méiyǒu bóshì xuéwèi, méiyǒu liúxué jīnglì, méiyǒu yuànshì tóuxián”.
+Q Que répond-elle sur le secret de sa réussite ? | What does she say is the secret of her success?
++ Persévérer : si ça ne marche pas, recommencer | Persevere: if it fails, try again
+- La chance | Luck
+- L'argent | Money
+- Le talent | Talent
+= « jiù shì jiānchí, yí cì bù xíng, jiù zài lái yí cì ». | “jiù shì jiānchí, yí cì bù xíng, jiù zài lái yí cì”.

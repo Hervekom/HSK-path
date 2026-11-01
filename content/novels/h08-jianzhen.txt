@@ -1,0 +1,157 @@
+id: jianzhen
+order: 108
+category: history
+level: hsk3
+hanzi: 鉴真东渡
+pinyin: Jiànzhēn dōng dù
+title: Jianzhen traverse la mer vers le Japon | Jianzhen Crosses the Sea to Japan
+era: 688 – 763 | 688 – 763
+summary: Deux moines japonais viennent chercher un maître. Un vieil abbé de 55 ans répond : « J'irai. » Cinq traversées échouées, des tempêtes, des trahisons, ses yeux perdus… Au sixième essai, aveugle, il arrive enfin. | Two Japanese monks come looking for a master. A 55-year-old abbot answers: “I will go.” Five failed crossings, storms, betrayals, his sight lost… On the sixth try, blind, he finally arrives.
+
+# 扬州 的 大师
+一千三百 年 前，^唐朝 是 世界 上 最 强大、最 开放 的 国家 之一。都城 ^长安 有 来自 世界 各地 的 商人、学生 和 和尚。在 东边 的 大 城市 ^扬州，有 一 位 很 有名 的 和尚，叫 ^鉴真。
+^鉴真 公元 688 年 出生 在 ^扬州，十四 岁 出家 当 了 和尚。他 不但 懂 佛经，还 懂 医学、建筑、雕塑 和 书法。他 主持 修 了 八十 多 座 寺庙，给 很 多 穷人 看 病，在 ^扬州 一带 非常 受 尊敬。到 五十 多 岁 的 时候，跟 他 学习 的 和尚 已经 有 四万 多 人 了。
+那时候，海 的 东边 有 一 个 国家 叫 ^日本。^日本 很 羡慕 ^唐朝 的 文化，常常 派 很 多 学生 和 和尚 坐 船 来 中国 学习。这些 人 叫“遣唐使”。
+
+# 两 个 日本 和尚
+公元 742 年 的 一 天，两 个 年轻 的 ^日本 和尚 来到 了 ^扬州 的 ^大明寺。一 个 叫 ^荣叡，一 个 叫 ^普照。他们 已经 在 中国 学习 了 十 年。
+他们 跪 在 ^鉴真 面前 说：“大师，佛法 已经 传到 了 ^日本，可是 ^日本 没有 懂得 戒律 的 高僧，没有 人 能 正式 给 和尚 授戒。请 您 派 一 位 弟子 去 ^日本 吧！”
+^鉴真 问 弟子们：“有 谁 愿意 去 吗？”大殿 里 一片 安静。过 了 很 久，一 个 弟子 小声 说：“^日本 太 远 了，海 上 风浪 很 大，一百 个 人 去，到 不 了 一 个。我们 的 修行 还 不 够……”
+^鉴真 站 了 起来，说：“这 是 为了 佛法，怎么 能 爱惜 自己 的 生命 呢？你们 不 去，我 去！”那 一 年，他 五十五 岁。
+
+# 第一 次：被 告发
+听 到 老师 要 去，二十 多 个 弟子 也 表示 愿意 跟着 去。他们 开始 秘密 地{de} 准备 船 和 粮食。那时候，^唐朝 不 允许 和尚 私自 出 国，所以 一切 都 要 偷偷 进行。
+就 在 要 出发 的 时候，一 个 弟子 和 别人 吵 了 一 架。那 个 人 很 生气，就 去 官府 告发，说 他们 造 船 是 为了 和 海盗 勾结。官府 马上 派 人 来 搜查，没收 了 船，还 把 两 个 ^日本 和尚 关 了 起来。第一 次 东渡，还 没有 出发 就 失败 了。
+
+# 第二 次 和 第三 次：风浪
+^鉴真 没有 放弃。公元 743 年 冬天，他 自己 花钱 买 了 一 条 军船，准备 了 很 多 佛像、经书、药材 和 粮食，带着 一百 多 个 人，又 出发 了。
+可是 船 刚 开 到 ^长江 口，就 遇到 了 大风。船 撞 到 了 礁石 上，破 了。大家 只好 下 船，站 在 冰冷 的 海水 里，水 一直 淹到 腰。冬天 的 寒风 吹着，很 多 人 冻得 全身 发抖。他们 修好 船，再 出发，又 撞 上 了 礁石。最后 船 被 冲到 了 一 个 小 岛 上，大家 在 岛 上 饿 了 好几 天，才 被 人 救 回去。
+第三 次 和 第四 次 东渡，也 都 因为 种 种 原因 失败 了。有 一 次，是 ^鉴真 的 弟子们 舍 不 得 老师 冒险，偷偷 去 官府 报告，把 他 拦 了 下来。^鉴真 很 生气，好几 个 月 都 不 跟 那 个 弟子 说话。
+
+# 第五 次：漂 到 海南
+公元 748 年，^鉴真 已经 六十 岁 了。他 第五 次 出发。这 一 次，船 在 海 上 遇到 了 特别 可怕 的 台风。
+船 在 大 浪 中 漂 了 十四 天。天 是 黑 的，海 也 是 黑 的，浪 像 山 一样 高。淡水 喝 完 了，大家 只 能 嚼 一点儿 生 米，嘴 里 干 得 吞 不 下去。有 的 人 喝 了 海水，肚子 胀 得 很 难受。
+十四 天 以后，船 终于 靠 了 岸。可是 他们 发现，这里 不是 ^日本，而是 中国 最 南边 的 ^海南岛！他们 往 东 走，却 被 风 吹到 了 南边 几千 里 以外 的 地方。
+
+# 失去 光明
+他们 只好 从 ^海南岛 慢慢 走 回 北方。这 一 路，走 了 两 年 多。路 上，^日本 和尚 ^荣叡 生 了 重 病，死 在 了 ^端州。^鉴真 抱着 他 的 遗体，哭得 非常 伤心。
+另 一 个 ^日本 和尚 ^普照 也 很 难过，他 觉得 是 自己 害 了 大家，就 告别 了 ^鉴真，自己 先 走 了。不久，^鉴真 最 喜欢 的 大 弟子 ^祥彦 也 在 路 上 去世 了。
+南方 天气 很 热，^鉴真 又 累 又 伤心，眼睛 也 生 了 病。一 个 医生 给 他 治疗，可是 没有 治好，^鉴真 的 双 眼 慢慢 地{de} 什么 都 看不见 了。那 一 年，他 六十三 岁。
+很 多 人 都 觉得，这 位 老人 不 会 再 去 ^日本 了。可是 ^鉴真 说：“我 的 眼睛 看不见 了，可是 我 的 心 还 看得见。我 的 愿望 一 定 要 实现。”
+
+# 第六 次
+公元 753 年，^日本 的 遣唐使 ^藤原清河 来到 ^扬州，请 ^鉴真 跟着 他们 的 船 一起 回 ^日本。可是 ^唐朝 的 皇帝 还是 不 同意。^鉴真 又 一 次 半夜 偷偷 离开 了 寺庙，上 了 ^日本 的 船。
+这 次 一共 有 四 条 船。在 海 上，他们 又 遇到 了 大风。第一 条 船 被 吹到 了 ^越南，船 上 很 多 人 死 了。^鉴真 坐 的 是 第二 条 船。风 吹 啊 吹，浪 打 啊 打，船 上 的 人 都 在 祈祷。
+十二月 二十 日，^鉴真 的 船 终于 到 了 ^日本 南边 的 ^萨摩。他 走 下 船，用 脚 踩 在 ^日本 的 土地 上，脸 上 露出 了 笑容。从 第一 次 准备 到 现在，已经 过 了 十一 年。这 一 年，他 六十六 岁。在 这 十一 年 里，有 三十六 个 人 死 在 了 路 上，两百 多 人 离开 了。
+
+# 在 奈良
+^鉴真 到 了 ^日本 的 都城 ^奈良，受到 了 天皇 和 全国 人民 热烈 的 欢迎。天皇 请 他 在 ^东大寺 建 了 ^日本 第一 个 正式 的 戒坛。上皇、皇后 和 太子 第一 个 跟 他 受戒，后来 有 四百 多 个 和尚 也 跟 他 受戒。
+^鉴真 虽然 眼睛 看不见，可是 记忆力 非常 好。^日本 的 很 多 经书 抄 错 了，他 让 弟子 读给 他 听，就 能 听出 哪里 错 了。他 还 用 鼻子 闻，就 能 分辨 出 各 种 药材，纠正 了 ^日本 很 多 药材 用 错 的 地方。^日本 人 后来 把 他 尊为 医药 的 始祖。
+
+# 唐招提寺
+公元 759 年，^鉴真 和 弟子们 一起 设计、修建 了 一 座 寺庙，叫“唐招提寺”。这 座 寺庙 是 按照 ^唐朝 的 建筑 风格 建 的，大殿 又 高 又 宽，屋顶 又 平 又 稳，非常 庄严 美丽。
+^鉴真 和 他 的 弟子们 还 把 ^唐朝 的 很 多 东西 带到 了 ^日本：雕塑、绘画、书法、建筑，还有 做 豆腐、做 酱油 的 方法。据说，^日本 人 吃 豆腐 的 习惯，也 和 ^鉴真 有 关系。
+
+# 回不去 的 故乡
+^鉴真 在 ^日本 生活 了 十 年。他 常常 想念 ^扬州，想念 那里 的 寺庙、运河 和 琼花。可是 他 再 也 没有 回去。
+公元 763 年 春天，^鉴真 知道 自己 快 不 行 了。他 的 弟子 ^忍基 梦见 寺庙 的 大梁 断 了，醒 来 以后 非常 害怕，就 和 别的 弟子 一起，用 泥 和 漆 为 老师 做 了 一 座 塑像。
+五月 六 日，^鉴真 面 向 西方，也 就 是 故乡 的 方向，安静 地{de} 坐着，离开 了 人世，七十六 岁。他 的 塑像 一直 保存 在 ^唐招提寺，今天 是 ^日本 的 国宝。
+
+# 回家
+一千二百 多 年 以后，1980 年，^鉴真 的 塑像 第一 次“回”到 了 中国，回到 了 他 的 家乡 ^扬州。很 多 人 排着 长 队，去 看 这 位 老 和尚。
+^扬州 的 ^大明寺 里，今天 有 一 座“鉴真纪念堂”，是 按照 ^唐招提寺 的 样子 建 的。中国 和 ^日本 的 人们 都 把 ^鉴真 看作 两 国 友好 的 象征。
+一 个 五十五 岁 才 出发、六十六 岁 才 到达、眼睛 看不见 了 也 不 回头 的 人，用 他 的 一生 告诉 我们：只要 心 里 的 灯 不 灭，再 远 的 海，也 能 过去。
+
+@glossary
+出家 | entrer en religion | to become a monk
+遣唐使 | envoyés japonais chez les Tang | Japanese envoys to Tang China
+戒律 | règles monastiques | monastic precepts
+授戒 | conférer l'ordination | to ordain
+告发 | dénoncer | to report (to the authorities)
+礁石 | récif | reef
+台风 | typhon | typhoon
+淡水 | eau douce | fresh water
+遗体 | dépouille | remains
+天皇 | empereur du Japon | Japanese emperor
+塑像 | statue | statue
+象征 | symbole | symbol
+
+@questions
+Q Quels talents a Jianzhen en plus des sutras ? | What skills does Jianzhen have besides the sutras?
++ Médecine, architecture, sculpture et calligraphie | Medicine, architecture, sculpture and calligraphy
+- Guerre et navigation | War and navigation
+- Commerce | Trade
+- Musique et danse | Music and dance
+= « hái dǒng yīxué, jiànzhù, diāosù hé shūfǎ ». | “hái dǒng yīxué, jiànzhù, diāosù hé shūfǎ”.
+Q Que demandent les deux moines japonais ? | What do the two Japanese monks ask for?
++ Qu'un maître vienne au Japon pour ordonner les moines | That a master come to Japan to ordain monks
+- De l'argent pour un temple | Money for a temple
+- Des livres | Books
+- La permission de rester en Chine | Permission to stay in China
+= « méiyǒu rén néng zhèngshì gěi héshang shòujiè ». | “méiyǒu rén néng zhèngshì gěi héshang shòujiè”.
+Q Pourquoi Jianzhen décide-t-il de partir lui-même ? | Why does Jianzhen decide to go himself?
++ Ses disciples ont peur, et il pense qu'il ne faut pas épargner sa vie pour le Dharma | His disciples are afraid, and he believes one must not spare one's life for the Dharma
+- Il veut voir la mer | He wants to see the sea
+- L'empereur l'oblige | The emperor forces him
+- Il est fâché avec ses disciples | He is angry with his disciples
+= « Nǐmen bú qù, wǒ qù! » | “Nǐmen bú qù, wǒ qù!”
+Q Pourquoi la première tentative échoue-t-elle ? | Why does the first attempt fail?
++ Quelqu'un les dénonce aux autorités | Someone reports them to the authorities
+- Une tempête | A storm
+- Le bateau coule | The boat sinks
+- Jianzhen tombe malade | Jianzhen falls ill
+= Accusés de comploter avec des pirates, leur bateau est confisqué. | Accused of plotting with pirates, their boat is seized.
+Q Qui arrête la troisième ou quatrième tentative ? | Who stops one of the later attempts?
++ Ses propres disciples, qui ne veulent pas qu'il prenne ce risque | His own disciples, who don't want him to take the risk
+- Des pirates | Pirates
+- Le roi du Japon | The king of Japan
+- Sa famille | His family
+= « dìzǐmen shěbude lǎoshī màoxiǎn, tōutōu qù guānfǔ bàogào ». | “dìzǐmen shěbude lǎoshī màoxiǎn, tōutōu qù guānfǔ bàogào”.
+Q Où arrive le bateau lors de la cinquième tentative ? | Where does the boat land on the fifth attempt?
++ Sur l'île de Hainan, tout au sud de la Chine | On Hainan Island, in the far south of China
+- Au Japon | In Japan
+- En Corée | In Korea
+- Au Vietnam | In Vietnam
+= Après 14 jours de dérive : « zhèlǐ bú shì Rìběn, érshì… Hǎinán Dǎo! » | After drifting 14 days: “zhèlǐ bú shì Rìběn, érshì… Hǎinán Dǎo!”
+Q Que boivent-ils quand l'eau douce est épuisée ? | What do they drink when fresh water runs out?
++ Presque rien : ils mâchent du riz cru, certains boivent de l'eau de mer | Almost nothing: they chew raw rice, some drink seawater
+- Du vin | Wine
+- De l'eau de pluie | Rainwater
+- Du lait | Milk
+= « zhǐ néng jiáo yìdiǎnr shēng mǐ… yǒu de rén hē le hǎishuǐ ». | “zhǐ néng jiáo yìdiǎnr shēng mǐ… yǒu de rén hē le hǎishuǐ”.
+Q Que perd Jianzhen pendant le retour vers le nord ? | What does Jianzhen lose on the way back north?
++ La vue | His sight
+- Sa voix | His voice
+- Sa jambe | His leg
+- Ses livres | His books
+= « shuāng yǎn mànmàn de shénme dōu kàn bu jiàn le ». | “shuāng yǎn mànmàn de shénme dōu kàn bu jiàn le”.
+Q Que répond-il à ceux qui pensent qu'il va abandonner ? | What does he answer those who think he'll give up?
++ Ses yeux ne voient plus, mais son cœur voit encore | His eyes no longer see, but his heart still does
+- Qu'il est trop vieux | That he is too old
+- Qu'il rentre chez lui | That he is going home
+- Qu'il enverra un disciple | That he will send a disciple
+= « wǒ de xīn hái kàn de jiàn ». | “wǒ de xīn hái kàn de jiàn”.
+Q Combien de temps s'écoule entre la première préparation et l'arrivée ? | How long passes between the first preparation and arrival?
++ Onze ans | Eleven years
+- Six mois | Six months
+- Trois ans | Three years
+- Vingt ans | Twenty years
+= Il arrive à 66 ans, « yǐjīng guò le shíyī nián ». | He arrives at 66, “yǐjīng guò le shíyī nián”.
+Q Comment corrige-t-il les erreurs sur les médicaments au Japon ? | How does he correct mistakes about medicines in Japan?
++ En les reconnaissant à l'odeur | By recognising them by smell
+- En les goûtant tous | By tasting them all
+- Avec un livre | With a book
+- Ses disciples regardent pour lui | His disciples look for him
+= « yòng bízi wén, jiù néng fēnbiàn chū gè zhǒng yàocái ». | “yòng bízi wén, jiù néng fēnbiàn chū gè zhǒng yàocái”.
+Q Quel temple fait-il construire à Nara ? | Which temple does he build in Nara?
++ Le Tōshōdai-ji (Táng zhāotí sì) | Tōshōdai-ji (Táng zhāotí sì)
+- Le Daming si | Daming Temple
+- Le Shaolin | Shaolin
+- Le temple du Cheval blanc | The White Horse Temple
+= Construit en 759 dans le style des Tang. | Built in 759 in Tang style.
+Q Que se passe-t-il en 1980 ? | What happens in 1980?
++ Sa statue « revient » à Yangzhou pour la première fois | His statue “returns” to Yangzhou for the first time
+- On retrouve son bateau | His boat is found
+- Le Japon rend ses livres | Japan returns his books
+- On construit un pont | A bridge is built
+= « Jiànzhēn de sùxiàng dìyī cì “huí” dào le Zhōngguó ». | “Jiànzhēn de sùxiàng dìyī cì “huí” dào le Zhōngguó”.

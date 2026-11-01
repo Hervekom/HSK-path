@@ -1,0 +1,157 @@
+id: libing
+order: 106
+category: history
+level: hsk3
+hanzi: 李冰修都江堰
+pinyin: Lǐ Bīng xiū Dūjiāngyàn
+title: Li Bing dompte la rivière Min | Li Bing Tames the Min River
+era: vers 256 av. J.-C. | c. 256 BC
+summary: Chaque été, la rivière noie la plaine ; chaque hiver, la sécheresse brûle les champs. Un gouverneur et son fils passent des années à étudier l'eau. Leur barrage fonctionne encore aujourd'hui, 2 270 ans plus tard. | Every summer the river floods the plain; every winter drought burns the fields. A governor and his son spend years studying the water. Their system still works today, 2,270 years later.
+
+# 害人 的 河
+两千三百 年 前，在 中国 的 西南，有 一 个 地方 叫 ^蜀。^蜀 的 中间 是 一 片 大 平原，叫 ^成都 平原。平原 的 西边，有 一 条 大 河，叫 ^岷江。
+^岷江 从 高高 的 雪山 上 流 下来，水 又 急 又 大。每 年 夏天，山 上 的 雪 化 了，又 下 很 多 雨，^岷江 的 水 就 冲 出来，淹没 平原 上 的 村子 和 田地。老百姓 的 房子 被 冲走，很 多 人 被 淹死。
+可是 到 了 冬天 和 春天，平原 的 东边 却 一点儿 水 都 没有。土地 干 得 裂开 了，庄稼 都 枯死 了。老百姓 说：“^岷江 是 一 条 害人 的 河：要 水 的 时候 没有 水，不 要 水 的 时候 全 是 水。”
+很 多 人 只好 离开 家乡，去 别的 地方 讨饭。^蜀 地 那么 大 的 平原，却 养 不 活 自己 的 人民。
+
+# 新 的 太守
+那时候，^蜀 已经 成了 ^秦国 的 一 部分。大约 公元前 256 年，^秦国 派 了 一 位 新 的 太守 来到 ^蜀，他 的 名字 叫 ^李冰。
+^李冰 是 一 个 很 有 学问 的 人。他 懂 天文，也 懂 地理。他 一 到 ^蜀，看到 老百姓 这么 苦，心里 非常 难过。他 对 自己 说：“我 来 这里，不是 为了 当 官，是 为了 让 老百姓 过 上 好 日子。第一 件 事，就 是 治理 ^岷江！”
+传说，他 的 儿子 ^二郎 也 跟着 他 一起 来 了。^二郎 年轻 力壮，聪明 能干，后来 成了 爸爸 最 好 的 助手。
+
+# 走遍 岷江
+怎么 治理 一 条 这么 大 的 河 呢？^李冰 没有 坐 在 办公室 里 想，他 带着 儿子 和 几 个 助手，沿着 ^岷江 一直 往 上 走。
+他们 爬过 高山，走过 峡谷，有时候 在 山 上 一 住 就 是 好几 天。他们 观察 水流 的 方向，测量 河 的 宽度 和 深度，记录 每 个 季节 水 的 变化。他们 还 找 当地 的 老人 聊天，问 他们 以前 发 大水 的 情况。
+走 了 很 久，^李冰 发现：^岷江 从 山 里 出来 的 地方，有 一 座 叫 ^玉垒山 的 小 山，像 一 堵 墙 一样 挡住 了 东边 的 路。水 只 能 往 南 流，所以 南边 常常 发 大水，东边 却 没有 水。
+^李冰 想：“如果 能 在 ^玉垒山 上 开 一 个 口子，让 一 部分 水 往 东 流，问题 不 就 解决 了 吗？”
+
+# 没有 炸药 的 年代
+可是，要 在 一 座 石头 山 上 开 一 个 口子，谈 何 容易！那时候 没有 炸药，也 没有 机器，只 有 铁 锤 和 铁 凿。山 上 的 石头 又 大 又 硬，工人们 凿 一 整天，也 只 能 凿 下 一点点。
+^李冰 每天 都 在 工地 上 和 工人们 一起 想 办法。有 一 天，他 看到 工人们 在 火 边 取暖，一 块 被 火 烤 热 的 石头 掉 进 了 冷水 里，“啪”的 一 声，石头 裂开 了！
+^李冰 高兴 地{de} 说：“有 办法 了！”他 让 工人们 在 石头 上 堆 上 木头，点 火 烧。等 石头 烧 得 很 热 的 时候，马上 浇 上 冷水。石头 一 热 一 冷，就 裂开 了，再 用 锤子 一 敲，就 碎 了。
+就 这样，一 块 一 块，一 天 一 天，经过 八 年 的 努力，他们 终于 在 ^玉垒山 上 凿 出 了 一 个 二十 米 宽 的 口子。因为 它 的 样子 像 一 个 瓶子 的 口，人们 叫 它“宝瓶口”。
+
+# 鱼嘴
+宝瓶口 凿 好 了，可是 新 的 问题 又 来 了：^玉垒山 在 河 的 东边，水 流 得 那么 急，大部分 还是 往 南 流 了，流 进 宝瓶口 的 水 太 少。
+^李冰 决定，在 江 的 中间 修 一 道 长长 的 堤，把 ^岷江 分成 两 条。东边 的 叫“内江”，流 向 宝瓶口；西边 的 叫“外江”，就 是 原来 的 河道。这 道 堤 的 前面 又 尖 又 圆，像 一 条 鱼 的 嘴巴，所以 叫“鱼嘴”。
+鱼嘴 非常 聪明。冬天 和 春天 水 少 的 时候，内江 比较 深，大约 六 成 的 水 流 进 内江，去 灌溉 平原；夏天 水 多 的 时候，外江 比较 宽，大约 六 成 的 水 流 进 外江，流 走 了。这 就 是 有名 的“四六分水”。
+
+# 竹笼 和 石头
+在 急 流 中间 修 堤，最 难 的 是 怎么 让 石头 不 被 冲走。一 开始，工人们 往 河 里 扔 大 石头，可是 刚 扔 下去，就 被 水 冲走 了。
+^李冰 又 想 了 一 个 好 办法。^蜀 地 竹子 很 多。他 让 人 用 竹子 编成 一 个 一 个 长长 的 大 笼子，里面 装满 鹅卵石，再 把 竹笼 一 个 一 个 地{de} 放 进 河 里，排 在 一起。
+竹笼 很 重，水 冲 不 走；竹笼 之间 有 缝，水 可以 流 过去，压力 就 不 那么 大 了。坏 了，也 很 容易 换 新 的。用 这 个 办法，鱼嘴 和 堤 终于 修 成 了。
+
+# 飞沙堰
+可是 ^李冰 还 担心 一 件 事：如果 夏天 的 水 特别 大，流 进 内江 的 水 还是 太 多，怎么办？还有，河水 里 有 很 多 沙子 和 石头，如果 都 流 进 宝瓶口，时间 长 了，宝瓶口 就 会 被 堵住。
+他 在 内江 和 外江 之间，靠近 宝瓶口 的 地方，又 修 了 一 道 比较 低 的 堤，叫“飞沙堰”。平时 水 少，水 从 飞沙堰 旁边 流 过；水 太 多 的 时候，多余 的 水 就 从 飞沙堰 上面 漫 过去，流 回 外江。
+更 神奇 的 是，水 流 到 这里 会 转 一 个 弯，形成 一 个 漩涡。沙子 和 石头 就 被 漩涡 甩 过 飞沙堰，扔 回 了 外江。这样，流 进 宝瓶口 的 就 是 干净 的 水 了。
+
+# 石人 和 每 年 的 岁修
+^李冰 还 让 人 刻 了 三 个 石人，放 在 水 里。他 规定：冬天 水 少 的 时候，水 不能 低 于 石人 的 脚；夏天 水 多 的 时候，水 不能 高 于 石人 的 肩膀。这 就 是 中国 最 早 的“水位尺”。
+他 还 告诉 大家 一 个 重要 的 原则：“深 淘 滩，低 作 堰。”意思 是：每 年 都 要 把 河底 的 沙子 挖 得 深 一点儿，堤 不要 修 得 太 高。
+从 那 以后，每 年 冬天 水 少 的 时候，当地 人 都 会 把 外江 或 内江 拦 起来，清理 河底 的 沙石，修补 竹笼。这 叫“岁修”。两千 多 年 来，一 年 都 没有 停 过。
+
+# 天府之国
+都江堰 修 好 以后，^岷江 终于 听话 了。夏天，大水 不 再 淹没 平原；冬天，田地 里 也 有 了 水。^成都 平原 上 的 一 千 万 亩 土地，变成 了 一 片 绿色 的 海洋。
+从 那 以后，^成都 平原 几乎 没有 发生 过 大 的 水灾 和 旱灾，粮食 年年 丰收，人们 生活 得 很 富裕。所以，人们 叫 这里“天府之国”，意思 是 像 天上 的 仓库 一样 富有 的 地方。
+后来 ^秦国 能 统一 中国，^蜀 地 的 粮食 帮 了 很 大 的 忙。^三国 时候 的 ^诸葛亮 也 说：“都江堰 是 国家 的 根本。”他 专门 派 了 一千二百 个 士兵 保护 它。
+
+# 两千 年 后 的 礼物
+老百姓 非常 感谢 ^李冰 父子，在 江 边 为 他们 修 了 一 座 庙，叫“二王庙”。每 年 都 有 很 多 人 来 这里，纪念 他们。关于 ^李冰 的 儿子 ^二郎，后来 还 出现 了 很 多 神话，他 慢慢 变成 了 传说 中 的 ^二郎神。
+2008 年，^四川 发生 了 大 地震，很 多 现代 的 建筑 都 倒 了。可是，两千二百 多 年 前 修 的 都江堰，只 受 了 一点儿 轻伤，很快 就 修好 了。
+今天，世界 上 很 多 古代 的 水利 工程 早就 不能 用 了，只有 都江堰，从 古 到 今 一直 在 工作。它 没有 一 座 大 坝，却 让 江水 听话 地{de} 分开、转弯、流走。2000 年，它 被 列 入 了 世界 文化 遗产。
+^李冰 用 的 方法，就 是 中国人 说 的“道法自然”：不是 和 大 自然 打架，而是 了解 它，顺着 它。这，也许 就 是 他 留给 我们 最 珍贵 的 礼物。
+
+@glossary
+平原 | plaine | plain
+淹没 | submerger | to flood
+庄稼 | cultures, récoltes | crops
+太守 | gouverneur de commanderie | prefect, governor
+治理 | maîtriser, aménager | to bring under control
+测量 | mesurer | to measure
+凿 | creuser au burin | to chisel
+堤 | digue | dyke
+灌溉 | irriguer | to irrigate
+漩涡 | tourbillon | whirlpool
+丰收 | bonne récolte | good harvest
+世界文化遗产 | patrimoine mondial | World Heritage
+
+@questions
+Q Pourquoi la rivière Min est-elle appelée « une rivière qui fait du mal » ? | Why is the Min called “a harmful river”?
++ Inondations en été, sécheresse en hiver et au printemps | Floods in summer, drought in winter and spring
+- Elle est polluée | It is polluted
+- Elle est pleine de crocodiles | It is full of crocodiles
+- Elle change de couleur | It changes colour
+= « Yào shuǐ de shíhou méiyǒu shuǐ, bú yào shuǐ de shíhou quán shì shuǐ. » | “Yào shuǐ de shíhou méiyǒu shuǐ, bú yào shuǐ de shíhou quán shì shuǐ.”
+Q Quel est le premier objectif de Li Bing en arrivant ? | What is Li Bing's first goal when he arrives?
++ Maîtriser la rivière Min | To control the Min River
+- Construire un palais | To build a palace
+- Recruter une armée | To raise an army
+- Collecter les impôts | To collect taxes
+= « Dìyī jiàn shì, jiù shì zhìlǐ Mínjiāng! » | “Dìyī jiàn shì, jiù shì zhìlǐ Mínjiāng!”
+Q Comment Li Bing étudie-t-il la rivière ? | How does Li Bing study the river?
++ Il remonte la rivière, mesure, observe et interroge les anciens | He walks upstream, measures, observes and asks the elders
+- Il lit des livres au bureau | He reads books in his office
+- Il demande aux dieux | He asks the gods
+- Il envoie des soldats | He sends soldiers
+= Ils mesurent largeur et profondeur et « zhǎo dāngdì de lǎorén liáotiān ». | They measure width and depth and “zhǎo dāngdì de lǎorén liáotiān”.
+Q Quel obstacle empêche l'eau d'aller vers l'est ? | What blocks the water from flowing east?
++ La colline Yulei | Yulei Hill
+- Un grand lac | A big lake
+- Une forêt | A forest
+- Une ville | A city
+= « Yùlěi Shān… xiàng yì dǔ qiáng yíyàng dǎngzhù le dōngbian de lù ». | “Yùlěi Shān… xiàng yì dǔ qiáng yíyàng dǎngzhù le dōngbian de lù”.
+Q Comment cassent-ils la roche sans explosifs ? | How do they break the rock without explosives?
++ Ils la chauffent au feu puis versent de l'eau froide | They heat it with fire, then pour on cold water
+- Avec des éléphants | With elephants
+- Avec de la magie | With magic
+- Ils attendent la pluie | They wait for rain
+= « Shítou yí rè yì lěng, jiù lièkāi le. » | “Shítou yí rè yì lěng, jiù lièkāi le.”
+Q Combien de temps faut-il pour creuser le « goulot du vase précieux » ? | How long does it take to cut the “Precious Bottle Neck”?
++ Huit ans | Eight years
+- Huit mois | Eight months
+- Un an | One year
+- Vingt ans | Twenty years
+= « jīngguò bā nián de nǔlì ». | “jīngguò bā nián de nǔlì”.
+Q Pourquoi la digue s'appelle-t-elle « bouche de poisson » ? | Why is the dyke called “Fish Mouth”?
++ Son avant pointu et arrondi ressemble à une bouche de poisson | Its pointed, rounded front looks like a fish's mouth
+- Il y a beaucoup de poissons | There are many fish there
+- On y pêche | People fish there
+- C'est le nom d'un dieu | It's the name of a god
+= « xiàng yì tiáo yú de zuǐba, suǒyǐ jiào Yúzuǐ ». | “xiàng yì tiáo yú de zuǐba, suǒyǐ jiào Yúzuǐ”.
+Q Que signifie « sì liù fēn shuǐ » ? | What does “sì liù fēn shuǐ” mean?
++ 60 % de l'eau va dans le canal intérieur en saison sèche, 60 % dans le canal extérieur en crue | 60% of water goes to the inner channel in the dry season, 60% to the outer in floods
+- On partage l'eau entre 4 et 6 villages | Water is shared between 4 and 6 villages
+- On ouvre les vannes de 4 h à 6 h | Gates open from 4 to 6
+- Quatre rivières et six canaux | Four rivers and six canals
+= La répartition s'inverse selon la saison grâce à la forme du lit. | The split reverses with the season thanks to the shape of the riverbed.
+Q Pourquoi utilise-t-on des cages en bambou remplies de galets ? | Why use bamboo cages filled with pebbles?
++ Lourdes, elles résistent au courant, et l'eau passe entre elles | They are heavy enough to resist the current, and water passes between them
+- Elles sont jolies | They look nice
+- Pour attraper les poissons | To catch fish
+- Parce qu'il n'y a pas de pierres | Because there are no stones
+= « Zhúlóng hěn zhòng, shuǐ chōng bù zǒu; zhúlóng zhījiān yǒu fèng… ». | “Zhúlóng hěn zhòng, shuǐ chōng bù zǒu; zhúlóng zhījiān yǒu fèng…”.
+Q À quoi sert le déversoir « Feishayan » ? | What is the Feishayan spillway for?
++ Évacuer l'excès d'eau et rejeter le sable vers le canal extérieur | To release excess water and throw sand back to the outer channel
+- À retenir le sable | To hold back the sand
+- À faire tourner un moulin | To turn a mill
+- À traverser la rivière | To cross the river
+= Le tourbillon « bǎ shāzi hé shítou shuǎi guò Fēishāyàn ». | The whirlpool “bǎ shāzi hé shítou shuǎi guò Fēishāyàn”.
+Q À quoi servent les trois hommes de pierre ? | What are the three stone men for?
++ À mesurer le niveau de l'eau | To measure the water level
+- À décorer | To decorate
+- À honorer Li Bing | To honour Li Bing
+- À faire peur aux poissons | To scare the fish
+= C'est la première « shuǐwèi chǐ » (échelle de niveau). | It is the first “shuǐwèi chǐ” (water gauge).
+Q Que signifie « Tiānfǔ zhī guó » ? | What does “Tiānfǔ zhī guó” mean?
++ Une terre aussi riche qu'un grenier céleste | A land as rich as a heavenly granary
+- Le pays du ciel bleu | The land of the blue sky
+- Le royaume des dieux | The kingdom of the gods
+- Le pays des rivières | The land of rivers
+= « xiàng tiānshang de cāngkù yíyàng fùyǒu de dìfang ». | “xiàng tiānshang de cāngkù yíyàng fùyǒu de dìfang”.
+Q Que se passe-t-il pour Dujiangyan lors du séisme de 2008 ? | What happens to Dujiangyan in the 2008 earthquake?
++ Il n'est que légèrement endommagé et vite réparé | It is only slightly damaged and quickly repaired
+- Il est complètement détruit | It is completely destroyed
+- Il n'existe plus depuis longtemps | It had long ceased to exist
+- Il provoque une inondation | It causes a flood
+= « zhǐ shòu le yìdiǎnr qīngshāng, hěn kuài jiù xiūhǎo le ». | “zhǐ shòu le yìdiǎnr qīngshāng, hěn kuài jiù xiūhǎo le”.

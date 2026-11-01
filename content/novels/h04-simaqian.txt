@@ -1,0 +1,159 @@
+id: simaqian
+order: 104
+category: history
+level: hsk3
+hanzi: 司马迁写史记
+pinyin: Sīmǎ Qiān xiě Shǐjì
+title: Sima Qian écrit les Mémoires historiques | Sima Qian Writes the Records of the Grand Historian
+era: vers 145 – 86 av. J.-C. | c. 145 – 86 BC
+summary: Une promesse faite à un père mourant. Un seul mot pour défendre un ami, et l'empereur le condamne à la pire des humiliations. Il aurait pu mourir dignement. Il choisit de vivre, pour finir son livre. | A promise to a dying father. One word to defend a friend, and the emperor condemns him to the worst humiliation. He could have died with honour. He chose to live, to finish his book.
+
+# 史官 的 儿子
+两千一百 多 年 前，在 ^黄河 边 的 ^龙门，住着 一 个 男孩，叫 ^司马迁。他 的 爸爸 ^司马谈 是 皇宫 里 的 太史令，就 是 专门 记录 历史 的 官员。
+^司马家 好几 代 人 都 是 史官。爸爸 常常 对 ^司马迁 说：“我们 的 工作，就 是 把 发生 过 的 事情 真实 地{de} 写 下来，让 以后 的 人 知道。不管 是 好 事 还是 坏 事，都 不能 说谎。”
+小 ^司马迁 一边 帮 家 里 放牛 种{zhòng} 地，一边 跟着 爸爸 读书。十 岁 的 时候，他 已经 能 读 很 难 的 古书 了。他 最 喜欢 听 爸爸 讲 历史 上 的 英雄 故事：^孔子、^秦始皇、^荆轲……每 个 故事 都 让 他 激动 得 睡 不 着。
+后来，全家 搬到 了 都城 ^长安。在 那里，^司马迁 跟着 当时 最 有名 的 老师 学习，学到 了 很 多 古代 的 知识。
+
+# 走遍 天下
+二十 岁 那 年，^司马迁 做 了 一 个 大胆 的 决定：他 要 去 全国 旅行。爸爸 非常 支持 他：“书 上 的 历史 是 死 的，你 要 去 看看 那些 真正 发生 过 历史 的 地方。”
+他 往 南 走，到 了 ^长江 边，去 看 传说 中 ^大禹 治水 的 地方；他 来到 ^汨罗江 边，想起 了 在 这里 投江 的 诗人 ^屈原，哭 了 很 久；他 去 了 ^孔子 的 家乡 ^曲阜，看到 那里 的 读书人 还 按照 ^孔子 的 礼仪 生活，激动 得 不 想 离开。
+一路 上，他 不 只 看 风景，还 找 老人 聊天。在 ^淮阴，老人们 给 他 讲 大 将军 ^韩信 年轻 时 的 故事：^韩信 小 时候 很 穷，被 一 个 坏 少年 逼着 从 他 的 两 腿 之间 爬 过去。大家 都 笑话 他，可是 他 忍住 了，后来 成了 了不起 的 将军。
+这些 故事，书 上 都 没有。^司马迁 把 它们 一 个 一 个 都 记 在 了 心里。
+
+# 父亲 的 遗言
+旅行 回来 以后，^司马迁 当 上 了 郎中，常常 跟着 ^汉武帝 去 各地。有 一 年，^汉武帝 要 去 ^泰山 举行 封禅 大典，这 是 国家 最 隆重 的 仪式。
+可是 ^司马谈 那时候 病 得 很 重，不能 去 了。他 心里 非常 难过。^司马迁 赶回 家 的 时候，爸爸 已经 快 不 行 了。
+爸爸 拉着 儿子 的 手，流着 眼泪 说：“我 一直 想 写 一 本 历史 书，从 最 古老 的 时代 写到 今天。可是 我 没有 时间 了。我 死 以后，你 一定 会 做 太史令。千万 不要 忘记 我 想 写 的 书 啊！”
+^司马迁 跪 在 床 前，低着 头，哭着 说：“儿子 虽然 不 聪明，可是 一定 会 把 您 想 写 的 东西，全部 写 出来！”几 天 以后，爸爸 去世 了。
+
+# 皇家 图书馆
+三 年 以后，^司马迁 果然 当 上 了 太史令。这个 官 不 大，可是 有 一 个 别人 没有 的 好处：他 可以 进 皇家 图书馆，看 国家 收藏 的 所有 书 和 档案。
+每天，他 都 在 图书馆 里 待到 很 晚。那时候 的 书 是 写 在 竹简 上 的，一 本 书 就 有 好几 捆 竹简，非常 重。他 一 捆 一 捆 地{de} 搬，一 片 一 片 地{de} 读，把 有用 的 东西 抄 下来。
+他 发现，很 多 历史 记录 互相 矛盾。同 一 件 事，这 本 书 这么 说，那 本 书 那么 说。他 就 把 它们 放 在 一起 比较，再 加上 自己 旅行 时 听到 的 故事，想办法 找出 真相。
+公元前 104 年，^司马迁 正式 开始 写 他 的 书。那 一 年，他 四十二 岁。
+
+# 一 场 败仗
+可是 五 年 以后，一 件 意想不到 的 事情 改变 了 他 的 一生。
+公元前 99 年，一 位 年轻 的 将军 ^李陵 带着 五千 个 步兵，深入 ^匈奴 的 土地。他们 遇到 了 八 万 ^匈奴 骑兵。^李陵 和 士兵们 打 了 八 天 八 夜，杀 了 一 万 多 个 敌人。最后，箭 用完 了，救兵 也 没有 来，^李陵 被 抓住，投降 了。
+消息 传到 ^长安，^汉武帝 非常 生气。大臣们 看到 皇帝 生气，都 开始 骂 ^李陵：“胆小鬼！叛徒！”几 天 前 他们 还在 夸 ^李陵 勇敢 呢。
+
+# 说 真话 的 代价
+^汉武帝 问 ^司马迁：“你 怎么 看？”^司马迁 和 ^李陵 不 是 朋友，两 个 人 连 一 起 喝 酒 都 没有 过。可是 他 觉得，这样 对 ^李陵 不 公平。
+他 说：“^李陵 对 父母 孝顺，对 朋友 讲 信用，对 国家 忠诚。他 用 五千 个 人 打 了 八 万 人，已经 非常 了不起 了。他 投降，也许 是 想 以后 找 机会 报答 国家。”
+^汉武帝 一 听，更 生气 了。他 觉得 ^司马迁 是 在 为 叛徒 说话，还 在 批评 他 选 的 大 将军 没有 去 救。他 下令 把 ^司马迁 关 进 监狱，判 了 死刑。
+那时候 有 两 个 办法 可以 不 死：一 是 交 五十 万 钱，二 是 接受“宫刑”，这 是 对 一 个 男人 最 大 的 侮辱。^司马迁 家 里 很 穷，朋友们 也 都 不 敢 帮 他。
+
+# 活 下去 的 理由
+在 黑暗 的 监狱 里，^司马迁 想 了 很 久 很 久。一 个 读书人，受 这样 的 侮辱，还 不如 死 了 好。很 多 人 都 觉得 他 应该 选择 死。
+可是 他 想起 了 爸爸 的 话，想起 了 那 本 还 没有 写完 的 书。他 想：“人 总 有 一 死，有 的 死 比 泰山 还 重，有 的 死 比 鸿毛 还 轻。如果 我 现在 死 了，就 像 一 根 羽毛 一样 轻，没有 人 会 记得。”
+他 又 想起 了 历史 上 的 很 多 人：^孔子 在 最 困难 的 时候 写 了《春秋》，^屈原 被 赶走 以后 写 了《离骚》，^孙膑 被 砍 去 了 双腿，还 写 出 了 兵法。他们 都 是 在 痛苦 中 完成 了 最 伟大 的 作品。
+最后，^司马迁 选择 了 活 下去。他 接受 了 宫刑。
+
+# 十几 年 的 坚持
+出 狱 以后，^司马迁 当 上 了 中书令，每天 在 皇帝 身边 工作。别人 都 以为 他 很 风光，可是 只有 他 自己 知道 心里 的 痛苦。他 在 给 朋友 的 信 里 写道：每天 想起 这 件 事，就 全身 出汗，衣服 都 湿透 了。
+可是 一 回到 家，他 就 坐 在 灯 下，一 笔 一 笔 地{de} 写 他 的 书。他 写 皇帝，也 写 普通 人；写 英雄，也 写 失败 的 人；写 大臣，也 写 商人、医生、刺客，甚至 写 了 会 讲 笑话 的 人。
+他 写 的 历史，不 只是 冷冰冰 的 年代 和 事件，而是 一 个 一 个 活生生 的 人。他 们 有 优点，也 有 缺点；会 哭，也 会 笑。读 他 的 书，就 像 在 看 一 部 电影。
+
+# 不 说谎 的 历史
+^司马迁 最 了不起 的 地方 是：他 不 说谎。连 ^汉武帝 这个 判 他 宫刑 的 皇帝，他 也 写 得 很 公正：写 他 的 功劳，也 写 他 的 错误。
+他 写 ^项羽，一 个 打 了 败仗 的 人，可是 把 他 写 得 非常 英勇，让 两千 年 后 的 读者 都 为 他 流泪。他 写 ^刘邦，开创 ^汉朝 的 皇帝，也 写 他 年轻 时 喜欢 喝 酒、说 大话 的 样子。
+他 还 在 每 一 篇 的 最后，加上 自己 的 看法，叫“太史公曰”。读者 可以 看到，哪些 是 事实，哪些 是 他 自己 的 想法。
+
+# 《史记》
+大约 公元前 91 年，这 本 书 终于 写完 了。它 一共 有 一百三十 篇，五十二 万 六千五百 个 字，记录 了 从 传说 中 的 ^黄帝 到 ^汉武帝，三千 多 年 的 历史。他 给 书 起 名 叫《太史公书》，后来 人们 叫 它《史记》。
+^司马迁 知道，这 本 书 说 了 太 多 真话，可能 会 给 自己 带来 危险。他 抄 了 两 份：一 份 藏 在 名山 里，一 份 留 在 都城。他 说：“等 以后 有 人 能 懂 它 的 时候，再 拿 出来。”
+没有 人 知道 ^司马迁 是 什么 时候 去世 的，也 不 知道 他 是 怎么 去世 的。可是 他 的 书 留 了 下来。今天，《史记》被 称为“史家 之 绝唱，无韵 之《离骚》”。中国 有 很 多 成语，比如“破釜沉舟”“卧薪尝胆”“完璧归赵”，都 来自 这 本 书。两千 年 来，正是 因为 有 一 个 宁愿 受 辱 也 要 说 真话 的 人，我们 才 能 看到 那么 多 古人 的 脸。
+
+@glossary
+史官 | historiographe | court historian
+记录 | consigner, noter | to record
+遗言 | dernières volontés | last words
+档案 | archives | archives
+矛盾 | contradiction | contradiction
+投降 | se rendre | to surrender
+叛徒 | traître | traitor
+监狱 | prison | prison
+侮辱 | humiliation | humiliation
+鸿毛 | plume d'oie (chose légère) | goose feather (something light)
+公正 | impartial | fair, impartial
+绝唱 | chef-d'œuvre inégalé | unrivalled masterpiece
+
+@questions
+Q Quel est le métier du père de Sima Qian ? | What is Sima Qian's father's job?
++ Historien officiel de la cour (taishi ling) | Official court historian (taishi ling)
+- Général | General
+- Marchand | Merchant
+- Médecin | Doctor
+= « tàishǐlìng, jiù shì zhuānmén jìlù lìshǐ de guānyuán ». | “tàishǐlìng, jiù shì zhuānmén jìlù lìshǐ de guānyuán”.
+Q Quelle règle son père lui enseigne-t-il ? | What rule does his father teach him?
++ Écrire la vérité, bonne ou mauvaise, sans mentir | Write the truth, good or bad, without lying
+- Écrire seulement les bonnes choses | Write only good things
+- Plaire à l'empereur | Please the emperor
+- Écrire vite | Write fast
+= « Bùguǎn shì hǎo shì háishì huài shì, dōu bù néng shuōhuǎng. » | “Bùguǎn shì hǎo shì háishì huài shì, dōu bù néng shuōhuǎng.”
+Q Pourquoi Sima Qian voyage-t-il à 20 ans ? | Why does Sima Qian travel at twenty?
++ Pour voir les lieux où l'histoire s'est vraiment passée | To see the places where history really happened
+- Pour fuir la guerre | To flee war
+- Pour faire du commerce | To trade
+- Pour chercher une épouse | To find a wife
+= « Shū shàng de lìshǐ shì sǐ de, nǐ yào qù kànkan… ». | “Shū shàng de lìshǐ shì sǐ de, nǐ yào qù kànkan…”.
+Q Quelle histoire les vieux de Huaiyin lui racontent-ils ? | What story do the old people of Huaiyin tell him?
++ Han Xin, humilié jeune, devenu un grand général | Han Xin, humiliated as a youth, later a great general
+- Celle de Qu Yuan | Qu Yuan's
+- Celle de Confucius | Confucius's
+- Celle du premier empereur | The First Emperor's
+= Han Xin a dû passer entre les jambes d'un voyou, puis est devenu général. | Han Xin had to crawl between a bully's legs, then became a general.
+Q Que demande le père mourant ? | What does the dying father ask?
++ De ne pas oublier le livre d'histoire qu'il voulait écrire | Not to forget the history book he wanted to write
+- De s'occuper de sa mère | To take care of his mother
+- De quitter la cour | To leave the court
+- De devenir général | To become a general
+= « Qiānwàn búyào wàngjì wǒ xiǎng xiě de shū a! » | “Qiānwàn búyào wàngjì wǒ xiǎng xiě de shū a!”
+Q Quel avantage lui donne le poste de taishi ling ? | What advantage does the post of taishi ling give him?
++ L'accès à la bibliothèque et aux archives impériales | Access to the imperial library and archives
+- Un gros salaire | A big salary
+- Une armée | An army
+- Une grande maison | A big house
+= « tā kěyǐ jìn huángjiā túshūguǎn ». | “tā kěyǐ jìn huángjiā túshūguǎn”.
+Q Que fait-il quand deux documents se contredisent ? | What does he do when two records contradict each other?
++ Il les compare et utilise aussi ce qu'il a entendu en voyage | He compares them and also uses what he heard on his travels
+- Il choisit le plus court | He picks the shorter one
+- Il les jette | He throws them away
+- Il demande à l'empereur | He asks the emperor
+= « fàng zài yìqǐ bǐjiào, zài jiāshàng zìjǐ lǚxíng shí tīngdào de gùshi ». | “fàng zài yìqǐ bǐjiào, zài jiāshàng zìjǐ lǚxíng shí tīngdào de gùshi”.
+Q Combien de soldats a Li Ling face à combien d'ennemis ? | How many soldiers does Li Ling have against how many enemies?
++ 5 000 fantassins contre 80 000 cavaliers | 5,000 foot soldiers against 80,000 horsemen
+- 50 000 contre 8 000 | 50,000 against 8,000
+- 500 contre 800 | 500 against 800
+- Autant que l'ennemi | As many as the enemy
+= « wǔqiān gè bùbīng… bā wàn Xiōngnú qíbīng ». | “wǔqiān gè bùbīng… bā wàn Xiōngnú qíbīng”.
+Q Sima Qian était-il ami de Li Ling ? | Was Sima Qian Li Ling's friend?
++ Non, il le défend seulement par justice | No, he defends him only out of fairness
+- Oui, son meilleur ami | Yes, his best friend
+- C'était son frère | He was his brother
+- C'était son élève | He was his student
+= « liǎng gè rén lián yìqǐ hē jiǔ dōu méiyǒu guò ». | “liǎng gè rén lián yìqǐ hē jiǔ dōu méiyǒu guò”.
+Q Pourquoi ne peut-il pas payer pour éviter la peine ? | Why can't he pay to avoid the punishment?
++ Sa famille est pauvre et ses amis n'osent pas l'aider | His family is poor and his friends dare not help
+- La loi l'interdit | The law forbids it
+- Il refuse par fierté | He refuses out of pride
+- L'empereur refuse l'argent | The emperor refuses the money
+= « Sīmǎ Qiān jiā lǐ hěn qióng, péngyoumen yě dōu bù gǎn bāng tā. » | “Sīmǎ Qiān jiā lǐ hěn qióng, péngyoumen yě dōu bù gǎn bāng tā.”
+Q Que veut dire sa phrase sur le mont Tai et la plume d'oie ? | What does his line about Mount Tai and the goose feather mean?
++ Une mort peut peser lourd ou ne rien valoir ; mourir maintenant serait inutile | A death can weigh heavy or count for nothing; dying now would be pointless
+- Il veut gravir le mont Tai | He wants to climb Mount Tai
+- Il aime les oiseaux | He likes birds
+- Il est malade | He is ill
+= « yǒu de sǐ bǐ Tài Shān hái zhòng, yǒu de sǐ bǐ hóngmáo hái qīng ». | “yǒu de sǐ bǐ Tài Shān hái zhòng, yǒu de sǐ bǐ hóngmáo hái qīng”.
+Q Qu'a de particulier sa manière d'écrire l'histoire ? | What is special about the way he writes history?
++ Il décrit des personnes vivantes, avec qualités et défauts | He portrays living people, with strengths and faults
+- Il n'écrit que des dates | He only writes dates
+- Il n'écrit que sur les empereurs | He only writes about emperors
+- Il invente des histoires | He invents stories
+= « bú zhǐshì lěngbīngbīng de niándài hé shìjiàn, érshì… huóshēngshēng de rén ». | “bú zhǐshì lěngbīngbīng de niándài hé shìjiàn, érshì… huóshēngshēng de rén”.
+Q Que fait-il des deux copies du livre ? | What does he do with the two copies of the book?
++ Une cachée dans une montagne célèbre, une à la capitale | One hidden in a famous mountain, one kept in the capital
+- Il les donne à l'empereur | He gives them to the emperor
+- Il les brûle | He burns them
+- Il les vend | He sells them
+= « yí fèn cáng zài míngshān lǐ, yí fèn liú zài dūchéng ». | “yí fèn cáng zài míngshān lǐ, yí fèn liú zài dūchéng”.

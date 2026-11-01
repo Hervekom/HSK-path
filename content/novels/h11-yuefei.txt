@@ -1,0 +1,158 @@
+id: yuefei
+order: 111
+category: history
+level: hsk3
+hanzi: 精忠报国岳飞
+pinyin: Jīng zhōng bào guó Yuè Fēi
+title: Yue Fei, loyal jusqu'au bout | Yue Fei, Loyal to the End
+era: 1103 – 1142 | 1103 – 1142
+summary: Une mère grave quatre caractères dans le dos de son fils. Il devient le général que l'ennemi craint le plus : « Il est plus facile d'ébranler une montagne que l'armée de Yue. » Mais le plus grand danger ne vient pas du champ de bataille. | A mother carves four characters on her son's back. He becomes the general the enemy fears most: “It is easier to shake a mountain than Yue's army.” But the greatest danger does not come from the battlefield.
+
+# 洪水 中 出生
+公元 1103 年，^宋朝 ^河南 的 一 个 农民 家庭 里，一 个 男孩 出生 了。传说 他 出生 的 时候，有 一 只{zhī} 大 鸟 从 屋顶 上 飞 过，叫声 很 响。爸爸 就 给 他 起 名 叫 ^岳飞，字 ^鹏举，希望 他 像 大 鹏 一样 高 飞。
+^岳飞 还 不 满 一 个 月 的 时候，^黄河 发 了 大 水，村子 被 淹 了。妈妈 抱着 他 坐 在 一 个 大 水缸 里，水缸 在 大 水 中 漂 了 很 久，终于 漂到 了 岸 边。母子 两 人 活 了 下来。
+^岳飞 家 很 穷。他 白天 帮 家 里 干活，晚上 就 捡 树枝 点 火，借着 火光 读书。他 最 喜欢 读 兵法 和 历史。
+
+# 少年 神射手
+^岳飞 天生 力气 很 大，还 不到 二十 岁，就 能 拉开 三百 斤 的 弓。他 跟着 一 位 叫 ^周侗 的 老师 学 射箭，学得 非常 认真。
+有 一 次，^周侗 射 了 三 箭，三 箭 都 射中 了 靶子 的 中心。他 回头 对 ^岳飞 说：“你 能 做到 吗？”^岳飞 拉开 弓，第一 箭 射 出去，把 老师 射 在 中心 的 箭 劈成 了 两 半；第二 箭 又 劈开 了 第二 支。^周侗 非常 吃惊，把 自己 最 心爱 的 两 张 弓 都 送给 了 他。
+后来 老师 去世 了，^岳飞 非常 难过。每 个 月 的 初一 和 十五，他 都 带着 酒 和 肉 去 老师 的 坟 前，射 三 支 箭，表示 怀念。
+
+# 国家 的 危难
+那时候，北方 的 ^金国 越来越 强大。^金 人 骑 马 打仗 非常 厉害。1127 年，^金 军 攻破 了 ^宋朝 的 都城 ^开封，抓走 了 两 个 皇帝 和 很 多 大臣、宫女，带到 了 北方。这 件 事 叫“靖康之耻”，是 ^宋朝 人 心里 最 大 的 耻辱。
+皇帝 的 一 个 弟弟 逃到 了 南方，当 了 新 的 皇帝，就 是 ^宋高宗。^宋朝 从 此 只 剩下 了 南边 的 一 半 国土，历史 上 叫 它“南宋”。
+北方 的 老百姓 生活 在 ^金 人 的 统治 下，非常 痛苦。他们 天天 盼望：什么 时候 ^宋朝 的 军队 能 打 回来 呢？
+
+# 精忠报国
+年轻 的 ^岳飞 想 去 参军，保卫 国家。可是 他 又 舍 不 得 家 里 年老 的 妈妈。
+妈妈 知道 了 儿子 的 心事，对 他 说：“国家 有 难，你 应该 去。不 要 担心 我。”她 让 ^岳飞 脱下 上衣，跪 在 地 上。然后，她 拿起 一 根 针，在 儿子 的 背 上 一 针 一 针 地{de} 刺 了 四 个 字：“精忠报国”，意思 是：用 全部 的 忠心，报效 国家。
+针 刺 进 皮肤，很 疼，可是 ^岳飞 一 声 也 没 叫。从 那 以后，这 四 个 字 就 刻 在 了 他 的 背 上，也 刻 在 了 他 的 心 里。今天，很 多 历史 学家 认为，刺字 的 事 是 后来 的 人 加 进去 的 传说；可是 ^岳飞 背 上 有“尽忠报国”四 个 字，是 历史 书 里 明明白白 写着 的。
+
+# 岳家军
+^岳飞 参军 以后，打仗 非常 勇敢，又 很 会 用 计谋，很快 就 从 一 个 普通 士兵 成了 大 将军。他 带领 的 军队，大家 叫 它“岳家军”。
+岳家军 的 纪律 非常 严格。^岳飞 规定：“冻死 不 拆 屋，饿死 不 掳掠。”就 是 说：冻 死 了，也 不 拆 老百姓 的 房子 来 烧火；饿 死 了，也 不 抢 老百姓 的 东西。有 一 个 士兵 拿 了 老百姓 一 根 麻绳 去 绑 草，^岳飞 马上 按 军法 处罚 了 他。
+^岳飞 对 士兵 也 非常 好。士兵 生病 了，他 亲自 去 送药；士兵 打仗 死 了，他 照顾 他们 的 家人。打 了 胜仗，皇帝 给 的 奖赏，他 都 分给 士兵们。老百姓 都 非常 爱 岳家军，常常 拿 粮食 来 送给 他们。
+
+# 撼山易，撼岳家军难
+^金 军 有 一 种 很 可怕 的 骑兵，叫“拐子马”。他们 三 匹 马 连 在 一起，人 和 马 都 穿着 厚厚 的 铁甲，冲 起来 像 一 堵 墙，谁 也 挡 不 住。
+1140 年，在 ^郾城，^金 军 的 首领 ^金兀术 带着 一万五千 个 拐子马 冲 了 过来。^岳飞 想 了 一 个 办法：他 让 步兵 拿着 长 刀，弯着 腰，不 看 上面 的 人，只 砍 马 腿。三 匹 马 连 在 一起，一 匹 倒 了，另外 两 匹 也 跑 不 动 了。
+这 一 仗，岳家军 大 胜。^金兀术 哭着 说：“我 从 北方 起兵 以来，都 是 靠 拐子马 打 胜仗，现在 全 完 了！”^金 军 里 流传着 一 句 话：“撼山易，撼岳家军难。”意思 是：摇动 一 座 山 很 容易，摇动 岳家军 太 难 了！
+
+# 直 抵 黄龙
+郾城 大 胜 以后，岳家军 一直 打到 了 离 ^开封 只 有 四十五 里 的 ^朱仙镇。北方 的 老百姓 听到 消息，拿着 酒 和 饭 来 欢迎，很 多 人 激动 得 哭 了。北方 的 很 多 抗金 队伍，也 都 举起 了“岳”字 大旗。
+^岳飞 非常 兴奋，对 将士们 说：“等 我们 直 抵 黄龙府，我 要 和 大家 痛痛快快 地{de} 喝 一 杯！”黄龙府 是 ^金国 的 大本营。眼看 失去 的 国土 就要 收复 了。
+可是 就 在 这个 时候，一 天 之内，^岳飞 连续 收到 了 十二 道 金牌。金牌 是 皇帝 最 紧急 的 命令，上面 写着：马上 撤军，回到 南方！
+
+# 十年 之 功
+原来，南宋 的 宰相 ^秦桧 一直 想 和 ^金国 讲和。皇帝 ^宋高宗 也 害怕：如果 ^岳飞 真的 打败 了 ^金国，救 回 了 以前 的 两 个 皇帝，自己 的 皇位 怎么办？而且，^岳飞 的 军队 越来越 强大，皇帝 也 开始 不 放心 了。
+^岳飞 接到 金牌，悲愤 地{de} 说：“十年 之 力，废于 一旦！”十 年 的 努力，一下子 全部 白费 了！
+老百姓 知道 岳家军 要 走，都 拦 在 马 前，哭着 说：“我们 拿着 酒 和 饭 欢迎 你们，^金 人 都 知道。你们 一 走，我们 就 没 命 了！”^岳飞 也 流 下 了 眼泪。他 只好 停 了 五 天，让 愿意 走 的 老百姓 跟着 军队 一起 去 南方。
+
+# 莫须有
+回到 南方 以后，^岳飞 被 夺 了 兵权。不久，^秦桧 派 人 诬告 ^岳飞 要 造反，把 他 和 他 的 儿子 ^岳云、部将 ^张宪 一起 关 进 了 监狱。
+在 监狱 里，审问 的 官员 要 ^岳飞 认罪。^岳飞 什么 也 不 说，脱下 衣服，让 他们 看 背 上 的 四 个 字。审问 的 官员 看 了，也 说不 出 话 来。他们 找 了 很 久，也 找 不 到 任何 证据。
+大 将军 ^韩世忠 很 生气，去 问 ^秦桧：“^岳飞 到底 有 什么 罪？证据 在 哪里？”^秦桧 回答 了 三 个 字：“莫须有。”意思 是：也许 有 吧。^韩世忠 气得 大 喊：“‘莫须有’三 个 字，怎么 能 让 天下 人 服 气！”
+
+# 风波亭
+1142 年 1 月，就 在 农历 新年 前 不久，^岳飞 在 杭州 的 风波亭 被 杀害 了，只 有 三十九 岁。他 的 儿子 ^岳云 和 ^张宪 也 被 杀 了。
+临死 前，^岳飞 在 纸 上 写 了 八 个 大字：“天日昭昭！天日昭昭！”意思 是：天上 的 太阳 明明白白，看得见 谁 对 谁 错！
+一 个 叫 ^隗顺 的 狱卒，非常 敬佩 ^岳飞。他 冒着 生命 危险，偷偷 背出 ^岳飞 的 遗体，埋 在 了 ^西湖 边 的 山 下。他 临死 前 把 这个 秘密 告诉 了 儿子。
+
+# 西湖 边 的 岳庙
+二十 年 以后，新 的 皇帝 为 ^岳飞 平反，按照 隆重 的 礼仪，把 他 重新 安葬 在 ^西湖 边 的 ^栖霞岭 下，就 是 今天 的 岳王庙。
+在 岳飞 墓 前，跪着 四 个 铁 人：^秦桧、他 的 妻子 ^王氏，还有 两 个 帮 他们 害 人 的 人。他们 的 手 被 绑 在 背 后，几百 年 来 一直 跪 在 那里。墓 前 有 一 副 有名 的 对联：“青山有幸埋忠骨，白铁无辜铸佞臣。”
+^岳飞 还 留下 了 一 首 词，叫《满江红》，里面 有 一 句：“莫等闲，白了少年头，空悲切。”意思 是：不要 白白 浪费 时间，等到 年轻 人 的 头发 都 白 了，再 后悔 就 晚 了。今天，很 多 中国 学生 都 会 背 这 首 词。^岳飞 只 活 了 三十九 年，可是“精忠报国”这 四 个 字，中国人 已经 记 了 九百 年。
+
+@glossary
+洪水 | inondation | flood
+兵法 | art de la guerre | military strategy
+靶子 | cible | target
+耻辱 | humiliation | humiliation
+参军 | s'engager dans l'armée | to enlist
+精忠报国 | servir le pays avec une loyauté totale | serve the country with utter loyalty
+纪律 | discipline | discipline
+骑兵 | cavalerie | cavalry
+撤军 | retirer les troupes | to withdraw troops
+诬告 | accuser à tort | to frame, falsely accuse
+证据 | preuve | evidence
+平反 | réhabiliter | to rehabilitate
+
+@questions
+Q Comment Yue Fei et sa mère survivent-ils à l'inondation ? | How do Yue Fei and his mother survive the flood?
++ Ils flottent dans une grande jarre | They float in a big water jar
+- Ils montent sur le toit | They climb onto the roof
+- Un bateau les sauve | A boat rescues them
+- Ils nagent | They swim
+= « zuò zài yí gè dà shuǐgāng lǐ… zhōngyú piāodào le àn biān ». | “zuò zài yí gè dà shuǐgāng lǐ… zhōngyú piāodào le àn biān”.
+Q Comment étudie-t-il le soir, étant pauvre ? | How does he study at night, being poor?
++ À la lumière d'un feu de branches | By the light of a fire of twigs
+- À la bougie | By candlelight
+- Chez un voisin | At a neighbour's house
+- Il n'étudie pas | He doesn't study
+= « jiǎn shùzhī diǎn huǒ, jièzhe huǒguāng dúshū ». | “jiǎn shùzhī diǎn huǒ, jièzhe huǒguāng dúshū”.
+Q Que fait Yue Fei avec ses deux premières flèches devant Zhou Tong ? | What does Yue Fei do with his first two arrows in front of Zhou Tong?
++ Il fend en deux les flèches de son maître plantées au centre | He splits his teacher's arrows in the bullseye
+- Il manque la cible | He misses the target
+- Il touche un oiseau | He hits a bird
+- Il tire en l'air | He shoots into the air
+= « bǎ lǎoshī shè zài zhōngxīn de jiàn pīchéng le liǎng bàn ». | “bǎ lǎoshī shè zài zhōngxīn de jiàn pīchéng le liǎng bàn”.
+Q Qu'est-ce que la « honte de Jingkang » ? | What is the “Jingkang humiliation”?
++ La prise de Kaifeng et l'enlèvement de deux empereurs par les Jin | The fall of Kaifeng and capture of two emperors by the Jin
+- Une défaite de Yue Fei | A defeat of Yue Fei
+- Une famine | A famine
+- La mort de Zhou Tong | Zhou Tong's death
+= « zhuāzǒu le liǎng gè huángdì… zhè jiàn shì jiào “Jìngkāng zhī chǐ” ». | “zhuāzǒu le liǎng gè huángdì… zhè jiàn shì jiào “Jìngkāng zhī chǐ””.
+Q Que signifie « jīng zhōng bào guó » ? | What does “jīng zhōng bào guó” mean?
++ Servir son pays avec une loyauté totale | Serve one's country with utter loyalty
+- Devenir riche | Become rich
+- Protéger sa mère | Protect one's mother
+- Aimer la guerre | Love war
+= « yòng quánbù de zhōngxīn, bàoxiào guójiā ». | “yòng quánbù de zhōngxīn, bàoxiào guójiā”.
+Q Selon les historiens, qu'est-ce qui est certain dans l'histoire du tatouage ? | According to historians, what is certain about the tattoo story?
++ Qu'il avait bien des caractères sur le dos ; le rôle de sa mère serait une légende | That he really had characters on his back; his mother's role may be a legend
+- Que tout est inventé | That everything is invented
+- Que sa mère était calligraphe | That his mother was a calligrapher
+- Que l'empereur l'a fait | That the emperor did it
+= Les livres d'histoire mentionnent « jìn zhōng bào guó » sur son dos. | History books record “jìn zhōng bào guó” on his back.
+Q Quelle est la règle de l'armée de Yue ? | What is the rule of Yue's army?
++ Ne jamais démolir de maisons ni piller, même en mourant de froid ou de faim | Never tear down houses or loot, even freezing or starving
+- Toujours attaquer la nuit | Always attack at night
+- Ne jamais reculer | Never retreat
+- Ne jamais boire | Never drink
+= « Dòngsǐ bù chāi wū, èsǐ bù lǔlüè. » | “Dòngsǐ bù chāi wū, èsǐ bù lǔlüè.”
+Q Comment Yue Fei bat-il les « chevaux attachés » des Jin ? | How does Yue Fei beat the Jin's “linked horses”?
++ Ses fantassins coupent les jambes des chevaux | His foot soldiers cut the horses' legs
+- Il utilise du feu | He uses fire
+- Il creuse des trous | He digs holes
+- Il attaque leurs camps | He attacks their camps
+= « bú kàn shàngmian de rén, zhǐ kǎn mǎ tuǐ ». | “bú kàn shàngmian de rén, zhǐ kǎn mǎ tuǐ”.
+Q Que disent les soldats Jin de l'armée de Yue ? | What do the Jin soldiers say about Yue's army?
++ Il est plus facile d'ébranler une montagne que l'armée de Yue | It is easier to shake a mountain than Yue's army
+- Elle est trop lente | It is too slow
+- Elle n'a pas de chevaux | It has no horses
+- Elle est cruelle | It is cruel
+= « Hàn shān yì, hàn Yuèjiājūn nán. » | “Hàn shān yì, hàn Yuèjiājūn nán.”
+Q Pourquoi Yue Fei doit-il se retirer près de Kaifeng ? | Why must Yue Fei withdraw near Kaifeng?
++ Il reçoit douze médailles d'or ordonnant le retrait | He receives twelve golden tablets ordering withdrawal
+- Il est blessé | He is wounded
+- Il manque de nourriture | He runs out of food
+- Les Jin sont trop forts | The Jin are too strong
+= « yì tiān zhīnèi… shí'èr dào jīnpái ». | “yì tiān zhīnèi… shí'èr dào jīnpái”.
+Q Pourquoi l'empereur Gaozong ne veut-il pas d'une victoire totale ? | Why doesn't Emperor Gaozong want total victory?
++ Il craint pour son trône si les anciens empereurs reviennent, et l'armée de Yue l'inquiète | He fears for his throne if the old emperors return, and Yue's army worries him
+- Il aime les Jin | He likes the Jin
+- Il n'a plus d'argent | He has no money left
+- Il est malade | He is ill
+= « zìjǐ de huángwèi zěnmebàn?… yě kāishǐ bú fàngxīn le ». | “zìjǐ de huángwèi zěnmebàn?… yě kāishǐ bú fàngxīn le”.
+Q Que signifie la réponse « mò xū yǒu » de Qin Hui ? | What does Qin Hui's answer “mò xū yǒu” mean?
++ « Peut-être que oui » — une accusation sans preuve | “Perhaps there is” — an accusation without proof
+- « Il est innocent » | “He is innocent”
+- « Il a avoué » | “He confessed”
+- « Il s'est enfui » | “He ran away”
+= Han Shizhong : comment ces trois mots pourraient-ils convaincre le monde ? | Han Shizhong: how could those three words convince anyone?
+Q Qu'y a-t-il devant la tombe de Yue Fei à Hangzhou ? | What is in front of Yue Fei's tomb in Hangzhou?
++ Quatre statues de fer à genoux, dont Qin Hui | Four kneeling iron statues, including Qin Hui
+- Deux lions | Two lions
+- Son cheval | His horse
+- Une épée | A sword
+= « guìzhe sì gè tiě rén: Qín Huì, tā de qīzi Wáng shì… ». | “guìzhe sì gè tiě rén: Qín Huì, tā de qīzi Wáng shì…”.

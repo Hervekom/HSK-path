@@ -23,6 +23,8 @@ function neutral(word: string, py: string[]): string[] {
   const last = word.slice(-1);
   if (word.length > 1 && last === '子' && !ZI_FULL.has(word)) out[out.length - 1] = 'zi';
   if (word.length > 1 && last === '得' && !DE_FULL.has(word)) out[out.length - 1] = ' de';
+  // aspect particle 着: 看着 kànzhe (but 睡着 shuìzháo)
+  if (word.length > 1 && last === '着' && !['睡着', '找着', '着着'].includes(word)) out[out.length - 1] = 'zhe';
   // potential complements: 搬不动 bān bu dòng, 找得到 zhǎo de dào
   if (word.length === 3 && (word[1] === '不' || word[1] === '得')) return [out[0], word[1] === '不' ? ' bu ' : ' de ', out[2]];
   // erhua: 有点儿 yǒudiǎnr, 哪儿 nǎr
@@ -78,6 +80,15 @@ function tokens(text: string): Tok[] {
       if (isZh(ch)) {
         buf += ch;
         py.push(a.pinyin);
+      } else if (/[0-9]/.test(ch)) {
+        flush();
+        // a number: one token with all its digits
+        const last = out[out.length - 1];
+        if (last && /^[0-9]+$/.test(last.h)) {
+          last.h += ch;
+          last.p += ch;
+        } else out.push({ h: ch, p: ch });
+        sentenceStart = false;
       } else {
         flush();
         out.push({ h: ch, p: PUNCT[ch] ?? ch });
@@ -90,11 +101,51 @@ function tokens(text: string): Tok[] {
   return out;
 }
 
+
+/** Story written in the light text format (content/novels/*.txt). */
+function parseTxt(src: string): any {
+  const s: any = { chapters: [], glossary: [], questions: [] };
+  let mode: 'text' | 'gloss' | 'q' = 'text';
+  let q: any = null;
+  const pair = (v: string) => {
+    const [fr, en] = v.split(' | ');
+    return { fr: fr.trim(), en: (en ?? fr).trim() };
+  };
+  for (const raw of src.split('\n')) {
+    const line = raw.trim();
+    if (!line) continue;
+    if (line === '@glossary') { mode = 'gloss'; continue; }
+    if (line === '@questions') { mode = 'q'; continue; }
+    const meta = /^([a-z_]+):\s*(.*)$/.exec(line);
+    if (meta && mode === 'text' && !s.chapters.length) {
+      const [, k, v] = meta;
+      if (k === 'order') s.order = Number(v);
+      else if (k === 'title' || k === 'summary' || k === 'era') s[k] = pair(v);
+      else if (k === 'pinyin') s.titlePinyin = v;
+      else s[k] = v;
+      continue;
+    }
+    if (mode === 'text') {
+      if (line.startsWith('# ')) s.chapters.push({ title: line.slice(2), paragraphs: [] });
+      else s.chapters[s.chapters.length - 1].paragraphs.push(line);
+    } else if (mode === 'gloss') {
+      const [w, fr, en] = line.split('|').map((x) => x.trim());
+      s.glossary.push({ w, fr, en });
+    } else {
+      if (line.startsWith('Q ')) { q = { q: pair(line.slice(2)), options: [], answer: 0, why: { fr: '', en: '' } }; s.questions.push(q); }
+      else if (line.startsWith('+ ')) { q.answer = q.options.length; q.options.push(pair(line.slice(2))); }
+      else if (line.startsWith('- ')) q.options.push(pair(line.slice(2)));
+      else if (line.startsWith('= ')) q.why = pair(line.slice(2));
+    }
+  }
+  return s;
+}
+
 mkdirSync(OUT, { recursive: true });
 const index: unknown[] = [];
 const EXTRA: Record<string, unknown[]> = JSON.parse(readFileSync(`${SRC}/_extra.json`, 'utf8'));
-for (const f of readdirSync(SRC).filter((f) => f.endsWith('.json') && !f.startsWith('_')).sort()) {
-  const s = JSON.parse(readFileSync(`${SRC}/${f}`, 'utf8'));
+for (const f of readdirSync(SRC).filter((f) => (f.endsWith('.json') || f.endsWith('.txt')) && !f.startsWith('_')).sort()) {
+  const s = f.endsWith('.txt') ? parseTxt(readFileSync(`${SRC}/${f}`, 'utf8')) : JSON.parse(readFileSync(`${SRC}/${f}`, 'utf8'));
   s.questions = [...s.questions, ...(EXTRA[s.id] || [])];
   const chapters = s.chapters.map((c: { title: string; paragraphs: string[] }) => ({
     title: tokens(c.title),
@@ -105,7 +156,7 @@ for (const f of readdirSync(SRC).filter((f) => f.endsWith('.json') && !f.startsW
   const titlePy = s.titlePinyin ?? pinyin(s.hanzi);
   const story = { ...s, titlePinyin: titlePy, chars, chapters, glossary };
   writeFileSync(`${OUT}/${s.id}.json`, JSON.stringify(story));
-  index.push({ id: s.id, order: s.order, hanzi: s.hanzi, titlePinyin: titlePy, title: s.title, level: s.level, summary: s.summary, chars, chapters: chapters.length, questions: s.questions.length });
+  index.push({ id: s.id, order: s.order, category: s.category ?? 'legend', era: s.era, hanzi: s.hanzi, titlePinyin: titlePy, title: s.title, level: s.level, summary: s.summary, chars, chapters: chapters.length, questions: s.questions.length });
   console.log(s.id, chars, 'chars');
 }
 (index as Array<{ order: number }>).sort((a, b) => a.order - b.order);

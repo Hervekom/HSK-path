@@ -61,7 +61,7 @@ export const BADGES: BadgeDef[] = [
   B('lesson-10', 'Student', 'silver', 'Dedicated student', 'Finish 10 lessons.', lessonsDone, 10),
   B('novel-1', 'BookOpenText', 'bronze', 'First story', 'Read a story in pinyin and answer its questions.', novelsRead, 1),
   B('novel-5', 'BookOpenText', 'silver', 'Story lover', 'Read 5 stories in pinyin.', novelsRead, 5),
-  B('novel-15', 'BookOpenText', 'gold', 'Pinyin bookworm', 'Read all 15 stories in pinyin.', novelsRead, 15),
+  B('novel-15', 'BookOpenText', 'gold', 'Pinyin bookworm', 'Read 15 stories in pinyin.', novelsRead, 15),
   B('quiz-10', 'Lightning', 'silver', 'Quiz master', 'Finish 10 drills.', (g) => (g.stats.quiz || 0) + (g.stats.practice || 0), 10),
   B('exam-1', 'Exam', 'bronze', 'First mock exam', 'Finish a mock exam.', (g) => (g.stats.exam || 0) + (g.stats.hsk3 || 0), 1),
   B('hsk3-pass', 'Trophy', 'gold', 'HSK 3 ready', 'Pass a full HSK 3 exam (180 / 300 or more).', stat('hsk3Pass'), 1),

@@ -1,0 +1,161 @@
+id: zhangqian
+order: 103
+category: history
+level: hsk3
+hanzi: 张骞出使西域
+pinyin: Zhāng Qiān chūshǐ Xīyù
+title: Zhang Qian ouvre la route de la soie | Zhang Qian Opens the Silk Road
+era: vers 164 – 114 av. J.-C. | c. 164 – 114 BC
+summary: Envoyé vers l'ouest avec cent hommes, il est capturé et retenu dix ans. Il se marie, a un fils… et n'oublie jamais sa mission. Treize ans plus tard, il revient avec deux compagnons et la carte d'un monde inconnu. | Sent west with a hundred men, he is captured and held for ten years. He marries, has a son… and never forgets his mission. Thirteen years later he returns with two companions and the map of an unknown world.
+
+# 皇帝 的 烦恼
+两千一百 多 年 前，中国 的 皇帝 是 ^汉武帝。他 十六 岁 当 皇帝，年轻，聪明，又 很 有 雄心。可是 有 一 件 事 让 他 非常 头疼：北方 的 ^匈奴。
+^匈奴 人 住 在 草原 上，骑 马 骑得 非常 好。他们 常常 突然 冲 进 ^汉朝 的 村子，抢走 粮食 和 牛羊，还 抓走 很 多 人。^汉朝 打 不 过 他们，只好 把 公主 嫁给 ^匈奴 的 首领，再 送去 很 多 丝绸 和 粮食，希望 他们 不要 再 来。
+可是 这 个 办法 一点儿 用 都 没有。^汉武帝 想：我们 一定 要 想 一 个 新 的 办法。
+^汉武帝 的 爷爷 和 爸爸 都 选择 了 和平。他们 让 老百姓 好好 休息，种{zhòng} 地，几十 年 下来，国家 的 仓库 里 堆满 了 粮食，钱 多 得 穿 钱 的 绳子 都 烂 了。^汉武帝 想：现在 我们 有 钱 了，也 有 粮食 了，是 时候 对 ^匈奴 说“不”了。
+
+# 一 个 消息
+有 一 天，^汉武帝 从 一 个 被 抓到 的 ^匈奴 人 那里 听到 一 个 消息：在 很 远 很 远 的 西边，有 一 个 国家 叫 ^大月氏。以前，^匈奴 打败 了 ^大月氏，杀死 了 他们 的 国王，还 用 国王 的 头骨 做 了 一 个 喝 酒 的 杯子。^大月氏 人 非常 恨 ^匈奴，可是 找 不 到 朋友 和 他们 一起 报仇。
+^汉武帝 眼睛 一 亮：如果 我们 和 ^大月氏 一起 打 ^匈奴，一 个 从 东边 打，一 个 从 西边 打，^匈奴 就 跑 不 了 了！
+可是 问题 来 了：^大月氏 在 哪儿？没有 人 知道。要 去 那里，一定 要 经过 ^匈奴 的 土地。谁 敢 去 呢？^汉武帝 下令：找 一 个 勇敢 的 人，出使 西域！
+那时候，^汉朝 人 对 西边 几乎 一点儿 都 不 了解。在 ^长安 往 西 几百 里 以外，就 是 大 沙漠 和 雪山。很 多 人 以为，那里 是 世界 的 尽头，住着 可怕 的 怪物。去 西边，就 像 今天 去 外星球 一样。
+
+# 年轻 的 郎官
+很 多 人 都 不 敢 报名。这时候，一 个 年轻 的 小 官 站 了 出来。他 叫 ^张骞，是 皇宫 里 的 郎官。他 身体 强壮，性格 坚强，对 人 也 很 宽厚。
+公元前 138 年，^张骞 带着 一百 多 个 人 出发 了。他 手 里 拿着 一 根 “汉节”。汉节 是 一 根 长长 的 竹 竿，上面 挂着 牛 尾巴 的 毛，代表 皇帝 和 国家。只要 节 在，使者 的 身份 就 在。
+在 队伍 里，有 一 个 叫 ^甘父 的 ^匈奴 人，他 以前 是 奴隶，射箭 射得 特别 好，也 认识 去 西边 的 路。他 成了 ^张骞 最 重要 的 帮手。
+出发 前，^张骞 回 了 一 次 家，跟 父母 告别。妈妈 拉着 他 的 手 哭 了：“这 一 去，什么 时候 才 能 回来 啊？”^张骞 说：“妈，等 我 完成 任务，就 回来 看 您。”他 不 知道，这 一 走，就 是 十三 年。
+
+# 被 抓
+他们 离开 ^长安，向 西 走，没有 多久 就 进入 了 ^匈奴 的 土地。很 不幸，他们 被 ^匈奴 的 骑兵 发现 了。所有 人 都 被 抓 了 起来，带到 了 ^匈奴 首领 单于 的 面前。
+单于 问：“你们 要 去 哪里？”^张骞 没有 说谎：“我们 要 去 ^大月氏。”单于 冷笑 着 说：“^大月氏 在 我们 的 西边，你们 ^汉朝 人 怎么 能 经过 我 的 土地 去 那里？如果 我 想 派 人 去 你们 南边 的 国家，你们 ^汉朝 会 让 我 去 吗？”
+单于 没有 杀 他们，而是 把 他们 留 了 下来。他 想 让 ^张骞 忘记 自己 的 国家。他 还 给 ^张骞 找 了 一 个 ^匈奴 妻子。后来，他们 有 了 一 个 儿子。
+^张骞 被 带到 了 ^匈奴 的 王庭。这里 没有 城墙，没有 房子，只 有 一 个 一 个 白色 的 帐篷，像 草原 上 的 蘑菇。人们 吃 牛羊 肉，喝 马 奶，跟着 草 和 水 搬来搬去。对 一 个 从 ^长安 来 的 人 来说，这里 的 一切 都 那么 陌生。
+
+# 十 年
+一 年，两 年，五 年……^张骞 在 草原 上 放羊，骑 马，学会 了 说 ^匈奴 话。他 的 生活 看 起来 和 一 个 普通 的 ^匈奴 人 没有 什么 区别。
+可是 每天 晚上，他 都 会 拿出 那 根 汉节，看 很 久 很 久。节 上 的 毛 一 根 一 根 地{de} 掉 了，可是 他 从来 没有 把 它 扔掉。他 心里 一直 记着：我 是 ^汉朝 的 使者，我 还 有 任务 没有 完成。
+就 这样，过 了 整整 十 年。^匈奴 人 慢慢 地{de} 不 再 那么 注意 他 了。^张骞 等 的 就 是 这 一 天。
+他 的 ^匈奴 妻子 慢慢 发现，丈夫 心里 有 一 个 秘密。有 一 天 晚上，她 看到 ^张骞 又 在 看 那 根 汉节，就 轻轻 地{de} 问：“你 还是 想 走，对 吗？”^张骞 没有 回答。妻子 想 了 很 久，说：“你 走 的 时候，带上 我 和 孩子。”
+
+# 逃跑
+一 个 夜晚，^张骞 叫醒 了 ^甘父 和 剩下 的 几 个 人。他们 骑上 马，悄悄 地{de} 离开 了。他们 没有 往 东 跑，往 东 是 回家 的 路；他们 往 西 跑，因为 他们 的 任务 在 西边。
+他们 穿过 大 沙漠，翻过 高高 的 雪山。白天，太阳 热 得 像 火；晚上，冷 得 像 冰。带 的 东西 吃完 了，就 靠 ^甘父 射 鸟 和 野兽 来 吃。很 多 人 在 路 上 死 了。
+走 了 几十 天，他们 来到 了 一 个 叫 ^大宛 的 国家。^大宛 的 国王 早就 听说 东方 有 一 个 富强 的 ^汉朝，非常 想 和 它 来往。他 热情 地{de} 欢迎 了 ^张骞，还 派 翻译 和 向导 送 他 去 ^大月氏。
+在 沙漠 里，最 可怕 的 是 没有 水。有 好几 天，他们 一 滴 水 都 没 喝 到，嘴唇 都 裂开 了。^甘父 告诉 大家：“跟着 骆驼 走，骆驼 能 闻到 水 的 味道。”最后，在 骆驼 的 带领 下，他们 真的 找到 了 一 个 小 小 的 绿洲。
+
+# 失望 的 回答
+经过 ^康居，^张骞 终于 找到 了 ^大月氏。可是 他 发现，^大月氏 已经 不是 十 年 前 的 ^大月氏 了。他们 搬到 了 一 片 很 富饶 的 土地，这里 土地 肥沃，生活 安定，离 ^匈奴 很 远。
+^张骞 对 新 的 国王 说：“我们 一起 打 ^匈奴 吧！”国王 却 摇摇头：“我们 现在 生活 得 很 好，不 想 再 打仗 了。而且 ^汉朝 离 我们 太 远 了。”
+^张骞 在 那里 住 了 一 年 多，想尽 办法，可是 国王 一直 不 同意。最后，他 只好 带着 遗憾，踏上 了 回家 的 路。
+在 那 一 年 里，^张骞 也 没有 浪费 时间。他 去 了 附近 的 ^大夏，看 了 那里 的 城市 和 市场，记下 了 每 个 国家 的 位置、人口、物产 和 风俗。他 心里 有 一 张 越来越 大 的 地图，这 张 地图 后来 改变 了 中国 的 历史。
+
+# 又 被 抓
+这 一 次，^张骞 选 了 另 一 条 路，沿着 南边 的 山 走，希望 能 躲开 ^匈奴。可是 运气 又 一 次 不 好，他 又 被 ^匈奴 抓住 了！
+他 又 在 ^匈奴 住 了 一 年 多。公元前 126 年，单于 死 了，^匈奴 发生 了 内乱。^张骞 趁着 混乱，带着 他 的 ^匈奴 妻子 和 ^甘父，终于 逃 了 出来，回到 了 ^长安。
+出发 的 时候 有 一百 多 个 人，十三 年 以后，回来 的 只 有 两 个。^汉武帝 见到 ^张骞，非常 感动。^张骞 虽然 没有 完成 联合 ^大月氏 的 任务，可是 他 带回来 的 东西，比 这个 任务 更 珍贵。
+回到 ^长安，^张骞 写 了 一 份 很 长 的 报告，告诉 皇帝 西边 三十六 个 国家 的 情况。这 份 报告 后来 被 历史学家 ^司马迁 写 进 了《史记》，成了 世界 上 最 早 介绍 中亚 的 文字 之一。
+
+# 一 个 新 的 世界
+^张骞 告诉 皇帝：在 西边，有 很 多 很 多 国家。^大宛 有 一 种 汗血马，跑得 非常 快，出 的 汗 像 血 一样 红。^安息 是 一 个 很 大 的 国家，人们 用 银 做 钱，在 皮 上 写字。在 更 远 的 地方，还 有 大 海。
+最 让 他 吃惊 的 是：他 在 ^大夏 看到 了 中国 南方 ^蜀 地 的 竹杖 和 布。一 问 才 知道，是 商人 从 ^身毒，就 是 今天 的 ^印度，买来 的。这 说明，从 中国 的 西南 也 有 路 可以 通 到 西方！
+^汉武帝 听 得 入迷 了。以前 中国人 以为 世界 就 是 中国 和 周围 的 地方，现在 才 知道，世界 原来 这么 大。他 封 ^张骞 为“博望侯”，意思 是“看得 很 远 的 人”。
+
+# 丝绸之路
+后来，^汉朝 的 军队 在 将军 ^卫青 和 ^霍去病 的 带领 下，打败 了 ^匈奴，打通 了 去 西边 的 路。公元前 119 年，^张骞 第二 次 出使 西域，这 一 次 他 带 了 三百 个 人，一万 多 头 牛羊，还有 很 多 金子 和 丝绸，去 了 ^乌孙 等 国家。
+从 那 以后，^汉朝 的 使者 和 商人 一 批 又 一 批 地{de} 往 西 走。中国 的 丝绸、瓷器 和 茶叶 被 运到 了 西方，西方 的 葡萄、核桃、黄瓜、胡萝卜 和 汗血马 也 来到 了 中国。佛教 后来 也 是 从 这 条 路 传到 中国 的。
+两千 年 以后，一 个 德国 学者 给 这 条 路 起 了 一 个 美丽 的 名字：“丝绸之路”。今天，你 吃 葡萄 的 时候，也许 可以 想 一 想 那 个 拿着 旧 汉节、在 草原 上 等 了 十 年 的 人。是 他，第一 次 为 中国 打开 了 通 向 世界 的 大门。
+
+@glossary
+烦恼 | souci | worry
+雄心 | grande ambition | ambition
+报仇 | se venger | to take revenge
+出使 | partir en mission diplomatique | to go as an envoy
+使者 | émissaire | envoy
+奴隶 | esclave | slave
+单于 | chanyu (chef des Xiongnu) | chanyu (Xiongnu ruler)
+沙漠 | désert | desert
+向导 | guide | guide
+遗憾 | regret | regret
+入迷 | être captivé | fascinated
+丝绸之路 | route de la soie | Silk Road
+
+@questions
+Q Pourquoi l'empereur Wu cherche-t-il une nouvelle solution ? | Why does Emperor Wu want a new solution?
++ Les Xiongnu pillent toujours malgré les princesses et cadeaux envoyés | The Xiongnu keep raiding despite the princesses and gifts sent
+- Il veut acheter de la soie | He wants to buy silk
+- Il s'ennuie au palais | He is bored in the palace
+- Les Xiongnu demandent la paix | The Xiongnu ask for peace
+= « Zhège bànfǎ yìdiǎnr yòng dōu méiyǒu. » | “Zhège bànfǎ yìdiǎnr yòng dōu méiyǒu.”
+Q Pourquoi les Yuezhi détestent-ils les Xiongnu ? | Why do the Yuezhi hate the Xiongnu?
++ Les Xiongnu ont tué leur roi et fait une coupe de son crâne | The Xiongnu killed their king and made a cup from his skull
+- Les Xiongnu ont volé leurs chevaux | The Xiongnu stole their horses
+- Ils parlent une autre langue | They speak another language
+- Ils ont perdu un match | They lost a contest
+= « yòng guówáng de tóugǔ zuò le yí gè hē jiǔ de bēizi ». | “yòng guówáng de tóugǔ zuò le yí gè hē jiǔ de bēizi”.
+Q Qu'est-ce que le « Hàn jié » que porte Zhang Qian ? | What is the “Hàn jié” Zhang Qian carries?
++ Un long bâton avec des poils de queue de bœuf, symbole de l'empereur | A long staff with ox-tail hair, symbol of the emperor
+- Une épée | A sword
+- Une lettre | A letter
+- Un drapeau rouge | A red flag
+= « Zhǐyào jié zài, shǐzhě de shēnfèn jiù zài. » | “Zhǐyào jié zài, shǐzhě de shēnfèn jiù zài.”
+Q Qui est Ganfu ? | Who is Ganfu?
++ Un ancien esclave xiongnu, excellent archer, qui connaît la route | A former Xiongnu slave, a great archer who knows the way
+- Le frère de Zhang Qian | Zhang Qian's brother
+- Le roi des Yuezhi | The Yuezhi king
+- Un marchand | A merchant
+= « yǐqián shì núlì, shèjiàn shè de tèbié hǎo, yě rènshi qù xībian de lù ». | “yǐqián shì núlì, shèjiàn shè de tèbié hǎo, yě rènshi qù xībian de lù”.
+Q Que fait le chanyu des prisonniers ? | What does the chanyu do with the prisoners?
++ Il les garde et donne une épouse xiongnu à Zhang Qian | He keeps them and gives Zhang Qian a Xiongnu wife
+- Il les tue | He kills them
+- Il les renvoie chez eux | He sends them home
+- Il les vend | He sells them
+= Il veut que Zhang Qian oublie son pays. | He wants Zhang Qian to forget his country.
+Q Que fait Zhang Qian chaque soir pendant dix ans ? | What does Zhang Qian do every evening for ten years?
++ Il regarde longuement son bâton d'envoyé | He looks at his envoy's staff for a long time
+- Il écrit des lettres | He writes letters
+- Il chante | He sings
+- Il apprend à tirer à l'arc | He practises archery
+= « měitiān wǎnshang, tā dōu huì náchū nà gēn Hàn jié ». | “měitiān wǎnshang, tā dōu huì náchū nà gēn Hàn jié”.
+Q Dans quelle direction fuit-il, et pourquoi ? | Which way does he flee, and why?
++ Vers l'ouest, parce que sa mission est à l'ouest | West, because his mission lies west
+- Vers l'est, pour rentrer chez lui | East, to go home
+- Vers le sud, pour voir la mer | South, to see the sea
+- Vers le nord, pour éviter le désert | North, to avoid the desert
+= « tāmen wǎng xī pǎo, yīnwèi tāmen de rènwu zài xībian ». | “tāmen wǎng xī pǎo, yīnwèi tāmen de rènwu zài xībian”.
+Q Comment le roi de Dayuan reçoit-il Zhang Qian ? | How does the king of Dayuan receive Zhang Qian?
++ Chaleureusement, et lui donne interprètes et guides | Warmly, giving him interpreters and guides
+- Il l'emprisonne | He imprisons him
+- Il le chasse | He drives him away
+- Il ne le voit pas | He doesn't see him
+= « rèqíng de huānyíng le Zhāng Qiān, hái pài fānyì hé xiàngdǎo ». | “rèqíng de huānyíng le Zhāng Qiān, hái pài fānyì hé xiàngdǎo”.
+Q Pourquoi les Yuezhi refusent-ils l'alliance ? | Why do the Yuezhi refuse the alliance?
++ Ils vivent bien sur une terre riche et loin des Xiongnu | They live well on rich land far from the Xiongnu
+- Ils sont amis des Xiongnu | They are friends of the Xiongnu
+- Ils n'ont pas d'armée | They have no army
+- Ils n'aiment pas les Han | They dislike the Han
+= « Wǒmen xiànzài shēnghuó de hěn hǎo, bù xiǎng zài dǎzhàng le. » | “Wǒmen xiànzài shēnghuó de hěn hǎo, bù xiǎng zài dǎzhàng le.”
+Q Combien d'hommes reviennent à Chang'an au bout de 13 ans ? | How many men return to Chang'an after 13 years?
++ Deux | Two
+- Cent | A hundred
+- Dix | Ten
+- Aucun | None
+= « Chūfā de shíhou yǒu yìbǎi duō gè rén… huílai de zhǐ yǒu liǎng gè. » | “Chūfā de shíhou yǒu yìbǎi duō gè rén… huílai de zhǐ yǒu liǎng gè.”
+Q Qu'est-ce qui étonne le plus Zhang Qian à Daxia ? | What surprises Zhang Qian most in Daxia?
++ Des objets du Sichuan arrivés par l'Inde | Goods from Sichuan that came via India
+- Des chevaux qui suent du sang | Horses that sweat blood
+- Une mer immense | An immense sea
+- De la soie chinoise | Chinese silk
+= Il y voit des bâtons de bambou et du tissu de Shǔ, achetés à Shēndú (l'Inde). | He sees bamboo canes and cloth from Shǔ, bought in Shēndú (India).
+Q Que signifie son titre « Bówàng hóu » ? | What does his title “Bówàng hóu” mean?
++ Celui qui voit très loin | The one who sees far
+- Le plus courageux | The bravest
+- L'ami des chevaux | The friend of horses
+- Le roi de l'Ouest | The king of the West
+= « yìsi shì “kàn de hěn yuǎn de rén” ». | “yìsi shì “kàn de hěn yuǎn de rén””.
+Q Quels produits arrivent en Chine grâce à cette route ? | Which products reach China thanks to this route?
++ Raisin, noix, concombre, carotte | Grapes, walnuts, cucumbers, carrots
+- Soie et porcelaine | Silk and porcelain
+- Thé et papier | Tea and paper
+- Riz et blé | Rice and wheat
+= La soie, la porcelaine et le thé partent vers l'ouest ; le raisin, les noix… arrivent en Chine. | Silk, porcelain and tea go west; grapes, walnuts… come to China.

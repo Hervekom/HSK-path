@@ -17,6 +17,8 @@ type Tok = { h: string; p: string; name?: 1 };
 interface NovelMeta {
   id: string;
   order: number;
+  category: 'legend' | 'history';
+  era?: L2;
   hanzi: string;
   titlePinyin: string;
   title: L2;
@@ -54,7 +56,7 @@ function words(tokens: Tok[]): Word[] {
   const out: Word[] = [];
   let pending = '';
   for (const t of tokens) {
-    const zh = /[㐀-鿿]/.test(t.h);
+    const zh = /[㐀-鿿0-9]/.test(t.h);
     if (!zh) {
       if (OPENING.has(t.p)) pending += t.p;
       else if (out.length) out[out.length - 1].post += t.p;
@@ -123,10 +125,27 @@ export const NovelsView: React.FC<Props> = ({ game }) => {
     }
   }, [openId]);
 
+  const [tab, setTab] = useState<'history' | 'legend'>(() => {
+    try {
+      return (localStorage.getItem('hskpath_novel_tab') as 'history' | 'legend') || 'history';
+    } catch {
+      return 'history';
+    }
+  });
+  const pickTab = (t: 'history' | 'legend') => {
+    setTab(t);
+    try {
+      localStorage.setItem('hskpath_novel_tab', t);
+    } catch {
+      /* ignore */
+    }
+  };
+
   if (openId) return <NovelReader id={openId} onBack={() => setOpenId(null)} best={game.stats[`novelScore:${openId}`]} L={L} />;
 
   const pos = readPos();
   const done = LIST.filter((n) => game.stats[`novelScore:${n.id}`] !== undefined).length;
+  const shown = LIST.filter((n) => n.category === tab);
 
   return (
     <div className="space-y-6 animate-in fade-in duration-150">
@@ -134,7 +153,7 @@ export const NovelsView: React.FC<Props> = ({ game }) => {
         <div>
           <h1 className="text-2xl sm:text-3xl font-extrabold text-stone-950 tracking-tight">{tr('Stories in pinyin')}</h1>
           <p className="text-sm sm:text-base text-stone-500 mt-1 max-w-2xl">
-            {tr('Great Chinese legends, written only in pinyin. Read the whole story, then answer the questions to check that you really understood it.')}
+            {tr('Chinese stories written only in pinyin. Read the whole story, then answer the questions to check that you really understood it.')}
           </p>
         </div>
         <div className="inline-flex items-center gap-2 px-3 py-2 rounded-2xl bg-white border border-[#E4DCCE] text-sm font-bold text-stone-700 self-start sm:self-auto">
@@ -142,8 +161,27 @@ export const NovelsView: React.FC<Props> = ({ game }) => {
         </div>
       </div>
 
+      <div className="flex gap-1 p-1 rounded-2xl bg-[#EFE8DE] w-full sm:w-auto sm:inline-flex">
+        {(['history', 'legend'] as const).map((t) => (
+          <button
+            key={t}
+            type="button"
+            onClick={() => pickTab(t)}
+            className={`flex-1 sm:flex-none px-4 py-2.5 rounded-xl text-sm font-bold cursor-pointer ${tab === t ? 'bg-white text-stone-950 shadow-sm' : 'text-stone-600'}`}
+          >
+            {t === 'history' ? tr('True stories') : tr('Legends')}
+            <span className="ml-1.5 text-xs font-semibold text-stone-400">{LIST.filter((n) => n.category === t).length}</span>
+          </button>
+        ))}
+      </div>
+      <p className="text-sm text-stone-500 -mt-2">
+        {tab === 'history'
+          ? tr('Real people who shaped Chinese culture, from Confucius to today. Long stories (25 to 40 minutes): you can stop and continue later.')
+          : tr('The great myths and legends every Chinese person knows. Short stories (7 to 15 minutes).')}
+      </p>
+
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-        {LIST.map((n) => {
+        {shown.map((n) => {
           const best = game.stats[`novelScore:${n.id}`];
           const started = pos[n.id] !== undefined;
           return (
@@ -159,7 +197,7 @@ export const NovelsView: React.FC<Props> = ({ game }) => {
                 </span>
                 <div className="min-w-0 flex-1">
                   <div className="text-[11px] font-bold uppercase tracking-wider text-[#C52828]">
-                    {String(n.order).padStart(2, '0')} · {n.level.toUpperCase().replace('HSK', 'HSK ')}
+                    {n.era ? L(n.era) : `${String(n.order).padStart(2, '0')} · ${n.level.toUpperCase().replace('HSK', 'HSK ')}`}
                   </div>
                   <div className="text-lg font-extrabold text-stone-950 leading-tight">{n.titlePinyin}</div>
                   <div className="text-sm text-stone-500">{L(n.title)}</div>
@@ -317,11 +355,11 @@ const NovelReader: React.FC<{ id: string; onBack: () => void; best?: number; L: 
                       setPicked(w);
                       audioEngine.speak(w.h, 0.8);
                     }}
-                    className={`inline-flex flex-col items-center align-top rounded-md px-0.5 -mx-0.5 cursor-pointer hover:bg-amber-100 ${picked === w ? 'bg-amber-200' : ''} ${w.name ? 'text-[#A11D1D] font-semibold' : ''}`}
+                    className={`inline-flex flex-col items-center align-top rounded-md px-0.5 -mx-0.5 cursor-pointer hover:bg-amber-100 ${picked === w ? 'bg-amber-200' : ''}`}
                   >
                     <span>
                       {w.pre}
-                      {w.p}
+                      <span className={w.name ? 'text-[#A11D1D] font-semibold' : undefined}>{w.p}</span>
                       {w.post}
                     </span>
                     {prefs.hanzi && <span className="text-[0.7em] leading-none text-stone-500 font-normal -mt-1">{w.h}</span>}

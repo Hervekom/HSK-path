@@ -1,0 +1,153 @@
+id: lishizhen
+order: 112
+category: history
+level: hsk3
+hanzi: 李时珍和本草纲目
+pinyin: Lǐ Shízhēn hé Běncǎo Gāngmù
+title: Li Shizhen et le Grand Traité des plantes | Li Shizhen and the Compendium of Materia Medica
+era: 1518 – 1593 | 1518 – 1593
+summary: Trois échecs à l'examen impérial. Un père qui refuse qu'il soit médecin. Puis 27 ans à marcher dans les montagnes, goûter des plantes inconnues, risquer sa vie… pour écrire le livre de médecine le plus célèbre de Chine. | Three failures at the imperial exam. A father who refuses to let him be a doctor. Then 27 years walking the mountains, tasting unknown plants, risking his life… to write China's most famous book of medicine.
+
+# 医生 的 儿子
+公元 1518 年，在 ^湖北 ^蕲州，一 个 男孩 出生 了。他 叫 ^李时珍。他 的 爷爷 是 一 个 走 村 串 户 的 医生，爸爸 ^李言闻 也 是 一 个 很 有名 的 医生。
+那时候，医生 的 地位 很 低，常常 被 人 看不起。爸爸 每天 给 人 看 病，非常 辛苦，可是 赚 的 钱 不 多。他 对 儿子 说：“你 不要 当 医生，要 好好 读书，考 科举，做 官！”
+小 ^李时珍 身体 不 太 好，常常 生病。每次 生病，都 是 爸爸 给 他 看 病、熬药。他 从 小 就 闻惯 了 药 的 味道，看惯 了 爸爸 怎么 看 病。他 心里 对 医学 有 一 种 说不清 的 喜欢。
+
+# 三 次 落榜
+十四 岁 那 年，^李时珍 考 中 了 秀才，全家 都 很 高兴。可是 后来，他 去 ^武昌 参加 更 高 一级 的 考试，一 次，两 次，三 次，都 没有 考 上。
+那时候 的 考试 只 考 一 种 很 死板 的 文章，叫“八股文”。^李时珍 一点儿 也 不 喜欢 写 这 种 文章，可是 为了 爸爸，他 还是 努力 地{de} 学 了 很 多 年。
+第三 次 落榜，^李时珍 已经 二十三 岁 了。他 鼓起 勇气，对 爸爸 说：“爸爸，我 不 想 再 考 了。我 想 跟 您 学 医，救 更 多 的 人。”爸爸 看着 儿子 坚定 的 眼睛，叹 了 一 口 气，终于 同意 了。
+
+# 小 医生 出名
+^李时珍 跟着 爸爸 学 医，学得 非常 认真。他 一边 看 医书，一边 跟着 爸爸 给 病人 看 病。他 对 穷人 特别 好，很 多 时候 不 收 钱，还 送 药。
+有 一 年，^蕲州 发 了 大水，大水 过后 又 发生 了 瘟疫，很 多 人 病倒 了。^李时珍 和 爸爸 每天 忙 到 半夜，救 了 很 多 人。
+还有 一 次，一 个 王子 得 了 一 种 怪 病，很 多 有名 的 医生 都 治 不 好。^李时珍 来 了，仔细 检查 以后，开 了 一 个 药方，很快 就 把 病 治好 了。王爷 非常 感谢 他，^李时珍 的 名气 越来越 大。后来，他 还 被 推荐 到 北京 的 太医院 工作 过 一 段 时间。
+
+# 错误 的 医书
+在 看 病 和 读书 的 时候，^李时珍 发现 了 一 个 严重 的 问题：古代 的 医书 里，有 很 多 错误。
+有 的 书 把 两 种 不同 的 药 当成 一 种 药；有 的 书 把 一 种 药 写成 了 两 种；有 的 书 说 一 种 药 没有 毒，其实 有 毒。还有 的 书 说，吃 了 水银 可以 长生不老。很 多 人 因为 吃 错 了 药，病 不但 没 好，反而 更 重 了，甚至 死 了。
+^李时珍 想：“医书 是 医生 的 老师。如果 老师 错 了，学生 怎么 能 对 呢？我 要 写 一 本 新 的、正确 的 药书！”那 一 年，他 三十五 岁。
+
+# 走 出 书房
+一开始，^李时珍 在 家 里 读 书。他 读 了 八百 多 本 书，做 了 很 多 笔记。可是 他 发现，很 多 问题 书 上 是 找 不 到 答案 的。
+比如，书 上 说 一 种 药 叫“远志”，有 的 书 说 它 是 小 草，有 的 书 说 它 是 大 树。到底 哪个 对 呢？^李时珍 说：“读 万 卷 书，还要 行 万 里 路。我 要 自己 去 看！”
+从 那 以后，^李时珍 背上{bēishàng} 药 篓，穿上 草鞋，带着 徒弟 和 儿子，走 出 了 家门。他 去 了 ^湖北、^湖南、^江西、^安徽、^江苏 很 多 地方，爬过 很 多 大 山，比如 有名 的 ^武当山 和 ^庐山。
+
+# 向 老百姓 学习
+在 路 上，^李时珍 从来 不 摆 架子。他 向 农民、渔夫、樵夫、猎人、药农 请教，什么 人 都 是 他 的 老师。
+有 一 次，他 遇到 几 个 车夫。他们 在 路 边 煮 一 种 草 根 吃。^李时珍 问：“你们 吃 这个 做 什么？”车夫 说：“我们 每天 拉 车，常常 拉 伤 了 筋骨。喝 了 这 种 草 的 汤，就 不 疼 了。”这 种 草 叫“旋花”。^李时珍 把 它 记 了 下来，写 进 了 书 里。
+还有 一 次，他 在 ^武当山 听说 有 一 种 叫“榔梅”的 果子，是 道士 献给 皇帝 的，普通 人 不 能 吃。^李时珍 冒着 危险，偷偷 爬 上 山 摘 了 一 个，仔细 研究，发现 它 其实 就 是 一 种 普通 的 梅子，没有 什么 神奇 的 作用。
+
+# 亲口 尝 药
+为了 弄清楚 一 种 药 的 作用，^李时珍 常常 亲口 尝。他 听说 有 一 种 花 叫“曼陀罗”，吃 了 会 让 人 一边 笑 一边 跳舞。别人 都 不 敢 试，他 自己 吃 了 一点儿，然后 让 徒弟 在 旁边 看着。
+不久，他 果然 觉得 头 晕，迷迷糊糊 的，想 笑。徒弟 把 他 的 反应 都 记 了 下来。^李时珍 由此 证明：曼陀罗 有 麻醉 的 作用，可以 在 治疗 的 时候 减轻 病人 的 痛苦，可是 用 多 了 很 危险。
+为了 研究 一 种 叫“穿山甲”的 动物，他 还 亲自 抓 了 一 只{zhī}，把 它 的 肚子 剖开，看 它 到底 吃 什么。书 上 说 它 用 鳞片 夹 蚂蚁 吃，他 发现 它 的 胃 里 真的 有 很 多 蚂蚁。
+
+# 二十七 年
+就 这样，一 年 又 一 年，^李时珍 走 了 一 万 多 里 路，访问 了 成千上万 的 人，收集 了 几千 种 药物 的 标本。回到 家，他 就 一 字 一 句 地{de} 写，一 张 一 张 地{de} 画。
+他 写 了 三 遍。第一 遍 写完，他 觉得 不 满意，又 改 了 第二 遍、第三 遍。从 三十五 岁 开始 写，到 六十一 岁 写完，整整 用 了 二十七 年。头发 黑 着 开始，白 着 写完。
+1578 年，这 本 书 终于 完成 了。书 名 叫《本草纲目》。全 书 五十二 卷，一百九十 多 万 字，记录 了 一千八百九十二 种 药物，一万 多 个 药方，还有 一千 一百 多 幅 插图。
+
+# 没有 钱 出版
+可是 书 写完 了，却 没有 人 愿意 出版。书 太 厚 了，出版 要 花 很 多 钱，^李时珍 家 里 又 不 富裕。他 带着 书稿 到处 去 找 书商，可是 书商们 都 摇头。
+后来，他 去 ^南京 拜访 了 一 位 很 有名 的 文学家 ^王世贞，请 他 给 书 写 序。^王世贞 看 了 书稿，非常 吃惊，说 这 本 书 是“性理之精微，格物之通典”。有 了 他 的 推荐，^南京 的 一 个 书商 终于 愿意 出版 了。
+可是 刻 书 很 慢。1593 年，书 还 没有 印 出来，七十五 岁 的 ^李时珍 就 去世 了。他 到 死 都 没有 看到 自己 的 书 出版。
+
+# 走 向 世界
+^李时珍 去世 三 年 以后，1596 年，《本草纲目》终于 在 ^南京 出版 了。他 的 儿子 把 书 献给 了 皇帝。很快，这 本 书 就 传遍 了 全国，成了 医生 必 读 的 书。
+后来，《本草纲目》传到 了 ^日本、^朝鲜，又 被 翻译 成 了 拉丁文、法文、英文、德文、俄文 等 很 多 种 文字。英国 的 生物学家 ^达尔文 在 他 的 书 里 也 引用 过 它，称 它 为“古代 中国 的 百科全书”。
+2011 年，《本草纲目》被 列 入《世界 记忆 名录》。今天，在 ^李时珍 的 家乡 ^蕲春，有 一 座 ^李时珍 纪念馆。那里 有 一 座 他 的 雕像：一 个 老人，背着 药 篓，拿着 一 把 小 锄头，正 往 山 上 走 —— 就 像 他 一生 一直 在 做 的 那样。
+
+@glossary
+地位 | statut social | social status
+科举 | examens impériaux | imperial examinations
+落榜 | échouer à un examen | to fail an exam
+瘟疫 | épidémie | epidemic
+药方 | ordonnance | prescription
+水银 | mercure | mercury
+请教 | demander conseil | to consult
+尝 | goûter | to taste
+麻醉 | anesthésie | anaesthesia
+标本 | spécimen | specimen
+出版 | publier | to publish
+百科全书 | encyclopédie | encyclopaedia
+
+@questions
+Q Pourquoi le père de Li Shizhen ne veut-il pas qu'il devienne médecin ? | Why doesn't Li Shizhen's father want him to be a doctor?
++ Les médecins ont un statut bas et gagnent peu | Doctors have low status and earn little
+- C'est dangereux | It is dangerous
+- Il n'aime pas la médecine | He dislikes medicine
+- Il veut qu'il soit soldat | He wants him to be a soldier
+= « yīshēng de dìwèi hěn dī… zhuàn de qián bù duō ». | “yīshēng de dìwèi hěn dī… zhuàn de qián bù duō”.
+Q Combien de fois échoue-t-il à l'examen provincial ? | How many times does he fail the provincial exam?
++ Trois fois | Three times
+- Une fois | Once
+- Cinq fois | Five times
+- Jamais | Never
+= « yí cì, liǎng cì, sān cì, dōu méiyǒu kǎo shàng ». | “yí cì, liǎng cì, sān cì, dōu méiyǒu kǎo shàng”.
+Q Que dit-il à son père après le troisième échec ? | What does he tell his father after the third failure?
++ Qu'il veut apprendre la médecine pour sauver plus de gens | That he wants to learn medicine to save more people
+- Qu'il va essayer encore | That he'll try again
+- Qu'il veut partir à l'étranger | That he wants to go abroad
+- Qu'il veut être marchand | That he wants to be a merchant
+= « Wǒ xiǎng gēn nín xué yī, jiù gèng duō de rén. » | “Wǒ xiǎng gēn nín xué yī, jiù gèng duō de rén.”
+Q Quel problème découvre-t-il dans les anciens livres ? | What problem does he find in the old books?
++ Beaucoup d'erreurs sur les remèdes, parfois mortelles | Many mistakes about remedies, sometimes deadly
+- Ils sont trop chers | They are too expensive
+- Ils sont en langue étrangère | They are in a foreign language
+- Ils sont trop courts | They are too short
+= Mauvais noms, toxicité oubliée, et même le mercure présenté comme élixir. | Wrong names, toxicity forgotten, even mercury presented as an elixir.
+Q Pourquoi décide-t-il de voyager ? | Why does he decide to travel?
++ Les livres ne répondent pas à toutes les questions : il veut voir les plantes lui-même | Books can't answer everything: he wants to see the plants himself
+- Pour fuir une épidémie | To flee an epidemic
+- Pour vendre des médicaments | To sell medicines
+- Pour trouver une épouse | To find a wife
+= « Dú wàn juàn shū, hái yào xíng wàn lǐ lù. Wǒ yào zìjǐ qù kàn! » | “Dú wàn juàn shū, hái yào xíng wàn lǐ lù. Wǒ yào zìjǐ qù kàn!”
+Q Qu'apprend-il des conducteurs de charrette ? | What does he learn from the cart drivers?
++ Une plante (xuánhuā) qui soulage les douleurs des muscles et os | A plant (xuánhuā) that relieves sore muscles and bones
+- Comment réparer une charrette | How to repair a cart
+- Une route vers la montagne | A road to the mountain
+- Une chanson | A song
+= « Hē le zhè zhǒng cǎo de tāng, jiù bù téng le. » | “Hē le zhè zhǒng cǎo de tāng, jiù bù téng le.”
+Q Que découvre-t-il sur le fruit « lángméi » du mont Wudang ? | What does he discover about the “lángméi” fruit of Mount Wudang?
++ C'est une prune ordinaire, sans pouvoir magique | It is an ordinary plum with no magic power
+- Il est mortel | It is deadly
+- Il guérit tout | It cures everything
+- Il n'existe pas | It doesn't exist
+= « qíshí jiù shì yì zhǒng pǔtōng de méizi ». | “qíshí jiù shì yì zhǒng pǔtōng de méizi”.
+Q Que prouve-t-il en goûtant le datura (mantuoluo) ? | What does he prove by tasting datura (mantuoluo)?
++ Qu'il a un effet anesthésiant, utile mais dangereux à forte dose | That it has an anaesthetic effect, useful but dangerous in large doses
+- Qu'il est sans effet | That it has no effect
+- Qu'il rend immortel | That it makes you immortal
+- Qu'il est sucré | That it is sweet
+= « mántuóluó yǒu mázuì de zuòyòng… yòng duō le hěn wēixiǎn ». | “mántuóluó yǒu mázuì de zuòyòng… yòng duō le hěn wēixiǎn”.
+Q Que trouve-t-il dans l'estomac du pangolin ? | What does he find in the pangolin's stomach?
++ Beaucoup de fourmis | Lots of ants
+- Des feuilles | Leaves
+- Des poissons | Fish
+- Rien | Nothing
+= « tā de wèi lǐ zhēnde yǒu hěn duō mǎyǐ ». | “tā de wèi lǐ zhēnde yǒu hěn duō mǎyǐ”.
+Q Combien d'années lui faut-il pour écrire son livre ? | How many years does it take him to write his book?
++ 27 ans | 27 years
+- 7 ans | 7 years
+- 52 ans | 52 years
+- 3 ans | 3 years
+= De 35 à 61 ans : « zhěngzhěng yòng le èrshíqī nián ». | From 35 to 61: “zhěngzhěng yòng le èrshíqī nián”.
+Q Combien de substances médicinales le livre décrit-il ? | How many medicinal substances does the book describe?
++ 1 892 | 1,892
+- 52 | 52
+- 1 100 | 1,100
+- 10 000 | 10,000
+= « jìlù le yìqiān bābǎi jiǔshí'èr zhǒng yàowù ». | “jìlù le yìqiān bābǎi jiǔshí'èr zhǒng yàowù”.
+Q Pourquoi le livre n'est-il pas publié tout de suite ? | Why isn't the book published right away?
++ Il est trop épais et coûte trop cher à imprimer | It is too thick and too costly to print
+- L'empereur l'interdit | The emperor bans it
+- Il est perdu | It is lost
+- Il n'est pas fini | It isn't finished
+= Les libraires refusent ; il faut la préface de Wang Shizhen. | Booksellers refuse; it takes Wang Shizhen's preface.
+Q Li Shizhen a-t-il vu son livre imprimé ? | Did Li Shizhen see his book printed?
++ Non, il meurt en 1593, trois ans avant la publication | No, he dies in 1593, three years before publication
+- Oui, en 1578 | Yes, in 1578
+- Oui, juste avant de mourir | Yes, just before dying
+- Oui, à Pékin | Yes, in Beijing
+= « Tā dào sǐ dōu méiyǒu kàndào zìjǐ de shū chūbǎn. » | “Tā dào sǐ dōu méiyǒu kàndào zìjǐ de shū chūbǎn.”

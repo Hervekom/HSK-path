@@ -1,0 +1,164 @@
+id: xuanzang
+order: 107
+category: history
+level: hsk3
+hanzi: 玄奘西行
+pinyin: Xuánzàng xī xíng
+title: Le voyage de Xuanzang vers l'Inde | Xuanzang's Journey to India
+era: 602 – 664 | 602 – 664
+summary: L'empereur interdit de quitter le pays. Un jeune moine part quand même, seul, de nuit. Le désert, la soif, les brigands, les montagnes de glace… Dix-sept ans et 50 000 li plus tard, il revient avec 657 livres. Le vrai moine du Voyage vers l'Ouest. | The emperor forbids leaving the country. A young monk goes anyway, alone, at night. Desert, thirst, bandits, ice mountains… Seventeen years and 50,000 li later he returns with 657 books. The real monk behind Journey to the West.
+
+# 小 和尚
+公元 602 年，在 ^洛阳 附近，一 个 男孩 出生 了。他 姓 ^陈，名字 叫 ^祎。他 的 家 是 一 个 读书人 家庭，爸爸 很 早 就 教 他 读书。可是 他 五 岁 时 妈妈 去世 了，十 岁 时 爸爸 也 去世 了。
+他 的 二 哥 是 一 个 和尚，住 在 ^洛阳 的 一 座 寺庙 里。小 ^祎 就 跟着 哥哥 住 在 寺庙 里，每天 听 和尚们 讲 佛经。
+十三 岁 那 年，朝廷 要 在 ^洛阳 选 二十七 个 年轻 人 当 和尚。来 报名 的 有 好几百 人，^祎 年纪 太 小，本来 没有 资格。可是 主考官 看到 这个 孩子 站 在 门口，就 问 他：“你 为什么 想 当 和尚？”他 回答：“我 想 把 佛陀 的 道理 传 下去，让 它 发扬光大。”主考官 很 感动，破例 选 了 他，给 他 起 了 一 个 法名，叫 ^玄奘。
+
+# 很 多 问题
+^玄奘 非常 聪明，学习 也 非常 用功。他 走遍 了 中国 很 多 地方，去 找 有名 的 老师 学习 佛经。二十 多 岁 的 时候，他 已经 很 有名 了，很 多 人 都 来 听 他 讲经。
+可是 他 心里 越来越 困惑。那时候，中国 的 佛经 都 是 从 外国 翻译 过来 的，有 的 翻译 得 不 好，有 的 不 完整。不同 的 老师 讲 同 一 本 经，说法 完全 不 一样，大家 吵来吵去，谁 也 说 不 服 谁。
+有 一 天，他 听 一 位 从 ^天竺 来 的 和尚 说，在 ^天竺 的 ^那烂陀寺，有 一 位 大 师，叫 ^戒贤，他 懂得 最 完整 的 佛经。^玄奘 下定决心：“我 要 去 ^天竺，去 佛陀 的 故乡，把 真正 的 经书 带 回来！”^天竺，就 是 今天 的 ^印度。
+
+# 偷偷 出 国
+可是 那时候，^唐朝 刚刚 建立，西北 边境 还 不 安全。皇帝 下令：任何 人 都 不 许 出 国。^玄奘 和 几 个 和尚 一起 上 书 请求 出 国，皇帝 没有 同意。别的 和尚 都 放弃 了。
+^玄奘 没有 放弃。公元 627 年，二十六 岁 的 ^玄奘 一 个 人 偷偷 离开 了 ^长安，往 西 走。到 了 ^凉州，官员 发现 了 他，要 他 回去。在 一些 和尚 的 帮助 下，他 白天 躲 起来，晚上 赶路，一直 来到 了 ^瓜州。
+从 ^瓜州 再 往 西，就 是 国家 的 边境 了。边境 上 有 五 座 烽火台，每 座 都 有 士兵 守着，烽火台 之间 是 一 片 大 沙漠。没有 通行证 的 人，一定 会 被 抓 起来。这时候，他 的 马 也 死 了。
+
+# 胡人 向导
+在 ^瓜州，^玄奘 遇到 了 一 个 胡人 青年，叫 ^石盘陀。他 愿意 给 ^玄奘 当 向导。一 个 老 胡人 还 送给 他 一 匹 又 老 又 瘦 的 红 马，说：“这 匹 马 已经 在 去 ^伊吾 的 路 上 走过 十五 次 了，它 认识 路。”
+半夜，他们 悄悄 出发 了。可是 走到 半路，^石盘陀 突然 害怕 了。他 想：如果 被 抓到，我 也 会 被 杀 头 的。晚上 休息 的 时候，^玄奘 发现 ^石盘陀 拿着 刀，向 他 走 过来，又 走 回去，走 过来，又 走 回去。^玄奘 一直 坐着 念经，一 夜 没 睡。
+第二 天，^石盘陀 说 什么 也 不 肯 再 往 前 走 了。^玄奘 让 他 回去，自己 一 个 人，牵着 老 红 马，走 进 了 沙漠。
+
+# 八百 里 流沙
+在 第一 座 烽火台 旁边 取 水 的 时候，一 支 箭 飞 过来，差点儿 射中 他。士兵 把 他 抓 了 起来。幸运 的 是，守 烽火台 的 校尉 ^王祥 也 信 佛。他 听 了 ^玄奘 的 故事，很 感动，不但 没有 抓 他，还 给 他 装满 了 水，告诉 他 一 条 绕过 别的 烽火台 的 小 路。
+过 了 第五 座 烽火台，就 是 八百 里 的 ^莫贺延碛。这里 上 没有 飞 鸟，下 没有 走 兽，也 没有 水 和 草。白天 风 吹着 沙子，打 在 脸 上 像 刀 割；晚上 能 看到 远处 有 鬼火 一样 的 光。
+走 了 一百 多 里，^玄奘 迷 了 路。他 想 喝 水，可是 一 不 小心，水袋 掉 在 了 地 上，水 全 洒 了。
+
+# 五 天 四 夜
+没有 水，在 沙漠 里 就 是 死路 一 条。^玄奘 本来 想 回去 找 水。可是 走 了 十几 里，他 停 了 下来。他 对 自己 说：“我 发过 誓，不 到 ^天竺，绝 不 往 东 走 一 步。宁可 往 西 走 死，也 不 回 东 活！”他 转过 身，继续 往 西 走。
+四 夜 五 天，他 一 滴 水 也 没 喝，嘴唇 干 得 裂开，肚子 里 像 着 了 火。第五 天 晚上，他 和 老 马 都 倒 在 了 沙子 上，再 也 走 不 动 了。
+半夜，一 阵 凉风 吹 来，他 好像 被 冷水 洗 过 一样，又 醒 了 过来。老 红 马 也 站 了 起来，突然 往 一 个 方向 拼命 地{de} 跑。^玄奘 拉 不 住，只好 跟着 跑。跑 了 十几 里，眼前 出现 了 一 片 青草，还 有 一 个 清清 的 水池！老 马 救 了 他 的 命。
+
+# 高昌 国王
+走出 沙漠，^玄奘 来到 了 ^伊吾，然后 到 了 ^高昌 国。^高昌 的 国王 ^麴文泰 非常 信 佛。他 听说 有 一 位 ^唐朝 的 高僧 来 了，半夜 亲自 拿着 火把 出来 迎接。
+国王 太 喜欢 ^玄奘 了，想 让 他 一辈子 留 在 ^高昌，做 全国 的 老师。^玄奘 说：“我 是 为了 取 经 来 的，不能 停 在 半路 上。”国王 生气 了：“如果 你 不 留 下来，我 就 把 你 送 回 ^唐朝！”
+^玄奘 说：“国王 可以 留下 我 的 身体，可是 留 不 下 我 的 心。”然后，他 开始 绝食。一 天，两 天，三 天，他 一 口 水 也 不 喝。第四 天，国王 终于 哭着 跪 下来，向 他 道歉。最后，国王 和 他 结拜 为 兄弟，给 了 他 很 多 金子、衣服、马匹，派 了 二十五 个 人 送 他，还 给 西边 二十四 个 国家 的 国王 写 了 信，请 他们 帮助 这 位 兄弟。
+
+# 冰山 和 强盗
+离开 ^高昌，^玄奘 来到 了 ^凌山，就 是 今天 的 天山。山 上 全 是 冰 和 雪，一 年 四季 都 不 化。他们 只 能 在 冰 上 睡觉，吃 冷 的 东西。走 了 七 天，才 走出 冰山。同行 的 人，冻 死 了 三四 成。
+后来，他 又 翻过 了 很 多 高山，经过 了 很 多 国家。在 ^天竺 的 恒河 边，他 和 船 上 的 人 遇到 了 一 群 强盗。强盗们 信 一 种 邪教，每 年 秋天 要 杀 一 个 漂亮 的 人 祭神。他们 看 ^玄奘 长{zhǎng} 得 又 白 又 端正，就 把 他 绑 起来，要 杀 他。
+^玄奘 一点儿 也 不 害怕，他 请求 强盗们 给 他 一点儿 时间，然后 闭上 眼睛 静静 地{de} 打坐。就 在 这时候，突然 刮起 了 大 风，树 被 吹 断 了，河 里 掀起 了 大 浪，船 都 翻 了。强盗们 吓 坏 了，以为 是 神 生气 了，赶快 放 了 他，还 跪 下来 请求 原谅。
+
+# 那烂陀寺
+公元 631 年，离开 ^长安 四 年 以后，^玄奘 终于 来到 了 他 的 目的地：^那烂陀寺。这 是 当时 世界 上 最 大 的 佛教 大学，有 一 万 多 个 和尚 在 这里 学习。
+寺 里 的 大师 ^戒贤 那时候 已经 一百 多 岁 了，很 多 年 不 讲课 了。可是 他 见到 ^玄奘，非常 高兴，说：“三 年 前，我 生 了 一 场 大 病，痛苦 得 想 死。梦 里 有 神 告诉 我：不要 死，三 年 以后 会 有 一 个 从 中国 来 的 和尚 跟 你 学习。”
+^戒贤 专门 为 ^玄奘 讲 了 十五 个 月 的 经。^玄奘 在 这里 学习 了 五 年，后来 又 游历 了 整个 ^天竺。他 讲经 讲得 非常 好，在 一 次 有 十八 个 国王、几千 个 学者 参加 的 大 辩论 会 上，十八 天 里 没有 一 个 人 能 驳倒 他。人们 给 了 他 一 个 尊称：“大乘天”。
+
+# 回 到 长安
+公元 643 年，^玄奘 决定 回国。^天竺 的 国王们 都 想 留 他，他 说：“我 的 国家 还 有 很 多 人 等着 这些 经书。”他 带着 六百五十七 部 经书，用 二十 匹 马 驮着，踏上 了 回家 的 路。
+公元 645 年 春天，^玄奘 回到 了 ^长安。十七 年 前 他 偷偷 离开，现在，几十 万 人 站 在 路 两边 迎接 他。^唐太宗 也 原谅 了 他 当年 偷偷 出 国，还 请 他 写 一 本 书，介绍 西边 的 国家。这 本 书 就 是《大唐西域记》，记录 了 一百 多 个 国家 的 地理、历史 和 风俗。
+回国 以后 的 十九 年，^玄奘 几乎 每天 都 在 翻译 经书，常常 工作 到 半夜。他 一共 翻译 了 一千三百 多 卷。直到 去世 的 前 一 个 月，他 还在 翻译。
+
+# 从 历史 到 小说
+公元 664 年，^玄奘 去世 了，六十三 岁。听说 他 去世，^长安 附近 有 一百 多 万 人 来 送 他。
+九百 多 年 以后，一 个 叫 ^吴承恩 的 作家，根据 ^玄奘 的 故事，写 了 一 本 小说，叫《西游记》。在 小说 里，^玄奘 变成 了 ^唐僧，身边 多 了 三 个 徒弟：会 七十二 变 的 ^孙悟空、爱 吃 爱 睡 的 ^猪八戒 和 老实 的 ^沙和尚。还有 一 匹 白 龙 变 的 马 —— 也许，那 就 是 在 沙漠 里 救 了 他 的 那 匹 老 红 马。
+小说 里 的 ^唐僧 遇到 了 九九八十一 难。可是 真实 的 ^玄奘，一 个 人 走过 了 五 万 里 的 路，没有 神仙 帮忙，没有 猴王 保护，靠 的 只是 一 颗 不 放弃 的 心。今天，他 的《大唐西域记》还 帮助 考古 学家 在 ^印度 找到 了 很 多 消失 的 古城，包括 ^那烂陀寺 的 遗址。
+
+@glossary
+寺庙 | temple | temple
+佛经 | sutras bouddhiques | Buddhist scriptures
+困惑 | perplexe | puzzled
+边境 | frontière | border
+烽火台 | tour de signaux | beacon tower
+向导 | guide | guide
+沙漠 | désert | desert
+发誓 | jurer | to swear
+绝食 | faire la grève de la faim | to go on hunger strike
+强盗 | brigand | bandit
+辩论 | débat | debate
+翻译 | traduire | to translate
+
+@questions
+Q Pourquoi le jeune Chen Yi est-il choisi pour devenir moine malgré son âge ? | Why is young Chen Yi chosen as a monk despite his age?
++ Il répond qu'il veut transmettre et faire grandir l'enseignement du Bouddha | He says he wants to pass on and spread the Buddha's teaching
+- Son frère paie | His brother pays
+- Il est le plus fort | He is the strongest
+- Il connaît l'empereur | He knows the emperor
+= « Wǒ xiǎng bǎ Fótuó de dàolǐ chuán xiàqu, ràng tā fāyáng guāngdà. » | “Wǒ xiǎng bǎ Fótuó de dàolǐ chuán xiàqu, ràng tā fāyáng guāngdà.”
+Q Pourquoi Xuanzang veut-il aller en Inde ? | Why does Xuanzang want to go to India?
++ Les traductions chinoises des sutras sont incomplètes et contradictoires | Chinese translations of the sutras are incomplete and contradictory
+- Pour faire du commerce | To trade
+- Pour fuir la guerre | To flee war
+- L'empereur l'envoie | The emperor sends him
+= « yǒu de fānyì de bù hǎo, yǒu de bù wánzhěng ». | “yǒu de fānyì de bù hǎo, yǒu de bù wánzhěng”.
+Q L'empereur autorise-t-il son départ ? | Does the emperor allow him to leave?
++ Non, il part en secret | No, he leaves secretly
+- Oui, avec une armée | Yes, with an army
+- Oui, avec des chevaux | Yes, with horses
+- Il ne demande pas | He doesn't ask
+= « Huángdì xiàlìng: rènhé rén dōu bù xǔ chū guó. » | “Huángdì xiàlìng: rènhé rén dōu bù xǔ chū guó.”
+Q Pourquoi le vieux cheval roux est-il précieux ? | Why is the old red horse valuable?
++ Il a fait le trajet vers Yiwu quinze fois et connaît le chemin | It has made the trip to Yiwu fifteen times and knows the way
+- Il est très rapide | It is very fast
+- Il est jeune | It is young
+- Il parle | It can talk
+= « zài qù Yīwú de lù shang zǒuguò shíwǔ cì le, tā rènshi lù ». | “zài qù Yīwú de lù shang zǒuguò shíwǔ cì le, tā rènshi lù”.
+Q Que fait le guide Shi Pantuo pendant la nuit ? | What does the guide Shi Pantuo do in the night?
++ Il s'approche avec un couteau, puis recule, plusieurs fois | He comes closer with a knife, then backs off, several times
+- Il s'enfuit avec le cheval | He runs off with the horse
+- Il dort | He sleeps
+- Il prépare à manger | He cooks
+= Xuanzang reste assis à réciter des sutras toute la nuit. | Xuanzang stays sitting and chanting all night.
+Q Pourquoi l'officier Wang Xiang l'aide-t-il ? | Why does officer Wang Xiang help him?
++ Il est bouddhiste et touché par son histoire | He is a Buddhist and moved by his story
+- Xuanzang le paie | Xuanzang pays him
+- C'est son cousin | He is his cousin
+- L'empereur le lui ordonne | The emperor orders it
+= « yě xìn Fó. Tā tīng le Xuánzàng de gùshi, hěn gǎndòng ». | “yě xìn Fó. Tā tīng le Xuánzàng de gùshi, hěn gǎndòng”.
+Q Que se passe-t-il dans le désert Moheyan ? | What happens in the Moheyan desert?
++ Il renverse son outre et reste cinq jours sans eau | He spills his water bag and goes five days without water
+- Il trouve une ville | He finds a city
+- Il rencontre Sun Wukong | He meets Sun Wukong
+- Il fait demi-tour | He turns back
+= « shuǐdài diào zài le dì shàng, shuǐ quán sǎ le » ; « sì yè wǔ tiān ». | “shuǐdài diào zài le dì shàng, shuǐ quán sǎ le”; “sì yè wǔ tiān”.
+Q Quel serment l'empêche de rentrer chercher de l'eau ? | What vow stops him from going back for water?
++ Plutôt mourir en allant vers l'ouest que vivre en revenant vers l'est | Better to die going west than live going back east
+- Ne jamais boire de vin | Never to drink wine
+- Ne jamais parler | Never to speak
+- Obéir à l'empereur | To obey the emperor
+= « Nìngkě wǎng xī zǒu sǐ, yě bù huí dōng huó! » | “Nìngkě wǎng xī zǒu sǐ, yě bù huí dōng huó!”
+Q Qui le sauve dans le désert ? | Who saves him in the desert?
++ Le vieux cheval, qui court vers un point d'eau | The old horse, which runs to a water hole
+- Un marchand | A merchant
+- Un soldat | A soldier
+- Un oiseau | A bird
+= « Lǎo mǎ jiù le tā de mìng. » | “Lǎo mǎ jiù le tā de mìng.”
+Q Comment Xuanzang convainc-il le roi de Gaochang de le laisser partir ? | How does Xuanzang convince the king of Gaochang to let him go?
++ Il fait la grève de la faim | He goes on hunger strike
+- Il s'enfuit | He escapes
+- Il lui donne de l'or | He gives him gold
+- Il le bat en débat | He beats him in debate
+= Au quatrième jour, le roi s'excuse en pleurant. | On the fourth day the king apologises in tears.
+Q Pourquoi les brigands du Gange relâchent-ils Xuanzang ? | Why do the Ganges bandits release Xuanzang?
++ Une tempête soudaine leur fait croire que les dieux sont fâchés | A sudden storm makes them think the gods are angry
+- Il les paie | He pays them
+- Il se bat | He fights them
+- La police arrive | The police arrive
+= « Qiángdàomen xià huài le, yǐwéi shì shén shēngqì le. » | “Qiángdàomen xià huài le, yǐwéi shì shén shēngqì le.”
+Q Qu'avait rêvé le maître Śīlabhadra (Jiexian) ? | What had master Śīlabhadra (Jiexian) dreamed?
++ Qu'un moine chinois viendrait étudier avec lui trois ans plus tard | That a Chinese monk would come to study with him three years later
+- Qu'il deviendrait roi | That he would become king
+- Que le monastère brûlerait | That the monastery would burn
+- Qu'il irait en Chine | That he would go to China
+= « sān nián yǐhòu huì yǒu yí gè cóng Zhōngguó lái de héshang gēn nǐ xuéxí ». | “sān nián yǐhòu huì yǒu yí gè cóng Zhōngguó lái de héshang gēn nǐ xuéxí”.
+Q Combien de livres rapporte-t-il en Chine ? | How many books does he bring back to China?
++ 657 | 657
+- 75 | 75
+- 1 300 | 1,300
+- 20 | 20
+= « liùbǎi wǔshíqī bù jīngshū, yòng èrshí pǐ mǎ tuózhe ». | “liùbǎi wǔshíqī bù jīngshū, yòng èrshí pǐ mǎ tuózhe”.
+Q Quel roman est inspiré de sa vie ? | Which novel is inspired by his life?
++ Le Voyage vers l'Ouest | Journey to the West
+- Au bord de l'eau | Water Margin
+- Le Rêve dans le pavillon rouge | Dream of the Red Chamber
+- Les Trois Royaumes | Romance of the Three Kingdoms
+= Wú Chéng'ēn écrit le « Xīyóu Jì » 900 ans plus tard. | Wú Chéng'ēn writes the “Xīyóu Jì” 900 years later.

@@ -1,0 +1,158 @@
+id: zhenghe
+order: 110
+category: history
+level: hsk3
+hanzi: 郑和下西洋
+pinyin: Zhèng Hé xià Xīyáng
+title: Les sept voyages de Zheng He | The Seven Voyages of Zheng He
+era: 1371 – 1433 | 1371 – 1433
+summary: 87 ans avant Christophe Colomb, plus de 200 navires et 27 000 hommes quittent la Chine. Leur amiral, un garçon capturé à dix ans, va jusqu'en Afrique et revient avec… une girafe. | 87 years before Columbus, over 200 ships and 27,000 men leave China. Their admiral, a boy captured at ten, sails to Africa and comes back with… a giraffe.
+
+# 云南 的 男孩
+公元 1371 年，在 中国 西南 的 ^云南，一 个 男孩 出生 了。他 姓 ^马，小名 叫 ^三保。他 的 家 是 一 个 回族 家庭。他 的 爷爷 和 爸爸 都 去 过 很 远 很 远 的 ^麦加 朝圣，所以 人们 尊敬 地{de} 叫 他们“哈只”。
+小 ^三保 最 喜欢 听 爸爸 讲 路 上 的 故事：大海 有 多么 大，船 有 多么 高，外国 的 城市 是 什么 样子……他 常常 想：长大 以后，我 也 要 去 看看 外面 的 世界。
+可是，他 十 岁 那 年，^明朝 的 军队 来到 ^云南 打仗。他 的 爸爸 在 战争 中 死 了，小 ^三保 被 军队 抓走，后来 成了 宦官，被 送到 了 北方 的 ^燕王 ^朱棣 身边。
+
+# 燕王 的 助手
+^三保 很 聪明，又 勇敢，个子 很 高，走路 像 老虎 一样 有 力。^燕王 很 喜欢 他，让 他 跟着 自己 读书、学 打仗。
+后来，^燕王 和 他 的 侄子 —— 当时 的 皇帝 —— 争夺 皇位，打 了 四 年 的 仗。^三保 跟着 ^燕王，在 一 个 叫 ^郑村坝 的 地方 立 了 大 功。最后 ^燕王 赢 了，当 上 了 皇帝，就 是 ^明成祖，年号 叫“永乐”。
+^永乐 皇帝 为了 感谢 ^三保，赐 他 姓“郑”，给 他 起 名 叫 ^郑和，还 让 他 当 了 宦官 中 最 高 的 官。
+
+# 一 个 伟大 的 计划
+^永乐 皇帝 是 一 个 雄心 很 大 的 皇帝。他 想 让 世界 各国 都 知道 ^明朝 的 强大，也 想 和 海 外 的 国家 来往、做 贸易。他 决定：派 一 支 庞大 的 船队，去“西洋”。那时候 的“西洋”，指 的 是 今天 的 东南亚、^印度洋 一带。
+谁 来 带领 这 支 船队 呢？皇帝 想到 了 ^郑和。^郑和 聪明、能干、忠诚，会 打仗，又 是 穆斯林，了解 很 多 西边 国家 的 宗教 和 习惯。他 是 最 好 的 人选。
+1405 年，三十四 岁 的 ^郑和 接到 了 皇帝 的 命令。他 的 童年 梦想，就要 实现 了。
+
+# 宝船
+为了 这 次 远航，^明朝 在 ^南京 的 船厂 造 了 很 多 大船。其中 最 大 的 叫“宝船”。根据 古书 的 记载，宝船 长 四十四 丈，宽 十八 丈，大约 有 一百 多 米 长，有 九 根 桅杆，十二 张 帆，可以 坐 上千 人。今天 的 学者 对 它 到底 有 多 大 还 有 不同 的 看法，可是 大家 都 同意：它 是 当时 世界 上 最 大 的 木 船 之一。
+船队 里 除了 宝船，还有 马船、粮船、坐船、战船，还 有 专门 装 淡水 的 水船。一共 有 两百 多 条 船，两万 七千 多 人：有 士兵、水手、医生、翻译、工匠、厨师、天文 学家……简直 就 是 一 座 海 上 的 城市。
+船 上 带着 很 多 中国 的 丝绸、瓷器、茶叶 和 铁器，准备 送给 各国 的 国王，或者 和 当地 人 交换 东西。
+
+# 出发
+1405 年 7 月，船队 从 ^苏州 的 ^刘家港 出发 了。几百 张 帆 一起 升 起来，像 一 片 移动 的 白 云。岸 上 站满 了 送行 的 人。
+那时候 没有 卫星，也 没有 雷达。^郑和 的 船队 靠 什么 认 路 呢？白天，他们 看 罗盘，也 就 是 指南针；晚上，他们 看 星星，叫“牵星术”。他们 还 画 了 很 详细 的 航海 图，记下 每 个 港口、每 座 岛 和 每 段 路 要 走 多少 天。
+船 和 船 之间 怎么 联系 呢？白天 用 旗子，晚上 用 灯笼，雾 大 的 时候 敲 锣 打 鼓。两百 多 条 船，在 大海 上 排 得 整整齐齐，一 条 都 没有 走 丢。
+
+# 第一 次 远航
+船队 先 到 了 ^占城，就 是 今天 的 ^越南 南部，然后 到 了 ^爪哇、^苏门答腊、^满剌加，最后 到 了 ^印度 西南 的 ^古里。
+每 到 一 个 地方，^郑和 都 会 去 拜见 当地 的 国王，送上 皇帝 的 礼物 和 信，表示 友好。很 多 国家 的 国王 非常 高兴，也 派 使者 带着 礼物，跟着 船队 去 中国。
+在 ^古里，^郑和 立 了 一 块 石碑，上面 写着：“其国去中国十万余里，民物咸若，熙皞同风，刻石于兹，永示万世。”意思 是 两 国 虽然 很 远，可是 人民 一样 幸福，要 永远 友好 下去。
+
+# 海盗 陈祖义
+第一 次 远航 回来 的 路 上，船队 经过 ^旧港，就 是 今天 ^印度尼西亚 的 ^巨港。那里 有 一 个 有名 的 大 海盗，叫 ^陈祖义。他 有 五千 多 个 手下，十几 条 船，专门 抢 过往 的 商船，杀 了 很 多 人。
+^陈祖义 看到 ^郑和 的 船队 带着 那么 多 宝物，假装 投降，心里 却 打算 晚上 偷偷 去 抢。可是 一 个 当地 的 华人 把 这 个 计划 告诉 了 ^郑和。
+^郑和 早早 地{de} 做 好 了 准备。晚上，海盗们 一 来，就 被 包围 了。船队 打败 了 海盗，杀 了 五千 多 人，烧 了 十 条 船，抓住 了 ^陈祖义，把 他 带 回 了 中国。从 那 以后，这 一 带 的 海 上 安全 了 很 多，商人们 都 非常 感谢 ^郑和。
+
+# 七 下 西洋
+从 1405 年 到 1433 年，^郑和 一共 七 次 下 西洋，走 了 二十八 年。他 的 船队 去 了 三十 多 个 国家 和 地区，最 远 到 了 ^非洲 东海岸 的 ^麻林地 和 ^木骨都束，也 就 是 今天 的 ^肯尼亚 和 ^索马里 一带。
+船队 还 去 了 ^阿拉伯 半岛 的 ^忽鲁谟斯 和 ^阿丹。有 几 个 船员 还 去 了 伊斯兰教 的 圣地 ^麦加，完成 了 ^郑和 爷爷 和 爸爸 走过 的 路。
+在 每 个 国家，船队 都 用 中国 的 瓷器 和 丝绸，换 当地 的 香料、宝石、象牙 和 药材。直到 今天，在 ^非洲 东海岸，还 能 找到 很 多 ^明朝 的 瓷器 碎片。
+
+# 麒麟 来 了
+1414 年，^榜葛剌 的 国王 送给 ^永乐 皇帝 一 件 特别 的 礼物：一 只{zhī} 长颈鹿！这 只{zhī} 长颈鹿 原来 是 从 ^非洲 运到 ^榜葛剌 的。
+长颈鹿 来到 ^南京，全城 的 人 都 跑 出来 看。大家 从来 没有 见过 这么 奇怪 的 动物：脖子 那么 长，头 上 有 两 个 小 角，身上 有 漂亮 的 花纹，走路 慢慢 的，非常 温和。
+大家 都 说：“这 是 麒麟！”麒麟 是 中国 传说 中 的 神兽，只有 在 天下 太平 的 时候 才 会 出现。大臣们 都 向 皇帝 祝贺。画家 还 画 了 一 张 画，叫《瑞应麒麟图》，今天 还 保存 在 博物馆 里。后来，^麻林 国 也 送来 了 长颈鹿。
+
+# 最后 的 航行
+1424 年，^永乐 皇帝 去世 了。新 的 皇帝 觉得 远航 花 的 钱 太 多，就 停 了 下来。^郑和 被 派 去 守 ^南京。
+1430 年，^宣德 皇帝 又 让 ^郑和 第七 次 下 西洋。那 一 年，^郑和 已经 六十 岁 了，身体 也 不 太 好。可是 他 还是 出发 了。他 在 ^福建 的 ^长乐 立 了 一 块 石碑，记录 了 前 六 次 远航 的 经历。
+1433 年，在 回国 的 路 上，^郑和 在 ^古里 去世 了，六十二 岁。他 是 在 海 上 走完 了 自己 的 一生。
+
+# 比 哥伦布 早 八十七 年
+^郑和 去世 以后，^明朝 再 也 没有 派 船队 下 西洋。后来，朝廷 甚至 禁止 人们 造 大 船 出 海。很 多 航海 的 记录 也 不见 了。
+^郑和 第一 次 下 西洋，比 ^哥伦布 发现 美洲 早 八十七 年，比 ^达伽马 绕过 ^非洲 到 ^印度 早 九十二 年。他 的 船队 比 他们 的 大 得 多，人 也 多 得 多。可是 ^郑和 的 船队 没有 占领 别人 的 土地，也 没有 抢 别人 的 财富。他 带去 的 是 丝绸 和 瓷器，带 回来 的 是 友谊 和 知识。
+今天，在 ^东南亚 的 很 多 地方，还 有 纪念 ^郑和 的 庙 和 街道，人们 叫 他“三宝公”。2005 年，中国 把 每 年 的 7 月 11 日，也 就 是 ^郑和 第一 次 出发 的 日子，定 为“航海日”。那 个 被 抓走 的 云南 小 男孩，最后 真的 看到 了 整个 世界。
+
+@glossary
+回族 | Hui (musulmans chinois) | Hui (Chinese Muslims)
+朝圣 | pèlerinage | pilgrimage
+宦官 | eunuque | eunuch
+皇位 | trône | throne
+贸易 | commerce | trade
+庞大 | immense | huge
+桅杆 | mât | mast
+罗盘 | boussole | compass
+港口 | port | port
+海盗 | pirate | pirate
+长颈鹿 | girafe | giraffe
+麒麟 | qilin (licorne chinoise) | qilin (Chinese unicorn)
+
+@questions
+Q Pourquoi le père et le grand-père de Ma Sanbao sont-ils appelés « hāzhī » ? | Why are Ma Sanbao's father and grandfather called “hāzhī”?
++ Ils ont fait le pèlerinage à La Mecque | They made the pilgrimage to Mecca
+- Ils sont marins | They are sailors
+- Ils sont riches | They are rich
+- Ce sont des généraux | They are generals
+= « dōu qù guò hěn yuǎn hěn yuǎn de Màijiā cháoshèng ». | “dōu qù guò hěn yuǎn hěn yuǎn de Màijiā cháoshèng”.
+Q Que lui arrive-t-il à dix ans ? | What happens to him at ten?
++ Son père meurt à la guerre, il est capturé et devient eunuque | His father dies in the war; he is captured and becomes a eunuch
+- Il part en mer | He goes to sea
+- Il entre à l'école | He starts school
+- Il devient roi | He becomes king
+= « bèi jūnduì zhuāzǒu, hòulái chéngle huànguān ». | “bèi jūnduì zhuāzǒu, hòulái chéngle huànguān”.
+Q D'où vient le nom « Zheng He » ? | Where does the name “Zheng He” come from?
++ L'empereur Yongle lui donne le nom de famille Zheng pour le remercier | Emperor Yongle grants him the surname Zheng to thank him
+- C'est le nom de sa mère | It is his mother's name
+- C'est le nom d'un bateau | It is a ship's name
+- Il le choisit lui-même | He chose it himself
+= Il s'est distingué à Zhèngcūnbà ; « cì tā xìng “Zhèng” ». | He distinguished himself at Zhèngcūnbà; “cì tā xìng “Zhèng””.
+Q Pourquoi Zheng He est-il le bon choix pour diriger la flotte ? | Why is Zheng He the right choice to lead the fleet?
++ Intelligent, loyal, soldat, et musulman connaissant les coutumes de l'ouest | Clever, loyal, a soldier, and a Muslim who knows western customs
+- Il est très riche | He is very rich
+- Il est le fils de l'empereur | He is the emperor's son
+- Il sait nager | He can swim
+= « shì mùsīlín, liǎojiě hěn duō xībian guójiā de zōngjiào hé xíguàn ». | “shì mùsīlín, liǎojiě hěn duō xībian guójiā de zōngjiào hé xíguàn”.
+Q Combien de navires et d'hommes compte la flotte ? | How many ships and men does the fleet have?
++ Plus de 200 navires et 27 000 hommes | Over 200 ships and 27,000 men
+- 20 navires et 2 700 hommes | 20 ships and 2,700 men
+- 7 navires et 700 hommes | 7 ships and 700 men
+- 1 000 navires | 1,000 ships
+= « liǎngbǎi duō tiáo chuán, liǎngwàn qīqiān duō rén ». | “liǎngbǎi duō tiáo chuán, liǎngwàn qīqiān duō rén”.
+Q Comment la flotte s'oriente-t-elle la nuit ? | How does the fleet navigate at night?
++ Grâce aux étoiles | By the stars
+- Avec un radar | With radar
+- En suivant la côte | By following the coast
+- Elle ne navigue pas la nuit | It doesn't sail at night
+= « Wǎnshang, tāmen kàn xīngxing, jiào qiān xīng shù. » | “Wǎnshang, tāmen kàn xīngxing, jiào qiān xīng shù.”
+Q Comment les navires communiquent-ils dans le brouillard ? | How do the ships communicate in fog?
++ En frappant des gongs et des tambours | By beating gongs and drums
+- Avec des drapeaux | With flags
+- Avec des oiseaux | With birds
+- Par radio | By radio
+= « wù dà de shíhou qiāo luó dǎ gǔ ». | “wù dà de shíhou qiāo luó dǎ gǔ”.
+Q Que fait Zheng He en arrivant dans chaque pays ? | What does Zheng He do in each country?
++ Il rend visite au roi avec des cadeaux et une lettre de l'empereur | He visits the king with gifts and the emperor's letter
+- Il conquiert le pays | He conquers it
+- Il construit une ville | He builds a city
+- Il recrute des soldats | He recruits soldiers
+= « qù bàijiàn dāngdì de guówáng, sòngshàng huángdì de lǐwù hé xìn ». | “qù bàijiàn dāngdì de guówáng, sòngshàng huángdì de lǐwù hé xìn”.
+Q Comment Zheng He apprend-il le plan du pirate Chen Zuyi ? | How does Zheng He learn of pirate Chen Zuyi's plan?
++ Un Chinois de la région le prévient | A local Chinese man warns him
+- Il lit dans ses pensées | He reads his mind
+- Le pirate l'avoue | The pirate confesses
+- Il le devine seul | He guesses alone
+= « yí gè dāngdì de huárén bǎ zhège jìhuà gàosu le Zhèng Hé ». | “yí gè dāngdì de huárén bǎ zhège jìhuà gàosu le Zhèng Hé”.
+Q Jusqu'où va la flotte ? | How far does the fleet go?
++ Jusqu'à la côte est de l'Afrique | As far as the east coast of Africa
+- Jusqu'en Europe | To Europe
+- Jusqu'en Amérique | To America
+- Seulement au Vietnam | Only to Vietnam
+= Málíndì et Mùgǔdūshù, vers le Kenya et la Somalie actuels. | Málíndì and Mùgǔdūshù, near today's Kenya and Somalia.
+Q Pourquoi la girafe émerveille-t-elle Nankin ? | Why does the giraffe amaze Nanjing?
++ On la prend pour un qilin, signe de paix et de prospérité | People take it for a qilin, a sign of peace and prosperity
+- Elle parle | It talks
+- Elle est blanche | It is white
+- Elle danse | It dances
+= « Zhè shì qílín! » — il n'apparaît que quand le monde est en paix. | “Zhè shì qílín!” — it appears only when the world is at peace.
+Q Où meurt Zheng He ? | Where does Zheng He die?
++ À Calicut (Guli), pendant le retour du septième voyage | In Calicut (Guli), on the way back from the seventh voyage
+- À Nankin | In Nanjing
+- Au Yunnan | In Yunnan
+- À La Mecque | In Mecca
+= « zài huíguó de lù shang, Zhèng Hé zài Gǔlǐ qùshì le ». | “zài huíguó de lù shang, Zhèng Hé zài Gǔlǐ qùshì le”.
+Q Qu'est-ce qui distingue les voyages de Zheng He de ceux des Européens selon le texte ? | What sets Zheng He's voyages apart from the Europeans', according to the text?
++ Ils n'ont pas occupé de territoires ni pillé de richesses | They occupied no land and looted no wealth
+- Ils étaient plus courts | They were shorter
+- Ils n'avaient pas de soldats | They had no soldiers
+- Ils allaient en Amérique | They went to America
+= « méiyǒu zhànlǐng biérén de tǔdì, yě méiyǒu qiǎng biérén de cáifù ». | “méiyǒu zhànlǐng biérén de tǔdì, yě méiyǒu qiǎng biérén de cáifù”.

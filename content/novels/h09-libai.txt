@@ -1,0 +1,155 @@
+id: libai
+order: 109
+category: history
+level: hsk3
+hanzi: 诗仙李白
+pinyin: Shīxiān Lǐ Bái
+title: Li Bai, l'Immortel de la poésie | Li Bai, the Immortal Poet
+era: 701 – 762 | 701 – 762
+summary: Il voulait devenir ministre ; il est devenu le poète le plus aimé de Chine. Une épée, une jarre de vin, mille poèmes, un empereur qui lui sert la soupe… et un petit poème que tous les enfants chinois savent par cœur. | He wanted to be a minister; he became China's best-loved poet. A sword, a jar of wine, a thousand poems, an emperor who serves him soup… and a short poem every Chinese child knows by heart.
+
+# 太白 星
+公元 701 年，^李白 出生 了。他 小 时候 住 在 ^四川 的 ^绵州。传说，他 出生 的 前 一 天 晚上，妈妈 梦见 天上 的 太白星 落 进 了 自己 的 怀里。所以 父母 给 他 起 名字 叫 ^李白，字 ^太白。
+^李白 的 爸爸 是 一 个 商人，见过 很 多 世面。他 很 早 就 教 儿子 读书。^李白 五 岁 就 能 背 很 多 诗，十 岁 就 读 完 了 很 多 大人 都 读 不 懂 的 书。
+可是 小 ^李白 也 很 贪玩。有 一 次，他 觉得 读书 太 累 了，就 偷偷 跑 出去 玩。
+
+# 铁杵 磨 成 针
+他 跑到 一 条 小 河 边，看见 一 个 白 头发 的 老奶奶，正在 一 块 大 石头 上 磨 一 根 很 粗 的 铁 棒。
+^李白 好奇 地{de} 问：“老奶奶，您 在 做 什么 呀？”老奶奶 说：“我 要 把 它 磨 成 一 根 针。”^李白 笑 了：“这么 粗 的 铁 棒，怎么 能 磨 成 针 呢？”
+老奶奶 一边 磨 一边 说：“今天 磨 一点儿，明天 磨 一点儿，只要 天天 磨，总有 一 天 会 磨 成 针 的。”
+^李白 听 了，脸 一下子 红 了。他 马上 跑 回家，又 拿起 了 书。从 那 以后，他 读书 再 也 不 偷懒 了。这 就 是 成语“只要 功夫 深，铁杵 磨 成 针”的 来历。这 个 故事 是 一 个 传说，可是 直到 今天，中国 的 老师 还 常常 讲 给 学生 听。
+
+# 带着 剑 去 远方
+^李白 不 只 喜欢 读书，还 喜欢 剑术。他 十五 岁 就 学 剑，常常 带着 一 把 剑，到 山 里 去 找 隐士 和 道士，和 他们 一起 谈 天 说 地。
+二十四 岁 那 年，他 决定 离开 ^四川，去 看看 外面 的 世界。他 坐着 船 顺着 ^长江 往 东 走，经过 了 有名 的 ^三峡。两岸 的 山 又 高 又 险，猴子 在 山 上 叫，小 船 在 江 上 飞。他 心里 非常 激动。
+从 那 以后，他 一辈子 都 在 路 上。他 去 过 ^洞庭湖、^庐山、^扬州、^金陵……几乎 走遍 了 半个 中国。每 到 一 个 地方，他 都 会 写 诗。他 写 ^庐山 的 瀑布：“飞流直下三千尺，疑是银河落九天。”一 千 多 年 后，人们 到 了 ^庐山，还 会 想起 这 两 句 诗。
+
+# 好 朋友
+^李白 非常 喜欢 交 朋友。他 有钱 的 时候，常常 请 朋友 喝 酒、吃饭，一 年 多 就 花 了 三十 多 万 钱。有 一 个 朋友 去世 了，他 抱着 朋友 的 遗体 大哭，后来 还 亲自 把 朋友 的 遗骨 背{bēi} 回 了 故乡。
+他 有 一 个 好 朋友，叫 ^孟浩然，比 他 大 十二 岁，也 是 一 个 很 有名 的 诗人。有 一 次，^孟浩然 要 坐 船 去 ^扬州。^李白 在 ^黄鹤楼 送 他。船 越 走 越 远，最后 只 看得见 一 个 小 小 的 帆，然后 帆 也 不见 了，只 看见 ^长江 的 水 流 向 天边。^李白 在 楼 上 站 了 很 久 很 久。
+他 写 了 一 首 诗 送给 朋友。诗 里 没有 一 个 字 说“我 很 想 你”，可是 读 过 的 人，都 能 感觉 到 那 份 深深 的 友情。
+
+# 汪伦 的 桃花潭
+还有 一 个 故事 特别 有意思。有 一 个 叫 ^汪伦 的 人 非常 崇拜 ^李白，他 给 ^李白 写 信 说：“先生 喜欢 游玩 吗？我们 这里 有 十里 桃花。先生 喜欢 喝 酒 吗？我们 这里 有 万家 酒店。”
+^李白 一 看，高兴 极 了，马上 就 去 了。到 了 那里，才 发现 只 有 一 个 叫“桃花潭”的 水潭，离 这里 十 里；只有 一 家 姓 ^万 的 人 开 的 酒店！^李白 听 了，哈哈 大笑。
+^汪伦 每天 用 好 酒 好 菜 招待 他。^李白 要 走 的 那 天，坐 上 了 船，突然 听见 岸 上 有 人 一边 唱歌 一边 用 脚 打着 拍子 —— 原来 是 ^汪伦 来 送 他 了。^李白 非常 感动，写 了 一 首 诗，说 桃花潭 的 水 有 一 千 尺 深，可是 也 比 不 上 ^汪伦 对 他 的 情意 深。
+
+# 皇帝 的 客人
+^李白 一直 有 一 个 梦想：到 朝廷 里 做 大 官，帮助 皇帝 治理 国家，让 天下 太平。四十二 岁 那 年，他 的 诗 终于 传到 了 ^唐玄宗 那里。皇帝 非常 欣赏，请 他 到 ^长安 来。
+^李白 高兴 得 大笑，他 写 了 一 句 诗：“仰天大笑出门去，我辈岂是蓬蒿人！”意思 是：我 抬头 大笑 着 出 门，我 怎么 会 是 一辈子 待 在 草 里 的 普通 人 呢！
+到 了 ^长安，^唐玄宗 亲自 走 下来 迎接 他，请 他 吃饭，还 亲手 为 他 调 汤。这 是 多么 大 的 荣誉 啊！皇帝 让 他 做 了 翰林，专门 给 皇帝 写 文章 和 诗。
+
+# 醉 写 诗
+可是 ^李白 很快 就 发现，皇帝 并 不 想 让 他 帮助 治理 国家，只是 想 让 他 在 宴会 上 写 诗，让 大家 高兴。
+有 一 个 有名 的 传说：有 一 天，皇帝 和 ^杨贵妃 在 花园 里 赏 牡丹，叫 ^李白 来 写 诗。^李白 那时候 已经 喝 醉 了，被 人 扶着 进来。他 让 皇帝 最 宠爱 的 宦官 ^高力士 给 他 脱 靴子，然后 拿起 笔，一 口气 写 了 三 首 诗，每 一 首 都 非常 美。
+^高力士 心里 非常 恨 他。后来 很 多 人 在 皇帝 面前 说 ^李白 的 坏话。^李白 也 越来越 不 喜欢 宫廷 的 生活。在 ^长安 待 了 不到 两 年，他 就 离开 了。皇帝 送给 他 很 多 金子，让 他 走 了。
+
+# 两 颗 星星 相遇
+离开 ^长安 的 第二 年，四十四 岁 的 ^李白 在 ^洛阳 遇见 了 一 个 三十三 岁 的 年轻 诗人，他 叫 ^杜甫。两 个 人 一 见 如故，一起 喝 酒，一起 打猎，一起 去 很 多 地方 游玩，像 兄弟 一样。
+后来 他们 分开 了，再 也 没有 见过 面。可是 ^杜甫 一辈子 都 在 想念 ^李白，写 了 很 多 首 关于 ^李白 的 诗。他 说 ^李白 是“笔落惊风雨，诗成泣鬼神”：笔 一 落 下，风 和 雨 都 被 吓 到 了；诗 写 成 了，鬼 和 神 都 感动 得 哭 了。
+今天，中国人 叫 ^李白“诗仙”，叫 ^杜甫“诗圣”。他们 是 中国 历史 上 最 伟大 的 两 位 诗人。
+
+# 床 前 明月光
+^李白 一生 写 了 一 千 多 首 诗。其中 最 有名 的，是 一 首 只 有 二十 个 字 的 小 诗。那 是 一 个 秋天 的 夜晚，他 一 个 人 住 在 外地，睡 不 着。
+月光 照 在 床 前，白白 的，他 还以为 地上 下 了 霜。他 抬起 头，看着 天上 明亮 的 月亮；又 低下 头，想起 了 远方 的 故乡。他 写下：“床前明月光，疑是地上霜。举头望明月，低头思故乡。”
+这 首 诗 叫《静夜思》。今天，几乎 每 一 个 中国 孩子，在 很 小 的 时候 就 会 背 这 首 诗。很 多 在 外国 生活 的 中国人，在 想家 的 夜晚，也 会 想起 这 二十 个 字。
+
+# 最后 的 日子
+^李白 的 晚年 过 得 很 不 容易。公元 755 年，发生 了“安史之乱”，^唐朝 开始 衰落。^李白 想 为 国家 出 力，参加 了 一 位 王子 的 军队。没 想到，这 位 王子 后来 被 说 成 是 叛乱，^李白 也 被 关 进 了 监狱，还 被 流放 到 很 远 的 ^夜郎。
+在 去 ^夜郎 的 路 上，朝廷 大赦，他 被 放 了 回来。他 高兴 极 了，坐着 船 顺着 长江 往 下 走，写 了 一 首 很 快乐 的 诗：“两岸猿声啼不住，轻舟已过万重山。”
+公元 762 年，^李白 在 ^当涂 去世 了，六十一 岁。民间 有 一 个 美丽 的 传说：一 天 晚上，^李白 喝 醉 了，坐 在 船 上 看 月亮。他 看到 水 里 的 月亮 那么 美，就 伸手 去 捞，结果 掉 进 了 江 里，骑着 一 条 鲸鱼，回到 了 天上。
+人们 宁愿 相信 这个 传说。因为 对 他们 来说，^李白 就 是 天上 的 一 颗 星星，到 人间 来 玩 了 六十 年，又 回去 了。
+
+@glossary
+诗人 | poète | poet
+贪玩 | aimer trop jouer | too fond of play
+磨 | aiguiser, polir | to grind
+铁杵 | pilon de fer | iron rod
+剑术 | escrime | swordsmanship
+隐士 | ermite | hermit
+友情 | amitié | friendship
+崇拜 | admirer, idolâtrer | to admire
+欣赏 | apprécier | to appreciate
+宫廷 | cour impériale | imperial court
+霜 | givre | frost
+流放 | exiler | to exile
+
+@questions
+Q D'où vient le nom « Taibai » ? | Where does the name “Taibai” come from?
++ Sa mère a rêvé que l'étoile Taibai tombait dans ses bras | His mother dreamed the Taibai star fell into her arms
+- Son grand-père s'appelait ainsi | His grandfather had that name
+- Il avait les cheveux blancs | He had white hair
+- C'est le nom d'une montagne | It's a mountain's name
+= « māma mèngjiàn tiānshang de Tàibáixīng luò jìn le zìjǐ de huáilǐ ». | “māma mèngjiàn tiānshang de Tàibáixīng luò jìn le zìjǐ de huáilǐ”.
+Q Que fait la vieille femme au bord de la rivière ? | What is the old woman doing by the river?
++ Elle polit une barre de fer pour en faire une aiguille | She grinds an iron rod into a needle
+- Elle lave du linge | She washes clothes
+- Elle pêche | She fishes
+- Elle écrit | She writes
+= « Wǒ yào bǎ tā mó chéng yì gēn zhēn. » | “Wǒ yào bǎ tā mó chéng yì gēn zhēn.”
+Q Quelle leçon Li Bai en tire-t-il ? | What lesson does Li Bai learn?
++ Avec de la persévérance, on réussit ce qui semble impossible | With perseverance you achieve what seems impossible
+- Il faut aider les personnes âgées | One must help the elderly
+- Le fer est plus fort que la pierre | Iron is stronger than stone
+- Il faut jouer plus | One must play more
+= « Zhǐyào gōngfu shēn, tiěchǔ mó chéng zhēn. » | “Zhǐyào gōngfu shēn, tiěchǔ mó chéng zhēn.”
+Q Quel autre art Li Bai pratique-t-il dès 15 ans ? | What other art does Li Bai practise from age 15?
++ L'épée | The sword
+- La peinture | Painting
+- La musique | Music
+- La médecine | Medicine
+= « Tā shíwǔ suì jiù xué jiàn. » | “Tā shíwǔ suì jiù xué jiàn.”
+Q Où Li Bai dit-il adieu à Meng Haoran ? | Where does Li Bai say goodbye to Meng Haoran?
++ À la tour de la Grue jaune | At the Yellow Crane Tower
+- À Chang'an | In Chang'an
+- Au mont Lu | On Mount Lu
+- Au bord de l'étang des Fleurs de pêcher | At Peach Blossom Pool
+= « Lǐ Bái zài Huánghè Lóu sòng tā. » | “Lǐ Bái zài Huánghè Lóu sòng tā.”
+Q Quel « piège » Wang Lun a-t-il tendu à Li Bai ? | What “trick” did Wang Lun play on Li Bai?
++ « Dix li de pêchers » était un étang à dix li, « dix mille auberges » une auberge des Wan | “Ten li of peach trees” was a pool ten li away, “ten thousand inns” one inn run by the Wan family
+- Il n'y avait pas de vin | There was no wine
+- Il voulait le voler | He wanted to rob him
+- Il l'a enfermé | He locked him up
+= Li Bai éclate de rire en découvrant le jeu de mots. | Li Bai bursts out laughing at the wordplay.
+Q Quel est le grand rêve de Li Bai ? | What is Li Bai's great dream?
++ Devenir haut fonctionnaire pour aider à gouverner | To become a high official and help govern
+- Devenir riche | To become rich
+- Être moine | To be a monk
+- Être général | To be a general
+= « dào cháotíng lǐ zuò dà guān, bāngzhù huángdì zhìlǐ guójiā ». | “dào cháotíng lǐ zuò dà guān, bāngzhù huángdì zhìlǐ guójiā”.
+Q Quel honneur l'empereur Xuanzong lui fait-il ? | What honour does Emperor Xuanzong pay him?
++ Il lui prépare la soupe de ses propres mains | He seasons his soup with his own hands
+- Il lui donne une province | He gives him a province
+- Il lui offre sa fille | He offers his daughter
+- Il le nomme général | He makes him a general
+= « hái qīnshǒu wèi tā tiáo tāng ». | “hái qīnshǒu wèi tā tiáo tāng”.
+Q Pourquoi Li Bai quitte-t-il la cour ? | Why does Li Bai leave the court?
++ On ne lui demande que des poèmes de fête, et il est calomnié | He is only asked for party poems, and is slandered
+- Il est malade | He is ill
+- L'empereur meurt | The emperor dies
+- Il se marie | He gets married
+= « zhǐshì xiǎng ràng tā zài yànhuì shàng xiě shī… hěn duō rén… shuō Lǐ Bái de huàihuà ». | “zhǐshì xiǎng ràng tā zài yànhuì shàng xiě shī… hěn duō rén… shuō Lǐ Bái de huàihuà”.
+Q Qui Li Bai rencontre-t-il à Luoyang ? | Whom does Li Bai meet in Luoyang?
++ Le poète Du Fu | The poet Du Fu
+- Meng Haoran | Meng Haoran
+- Gao Lishi | Gao Lishi
+- Wang Lun | Wang Lun
+= Du Fu, 33 ans, devient comme un frère. | Du Fu, 33, becomes like a brother.
+Q Comment appelle-t-on Li Bai et Du Fu ? | What are Li Bai and Du Fu called?
++ L'Immortel de la poésie et le Saint de la poésie | The Immortal of Poetry and the Sage of Poetry
+- Les deux frères | The two brothers
+- Les poètes du vin | The wine poets
+- Les rois du Tang | The kings of the Tang
+= Li Bai « shīxiān », Du Fu « shīshèng ». | Li Bai “shīxiān”, Du Fu “shīshèng”.
+Q Dans « Pensée d'une nuit calme », que croit-il voir devant son lit ? | In “Quiet Night Thought”, what does he think he sees before his bed?
++ Du givre sur le sol | Frost on the ground
+- De la neige | Snow
+- De l'eau | Water
+- Une lettre | A letter
+= « Yí shì dìshang shuāng. » | “Yí shì dìshang shuāng.”
+Q Que raconte la légende sur la mort de Li Bai ? | What does the legend say about Li Bai's death?
++ Ivre, il voulut attraper la lune dans l'eau et repartit au ciel sur une baleine | Drunk, he reached for the moon in the water and rode a whale back to heaven
+- Il est mort au combat | He died in battle
+- Il a été empoisonné | He was poisoned
+- Il est mort en prison | He died in prison
+= « shēnshǒu qù lāo… qízhe yì tiáo jīngyú, huídào le tiānshang ». | “shēnshǒu qù lāo… qízhe yì tiáo jīngyú, huídào le tiānshang”.

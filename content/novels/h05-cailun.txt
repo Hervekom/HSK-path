@@ -1,0 +1,154 @@
+id: cailun
+order: 105
+category: history
+level: hsk3
+hanzi: 蔡伦造纸
+pinyin: Cài Lún zào zhǐ
+title: Cai Lun et l'invention du papier | Cai Lun and the Invention of Paper
+era: vers 63 – 121 apr. J.-C. | c. AD 63 – 121
+summary: Une impératrice lit des montagnes de lamelles de bambou ; la soie coûte une fortune. Un serviteur du palais observe les femmes qui lavent le coton au bord de la rivière… et fabrique ce que le monde entier utilise encore. | An empress reads mountains of bamboo slips; silk costs a fortune. A palace servant watches women washing cotton by the river… and makes something the whole world still uses.
+
+# 很 重 的 书
+在 很久 以前，中国人 是 怎么 写字 的 呢？最 早，人们 把 字 刻 在 乌龟 的 壳 和 牛 的 骨头 上，这 就 是“甲骨文”。后来，人们 把 字 铸 在 铜器 上。可是 这些 东西 都 很 难 得到，只有 国王 才 能 用。
+再 后来，人们 发现 了 一 个 好 办法：把 竹子 劈成 一 片 一 片 的 细 条，叫“竹简”，在 上面 用 毛笔 写字。再 用 绳子 把 很 多 竹简 串 在 一起，卷{juǎn} 起来，就 成了 一 本 书。
+可是 竹简 有 一 个 大 问题：太 重 了！一 片 竹简 只 能 写 几十 个 字。一 本 书 常常 要 用 几百 片。^秦始皇 每天 要 看 的 文件，有 一百二十 斤 重，要 两 个 人 抬。^汉朝 有 一 个 读书人 给 皇帝 写 了 一 封 信，用 了 三千 片 竹简，两 个 大力士 才 把 它 抬 进 宫 里。
+有 钱 人 也 用 丝绸 写字。丝绸 又 轻 又 软，可是 太 贵 了，普通 人 根本 买 不 起。人们 想：要是 有 一 种 又 轻 又 便宜 的 东西 可以 写字，那 该 多 好 啊！
+
+# 宫 里 的 少年
+公元 63 年 左右，在 今天 的 ^湖南 ^耒阳，一 个 男孩 出生 了。他 叫 ^蔡伦。他 家 是 普通 的 农民，家 里 世世代代 种{zhòng} 地，也 打铁。小 ^蔡伦 常常 在 旁边 看 大人 干活，什么 都 想 学，什么 都 想 问。
+大约 十五 岁 的 时候，他 被 选 进 了 ^洛阳 的 皇宫，成了 一 个 宦官。宦官 是 在 皇宫 里 为 皇帝 和 皇后 服务 的 人。离开 家乡，离开 父母，对 一 个 少年 来说 非常 痛苦。
+可是 ^蔡伦 没有 放弃。他 读书 很 认真，做事 很 仔细，从 不 偷懒。很 多 年 过去 了，他 从 一 个 最 小 的 宦官，慢慢 变成 了 皇帝 身边 重要 的 人。
+
+# 尚方令
+公元 97 年，^蔡伦 当 上 了“尚方令”。尚方 是 皇宫 里 的 一 个 大 作坊，专门 为 皇帝 做 宝剑、工具 和 各 种 精美 的 用品。这里 有 全国 最 好 的 工匠。
+^蔡伦 非常 喜欢 这个 工作。他 每天 都 在 作坊 里，跟 工匠们 一起 研究，怎么 让 刀 更 锋利，怎么 让 东西 更 结实。他 管理 的 作坊 做 出来 的 宝剑 和 器具，又 精致 又 好 用，后来 很 多 年 都 是 大家 学习 的 标准。
+那时候 的 皇后 叫 ^邓绥，她 非常 喜欢 读书，也 很 关心 国家 大事。她 每天 都 要 看 很 多 文件。一 堆 一 堆 的 竹简 放 在 她 的 桌子 上，又 重 又 占 地方。
+
+# 一 个 难题
+有 一 天，^邓 皇后 对 ^蔡伦 说：“竹简 太 重 了，丝绸 太 贵 了。你 能 不 能 想 个 办法，做 出 一 种 新 的 写字 的 东西？”
+^蔡伦 知道，这 是 一 个 很 难 的 任务。其实，在 他 以前，已经 有 人 做 过 一 种 很 粗 的“纸”，是 用 麻 做 的。可是 这 种 纸 又 粗 又 厚，表面 不 平，很 难 在 上面 写字，大家 一般 只 用 它 来 包 东西。
+^蔡伦 想：能 不 能 做 出 一 种 又 白 又 薄、又 便宜、又 好 写 的 纸 呢？从 那 天 起，他 的 脑子 里 想 的 全 是 这 件 事。
+
+# 河 边 的 发现
+有 一 天，^蔡伦 走 到 ^洛阳 城外 的 河 边。他 看到 几 个 女人 在 河 边 漂洗 丝绵：她们 把 蚕茧 煮 过 以后，放 在 竹 席 上，在 水 里 一 遍 一 遍 地{de} 捶打 和 冲洗。
+女人们 洗 完 以后，^蔡伦 发现，竹 席 上 留下 了 一 层 薄薄 的 丝 纤维。太阳 一 晒，这 层 东西 就 变成 了 一 张 薄 片，可以 揭 下来。
+^蔡伦 的 眼睛 一 亮：“如果 把 别的 东西 也 弄成 很 细 的 纤维，在 水 里 搅 匀，再 捞 起来 晒干，不 就 能 做 成 薄 片 了 吗？”他 高兴 地{de} 跑 回 作坊，马上 开始 试验。
+
+# 一 次 次 的 失败
+可是，丝 太 贵 了，不 能 用。用 什么 呢？^蔡伦 想到 了 便宜 的 东西：树皮、破 麻布、旧 渔网，还有 麻 头。这些 东西 到处 都 是，很 多 都 是 别人 扔掉 的 垃圾。
+第一 次 试验，纸 太 厚，一 撕 就 破。第二 次，纸 太 黄，看 不 清 字。第三 次，墨 一 写 上去 就 化开 了……一 次，两 次，十 次，二十 次，都 失败 了。工匠们 都 有点儿 泄气 了：“大人，这 件 事 恐怕 做 不 成 啊。”
+^蔡伦 却 说：“每 失败 一 次，我们 就 知道 一 种 不 对 的 方法。只要 一直 试，就 一定 能 找到 对 的 方法。”他 每天 和 工匠们 一起 在 作坊 里，衣服 上 都 是 泥 和 水，手 也 被 泡得 发白。
+
+# 成功 了！
+经过 很 多 次 试验，^蔡伦 终于 找到 了 一 套 好 方法。第一 步，把 树皮、破 布、渔网 剪 碎，放 在 水 里 泡 很 久。第二 步，放 进 大 锅 里，加上 草木灰，煮 很 长 时间，让 它们 变 软。第三 步，放 在 石臼 里 捣，捣 成 很 细 的 浆。
+第四 步，把 纸浆 倒 进 水 池，搅 匀。用 一 个 细 竹 帘子 在 水 里 一 捞，帘子 上 就 留下 了 薄薄 的 一 层。第五 步，把 这 层 东西 压 干，贴 在 墙 上 晒干，最后 揭 下来。
+一 张 又 白 又 薄、又 平 又 软 的 纸 出现 了！^蔡伦 拿起 毛笔，在 上面 写 了 几 个 字。墨 不 化开，字 清清楚楚。工匠们 都 欢呼 起来。
+
+# 蔡侯纸
+公元 105 年，^蔡伦 把 新 做 的 纸 献给 了 皇帝。皇帝 和 ^邓 皇后 看 了，非常 高兴，马上 下令 在 全国 推广。从 此 以后，大家 都 开始 用 这 种 纸。
+后来 ^蔡伦 被 封 为“龙亭侯”，所以 人们 把 他 做 的 纸 叫 作“蔡侯纸”。这 种 纸 用 的 都 是 便宜 的 材料，普通 人 也 用 得 起。读书人 终于 不 用 再 抬着 重重 的 竹简 了。
+不过，^蔡伦 的 晚年 并 不 幸福。^邓 皇后 去世 以后，新 的 皇帝 要 追查 很 多 年 前 宫 里 的 一 件 旧 事，^蔡伦 也 被 牵连 了。公元 121 年，他 洗 了 澡，穿上 最 好 的 衣服，喝 下 毒药，结束 了 自己 的 生命。
+
+# 纸 的 旅行
+^蔡伦 死 了，可是 纸 活 了 下来，而且 开始 了 一 次 很 长 的 旅行。
+纸 先 传遍 了 中国，然后 传到 了 ^朝鲜 和 ^日本。公元 751 年，在 ^怛罗斯 的 一 场 战争 中，一些 会 造 纸 的 中国 工匠 被 ^阿拉伯 人 抓住，带到 了 ^撒马尔罕。从 那 以后，^撒马尔罕 成了 有名 的 造 纸 城市。
+纸 又 慢慢 传到 了 ^巴格达、^开罗，最后 在 十二 世纪 来到 了 ^欧洲。在 那 以前，^欧洲 人 用 羊皮 写 书，一 本 ^圣经 要 用 两百 多 只{zhī} 羊 的 皮。有 了 纸，书 一下子 变得 便宜 了，越来越 多 的 普通 人 也 能 读书 了。
+
+# 四大发明
+今天，人们 把 造纸术 和 指南针、火药、印刷术 一起，叫 作 中国 古代 的“四大发明”。如果 没有 纸，就 不 会 有 后来 的 印刷术；没有 印刷术，知识 就 很 难 传到 世界 各地。
+在 ^蔡伦 的 家乡 ^耒阳，至今 还 有 一 个“蔡伦 纪念园”。那里 有 一 口 井，传说 ^蔡伦 小 时候 在 这里 打 过 水。每 年 都 有 很 多 人 来 这里，向 这个 改变 了 世界 的 人 表示 感谢。
+下次，当 你 在 本子 上 写 汉字，或者 翻开 一 本 书 的 时候，也许 可以 想起 一 千 九百 年 前，那 个 在 河 边 看 女人们 洗 丝绵、一 次 又 一 次 失败 却 从 不 放弃 的 人。
+
+@glossary
+甲骨文 | inscriptions sur os et carapaces | oracle bone script
+竹简 | lamelles de bambou | bamboo slips
+丝绸 | soie | silk
+宦官 | eunuque | eunuch
+作坊 | atelier | workshop
+工匠 | artisan | craftsman
+纤维 | fibre | fibre
+试验 | expérience, essai | experiment
+泄气 | se décourager | to lose heart
+纸浆 | pâte à papier | paper pulp
+推广 | diffuser, généraliser | to popularise
+四大发明 | les quatre grandes inventions | the Four Great Inventions
+
+@questions
+Q Quel est le problème des lamelles de bambou ? | What is the problem with bamboo slips?
++ Elles sont très lourdes | They are very heavy
+- Elles brûlent facilement | They burn easily
+- Elles sont trop chères | They are too expensive
+- On ne peut pas écrire dessus | You can't write on them
+= Les documents de Qin Shi Huang pesaient 120 jin chaque jour. | Qin Shi Huang's documents weighed 120 jin every day.
+Q Et le problème de la soie ? | And the problem with silk?
++ Elle coûte trop cher | It is too expensive
+- Elle est trop lourde | It is too heavy
+- Elle se déchire | It tears
+- Elle est jaune | It is yellow
+= « Sīchóu yòu qīng yòu ruǎn, kěshì tài guì le. » | “Sīchóu yòu qīng yòu ruǎn, kěshì tài guì le.”
+Q Que fait la famille de Cai Lun ? | What does Cai Lun's family do?
++ Ils sont paysans et forgerons | They are farmers and blacksmiths
+- Ils sont nobles | They are nobles
+- Ils fabriquent du papier | They make paper
+- Ils sont marchands de soie | They are silk merchants
+= « jiā lǐ shìshìdàidài zhòng dì, yě dǎtiě ». | “jiā lǐ shìshìdàidài zhòng dì, yě dǎtiě”.
+Q Qu'est-ce que le « shàngfāng » qu'il dirige ? | What is the “shàngfāng” he manages?
++ Le grand atelier du palais | The palace's great workshop
+- La bibliothèque | The library
+- La cuisine | The kitchen
+- L'armée | The army
+= « huánggōng lǐ de yí gè dà zuōfang ». | “huánggōng lǐ de yí gè dà zuōfang”.
+Q Qui lui demande d'inventer un nouveau support d'écriture ? | Who asks him to invent a new writing material?
++ L'impératrice Deng | Empress Deng
+- L'empereur Wu | Emperor Wu
+- Un lettré | A scholar
+- Sa mère | His mother
+= « Dèng huánghòu duì Cài Lún shuō… ». | “Dèng huánghòu duì Cài Lún shuō…”.
+Q Existait-il déjà du papier avant Cai Lun ? | Did paper already exist before Cai Lun?
++ Oui, un papier de chanvre grossier, utilisé pour emballer | Yes, a coarse hemp paper used for wrapping
+- Non, rien du tout | No, nothing at all
+- Oui, aussi bon que le sien | Yes, as good as his
+- Oui, en Europe | Yes, in Europe
+= « yǐjīng yǒu rén zuò guò yì zhǒng hěn cū de zhǐ, shì yòng má zuò de ». | “yǐjīng yǒu rén zuò guò yì zhǒng hěn cū de zhǐ, shì yòng má zuò de”.
+Q Qu'observe-t-il au bord de la rivière ? | What does he observe by the river?
++ Une fine couche de fibres de soie qui reste sur les nattes | A thin layer of silk fibre left on the mats
+- Des poissons | Fish
+- Des enfants qui écrivent dans le sable | Children writing in the sand
+- Des feuilles qui flottent | Floating leaves
+= « zhú xí shàng liúxià le yì céng báobáo de sī xiānwéi ». | “zhú xí shàng liúxià le yì céng báobáo de sī xiānwéi”.
+Q Quelles matières utilise-t-il ? | What materials does he use?
++ Écorce, vieux tissus, vieux filets de pêche | Bark, old cloth, old fishing nets
+- De la soie | Silk
+- Du bambou neuf | New bamboo
+- Du papier acheté | Bought paper
+= « shùpí, pò mábù, jiù yúwǎng, háiyǒu má tóu ». | “shùpí, pò mábù, jiù yúwǎng, háiyǒu má tóu”.
+Q Que dit-il à ses artisans découragés ? | What does he tell his discouraged craftsmen?
++ Chaque échec nous apprend une mauvaise méthode | Each failure teaches us one wrong method
+- D'arrêter | To stop
+- Qu'ils seront punis | That they will be punished
+- Qu'il n'y croit plus | That he no longer believes in it
+= « Měi shībài yí cì, wǒmen jiù zhīdào yì zhǒng bú duì de fāngfǎ. » | “Měi shībài yí cì, wǒmen jiù zhīdào yì zhǒng bú duì de fāngfǎ.”
+Q Avec quoi « pêche »-t-on la pâte à papier ? | What is used to lift the pulp out of the water?
++ Un fin écran en bambou | A fine bamboo screen
+- Un filet | A net
+- Les mains | The hands
+- Une pierre | A stone
+= « Yòng yí gè xì zhú liánzi zài shuǐ lǐ yì lāo ». | “Yòng yí gè xì zhú liánzi zài shuǐ lǐ yì lāo”.
+Q Pourquoi appelle-t-on ce papier « Cài hóu zhǐ » ? | Why is the paper called “Cài hóu zhǐ”?
++ Cai Lun a reçu le titre de marquis (hou) | Cai Lun was made a marquis (hou)
+- C'est le nom de sa ville | It is his town's name
+- C'est le nom de l'impératrice | It is the empress's name
+- Parce qu'il est vert | Because it is green
+= Il est fait « Lóngtíng hóu », d'où « Cài hóu zhǐ ». | He was made “Lóngtíng hóu”, hence “Cài hóu zhǐ”.
+Q Comment le papier arrive-t-il dans le monde arabe ? | How does paper reach the Arab world?
++ Des artisans chinois capturés à Talas en 751 | Chinese craftsmen captured at Talas in 751
+- Par un mariage | Through a marriage
+- Cai Lun y est allé | Cai Lun went there
+- Par la mer | By sea
+= Ils sont emmenés à Samarcande, qui devient une ville du papier. | They are taken to Samarkand, which becomes a paper city.
+Q Quelles sont les « quatre grandes inventions » ? | What are the “Four Great Inventions”?
++ Le papier, la boussole, la poudre et l'imprimerie | Paper, the compass, gunpowder and printing
+- Le papier, la soie, le thé et la porcelaine | Paper, silk, tea and porcelain
+- La Grande Muraille, le canal, le papier et la boussole | The Great Wall, the canal, paper and the compass
+- L'écriture, les chiffres, la roue et le feu | Writing, numbers, the wheel and fire
+= « zàozhǐshù hé zhǐnánzhēn, huǒyào, yìnshuāshù ». | “zàozhǐshù hé zhǐnánzhēn, huǒyào, yìnshuāshù”.

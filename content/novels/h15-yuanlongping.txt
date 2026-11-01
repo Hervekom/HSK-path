@@ -1,0 +1,158 @@
+id: yuanlongping
+order: 115
+category: history
+level: hsk3
+hanzi: 袁隆平和杂交水稻
+pinyin: Yuán Lóngpíng hé zájiāo shuǐdào
+title: Yuan Longping, le père du riz hybride | Yuan Longping, Father of Hybrid Rice
+era: 1930 – 2021 | 1930 – 2021
+summary: Pendant la grande famine, un jeune professeur voit des gens mourir de faim au bord des routes. Il cherche dans les rizières, épi par épi, une plante que tout le monde dit impossible. Son riz nourrira des centaines de millions de personnes. | During the great famine a young teacher sees people dying of hunger by the roadside. He searches the paddy fields, ear by ear, for a plant everyone says cannot exist. His rice will feed hundreds of millions.
+
+# 战争 中 的 童年
+1930 年，^袁隆平 出生 在 ^北平，就 是 今天 的 ^北京。他 的 童年 是 在 战争 中 度过 的。为了 躲避 战火，全家 跟着 学校 和 工作 一 次 次 搬家，去 过 ^湖南、^重庆、^武汉 很 多 地方。
+小 时候 的 ^袁隆平 不 太 喜欢 坐 在 教室 里。有 一 次，学校 组织 学生 去 参观 一 个 果园。果园 里 的 桃子 又 大 又 红，葡萄 一 串 一 串 地{de} 挂 在 架子 上。^袁隆平 看 呆 了，觉得 这里 美 得 像 天堂 一样。
+从 那 天 起，他 就 有 了 一 个 梦想：长大 以后，要 学 农业。他 后来 说：“我 学 农，是 从 那 次 参观 开始 的。”
+
+# 不 被 看好 的 选择
+1949 年，^袁隆平 要 考 大学 了。他 告诉 爸爸 妈妈：“我 要 学 农。”爸爸 妈妈 都 不 同意。妈妈 说：“学 农 很 辛苦，是 要 去 种{zhòng} 地 的，你 吃 不 了 那个 苦。”
+^袁隆平 却 很 坚持：“我 已经 想好 了。我 要 让 农民 种 出 更 多 的 粮食。”最后，他 考 上 了 ^重庆 的 一 所 农学院，学习 农学。
+大学 毕业 后，1953 年，他 被 分配 到 ^湖南 西部 一 个 叫 ^安江 的 小 地方，在 一 所 农业 学校 当 老师。那里 交通 很 不 方便，生活 也 很 艰苦。可是 ^袁隆平 很 喜欢 那里，他 每天 教 学生，也 带着 学生 下 田。
+
+# 路 边 的 饿 人
+1959 年 到 1961 年，中国 经历 了 严重 的 大 饥荒。到处 都 缺 粮食，很 多 人 吃 不 饱 饭，饿 得 全身 浮肿。
+^袁隆平 亲眼 看到，有 的 人 饿 得 走 不 动，倒 在 路 边，再 也 没有 起来。他 自己 也 常常 饿 得 头晕。他 心里 非常 难过：“作为 一 个 学 农 的 人，看到 老百姓 饿 肚子，我 却 什么 也 做 不 了！”
+他 下定决心：一定 要 想 办法，让 地 里 长{zhǎng} 出 更 多 的 粮食，让 中国人 不 再 挨饿。他 把 目光 放 在 了 南方 人 最 重要 的 粮食 —— 水稻 上。
+
+# 一 棵 特别 的 稻
+1960 年 7 月 的 一 天，^袁隆平 在 学校 的 试验田 里 观察。突然，他 发现 了 一 棵 与 众 不同 的 稻子。它 长{zhǎng} 得 特别 高 大，穗子 又 大 又 饱满。他 数{shǔ} 了 数{shǔ}，一 个 穗 上 有 两百三十 多 粒 稻谷！
+他 高兴 极 了，以为 自己 找到 了 一 个 新 的 好 品种。第二 年 春天，他 把 这 棵 稻子 的 种子 种{zhòng} 了 下去。可是 长{zhǎng} 出来 的 稻子 高 的 高，矮 的 矮，早 的 早，晚 的 晚，一点儿 也 不 像 它 们 的“妈妈”。
+^袁隆平 非常 失望。可是 他 冷静 下来 一 想：为什么 会 这样 呢？只有 一 种 解释：那 棵 特别 的 稻子，是 一 棵 天然 的“杂交 稻”！它 是 两 种 不同 稻子 的“孩子”，所以 才 长{zhǎng} 得 那么 好。这 说明，水稻 也 有 杂交 优势！
+
+# 大家 都 说 不 可能
+那时候，很 多 有名 的 科学家 都 认为：水稻 是 自己 给 自己 授粉 的 植物，一 朵 花 里 有 雄蕊，也 有 雌蕊，自己 就 能 结 种子。这样 的 植物，搞 杂交 是 没有 意义 的。连 书 上 都 是 这么 写 的。
+可是 ^袁隆平 不 相信。他 想：要 让 水稻 大规模 地{de} 杂交，首先 要 找到 一 种 特别 的 水稻：它 的 雄蕊 是 坏 的，没有 花粉，自己 不 能 结 种子，只 能 接受 别的 稻子 的 花粉。这 种 稻子 叫“雄性 不育 株”。
+他 说：“书 上 说 的，不 一定 都 是 对 的。只有 到 田 里 去，才 能 找到 答案。”
+
+# 在 稻 海 里 找 针
+1964 年 夏天，水稻 开花 的 季节，^袁隆平 每天 拿着 放大镜，在 稻田 里 一 棵 一 棵 地{de} 找。水稻 的 花 很 小，而且 只 在 中午 开 一两 个 小时。他 每天 中午 顶着 大 太阳，弯着 腰，一 走 就 是 几 个 小时。
+找 了 一 天，两 天，十 天……他 检查 了 一万四千 多 个 稻穗。整整 十四 天 以后，在 第十四 天 的 中午，他 终于 在 一 片 稻田 里 发现 了 第一 棵 雄性 不育 株！他 高兴 得 差点儿 跳 起来。
+那 两 年，他 一共 找到 了 六 棵。他 把 研究 结果 写成 了 一 篇 论文，发表 在 中国 的 科学 杂志 上。这 是 中国 第一 篇 关于 杂交 水稻 的 论文。
+
+# 被 毁 的 秧苗
+研究 刚刚 有 了 一点儿 进展，困难 又 来 了。1968 年 5 月 的 一 天 晚上，有 人 偷偷 把 ^袁隆平 精心 培育 的 七十 多 盆 秧苗 全部 拔掉 了，扔 了。
+^袁隆平 知道 以后，急 得 吃 不 下 饭，睡 不 着 觉。他 和 学生们 到处 去 找。第四 天，在 学校 附近 的 一 口 井 里，他 发现 水面 上 漂着 几 根 秧苗。他 不 顾 危险，跳 进 井 里 去 捞，最后 只 救 回 了 五 根。
+就 是 靠 这 五 根 秧苗，他 的 研究 才 没有 中断。
+
+# 海南 的 野 稻
+后来 的 几 年，^袁隆平 和 学生们 做 了 几千 次 试验，可是 培育 出来 的 不育 株，都 有 一 个 问题：不 能 一代 一代 地{de} 保持 下去。
+^袁隆平 想：也许 应该 用 野生 的 稻子 和 栽培 的 稻子 杂交。为了 寻找 野生 稻，他 和 学生们 去 了 ^海南、^云南、^广东 很 多 地方。冬天，他们 像 候鸟 一样 去 南方，因为 那里 天气 暖和，一 年 可以 多 种{zhòng} 一 季。
+1970 年 11 月，他 的 学生 ^李必湖 在 ^海南 ^三亚 的 一 个 铁路 边 的 沼泽 里，发现 了 一 棵 雄花 不育 的 野生 稻。大家 叫 它“野败”。这 是 一 个 巨大 的 突破！以后 的 研究，就 是 从 这 棵“野败”开始 的。
+
+# 成功 了
+有 了“野败”，全国 很 多 地方 的 科学家 都 加入 了 研究。大家 一起 合作，经过 三 年 的 努力，1973 年，^袁隆平 和 同事们 终于 培育 出 了 能 大面积 种植 的 杂交 水稻。
+杂交 水稻 的 产量 比 普通 水稻 高 了 百分之二十 左右。1976 年 开始，杂交 水稻 在 全国 推广。到 今天，中国 每 年 种植 的 杂交 水稻 有 两亿 多 亩，每 年 多 收 的 粮食，可以 多 养活 七千 万 人。
+后来，^袁隆平 又 开始 研究“超级 稻”，一 亩 地 的 产量 从 七百 公斤，一直 提高 到 一千 公斤 以上。外国 人 叫 他“杂交水稻之父”，说 他 用 一 粒 种子 改变 了 世界。
+
+# 禾下乘凉梦
+^袁隆平 出名 以后，很 多 人 想 请 他 去 城市 里 舒舒服服 地{de} 生活。可是 他 一直 住 在 ^长沙 的 农科院 里，每天 还是 去 田 里。他 的 皮肤 晒 得 黑黑 的，看 起来 就 像 一 个 普通 的 老 农民。
+他 有 两 个 梦想。第一 个 叫“禾下乘凉梦”：他 梦见 稻子 长{zhǎng} 得 像 高粱 一样 高，穗子 像 扫把 一样 长，谷粒 像 花生 一样 大，他 和 朋友们 坐 在 稻子 下面 乘凉。第二 个 梦想，是“杂交水稻覆盖全球梦”：让 全世界 的 人 都 吃 得 饱。
+为了 第二 个 梦想，他 培训 了 来自 八十 多 个 国家 的 一万四千 多 名 学员。今天，杂交 水稻 已经 在 ^印度、^越南、^菲律宾、^美国、^马达加斯加 等 很 多 国家 种植。
+
+# 一 粒 种子
+2021 年 5 月 22 日，^袁隆平 在 ^长沙 去世 了，九十一 岁。去世 前 不久，他 还 问 医生：“外面 天气 怎么样？今天 是 晴天 还是 雨天？”因为 天气 会 影响 稻子 的 生长。
+消息 传 出来，成千上万 的 人 自发 地{de} 来到 医院 和 街 上，送 他 最后 一 程。很 多 人 拿着 鲜花，也 有 人 拿着 一 把 稻穗。大家 一边 哭，一边 喊：“袁爷爷，一路走好！”有 一 句 话 在 网 上 流传：“袁爷爷，您 放心，我们 一定 不 浪费 一 粒 粮食。”
+^袁隆平 说 过：“我 不 在 家，就 在 试验田；不 在 试验田，就 在 去 试验田 的 路 上。”今天，当 你 吃 一 碗 白 米饭 的 时候，也许 可以 想起 那 个 在 稻田 里 弯着 腰、拿着 放大镜 的 老人。他 让 一 个 曾经 挨饿 的 国家，吃 饱 了 饭。
+
+@glossary
+农业 | agriculture | agriculture
+饥荒 | famine | famine
+挨饿 | souffrir de la faim | to go hungry
+水稻 | riz (plante) | rice (plant)
+穗子 | épi | ear (of grain)
+杂交 | hybridation | hybridisation
+授粉 | pollinisation | pollination
+花粉 | pollen | pollen
+放大镜 | loupe | magnifying glass
+秧苗 | plants de riz | rice seedlings
+产量 | rendement | yield
+乘凉 | se reposer au frais | to enjoy the cool
+
+@questions
+Q Qu'est-ce qui donne à Yuan Longping l'envie d'étudier l'agriculture ? | What makes Yuan Longping want to study agriculture?
++ La visite d'un verger magnifique quand il était enfant | Visiting a beautiful orchard as a child
+- Son père est paysan | His father is a farmer
+- Un livre | A book
+- La famine | The famine
+= « Wǒ xué nóng, shì cóng nà cì cānguān kāishǐ de. » | “Wǒ xué nóng, shì cóng nà cì cānguān kāishǐ de.”
+Q Que pensent ses parents de son choix ? | What do his parents think of his choice?
++ Ils sont contre : c'est trop dur | They are against it: it's too hard
+- Ils sont très contents | They are very happy
+- Ils ne disent rien | They say nothing
+- Ils veulent qu'il soit médecin | They want him to be a doctor
+= « Xué nóng hěn xīnkǔ… nǐ chī bu liǎo nàge kǔ. » | “Xué nóng hěn xīnkǔ… nǐ chī bu liǎo nàge kǔ.”
+Q Qu'est-ce qui pousse Yuan à vouloir produire plus de riz ? | What drives Yuan to want to produce more rice?
++ Il voit des gens mourir de faim pendant la grande famine | He sees people dying of hunger during the great famine
+- Il veut devenir riche | He wants to become rich
+- Son école le lui demande | His school asks him to
+- Il aime manger du riz | He loves eating rice
+= « yǒu de rén è de zǒu bu dòng, dǎo zài lù biān ». | “yǒu de rén è de zǒu bu dòng, dǎo zài lù biān”.
+Q Qu'a de spécial la plante trouvée en 1960 ? | What is special about the plant he finds in 1960?
++ Un épi énorme de plus de 230 grains | A huge ear with over 230 grains
+- Elle est rouge | It is red
+- Elle pousse dans l'eau salée | It grows in salt water
+- Elle n'a pas de grains | It has no grains
+= « yí gè suì shàng yǒu liǎngbǎi sānshí duō lì dàogǔ! » | “yí gè suì shàng yǒu liǎngbǎi sānshí duō lì dàogǔ!”
+Q Qu'en conclut-il quand ses descendants sont tous différents ? | What does he conclude when its offspring are all different?
++ Que c'était un hybride naturel : le riz peut avoir une vigueur hybride | That it was a natural hybrid: rice can show hybrid vigour
+- Qu'il s'est trompé de graines | That he used the wrong seeds
+- Que le sol est mauvais | That the soil is bad
+- Qu'il faut abandonner | That he must give up
+= « shuōmíng, shuǐdào yě yǒu zájiāo yōushì! » | “shuōmíng, shuǐdào yě yǒu zájiāo yōushì!”
+Q Pourquoi beaucoup de scientifiques pensent-ils que l'hybridation du riz est inutile ? | Why do many scientists think rice hybridisation is pointless?
++ Le riz s'autopollinise | Rice pollinates itself
+- Le riz pousse trop lentement | Rice grows too slowly
+- Le riz est trop cher | Rice is too expensive
+- Personne ne mange de riz hybride | Nobody eats hybrid rice
+= « shuǐdào shì zìjǐ gěi zìjǐ shòufěn de zhíwù ». | “shuǐdào shì zìjǐ gěi zìjǐ shòufěn de zhíwù”.
+Q Quelle plante cherche-t-il dans les rizières ? | What plant does he search for in the paddies?
++ Un plant mâle stérile, sans pollen | A male-sterile plant with no pollen
+- Un riz géant | A giant rice
+- Un riz sauvage | A wild rice
+- Un riz rouge | A red rice
+= « xióngxìng bú yù zhū ». | “xióngxìng bú yù zhū”.
+Q Pourquoi la recherche est-elle si difficile ? | Why is the search so hard?
++ Les fleurs de riz sont minuscules et ne s'ouvrent qu'une ou deux heures à midi | Rice flowers are tiny and open only an hour or two at noon
+- Il pleut tout le temps | It rains all the time
+- Il n'a pas de loupe | He has no magnifying glass
+- Les rizières sont interdites | The paddies are off-limits
+= « zhǐ zài zhōngwǔ kāi yì liǎng gè xiǎoshí ». | “zhǐ zài zhōngwǔ kāi yì liǎng gè xiǎoshí”.
+Q Combien d'épis examine-t-il avant de trouver le premier plant ? | How many ears does he examine before finding the first plant?
++ Plus de 14 000 | Over 14,000
+- 100 | 100
+- 1 400 | 1,400
+- 6 | 6
+= « tā jiǎnchá le yíwàn sìqiān duō gè dàosuì ». | “tā jiǎnchá le yíwàn sìqiān duō gè dàosuì”.
+Q Que se passe-t-il en mai 1968 ? | What happens in May 1968?
++ Quelqu'un arrache ses plants ; il en sauve cinq dans un puits | Someone pulls up his seedlings; he saves five from a well
+- Il reçoit un prix | He receives a prize
+- Une inondation | A flood
+- Il part au Hainan | He goes to Hainan
+= « zuìhòu zhǐ jiù huí le wǔ gēn ». | “zuìhòu zhǐ jiù huí le wǔ gēn”.
+Q Qu'est-ce que le « yěbài » trouvé en 1970 ? | What is the “yěbài” found in 1970?
++ Un riz sauvage mâle stérile découvert au Hainan par son élève | A male-sterile wild rice found in Hainan by his student
+- Un insecte | An insect
+- Un nouvel engrais | A new fertiliser
+- Une machine | A machine
+= Trouvé par Lǐ Bìhú près d'une voie ferrée à Sanya. | Found by Lǐ Bìhú near a railway in Sanya.
+Q En quoi consiste le « rêve de se reposer à l'ombre du riz » ? | What is the “dream of resting in the shade of the rice”?
++ Un riz aussi haut que le sorgho, avec des grains gros comme des cacahuètes | Rice as tall as sorghum, with grains as big as peanuts
+- Partir en vacances | Going on holiday
+- Une maison dans les rizières | A house in the paddies
+- Dormir plus | Sleeping more
+= « dàozi zhǎng de xiàng gāoliang yíyàng gāo… gǔlì xiàng huāshēng yíyàng dà ». | “dàozi zhǎng de xiàng gāoliang yíyàng gāo… gǔlì xiàng huāshēng yíyàng dà”.
+Q Que demande Yuan Longping peu avant de mourir ? | What does Yuan Longping ask shortly before he dies?
++ Quel temps il fait dehors | What the weather is like outside
+- Des nouvelles de sa famille | News of his family
+- Un bol de riz | A bowl of rice
+- Son prix | His award
+= Parce que le temps influence la croissance du riz. | Because weather affects how rice grows.

@@ -1,0 +1,153 @@
+id: zhantianyou
+order: 113
+category: history
+level: hsk3
+hanzi: 詹天佑修京张铁路
+pinyin: Zhān Tiānyòu xiū Jīng-Zhāng tiělù
+title: Zhan Tianyou et le chemin de fer Pékin–Zhangjiakou | Zhan Tianyou and the Beijing–Zhangjiakou Railway
+era: 1861 – 1919 | 1861 – 1919
+summary: À 11 ans, il part étudier en Amérique. Quand la Chine veut construire son premier chemin de fer de montagne sans aide étrangère, les étrangers rient : « L'ingénieur chinois qui pourra le faire n'est pas encore né. » Il leur répond par un train. | At 11 he leaves to study in America. When China wants to build its first mountain railway without foreign help, foreigners laugh: “The Chinese engineer who can do it hasn't been born yet.” He answers with a train.
+
+# 去 美国 的 孩子
+1861 年，在 ^广东 ^南海 的 一 个 普通 家庭，一 个 男孩 出生 了，他 叫 ^詹天佑。那时候 的 中国，正 处 在 一 个 非常 困难 的 时代。^清朝 在 战争 中 一 次 次 被 外国 打败，很 多 有 见识 的 人 都 在 想：中国 怎么 才 能 强大 起来？
+1872 年，^清朝 政府 决定 选 一些 聪明 的 孩子，送 到 ^美国 去 学习 科学 和 技术。十一 岁 的 ^詹天佑 报 了 名。爸爸 一开始 很 舍 不 得，签 了 一 张 保证书：孩子 要 在 国外 学习 十五 年，生病 或者 发生 意外，政府 不 负责。
+那 年 夏天，^詹天佑 和 二十九 个 同学 一起，坐 了 一 个 月 的 船，穿过 太平洋，来到 了 ^美国。他们 是 中国 第一 批 官派 的 留学生，一共 有 一百二十 个 孩子，叫“留美幼童”。
+
+# 耶鲁 的 学生
+刚 到 ^美国，^詹天佑 一 句 英语 都 不 会 说。他 住 在 一 个 ^美国 家庭 里，每天 刻苦 学习。几 年 以后，他 不但 英语 说得 很 好，数学 和 物理 也 学得 非常 出色。
+他 对 火车 特别 感兴趣。那时候，^美国 的 铁路 发展 得 非常 快，一 条 一 条 的 铁路 通 向 全国。^詹天佑 常常 想：中国 那么 大，如果 也 有 很 多 铁路，该 多 好 啊！
+1878 年，他 考 上 了 有名 的 ^耶鲁 大学，学习 土木 工程，专门 研究 铁路。1881 年，他 以 优异 的 成绩 毕业 了，论文 还 得 了 奖。可是，就 在 这 一 年，^清朝 政府 突然 下令：所有 的 留学生，马上 回国！
+
+# 回国 以后
+回到 中国，^詹天佑 心里 充满 了 热情，想 马上 为 国家 修 铁路。可是 政府 却 派 他 去 学习 驾驶 军舰。后来，他 又 被 派 去 当 英语 老师。整整 七 年，他 学 的 铁路 知识 一点儿 也 用 不 上。
+^詹天佑 没有 抱怨，也 没有 放弃。他 一边 工作，一边 继续 读 关于 铁路 的 书。1888 年，他 终于 有 了 机会，进入 了 中国 的 铁路 公司，当 了 一 名 工程师。可是 那时候，中国 的 铁路 都 是 外国 人 管 的，中国 工程师 只 能 当 助手。
+有 一 次，修 一 座 大 桥，^英国、^日本、^德国 的 工程师 都 失败 了，桥墩 怎么 也 立 不 住。最后 他们 只好 请 ^詹天佑 来 试试。^詹天佑 仔细 研究 了 河底 的 泥沙，改变 了 方法，用 潜水员 把 桥墩 打 到 了 下面 的 岩石 上，终于 把 桥 修 成 了。外国 人 这才 开始 对 这个 中国 工程师 刮目相看。
+
+# 京张 铁路
+二十 世纪 初，^清朝 政府 决定 修 一 条 从 ^北京 到 ^张家口 的 铁路，叫“京张铁路”。^张家口 是 北方 的 一 个 重要 城市，是 商人 去 ^蒙古 的 大门。
+可是 这 条 铁路 要 经过 很 多 大 山，特别 是 ^居庸关 和 ^八达岭 一带，山 高 坡 陡，地形 非常 复杂。^英国 和 ^俄国 都 想 抢 这 条 铁路 的 修 筑 权，两 国 争 来 争 去，谁 也 不 让 谁。
+最后 他们 提出 一 个 条件：如果 中国 不 用 外国 的 工程师，也 不 借 外国 的 钱，自己 修，他们 就 不 管 了。他们 心里 想：中国人 根本 不 可能 修 成。
+
+# 还 没有 出生
+消息 传 出来，很 多 外国 报纸 都 嘲笑 中国：“能 在 ^南口 以北 修 铁路 的 中国 工程师，还 没有 出生 呢！”
+1905 年，^清朝 政府 任命 四十四 岁 的 ^詹天佑 为 总 工程师。^詹天佑 知道，这 不 只是 修 一 条 铁路，这 是 关系 到 中国人 尊严 的 大事。他 说：“如果 失败 了，不 只是 我 个人 的 失败，也 是 中国 工程师 的 失败，外国 人 会 更 看不起 我们。”
+他 带着 几 个 年轻 的 中国 工程师，背着 仪器，开始 勘测 路线。山 上 风沙 很 大，常常 一 刮 就 是 一 整天。他 白天 爬 山，晚上 就 在 油灯 下 计算 和 画图。他 常常 对 助手 说：“我们 的 工作，一定 要 精密。‘大概’‘差不多’这样 的 词，不能 出现 在 工程师 的 嘴 里。”
+
+# 三 条 路线
+为了 找到 最 好 的 路线，^詹天佑 勘测 了 三 条 不同 的 路线，一 条 一 条 地{de} 比较。他 还 去 找 当地 的 老 农民、放羊 的 人 请教，问 他们 哪里 的 山 比较 低，哪里 冬天 会 结冰。
+最后，他 选 了 一 条 经过 ^关沟 的 路线。这 条 路线 虽然 最 难 修，可是 路 最 短，花 钱 最 少。路线 定 下来 以后，1905 年 9 月，京张铁路 正式 开工 了。
+工人们 都 是 普通 的 中国 农民，以前 从来 没有 修 过 铁路。^詹天佑 就 一 个 一 个 地{de} 教，还 编 了 很 多 简单 易 懂 的 小 册子。工地 上 没有 机器，大部分 工作 都 是 用 手、用 锤子、用 扁担 完成 的。
+
+# 八达岭 隧道
+最 难 的，是 在 ^八达岭 打 一 条 一千 多 米 长 的 隧道。那时候 没有 先进 的 机器，如果 只 从 两 头 往 中间 挖，要 花 很 长 时间。
+^詹天佑 想 了 一 个 好 办法：他 先 在 山 顶 的 中间 往 下 打 两 口 竖井，挖到 隧道 的 位置，然后 从 竖井 里 分别 向 两 头 挖。再 加上 从 隧道 两 头 往 里 挖，一共 六 个 工作面 同时 开工，速度 一下子 快 了 很 多。
+挖 隧道 的 时候，山 里 的 水 常常 涌 出来。^詹天佑 和 工人们 一起 站 在 冰冷 的 水 里，用 桶 一 桶 一 桶 地{de} 往 外 提。他们 还 用 抽水机，日夜 不停。就 这样，隧道 一 米 一 米 地{de} 向 前 推进。
+
+# 人 字 形 铁路
+另 一 个 难题 是：火车 怎么 爬 上 那么 陡 的 山坡？^青龙桥 一带 的 坡 非常 陡，火车 开 不 上去。如果 修 一 条 很 长 的 盘山 路，又 太 费 时间 和 钱。
+^詹天佑 设计 了 一 条“人”字 形 的 线路。火车 开到 “人”字 的 中间，停 下来，然后 倒 着 往 另 一 边 开 上去。为了 让 火车 有 足够 的 力气，他 在 火车 的 前 面 和 后面 各 放 一 个 火车头：上山 的 时候，一 个 拉，一 个 推。到 了 中间，原来 推 的 变成 拉 的，原来 拉 的 变成 推 的。
+这样，坡度 减小 了，路线 也 缩短 了。这 个 聪明 的 设计，让 很 多 外国 工程师 都 非常 佩服。
+
+# 提前 两 年
+^詹天佑 还 用 了 一 种 新 的 车钩，叫“自动 车钩”，车厢 和 车厢 之间 连接 得 更 牢固、更 安全。他 对 每 一 个 细节 都 要求 很 严格，一 根 枕木、一 颗 螺丝 都 要 亲自 检查。
+1909 年 9 月 24 日，京张铁路 全线 通车 了。原来 计划 要 修 六 年，结果 只 用 了 四 年，提前 两 年 完成！而且，花 的 钱 比 外国 人 估计 的 少 了 很 多。
+通车 那 天，火车 拉着 长长 的 汽笛，从 ^北京 开 向 ^张家口。铁路 两边 站满 了 欢呼 的 人群。很 多 外国 的 工程师 和 记者 也 来 参观，他们 不得不 承认：中国人 能 修 铁路，而且 修 得 非常 好！
+
+# 中国 铁路 之 父
+京张铁路 是 第一 条 完全 由 中国人 自己 设计、自己 修建 的 铁路。从 那 以后，^詹天佑 被 人们 称为“中国 铁路 之 父”。
+他 后来 又 主持 修 了 很 多 铁路，还 培养 了 很 多 年轻 的 中国 工程师。他 常常 对 年轻 人 说：“各 出 所 学，各 尽 所 知，使 国家 富强 不 受 外侮。”1919 年，^詹天佑 因 病 去世，五十八 岁。
+今天，在 ^八达岭 的 ^青龙桥 车站，有 一 座 ^詹天佑 的 铜像，他 静静 地{de} 看着 他 修 的 铁路。一百 多 年 后，2019 年，一 条 新 的 京张 高铁 通车 了，时速 三百五十 公里，从 ^北京 到 ^张家口 只 要 不到 一 个 小时。新 铁路 和 老 铁路 在 ^八达岭 附近 交叉 而 过 —— 就 像 一 个 新 时代 在 向 一 位 老 前辈 致敬。
+
+@glossary
+留学生 | étudiant à l'étranger | overseas student
+土木工程 | génie civil | civil engineering
+工程师 | ingénieur | engineer
+桥墩 | pile de pont | bridge pier
+刮目相看 | regarder d'un œil nouveau | to see in a new light
+嘲笑 | se moquer | to mock
+尊严 | dignité | dignity
+勘测 | prospecter, relever le terrain | to survey
+隧道 | tunnel | tunnel
+竖井 | puits vertical | vertical shaft
+陡 | raide | steep
+提前 | en avance | ahead of schedule
+
+@questions
+Q Pourquoi Zhan Tianyou part-il en Amérique à 11 ans ? | Why does Zhan Tianyou go to America at eleven?
++ Le gouvernement Qing envoie des enfants y étudier les sciences | The Qing government sends children to study science there
+- Sa famille déménage | His family moves
+- Il fuit la guerre | He flees war
+- Il veut devenir marchand | He wants to be a merchant
+= Ce sont les « Liú Měi yòutóng », 120 enfants. | They are the “Liú Měi yòutóng”, 120 children.
+Q Que signe son père avant le départ ? | What does his father sign before he leaves?
++ Une garantie : 15 ans d'études, le gouvernement n'est pas responsable des accidents | A pledge: 15 years of study, government not liable for accidents
+- Un contrat de travail | A work contract
+- Un certificat de mariage | A marriage certificate
+- Rien | Nothing
+= « háizi yào zài guówài xuéxí shíwǔ nián… zhèngfǔ bú fùzé ». | “háizi yào zài guówài xuéxí shíwǔ nián… zhèngfǔ bú fùzé”.
+Q Qu'étudie-t-il à Yale ? | What does he study at Yale?
++ Le génie civil, spécialité chemins de fer | Civil engineering, specialising in railways
+- La médecine | Medicine
+- Le droit | Law
+- La littérature | Literature
+= « xuéxí tǔmù gōngchéng, zhuānmén yánjiū tiělù ». | “xuéxí tǔmù gōngchéng, zhuānmén yánjiū tiělù”.
+Q Que fait-il les sept premières années après son retour ? | What does he do in his first seven years back?
++ Il apprend à piloter des navires de guerre puis enseigne l'anglais | He learns to sail warships, then teaches English
+- Il construit des voies ferrées | He builds railways
+- Il retourne en Amérique | He returns to America
+- Il ouvre une entreprise | He starts a company
+= « zhěngzhěng qī nián, tā xué de tiělù zhīshi yìdiǎnr yě yòng bu shàng ». | “zhěngzhěng qī nián, tā xué de tiělù zhīshi yìdiǎnr yě yòng bu shàng”.
+Q Comment réussit-il le pont où les étrangers avaient échoué ? | How does he succeed with the bridge where foreigners had failed?
++ Il étudie le fond de la rivière et fait poser les piles sur la roche | He studies the riverbed and has the piers set on bedrock
+- Il achète un pont étranger | He buys a foreign bridge
+- Il change de rivière | He moves to another river
+- Il utilise du bambou | He uses bamboo
+= « yòng qiánshuǐyuán bǎ qiáodūn dǎ dào le xiàmian de yánshí shàng ». | “yòng qiánshuǐyuán bǎ qiáodūn dǎ dào le xiàmian de yánshí shàng”.
+Q Quelle condition les Britanniques et les Russes posent-ils ? | What condition do Britain and Russia set?
++ La Chine doit construire seule, sans ingénieurs ni argent étrangers | China must build alone, without foreign engineers or money
+- La Chine doit payer un impôt | China must pay a tax
+- La ligne doit aller en Russie | The line must go to Russia
+- Ils veulent construire ensemble | They want to build together
+= Ils pensent : « Zhōngguórén gēnběn bù kěnéng xiū chéng. » | They think: “Zhōngguórén gēnběn bù kěnéng xiū chéng.”
+Q Que disent les journaux étrangers ? | What do foreign newspapers say?
++ L'ingénieur chinois capable de le faire n'est pas encore né | The Chinese engineer who can do it hasn't been born yet
+- Que Zhan est un génie | That Zhan is a genius
+- Que la ligne est inutile | That the line is useless
+- Rien | Nothing
+= « … Zhōngguó gōngchéngshī, hái méiyǒu chūshēng ne! » | “… Zhōngguó gōngchéngshī, hái méiyǒu chūshēng ne!”
+Q Quels mots ne doivent jamais sortir de la bouche d'un ingénieur selon lui ? | Which words should never come from an engineer's mouth, according to him?
++ « À peu près » et « environ » | “Roughly” and “more or less”
+- « Je ne sais pas » | “I don't know”
+- « C'est impossible » | “It's impossible”
+- « Demain » | “Tomorrow”
+= « “Dàgài” “chàbuduō” zhèyàng de cí, bù néng chūxiàn… ». | “ “Dàgài” “chàbuduō” zhèyàng de cí, bù néng chūxiàn…”.
+Q Pourquoi choisit-il la route de la vallée Guangou ? | Why does he choose the Guangou valley route?
++ C'est la plus difficile mais la plus courte et la moins chère | It is the hardest but shortest and cheapest
+- C'est la plus facile | It is the easiest
+- C'est la plus belle | It is the most beautiful
+- Les étrangers l'ont conseillée | Foreigners recommended it
+= « suīrán zuì nán xiū, kěshì lù zuì duǎn, huā qián zuì shǎo ». | “suīrán zuì nán xiū, kěshì lù zuì duǎn, huā qián zuì shǎo”.
+Q Comment accélère-t-il le creusement du tunnel de Badaling ? | How does he speed up digging the Badaling tunnel?
++ Il creuse deux puits verticaux pour travailler sur six fronts à la fois | He sinks two vertical shafts to work on six faces at once
+- Il utilise des explosifs étrangers | He uses foreign explosives
+- Il fait travailler la nuit seulement | He works only at night
+- Il raccourcit le tunnel | He shortens the tunnel
+= « yígòng liù gè gōngzuòmiàn tóngshí kāigōng ». | “yígòng liù gè gōngzuòmiàn tóngshí kāigōng”.
+Q Comment fonctionne la voie en forme de « 人 » ? | How does the “人”-shaped track work?
++ Le train s'arrête au sommet du 人 et repart en marche arrière, avec une locomotive à chaque bout | The train stops at the point of the 人 and reverses, with an engine at each end
+- Le train tourne en rond | The train goes round in circles
+- Le train passe sous la montagne | The train goes under the mountain
+- On porte le train | The train is carried
+= « yí gè lā, yí gè tuī… yuánlái tuī de biànchéng lā de ». | “yí gè lā, yí gè tuī… yuánlái tuī de biànchéng lā de”.
+Q Combien de temps a pris la construction ? | How long did construction take?
++ Quatre ans, deux ans d'avance sur le plan | Four years, two years ahead of plan
+- Six ans | Six years
+- Dix ans | Ten years
+- Un an | One year
+= « yuánlái jìhuà yào xiū liù nián, jiéguǒ zhǐ yòng le sì nián ». | “yuánlái jìhuà yào xiū liù nián, jiéguǒ zhǐ yòng le sì nián”.
+Q Que se passe-t-il en 2019 ? | What happens in 2019?
++ La nouvelle ligne à grande vitesse Pékin–Zhangjiakou ouvre | The new Beijing–Zhangjiakou high-speed line opens
+- L'ancienne ligne est détruite | The old line is destroyed
+- On découvre un tunnel | A tunnel is discovered
+- On érige sa première statue | His first statue is erected
+= 350 km/h, moins d'une heure, et elle croise l'ancienne ligne près de Badaling. | 350 km/h, under an hour, crossing the old line near Badaling.

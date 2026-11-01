@@ -1,0 +1,161 @@
+id: kongzi
+order: 101
+category: history
+level: hsk3
+hanzi: 孔子的一生
+pinyin: Kǒngzǐ de yìshēng
+title: La vie de Confucius | The Life of Confucius
+era: 551 – 479 av. J.-C. | 551 – 479 BC
+summary: Un garçon pauvre qui a perdu son père à trois ans devient le plus grand maître de l'histoire chinoise. Quatorze ans sur les routes, trois mille élèves, et des idées qui guident encore la Chine aujourd'hui. | A poor boy who lost his father at three becomes the greatest teacher in Chinese history. Fourteen years on the road, three thousand students, and ideas that still guide China today.
+
+# 一 个 穷 孩子
+两千五百 多 年 前，中国 还 没有 统一，分成 了 很 多 小 国家。在 东边 有 一 个 国家 叫 ^鲁国。公元前 551 年，^鲁国 的 一 个 小 村子 里 出生 了 一 个 男孩。他 姓 ^孔，名字 叫 ^丘，后来 人们 尊敬 地{de} 叫 他 ^孔子。
+^孔子 三 岁 的 时候，爸爸 就 去世 了。妈妈 带着 他 搬到 了 城里，日子 过 得 非常 穷。妈妈 每天 很 早 起床 干活，很 晚 才 睡觉，可是 她 一直 对 儿子 说：“家 里 再 穷，你 也 要 读书。”
+小 ^孔子 很 懂事。别的 孩子 在 外面 玩 的 时候，他 喜欢 拿 几 个 小 碗 和 小 盘子，学着 大人 的 样子 摆 在 桌子 上，然后 认真 地{de} 行礼。邻居们 看 了 都 觉得 很 奇怪：“这个 孩子 怎么 跟 别人 不 一样？”
+
+# 十五 岁 的 决定
+^孔子 十五 岁 那 年，做 了 一 个 重要 的 决定：他 要 一辈子 好好 学习。他 后来 说：“吾 十有五 而 志于学。”意思 是：我 十五 岁 就 立下 了 学习 的 志向。
+那时候 没有 学校 给 穷 孩子 上课，书 也 非常 少，而且 都 是 写 在 竹子 上 的。^孔子 就 到处 去 问。谁 懂得 多，他 就 去 向 谁 学习。他 向 老人 学 历史，向 乐师 学 音乐，向 官员 学 礼仪。
+有 一 次，他 去 一 个 大 庙 参观，每 看到 一样 东西，都 要 问：“这 是 什么？那 是 做 什么 用 的？”有 人 笑 他：“谁 说 他 懂 礼？进 了 庙 什么 都 要 问！”^孔子 听 了，一点儿 也 不 生气，他 说：“不 懂 就 问，这 就 是 礼 啊。”
+^孔子 学习 非常 认真。有 一 次，他 跟 一 位 乐师 学 弹 一 首 古曲，学 了 十 天，还在 弹 同一 首。乐师 说：“你 已经 会 了，可以 学 新 的 了。”^孔子 说：“我 会 弹 曲子 了，可是 还 没 懂 它 的 意思。”又 过 了 很 多 天，他 说：“我 好像 看到 了 写 这 首 曲子 的 人：他 皮肤 很 黑，个子 很 高，眼睛 望着 远方，心里 装着 天下。”乐师 吃惊 地{de} 站 起来：“这 首 曲子 就 是 ^周文王 写 的 啊！”
+
+# 管 仓库 的 年轻 人
+^孔子 十九 岁 结婚，二十 岁 有 了 儿子。为了 养家，他 做 过 很 多 普通 的 工作。他 管 过 仓库，每天 把 粮食 数得 清清楚楚，一 粒 都 不 会 错。他 还 管 过 牛 和 羊，把 它们 养 得 又 肥 又 壮。
+有 人 问 他：“你 读 了 这么 多 书，做 这些 小 事情，不 觉得 可惜 吗？”^孔子 说：“工作 没有 大 小。做 一 件 事，就 要 把 它 做好。”
+就 这样，^孔子 一边 工作，一边 学习。到 三十 岁 的 时候，他 已经 成了 ^鲁国 最 有 学问 的 人 之一。他 说：“三十 而 立。”意思 是：三十 岁，我 能 站稳 了。
+后来，^孔子 听说 ^周 的 都城 有 一 位 很 有 学问 的 老人，叫 ^老子，他 管着 国家 的 图书馆。^孔子 不怕 路 远，专门 跑去 向 他 请教 礼 的 问题。两 个 伟大 的 思想家 见面，聊 了 很 久。^孔子 回来 以后 对 学生们 说：“鸟，我 知道 它 能 飞；鱼，我 知道 它 能 游；可是 ^老子 像 一 条 龙，我 看不透 他。”
+
+# 第一 位 老师
+那时候，只 有 贵族 的 孩子 才 能 读书。穷人 的 孩子 一辈子 都 没有 机会。^孔子 觉得 这样 很 不 公平。他 决定 自己 开 学校，不管 是 有钱 人 还是 穷人，只要 想 学，都 可以 来。
+学费 非常 便宜，只要 带 一点儿 干肉 来 就 可以 了。消息 传 开 以后，很 多 年轻 人 都 来 找 ^孔子。有 的 很 有钱，有 的 穷 得 连 鞋子 都 没有。^孔子 对 他们 都 一样。
+这 就 是 中国 历史 上 第一 所 私人 学校。^孔子 的 一生 一共 教 了 三千 多 个 学生，其中 有 七十二 个 特别 优秀。所以 直到 今天，中国人 还 叫 他“万世 师表”，意思 是 永远 的 老师。
+^孔子 上课 不 只是 读书。他 教 学生 六 种 本领：礼仪、音乐、射箭、驾车、写字 和 算数。他 常常 带着 学生们 到 河 边、山 上 去，一边 走 一边 讨论。有 一 次，他 站 在 河 边，看着 流 走 的 河水，说：“时间 就 像 这 河水 一样，白天 黑夜 都 不 停 地{de} 流 走 啊！”学生们 从此 更 珍惜 时间 了。
+
+# 因材施教
+^孔子 教 学生，不是 每 个 人 都 教 一样 的 东西。有 一 天，学生 ^子路 问：“老师，我 听到 一 个 好 主意，应该 马上 去 做 吗？”^孔子 说：“你 应该 先 问问 你 的 爸爸 和 哥哥。”
+过 了 一会儿，另 一 个 学生 ^冉有 问 了 同样 的 问题。^孔子 却 说：“当然，马上 去 做！”
+旁边 的 学生 ^公西华 很 糊涂：“老师，同样 的 问题，为什么 回答 不 一样 呢？”^孔子 笑着 说：“^子路 做事 太 急，所以 我 让 他 慢 一点儿；^冉有 做事 太 犹豫，所以 我 让 他 快 一点儿。”这 就 是 有名 的“因材施教”：根据 每 个 学生 的 特点 来 教 他。
+^孔子 最 喜欢 的 学生 是 ^颜回。^颜回 家 里 非常 穷，每天 只 吃 一 碗 饭，喝 一 瓢 水，住 在 很 破 的 小 巷子 里。别人 都 受不了 这样 的 生活，^颜回 却 每天 都 很 快乐，因为 他 能 学习。^孔子 常常 说：“^颜回 真 了不起 啊！”还有 一 个 学生 叫 ^子贡，他 很 会 做 生意，后来 成了 有钱 人。^孔子 也 很 欣赏 他，因为 他 有钱 以后 还是 很 有 礼貌，而且 常常 帮助 别人。
+
+# 做 官
+^孔子 五十 岁 的 时候，^鲁国 的 国君 请 他 出来 做 官。他 先 管 一 个 小 城，一 年 以后，这个 城 变得 非常 好：老人 有 人 照顾，孩子 有 书 读，路 上 掉 了 东西 也 没有 人 捡走。
+后来 他 当 上 了 大司寇，管理 全国 的 法律。^鲁国 一 天 比 一 天 强大。旁边 的 ^齐国 很 担心：“如果 ^鲁国 有 ^孔子，以后 一定 会 比 我们 强！”
+^齐国 想 了 一 个 坏 办法。他们 选 了 八十 个 漂亮 的 女子 和 一百二十 匹 好 马，送给 ^鲁国 的 国君。国君 果然 每天 只 顾着 看 歌舞，三 天 都 不 上朝。^孔子 劝 了 很 多 次，国君 都 不 听。^孔子 非常 失望，最后 决定 离开 自己 的 国家。
+^孔子 做 官 的 时候 非常 公正。有 一 次，一 对 父子 打 官司，爸爸 要 告 儿子 不 孝顺。^孔子 没有 马上 判 儿子 的 罪，而是 把 他们 一起 关 了 三 个 月。爸爸 慢慢 想通 了，自己 也 没有 教好 儿子，就 不 告 了。^孔子 说：“不 先 教育，就 惩罚 人，这 不 公平。”
+
+# 十四 年 的 路
+那 一 年，^孔子 已经 五十五 岁 了。他 带着 学生们，坐着 旧 马车，开始 走遍 各国。他 希望 能 找到 一 个 愿意 听 他 意见 的 国君，让 老百姓 过 上 好 日子。
+这 一 走，就 是 十四 年。路 上 非常 辛苦，他们 去 了 ^卫国、^宋国、^陈国、^蔡国……有 的 国君 很 客气，可是 不 用 他；有 的 国君 根本 不 见 他。
+有 一 次，在 ^陈国 和 ^蔡国 之间，他们 被 人 围 了 起来，七 天 没有 饭 吃。很 多 学生 饿 得 站 不 起来，^子路 生气 地{de} 问：“君子 也 会 这么 惨 吗？”^孔子 还在 弹琴 唱歌，他 说：“君子 在 困难 的 时候 也 不 放弃 原则；小人 一 遇到 困难，就 什么 坏 事 都 做 了。”
+在 路 上，他们 也 遇到 过 很 多 有意思 的 人。有 一 天，他们 经过 ^泰山，看见 一 个 女人 在 坟 前 哭。^孔子 让 ^子路 去 问 为什么。女人 说：“以前 我 的 公公 被 老虎 咬 死 了，后来 我 的 丈夫 也 被 老虎 咬 死 了，现在 我 的 儿子 又 被 咬 死 了！”^子路 问：“那 你 为什么 不 离开 这里 呢？”女人 说：“因为 这里 没有 苛刻 的 政府。”^孔子 听 了，对 学生们 说：“你们 要 记住，苛刻 的 政府 比 老虎 还 可怕！”
+
+# 丧家之犬
+还有 一 次，在 ^郑国，^孔子 和 学生们 走散 了。^孔子 一 个 人 站 在 城门 东边 等。有 人 跑来 告诉 学生 ^子贡：“东门 那里 有 一 个 老人，头 像 古代 的 圣人，可是 样子 很 累，像 一 只{zhī} 没有 家 的 狗。”
+^子贡 找到 老师，把 这 句 话 告诉 了 他。大家 以为 ^孔子 会 生气，没 想到 他 哈哈 大笑：“说 我 像 圣人，不 一定 对；说 我 像 没有 家 的 狗，说得 太 对 了！”
+在 最 难 的 日子 里，^孔子 也 没有 失去 幽默。他 常常 对 学生们 说：“知之者 不如 好之者，好之者 不如 乐之者。”意思 是：知道 一样 东西，不如 喜欢 它；喜欢 它，不如 以 它 为 快乐。
+十四 年 里，^孔子 一直 没有 找到 愿意 用 他 的 国君。可是 他 并 没有 白白 浪费 时间。在 路 上，他 把 自己 的 想法 讲给 学生们 听，学生们 又 把 这些 想法 带到 了 很 多 地方。他 的 思想 就 像 种子 一样，慢慢 撒 遍 了 中国 的 大 地。
+
+# 回家
+六十八 岁 那 年，^孔子 终于 回到 了 ^鲁国。他 不 再 想 做 官 了，他 把 全部 的 时间 都 用来 教 学生 和 整理 古书。
+他 整理 了《诗经》，里面 有 三百 多 首 古代 的 诗歌；他 还 根据 ^鲁国 的 历史 写 了《春秋》。他 一 遍 又 一 遍 地{de} 读《易经》，把 穿 竹 简 的 皮绳 都 翻 断 了 三 次。这 就 是 成语“韦编三绝”。
+可是 晚年 的 ^孔子 也 很 伤心。他 的 儿子 死 了，他 最 喜欢 的 学生 ^颜回 也 年纪 轻轻 就 死 了。^孔子 哭着 说：“老天 不 要 我 了！老天 不 要 我 了！”
+有 人 问 他：“老师，您 现在 已经 七十 岁 了，有 什么 感受？”^孔子 想 了 想，说：“七十 而 从心所欲，不 逾 矩。”意思 是：到 了 七十 岁，我 心里 想 做 什么 就 做 什么，可是 不会 做 错 事 了。从 十五 岁 到 七十 岁，他 用 一辈子 的 时间，一直 在 学习，一直 在 进步。
+
+# 《论语》
+公元前 479 年，^孔子 去世 了，七十三 岁。学生们 非常 难过，很 多 人 在 他 的 墓 旁边 住 了 三 年。^子贡 一 个 人 住 了 六 年。
+后来，学生们 把 老师 说 过 的 话 一 句 一 句 地{de} 写 下来，编成 了 一 本 书，叫《论语》。书 里 有 很 多 我们 今天 还在 说 的 话，比如：“学而时习之，不亦说乎？”“己所不欲，勿施于人。”意思 是：自己 不 想 要 的，就 不要 给 别人。
+两千五百 年 过去 了，^孔子 的 思想 影响 了 中国，也 影响 了 ^日本、^韩国、^越南 等 很 多 国家。今天，世界 上 有 很 多“孔子学院”，教 外国人 学习 汉语。也许 你 学习 汉语 的 第一 天，就 已经 走 在 ^孔子 当年 走过 的 路 上 了。
+
+@glossary
+尊敬 | respecter | to respect
+去世 | décéder | to pass away
+志向 | ambition, aspiration | ambition
+礼仪 | rites, étiquette | rites, etiquette
+仓库 | entrepôt | warehouse
+贵族 | aristocratie | nobility
+公平 | juste, équitable | fair
+学费 | frais de scolarité | tuition
+因材施教 | enseigner selon chaque élève | teach each student according to their ability
+国君 | souverain | ruler
+失望 | déçu | disappointed
+整理 | mettre en ordre, compiler | to compile, organise
+
+@questions
+Q Que se passe-t-il quand Confucius a trois ans ? | What happens when Confucius is three?
++ Son père meurt | His father dies
+- Il entre à l'école | He starts school
+- Il déménage dans un autre pays | He moves to another country
+- Il commence à travailler | He starts working
+= « Kǒngzǐ sān suì de shíhou, bàba jiù qùshì le. » | “Kǒngzǐ sān suì de shíhou, bàba jiù qùshì le.”
+Q À quoi joue le petit Confucius ? | What does little Confucius play at?
++ Il dispose des bols et fait les rites comme les adultes | He sets out bowls and performs rites like adults
+- Il joue à la guerre | He plays at war
+- Il construit des maisons | He builds houses
+- Il joue avec des animaux | He plays with animals
+= Il pose de petits bols sur la table puis « rènzhēn de xínglǐ ». | He sets small bowls on the table and “rènzhēn de xínglǐ”.
+Q Quelle décision prend-il à 15 ans ? | What does he decide at fifteen?
++ Étudier toute sa vie | To study all his life
+- Devenir soldat | To become a soldier
+- Quitter son pays | To leave his country
+- Se marier | To get married
+= « Wú shí yǒu wǔ ér zhì yú xué. » | “Wú shí yǒu wǔ ér zhì yú xué.”
+Q Que répond-il à ceux qui se moquent de ses questions au temple ? | What does he answer those who mock his questions in the temple?
++ Demander quand on ne sait pas, c'est justement le rite | Asking when you don't know is itself the rite
+- Qu'ils sont ignorants | That they are ignorant
+- Il ne répond pas et part | He leaves without answering
+- Qu'il connaît déjà tout | That he already knows everything
+= « Bù dǒng jiù wèn, zhè jiù shì lǐ a. » | “Bù dǒng jiù wèn, zhè jiù shì lǐ a.”
+Q Quel principe applique-t-il quand il garde l'entrepôt ? | What principle does he follow as a storekeeper?
++ Il n'y a pas de petit travail : il faut bien faire chaque chose | No job is too small: do every task well
+- Il faut gagner beaucoup d'argent | One must earn a lot of money
+- Les petits travaux sont inutiles | Small jobs are useless
+- Il faut travailler vite | One must work fast
+= « Gōngzuò méiyǒu dà xiǎo. Zuò yí jiàn shì, jiù yào bǎ tā zuò hǎo. » | “Gōngzuò méiyǒu dà xiǎo. Zuò yí jiàn shì, jiù yào bǎ tā zuò hǎo.”
+Q Pourquoi ouvre-t-il une école ? | Why does he open a school?
++ Seuls les enfants nobles pouvaient étudier, ce qu'il trouve injuste | Only noble children could study, which he finds unfair
+- Pour devenir riche | To become rich
+- Le roi le lui demande | The king asks him to
+- Pour ses propres enfants | For his own children
+= « Zhǐ yǒu guìzú de háizi cái néng dúshū… zhèyàng hěn bù gōngpíng. » | “Zhǐ yǒu guìzú de háizi cái néng dúshū… zhèyàng hěn bù gōngpíng.”
+Q Que faut-il payer pour étudier avec lui ? | What do students pay to study with him?
++ Un peu de viande séchée | A little dried meat
+- Une pièce d'or | A gold coin
+- Rien du tout | Nothing at all
+- Un cheval | A horse
+= « zhǐ yào dài yìdiǎnr gānròu lái jiù kěyǐ le ». | “zhǐ yào dài yìdiǎnr gānròu lái jiù kěyǐ le”.
+Q Pourquoi donne-t-il deux réponses différentes à Zilu et Ranyou ? | Why does he give different answers to Zilu and Ranyou?
++ Zilu est trop pressé, Ranyou trop hésitant | Zilu is too hasty, Ranyou too hesitant
+- Il a oublié sa première réponse | He forgot his first answer
+- Il préfère Ranyou | He prefers Ranyou
+- Il se trompe | He makes a mistake
+= C'est le « yīn cái shī jiào » : enseigner selon chaque élève. | This is “yīn cái shī jiào”: teaching each student differently.
+Q Comment le royaume de Qi affaiblit-il le roi de Lu ? | How does the state of Qi weaken the ruler of Lu?
++ Il lui envoie des danseuses et des chevaux pour le distraire | It sends him dancers and horses to distract him
+- Il lui déclare la guerre | It declares war
+- Il kidnappe Confucius | It kidnaps Confucius
+- Il lui envoie de l'or | It sends him gold
+= 80 femmes et 120 chevaux : le roi « sān tiān dōu bú shàngcháo ». | 80 women and 120 horses: the ruler “sān tiān dōu bú shàngcháo”.
+Q Combien d'années Confucius voyage-t-il de royaume en royaume ? | How many years does Confucius travel from state to state?
++ Quatorze ans | Fourteen years
+- Trois ans | Three years
+- Sept ans | Seven years
+- Trente ans | Thirty years
+= « Zhè yì zǒu, jiù shì shísì nián. » | “Zhè yì zǒu, jiù shì shísì nián.”
+Q Comment réagit Confucius quand on le compare à un chien sans maison ? | How does Confucius react when compared to a homeless dog?
++ Il rit et trouve que c'est très juste | He laughs and says it is quite right
+- Il se met en colère | He gets angry
+- Il pleure | He cries
+- Il punit l'homme | He punishes the man
+= « Shuō wǒ xiàng méiyǒu jiā de gǒu, shuō de tài duì le! » | “Shuō wǒ xiàng méiyǒu jiā de gǒu, shuō de tài duì le!”
+Q Que veut dire l'expression « wéi biān sān jué » ? | What does the saying “wéi biān sān jué” describe?
++ Il a tant lu le Yijing que les liens de cuir ont cassé trois fois | He read the Yijing so often its leather bindings broke three times
+- Il a écrit trois livres | He wrote three books
+- Il a perdu trois élèves | He lost three students
+- Il a voyagé trois fois | He travelled three times
+= Les cordes qui tenaient les lamelles de bambou ont cassé trois fois. | The cords holding the bamboo slips broke three times.
+Q Qu'est-ce que le Lunyu (les Entretiens) ? | What is the Lunyu (Analects)?
++ Un livre où ses élèves ont noté ses paroles | A book in which his students wrote down his sayings
+- Un livre écrit par Confucius jeune | A book Confucius wrote when young
+- Une loi du royaume de Lu | A law of the state of Lu
+- Un recueil de chansons | A collection of songs
+= « xuéshengmen bǎ lǎoshī shuō guo de huà… biānchéng le yì běn shū, jiào Lúnyǔ ». | “xuéshengmen bǎ lǎoshī shuō guo de huà… biānchéng le yì běn shū, jiào Lúnyǔ”.

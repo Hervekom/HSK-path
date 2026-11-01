@@ -2,6 +2,7 @@
  {
   "id": "pangu",
   "order": 1,
+  "category": "legend",
   "hanzi": "盘古开天地",
   "titlePinyin": "Pángǔ kāi tiān dì",
   "title": {
@@ -20,6 +21,7 @@
  {
   "id": "nuwa",
   "order": 2,
+  "category": "legend",
   "hanzi": "女娲造人补天",
   "titlePinyin": "Nǚwā zào rén bǔ tiān",
   "title": {
@@ -38,6 +40,7 @@
  {
   "id": "houyi",
   "order": 3,
+  "category": "legend",
   "hanzi": "后羿射日",
   "titlePinyin": "Hòuyì shè rì",
   "title": {
@@ -56,6 +59,7 @@
  {
   "id": "change",
   "order": 4,
+  "category": "legend",
   "hanzi": "嫦娥奔月",
   "titlePinyin": "Cháng'é bēn yuè",
   "title": {
@@ -74,6 +78,7 @@
  {
   "id": "jingwei",
   "order": 5,
+  "category": "legend",
   "hanzi": "精卫填海",
   "titlePinyin": "Jīngwèi tián hǎi",
   "title": {
@@ -92,6 +97,7 @@
  {
   "id": "yugong",
   "order": 6,
+  "category": "legend",
   "hanzi": "愚公移山",
   "titlePinyin": "Yúgōng yí shān",
   "title": {
@@ -110,6 +116,7 @@
  {
   "id": "niulang",
   "order": 7,
+  "category": "legend",
   "hanzi": "牛郎织女",
   "titlePinyin": "Niúláng Zhīnǚ",
   "title": {
@@ -128,6 +135,7 @@
  {
   "id": "mulan",
   "order": 8,
+  "category": "legend",
   "hanzi": "花木兰",
   "titlePinyin": "Huā Mùlán",
   "title": {
@@ -146,6 +154,7 @@
  {
   "id": "baishe",
   "order": 9,
+  "category": "legend",
   "hanzi": "白蛇传",
   "titlePinyin": "Bái shé zhuàn",
   "title": {
@@ -164,6 +173,7 @@
  {
   "id": "liangzhu",
   "order": 10,
+  "category": "legend",
   "hanzi": "梁山伯与祝英台",
   "titlePinyin": "Liáng Shānbó yǔ Zhù Yīngtái",
   "title": {
@@ -182,6 +192,7 @@
  {
   "id": "mengjiangnu",
   "order": 11,
+  "category": "legend",
   "hanzi": "孟姜女哭长城",
   "titlePinyin": "Mèng Jiāngnǚ kū Chángchéng",
   "title": {
@@ -200,6 +211,7 @@
  {
   "id": "wukong",
   "order": 12,
+  "category": "legend",
   "hanzi": "美猴王大闹天宫",
   "titlePinyin": "Měi Hóuwáng dà nào Tiāngōng",
   "title": {
@@ -218,6 +230,7 @@
  {
   "id": "caochuan",
   "order": 13,
+  "category": "legend",
   "hanzi": "草船借箭",
   "titlePinyin": "Cǎo chuán jiè jiàn",
   "title": {
@@ -236,6 +249,7 @@
  {
   "id": "nianshou",
   "order": 14,
+  "category": "legend",
   "hanzi": "年兽的故事",
   "titlePinyin": "Niánshòu de gùshi",
   "title": {
@@ -254,6 +268,7 @@
  {
   "id": "maliang",
   "order": 15,
+  "category": "legend",
   "hanzi": "神笔马良",
   "titlePinyin": "Shénbǐ Mǎ Liáng",
   "title": {
@@ -267,6 +282,351 @@
   },
   "chars": 920,
   "chapters": 7,
+  "questions": 13
+ },
+ {
+  "id": "kongzi",
+  "order": 101,
+  "category": "history",
+  "era": {
+   "fr": "551 – 479 av. J.-C.",
+   "en": "551 – 479 BC"
+  },
+  "hanzi": "孔子的一生",
+  "titlePinyin": "Kǒngzǐ de yìshēng",
+  "title": {
+   "fr": "La vie de Confucius",
+   "en": "The Life of Confucius"
+  },
+  "level": "hsk3",
+  "summary": {
+   "fr": "Un garçon pauvre qui a perdu son père à trois ans devient le plus grand maître de l'histoire chinoise. Quatorze ans sur les routes, trois mille élèves, et des idées qui guident encore la Chine aujourd'hui.",
+   "en": "A poor boy who lost his father at three becomes the greatest teacher in Chinese history. Fourteen years on the road, three thousand students, and ideas that still guide China today."
+  },
+  "chars": 2682,
+  "chapters": 10,
+  "questions": 13
+ },
+ {
+  "id": "qinshihuang",
+  "order": 102,
+  "category": "history",
+  "era": {
+   "fr": "259 – 210 av. J.-C.",
+   "en": "259 – 210 BC"
+  },
+  "hanzi": "秦始皇统一中国",
+  "titlePinyin": "Qín Shǐhuáng tǒngyī Zhōngguó",
+  "title": {
+   "fr": "Qin Shi Huang unifie la Chine",
+   "en": "Qin Shi Huang Unifies China"
+  },
+  "level": "hsk3",
+  "summary": {
+   "fr": "Né otage dans un pays ennemi, roi à 13 ans, il met fin à 500 ans de guerres et crée la Chine. Une même écriture, une même monnaie, des routes, une muraille… et une armée de terre cuite. Un génie et un tyran.",
+   "en": "Born a hostage in an enemy state, king at 13, he ends 500 years of war and creates China. One script, one currency, roads, a wall… and an army of terracotta. A genius and a tyrant."
+  },
+  "chars": 2534,
+  "chapters": 10,
+  "questions": 14
+ },
+ {
+  "id": "zhangqian",
+  "order": 103,
+  "category": "history",
+  "era": {
+   "fr": "vers 164 – 114 av. J.-C.",
+   "en": "c. 164 – 114 BC"
+  },
+  "hanzi": "张骞出使西域",
+  "titlePinyin": "Zhāng Qiān chūshǐ Xīyù",
+  "title": {
+   "fr": "Zhang Qian ouvre la route de la soie",
+   "en": "Zhang Qian Opens the Silk Road"
+  },
+  "level": "hsk3",
+  "summary": {
+   "fr": "Envoyé vers l'ouest avec cent hommes, il est capturé et retenu dix ans. Il se marie, a un fils… et n'oublie jamais sa mission. Treize ans plus tard, il revient avec deux compagnons et la carte d'un monde inconnu.",
+   "en": "Sent west with a hundred men, he is captured and held for ten years. He marries, has a son… and never forgets his mission. Thirteen years later he returns with two companions and the map of an unknown world."
+  },
+  "chars": 2310,
+  "chapters": 10,
+  "questions": 13
+ },
+ {
+  "id": "simaqian",
+  "order": 104,
+  "category": "history",
+  "era": {
+   "fr": "vers 145 – 86 av. J.-C.",
+   "en": "c. 145 – 86 BC"
+  },
+  "hanzi": "司马迁写史记",
+  "titlePinyin": "Sīmǎ Qiān xiě Shǐjì",
+  "title": {
+   "fr": "Sima Qian écrit les Mémoires historiques",
+   "en": "Sima Qian Writes the Records of the Grand Historian"
+  },
+  "level": "hsk3",
+  "summary": {
+   "fr": "Une promesse faite à un père mourant. Un seul mot pour défendre un ami, et l'empereur le condamne à la pire des humiliations. Il aurait pu mourir dignement. Il choisit de vivre, pour finir son livre.",
+   "en": "A promise to a dying father. One word to defend a friend, and the emperor condemns him to the worst humiliation. He could have died with honour. He chose to live, to finish his book."
+  },
+  "chars": 1993,
+  "chapters": 10,
+  "questions": 13
+ },
+ {
+  "id": "cailun",
+  "order": 105,
+  "category": "history",
+  "era": {
+   "fr": "vers 63 – 121 apr. J.-C.",
+   "en": "c. AD 63 – 121"
+  },
+  "hanzi": "蔡伦造纸",
+  "titlePinyin": "Cài Lún zào zhǐ",
+  "title": {
+   "fr": "Cai Lun et l'invention du papier",
+   "en": "Cai Lun and the Invention of Paper"
+  },
+  "level": "hsk3",
+  "summary": {
+   "fr": "Une impératrice lit des montagnes de lamelles de bambou ; la soie coûte une fortune. Un serviteur du palais observe les femmes qui lavent le coton au bord de la rivière… et fabrique ce que le monde entier utilise encore.",
+   "en": "An empress reads mountains of bamboo slips; silk costs a fortune. A palace servant watches women washing cotton by the river… and makes something the whole world still uses."
+  },
+  "chars": 1822,
+  "chapters": 10,
+  "questions": 13
+ },
+ {
+  "id": "libing",
+  "order": 106,
+  "category": "history",
+  "era": {
+   "fr": "vers 256 av. J.-C.",
+   "en": "c. 256 BC"
+  },
+  "hanzi": "李冰修都江堰",
+  "titlePinyin": "Lǐ Bīng xiū Dūjiāngyàn",
+  "title": {
+   "fr": "Li Bing dompte la rivière Min",
+   "en": "Li Bing Tames the Min River"
+  },
+  "level": "hsk3",
+  "summary": {
+   "fr": "Chaque été, la rivière noie la plaine ; chaque hiver, la sécheresse brûle les champs. Un gouverneur et son fils passent des années à étudier l'eau. Leur barrage fonctionne encore aujourd'hui, 2 270 ans plus tard.",
+   "en": "Every summer the river floods the plain; every winter drought burns the fields. A governor and his son spend years studying the water. Their system still works today, 2,270 years later."
+  },
+  "chars": 1905,
+  "chapters": 10,
+  "questions": 13
+ },
+ {
+  "id": "xuanzang",
+  "order": 107,
+  "category": "history",
+  "era": {
+   "fr": "602 – 664",
+   "en": "602 – 664"
+  },
+  "hanzi": "玄奘西行",
+  "titlePinyin": "Xuánzàng xī xíng",
+  "title": {
+   "fr": "Le voyage de Xuanzang vers l'Inde",
+   "en": "Xuanzang's Journey to India"
+  },
+  "level": "hsk3",
+  "summary": {
+   "fr": "L'empereur interdit de quitter le pays. Un jeune moine part quand même, seul, de nuit. Le désert, la soif, les brigands, les montagnes de glace… Dix-sept ans et 50 000 li plus tard, il revient avec 657 livres. Le vrai moine du Voyage vers l'Ouest.",
+   "en": "The emperor forbids leaving the country. A young monk goes anyway, alone, at night. Desert, thirst, bandits, ice mountains… Seventeen years and 50,000 li later he returns with 657 books. The real monk behind Journey to the West."
+  },
+  "chars": 2298,
+  "chapters": 11,
+  "questions": 14
+ },
+ {
+  "id": "jianzhen",
+  "order": 108,
+  "category": "history",
+  "era": {
+   "fr": "688 – 763",
+   "en": "688 – 763"
+  },
+  "hanzi": "鉴真东渡",
+  "titlePinyin": "Jiànzhēn dōng dù",
+  "title": {
+   "fr": "Jianzhen traverse la mer vers le Japon",
+   "en": "Jianzhen Crosses the Sea to Japan"
+  },
+  "level": "hsk3",
+  "summary": {
+   "fr": "Deux moines japonais viennent chercher un maître. Un vieil abbé de 55 ans répond : « J'irai. » Cinq traversées échouées, des tempêtes, des trahisons, ses yeux perdus… Au sixième essai, aveugle, il arrive enfin.",
+   "en": "Two Japanese monks come looking for a master. A 55-year-old abbot answers: “I will go.” Five failed crossings, storms, betrayals, his sight lost… On the sixth try, blind, he finally arrives."
+  },
+  "chars": 1906,
+  "chapters": 11,
+  "questions": 13
+ },
+ {
+  "id": "libai",
+  "order": 109,
+  "category": "history",
+  "era": {
+   "fr": "701 – 762",
+   "en": "701 – 762"
+  },
+  "hanzi": "诗仙李白",
+  "titlePinyin": "Shīxiān Lǐ Bái",
+  "title": {
+   "fr": "Li Bai, l'Immortel de la poésie",
+   "en": "Li Bai, the Immortal Poet"
+  },
+  "level": "hsk3",
+  "summary": {
+   "fr": "Il voulait devenir ministre ; il est devenu le poète le plus aimé de Chine. Une épée, une jarre de vin, mille poèmes, un empereur qui lui sert la soupe… et un petit poème que tous les enfants chinois savent par cœur.",
+   "en": "He wanted to be a minister; he became China's best-loved poet. A sword, a jar of wine, a thousand poems, an emperor who serves him soup… and a short poem every Chinese child knows by heart."
+  },
+  "chars": 1894,
+  "chapters": 10,
+  "questions": 13
+ },
+ {
+  "id": "zhenghe",
+  "order": 110,
+  "category": "history",
+  "era": {
+   "fr": "1371 – 1433",
+   "en": "1371 – 1433"
+  },
+  "hanzi": "郑和下西洋",
+  "titlePinyin": "Zhèng Hé xià Xīyáng",
+  "title": {
+   "fr": "Les sept voyages de Zheng He",
+   "en": "The Seven Voyages of Zheng He"
+  },
+  "level": "hsk3",
+  "summary": {
+   "fr": "87 ans avant Christophe Colomb, plus de 200 navires et 27 000 hommes quittent la Chine. Leur amiral, un garçon capturé à dix ans, va jusqu'en Afrique et revient avec… une girafe.",
+   "en": "87 years before Columbus, over 200 ships and 27,000 men leave China. Their admiral, a boy captured at ten, sails to Africa and comes back with… a giraffe."
+  },
+  "chars": 1909,
+  "chapters": 11,
+  "questions": 13
+ },
+ {
+  "id": "yuefei",
+  "order": 111,
+  "category": "history",
+  "era": {
+   "fr": "1103 – 1142",
+   "en": "1103 – 1142"
+  },
+  "hanzi": "精忠报国岳飞",
+  "titlePinyin": "Jīng zhōng bào guó Yuè Fēi",
+  "title": {
+   "fr": "Yue Fei, loyal jusqu'au bout",
+   "en": "Yue Fei, Loyal to the End"
+  },
+  "level": "hsk3",
+  "summary": {
+   "fr": "Une mère grave quatre caractères dans le dos de son fils. Il devient le général que l'ennemi craint le plus : « Il est plus facile d'ébranler une montagne que l'armée de Yue. » Mais le plus grand danger ne vient pas du champ de bataille.",
+   "en": "A mother carves four characters on her son's back. He becomes the general the enemy fears most: “It is easier to shake a mountain than Yue's army.” But the greatest danger does not come from the battlefield."
+  },
+  "chars": 1969,
+  "chapters": 11,
+  "questions": 13
+ },
+ {
+  "id": "lishizhen",
+  "order": 112,
+  "category": "history",
+  "era": {
+   "fr": "1518 – 1593",
+   "en": "1518 – 1593"
+  },
+  "hanzi": "李时珍和本草纲目",
+  "titlePinyin": "Lǐ Shízhēn hé Běncǎo Gāngmù",
+  "title": {
+   "fr": "Li Shizhen et le Grand Traité des plantes",
+   "en": "Li Shizhen and the Compendium of Materia Medica"
+  },
+  "level": "hsk3",
+  "summary": {
+   "fr": "Trois échecs à l'examen impérial. Un père qui refuse qu'il soit médecin. Puis 27 ans à marcher dans les montagnes, goûter des plantes inconnues, risquer sa vie… pour écrire le livre de médecine le plus célèbre de Chine.",
+   "en": "Three failures at the imperial exam. A father who refuses to let him be a doctor. Then 27 years walking the mountains, tasting unknown plants, risking his life… to write China's most famous book of medicine."
+  },
+  "chars": 1741,
+  "chapters": 10,
+  "questions": 13
+ },
+ {
+  "id": "zhantianyou",
+  "order": 113,
+  "category": "history",
+  "era": {
+   "fr": "1861 – 1919",
+   "en": "1861 – 1919"
+  },
+  "hanzi": "詹天佑修京张铁路",
+  "titlePinyin": "Zhān Tiānyòu xiū Jīng-Zhāng tiělù",
+  "title": {
+   "fr": "Zhan Tianyou et le chemin de fer Pékin–Zhangjiakou",
+   "en": "Zhan Tianyou and the Beijing–Zhangjiakou Railway"
+  },
+  "level": "hsk3",
+  "summary": {
+   "fr": "À 11 ans, il part étudier en Amérique. Quand la Chine veut construire son premier chemin de fer de montagne sans aide étrangère, les étrangers rient : « L'ingénieur chinois qui pourra le faire n'est pas encore né. » Il leur répond par un train.",
+   "en": "At 11 he leaves to study in America. When China wants to build its first mountain railway without foreign help, foreigners laugh: “The Chinese engineer who can do it hasn't been born yet.” He answers with a train."
+  },
+  "chars": 1961,
+  "chapters": 10,
+  "questions": 13
+ },
+ {
+  "id": "tuyouyou",
+  "order": 114,
+  "category": "history",
+  "era": {
+   "fr": "née en 1930",
+   "en": "born 1930"
+  },
+  "hanzi": "屠呦呦和青蒿素",
+  "titlePinyin": "Tú Yōuyōu hé qīnghāosù",
+  "title": {
+   "fr": "Tu Youyou et l'artémisinine",
+   "en": "Tu Youyou and Artemisinin"
+  },
+  "level": "hsk3",
+  "summary": {
+   "fr": "Le paludisme tue des millions de personnes. Une chercheuse sans doctorat, sans diplôme étranger, lit un livre vieux de 1 600 ans et y trouve une phrase… Après 190 échecs, elle teste le remède sur elle-même. Prix Nobel 2015.",
+   "en": "Malaria kills millions. A researcher with no doctorate and no foreign degree reads a 1,600-year-old book and finds one sentence… After 190 failures she tests the remedy on herself. Nobel Prize 2015."
+  },
+  "chars": 1977,
+  "chapters": 11,
+  "questions": 13
+ },
+ {
+  "id": "yuanlongping",
+  "order": 115,
+  "category": "history",
+  "era": {
+   "fr": "1930 – 2021",
+   "en": "1930 – 2021"
+  },
+  "hanzi": "袁隆平和杂交水稻",
+  "titlePinyin": "Yuán Lóngpíng hé zájiāo shuǐdào",
+  "title": {
+   "fr": "Yuan Longping, le père du riz hybride",
+   "en": "Yuan Longping, Father of Hybrid Rice"
+  },
+  "level": "hsk3",
+  "summary": {
+   "fr": "Pendant la grande famine, un jeune professeur voit des gens mourir de faim au bord des routes. Il cherche dans les rizières, épi par épi, une plante que tout le monde dit impossible. Son riz nourrira des centaines de millions de personnes.",
+   "en": "During the great famine a young teacher sees people dying of hunger by the roadside. He searches the paddy fields, ear by ear, for a plant everyone says cannot exist. His rice will feed hundreds of millions."
+  },
+  "chars": 1964,
+  "chapters": 11,
   "questions": 13
  }
 ]

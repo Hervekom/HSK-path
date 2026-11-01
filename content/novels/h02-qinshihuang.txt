@@ -1,0 +1,166 @@
+id: qinshihuang
+order: 102
+category: history
+level: hsk3
+hanzi: 秦始皇统一中国
+pinyin: Qín Shǐhuáng tǒngyī Zhōngguó
+title: Qin Shi Huang unifie la Chine | Qin Shi Huang Unifies China
+era: 259 – 210 av. J.-C. | 259 – 210 BC
+summary: Né otage dans un pays ennemi, roi à 13 ans, il met fin à 500 ans de guerres et crée la Chine. Une même écriture, une même monnaie, des routes, une muraille… et une armée de terre cuite. Un génie et un tyran. | Born a hostage in an enemy state, king at 13, he ends 500 years of war and creates China. One script, one currency, roads, a wall… and an army of terracotta. A genius and a tyrant.
+
+# 战国
+两千三百 年 前，中国 不是 一 个 国家，而是 七 个 国家：^秦、^楚、^齐、^燕、^赵、^魏、^韩。历史 上 把 这个 时代 叫 “战国”，意思 是 互相 打仗 的 国家。
+这 七 个 国家 打 了 两百 多 年 的 仗。每 个 国家 有 自己 的 国王，自己 的 文字，自己 的 钱，连 车子 的 宽度 都 不 一样。一 个 商人 从 ^齐国 走到 ^秦国，要 换 好几 次 钱，还 看 不 懂 别的 国家 的 字。
+老百姓 的 生活 非常 苦。男人 被 抓去 打仗，很 多 人 再 也 没有 回来。女人 和 老人 在 家 里 种{zhòng} 地，可是 粮食 常常 被 军队 抢走。大家 都 在 想：什么 时候 才 能 不 打仗 呢？
+在 这些 战争 中，有 一 次 特别 可怕 的 大战，叫“长平之战”。公元前 260 年，^秦国 和 ^赵国 在 ^长平 打 了 三 年。最后 ^赵国 输 了，四十 万 ^赵国 士兵 投降，几乎 全部 被 ^秦国 杀死 了。从 那 以后，^赵国 人 对 ^秦国 人 又 怕 又 恨。就 在 这 场 大战 的 第二 年，我们 故事 的 主人公 出生 了。
+
+# 人质 的 孩子
+公元前 259 年，在 ^赵国 的 都城 ^邯郸，一 个 男孩 出生 了。他 叫 ^嬴政。他 的 爸爸 是 ^秦国 的 王子，可是 被 送到 ^赵国 当 人质。那时候 ^秦国 和 ^赵国 是 敌人，所以 ^赵国 人 都 很 讨厌 他们 一 家。
+^嬴政 小 时候，^秦国 的 军队 正在 和 ^赵国 打仗。有 一 次，^赵国 人 想 杀死 他 的 爸爸。爸爸 在 一 个 商人 的 帮助 下 逃 回 了 ^秦国，可是 ^嬴政 和 妈妈 留 在 了 ^邯郸。母子 两 人 东躲西藏，常常 被 别的 孩子 欺负。
+这些 痛苦 的 日子，让 小 ^嬴政 变得 非常 坚强，也 变得 不 相信 别人。九 岁 那 年，他 终于 回到 了 ^秦国。
+在 ^邯郸 的 日子 里，^嬴政 也 有 过 一 个 好 朋友。他 叫 ^姬丹，是 ^燕国 的 王子，也 在 ^赵国 当 人质。两 个 孩子 同病相怜，常常 一起 玩。可是 谁 也 没有 想到，很 多 年 以后，这 两 个 小 朋友 会 变成 最 大 的 敌人。
+
+# 十三 岁 的 国王
+回到 ^秦国 几 年 以后，爸爸 当 上 了 国王，可是 只 当 了 三 年 就 去世 了。公元前 246 年，十三 岁 的 ^嬴政 成了 ^秦国 的 国王。
+因为 他 年纪 太 小，国家 的 大事 都 由 大臣 ^吕不韦 来 管。^吕不韦 就 是 当年 帮助 他 爸爸 逃跑 的 那 个 商人。他 很 有 本事，可是 也 越来越 骄傲，好像 自己 才 是 真正 的 国王。
+^嬴政 一 天 天 长大，心里 很 不 高兴。二十二 岁 那 年，他 举行 了 成人礼，开始 自己 管理 国家。不久，他 就 让 ^吕不韦 离开 了 朝廷。从 那 以后，^秦国 的 一切，都 由 他 一 个 人 决定。
+二十二 岁 那 年 发生 了 一 场 叛乱。一 个 叫 ^嫪毐 的 人 想 夺取 王位。年轻 的 国王 一点儿 也 不 慌，他 马上 派 军队 平定 了 叛乱。大臣们 这才 发现，这个 年轻人 一点儿 也 不 简单，他 做事 又 快 又 狠，而且 每 一 步 都 想得 很 清楚。
+
+# 统一 的 梦
+^嬴政 有 一 个 很 大 的 梦想：结束 战争，把 七 个 国家 变成 一 个 国家。^秦国 在 西边，土地 很 多，军队 很 强，而且 一百 多 年 前 就 改革 了 法律：谁 打仗 勇敢，谁 种{zhòng} 地 多，谁 就 能 得到 奖励。
+^嬴政 找到 了 很 多 有 能力 的 人，不管 他们 是 哪 国 人。有 一 个 叫 ^李斯 的 人，本来 是 ^楚国 人，后来 成了 他 最 重要 的 大臣。还有 一 位 将军 叫 ^王翦，打仗 非常 厉害。
+从 公元前 230 年 开始，^秦国 的 军队 先 打败 了 最 小 的 ^韩国，然后 是 ^赵国、^魏国、^楚国、^燕国，最后 是 ^齐国。只 用 了 十 年，到 公元前 221 年，六 个 国家 全部 被 打败 了。几百 年 来，中国 第一 次 变成 了 一 个 统一 的 国家。
+有 一 次，^秦国 的 大臣们 说：“外国 来 的 人 都 不 可靠，应该 把 他们 都 赶走。”^李斯 也 在 被 赶走 的 名单 上。他 写 了 一 篇 文章 给 秦王，说：“泰山 不 拒绝 小 土块，所以 才 这么 高；大海 不 拒绝 小 河流，所以 才 这么 深。”秦王 看 了，马上 改变 了 主意。这 篇 文章 叫《谏逐客书》，今天 的 中国 学生 还在 学习。
+
+# 荆轲 刺 秦王
+统一 的 路 上，^嬴政 也 差点儿 被 杀死。公元前 227 年，^燕国 的 太子 很 害怕，他 找到 了 一 个 勇士，叫 ^荆轲，请 他 去 刺杀 秦王。
+^荆轲 带着 一 张 ^燕国 的 地图 来到 ^秦国，说 是 要 把 土地 送给 秦王。地图 里 卷着 一 把 有 毒 的 短刀。在 大殿 上，^荆轲 慢慢 打开 地图，打开 到 最后，刀 露 了 出来！他 抓住 秦王 的 袖子，拿起 刀 就 刺。
+秦王 吓 了 一 大 跳，用力 一 拉，袖子 断 了。他 绕着 柱子 跑，想 拔 剑，可是 剑 太 长 了，拔 不 出来。这时候，一 个 医生 把 药 袋子 扔 向 ^荆轲，大臣们 喊：“大王，把 剑 背{bēi} 到 背 上 拔！”秦王 终于 拔出 剑，砍 伤 了 ^荆轲。这 是 中国 历史 上 最 有名 的 刺杀 故事 之一。
+那 位 ^燕国 的 太子，就 是 当年 在 ^邯郸 和 ^嬴政 一起 玩 的 ^姬丹。^荆轲 出发 的 那 天，很 多 人 穿着 白色 的 衣服 在 ^易水 边 送 他。^荆轲 唱 了 一 首 歌：“风萧萧 兮 易水 寒，壮士 一 去 兮 不 复 还。”大家 都 知道，他 不 会 再 回来 了。
+
+# 第一 个 皇帝
+统一 以后，^嬴政 觉得 “王” 这个 字 已经 不够 大 了。他 把 古代 传说 中 的“三皇” 和“五帝”放 在 一起，给 自己 起 了 一 个 新 的 称号：“皇帝”。他 是 第一 个 皇帝，所以 叫“始皇帝”，后来 人们 叫 他 ^秦始皇。
+他 说：“我 是 第一 个 皇帝，我 的 儿子 是 第二 个，然后 是 第三 个，一直 到 一 万 个！”从 那 以后 两千 多 年，中国 的 统治者 都 叫“皇帝”。
+那 一 年，^秦始皇 三十九 岁。他 站 在 都城 ^咸阳 的 宫殿 里，看着 地图 上 那么 大 的 国家，心里 想：怎么 才 能 让 这个 国家 真正 成为 一 个 整体 呢？
+他 还 决定，皇帝 说 自己 的 时候 要 用 一 个 特别 的 字：“朕”，别人 都 不 能 用。皇帝 的 命令 叫“诏”。皇帝 的 印章 叫“玺”，是 用 一 块 非常 珍贵 的 玉 做 的，上面 刻着 八 个 字：“受命于天，既寿永昌。”
+
+# 书同文，车同轨
+^秦始皇 和 ^李斯 做 了 很 多 改变 中国 的 事情。第一，统一 文字。以前 七 个 国家 的 字 写法 不 一样，现在 全国 都 要 用 同样 的 字，叫“小篆”。今天 我们 写 的 汉字，就 是 从 那时候 慢慢 发展 来 的。
+第二，统一 钱币。全国 都 用 一 种 圆 形 方 孔 的 铜 钱。这 种 钱 的 样子，在 中国 用 了 两千 多 年。第三，统一 长度 和 重量。一 尺 有 多 长，一 斤 有 多 重，全国 都 一样，买卖 东西 方便 多 了。
+第四，统一 车子 的 宽度，修 了 很 多 宽 的 大 路，从 ^咸阳 通 向 全国。这 就 是 有名 的“书同文，车同轨”。他 还 把 国家 分成 三十六 个 郡，每 个 郡 的 官员 都 由 皇帝 直接 派。这个 管理 国家 的 办法，后来 也 用 了 两千 多 年。
+
+# 长城 和 灵渠
+北方 的 草原 上 住着 ^匈奴 人。他们 骑 马 骑得 非常 好，常常 南下 抢 东西。^秦始皇 派 将军 ^蒙恬 带着 三十 万 大军 去 北方，打败 了 ^匈奴。
+为了 保护 北方，^秦始皇 让 人 把 以前 ^秦、^赵、^燕 三 个 国家 的 城墙 连 起来，又 修 了 很 多 新 的，成了 一 道 一 万 多 里 长 的 城墙，这 就 是 最 早 的“万里长城”。
+在 南方，他 让 人 修 了 一 条 运河，叫 “灵渠”，把 两 条 大 河 连 在 一起，船 可以 从 北方 一直 开 到 南方。两千 多 年 过去 了，今天 灵渠 里 还 有 水 在 流。可是，修 这些 工程 的 是 几十 万 普通 的 老百姓，很 多 人 累 死 在 了 工地 上。
+关于 长城，还 有 一 个 有名 的 故事，叫“^孟姜女 哭 长城”。它 讲 的 是 一 个 女人 的 丈夫 被 抓去 修 长城，累 死 了，她 哭得 长城 都 倒 了。这 只是 一 个 传说，可是 它 告诉 我们，那时候 的 老百姓 有 多么 痛苦。
+
+# 焚书坑儒
+^秦始皇 很 聪明，可是 也 非常 严厉。他 不 喜欢 别人 批评 他。有 些 读书人 常常 说：“古代 的 办法 比 现在 好。”^李斯 对 皇帝 说：“这些 人 用 古书 来 批评 现在，应该 把 这些 书 都 烧 了。”
+公元前 213 年，除了 医学、种{zhòng} 地 和 算命 的 书，很 多 历史 书 和 思想 书 都 被 烧 了。第二 年，又 有 四百 六十 多 个 读书人 和 方士 被 活埋。这 就 是 历史 上 有名 的“焚书坑儒”。
+很 多 珍贵 的 古书 从此 消失 了。直到 今天，人们 说起 ^秦始皇，都 会 说：他 是 一 个 了不起 的 皇帝，也 是 一 个 残酷 的 皇帝。
+
+# 不 死 的 梦 和 兵马俑
+^秦始皇 什么 都 有 了，只 怕 一 件 事：死。他 听说 东边 的 大海 里 有 仙山，山 上 有 长生不老 的 药。他 派 方士 ^徐福 带着 几千 个 少男 少女 坐 船 出 海 去 找。可是 ^徐福 一直 没有 回来。
+他 一 次 又 一 次 地{de} 去 全国 巡游，想 看看 他 的 国家，也 想 找到 仙药。公元前 210 年，在 第五 次 巡游 的 路 上，^秦始皇 生 了 重 病，死 在 了 半路 上，只 活 了 四十九 岁。他 想 传 到 一 万 代 的 王朝，只 过 了 十五 年 就 灭亡 了。
+可是 他 留下 的 东西 一直 都 在。1974 年，^陕西 的 几 个 农民 打 井 的 时候，挖出 了 一 个 陶 人 的 头。后来，考古 学家 在 那里 发现 了 八千 多 个 和 真 人 一样 大 的 陶 兵 和 陶 马，每 个 兵 的 脸 都 不 一样。这 就 是 保护 ^秦始皇 的“兵马俑”，被 称为“世界 第八 大 奇迹”。今天，当 你 站 在 兵马俑 前面，好像 还 能 听到 两千 多 年 前 那 支 军队 的 脚步 声。
+
+@glossary
+统一 | unifier | to unify
+战国 | les Royaumes combattants | the Warring States
+人质 | otage | hostage
+欺负 | maltraiter, harceler | to bully
+大臣 | ministre | minister
+刺杀 | assassiner | to assassinate
+皇帝 | empereur | emperor
+文字 | écriture | script, writing
+钱币 | monnaie | coins, currency
+运河 | canal | canal
+严厉 | sévère | strict, harsh
+兵马俑 | armée de terre cuite | Terracotta Army
+
+@questions
+Q Combien de royaumes y a-t-il à l'époque des Royaumes combattants ? | How many states are there in the Warring States period?
++ Sept | Seven
+- Trois | Three
+- Cinq | Five
+- Douze | Twelve
+= « qī gè guójiā: Qín, Chǔ, Qí, Yān, Zhào, Wèi, Hán ». | “qī gè guójiā: Qín, Chǔ, Qí, Yān, Zhào, Wèi, Hán”.
+Q Où naît Ying Zheng ? | Where is Ying Zheng born?
++ À Handan, capitale de Zhao, où son père est otage | In Handan, capital of Zhao, where his father is a hostage
+- À Xianyang, capitale de Qin | In Xianyang, Qin's capital
+- Dans un village de Qi | In a village in Qi
+- Sur la route | On the road
+= Son père « bèi sòngdào Zhàoguó dāng rénzhì ». | His father “bèi sòngdào Zhàoguó dāng rénzhì”.
+Q Quel effet son enfance difficile a-t-elle sur lui ? | What effect does his hard childhood have on him?
++ Il devient fort mais méfiant | He becomes strong but distrustful
+- Il devient timide | He becomes shy
+- Il devient joyeux | He becomes cheerful
+- Il veut devenir marchand | He wants to become a merchant
+= « biàn de fēicháng jiānqiáng, yě biàn de bù xiāngxìn biéren ». | “biàn de fēicháng jiānqiáng, yě biàn de bù xiāngxìn biéren”.
+Q À quel âge devient-il roi de Qin ? | How old is he when he becomes king of Qin?
++ 13 ans | 13
+- 9 ans | 9
+- 22 ans | 22
+- 39 ans | 39
+= « shísān suì de Yíng Zhèng chéngle Qínguó de guówáng ». | “shísān suì de Yíng Zhèng chéngle Qínguó de guówáng”.
+Q Qui est Lü Buwei ? | Who is Lü Buwei?
++ Le marchand qui avait aidé son père, devenu ministre très puissant | The merchant who had helped his father, now a powerful minister
+- Son frère | His brother
+- Un général ennemi | An enemy general
+- Son professeur de calligraphie | His calligraphy teacher
+= Il dirigeait les affaires quand le roi était jeune, puis est devenu trop arrogant. | He ran affairs while the king was young, then became too arrogant.
+Q Pourquoi l'armée de Qin est-elle si forte ? | Why is Qin's army so strong?
++ Les lois récompensent ceux qui combattent bien et cultivent beaucoup | Its laws reward brave fighters and hard-working farmers
+- Elle a des éléphants | It has elephants
+- Elle achète des soldats étrangers | It buys foreign soldiers
+- Elle a des armes magiques | It has magic weapons
+= « shuí dǎzhàng yǒnggǎn, shuí zhòng dì duō, shuí jiù néng dédào jiǎnglì ». | “shuí dǎzhàng yǒnggǎn, shuí zhòng dì duō, shuí jiù néng dédào jiǎnglì”.
+Q En quelle année la Chine est-elle unifiée ? | In what year is China unified?
++ 221 av. J.-C. | 221 BC
+- 259 av. J.-C. | 259 BC
+- 230 av. J.-C. | 230 BC
+- 210 av. J.-C. | 210 BC
+= « dào gōngyuán qián 221 nián, liù gè guójiā quánbù bèi dǎbài le ». | “dào gōngyuán qián 221 nián, liù gè guójiā quánbù bèi dǎbài le”.
+Q Où Jing Ke cache-t-il son couteau ? | Where does Jing Ke hide his dagger?
++ Dans une carte roulée du royaume de Yan | Inside a rolled-up map of Yan
+- Dans sa manche | In his sleeve
+- Dans un cadeau en or | In a golden gift
+- Dans sa chaussure | In his shoe
+= « dìtú lǐ juǎnzhe yì bǎ yǒu dú de duǎndāo ». | “dìtú lǐ juǎnzhe yì bǎ yǒu dú de duǎndāo”.
+Q Comment le roi parvient-il à sortir son épée ? | How does the king finally draw his sword?
++ Il la fait passer dans son dos, comme le crient ses ministres | He swings it onto his back, as his ministers shout
+- Un garde la lui donne | A guard hands it to him
+- Il casse le fourreau | He breaks the scabbard
+- Il n'y arrive pas | He doesn't manage to
+= « Dàwáng, bǎ jiàn bèi dào bèi shàng bá! » | “Dàwáng, bǎ jiàn bèi dào bèi shàng bá!”
+Q D'où vient le titre « huángdì » ? | Where does the title “huángdì” come from?
++ De la réunion des « Trois Souverains » et des « Cinq Empereurs » légendaires | From combining the legendary “Three Sovereigns” and “Five Emperors”
+- Du nom de sa mère | From his mother's name
+- D'un mot étranger | From a foreign word
+- De la couleur jaune | From the colour yellow
+= Il réunit « sān huáng » et « wǔ dì ». | He combines “sān huáng” and “wǔ dì”.
+Q Que signifie « shū tóng wén, chē tóng guǐ » ? | What does “shū tóng wén, chē tóng guǐ” mean?
++ Une même écriture et une même largeur d'essieu partout | The same script and the same axle width everywhere
+- Tous les livres sont brûlés | All books are burned
+- Chaque famille doit avoir une charrette | Every family must own a cart
+- Les enfants doivent aller à l'école | Children must go to school
+= Il unifie l'écriture (xiǎozhuàn) et la largeur des chars et des routes. | He unifies writing (xiǎozhuàn) and the width of carts and roads.
+Q À quoi sert le canal Lingqu ? | What is the Lingqu canal for?
++ À relier deux grands fleuves pour naviguer du nord au sud | To link two great rivers so boats can go from north to south
+- À protéger contre les Xiongnu | To protect against the Xiongnu
+- À irriguer le palais | To water the palace
+- À transporter de l'or | To carry gold
+= « bǎ liǎng tiáo dà hé lián zài yìqǐ, chuán kěyǐ cóng běifāng yìzhí kāi dào nánfāng ». | “bǎ liǎng tiáo dà hé lián zài yìqǐ, chuán kěyǐ cóng běifāng yìzhí kāi dào nánfāng”.
+Q Qu'est-ce que « fén shū kēng rú » ? | What is “fén shū kēng rú”?
++ Brûler des livres et enterrer vivants des lettrés | Burning books and burying scholars alive
+- Construire des écoles | Building schools
+- Écrire de nouveaux livres | Writing new books
+- Unifier les poids et mesures | Unifying weights and measures
+= Des livres d'histoire et de pensée sont brûlés, plus de 460 lettrés et magiciens enterrés. | History and philosophy books are burned, over 460 scholars and magicians buried.
+Q Comment l'armée de terre cuite a-t-elle été découverte ? | How was the Terracotta Army discovered?
++ Des paysans creusaient un puits en 1974 | Farmers digging a well in 1974
+- Un archéologue la cherchait depuis 50 ans | An archaeologist had searched for 50 years
+- Xu Fu l'a trouvée | Xu Fu found it
+- Elle a toujours été visible | It was always visible
+= « 1974 nián, Shǎnxī de jǐ gè nóngmín dǎ jǐng de shíhou… ». | “1974 nián, Shǎnxī de jǐ gè nóngmín dǎ jǐng de shíhou…”.
