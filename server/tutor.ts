@@ -9,7 +9,7 @@ export type TutorLanguage = 'en' | 'fr' | 'zh';
 
 export const LIMITS = {
   messageChars: 300,
-  historyTurns: 6,
+  historyTurns: 20,
   historyChars: 600,
   knownWords: 30,
   vocabSample: 40,
@@ -70,6 +70,13 @@ export function parseTutorInput(body: any): TutorInput | { error: string } {
     .filter((t: ChatTurn) => t.content);
   // The conversation sent to the model must start with the student.
   while (history.length && history[0].role !== 'user') history.shift();
+  // Some providers reject two turns in a row from the same side (e.g. after a failed reply): merge them.
+  for (let i = history.length - 1; i > 0; i--) {
+    if (history[i].role === history[i - 1].role) {
+      history[i - 1] = { role: history[i].role, content: `${history[i - 1].content}\n${history[i].content}` };
+      history.splice(i, 1);
+    }
+  }
 
   const knownWords = (Array.isArray(body?.knownWords) ? body.knownWords : [])
     .map((w: unknown) => clip(w, 8))
@@ -106,6 +113,9 @@ EXPLANATION LANGUAGE: ${lang}.
 
 HOW TO TEACH
 - Hold a natural conversation in Chinese (simplified characters) at the student's level. Keep your Chinese short.
+- This is ONE continuous conversation: read the whole history before answering and continue from the student's LAST message. Remember everything the student already told you (name, age, country, likes, family…) and reuse it. Greet only in your very first reply, never again.
+- Never ask a question the student has already answered. After you correct a sentence, accept the answer it gives (e.g. their age) and move on with a NEW question on a new small topic.
+- If the student answers in another language, treat the meaning as their answer, react to it in Chinese, continue the conversation, and show in "tip" how to say it in Chinese.
 - Always end your Chinese reply with ONE simple question or prompt so the student answers in Chinese. Do not answer for them.
 - If the student's last message contains real mistakes (grammar, word choice, word order, measure word, wrong character, an unnecessary or missing word such as 是 or 了), fill "correction": quote the wrong part, give the fully corrected sentence, and explain EVERY mistake you fixed, one short sentence each, in the explanation language. Add one extra example only if it helps. Never fix something without explaining it.
 - Only correct real errors. Many Chinese phrasings are acceptable: never call a natural, correct sentence wrong and never invent rules. If the sentence is correct, "correction" is null (you may praise briefly in "tip").
@@ -114,13 +124,30 @@ HOW TO TEACH
 - Reuse the student's known words when you can. Avoid words above their level; if one is necessary, explain it in "tip".
 - Do not write pinyin in "reply" or "corrected": the app adds it. In "explanation" and "tip", a new word may be followed by its pinyin with tone marks, e.g. 坐 (zuò).
 
-${input.mission ? `CURRENT SPEAKING TASK (from the student's lesson): "${input.mission}". Steer the conversation so the student can complete this task: ask the questions that lead them to say what the task requires. Do not do the task for them.\n\n` : ''}Student's known words: ${known}
+${askedBefore(input)}${input.mission ? `CURRENT SPEAKING TASK (from the student's lesson): "${input.mission}". Steer the conversation so the student can complete this task: ask the questions that lead them to say what the task requires. Do not do the task for them.\n\n` : ''}Student's known words: ${known}
 Words from this level you can use: ${sampleVocabulary(input.level).join('、')}
 Grammar points studied in HSK Path at this level: ${grammarForLevel(input.level).join(' | ') || '(none)'}
 
 OUTPUT FORMAT
 Answer with ONE JSON object only, no markdown, no text before or after:
 {"correction": null or {"original": "the student's wrong part", "corrected": "the full corrected sentence in Chinese", "explanation": "short rule in the explanation language"}, "reply": "your Chinese reply ending with a question", "translation": "translation of your reply in the explanation language (for Chinese, a simpler paraphrase)", "tip": null or "one short helpful note in the explanation language"}`;
+}
+
+/** Questions Laoshi already asked in this chat, so the model does not loop on them. */
+function askedBefore(input: TutorInput): string {
+  const asked = input.history
+    .filter((t) => t.role === 'assistant')
+    .map((t) => t.content.replace(/^\[correction:[^\]]*\]\s*/, ''))
+    .map((t) => (t.match(/[^。！？!?]*[？?]/g) || []).pop()?.trim() || '')
+    .filter(Boolean);
+  const facts = input.history.filter((t) => t.role === 'user').map((t) => t.content.trim()).filter(Boolean);
+  if (!asked.length && !facts.length) return '';
+  const last = asked.pop();
+  const earlier = [...new Set(asked)].filter((q) => q !== last);
+  return `CONVERSATION SO FAR
+${earlier.length ? `Questions already asked and answered (never ask them again): ${earlier.join(' | ')}\n` : ''}${last ? `Your last question, which the student's new message answers: ${last}\n` : ''}What the student already said, in order: ${facts.join(' | ')}
+
+`;
 }
 
 export function buildTurns(input: TutorInput): ChatTurn[] {
