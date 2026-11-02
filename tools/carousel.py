@@ -145,7 +145,7 @@ class Deck:
         d.text((162, top + 44), "HSK Path", font=font("semi", 34), fill=INK, anchor="ls")
         d.text((W - 80, top + 44), f"{idx} of {self.total}", font=font("med", 30), fill=GREY, anchor="rs")
         bottom = H - 70 if H <= 1400 else H - 470
-        d.text((80, bottom), self.series, font=font("med", 26), fill=GREY, anchor="ls")
+        draw_text(d, (80, bottom), self.series, "med", 26, GREY)
         x = W - 80
         for i in range(self.total, 0, -1):
             wdt = 46 if i == idx else 12
@@ -170,9 +170,9 @@ class Deck:
     # ---------- types de slides ----------
     def cover(self, kicker, title, items, swipe=True):
         self.slides.append(("cover", dict(kicker=kicker, title=title, items=items, swipe=swipe)))
-    def rule(self, kicker, title, label, rows, note=None):
-        """rows = [(hanzi, pinyin, sens)]"""
-        self.slides.append(("rule", dict(kicker=kicker, title=title, label=label, rows=rows, note=note)))
+    def rule(self, kicker, title, label, rows, note=None, stack=False):
+        """rows = [(hanzi, pinyin, sens)] ; stack=True : phrases entières (汉字 dessus, pinyin + sens dessous)."""
+        self.slides.append(("rule", dict(kicker=kicker, title=title, label=label, rows=rows, note=note, stack=stack)))
     def checklist(self, kicker, title, items):
         self.slides.append(("checklist", dict(kicker=kicker, title=title, items=items)))
     def recap(self, bad, good_title, items, cta, url=None, share=None):
@@ -204,12 +204,25 @@ class Deck:
         elif kind == "rule":
             y = self._headline(d, y + 40, a["kicker"], a["title"], W, 96)
             n = len(a["rows"]); rh = 140 if n <= 3 else 118
+            if a.get("stack"): rh = 158
             top = y + 80 if a["note"] else max(y + 90, int(H * 0.40))
             box = (80, top, W - 80, top + 90 + n * rh)
             self._card(im, box)
             d = ImageDraw.Draw(im)
-            d.text((130, box[1] + 70), a["label"], font=font("semi", 32), fill=GREY, anchor="ls")
+            draw_text(d, (130, box[1] + 70), a["label"], "semi", 32, GREY)
             for i, (hz, py_, mean) in enumerate(a["rows"]):
+                if a.get("stack"):
+                    base = box[1] + 90 + rh * i + 66
+                    draw_text(d, (130, base), hz, "bold", 64, INK, cjk_kind="cjk")
+                    ms = 34
+                    while ms > 26 and d.textlength(mean, font=font("med", ms)) > 430: ms -= 2
+                    room = W - 260 - d.textlength(mean, font=font("med", ms)) - 30
+                    ps = 40
+                    while ps > 28 and d.textlength(py_, font=font("bold", ps)) > room: ps -= 2
+                    d.text((130, base + 56), py_, font=font("bold", ps), fill=RED, anchor="ls")
+                    d.text((W - 130, base + 56), mean, font=font("med", ms), fill=GREY, anchor="rs")
+                    if i < n - 1: d.line((130, base + 80, W - 130, base + 80), fill=LINE, width=2)
+                    continue
                 base = box[1] + 90 + rh * i + (100 if rh == 140 else 86)
                 w = draw_text(d, (130, base), hz, "bold", 76, INK, cjk_kind="cjk")
                 # pinyin réduit automatiquement s'il chevaucherait le sens (min 30 px)
@@ -279,7 +292,7 @@ class Deck:
                 d.text((x + w1, cy), t2, font=font("bold", 36), fill=RED, anchor="ls")
             if a.get("share"):
                 cy += 46
-                d.text((W / 2, cy), a["share"], font=font("med", 32), fill=GREY, anchor="ms")
+                draw_text(d, (W / 2, cy), a["share"], "med", 32, GREY, anchor="ms")
         return im
 
     def save(self, outdir, name, fmt="png", size=(1080, 1350)):

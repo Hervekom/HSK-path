@@ -5,6 +5,7 @@
 - Format Instagram / Facebook : `size=(1080,1350)`, `fmt="png"`
 - Format TikTok : `size=(1080,1920)`, `fmt="jpg"` (TikTok refuse le PNG) — marges hautes/basses déjà gérées
 - Types de slides : `cover`, `rule` (exemples 汉字 / pinyin / sens ; 4 lignes max), `checklist`, `quiz` (question + options A/B/C), `recap` (Bad / Good + « Save this » ; paramètres optionnels `url=` → « Practice free → … » et `share=` → ligne de partage)
+- `rule(..., stack=True)` : pour des phrases entières (汉字 sur une ligne, pinyin + sens dessous ; 3 lignes max). Exemple : `2026-11-03/carousel-le-vs-guo-*.png`
 - Exemple quiz : `2026-11-01/carousel-week1-review-*.png`
 - Dans les titres, `*mot*` = mot en rouge. Exemple complet : voir `2026-10-31/carousel-tone-rules-*.png`.
 
