@@ -13,7 +13,7 @@ export const LIMITS = {
   historyChars: 600,
   knownWords: 30,
   vocabSample: 40,
-  maxTokens: 700,
+  maxTokens: 1500,
 };
 
 export interface TutorInput {
@@ -145,10 +145,40 @@ export function parseTutorReply(text: string): TutorReply {
         return { reply, translation: clip(data?.translation, 600), correction, tip: clip(data?.tip, 400) || null };
       }
     } catch {
-      // fall through to plain text
+      // fall through to the lenient reader below
     }
   }
+  // Broken or cut-off JSON (e.g. the model hit its token limit): read the fields one by one
+  // so the student never sees raw JSON.
+  if (/^\s*\{?\s*"(correction|reply)"/.test(cleaned.slice(start === -1 ? 0 : start))) {
+    const reply = clip(looseField(cleaned, 'reply'), 600);
+    if (reply) {
+      const corrected = looseField(cleaned, 'corrected');
+      return {
+        reply,
+        translation: clip(looseField(cleaned, 'translation'), 600),
+        correction: corrected
+          ? { original: clip(looseField(cleaned, 'original'), 300), corrected: clip(corrected, 300), explanation: clip(looseField(cleaned, 'explanation'), 500) }
+          : null,
+        tip: clip(looseField(cleaned, 'tip'), 400) || null,
+      };
+    }
+    return { reply: '', translation: '', correction: null, tip: null };
+  }
   return { reply: clip(cleaned, 600), translation: '', correction: null, tip: null };
+}
+
+/** Read one string field from possibly invalid or truncated JSON text. */
+function looseField(text: string, key: string): string {
+  const m = new RegExp(`"${key}"\\s*:\\s*"((?:[^"\\\\]|\\\\.)*)("|$)`).exec(text);
+  if (!m) return '';
+  const cut = m[2] !== '"';
+  const raw = m[1].replace(/\\$/, '');
+  try {
+    return JSON.parse(`"${raw}"`).trim() + (cut ? '…' : '');
+  } catch {
+    return raw.replace(/\\n/g, ' ').replace(/\\"/g, '"').trim();
+  }
 }
 
 /** Compact text of a tutor turn, sent back as history on the next message. */
@@ -174,7 +204,7 @@ export interface Evaluation {
   example: string;
 }
 
-export const EVAL_LIMITS = { messages: 12, maxTokens: 600 };
+export const EVAL_LIMITS = { messages: 12, maxTokens: 1200 };
 
 export function parseEvaluationInput(body: any): EvaluationInput | { error: string } {
   const mission = clip(body?.mission, 300);

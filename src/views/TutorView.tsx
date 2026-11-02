@@ -249,6 +249,33 @@ export const TutorView: React.FC<TutorViewProps> = ({ user, isSignedIn, knownWor
     listRef.current?.scrollTo({ top: listRef.current.scrollHeight, behavior: 'smooth' });
   }, [messages, sending]);
 
+  // Phone keyboard open: pin the chat to the visible part of the screen so the
+  // composer and the last messages stay above the keyboard.
+  const [kb, setKb] = useState<{ top: number; height: number } | null>(null);
+  useEffect(() => {
+    const vv = window.visualViewport;
+    if (!vv) return;
+    const update = () => {
+      const typing = document.activeElement === inputRef.current;
+      const open = typing && window.innerWidth < 1024 && window.innerHeight - vv.height > 120;
+      setKb(open ? { top: vv.offsetTop, height: vv.height } : null);
+    };
+    vv.addEventListener('resize', update);
+    vv.addEventListener('scroll', update);
+    const el = inputRef.current;
+    el?.addEventListener('focus', update);
+    el?.addEventListener('blur', update);
+    return () => {
+      vv.removeEventListener('resize', update);
+      vv.removeEventListener('scroll', update);
+      el?.removeEventListener('focus', update);
+      el?.removeEventListener('blur', update);
+    };
+  }, []);
+  useEffect(() => {
+    if (kb) listRef.current?.scrollTo({ top: listRef.current.scrollHeight });
+  }, [kb?.height]);
+
   // Shrink the input back after sending.
   useEffect(() => {
     if (!input && inputRef.current) inputRef.current.style.height = '';
@@ -435,7 +462,14 @@ export const TutorView: React.FC<TutorViewProps> = ({ user, isSignedIn, knownWor
 
   return (
     // Fills the screen between the app header and the phone tab bar (no page scroll).
-    <div className="flex flex-col h-[calc(100dvh-7.5rem-env(safe-area-inset-bottom))] sm:h-[calc(100dvh-8rem-env(safe-area-inset-bottom))] lg:h-[calc(100dvh-7rem)] min-h-[360px] animate-in fade-in duration-150">
+    <div
+      className={
+        kb
+          ? 'fixed inset-x-0 z-[60] flex flex-col bg-[#FAF8F5]'
+          : 'flex flex-col h-[calc(100dvh-7.5rem-env(safe-area-inset-bottom))] sm:h-[calc(100dvh-8rem-env(safe-area-inset-bottom))] lg:h-[calc(100dvh-7rem)] min-h-[360px] animate-in fade-in duration-150'
+      }
+      style={kb ? { top: kb.top, height: kb.height } : undefined}
+    >
       {/* Toolbar: one compact row (the page title is already in the app header on phones) */}
       <div className="shrink-0 flex items-center justify-between gap-2 px-3 py-2 sm:px-4 lg:px-0 lg:pt-0 lg:pb-3 border-b border-[#E6DFD3] lg:border-0">
         <div className="flex items-center gap-2.5 lg:gap-3 min-w-0">
