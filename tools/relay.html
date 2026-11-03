@@ -1,0 +1,17 @@
+<!doctype html><meta charset="utf-8"><title>HSK Path relay</title>
+<body style="font:16px sans-serif">Relay: fetching media…
+<script>
+// Ouvert depuis Instagram/Facebook/TikTok via window.open : récupère les médias (GitHub raw) et les renvoie
+// à la page d'origine par postMessage (contourne la CSP qui bloque fetch vers GitHub). Voir README.
+(async () => {
+  const urls = (new URLSearchParams(location.search).get('u') || '').split('|').filter(Boolean);
+  const files = [];
+  for (const u of urls) {
+    const r = await fetch(u); const b = await r.arrayBuffer();
+    files.push({ name: u.split('/').pop(), type: r.headers.get('content-type') || 'image/jpeg', buf: b });
+  }
+  (window.opener || window.parent).postMessage({ hskRelay: true, files }, '*', files.map(f => f.buf));
+  document.body.textContent = 'sent ' + files.length;
+  setTimeout(() => window.close(), 1500);
+})();
+</script>
