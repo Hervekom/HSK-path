@@ -33,7 +33,8 @@ def _fit(d, text, font_file, size, maxw):
     return F(font_file, size)
 
 def make_guess(word, pinyin, meaning, ex_zh, ex_py, ex_en, out_prefix, level="HSK 1",
-               url="hsk-path-eosin.vercel.app", share="Send this to a friend learning Chinese"):
+               url="hsk-path-eosin.vercel.app", share="Send this to a friend learning Chinese", ratio="9:16"):
+    """ratio="4:5" -> 1080x1350 (un seul média valable pour Instagram + Facebook + TikTok dans UN post Metricool)."""
     os.makedirs(os.path.dirname(out_prefix) or ".", exist_ok=True)
     big = _fit(ImageDraw.Draw(Image.new("RGB", (1, 1))), word, SERIF, 330 if len(word) <= 2 else 250, 960)
     # 1 — accroche
@@ -57,7 +58,7 @@ def make_guess(word, pinyin, meaning, ex_zh, ex_py, ex_en, out_prefix, level="HS
     # 3 — appel à l'action
     im, d = _base()
     d.text((W // 2, 700), "A new HSK word", font=F(SERIF, 84), fill=WHITE, anchor="mm")
-    d.text((W // 2, 810), "every day", font=F(SERIF, 84), fill=WHITE, anchor="mm")
+    d.text((W // 2, 810), "every week", font=F(SERIF, 84), fill=WHITE, anchor="mm")
     d.rounded_rectangle((W // 2 - 90, 900, W // 2 + 90, 914), radius=7, fill=RED)
     d.text((W // 2, 1010), "HSK 1 · HSK 2 · HSK 3", font=F(SANS, 54), fill=GREY, anchor="mm")
     d.rounded_rectangle((W // 2 - 330, 1140, W // 2 + 330, 1240), radius=50, fill=RED)
@@ -66,4 +67,7 @@ def make_guess(word, pinyin, meaning, ex_zh, ex_py, ex_en, out_prefix, level="HS
     d.text((W // 2, 1365), url, font=F(BLACK, 48), fill=WHITE, anchor="mm")
     d.text((W // 2, 1450), share, font=_fit(d, share, SANS, 44, 960), fill=GREY, anchor="mm")
     p3 = f"{out_prefix}-3.jpg"; im.save(p3, quality=92)
+    if ratio == "4:5":   # recadrage centré sur le contenu (y 190 -> 1540)
+        for p in (p1, p2, p3):
+            Image.open(p).crop((0, 190, W, 1540)).save(p, quality=92)
     return [p1, p2, p3]

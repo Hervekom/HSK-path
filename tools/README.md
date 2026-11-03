@@ -32,3 +32,13 @@ Chaque publication pousse à liker, commenter, sauvegarder et SURTOUT partager.
 3. Pour chaque vue : goto http://localhost:3123/#/<vue>, reload, attendre que le texte de la page dépasse 200 caractères, screenshot → assets/app-screens/<vue>.png
    Vues : landing dashboard hsk-levels vocabulary phrases novels pronunciation speaking achievements practice-hub tutor mock-tests progress listening-practice quiz
 4. Mettre à jour assets/APP-FEATURES.md (fonctionnalités + commit de référence).
+
+## Quota Metricool (plan gratuit) — règle depuis le 3 nov. 2026
+- 20 publications par mois civil **UTC** (du 1er à 08:00 heure de Shanghai au 1er du mois suivant 08:00).
+- Metricool compte **1 publication par post, quel que soit le nombre de réseaux** (vérifié : 11/20 au 3 nov. = 11 posts, dont un post Facebook+TikTok compté une seule fois).
+- Donc : chaque post Metricool = **Facebook + Instagram + TikTok ensemble** dans UN seul `createScheduledPost`, médias **JPEG 1080×1350** (valables sur les 3 réseaux), une seule légende universelle.
+- `make_guess(..., ratio="4:5")` produit le format « Guess the word » en 1080×1350 pour ce post commun.
+- Jours de publication dans un mois de N jours : le jour d (date de Shanghai) est un jour de post si `floor(20*d/N) > floor(20*(d-1)/N)` → exactement 20 posts/mois, répartis.
+- Novembre 2026 (exception) : jours de post Metricool = 6, 10, 14, 19, 24 et 29 nov. ; les autres réseaux passent par le navigateur (X + texte Facebook).
+- Avant tout `createScheduledPost` : compter les posts (pas les réseaux) du mois UTC via getScheduledPosts ; ne jamais dépasser 20. Un rattrapage se fait avec `updateScheduledPost` sur le post existant, jamais avec un nouveau post si le quota est atteint.
+- Navigateur : Instagram, Facebook et TikTok bloquent l'envoi d'images injectées (CSP + popups bloquées) → par navigateur, seuls les posts texte (X, Facebook texte) sont possibles.
