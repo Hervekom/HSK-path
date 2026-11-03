@@ -39,6 +39,6 @@ Chaque publication pousse à liker, commenter, sauvegarder et SURTOUT partager.
 - Donc : chaque post Metricool = **Facebook + Instagram + TikTok ensemble** dans UN seul `createScheduledPost`, médias **JPEG 1080×1350** (valables sur les 3 réseaux), une seule légende universelle.
 - `make_guess(..., ratio="4:5")` produit le format « Guess the word » en 1080×1350 pour ce post commun.
 - Jours de publication dans un mois de N jours : le jour d (date de Shanghai) est un jour de post si `floor(20*d/N) > floor(20*(d-1)/N)` → exactement 20 posts/mois, répartis.
-- Novembre 2026 (exception) : jours de post Metricool = 6, 10, 14, 19, 24 et 29 nov. ; les autres réseaux passent par le navigateur (X + texte Facebook).
+- Novembre 2026 (exception, « méthode d'habitude rationnée ») : 1 post séparé par réseau, formats habituels : 6 nov. TikTok (vidéo), 10 Instagram, 14 TikTok (guess 9:16), 18 Facebook, 23 Instagram, 28 TikTok (guess) ; les autres jours : X + texte Facebook par le navigateur.
 - Avant tout `createScheduledPost` : compter les posts (pas les réseaux) du mois UTC via getScheduledPosts ; ne jamais dépasser 20. Un rattrapage se fait avec `updateScheduledPost` sur le post existant, jamais avec un nouveau post si le quota est atteint.
 - Navigateur : Instagram, Facebook et TikTok bloquent l'envoi d'images injectées (CSP + popups bloquées) → par navigateur, seuls les posts texte (X, Facebook texte) sont possibles.
