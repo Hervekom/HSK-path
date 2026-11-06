@@ -153,13 +153,13 @@ def music(path, dur, bpm=96):
 
 def make_reel(scenes, outro, out, scene_dur=2.3, outro_dur=3.2, xfade=0.3):
     bg = background().convert("RGBA")
-    screens = [(Image.open(p).convert("RGB"), cap) for p, cap in scenes]
+    screens = [(Image.open(sc[0]).convert("RGB"), sc[1], sc[2] if len(sc) > 2 else 1500) for sc in scenes]  # (image, légende[, y de la pastille])
     total = len(scenes) * scene_dur + outro_dur
     tmp = tempfile.mkdtemp()
     frames = int(total * FPS)
 
     def scene_img(i, local_t):
-        scr, cap = screens[i]
+        scr, cap, pill_y = screens[i]
         u = local_t / scene_dur
         ph = phone(scr, 0.05 + 0.35 * ease(u))
         side = 1 if i % 2 == 0 else -1
@@ -173,7 +173,7 @@ def make_reel(scenes, outro, out, scene_dur=2.3, outro_dur=3.2, xfade=0.3):
         pa = ease((local_t - 0.15) / 0.35)
         if pa > 0:
             p = pill(cap, pa)
-            fr.alpha_composite(p, (int(W / 2 - p.width / 2), int(1500 + 30 * (1 - pa))))
+            fr.alpha_composite(p, (int(W / 2 - p.width / 2), int(pill_y + 30 * (1 - pa))))
         return fr.convert("RGB")
 
     for k in range(frames):

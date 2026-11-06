@@ -14,6 +14,7 @@
 `reel.py` → `make_reel(scenes, outro, out)` : démo produit verticale 1080×1920 (~17 s) dans le style choisi par Herve :
 captures de l'app dans un téléphone incliné en perspective, zoom + défilement lent, pastille de légende « • … » en bas,
 fondus, puis carte de fin (logo 道, « HSK Path », slogan noir + ligne rouge, bouton, URL). Musique douce générée (libre de droits).
+Option : une scène peut être `(image, légende, y)` pour déplacer la pastille (défaut 1500) si elle cache un élément de la capture.
 Captures de l'app (mode démo, 1170×2532) : `assets/app-screens/*.png`. Rendu ≈ 2-3 min.
 
 # Format TikTok « Guess the word » (le plus performant)
